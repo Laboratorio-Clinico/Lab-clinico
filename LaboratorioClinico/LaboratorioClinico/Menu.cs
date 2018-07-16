@@ -36,5 +36,15 @@ namespace LaboratorioClinico
         {
 
         }
+
+        private void segurToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cotizacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

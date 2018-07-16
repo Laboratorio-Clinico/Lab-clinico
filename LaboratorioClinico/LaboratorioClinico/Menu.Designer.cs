@@ -123,6 +123,7 @@
             this.segurToolStripMenuItem.Name = "segurToolStripMenuItem";
             this.segurToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.segurToolStripMenuItem.Text = "Seguridad";
+            this.segurToolStripMenuItem.Click += new System.EventHandler(this.segurToolStripMenuItem_Click);
             // 
             // mantenimientoToolStripMenuItem
             // 
@@ -133,8 +134,9 @@
             // cotizacionesToolStripMenuItem
             // 
             this.cotizacionesToolStripMenuItem.Name = "cotizacionesToolStripMenuItem";
-            this.cotizacionesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cotizacionesToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.cotizacionesToolStripMenuItem.Text = "Cotizaciones";
+            this.cotizacionesToolStripMenuItem.Click += new System.EventHandler(this.cotizacionesToolStripMenuItem_Click);
             // 
             // resultadosToolStripMenuItem
             // 

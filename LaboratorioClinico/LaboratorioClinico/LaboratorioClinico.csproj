@@ -58,6 +58,12 @@
     <Compile Include="cotizar.Designer.cs">
       <DependentUpon>cotizar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Exámen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Exámen.Designer.cs">
+      <DependentUpon>Exámen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,12 @@
     <Compile Include="Reportes.Designer.cs">
       <DependentUpon>Reportes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Resultados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resultados.Designer.cs">
+      <DependentUpon>Resultados.cs</DependentUpon>
+    </Compile>
     <Compile Include="Usuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="cotizar.resx">
       <DependentUpon>cotizar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Exámen.resx">
+      <DependentUpon>Exámen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -134,6 +149,9 @@
     </Compile>
     <EmbeddedResource Include="Reportes.resx">
       <DependentUpon>Reportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resultados.resx">
+      <DependentUpon>Resultados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Usuario.resx">
       <DependentUpon>Usuario.cs</DependentUpon>
