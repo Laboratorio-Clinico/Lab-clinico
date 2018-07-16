@@ -47,6 +47,9 @@
             this.nuevoPacienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ingresarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.médicosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nuevoUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bitácoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cambioDeContraseñaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -110,6 +113,10 @@
             // 
             // segurToolStripMenuItem
             // 
+            this.segurToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nuevoUsuarioToolStripMenuItem,
+            this.bitácoraToolStripMenuItem,
+            this.cambioDeContraseñaToolStripMenuItem});
             this.segurToolStripMenuItem.Name = "segurToolStripMenuItem";
             this.segurToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.segurToolStripMenuItem.Text = "Seguridad";
@@ -194,6 +201,24 @@
             this.médicosToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.médicosToolStripMenuItem.Text = "Médicos";
             // 
+            // nuevoUsuarioToolStripMenuItem
+            // 
+            this.nuevoUsuarioToolStripMenuItem.Name = "nuevoUsuarioToolStripMenuItem";
+            this.nuevoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.nuevoUsuarioToolStripMenuItem.Text = "Nuevo Usuario";
+            // 
+            // bitácoraToolStripMenuItem
+            // 
+            this.bitácoraToolStripMenuItem.Name = "bitácoraToolStripMenuItem";
+            this.bitácoraToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.bitácoraToolStripMenuItem.Text = "Bitácora";
+            // 
+            // cambioDeContraseñaToolStripMenuItem
+            // 
+            this.cambioDeContraseñaToolStripMenuItem.Name = "cambioDeContraseñaToolStripMenuItem";
+            this.cambioDeContraseñaToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.cambioDeContraseñaToolStripMenuItem.Text = "Cambio de Contraseña";
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -231,5 +256,8 @@
         private System.Windows.Forms.ToolStripMenuItem controlToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nuevoPacienteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem médicosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nuevoUsuarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bitácoraToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cambioDeContraseñaToolStripMenuItem;
     }
 }
