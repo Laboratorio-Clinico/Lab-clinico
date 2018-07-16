@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bitácora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bitácora.Designer.cs">
+      <DependentUpon>Bitácora.cs</DependentUpon>
+    </Compile>
     <Compile Include="cotizar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +84,9 @@
     <Compile Include="Usuario.Designer.cs">
       <DependentUpon>Usuario.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Bitácora.resx">
+      <DependentUpon>Bitácora.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="cotizar.resx">
       <DependentUpon>cotizar.cs</DependentUpon>
     </EmbeddedResource>
