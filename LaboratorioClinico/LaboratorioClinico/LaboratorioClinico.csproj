@@ -58,6 +58,12 @@
     <Compile Include="cotizar.Designer.cs">
       <DependentUpon>cotizar.cs</DependentUpon>
     </Compile>
+    <Compile Include="CrearCodigo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearCodigo.Designer.cs">
+      <DependentUpon>CrearCodigo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Exámen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +75,12 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeerCodigo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeerCodigo.Designer.cs">
+      <DependentUpon>LeerCodigo.cs</DependentUpon>
     </Compile>
     <Compile Include="Mantenimiento.cs">
       <SubType>Form</SubType>
@@ -126,11 +138,17 @@
     <EmbeddedResource Include="cotizar.resx">
       <DependentUpon>cotizar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CrearCodigo.resx">
+      <DependentUpon>CrearCodigo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Exámen.resx">
       <DependentUpon>Exámen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeerCodigo.resx">
+      <DependentUpon>LeerCodigo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimiento.resx">
       <DependentUpon>Mantenimiento.cs</DependentUpon>
