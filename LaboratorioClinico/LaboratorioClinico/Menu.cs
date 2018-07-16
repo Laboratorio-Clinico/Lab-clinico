@@ -10,24 +10,19 @@ using System.Windows.Forms;
 
 namespace LaboratorioClinico
 {
-    public partial class Form1 : Form
+    public partial class Menu : Form
     {
-        public Form1()
+        public Menu()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void ayudaToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
+        private void cotizaciónToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
