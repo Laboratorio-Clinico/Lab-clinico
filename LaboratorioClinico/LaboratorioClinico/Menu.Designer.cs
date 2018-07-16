@@ -44,6 +44,10 @@
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.leerCódigoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.crearCódigoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.controlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nuevoPacienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ingresarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.médicosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,6 +58,7 @@
             this.administraciónToolStripMenuItem,
             this.reportesToolStripMenuItem,
             this.cotizaciónToolStripMenuItem,
+            this.controlToolStripMenuItem,
             this.facturaciónToolStripMenuItem,
             this.ayudaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -75,12 +80,14 @@
             this.nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
             this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.nuevoToolStripMenuItem.Text = "Nuevo ";
+            this.nuevoToolStripMenuItem.Click += new System.EventHandler(this.nuevoToolStripMenuItem_Click);
             // 
             // administraciónToolStripMenuItem
             // 
             this.administraciónToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.segurToolStripMenuItem,
-            this.mantenimientoToolStripMenuItem});
+            this.mantenimientoToolStripMenuItem,
+            this.médicosToolStripMenuItem});
             this.administraciónToolStripMenuItem.Name = "administraciónToolStripMenuItem";
             this.administraciónToolStripMenuItem.Size = new System.Drawing.Size(100, 20);
             this.administraciónToolStripMenuItem.Text = "Administración";
@@ -95,6 +102,7 @@
             // cotizaciónToolStripMenuItem
             // 
             this.cotizaciónToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ingresarToolStripMenuItem,
             this.cotizacionesToolStripMenuItem,
             this.resultadosToolStripMenuItem,
             this.muestrasToolStripMenuItem,
@@ -167,6 +175,33 @@
             this.crearCódigoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.crearCódigoToolStripMenuItem.Text = "Crear código";
             // 
+            // controlToolStripMenuItem
+            // 
+            this.controlToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nuevoPacienteToolStripMenuItem});
+            this.controlToolStripMenuItem.Name = "controlToolStripMenuItem";
+            this.controlToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.controlToolStripMenuItem.Text = "Control";
+            // 
+            // nuevoPacienteToolStripMenuItem
+            // 
+            this.nuevoPacienteToolStripMenuItem.Name = "nuevoPacienteToolStripMenuItem";
+            this.nuevoPacienteToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.nuevoPacienteToolStripMenuItem.Text = "Nuevo Paciente";
+            // 
+            // ingresarToolStripMenuItem
+            // 
+            this.ingresarToolStripMenuItem.Name = "ingresarToolStripMenuItem";
+            this.ingresarToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.ingresarToolStripMenuItem.Text = "Nuevo";
+            this.ingresarToolStripMenuItem.Click += new System.EventHandler(this.ingresarToolStripMenuItem_Click);
+            // 
+            // médicosToolStripMenuItem
+            // 
+            this.médicosToolStripMenuItem.Name = "médicosToolStripMenuItem";
+            this.médicosToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.médicosToolStripMenuItem.Text = "Médicos";
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -201,5 +236,9 @@
         private System.Windows.Forms.ToolStripMenuItem leerCódigoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem crearCódigoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem requerimientosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ingresarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem controlToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nuevoPacienteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem médicosToolStripMenuItem;
     }
 }
