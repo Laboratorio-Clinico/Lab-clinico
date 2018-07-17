@@ -30,9 +30,9 @@
         {
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -51,30 +51,32 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Código para código de barras";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(33, 271);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(320, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Crear";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(33, 309);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(320, 23);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Guardar";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // panel1
             // 
             this.panel1.Location = new System.Drawing.Point(33, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(320, 191);
             this.panel1.TabIndex = 4;
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImage = global::LaboratorioClinico.Properties.Resources.guardar;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.Location = new System.Drawing.Point(33, 288);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(53, 44);
+            this.button2.TabIndex = 3;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::LaboratorioClinico.Properties.Resources.anadir;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(92, 288);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(53, 44);
+            this.button1.TabIndex = 2;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // CrearCodigo
             // 
