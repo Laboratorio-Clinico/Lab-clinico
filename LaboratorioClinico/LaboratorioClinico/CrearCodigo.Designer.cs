@@ -49,7 +49,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(146, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Codigo para código de barras";
+            this.label1.Text = "Código para código de barras";
             // 
             // button1
             // 
