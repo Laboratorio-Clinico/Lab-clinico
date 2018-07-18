@@ -226,7 +226,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::LaboratorioClinico.Properties.Resources.NPW_cartoon;
+            this.pictureBox1.Image = global::LaboratorioClinico.Properties.Resources.guardar;
             this.pictureBox1.Location = new System.Drawing.Point(49, 53);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(290, 226);
@@ -253,7 +253,6 @@
             this.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Médicos";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Médicos_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
