@@ -231,10 +231,10 @@
     <None Include="Resources\requerimientos1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\doctor.png" />
+    <None Include="Resources\editar.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\NPW-cartoon.jpg" />
+    <None Include="Resources\goma-de-borrar.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\imagen-monografico-que-deberias-saber-cuentas-de-usuario.png" />
