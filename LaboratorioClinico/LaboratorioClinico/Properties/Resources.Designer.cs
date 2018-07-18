@@ -163,6 +163,16 @@ namespace LaboratorioClinico.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap imagen_monografico_que_deberias_saber_cuentas_de_usuario {
+            get {
+                object obj = ResourceManager.GetObject("imagen-monografico-que-deberias-saber-cuentas-de-usuario", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap impresora {
             get {
                 object obj = ResourceManager.GetObject("impresora", resourceCulture);
