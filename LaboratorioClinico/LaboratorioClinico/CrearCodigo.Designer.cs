@@ -31,23 +31,24 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(61, 359);
+            this.textBox1.Location = new System.Drawing.Point(130, 326);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(320, 20);
             this.textBox1.TabIndex = 0;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(58, 323);
+            this.label1.Location = new System.Drawing.Point(127, 305);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(208, 18);
             this.label1.TabIndex = 1;
@@ -55,16 +56,26 @@
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(61, 92);
+            this.panel1.Location = new System.Drawing.Point(130, 83);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(320, 191);
             this.panel1.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Perpetua", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(210, 24);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(148, 28);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Crear Código";
             // 
             // button2
             // 
             this.button2.BackgroundImage = global::LaboratorioClinico.Properties.Resources.guardar;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Location = new System.Drawing.Point(61, 411);
+            this.button2.Location = new System.Drawing.Point(466, 83);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(53, 44);
             this.button2.TabIndex = 3;
@@ -75,27 +86,17 @@
             // 
             this.button1.BackgroundImage = global::LaboratorioClinico.Properties.Resources.anadir;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(130, 411);
+            this.button1.Location = new System.Drawing.Point(466, 148);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(53, 44);
             this.button1.TabIndex = 2;
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Perpetua", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(144, 28);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(148, 28);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Crear Código";
-            // 
             // CrearCodigo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(445, 489);
+            this.ClientSize = new System.Drawing.Size(606, 423);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button2);
