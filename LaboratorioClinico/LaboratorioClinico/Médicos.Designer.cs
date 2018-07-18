@@ -41,12 +41,12 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -183,6 +183,18 @@
             this.panel1.Size = new System.Drawing.Size(327, 414);
             this.panel1.TabIndex = 15;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(80, 51);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(148, 22);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "Datos personales";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
+            // 
             // textBox7
             // 
             this.textBox7.Location = new System.Drawing.Point(108, 159);
@@ -201,18 +213,6 @@
             this.label7.TabIndex = 7;
             this.label7.Text = "Apellido";
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(80, 51);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(148, 22);
-            this.label8.TabIndex = 12;
-            this.label8.Text = "Datos personales";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.pictureBox1);
@@ -224,15 +224,6 @@
             this.panel2.Size = new System.Drawing.Size(387, 416);
             this.panel2.TabIndex = 16;
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CustomFormat = "dd-MM-yy";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(212, 299);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(92, 26);
-            this.dateTimePicker1.TabIndex = 21;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::LaboratorioClinico.Properties.Resources.NPW_cartoon;
@@ -242,6 +233,15 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 22;
             this.pictureBox1.TabStop = false;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CustomFormat = "dd-MM-yy";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(212, 299);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(92, 26);
+            this.dateTimePicker1.TabIndex = 21;
             // 
             // Médicos
             // 
@@ -253,6 +253,7 @@
             this.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Médicos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Médicos_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

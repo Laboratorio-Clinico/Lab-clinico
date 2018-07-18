@@ -379,6 +379,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox3);
             this.Name = "Paciente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox1.ResumeLayout(false);

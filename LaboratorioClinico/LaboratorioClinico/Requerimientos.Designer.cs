@@ -37,8 +37,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -124,6 +124,15 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.CustomFormat = "dd-MM-yy";
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker2.Location = new System.Drawing.Point(132, 35);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(104, 26);
+            this.dateTimePicker2.TabIndex = 22;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -134,15 +143,6 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "Fecha emisión";
             this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.CustomFormat = "dd-MM-yy";
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(132, 35);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(104, 26);
-            this.dateTimePicker2.TabIndex = 22;
             // 
             // groupBox3
             // 
@@ -168,6 +168,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.groupBox1);
             this.Name = "Requerimientos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
