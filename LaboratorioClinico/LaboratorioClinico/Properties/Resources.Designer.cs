@@ -93,6 +93,16 @@ namespace LaboratorioClinico.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap doctor {
+            get {
+                object obj = ResourceManager.GetObject("doctor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap enfermera {
             get {
                 object obj = ResourceManager.GetObject("enfermera", resourceCulture);
@@ -166,6 +176,16 @@ namespace LaboratorioClinico.Properties {
         internal static System.Drawing.Bitmap impresora1 {
             get {
                 object obj = ResourceManager.GetObject("impresora1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap NPW_cartoon {
+            get {
+                object obj = ResourceManager.GetObject("NPW-cartoon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
