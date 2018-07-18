@@ -31,12 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Paciente));
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -45,7 +47,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -53,12 +54,11 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -84,6 +84,16 @@
             this.groupBox3.Size = new System.Drawing.Size(95, 100);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(26, 67);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(46, 15);
+            this.label10.TabIndex = 43;
+            this.label10.Text = "Guardar";
             // 
             // groupBox1
             // 
@@ -115,24 +125,53 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Paciente";
             // 
-            // dateTimePicker1
+            // label12
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(36, 53);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(247, 26);
-            this.dateTimePicker1.TabIndex = 41;
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(407, 204);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(79, 18);
+            this.label12.TabIndex = 46;
+            this.label12.Text = "Tipo Sangre";
+            // 
+            // textBox9
+            // 
+            this.textBox9.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox9.Location = new System.Drawing.Point(410, 225);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(180, 26);
+            this.textBox9.TabIndex = 45;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(120, 204);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(57, 18);
+            this.label11.TabIndex = 44;
+            this.label11.Text = "Alergías";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox6.Location = new System.Drawing.Point(120, 225);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(271, 26);
+            this.textBox6.TabIndex = 43;
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.DarkCyan;
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(15, 112);
+            this.button2.Location = new System.Drawing.Point(18, 108);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(84, 34);
+            this.button2.Size = new System.Drawing.Size(53, 44);
             this.button2.TabIndex = 42;
-            this.button2.Text = "Expedientes";
             this.button2.UseVisualStyleBackColor = false;
             // 
             // label9
@@ -144,26 +183,6 @@
             this.label9.Size = new System.Drawing.Size(95, 18);
             this.label9.TabIndex = 40;
             this.label9.Text = "Quién refiere:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(302, 28);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(43, 18);
-            this.label8.TabIndex = 39;
-            this.label8.Text = "Hora:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(33, 28);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(158, 18);
-            this.label7.TabIndex = 38;
-            this.label7.Text = "Fecha entrega resultados:";
             // 
             // label6
             // 
@@ -219,7 +238,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(15, 49);
+            this.label1.Location = new System.Drawing.Point(15, 53);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 18);
             this.label1.TabIndex = 32;
@@ -241,14 +260,6 @@
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(82, 26);
             this.textBox8.TabIndex = 30;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(300, 53);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(67, 26);
-            this.textBox7.TabIndex = 29;
             // 
             // textBox5
             // 
@@ -310,6 +321,42 @@
             this.dateTimePicker2.Size = new System.Drawing.Size(104, 26);
             this.dateTimePicker2.TabIndex = 21;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(36, 53);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(247, 26);
+            this.dateTimePicker1.TabIndex = 41;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(302, 28);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(43, 18);
+            this.label8.TabIndex = 39;
+            this.label8.Text = "Hora:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(33, 28);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(158, 18);
+            this.label7.TabIndex = 38;
+            this.label7.Text = "Fecha entrega resultados:";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox7.Location = new System.Drawing.Point(300, 53);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(67, 26);
+            this.textBox7.TabIndex = 29;
+            // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.dateTimePicker1);
@@ -322,52 +369,6 @@
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(26, 67);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(46, 15);
-            this.label10.TabIndex = 43;
-            this.label10.Text = "Guardar";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(120, 225);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(271, 26);
-            this.textBox6.TabIndex = 43;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(120, 204);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(57, 18);
-            this.label11.TabIndex = 44;
-            this.label11.Text = "Alergías";
-            // 
-            // textBox9
-            // 
-            this.textBox9.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(410, 225);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(180, 26);
-            this.textBox9.TabIndex = 45;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(407, 204);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(79, 18);
-            this.label12.TabIndex = 46;
-            this.label12.Text = "Tipo Sangre";
             // 
             // Paciente
             // 
