@@ -16,5 +16,10 @@ namespace LaboratorioClinico
         {
             InitializeComponent();
         }
+
+        private void LeerCodigo_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
