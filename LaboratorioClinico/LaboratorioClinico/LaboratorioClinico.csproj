@@ -204,16 +204,19 @@
     <None Include="Resources\anadir.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Color2.png" />
+    <None Include="Resources\impresora.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\search.png" />
+    <None Include="Resources\carpeta.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\codigo-de-barras.png" />
+    <None Include="Resources\icons8-encuentra-hombre-usuario-48.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\codigo-de-barras %281%29.png" />
+    <None Include="Resources\requerimientos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\correo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

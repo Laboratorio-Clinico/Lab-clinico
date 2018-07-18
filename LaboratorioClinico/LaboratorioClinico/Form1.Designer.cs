@@ -47,7 +47,7 @@
             // 
             this.Btn_ingresar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Btn_ingresar.BackgroundImage")));
             this.Btn_ingresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Btn_ingresar.Location = new System.Drawing.Point(136, 160);
+            this.Btn_ingresar.Location = new System.Drawing.Point(162, 161);
             this.Btn_ingresar.Name = "Btn_ingresar";
             this.Btn_ingresar.Size = new System.Drawing.Size(53, 44);
             this.Btn_ingresar.TabIndex = 0;
@@ -76,6 +76,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.textBox1.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(122, 80);
             this.textBox1.Name = "textBox1";
@@ -84,6 +85,7 @@
             // 
             // textBox2
             // 
+            this.textBox2.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.textBox2.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(122, 118);
             this.textBox2.Name = "textBox2";
@@ -114,6 +116,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.comboBox1.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(122, 44);
@@ -153,7 +156,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(165)))), ((int)(((byte)(176)))));
+            this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(543, 430);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
