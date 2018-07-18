@@ -71,7 +71,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(52, 37);
+            this.panel1.Location = new System.Drawing.Point(45, 37);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(678, 426);
             this.panel1.TabIndex = 13;
@@ -196,7 +196,7 @@
             this.ClientSize = new System.Drawing.Size(766, 489);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Usuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Usuario";

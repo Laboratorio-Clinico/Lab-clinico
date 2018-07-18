@@ -226,7 +226,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::LaboratorioClinico.Properties.Resources.guardar;
+            this.pictureBox1.Image = global::LaboratorioClinico.Properties.Resources.NPW_cartoon1;
             this.pictureBox1.Location = new System.Drawing.Point(49, 53);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(290, 226);

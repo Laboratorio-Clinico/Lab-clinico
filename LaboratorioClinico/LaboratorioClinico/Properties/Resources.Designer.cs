@@ -93,9 +93,9 @@ namespace LaboratorioClinico.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap editar {
+        internal static System.Drawing.Bitmap doctor {
             get {
-                object obj = ResourceManager.GetObject("editar", resourceCulture);
+                object obj = ResourceManager.GetObject("doctor", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -126,16 +126,6 @@ namespace LaboratorioClinico.Properties {
         internal static System.Drawing.Bitmap file {
             get {
                 object obj = ResourceManager.GetObject("file", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap goma_de_borrar {
-            get {
-                object obj = ResourceManager.GetObject("goma-de-borrar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -196,6 +186,26 @@ namespace LaboratorioClinico.Properties {
         internal static System.Drawing.Bitmap impresora1 {
             get {
                 object obj = ResourceManager.GetObject("impresora1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap NPW_cartoon {
+            get {
+                object obj = ResourceManager.GetObject("NPW-cartoon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap NPW_cartoon1 {
+            get {
+                object obj = ResourceManager.GetObject("NPW-cartoon1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
