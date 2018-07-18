@@ -73,7 +73,7 @@
             // 
             // button1
             // 
-            this.button1.BackgroundImage = global::LaboratorioClinico.Properties.Resources.codigo_de_barras;
+  
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Location = new System.Drawing.Point(379, 78);
             this.button1.Name = "button1";
