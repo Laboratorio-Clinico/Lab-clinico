@@ -182,7 +182,7 @@
             // 
             this.button2.BackgroundImage = global::LaboratorioClinico.Properties.Resources.guardar1;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Location = new System.Drawing.Point(696, 34);
+            this.button2.Location = new System.Drawing.Point(695, 34);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(53, 44);
             this.button2.TabIndex = 13;
