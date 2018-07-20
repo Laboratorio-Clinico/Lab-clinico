@@ -263,7 +263,7 @@
     <None Include="Resources\FONDOO.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\a.jpg" />
+    <None Include="Resources\fondo-azul.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\a1.jpg" />
