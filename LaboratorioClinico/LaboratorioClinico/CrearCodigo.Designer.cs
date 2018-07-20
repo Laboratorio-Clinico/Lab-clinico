@@ -28,21 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Txt_texto = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Btn_guardar = new System.Windows.Forms.Button();
+            this.Btn_crear = new System.Windows.Forms.Button();
+            this.Pic_img = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.Pic_img)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // Txt_texto
             // 
-            this.textBox1.Location = new System.Drawing.Point(130, 326);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(320, 20);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.Txt_texto.Location = new System.Drawing.Point(130, 326);
+            this.Txt_texto.Name = "Txt_texto";
+            this.Txt_texto.Size = new System.Drawing.Size(320, 20);
+            this.Txt_texto.TabIndex = 0;
+            this.Txt_texto.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
@@ -54,13 +55,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Código para código de barras";
             // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(130, 83);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(320, 191);
-            this.panel1.TabIndex = 4;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -71,41 +65,51 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Crear Código";
             // 
-            // button2
+            // Btn_guardar
             // 
-            this.button2.BackgroundImage = global::LaboratorioClinico.Properties.Resources.guardar;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Location = new System.Drawing.Point(466, 83);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(53, 44);
-            this.button2.TabIndex = 3;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.Btn_guardar.BackgroundImage = global::LaboratorioClinico.Properties.Resources.guardar;
+            this.Btn_guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_guardar.Location = new System.Drawing.Point(466, 83);
+            this.Btn_guardar.Name = "Btn_guardar";
+            this.Btn_guardar.Size = new System.Drawing.Size(53, 44);
+            this.Btn_guardar.TabIndex = 3;
+            this.Btn_guardar.UseVisualStyleBackColor = true;
+            this.Btn_guardar.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // Btn_crear
             // 
-            this.button1.BackgroundImage = global::LaboratorioClinico.Properties.Resources.anadir;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(466, 148);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(53, 44);
-            this.button1.TabIndex = 2;
-            this.button1.UseVisualStyleBackColor = true;
+            this.Btn_crear.BackgroundImage = global::LaboratorioClinico.Properties.Resources.anadir;
+            this.Btn_crear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_crear.Location = new System.Drawing.Point(466, 148);
+            this.Btn_crear.Name = "Btn_crear";
+            this.Btn_crear.Size = new System.Drawing.Size(53, 44);
+            this.Btn_crear.TabIndex = 2;
+            this.Btn_crear.UseVisualStyleBackColor = true;
+            this.Btn_crear.Click += new System.EventHandler(this.Btn_crear_Click);
+            // 
+            // Pic_img
+            // 
+            this.Pic_img.Location = new System.Drawing.Point(130, 83);
+            this.Pic_img.Name = "Pic_img";
+            this.Pic_img.Size = new System.Drawing.Size(320, 175);
+            this.Pic_img.TabIndex = 6;
+            this.Pic_img.TabStop = false;
             // 
             // CrearCodigo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(606, 423);
+            this.Controls.Add(this.Pic_img);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Btn_guardar);
+            this.Controls.Add(this.Btn_crear);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Txt_texto);
             this.Name = "CrearCodigo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.CrearCodigo_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.Pic_img)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -113,11 +117,11 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Txt_texto;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button Btn_crear;
+        private System.Windows.Forms.Button Btn_guardar;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox Pic_img;
     }
 }
