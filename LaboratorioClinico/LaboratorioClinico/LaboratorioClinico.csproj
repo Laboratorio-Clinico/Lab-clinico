@@ -33,7 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -231,10 +233,22 @@
     <None Include="Resources\requerimientos1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\doctor.png" />
+    <None Include="Resources\editar.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\NPW-cartoon.jpg" />
+    <None Include="Resources\goma-de-borrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagen-monografico-que-deberias-saber-cuentas-de-usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NPW-cartoon1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\goma-de-borrar1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
