@@ -51,5 +51,11 @@ namespace LaboratorioClinico
         {
 
         }
+
+        private void crearCódigoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CrearCodigo nuevo = new CrearCodigo();
+            nuevo.ShowDialog();
+        }
     }
 }
