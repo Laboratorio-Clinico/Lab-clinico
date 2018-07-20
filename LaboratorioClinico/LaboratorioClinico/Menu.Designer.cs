@@ -92,7 +92,7 @@
             // 
             // segurToolStripMenuItem
             // 
-            this.segurToolStripMenuItem.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.segurToolStripMenuItem.BackColor = System.Drawing.Color.PowderBlue;
             this.segurToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nuevoUsuarioToolStripMenuItem,
             this.bitácoraToolStripMenuItem,
@@ -104,32 +104,35 @@
             // 
             // nuevoUsuarioToolStripMenuItem
             // 
+            this.nuevoUsuarioToolStripMenuItem.BackColor = System.Drawing.Color.PowderBlue;
             this.nuevoUsuarioToolStripMenuItem.Name = "nuevoUsuarioToolStripMenuItem";
             this.nuevoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(282, 28);
             this.nuevoUsuarioToolStripMenuItem.Text = "Nuevo Usuario";
             // 
             // bitácoraToolStripMenuItem
             // 
+            this.bitácoraToolStripMenuItem.BackColor = System.Drawing.Color.PowderBlue;
             this.bitácoraToolStripMenuItem.Name = "bitácoraToolStripMenuItem";
             this.bitácoraToolStripMenuItem.Size = new System.Drawing.Size(282, 28);
             this.bitácoraToolStripMenuItem.Text = "Bitácora";
             // 
             // cambioDeContraseñaToolStripMenuItem
             // 
+            this.cambioDeContraseñaToolStripMenuItem.BackColor = System.Drawing.Color.PowderBlue;
             this.cambioDeContraseñaToolStripMenuItem.Name = "cambioDeContraseñaToolStripMenuItem";
             this.cambioDeContraseñaToolStripMenuItem.Size = new System.Drawing.Size(282, 28);
             this.cambioDeContraseñaToolStripMenuItem.Text = "Cambio de Contraseña";
             // 
             // mantenimientoToolStripMenuItem
             // 
-            this.mantenimientoToolStripMenuItem.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.mantenimientoToolStripMenuItem.BackColor = System.Drawing.Color.PowderBlue;
             this.mantenimientoToolStripMenuItem.Name = "mantenimientoToolStripMenuItem";
             this.mantenimientoToolStripMenuItem.Size = new System.Drawing.Size(218, 28);
             this.mantenimientoToolStripMenuItem.Text = "Mantenimiento";
             // 
             // médicosToolStripMenuItem
             // 
-            this.médicosToolStripMenuItem.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.médicosToolStripMenuItem.BackColor = System.Drawing.Color.PowderBlue;
             this.médicosToolStripMenuItem.Name = "médicosToolStripMenuItem";
             this.médicosToolStripMenuItem.Size = new System.Drawing.Size(218, 28);
             this.médicosToolStripMenuItem.Text = "Médicos";
@@ -142,6 +145,7 @@
             // 
             // cotizaciónToolStripMenuItem
             // 
+            this.cotizaciónToolStripMenuItem.BackColor = System.Drawing.Color.DarkCyan;
             this.cotizaciónToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ingresarToolStripMenuItem,
             this.cotizacionesToolStripMenuItem,
@@ -155,7 +159,7 @@
             // 
             // ingresarToolStripMenuItem
             // 
-            this.ingresarToolStripMenuItem.BackColor = System.Drawing.Color.Crimson;
+            this.ingresarToolStripMenuItem.BackColor = System.Drawing.Color.PowderBlue;
             this.ingresarToolStripMenuItem.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.ingresarToolStripMenuItem.Name = "ingresarToolStripMenuItem";
             this.ingresarToolStripMenuItem.Size = new System.Drawing.Size(223, 28);
@@ -164,7 +168,7 @@
             // 
             // cotizacionesToolStripMenuItem
             // 
-            this.cotizacionesToolStripMenuItem.BackColor = System.Drawing.Color.Crimson;
+            this.cotizacionesToolStripMenuItem.BackColor = System.Drawing.Color.PowderBlue;
             this.cotizacionesToolStripMenuItem.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.cotizacionesToolStripMenuItem.Name = "cotizacionesToolStripMenuItem";
             this.cotizacionesToolStripMenuItem.Size = new System.Drawing.Size(223, 28);
@@ -173,7 +177,7 @@
             // 
             // resultadosToolStripMenuItem
             // 
-            this.resultadosToolStripMenuItem.BackColor = System.Drawing.Color.Crimson;
+            this.resultadosToolStripMenuItem.BackColor = System.Drawing.Color.PowderBlue;
             this.resultadosToolStripMenuItem.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.resultadosToolStripMenuItem.Name = "resultadosToolStripMenuItem";
             this.resultadosToolStripMenuItem.Size = new System.Drawing.Size(223, 28);
@@ -181,7 +185,7 @@
             // 
             // muestrasToolStripMenuItem
             // 
-            this.muestrasToolStripMenuItem.BackColor = System.Drawing.Color.Crimson;
+            this.muestrasToolStripMenuItem.BackColor = System.Drawing.Color.PowderBlue;
             this.muestrasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.leerCódigoToolStripMenuItem,
             this.crearCódigoToolStripMenuItem});
@@ -192,19 +196,21 @@
             // 
             // leerCódigoToolStripMenuItem
             // 
+            this.leerCódigoToolStripMenuItem.BackColor = System.Drawing.Color.PowderBlue;
             this.leerCódigoToolStripMenuItem.Name = "leerCódigoToolStripMenuItem";
             this.leerCódigoToolStripMenuItem.Size = new System.Drawing.Size(197, 28);
             this.leerCódigoToolStripMenuItem.Text = "Leer código";
             // 
             // crearCódigoToolStripMenuItem
             // 
+            this.crearCódigoToolStripMenuItem.BackColor = System.Drawing.Color.PowderBlue;
             this.crearCódigoToolStripMenuItem.Name = "crearCódigoToolStripMenuItem";
             this.crearCódigoToolStripMenuItem.Size = new System.Drawing.Size(197, 28);
             this.crearCódigoToolStripMenuItem.Text = "Crear código";
             // 
             // requerimientosToolStripMenuItem
             // 
-            this.requerimientosToolStripMenuItem.BackColor = System.Drawing.Color.Crimson;
+            this.requerimientosToolStripMenuItem.BackColor = System.Drawing.Color.PaleTurquoise;
             this.requerimientosToolStripMenuItem.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.requerimientosToolStripMenuItem.Name = "requerimientosToolStripMenuItem";
             this.requerimientosToolStripMenuItem.Size = new System.Drawing.Size(223, 28);
@@ -220,6 +226,7 @@
             // 
             // nuevoPacienteToolStripMenuItem
             // 
+            this.nuevoPacienteToolStripMenuItem.BackColor = System.Drawing.Color.PowderBlue;
             this.nuevoPacienteToolStripMenuItem.Name = "nuevoPacienteToolStripMenuItem";
             this.nuevoPacienteToolStripMenuItem.Size = new System.Drawing.Size(219, 28);
             this.nuevoPacienteToolStripMenuItem.Text = "Nuevo Paciente";
