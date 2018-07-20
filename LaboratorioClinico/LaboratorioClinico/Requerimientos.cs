@@ -26,5 +26,10 @@ namespace LaboratorioClinico
         {
 
         }
+
+        private void Requerimientos_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

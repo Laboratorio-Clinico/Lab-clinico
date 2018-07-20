@@ -264,7 +264,10 @@
     <None Include="Resources\health.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\clause-1462969_960_7201.png" />
+    <None Include="Resources\cancelar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cruz-de-cerrado.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

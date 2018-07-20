@@ -180,11 +180,11 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Perpetua", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(26, 287);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(73, 18);
+            this.label10.Size = new System.Drawing.Size(110, 28);
             this.label10.TabIndex = 15;
             this.label10.Text = "Profesión";
             // 
@@ -221,11 +221,11 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Perpetua", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(26, 12);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(124, 18);
+            this.label8.Size = new System.Drawing.Size(184, 28);
             this.label8.TabIndex = 12;
             this.label8.Text = "Datos personales";
             this.label8.Click += new System.EventHandler(this.label8_Click);
@@ -281,7 +281,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::LaboratorioClinico.Properties.Resources.clause_1462969_960_720;
+            this.pictureBox1.Image = global::LaboratorioClinico.Properties.Resources.codigobarra;
             this.pictureBox1.Location = new System.Drawing.Point(31, 24);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(296, 297);
