@@ -18,9 +18,10 @@ namespace LaboratorioClinico
             InitializeComponent();
         }
 
-
+        BarcodeEncoder Crear;
+        BarcodeDecoder Escaner;
         SaveFileDialog Guardar;
-        OpenFileDialog OD;
+      //  OpenFileDialog OD;
 
         public object Generar { get; private set; }
 
@@ -44,11 +45,11 @@ namespace LaboratorioClinico
 
         private void Btn_crear_Click(object sender, EventArgs e)
         {
-            Generar = new BarcodeEncoder();
-            Generar.IncludeLabel = true;
-            Generar.CustomLabel = Txt_texto.Text;
+            Crear = new BarcodeEncoder();
+            Crear.IncludeLabel = true;
+            Crear.CustomLabel = Txt_texto.Text;
             if (Txt_texto.Text != "")
-                Pic_img.Image = new Bitmap(Generar.Encode(BarcodeFormat.Code39, Txt_texto.Text));
+                Pic_img.Image = new Bitmap(Crear.Encode(BarcodeFormat.Code39, Txt_texto.Text));
         }
     }
 }
