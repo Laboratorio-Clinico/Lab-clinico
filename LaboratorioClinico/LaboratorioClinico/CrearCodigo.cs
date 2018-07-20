@@ -18,10 +18,11 @@ namespace LaboratorioClinico
             InitializeComponent();
         }
 
-        BarcodeEncoder Generar;
-        BarcodeDecoder Escanear;
+
         SaveFileDialog Guardar;
         OpenFileDialog OD;
+
+        public object Generar { get; private set; }
 
         private void CrearCodigo_Load(object sender, EventArgs e)
         {
