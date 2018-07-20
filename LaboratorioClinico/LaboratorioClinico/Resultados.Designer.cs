@@ -33,9 +33,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.Imprimir = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -71,6 +71,7 @@
             // 
             // textBox5
             // 
+            this.textBox5.BackColor = System.Drawing.Color.LightBlue;
             this.textBox5.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox5.Location = new System.Drawing.Point(239, 67);
             this.textBox5.Name = "textBox5";
@@ -96,6 +97,18 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Resultados Exámen";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(477, 384);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(104, 15);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Enviar por correo";
+            // 
             // button2
             // 
             this.button2.BackgroundImage = global::LaboratorioClinico.Properties.Resources.file;
@@ -110,23 +123,11 @@
             // 
             this.Imprimir.BackgroundImage = global::LaboratorioClinico.Properties.Resources.correo;
             this.Imprimir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Imprimir.Location = new System.Drawing.Point(504, 334);
+            this.Imprimir.Location = new System.Drawing.Point(506, 342);
             this.Imprimir.Name = "Imprimir";
             this.Imprimir.Size = new System.Drawing.Size(53, 44);
             this.Imprimir.TabIndex = 5;
             this.Imprimir.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(475, 376);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 15);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Enviar por correo";
             // 
             // Resultados
             // 
