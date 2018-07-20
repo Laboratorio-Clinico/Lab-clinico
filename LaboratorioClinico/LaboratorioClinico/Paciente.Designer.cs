@@ -370,9 +370,9 @@
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(33, 28);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(158, 18);
+            this.label7.Size = new System.Drawing.Size(159, 18);
             this.label7.TabIndex = 38;
-            this.label7.Text = "Fecha entrega resultados:";
+            this.label7.Text = "Fecha emisión resultados:";
             // 
             // textBox7
             // 
