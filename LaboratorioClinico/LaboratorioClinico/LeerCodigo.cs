@@ -21,5 +21,10 @@ namespace LaboratorioClinico
         {
 
         }
+
+        private void Bt_cerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -200,6 +200,7 @@
             this.leerCódigoToolStripMenuItem.Name = "leerCódigoToolStripMenuItem";
             this.leerCódigoToolStripMenuItem.Size = new System.Drawing.Size(197, 28);
             this.leerCódigoToolStripMenuItem.Text = "Leer código";
+            this.leerCódigoToolStripMenuItem.Click += new System.EventHandler(this.leerCódigoToolStripMenuItem_Click);
             // 
             // crearCódigoToolStripMenuItem
             // 

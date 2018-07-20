@@ -281,7 +281,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::LaboratorioClinico.Properties.Resources.clause_1462969_960_720;
+            this.pictureBox1.Image = global::LaboratorioClinico.Properties.Resources.codigobarra;
             this.pictureBox1.Location = new System.Drawing.Point(31, 24);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(296, 297);
