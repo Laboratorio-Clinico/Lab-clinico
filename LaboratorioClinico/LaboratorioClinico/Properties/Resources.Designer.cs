@@ -329,5 +329,15 @@ namespace LaboratorioClinico.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sky_Blue_thumb {
+            get {
+                object obj = ResourceManager.GetObject("Sky Blue_thumb", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
