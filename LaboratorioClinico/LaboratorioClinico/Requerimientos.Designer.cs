@@ -197,6 +197,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox4);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Requerimientos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Requerimientos_Load);
