@@ -55,6 +55,7 @@
             this.Btn_ingresar.TabIndex = 0;
             this.Btn_ingresar.Text = "INGRESAR";
             this.Btn_ingresar.UseVisualStyleBackColor = false;
+            this.Btn_ingresar.Click += new System.EventHandler(this.Btn_ingresar_Click);
             // 
             // label1
             // 

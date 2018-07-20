@@ -201,6 +201,7 @@
             this.crearCódigoToolStripMenuItem.Name = "crearCódigoToolStripMenuItem";
             this.crearCódigoToolStripMenuItem.Size = new System.Drawing.Size(197, 28);
             this.crearCódigoToolStripMenuItem.Text = "Crear código";
+            this.crearCódigoToolStripMenuItem.Click += new System.EventHandler(this.crearCódigoToolStripMenuItem_Click);
             // 
             // requerimientosToolStripMenuItem
             // 

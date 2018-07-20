@@ -36,5 +36,11 @@ namespace LaboratorioClinico
         {
 
         }
+
+        private void Btn_ingresar_Click(object sender, EventArgs e)
+        {
+            Menu nuevo = new Menu();
+            nuevo.ShowDialog();
+        }
     }
 }
