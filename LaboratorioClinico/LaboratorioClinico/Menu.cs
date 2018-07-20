@@ -57,5 +57,11 @@ namespace LaboratorioClinico
             CrearCodigo nuevo = new CrearCodigo();
             nuevo.ShowDialog();
         }
+
+        private void leerCódigoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LeerCodigo nuevo = new LeerCodigo();
+            nuevo.ShowDialog();
+        }
     }
 }

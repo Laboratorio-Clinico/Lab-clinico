@@ -200,6 +200,7 @@
             this.leerCódigoToolStripMenuItem.Name = "leerCódigoToolStripMenuItem";
             this.leerCódigoToolStripMenuItem.Size = new System.Drawing.Size(197, 28);
             this.leerCódigoToolStripMenuItem.Text = "Leer código";
+            this.leerCódigoToolStripMenuItem.Click += new System.EventHandler(this.leerCódigoToolStripMenuItem_Click);
             // 
             // crearCódigoToolStripMenuItem
             // 
@@ -251,7 +252,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Stencil", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Crimson;
-            this.label1.Location = new System.Drawing.Point(195, 43);
+            this.label1.Location = new System.Drawing.Point(304, 343);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(413, 42);
             this.label1.TabIndex = 1;
