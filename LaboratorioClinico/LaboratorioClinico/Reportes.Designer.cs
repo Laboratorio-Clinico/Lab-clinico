@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reportes));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -40,12 +41,15 @@
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
             // 
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(55, 61);
+            this.button1.Location = new System.Drawing.Point(55, 81);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(138, 70);
             this.button1.TabIndex = 0;
@@ -54,8 +58,10 @@
             // 
             // button2
             // 
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(224, 61);
+            this.button2.Location = new System.Drawing.Point(224, 81);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(138, 70);
             this.button2.TabIndex = 1;
@@ -64,8 +70,10 @@
             // 
             // button3
             // 
+            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(397, 61);
+            this.button3.Location = new System.Drawing.Point(397, 81);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(138, 70);
             this.button3.TabIndex = 2;
@@ -74,8 +82,10 @@
             // 
             // button4
             // 
+            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(563, 61);
+            this.button4.Location = new System.Drawing.Point(563, 81);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(138, 70);
             this.button4.TabIndex = 3;
@@ -84,8 +94,10 @@
             // 
             // button5
             // 
+            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button5.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(55, 206);
+            this.button5.Location = new System.Drawing.Point(55, 226);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(138, 70);
             this.button5.TabIndex = 4;
@@ -94,8 +106,10 @@
             // 
             // button6
             // 
+            this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button6.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(224, 206);
+            this.button6.Location = new System.Drawing.Point(224, 226);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(138, 70);
             this.button6.TabIndex = 5;
@@ -104,8 +118,10 @@
             // 
             // button7
             // 
+            this.button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button7.BackgroundImage")));
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button7.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(397, 206);
+            this.button7.Location = new System.Drawing.Point(397, 226);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(138, 70);
             this.button7.TabIndex = 6;
@@ -114,8 +130,10 @@
             // 
             // button8
             // 
+            this.button8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button8.BackgroundImage")));
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button8.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(563, 206);
+            this.button8.Location = new System.Drawing.Point(563, 226);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(138, 70);
             this.button8.TabIndex = 7;
@@ -124,8 +142,10 @@
             // 
             // button9
             // 
+            this.button9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button9.BackgroundImage")));
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button9.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(55, 345);
+            this.button9.Location = new System.Drawing.Point(55, 365);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(138, 70);
             this.button9.TabIndex = 8;
@@ -134,8 +154,10 @@
             // 
             // button10
             // 
+            this.button10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button10.BackgroundImage")));
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button10.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(224, 345);
+            this.button10.Location = new System.Drawing.Point(224, 365);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(138, 70);
             this.button10.TabIndex = 9;
@@ -144,8 +166,10 @@
             // 
             // button11
             // 
+            this.button11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button11.BackgroundImage")));
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button11.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.Location = new System.Drawing.Point(397, 345);
+            this.button11.Location = new System.Drawing.Point(397, 365);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(138, 70);
             this.button11.TabIndex = 10;
@@ -154,8 +178,10 @@
             // 
             // button12
             // 
+            this.button12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button12.BackgroundImage")));
+            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button12.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.Location = new System.Drawing.Point(563, 345);
+            this.button12.Location = new System.Drawing.Point(563, 365);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(138, 70);
             this.button12.TabIndex = 11;
@@ -163,13 +189,26 @@
             this.button12.UseVisualStyleBackColor = true;
             this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Perpetua", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DarkKhaki;
+            this.label1.Location = new System.Drawing.Point(312, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(128, 33);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Reportes";
+            // 
             // Reportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::LaboratorioClinico.Properties.Resources.a;
+            this.BackgroundImage = global::LaboratorioClinico.Properties.Resources.FONDOO;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(766, 489);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button12);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.button10);
@@ -187,6 +226,7 @@
             this.Text = "Reportes";
             this.Load += new System.EventHandler(this.Reportes_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -204,5 +244,6 @@
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Label label1;
     }
 }
