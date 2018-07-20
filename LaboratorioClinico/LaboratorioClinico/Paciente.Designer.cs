@@ -388,7 +388,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::LaboratorioClinico.Properties.Resources.a;
+            this.BackgroundImage = global::LaboratorioClinico.Properties.Resources.a1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(766, 489);
             this.Controls.Add(this.groupBox4);
