@@ -322,6 +322,7 @@
             this.ClientSize = new System.Drawing.Size(859, 444);
             this.Controls.Add(this.groupBox1);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Exámen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Exámen_Load);
