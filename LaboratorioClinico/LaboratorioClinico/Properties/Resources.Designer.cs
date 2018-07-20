@@ -73,6 +73,16 @@ namespace LaboratorioClinico.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap clause_1462969_960_720 {
+            get {
+                object obj = ResourceManager.GetObject("clause-1462969_960_720", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap codigobarra {
             get {
                 object obj = ResourceManager.GetObject("codigobarra", resourceCulture);
@@ -153,6 +163,16 @@ namespace LaboratorioClinico.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap heart_960458_960_720 {
+            get {
+                object obj = ResourceManager.GetObject("heart-960458_960_720", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_encuentra_hombre_usuario_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-encuentra-hombre-usuario-48", resourceCulture);
@@ -186,6 +206,16 @@ namespace LaboratorioClinico.Properties {
         internal static System.Drawing.Bitmap impresora1 {
             get {
                 object obj = ResourceManager.GetObject("impresora1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap microbiology_163470_960_720 {
+            get {
+                object obj = ResourceManager.GetObject("microbiology-163470_960_720", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
