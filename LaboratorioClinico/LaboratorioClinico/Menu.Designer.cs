@@ -251,7 +251,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Stencil", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Crimson;
-            this.label1.Location = new System.Drawing.Point(195, 43);
+            this.label1.Location = new System.Drawing.Point(304, 343);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(413, 42);
             this.label1.TabIndex = 1;

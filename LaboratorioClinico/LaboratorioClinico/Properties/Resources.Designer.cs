@@ -93,6 +93,16 @@ namespace LaboratorioClinico.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap clause_1462969_960_720 {
+            get {
+                object obj = ResourceManager.GetObject("clause-1462969_960_720", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap codigobarra {
             get {
                 object obj = ResourceManager.GetObject("codigobarra", resourceCulture);
@@ -163,9 +173,9 @@ namespace LaboratorioClinico.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap fondo_azul {
+        internal static System.Drawing.Bitmap fondo1 {
             get {
-                object obj = ResourceManager.GetObject("fondo-azul", resourceCulture);
+                object obj = ResourceManager.GetObject("fondo1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -206,6 +216,16 @@ namespace LaboratorioClinico.Properties {
         internal static System.Drawing.Bitmap guardar1 {
             get {
                 object obj = ResourceManager.GetObject("guardar1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap health {
+            get {
+                object obj = ResourceManager.GetObject("health", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

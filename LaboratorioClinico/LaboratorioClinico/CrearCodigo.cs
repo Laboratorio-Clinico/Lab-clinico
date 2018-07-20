@@ -51,5 +51,10 @@ namespace LaboratorioClinico
             if (Txt_texto.Text != "")
                 Pic_img.Image = new Bitmap(Crear.Encode(BarcodeFormat.Code39, Txt_texto.Text));
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
