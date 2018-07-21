@@ -41,5 +41,10 @@ namespace LaboratorioClinico
         {
 
         }
+
+        private void Picb_paciente_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
