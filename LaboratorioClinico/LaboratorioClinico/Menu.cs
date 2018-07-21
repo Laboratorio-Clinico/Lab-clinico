@@ -75,7 +75,24 @@ namespace LaboratorioClinico
         {
             MessageBox.Show("Cerrando sesión");
             this.Close();
-            
+        }
+
+        private void lbl_tipo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            if (Pnl_menudespegable.Visible == true)
+            {
+                Pnl_menudespegable.Visible = false;
+            }
+            else
+            {
+                Pnl_menudespegable.Visible = true;
+            }
+
         }
     }
 }

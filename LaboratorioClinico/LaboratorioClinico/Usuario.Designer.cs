@@ -28,178 +28,179 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.Gpb_nuevoUsuario = new System.Windows.Forms.GroupBox();
+            this.Btn_guardar = new System.Windows.Forms.Button();
+            this.Lbl_privilegio = new System.Windows.Forms.Label();
+            this.Chb_privelegio = new System.Windows.Forms.ComboBox();
+            this.Txtx_confirmarContrasena = new System.Windows.Forms.TextBox();
+            this.Txtx_contrasena = new System.Windows.Forms.TextBox();
+            this.Txtx_usuario = new System.Windows.Forms.TextBox();
+            this.Txtx_Lbl_codigoDeEmpleado = new System.Windows.Forms.TextBox();
+            this.Lbl_confirmarContraseña = new System.Windows.Forms.Label();
+            this.Lbl_codigoDeEmpleado = new System.Windows.Forms.Label();
+            this.Lbl_contrasena = new System.Windows.Forms.Label();
+            this.Lbl_usuario = new System.Windows.Forms.Label();
+            this.Picb_Imagen = new System.Windows.Forms.PictureBox();
+            this.Gpb_nuevoUsuario.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Picb_Imagen)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // Gpb_nuevoUsuario
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.pictureBox1);
-            this.groupBox1.Font = new System.Drawing.Font("Perpetua", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.DarkKhaki;
-            this.groupBox1.Location = new System.Drawing.Point(28, 23);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(717, 441);
-            this.groupBox1.TabIndex = 14;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Nuevo Usuario";
+            this.Gpb_nuevoUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.Gpb_nuevoUsuario.Controls.Add(this.Btn_guardar);
+            this.Gpb_nuevoUsuario.Controls.Add(this.Lbl_privilegio);
+            this.Gpb_nuevoUsuario.Controls.Add(this.Chb_privelegio);
+            this.Gpb_nuevoUsuario.Controls.Add(this.Txtx_confirmarContrasena);
+            this.Gpb_nuevoUsuario.Controls.Add(this.Txtx_contrasena);
+            this.Gpb_nuevoUsuario.Controls.Add(this.Txtx_usuario);
+            this.Gpb_nuevoUsuario.Controls.Add(this.Txtx_Lbl_codigoDeEmpleado);
+            this.Gpb_nuevoUsuario.Controls.Add(this.Lbl_confirmarContraseña);
+            this.Gpb_nuevoUsuario.Controls.Add(this.Lbl_codigoDeEmpleado);
+            this.Gpb_nuevoUsuario.Controls.Add(this.Lbl_contrasena);
+            this.Gpb_nuevoUsuario.Controls.Add(this.Lbl_usuario);
+            this.Gpb_nuevoUsuario.Controls.Add(this.Picb_Imagen);
+            this.Gpb_nuevoUsuario.Font = new System.Drawing.Font("Perpetua", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Gpb_nuevoUsuario.ForeColor = System.Drawing.Color.DarkKhaki;
+            this.Gpb_nuevoUsuario.Location = new System.Drawing.Point(28, 23);
+            this.Gpb_nuevoUsuario.Name = "Gpb_nuevoUsuario";
+            this.Gpb_nuevoUsuario.Size = new System.Drawing.Size(717, 441);
+            this.Gpb_nuevoUsuario.TabIndex = 14;
+            this.Gpb_nuevoUsuario.TabStop = false;
+            this.Gpb_nuevoUsuario.Text = "Nuevo Usuario";
             // 
-            // button1
+            // Btn_guardar
             // 
-            this.button1.BackgroundImage = global::LaboratorioClinico.Properties.Resources.guardar;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(611, 366);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(53, 44);
-            this.button1.TabIndex = 37;
-            this.button1.UseVisualStyleBackColor = true;
+            this.Btn_guardar.BackgroundImage = global::LaboratorioClinico.Properties.Resources.guardar;
+            this.Btn_guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_guardar.Location = new System.Drawing.Point(611, 366);
+            this.Btn_guardar.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_guardar.Name = "Btn_guardar";
+            this.Btn_guardar.Size = new System.Drawing.Size(53, 44);
+            this.Btn_guardar.TabIndex = 37;
+            this.Btn_guardar.UseVisualStyleBackColor = true;
             // 
-            // label6
+            // Lbl_privilegio
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(331, 289);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 18);
-            this.label6.TabIndex = 36;
-            this.label6.Text = "Privilegio";
+            this.Lbl_privilegio.AutoSize = true;
+            this.Lbl_privilegio.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_privilegio.ForeColor = System.Drawing.Color.White;
+            this.Lbl_privilegio.Location = new System.Drawing.Point(331, 289);
+            this.Lbl_privilegio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_privilegio.Name = "Lbl_privilegio";
+            this.Lbl_privilegio.Size = new System.Drawing.Size(66, 18);
+            this.Lbl_privilegio.TabIndex = 36;
+            this.Lbl_privilegio.Text = "Privilegio";
             // 
-            // comboBox1
+            // Chb_privelegio
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.comboBox1.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(479, 285);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(185, 26);
-            this.comboBox1.TabIndex = 35;
+            this.Chb_privelegio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Chb_privelegio.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Chb_privelegio.FormattingEnabled = true;
+            this.Chb_privelegio.Location = new System.Drawing.Point(479, 285);
+            this.Chb_privelegio.Margin = new System.Windows.Forms.Padding(4);
+            this.Chb_privelegio.Name = "Chb_privelegio";
+            this.Chb_privelegio.Size = new System.Drawing.Size(185, 26);
+            this.Chb_privelegio.TabIndex = 35;
             // 
-            // textBox4
+            // Txtx_confirmarContrasena
             // 
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.textBox4.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(479, 231);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(185, 26);
-            this.textBox4.TabIndex = 34;
+            this.Txtx_confirmarContrasena.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txtx_confirmarContrasena.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txtx_confirmarContrasena.Location = new System.Drawing.Point(479, 231);
+            this.Txtx_confirmarContrasena.Margin = new System.Windows.Forms.Padding(4);
+            this.Txtx_confirmarContrasena.Name = "Txtx_confirmarContrasena";
+            this.Txtx_confirmarContrasena.Size = new System.Drawing.Size(185, 26);
+            this.Txtx_confirmarContrasena.TabIndex = 34;
             // 
-            // textBox3
+            // Txtx_contrasena
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.textBox3.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(479, 187);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(185, 26);
-            this.textBox3.TabIndex = 33;
+            this.Txtx_contrasena.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txtx_contrasena.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txtx_contrasena.Location = new System.Drawing.Point(479, 187);
+            this.Txtx_contrasena.Margin = new System.Windows.Forms.Padding(4);
+            this.Txtx_contrasena.Name = "Txtx_contrasena";
+            this.Txtx_contrasena.Size = new System.Drawing.Size(185, 26);
+            this.Txtx_contrasena.TabIndex = 33;
             // 
-            // textBox2
+            // Txtx_usuario
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.textBox2.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(479, 142);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(185, 26);
-            this.textBox2.TabIndex = 32;
+            this.Txtx_usuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txtx_usuario.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txtx_usuario.Location = new System.Drawing.Point(479, 142);
+            this.Txtx_usuario.Margin = new System.Windows.Forms.Padding(4);
+            this.Txtx_usuario.Name = "Txtx_usuario";
+            this.Txtx_usuario.Size = new System.Drawing.Size(185, 26);
+            this.Txtx_usuario.TabIndex = 32;
             // 
-            // textBox1
+            // Txtx_Lbl_codigoDeEmpleado
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.textBox1.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(479, 98);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(185, 26);
-            this.textBox1.TabIndex = 31;
+            this.Txtx_Lbl_codigoDeEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txtx_Lbl_codigoDeEmpleado.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txtx_Lbl_codigoDeEmpleado.Location = new System.Drawing.Point(479, 98);
+            this.Txtx_Lbl_codigoDeEmpleado.Margin = new System.Windows.Forms.Padding(4);
+            this.Txtx_Lbl_codigoDeEmpleado.Name = "Txtx_Lbl_codigoDeEmpleado";
+            this.Txtx_Lbl_codigoDeEmpleado.Size = new System.Drawing.Size(185, 26);
+            this.Txtx_Lbl_codigoDeEmpleado.TabIndex = 31;
             // 
-            // label5
+            // Lbl_confirmarContraseña
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(331, 235);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(136, 18);
-            this.label5.TabIndex = 30;
-            this.label5.Text = "Confirmar contraseña";
+            this.Lbl_confirmarContraseña.AutoSize = true;
+            this.Lbl_confirmarContraseña.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_confirmarContraseña.ForeColor = System.Drawing.Color.White;
+            this.Lbl_confirmarContraseña.Location = new System.Drawing.Point(331, 235);
+            this.Lbl_confirmarContraseña.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_confirmarContraseña.Name = "Lbl_confirmarContraseña";
+            this.Lbl_confirmarContraseña.Size = new System.Drawing.Size(136, 18);
+            this.Lbl_confirmarContraseña.TabIndex = 30;
+            this.Lbl_confirmarContraseña.Text = "Confirmar contraseña";
+            this.Lbl_confirmarContraseña.Click += new System.EventHandler(this.Lbl_confirmarContraseña_Click);
             // 
-            // label4
+            // Lbl_codigoDeEmpleado
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(331, 102);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(112, 18);
-            this.label4.TabIndex = 29;
-            this.label4.Text = "Codigo Empleado";
+            this.Lbl_codigoDeEmpleado.AutoSize = true;
+            this.Lbl_codigoDeEmpleado.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_codigoDeEmpleado.ForeColor = System.Drawing.Color.White;
+            this.Lbl_codigoDeEmpleado.Location = new System.Drawing.Point(331, 102);
+            this.Lbl_codigoDeEmpleado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_codigoDeEmpleado.Name = "Lbl_codigoDeEmpleado";
+            this.Lbl_codigoDeEmpleado.Size = new System.Drawing.Size(112, 18);
+            this.Lbl_codigoDeEmpleado.TabIndex = 29;
+            this.Lbl_codigoDeEmpleado.Text = "Codigo Empleado";
             // 
-            // label3
+            // Lbl_contrasena
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(331, 191);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 18);
-            this.label3.TabIndex = 28;
-            this.label3.Text = "Contraseña";
+            this.Lbl_contrasena.AutoSize = true;
+            this.Lbl_contrasena.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_contrasena.ForeColor = System.Drawing.Color.White;
+            this.Lbl_contrasena.Location = new System.Drawing.Point(331, 191);
+            this.Lbl_contrasena.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_contrasena.Name = "Lbl_contrasena";
+            this.Lbl_contrasena.Size = new System.Drawing.Size(74, 18);
+            this.Lbl_contrasena.TabIndex = 28;
+            this.Lbl_contrasena.Text = "Contraseña";
             // 
-            // label2
+            // Lbl_usuario
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(331, 147);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 18);
-            this.label2.TabIndex = 27;
-            this.label2.Text = "Usuario";
+            this.Lbl_usuario.AutoSize = true;
+            this.Lbl_usuario.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_usuario.ForeColor = System.Drawing.Color.White;
+            this.Lbl_usuario.Location = new System.Drawing.Point(331, 147);
+            this.Lbl_usuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_usuario.Name = "Lbl_usuario";
+            this.Lbl_usuario.Size = new System.Drawing.Size(54, 18);
+            this.Lbl_usuario.TabIndex = 27;
+            this.Lbl_usuario.Text = "Usuario";
             // 
-            // pictureBox1
+            // Picb_Imagen
             // 
-            this.pictureBox1.Image = global::LaboratorioClinico.Properties.Resources.imagen_monografico_que_deberias_saber_cuentas_de_usuario;
-            this.pictureBox1.Location = new System.Drawing.Point(54, 86);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(247, 239);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 25;
-            this.pictureBox1.TabStop = false;
+            this.Picb_Imagen.Image = global::LaboratorioClinico.Properties.Resources.imagen_monografico_que_deberias_saber_cuentas_de_usuario;
+            this.Picb_Imagen.Location = new System.Drawing.Point(54, 86);
+            this.Picb_Imagen.Name = "Picb_Imagen";
+            this.Picb_Imagen.Size = new System.Drawing.Size(247, 239);
+            this.Picb_Imagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Picb_Imagen.TabIndex = 25;
+            this.Picb_Imagen.TabStop = false;
             // 
             // Usuario
             // 
@@ -208,34 +209,35 @@
             this.BackgroundImage = global::LaboratorioClinico.Properties.Resources.FONDOO;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(766, 489);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.Gpb_nuevoUsuario);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Usuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Usuario";
             this.Load += new System.EventHandler(this.Usuario_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Gpb_nuevoUsuario.ResumeLayout(false);
+            this.Gpb_nuevoUsuario.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Picb_Imagen)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.GroupBox Gpb_nuevoUsuario;
+        private System.Windows.Forms.Button Btn_guardar;
+        private System.Windows.Forms.Label Lbl_privilegio;
+        private System.Windows.Forms.ComboBox Chb_privelegio;
+        private System.Windows.Forms.TextBox Txtx_confirmarContrasena;
+        private System.Windows.Forms.TextBox Txtx_contrasena;
+        private System.Windows.Forms.TextBox Txtx_usuario;
+        private System.Windows.Forms.TextBox Txtx_Lbl_codigoDeEmpleado;
+        private System.Windows.Forms.Label Lbl_confirmarContraseña;
+        private System.Windows.Forms.Label Lbl_codigoDeEmpleado;
+        private System.Windows.Forms.Label Lbl_contrasena;
+        private System.Windows.Forms.Label Lbl_usuario;
+        private System.Windows.Forms.PictureBox Picb_Imagen;
     }
 }

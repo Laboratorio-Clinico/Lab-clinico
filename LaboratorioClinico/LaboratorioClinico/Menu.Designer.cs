@@ -55,12 +55,17 @@
             this.lbl_tipo = new System.Windows.Forms.Label();
             this.lbl_usuario = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.Pnl_menudespegable = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.Pnl_menudespegable.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -77,7 +82,7 @@
             this.ayudaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(917, 32);
+            this.menuStrip1.Size = new System.Drawing.Size(791, 32);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -270,20 +275,21 @@
             // lbl_tipo
             // 
             this.lbl_tipo.AutoSize = true;
-            this.lbl_tipo.BackColor = System.Drawing.Color.LightGray;
+            this.lbl_tipo.BackColor = System.Drawing.Color.Transparent;
             this.lbl_tipo.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_tipo.Location = new System.Drawing.Point(41, 16);
+            this.lbl_tipo.Location = new System.Drawing.Point(41, 23);
             this.lbl_tipo.Name = "lbl_tipo";
             this.lbl_tipo.Size = new System.Drawing.Size(50, 15);
             this.lbl_tipo.TabIndex = 2;
             this.lbl_tipo.Text = "Usuario";
+            this.lbl_tipo.Click += new System.EventHandler(this.lbl_tipo_Click);
             // 
             // lbl_usuario
             // 
             this.lbl_usuario.AutoSize = true;
-            this.lbl_usuario.BackColor = System.Drawing.Color.LightGray;
+            this.lbl_usuario.BackColor = System.Drawing.Color.Transparent;
             this.lbl_usuario.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_usuario.Location = new System.Drawing.Point(41, 0);
+            this.lbl_usuario.Location = new System.Drawing.Point(41, 2);
             this.lbl_usuario.Name = "lbl_usuario";
             this.lbl_usuario.Size = new System.Drawing.Size(50, 15);
             this.lbl_usuario.TabIndex = 3;
@@ -291,32 +297,21 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.LightGray;
+            this.pictureBox1.BackColor = System.Drawing.Color.SeaShell;
             this.pictureBox1.Image = global::LaboratorioClinico.Properties.Resources.usuario;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(755, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(35, 32);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.LightGray;
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.lbl_tipo);
-            this.panel1.Controls.Add(this.lbl_usuario);
-            this.panel1.Location = new System.Drawing.Point(748, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(169, 32);
-            this.panel1.TabIndex = 5;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Crimson;
+            this.pictureBox2.BackColor = System.Drawing.Color.Teal;
             this.pictureBox2.Image = global::LaboratorioClinico.Properties.Resources.salida__1_;
-            this.pictureBox2.Location = new System.Drawing.Point(131, 0);
+            this.pictureBox2.Location = new System.Drawing.Point(0, 44);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(38, 32);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -324,14 +319,59 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
+            // Pnl_menudespegable
+            // 
+            this.Pnl_menudespegable.BackColor = System.Drawing.Color.DarkCyan;
+            this.Pnl_menudespegable.Controls.Add(this.panel1);
+            this.Pnl_menudespegable.Controls.Add(this.label2);
+            this.Pnl_menudespegable.Controls.Add(this.pictureBox2);
+            this.Pnl_menudespegable.Location = new System.Drawing.Point(666, 33);
+            this.Pnl_menudespegable.Name = "Pnl_menudespegable";
+            this.Pnl_menudespegable.Size = new System.Drawing.Size(125, 77);
+            this.Pnl_menudespegable.TabIndex = 6;
+            this.Pnl_menudespegable.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Perpetua", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(40, 51);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(76, 14);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Cerrar sesion";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.pictureBox3);
+            this.panel1.Controls.Add(this.lbl_tipo);
+            this.panel1.Controls.Add(this.lbl_usuario);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(125, 38);
+            this.panel1.TabIndex = 7;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = global::LaboratorioClinico.Properties.Resources.usuario;
+            this.pictureBox3.Location = new System.Drawing.Point(0, 2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(35, 39);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 7;
+            this.pictureBox3.TabStop = false;
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(917, 400);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(791, 400);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.Pnl_menudespegable);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -343,9 +383,12 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.Pnl_menudespegable.ResumeLayout(false);
+            this.Pnl_menudespegable.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -379,7 +422,10 @@
         private System.Windows.Forms.Label lbl_tipo;
         private System.Windows.Forms.Label lbl_usuario;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel Pnl_menudespegable;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
