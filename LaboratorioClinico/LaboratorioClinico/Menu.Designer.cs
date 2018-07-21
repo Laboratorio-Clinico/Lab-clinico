@@ -270,7 +270,7 @@
             // lbl_tipo
             // 
             this.lbl_tipo.AutoSize = true;
-            this.lbl_tipo.BackColor = System.Drawing.Color.LightGray;
+            this.lbl_tipo.BackColor = System.Drawing.Color.Transparent;
             this.lbl_tipo.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_tipo.Location = new System.Drawing.Point(41, 16);
             this.lbl_tipo.Name = "lbl_tipo";
@@ -281,7 +281,7 @@
             // lbl_usuario
             // 
             this.lbl_usuario.AutoSize = true;
-            this.lbl_usuario.BackColor = System.Drawing.Color.LightGray;
+            this.lbl_usuario.BackColor = System.Drawing.Color.Transparent;
             this.lbl_usuario.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_usuario.Location = new System.Drawing.Point(41, 0);
             this.lbl_usuario.Name = "lbl_usuario";
@@ -291,7 +291,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.LightGray;
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::LaboratorioClinico.Properties.Resources.usuario;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
@@ -302,19 +302,19 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.LightGray;
+            this.panel1.BackColor = System.Drawing.Color.Pink;
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.lbl_tipo);
             this.panel1.Controls.Add(this.lbl_usuario);
-            this.panel1.Location = new System.Drawing.Point(748, 0);
+            this.panel1.Location = new System.Drawing.Point(748, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(169, 32);
+            this.panel1.Size = new System.Drawing.Size(169, 31);
             this.panel1.TabIndex = 5;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Crimson;
+            this.pictureBox2.BackColor = System.Drawing.Color.OrangeRed;
             this.pictureBox2.Image = global::LaboratorioClinico.Properties.Resources.salida__1_;
             this.pictureBox2.Location = new System.Drawing.Point(131, 0);
             this.pictureBox2.Name = "pictureBox2";
