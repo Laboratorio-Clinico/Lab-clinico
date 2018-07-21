@@ -73,7 +73,8 @@ namespace LaboratorioClinico
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Cerrando sesión");
+            this.Close();
         }
     }
 }
