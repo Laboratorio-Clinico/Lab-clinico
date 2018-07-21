@@ -43,13 +43,12 @@ namespace LaboratorioClinico
         {
             try
             {
-                while (bandera == 1)
-                {
+              
                     Menu nuevo = new Menu(Txt_usuario.Text, Cbo_privi.SelectedItem.ToString());
                     this.Hide();
                     nuevo.ShowDialog();          
                     this.ShowDialog();
-                }
+                
                     
             }catch (Exception ex)
             {
