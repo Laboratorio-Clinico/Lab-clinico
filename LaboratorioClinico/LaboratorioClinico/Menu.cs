@@ -81,5 +81,18 @@ namespace LaboratorioClinico
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            if (Pnl_menudespegable.Visible == true)
+            {
+                Pnl_menudespegable.Visible = false;
+            }
+            else
+            {
+                Pnl_menudespegable.Visible = true;
+            }
+
+        }
     }
 }
