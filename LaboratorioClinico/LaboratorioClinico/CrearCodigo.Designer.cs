@@ -124,11 +124,11 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(512, 353);
+            this.label4.Location = new System.Drawing.Point(520, 353);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 15);
+            this.label4.Size = new System.Drawing.Size(37, 15);
             this.label4.TabIndex = 8;
-            this.label4.Text = "Agregar";
+            this.label4.Text = "Crear";
             // 
             // CrearCodigo
             // 
@@ -145,6 +145,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Txt_texto);
+            this.DoubleBuffered = true;
             this.Name = "CrearCodigo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.CrearCodigo_Load);
