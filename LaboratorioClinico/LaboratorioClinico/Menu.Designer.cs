@@ -277,6 +277,7 @@
             this.lbl_tipo.Size = new System.Drawing.Size(50, 15);
             this.lbl_tipo.TabIndex = 2;
             this.lbl_tipo.Text = "Usuario";
+            this.lbl_tipo.Click += new System.EventHandler(this.lbl_tipo_Click);
             // 
             // lbl_usuario
             // 

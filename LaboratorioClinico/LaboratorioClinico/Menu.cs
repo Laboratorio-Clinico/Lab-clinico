@@ -75,7 +75,11 @@ namespace LaboratorioClinico
         {
             MessageBox.Show("Cerrando sesión");
             this.Close();
-            
+        }
+
+        private void lbl_tipo_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
