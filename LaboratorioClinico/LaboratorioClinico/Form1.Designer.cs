@@ -32,11 +32,11 @@
             this.Btn_ingresar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Txt_usuario = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.Cbo_privi = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -80,14 +80,14 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Contraseña";
             // 
-            // textBox1
+            // Txt_usuario
             // 
-            this.textBox1.BackColor = System.Drawing.Color.LightBlue;
-            this.textBox1.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(147, 83);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(149, 26);
-            this.textBox1.TabIndex = 3;
+            this.Txt_usuario.BackColor = System.Drawing.Color.LightBlue;
+            this.Txt_usuario.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_usuario.Location = new System.Drawing.Point(147, 83);
+            this.Txt_usuario.Name = "Txt_usuario";
+            this.Txt_usuario.Size = new System.Drawing.Size(149, 26);
+            this.Txt_usuario.TabIndex = 3;
             // 
             // textBox2
             // 
@@ -121,15 +121,18 @@
             this.label4.Text = "Privilegio";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // comboBox1
+            // Cbo_privi
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.LightBlue;
-            this.comboBox1.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(147, 47);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(149, 26);
-            this.comboBox1.TabIndex = 7;
+            this.Cbo_privi.BackColor = System.Drawing.Color.LightBlue;
+            this.Cbo_privi.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cbo_privi.FormattingEnabled = true;
+            this.Cbo_privi.Items.AddRange(new object[] {
+            "Administrador",
+            "Usuario"});
+            this.Cbo_privi.Location = new System.Drawing.Point(147, 47);
+            this.Cbo_privi.Name = "Cbo_privi";
+            this.Cbo_privi.Size = new System.Drawing.Size(149, 26);
+            this.Cbo_privi.TabIndex = 7;
             // 
             // pictureBox1
             // 
@@ -145,12 +148,12 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.Cbo_privi);
             this.groupBox1.Controls.Add(this.Btn_ingresar);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.Txt_usuario);
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Font = new System.Drawing.Font("Perpetua", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.MidnightBlue;
@@ -196,11 +199,11 @@
         private System.Windows.Forms.Button Btn_ingresar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Txt_usuario;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox Cbo_privi;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox1;
     }

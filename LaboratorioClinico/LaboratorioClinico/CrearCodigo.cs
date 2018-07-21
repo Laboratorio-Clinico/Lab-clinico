@@ -45,11 +45,18 @@ namespace LaboratorioClinico
 
         private void Btn_crear_Click(object sender, EventArgs e)
         {
-            Crear = new BarcodeEncoder();
-            Crear.IncludeLabel = true;
-            Crear.CustomLabel = Txt_texto.Text;
-            if (Txt_texto.Text != "")
-                Pic_img.Image = new Bitmap(Crear.Encode(BarcodeFormat.Code39, Txt_texto.Text));
+            try
+            {
+                Crear = new BarcodeEncoder();
+                Crear.IncludeLabel = true;
+                Crear.CustomLabel = Txt_texto.Text;
+                if (Txt_texto.Text != "")
+                    Pic_img.Image = new Bitmap(Crear.Encode(BarcodeFormat.Code39, Txt_texto.Text));
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Dato invalido: " + ex.Message);
+                
+            }
         }
 
         private void label3_Click(object sender, EventArgs e)
