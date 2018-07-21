@@ -39,7 +39,7 @@ namespace LaboratorioClinico
 
         private void Btn_ingresar_Click(object sender, EventArgs e)
         {
-            Menu nuevo = new Menu();
+            Menu nuevo = new Menu("Julio", "Administrador");
             this.Hide();
             nuevo.ShowDialog();
             this.ShowDialog();

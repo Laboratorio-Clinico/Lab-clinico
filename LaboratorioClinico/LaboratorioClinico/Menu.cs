@@ -12,9 +12,11 @@ namespace LaboratorioClinico
 {
     public partial class Menu : Form
     {
-        public Menu()
+        public Menu(string nombre, string tipo)
         {
             InitializeComponent();
+            lbl_usuario.Text = nombre;
+            lbl_tipo.Text = tipo;
         }
 
         private void ayudaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -62,6 +64,16 @@ namespace LaboratorioClinico
         {
             LeerCodigo nuevo = new LeerCodigo();
             nuevo.ShowDialog();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
