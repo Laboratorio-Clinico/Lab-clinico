@@ -75,6 +75,7 @@ namespace LaboratorioClinico
         {
             MessageBox.Show("Cerrando sesión");
             this.Close();
+            
         }
     }
 }

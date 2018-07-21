@@ -12,9 +12,11 @@ namespace LaboratorioClinico
 {
     public partial class Form1 : Form
     {
+        int bandera=1;
         public Form1()
         {
             InitializeComponent();
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -41,10 +43,14 @@ namespace LaboratorioClinico
         {
             try
             {
-                Menu nuevo = new Menu("Julio", "Administrador");
-                this.Hide();
-                nuevo.ShowDialog();
-                this.ShowDialog();
+                while (bandera == 1)
+                {
+                    Menu nuevo = new Menu(Txt_usuario.Text, Cbo_privi.SelectedItem.ToString());
+                    this.Hide();
+                    nuevo.ShowDialog();          
+                    this.ShowDialog();
+                }
+                    
             }catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex);
