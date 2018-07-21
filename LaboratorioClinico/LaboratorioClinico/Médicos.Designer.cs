@@ -28,138 +28,138 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.Lbl_nombre = new System.Windows.Forms.Label();
+            this.Lbl_telefono = new System.Windows.Forms.Label();
+            this.Lbl_direccion = new System.Windows.Forms.Label();
+            this.Lbl_especialidad = new System.Windows.Forms.Label();
+            this.Lbl_colegiado = new System.Windows.Forms.Label();
+            this.Txt_nombre = new System.Windows.Forms.TextBox();
+            this.Txt_telefono = new System.Windows.Forms.TextBox();
+            this.Txt_direccion = new System.Windows.Forms.TextBox();
+            this.Txt_especialidad = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.Lbl_empresa = new System.Windows.Forms.Label();
+            this.Txt_apellido = new System.Windows.Forms.TextBox();
+            this.Lbl_apellido = new System.Windows.Forms.Label();
+            this.Gpb_medicos = new System.Windows.Forms.GroupBox();
+            this.Gpb_profesion = new System.Windows.Forms.GroupBox();
+            this.Gpb_datosPersonales = new System.Windows.Forms.GroupBox();
+            this.Gpb_nacimiento = new System.Windows.Forms.GroupBox();
+            this.Picb_imagenDoctor = new System.Windows.Forms.PictureBox();
+            this.Mnc_fechaNacimiento = new System.Windows.Forms.DateTimePicker();
+            this.Lbl_fechaDeNacimiento = new System.Windows.Forms.Label();
+            this.Btn_guardar = new System.Windows.Forms.Button();
+            this.Gpb_medicos.SuspendLayout();
+            this.Gpb_profesion.SuspendLayout();
+            this.Gpb_datosPersonales.SuspendLayout();
+            this.Gpb_nacimiento.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Picb_imagenDoctor)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // Lbl_nombre
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(35, 57);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 18);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nombre";
+            this.Lbl_nombre.AutoSize = true;
+            this.Lbl_nombre.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_nombre.ForeColor = System.Drawing.Color.White;
+            this.Lbl_nombre.Location = new System.Drawing.Point(35, 57);
+            this.Lbl_nombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_nombre.Name = "Lbl_nombre";
+            this.Lbl_nombre.Size = new System.Drawing.Size(58, 18);
+            this.Lbl_nombre.TabIndex = 0;
+            this.Lbl_nombre.Text = "Nombre";
             // 
-            // label3
+            // Lbl_telefono
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(35, 130);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 18);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Telefono";
+            this.Lbl_telefono.AutoSize = true;
+            this.Lbl_telefono.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_telefono.ForeColor = System.Drawing.Color.White;
+            this.Lbl_telefono.Location = new System.Drawing.Point(35, 130);
+            this.Lbl_telefono.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_telefono.Name = "Lbl_telefono";
+            this.Lbl_telefono.Size = new System.Drawing.Size(60, 18);
+            this.Lbl_telefono.TabIndex = 2;
+            this.Lbl_telefono.Text = "Telefono";
             // 
-            // label4
+            // Lbl_direccion
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(29, 164);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 18);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Dirección";
+            this.Lbl_direccion.AutoSize = true;
+            this.Lbl_direccion.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_direccion.ForeColor = System.Drawing.Color.White;
+            this.Lbl_direccion.Location = new System.Drawing.Point(29, 164);
+            this.Lbl_direccion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_direccion.Name = "Lbl_direccion";
+            this.Lbl_direccion.Size = new System.Drawing.Size(66, 18);
+            this.Lbl_direccion.TabIndex = 3;
+            this.Lbl_direccion.Text = "Dirección";
             // 
-            // label5
+            // Lbl_especialidad
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(16, 198);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(79, 18);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Especialidad";
+            this.Lbl_especialidad.AutoSize = true;
+            this.Lbl_especialidad.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_especialidad.ForeColor = System.Drawing.Color.White;
+            this.Lbl_especialidad.Location = new System.Drawing.Point(16, 198);
+            this.Lbl_especialidad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_especialidad.Name = "Lbl_especialidad";
+            this.Lbl_especialidad.Size = new System.Drawing.Size(79, 18);
+            this.Lbl_especialidad.TabIndex = 4;
+            this.Lbl_especialidad.Text = "Especialidad";
             // 
-            // label6
+            // Lbl_colegiado
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(18, 49);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(76, 18);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Colegiado";
+            this.Lbl_colegiado.AutoSize = true;
+            this.Lbl_colegiado.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_colegiado.ForeColor = System.Drawing.Color.White;
+            this.Lbl_colegiado.Location = new System.Drawing.Point(18, 49);
+            this.Lbl_colegiado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_colegiado.Name = "Lbl_colegiado";
+            this.Lbl_colegiado.Size = new System.Drawing.Size(76, 18);
+            this.Lbl_colegiado.TabIndex = 5;
+            this.Lbl_colegiado.Text = "Colegiado";
             // 
-            // textBox1
+            // Txt_nombre
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.textBox1.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(111, 54);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(197, 26);
-            this.textBox1.TabIndex = 6;
+            this.Txt_nombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_nombre.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_nombre.ForeColor = System.Drawing.Color.Black;
+            this.Txt_nombre.Location = new System.Drawing.Point(111, 54);
+            this.Txt_nombre.Margin = new System.Windows.Forms.Padding(4);
+            this.Txt_nombre.Name = "Txt_nombre";
+            this.Txt_nombre.Size = new System.Drawing.Size(197, 26);
+            this.Txt_nombre.TabIndex = 6;
             // 
-            // textBox3
+            // Txt_telefono
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.textBox3.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.Black;
-            this.textBox3.Location = new System.Drawing.Point(111, 122);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(197, 26);
-            this.textBox3.TabIndex = 8;
+            this.Txt_telefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_telefono.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_telefono.ForeColor = System.Drawing.Color.Black;
+            this.Txt_telefono.Location = new System.Drawing.Point(111, 122);
+            this.Txt_telefono.Margin = new System.Windows.Forms.Padding(4);
+            this.Txt_telefono.Name = "Txt_telefono";
+            this.Txt_telefono.Size = new System.Drawing.Size(197, 26);
+            this.Txt_telefono.TabIndex = 8;
             // 
-            // textBox4
+            // Txt_direccion
             // 
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.textBox4.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.Color.Black;
-            this.textBox4.Location = new System.Drawing.Point(111, 156);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(197, 26);
-            this.textBox4.TabIndex = 9;
+            this.Txt_direccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_direccion.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_direccion.ForeColor = System.Drawing.Color.Black;
+            this.Txt_direccion.Location = new System.Drawing.Point(111, 156);
+            this.Txt_direccion.Margin = new System.Windows.Forms.Padding(4);
+            this.Txt_direccion.Name = "Txt_direccion";
+            this.Txt_direccion.Size = new System.Drawing.Size(197, 26);
+            this.Txt_direccion.TabIndex = 9;
             // 
-            // textBox5
+            // Txt_especialidad
             // 
-            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.textBox5.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.ForeColor = System.Drawing.Color.Black;
-            this.textBox5.Location = new System.Drawing.Point(111, 190);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(197, 26);
-            this.textBox5.TabIndex = 10;
+            this.Txt_especialidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_especialidad.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_especialidad.ForeColor = System.Drawing.Color.Black;
+            this.Txt_especialidad.Location = new System.Drawing.Point(111, 190);
+            this.Txt_especialidad.Margin = new System.Windows.Forms.Padding(4);
+            this.Txt_especialidad.Name = "Txt_especialidad";
+            this.Txt_especialidad.Size = new System.Drawing.Size(197, 26);
+            this.Txt_especialidad.TabIndex = 10;
             // 
             // textBox6
             // 
@@ -181,143 +181,143 @@
             this.textBox2.Size = new System.Drawing.Size(197, 26);
             this.textBox2.TabIndex = 13;
             // 
-            // label9
+            // Lbl_empresa
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(18, 84);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(66, 18);
-            this.label9.TabIndex = 12;
-            this.label9.Text = "Empresa";
+            this.Lbl_empresa.AutoSize = true;
+            this.Lbl_empresa.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_empresa.ForeColor = System.Drawing.Color.White;
+            this.Lbl_empresa.Location = new System.Drawing.Point(18, 84);
+            this.Lbl_empresa.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_empresa.Name = "Lbl_empresa";
+            this.Lbl_empresa.Size = new System.Drawing.Size(66, 18);
+            this.Lbl_empresa.TabIndex = 12;
+            this.Lbl_empresa.Text = "Empresa";
             // 
-            // textBox7
+            // Txt_apellido
             // 
-            this.textBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.textBox7.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.ForeColor = System.Drawing.Color.Black;
-            this.textBox7.Location = new System.Drawing.Point(111, 88);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(197, 26);
-            this.textBox7.TabIndex = 8;
+            this.Txt_apellido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_apellido.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_apellido.ForeColor = System.Drawing.Color.Black;
+            this.Txt_apellido.Location = new System.Drawing.Point(111, 88);
+            this.Txt_apellido.Margin = new System.Windows.Forms.Padding(4);
+            this.Txt_apellido.Name = "Txt_apellido";
+            this.Txt_apellido.Size = new System.Drawing.Size(197, 26);
+            this.Txt_apellido.TabIndex = 8;
             // 
-            // label7
+            // Lbl_apellido
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(35, 92);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(58, 18);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "Apellido";
+            this.Lbl_apellido.AutoSize = true;
+            this.Lbl_apellido.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_apellido.ForeColor = System.Drawing.Color.White;
+            this.Lbl_apellido.Location = new System.Drawing.Point(35, 92);
+            this.Lbl_apellido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_apellido.Name = "Lbl_apellido";
+            this.Lbl_apellido.Size = new System.Drawing.Size(58, 18);
+            this.Lbl_apellido.TabIndex = 7;
+            this.Lbl_apellido.Text = "Apellido";
             // 
-            // groupBox1
+            // Gpb_medicos
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.groupBox3);
-            this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(370, 465);
-            this.groupBox1.TabIndex = 16;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            this.Gpb_medicos.BackColor = System.Drawing.Color.Transparent;
+            this.Gpb_medicos.Controls.Add(this.Gpb_profesion);
+            this.Gpb_medicos.Controls.Add(this.Gpb_datosPersonales);
+            this.Gpb_medicos.Location = new System.Drawing.Point(12, 12);
+            this.Gpb_medicos.Name = "Gpb_medicos";
+            this.Gpb_medicos.Size = new System.Drawing.Size(370, 465);
+            this.Gpb_medicos.TabIndex = 16;
+            this.Gpb_medicos.TabStop = false;
+            this.Gpb_medicos.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // groupBox2
+            // Gpb_profesion
             // 
-            this.groupBox2.Controls.Add(this.textBox7);
-            this.groupBox2.Controls.Add(this.textBox1);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.textBox5);
-            this.groupBox2.Controls.Add(this.textBox4);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.textBox3);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Font = new System.Drawing.Font("Perpetua", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.ForeColor = System.Drawing.Color.DarkKhaki;
-            this.groupBox2.Location = new System.Drawing.Point(15, 38);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(324, 239);
-            this.groupBox2.TabIndex = 0;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Datos Personales";
+            this.Gpb_profesion.Controls.Add(this.textBox2);
+            this.Gpb_profesion.Controls.Add(this.textBox6);
+            this.Gpb_profesion.Controls.Add(this.Lbl_colegiado);
+            this.Gpb_profesion.Controls.Add(this.Lbl_empresa);
+            this.Gpb_profesion.Font = new System.Drawing.Font("Perpetua", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Gpb_profesion.ForeColor = System.Drawing.Color.DarkKhaki;
+            this.Gpb_profesion.Location = new System.Drawing.Point(19, 296);
+            this.Gpb_profesion.Name = "Gpb_profesion";
+            this.Gpb_profesion.Size = new System.Drawing.Size(319, 133);
+            this.Gpb_profesion.TabIndex = 1;
+            this.Gpb_profesion.TabStop = false;
+            this.Gpb_profesion.Text = "Profesión";
             // 
-            // groupBox3
+            // Gpb_datosPersonales
             // 
-            this.groupBox3.Controls.Add(this.textBox2);
-            this.groupBox3.Controls.Add(this.textBox6);
-            this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Font = new System.Drawing.Font("Perpetua", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.ForeColor = System.Drawing.Color.DarkKhaki;
-            this.groupBox3.Location = new System.Drawing.Point(19, 296);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(319, 133);
-            this.groupBox3.TabIndex = 1;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Profesión";
+            this.Gpb_datosPersonales.Controls.Add(this.Txt_apellido);
+            this.Gpb_datosPersonales.Controls.Add(this.Txt_nombre);
+            this.Gpb_datosPersonales.Controls.Add(this.Lbl_telefono);
+            this.Gpb_datosPersonales.Controls.Add(this.Lbl_apellido);
+            this.Gpb_datosPersonales.Controls.Add(this.Txt_especialidad);
+            this.Gpb_datosPersonales.Controls.Add(this.Txt_direccion);
+            this.Gpb_datosPersonales.Controls.Add(this.Lbl_nombre);
+            this.Gpb_datosPersonales.Controls.Add(this.Lbl_especialidad);
+            this.Gpb_datosPersonales.Controls.Add(this.Txt_telefono);
+            this.Gpb_datosPersonales.Controls.Add(this.Lbl_direccion);
+            this.Gpb_datosPersonales.Font = new System.Drawing.Font("Perpetua", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Gpb_datosPersonales.ForeColor = System.Drawing.Color.DarkKhaki;
+            this.Gpb_datosPersonales.Location = new System.Drawing.Point(15, 38);
+            this.Gpb_datosPersonales.Name = "Gpb_datosPersonales";
+            this.Gpb_datosPersonales.Size = new System.Drawing.Size(324, 239);
+            this.Gpb_datosPersonales.TabIndex = 0;
+            this.Gpb_datosPersonales.TabStop = false;
+            this.Gpb_datosPersonales.Text = "Datos Personales";
             // 
-            // groupBox4
+            // Gpb_nacimiento
             // 
-            this.groupBox4.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox4.Controls.Add(this.pictureBox1);
-            this.groupBox4.Controls.Add(this.dateTimePicker1);
-            this.groupBox4.Controls.Add(this.label2);
-            this.groupBox4.Controls.Add(this.button1);
-            this.groupBox4.Location = new System.Drawing.Point(398, 12);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(356, 465);
-            this.groupBox4.TabIndex = 17;
-            this.groupBox4.TabStop = false;
+            this.Gpb_nacimiento.BackColor = System.Drawing.Color.Transparent;
+            this.Gpb_nacimiento.Controls.Add(this.Picb_imagenDoctor);
+            this.Gpb_nacimiento.Controls.Add(this.Mnc_fechaNacimiento);
+            this.Gpb_nacimiento.Controls.Add(this.Lbl_fechaDeNacimiento);
+            this.Gpb_nacimiento.Controls.Add(this.Btn_guardar);
+            this.Gpb_nacimiento.Location = new System.Drawing.Point(398, 12);
+            this.Gpb_nacimiento.Name = "Gpb_nacimiento";
+            this.Gpb_nacimiento.Size = new System.Drawing.Size(356, 465);
+            this.Gpb_nacimiento.TabIndex = 17;
+            this.Gpb_nacimiento.TabStop = false;
             // 
-            // pictureBox1
+            // Picb_imagenDoctor
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::LaboratorioClinico.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(24, 38);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(296, 297);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 26;
-            this.pictureBox1.TabStop = false;
+            this.Picb_imagenDoctor.BackColor = System.Drawing.Color.Transparent;
+            this.Picb_imagenDoctor.Image = global::LaboratorioClinico.Properties.Resources.logo;
+            this.Picb_imagenDoctor.Location = new System.Drawing.Point(24, 38);
+            this.Picb_imagenDoctor.Name = "Picb_imagenDoctor";
+            this.Picb_imagenDoctor.Size = new System.Drawing.Size(296, 297);
+            this.Picb_imagenDoctor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Picb_imagenDoctor.TabIndex = 26;
+            this.Picb_imagenDoctor.TabStop = false;
             // 
-            // dateTimePicker1
+            // Mnc_fechaNacimiento
             // 
-            this.dateTimePicker1.CustomFormat = "dd-MM-yy";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(203, 350);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(92, 26);
-            this.dateTimePicker1.TabIndex = 25;
+            this.Mnc_fechaNacimiento.CustomFormat = "dd-MM-yy";
+            this.Mnc_fechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.Mnc_fechaNacimiento.Location = new System.Drawing.Point(203, 350);
+            this.Mnc_fechaNacimiento.Name = "Mnc_fechaNacimiento";
+            this.Mnc_fechaNacimiento.Size = new System.Drawing.Size(92, 26);
+            this.Mnc_fechaNacimiento.TabIndex = 25;
             // 
-            // label2
+            // Lbl_fechaDeNacimiento
             // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(68, 356);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(128, 18);
-            this.label2.TabIndex = 23;
-            this.label2.Text = "Fecha de nacimiento";
+            this.Lbl_fechaDeNacimiento.AutoSize = true;
+            this.Lbl_fechaDeNacimiento.ForeColor = System.Drawing.Color.White;
+            this.Lbl_fechaDeNacimiento.Location = new System.Drawing.Point(68, 356);
+            this.Lbl_fechaDeNacimiento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_fechaDeNacimiento.Name = "Lbl_fechaDeNacimiento";
+            this.Lbl_fechaDeNacimiento.Size = new System.Drawing.Size(128, 18);
+            this.Lbl_fechaDeNacimiento.TabIndex = 23;
+            this.Lbl_fechaDeNacimiento.Text = "Fecha de nacimiento";
             // 
-            // button1
+            // Btn_guardar
             // 
-            this.button1.BackgroundImage = global::LaboratorioClinico.Properties.Resources.guardar;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(279, 404);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(53, 44);
-            this.button1.TabIndex = 24;
-            this.button1.UseVisualStyleBackColor = true;
+            this.Btn_guardar.BackgroundImage = global::LaboratorioClinico.Properties.Resources.guardar;
+            this.Btn_guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_guardar.Location = new System.Drawing.Point(279, 404);
+            this.Btn_guardar.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_guardar.Name = "Btn_guardar";
+            this.Btn_guardar.Size = new System.Drawing.Size(53, 44);
+            this.Btn_guardar.TabIndex = 24;
+            this.Btn_guardar.UseVisualStyleBackColor = true;
             // 
             // Médicos
             // 
@@ -326,48 +326,50 @@
             this.BackgroundImage = global::LaboratorioClinico.Properties.Resources.FONDOO;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(766, 489);
-            this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.Gpb_nacimiento);
+            this.Controls.Add(this.Gpb_medicos);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Médicos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Médicos_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Gpb_medicos.ResumeLayout(false);
+            this.Gpb_profesion.ResumeLayout(false);
+            this.Gpb_profesion.PerformLayout();
+            this.Gpb_datosPersonales.ResumeLayout(false);
+            this.Gpb_datosPersonales.PerformLayout();
+            this.Gpb_nacimiento.ResumeLayout(false);
+            this.Gpb_nacimiento.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Picb_imagenDoctor)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label Lbl_nombre;
+        private System.Windows.Forms.Label Lbl_telefono;
+        private System.Windows.Forms.Label Lbl_direccion;
+        private System.Windows.Forms.Label Lbl_especialidad;
+        private System.Windows.Forms.Label Lbl_colegiado;
+        private System.Windows.Forms.TextBox Txt_nombre;
+        private System.Windows.Forms.TextBox Txt_telefono;
+        private System.Windows.Forms.TextBox Txt_direccion;
+        private System.Windows.Forms.TextBox Txt_especialidad;
         private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox Txt_apellido;
+        private System.Windows.Forms.Label Lbl_apellido;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label Lbl_empresa;
+        private System.Windows.Forms.GroupBox Gpb_medicos;
+        private System.Windows.Forms.GroupBox Gpb_profesion;
+        private System.Windows.Forms.GroupBox Gpb_datosPersonales;
+        private System.Windows.Forms.GroupBox Gpb_nacimiento;
+        private System.Windows.Forms.PictureBox Picb_imagenDoctor;
+        private System.Windows.Forms.DateTimePicker Mnc_fechaNacimiento;
+        private System.Windows.Forms.Label Lbl_fechaDeNacimiento;
+        private System.Windows.Forms.Button Btn_guardar;
     }
 }
