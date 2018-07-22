@@ -79,6 +79,7 @@
             this.Btn_guardar.Size = new System.Drawing.Size(53, 44);
             this.Btn_guardar.TabIndex = 37;
             this.Btn_guardar.UseVisualStyleBackColor = true;
+            this.Btn_guardar.Click += new System.EventHandler(this.Btn_guardar_Click);
             // 
             // Lbl_privilegio
             // 
