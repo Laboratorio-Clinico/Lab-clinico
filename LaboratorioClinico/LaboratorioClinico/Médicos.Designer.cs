@@ -258,7 +258,7 @@
             this.Gpb_datosPersonales.Controls.Add(this.Lbl_direccion);
             this.Gpb_datosPersonales.Font = new System.Drawing.Font("Perpetua", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Gpb_datosPersonales.ForeColor = System.Drawing.Color.DarkKhaki;
-            this.Gpb_datosPersonales.Location = new System.Drawing.Point(15, 38);
+            this.Gpb_datosPersonales.Location = new System.Drawing.Point(14, 38);
             this.Gpb_datosPersonales.Name = "Gpb_datosPersonales";
             this.Gpb_datosPersonales.Size = new System.Drawing.Size(324, 239);
             this.Gpb_datosPersonales.TabIndex = 0;

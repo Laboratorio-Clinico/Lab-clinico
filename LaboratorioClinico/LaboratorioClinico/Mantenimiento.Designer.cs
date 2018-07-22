@@ -87,6 +87,23 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.Btn_eliminarm = new System.Windows.Forms.Button();
             this.Lbl_eliminarm = new System.Windows.Forms.Label();
+            this.Gpb_datosPersonales = new System.Windows.Forms.GroupBox();
+            this.Txt_apellido = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Lbl_apellido = new System.Windows.Forms.Label();
+            this.Txt_especialidad = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Lbl_especialidad = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.Gpb_profesion = new System.Windows.Forms.GroupBox();
+            this.Txt_empresa = new System.Windows.Forms.TextBox();
+            this.Txt_colegiado = new System.Windows.Forms.TextBox();
+            this.Lbl_colegiado = new System.Windows.Forms.Label();
+            this.Lbl_empresa = new System.Windows.Forms.Label();
+            this.Dtp_fechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.Gpb_mantenimiento.SuspendLayout();
             this.Tbc_paciente.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -94,6 +111,8 @@
             this.Tbc_medicos.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            this.Gpb_datosPersonales.SuspendLayout();
+            this.Gpb_profesion.SuspendLayout();
             this.SuspendLayout();
             // 
             // Lbl_tabla
@@ -126,8 +145,8 @@
             this.Gpb_mantenimiento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Gpb_mantenimiento.Controls.Add(this.Lbl_tabla);
             this.Gpb_mantenimiento.Controls.Add(this.Cmb_tabla);
-            this.Gpb_mantenimiento.Controls.Add(this.Tbc_medicos);
             this.Gpb_mantenimiento.Controls.Add(this.Tbc_paciente);
+            this.Gpb_mantenimiento.Controls.Add(this.Tbc_medicos);
             this.Gpb_mantenimiento.Font = new System.Drawing.Font("Perpetua", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Gpb_mantenimiento.ForeColor = System.Drawing.Color.DarkKhaki;
             this.Gpb_mantenimiento.Location = new System.Drawing.Point(9, 12);
@@ -724,6 +743,9 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.Dtp_fechaNacimiento);
+            this.tabPage3.Controls.Add(this.Gpb_profesion);
+            this.tabPage3.Controls.Add(this.Gpb_datosPersonales);
             this.tabPage3.Controls.Add(this.Btn_editarm);
             this.tabPage3.Controls.Add(this.Lbl_editarm);
             this.tabPage3.Location = new System.Drawing.Point(4, 31);
@@ -734,6 +756,7 @@
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "Modificar";
             this.tabPage3.UseVisualStyleBackColor = true;
+            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
             // Btn_editarm
             // 
@@ -752,9 +775,9 @@
             this.Lbl_editarm.ForeColor = System.Drawing.Color.MidnightBlue;
             this.Lbl_editarm.Location = new System.Drawing.Point(593, 68);
             this.Lbl_editarm.Name = "Lbl_editarm";
-            this.Lbl_editarm.Size = new System.Drawing.Size(88, 17);
+            this.Lbl_editarm.Size = new System.Drawing.Size(84, 17);
             this.Lbl_editarm.TabIndex = 117;
-            this.Lbl_editarm.Text = "Editar Paciente";
+            this.Lbl_editarm.Text = "Editar Médico";
             // 
             // tabPage4
             // 
@@ -786,9 +809,219 @@
             this.Lbl_eliminarm.ForeColor = System.Drawing.Color.MidnightBlue;
             this.Lbl_eliminarm.Location = new System.Drawing.Point(586, 68);
             this.Lbl_eliminarm.Name = "Lbl_eliminarm";
-            this.Lbl_eliminarm.Size = new System.Drawing.Size(102, 17);
+            this.Lbl_eliminarm.Size = new System.Drawing.Size(98, 17);
             this.Lbl_eliminarm.TabIndex = 94;
-            this.Lbl_eliminarm.Text = "Eliminar Paciente";
+            this.Lbl_eliminarm.Text = "Eliminar Médico";
+            this.Lbl_eliminarm.Click += new System.EventHandler(this.Lbl_eliminarm_Click);
+            // 
+            // Gpb_datosPersonales
+            // 
+            this.Gpb_datosPersonales.Controls.Add(this.Txt_apellido);
+            this.Gpb_datosPersonales.Controls.Add(this.textBox1);
+            this.Gpb_datosPersonales.Controls.Add(this.label1);
+            this.Gpb_datosPersonales.Controls.Add(this.Lbl_apellido);
+            this.Gpb_datosPersonales.Controls.Add(this.Txt_especialidad);
+            this.Gpb_datosPersonales.Controls.Add(this.textBox2);
+            this.Gpb_datosPersonales.Controls.Add(this.label2);
+            this.Gpb_datosPersonales.Controls.Add(this.Lbl_especialidad);
+            this.Gpb_datosPersonales.Controls.Add(this.textBox3);
+            this.Gpb_datosPersonales.Controls.Add(this.label4);
+            this.Gpb_datosPersonales.Font = new System.Drawing.Font("Perpetua", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Gpb_datosPersonales.ForeColor = System.Drawing.Color.DarkKhaki;
+            this.Gpb_datosPersonales.Location = new System.Drawing.Point(34, 25);
+            this.Gpb_datosPersonales.Name = "Gpb_datosPersonales";
+            this.Gpb_datosPersonales.Size = new System.Drawing.Size(324, 239);
+            this.Gpb_datosPersonales.TabIndex = 4;
+            this.Gpb_datosPersonales.TabStop = false;
+            this.Gpb_datosPersonales.Text = "Datos Personales";
+            // 
+            // Txt_apellido
+            // 
+            this.Txt_apellido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_apellido.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_apellido.ForeColor = System.Drawing.Color.Black;
+            this.Txt_apellido.Location = new System.Drawing.Point(111, 88);
+            this.Txt_apellido.Margin = new System.Windows.Forms.Padding(4);
+            this.Txt_apellido.Name = "Txt_apellido";
+            this.Txt_apellido.Size = new System.Drawing.Size(197, 26);
+            this.Txt_apellido.TabIndex = 8;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.textBox1.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.Color.Black;
+            this.textBox1.Location = new System.Drawing.Point(111, 54);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(197, 26);
+            this.textBox1.TabIndex = 6;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label1.Location = new System.Drawing.Point(35, 130);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(59, 24);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Telefono";
+            this.label1.UseCompatibleTextRendering = true;
+            // 
+            // Lbl_apellido
+            // 
+            this.Lbl_apellido.AutoSize = true;
+            this.Lbl_apellido.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_apellido.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Lbl_apellido.Location = new System.Drawing.Point(35, 92);
+            this.Lbl_apellido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_apellido.Name = "Lbl_apellido";
+            this.Lbl_apellido.Size = new System.Drawing.Size(57, 24);
+            this.Lbl_apellido.TabIndex = 7;
+            this.Lbl_apellido.Text = "Apellido";
+            this.Lbl_apellido.UseCompatibleTextRendering = true;
+            // 
+            // Txt_especialidad
+            // 
+            this.Txt_especialidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_especialidad.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_especialidad.ForeColor = System.Drawing.Color.Black;
+            this.Txt_especialidad.Location = new System.Drawing.Point(111, 190);
+            this.Txt_especialidad.Margin = new System.Windows.Forms.Padding(4);
+            this.Txt_especialidad.Name = "Txt_especialidad";
+            this.Txt_especialidad.Size = new System.Drawing.Size(197, 26);
+            this.Txt_especialidad.TabIndex = 10;
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.textBox2.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.ForeColor = System.Drawing.Color.Black;
+            this.textBox2.Location = new System.Drawing.Point(111, 156);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(197, 26);
+            this.textBox2.TabIndex = 9;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label2.Location = new System.Drawing.Point(35, 57);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(56, 24);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Nombre";
+            this.label2.UseCompatibleTextRendering = true;
+            // 
+            // Lbl_especialidad
+            // 
+            this.Lbl_especialidad.AutoSize = true;
+            this.Lbl_especialidad.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_especialidad.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Lbl_especialidad.Location = new System.Drawing.Point(16, 198);
+            this.Lbl_especialidad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_especialidad.Name = "Lbl_especialidad";
+            this.Lbl_especialidad.Size = new System.Drawing.Size(79, 24);
+            this.Lbl_especialidad.TabIndex = 4;
+            this.Lbl_especialidad.Text = "Especialidad";
+            this.Lbl_especialidad.UseCompatibleTextRendering = true;
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.textBox3.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.ForeColor = System.Drawing.Color.Black;
+            this.textBox3.Location = new System.Drawing.Point(111, 122);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(197, 26);
+            this.textBox3.TabIndex = 8;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label4.Location = new System.Drawing.Point(29, 164);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(65, 24);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Dirección";
+            this.label4.UseCompatibleTextRendering = true;
+            // 
+            // Gpb_profesion
+            // 
+            this.Gpb_profesion.Controls.Add(this.Txt_empresa);
+            this.Gpb_profesion.Controls.Add(this.Txt_colegiado);
+            this.Gpb_profesion.Controls.Add(this.Lbl_colegiado);
+            this.Gpb_profesion.Controls.Add(this.Lbl_empresa);
+            this.Gpb_profesion.Font = new System.Drawing.Font("Perpetua", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Gpb_profesion.ForeColor = System.Drawing.Color.DarkKhaki;
+            this.Gpb_profesion.Location = new System.Drawing.Point(374, 104);
+            this.Gpb_profesion.Name = "Gpb_profesion";
+            this.Gpb_profesion.Size = new System.Drawing.Size(319, 133);
+            this.Gpb_profesion.TabIndex = 118;
+            this.Gpb_profesion.TabStop = false;
+            this.Gpb_profesion.Text = "Profesión";
+            // 
+            // Txt_empresa
+            // 
+            this.Txt_empresa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_empresa.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_empresa.Location = new System.Drawing.Point(107, 84);
+            this.Txt_empresa.Margin = new System.Windows.Forms.Padding(4);
+            this.Txt_empresa.Name = "Txt_empresa";
+            this.Txt_empresa.Size = new System.Drawing.Size(197, 26);
+            this.Txt_empresa.TabIndex = 13;
+            // 
+            // Txt_colegiado
+            // 
+            this.Txt_colegiado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_colegiado.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_colegiado.Location = new System.Drawing.Point(107, 46);
+            this.Txt_colegiado.Margin = new System.Windows.Forms.Padding(4);
+            this.Txt_colegiado.Name = "Txt_colegiado";
+            this.Txt_colegiado.Size = new System.Drawing.Size(197, 26);
+            this.Txt_colegiado.TabIndex = 11;
+            // 
+            // Lbl_colegiado
+            // 
+            this.Lbl_colegiado.AutoSize = true;
+            this.Lbl_colegiado.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_colegiado.ForeColor = System.Drawing.Color.White;
+            this.Lbl_colegiado.Location = new System.Drawing.Point(18, 49);
+            this.Lbl_colegiado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_colegiado.Name = "Lbl_colegiado";
+            this.Lbl_colegiado.Size = new System.Drawing.Size(76, 18);
+            this.Lbl_colegiado.TabIndex = 5;
+            this.Lbl_colegiado.Text = "Colegiado";
+            // 
+            // Lbl_empresa
+            // 
+            this.Lbl_empresa.AutoSize = true;
+            this.Lbl_empresa.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_empresa.ForeColor = System.Drawing.Color.White;
+            this.Lbl_empresa.Location = new System.Drawing.Point(18, 84);
+            this.Lbl_empresa.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_empresa.Name = "Lbl_empresa";
+            this.Lbl_empresa.Size = new System.Drawing.Size(66, 18);
+            this.Lbl_empresa.TabIndex = 12;
+            this.Lbl_empresa.Text = "Empresa";
+            // 
+            // Dtp_fechaNacimiento
+            // 
+            this.Dtp_fechaNacimiento.CustomFormat = "dd-MM-yy";
+            this.Dtp_fechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.Dtp_fechaNacimiento.Location = new System.Drawing.Point(395, 266);
+            this.Dtp_fechaNacimiento.Name = "Dtp_fechaNacimiento";
+            this.Dtp_fechaNacimiento.Size = new System.Drawing.Size(92, 29);
+            this.Dtp_fechaNacimiento.TabIndex = 119;
             // 
             // Mantenimiento
             // 
@@ -817,6 +1050,10 @@
             this.tabPage3.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            this.Gpb_datosPersonales.ResumeLayout(false);
+            this.Gpb_datosPersonales.PerformLayout();
+            this.Gpb_profesion.ResumeLayout(false);
+            this.Gpb_profesion.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -881,5 +1118,22 @@
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Button Btn_eliminarm;
         private System.Windows.Forms.Label Lbl_eliminarm;
+        private System.Windows.Forms.GroupBox Gpb_datosPersonales;
+        private System.Windows.Forms.TextBox Txt_apellido;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label Lbl_apellido;
+        private System.Windows.Forms.TextBox Txt_especialidad;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label Lbl_especialidad;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.GroupBox Gpb_profesion;
+        private System.Windows.Forms.TextBox Txt_empresa;
+        private System.Windows.Forms.TextBox Txt_colegiado;
+        private System.Windows.Forms.Label Lbl_colegiado;
+        private System.Windows.Forms.Label Lbl_empresa;
+        private System.Windows.Forms.DateTimePicker Dtp_fechaNacimiento;
     }
 }
