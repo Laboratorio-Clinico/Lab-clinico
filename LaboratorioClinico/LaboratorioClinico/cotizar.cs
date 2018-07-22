@@ -31,5 +31,18 @@ namespace LaboratorioClinico
         {
 
         }
+
+        private void Btn_buscar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Btn_requisitos_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Requerimientos requerimiento = new Requerimientos();
+            requerimiento.ShowDialog();
+            this.Show();
+        }
     }
 }

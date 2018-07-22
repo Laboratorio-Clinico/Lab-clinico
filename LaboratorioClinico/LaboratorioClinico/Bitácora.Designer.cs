@@ -53,6 +53,7 @@
             this.Btn_verb.Size = new System.Drawing.Size(53, 44);
             this.Btn_verb.TabIndex = 9;
             this.Btn_verb.UseVisualStyleBackColor = true;
+            this.Btn_verb.Click += new System.EventHandler(this.Btn_verb_Click);
             // 
             // Gpb_bitacora
             // 

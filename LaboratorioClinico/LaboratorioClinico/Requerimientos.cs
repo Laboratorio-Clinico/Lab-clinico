@@ -31,5 +31,22 @@ namespace LaboratorioClinico
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            /*
+            conexionn.conectar();
+            DataTable dtDatos = new DataTable();
+            MySqlDataAdapter sda = new MySqlDataAdapter("select Codigo, Nombre, Cargo, Telefono,Direccion from requerimientos where Codigo='" + Convert.ToInt32(Txt_nombrer.Text) + "'", conexionn.conectar());
+            sda.Fill(dtDatos);
+            Gpb_llenador.DataSource = dtDatos;
+            Txt_nombrer.ResetText();
+            */
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

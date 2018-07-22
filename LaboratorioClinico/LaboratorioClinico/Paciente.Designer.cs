@@ -33,6 +33,8 @@
             this.Gpb_guardarp = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
             this.Gpb_datosp = new System.Windows.Forms.GroupBox();
+            this.Lbl_correop = new System.Windows.Forms.Label();
+            this.Txt_correoP = new System.Windows.Forms.TextBox();
             this.Lbl_tipoSangrep = new System.Windows.Forms.Label();
             this.Txt_tsangrep = new System.Windows.Forms.TextBox();
             this.Lbl_alergiasp = new System.Windows.Forms.Label();
@@ -59,8 +61,6 @@
             this.Lbl_fechaep = new System.Windows.Forms.Label();
             this.Txt_horap = new System.Windows.Forms.TextBox();
             this.Gpb_fechap = new System.Windows.Forms.GroupBox();
-            this.Lbl_correop = new System.Windows.Forms.Label();
-            this.Txt_correoP = new System.Windows.Forms.TextBox();
             this.Gpb_guardarp.SuspendLayout();
             this.Gpb_datosp.SuspendLayout();
             this.Gpb_fechanp.SuspendLayout();
@@ -93,6 +93,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(23, 61);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(46, 15);
@@ -132,6 +133,26 @@
             this.Gpb_datosp.TabIndex = 2;
             this.Gpb_datosp.TabStop = false;
             this.Gpb_datosp.Text = "Datos Paciente";
+            // 
+            // Lbl_correop
+            // 
+            this.Lbl_correop.AutoSize = true;
+            this.Lbl_correop.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_correop.ForeColor = System.Drawing.Color.White;
+            this.Lbl_correop.Location = new System.Drawing.Point(120, 199);
+            this.Lbl_correop.Name = "Lbl_correop";
+            this.Lbl_correop.Size = new System.Drawing.Size(56, 18);
+            this.Lbl_correop.TabIndex = 48;
+            this.Lbl_correop.Text = "Correo:";
+            // 
+            // Txt_correoP
+            // 
+            this.Txt_correoP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_correoP.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_correoP.Location = new System.Drawing.Point(120, 221);
+            this.Txt_correoP.Name = "Txt_correoP";
+            this.Txt_correoP.Size = new System.Drawing.Size(470, 25);
+            this.Txt_correoP.TabIndex = 47;
             // 
             // Lbl_tipoSangrep
             // 
@@ -402,26 +423,6 @@
             this.Gpb_fechap.TabIndex = 3;
             this.Gpb_fechap.TabStop = false;
             this.Gpb_fechap.Enter += new System.EventHandler(this.groupBox4_Enter);
-            // 
-            // Lbl_correop
-            // 
-            this.Lbl_correop.AutoSize = true;
-            this.Lbl_correop.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_correop.ForeColor = System.Drawing.Color.White;
-            this.Lbl_correop.Location = new System.Drawing.Point(120, 199);
-            this.Lbl_correop.Name = "Lbl_correop";
-            this.Lbl_correop.Size = new System.Drawing.Size(56, 18);
-            this.Lbl_correop.TabIndex = 48;
-            this.Lbl_correop.Text = "Correo:";
-            // 
-            // Txt_correoP
-            // 
-            this.Txt_correoP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.Txt_correoP.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_correoP.Location = new System.Drawing.Point(120, 221);
-            this.Txt_correoP.Name = "Txt_correoP";
-            this.Txt_correoP.Size = new System.Drawing.Size(470, 25);
-            this.Txt_correoP.TabIndex = 47;
             // 
             // Paciente
             // 

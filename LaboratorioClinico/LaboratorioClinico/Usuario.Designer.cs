@@ -31,7 +31,7 @@
             this.Gpb_nuevoUsuario = new System.Windows.Forms.GroupBox();
             this.Btn_guardar = new System.Windows.Forms.Button();
             this.Lbl_privilegio = new System.Windows.Forms.Label();
-            this.Chb_privelegio = new System.Windows.Forms.ComboBox();
+            this.Cmb_privelegio = new System.Windows.Forms.ComboBox();
             this.Txt_confirmarPassword = new System.Windows.Forms.TextBox();
             this.Txt_password = new System.Windows.Forms.TextBox();
             this.Txt_usuario = new System.Windows.Forms.TextBox();
@@ -50,7 +50,7 @@
             this.Gpb_nuevoUsuario.BackColor = System.Drawing.Color.Transparent;
             this.Gpb_nuevoUsuario.Controls.Add(this.Btn_guardar);
             this.Gpb_nuevoUsuario.Controls.Add(this.Lbl_privilegio);
-            this.Gpb_nuevoUsuario.Controls.Add(this.Chb_privelegio);
+            this.Gpb_nuevoUsuario.Controls.Add(this.Cmb_privelegio);
             this.Gpb_nuevoUsuario.Controls.Add(this.Txt_confirmarPassword);
             this.Gpb_nuevoUsuario.Controls.Add(this.Txt_password);
             this.Gpb_nuevoUsuario.Controls.Add(this.Txt_usuario);
@@ -68,6 +68,7 @@
             this.Gpb_nuevoUsuario.TabIndex = 14;
             this.Gpb_nuevoUsuario.TabStop = false;
             this.Gpb_nuevoUsuario.Text = "Nuevo Usuario";
+            this.Gpb_nuevoUsuario.Enter += new System.EventHandler(this.Gpb_nuevoUsuario_Enter);
             // 
             // Btn_guardar
             // 
@@ -93,16 +94,16 @@
             this.Lbl_privilegio.TabIndex = 36;
             this.Lbl_privilegio.Text = "Privilegio";
             // 
-            // Chb_privelegio
+            // Cmb_privelegio
             // 
-            this.Chb_privelegio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.Chb_privelegio.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Chb_privelegio.FormattingEnabled = true;
-            this.Chb_privelegio.Location = new System.Drawing.Point(479, 285);
-            this.Chb_privelegio.Margin = new System.Windows.Forms.Padding(4);
-            this.Chb_privelegio.Name = "Chb_privelegio";
-            this.Chb_privelegio.Size = new System.Drawing.Size(185, 26);
-            this.Chb_privelegio.TabIndex = 35;
+            this.Cmb_privelegio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Cmb_privelegio.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cmb_privelegio.FormattingEnabled = true;
+            this.Cmb_privelegio.Location = new System.Drawing.Point(479, 285);
+            this.Cmb_privelegio.Margin = new System.Windows.Forms.Padding(4);
+            this.Cmb_privelegio.Name = "Cmb_privelegio";
+            this.Cmb_privelegio.Size = new System.Drawing.Size(185, 26);
+            this.Cmb_privelegio.TabIndex = 35;
             // 
             // Txt_confirmarPassword
             // 
@@ -231,7 +232,7 @@
         private System.Windows.Forms.GroupBox Gpb_nuevoUsuario;
         private System.Windows.Forms.Button Btn_guardar;
         private System.Windows.Forms.Label Lbl_privilegio;
-        private System.Windows.Forms.ComboBox Chb_privelegio;
+        private System.Windows.Forms.ComboBox Cmb_privelegio;
         private System.Windows.Forms.TextBox Txt_confirmarPassword;
         private System.Windows.Forms.TextBox Txt_password;
         private System.Windows.Forms.TextBox Txt_usuario;
