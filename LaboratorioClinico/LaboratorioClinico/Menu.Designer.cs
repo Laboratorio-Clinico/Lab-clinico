@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.pacienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,7 +51,6 @@
             this.controlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoPacienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.facturaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.facturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -62,6 +62,11 @@
             this.lbl_tipo = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.lbl_hora = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lbl_fecha = new System.Windows.Forms.Label();
+            this.tm_menu = new System.Windows.Forms.Timer(this.components);
+            this.tm_menu2 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -200,6 +205,7 @@
             this.resultadosToolStripMenuItem.Name = "resultadosToolStripMenuItem";
             this.resultadosToolStripMenuItem.Size = new System.Drawing.Size(223, 28);
             this.resultadosToolStripMenuItem.Text = "Resultados";
+            this.resultadosToolStripMenuItem.Click += new System.EventHandler(this.resultadosToolStripMenuItem_Click);
             // 
             // muestrasToolStripMenuItem
             // 
@@ -235,7 +241,6 @@
             this.requerimientosToolStripMenuItem.Name = "requerimientosToolStripMenuItem";
             this.requerimientosToolStripMenuItem.Size = new System.Drawing.Size(223, 28);
             this.requerimientosToolStripMenuItem.Text = "Requerimientos";
-            this.requerimientosToolStripMenuItem.Click += new System.EventHandler(this.requerimientosToolStripMenuItem_Click);
             // 
             // controlToolStripMenuItem
             // 
@@ -251,23 +256,13 @@
             this.nuevoPacienteToolStripMenuItem.Name = "nuevoPacienteToolStripMenuItem";
             this.nuevoPacienteToolStripMenuItem.Size = new System.Drawing.Size(219, 28);
             this.nuevoPacienteToolStripMenuItem.Text = "Nuevo Paciente";
+            this.nuevoPacienteToolStripMenuItem.Click += new System.EventHandler(this.nuevoPacienteToolStripMenuItem_Click);
             // 
             // facturaciónToolStripMenuItem
             // 
-            this.facturaciónToolStripMenuItem.BackColor = System.Drawing.Color.DarkCyan;
-            this.facturaciónToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.facturaToolStripMenuItem});
             this.facturaciónToolStripMenuItem.Name = "facturaciónToolStripMenuItem";
             this.facturaciónToolStripMenuItem.Size = new System.Drawing.Size(129, 28);
             this.facturaciónToolStripMenuItem.Text = "Facturación";
-            // 
-            // facturaToolStripMenuItem
-            // 
-            this.facturaToolStripMenuItem.BackColor = System.Drawing.Color.DarkCyan;
-            this.facturaToolStripMenuItem.Name = "facturaToolStripMenuItem";
-            this.facturaToolStripMenuItem.Size = new System.Drawing.Size(148, 28);
-            this.facturaToolStripMenuItem.Text = "Factura";
-            this.facturaToolStripMenuItem.Click += new System.EventHandler(this.facturaToolStripMenuItem_Click);
             // 
             // ayudaToolStripMenuItem
             // 
@@ -306,7 +301,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = global::LaboratorioClinico.Properties.Resources.salida__1_;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 44);
+            this.pictureBox2.Location = new System.Drawing.Point(0, 56);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(38, 32);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -320,18 +315,17 @@
             this.Pnl_menudespegable.Controls.Add(this.panel1);
             this.Pnl_menudespegable.Controls.Add(this.label2);
             this.Pnl_menudespegable.Controls.Add(this.pictureBox2);
-            this.Pnl_menudespegable.Location = new System.Drawing.Point(666, 33);
+            this.Pnl_menudespegable.Location = new System.Drawing.Point(666, 18);
             this.Pnl_menudespegable.Name = "Pnl_menudespegable";
-            this.Pnl_menudespegable.Size = new System.Drawing.Size(125, 77);
+            this.Pnl_menudespegable.Size = new System.Drawing.Size(125, 14);
             this.Pnl_menudespegable.TabIndex = 6;
-            this.Pnl_menudespegable.Visible = false;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkCyan;
             this.panel1.Controls.Add(this.flowLayoutPanel1);
             this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(0, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(125, 38);
             this.panel1.TabIndex = 7;
@@ -385,12 +379,50 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.DarkCyan;
             this.label2.Font = new System.Drawing.Font("Perpetua", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(40, 51);
+            this.label2.Location = new System.Drawing.Point(40, 63);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 14);
             this.label2.TabIndex = 7;
             this.label2.Text = "Cerrar sesion";
             this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // lbl_hora
+            // 
+            this.lbl_hora.AutoSize = true;
+            this.lbl_hora.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_hora.Font = new System.Drawing.Font("Perpetua", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_hora.Location = new System.Drawing.Point(12, 357);
+            this.lbl_hora.Name = "lbl_hora";
+            this.lbl_hora.Size = new System.Drawing.Size(64, 24);
+            this.lbl_hora.TabIndex = 7;
+            this.lbl_hora.Text = "label3";
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // lbl_fecha
+            // 
+            this.lbl_fecha.AutoSize = true;
+            this.lbl_fecha.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_fecha.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_fecha.Location = new System.Drawing.Point(12, 380);
+            this.lbl_fecha.Name = "lbl_fecha";
+            this.lbl_fecha.Size = new System.Drawing.Size(49, 18);
+            this.lbl_fecha.TabIndex = 8;
+            this.lbl_fecha.Text = "label3";
+            this.lbl_fecha.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // tm_menu
+            // 
+            this.tm_menu.Interval = 50;
+            this.tm_menu.Tick += new System.EventHandler(this.tm_menu_Tick);
+            // 
+            // tm_menu2
+            // 
+            this.tm_menu2.Tick += new System.EventHandler(this.tm_menu2_Tick);
             // 
             // Menu
             // 
@@ -399,10 +431,12 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(791, 400);
+            this.Controls.Add(this.lbl_fecha);
+            this.Controls.Add(this.lbl_hora);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.Pnl_menudespegable);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.Pnl_menudespegable);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Menu";
@@ -458,6 +492,10 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label lbl_usuario;
         private System.Windows.Forms.Label lbl_tipo;
-        private System.Windows.Forms.ToolStripMenuItem facturaToolStripMenuItem;
+        private System.Windows.Forms.Label lbl_hora;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label lbl_fecha;
+        private System.Windows.Forms.Timer tm_menu;
+        private System.Windows.Forms.Timer tm_menu2;
     }
 }
