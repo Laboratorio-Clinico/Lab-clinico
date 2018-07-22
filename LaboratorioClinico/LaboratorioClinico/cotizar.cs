@@ -120,5 +120,10 @@ namespace LaboratorioClinico
             requerimiento.ShowDialog();
             this.Show();
         }
+
+        private void Btn_imprimir_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

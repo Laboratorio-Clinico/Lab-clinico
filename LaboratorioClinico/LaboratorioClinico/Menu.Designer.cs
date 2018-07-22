@@ -149,6 +149,7 @@
             this.mantenimientoToolStripMenuItem.Name = "mantenimientoToolStripMenuItem";
             this.mantenimientoToolStripMenuItem.Size = new System.Drawing.Size(218, 28);
             this.mantenimientoToolStripMenuItem.Text = "Mantenimiento";
+            this.mantenimientoToolStripMenuItem.Click += new System.EventHandler(this.mantenimientoToolStripMenuItem_Click);
             // 
             // médicosToolStripMenuItem
             // 
@@ -202,6 +203,7 @@
             this.resultadosToolStripMenuItem.Name = "resultadosToolStripMenuItem";
             this.resultadosToolStripMenuItem.Size = new System.Drawing.Size(223, 28);
             this.resultadosToolStripMenuItem.Text = "Resultados";
+            this.resultadosToolStripMenuItem.Click += new System.EventHandler(this.resultadosToolStripMenuItem_Click);
             // 
             // muestrasToolStripMenuItem
             // 

@@ -123,6 +123,13 @@
             this.Lbl_especialidadMedicoE = new System.Windows.Forms.Label();
             this.Lbl_direMedicoE = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.Tbc_examen = new System.Windows.Forms.TabControl();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.label14 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
             this.Gpb_mantenimiento.SuspendLayout();
             this.Tbc_paciente.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -132,6 +139,9 @@
             this.Gpb_datos.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.Gpb_datosEliminar.SuspendLayout();
+            this.Tbc_examen.SuspendLayout();
+            this.tabPage5.SuspendLayout();
+            this.tabPage6.SuspendLayout();
             this.SuspendLayout();
             // 
             // Lbl_tabla
@@ -164,6 +174,7 @@
             this.Gpb_mantenimiento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Gpb_mantenimiento.Controls.Add(this.Lbl_tabla);
             this.Gpb_mantenimiento.Controls.Add(this.Cmb_tabla);
+            this.Gpb_mantenimiento.Controls.Add(this.Tbc_examen);
             this.Gpb_mantenimiento.Controls.Add(this.Tbc_medicos);
             this.Gpb_mantenimiento.Controls.Add(this.Tbc_paciente);
             this.Gpb_mantenimiento.Font = new System.Drawing.Font("Perpetua", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1288,6 +1299,86 @@
             this.label11.Text = "Fecha Nacimiento:";
             this.label11.UseCompatibleTextRendering = true;
             // 
+            // Tbc_examen
+            // 
+            this.Tbc_examen.Controls.Add(this.tabPage5);
+            this.Tbc_examen.Controls.Add(this.tabPage6);
+            this.Tbc_examen.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tbc_examen.Location = new System.Drawing.Point(16, 86);
+            this.Tbc_examen.Margin = new System.Windows.Forms.Padding(4);
+            this.Tbc_examen.Name = "Tbc_examen";
+            this.Tbc_examen.SelectedIndex = 0;
+            this.Tbc_examen.Size = new System.Drawing.Size(708, 354);
+            this.Tbc_examen.TabIndex = 3;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.button3);
+            this.tabPage5.Controls.Add(this.label2);
+            this.tabPage5.Location = new System.Drawing.Point(4, 31);
+            this.tabPage5.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage5.Size = new System.Drawing.Size(700, 319);
+            this.tabPage5.TabIndex = 0;
+            this.tabPage5.Text = "Modificar";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.BackgroundImage = global::LaboratorioClinico.Properties.Resources.usuario1;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.Location = new System.Drawing.Point(609, 17);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(53, 44);
+            this.button3.TabIndex = 95;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label2.Location = new System.Drawing.Point(594, 60);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(84, 17);
+            this.label2.TabIndex = 117;
+            this.label2.Text = "Editar Médico";
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Controls.Add(this.label14);
+            this.tabPage6.Controls.Add(this.button5);
+            this.tabPage6.Location = new System.Drawing.Point(4, 31);
+            this.tabPage6.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage6.Size = new System.Drawing.Size(700, 319);
+            this.tabPage6.TabIndex = 1;
+            this.tabPage6.Text = "Eliminar";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label14.Location = new System.Drawing.Point(600, 58);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(98, 17);
+            this.label14.TabIndex = 94;
+            this.label14.Text = "Eliminar Médico";
+            // 
+            // button5
+            // 
+            this.button5.BackgroundImage = global::LaboratorioClinico.Properties.Resources.usuario__1_;
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button5.Location = new System.Drawing.Point(627, 11);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(53, 44);
+            this.button5.TabIndex = 72;
+            this.button5.UseVisualStyleBackColor = true;
+            // 
             // Mantenimiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -1319,6 +1410,11 @@
             this.tabPage4.PerformLayout();
             this.Gpb_datosEliminar.ResumeLayout(false);
             this.Gpb_datosEliminar.PerformLayout();
+            this.Tbc_examen.ResumeLayout(false);
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
+            this.tabPage6.ResumeLayout(false);
+            this.tabPage6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1419,5 +1515,12 @@
         private System.Windows.Forms.Label Lbl_especialidadMedicoE;
         private System.Windows.Forms.Label Lbl_direMedicoE;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TabControl Tbc_examen;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button button5;
     }
 }

@@ -335,6 +335,7 @@
             this.Btn_imprimir.Size = new System.Drawing.Size(53, 44);
             this.Btn_imprimir.TabIndex = 8;
             this.Btn_imprimir.UseVisualStyleBackColor = true;
+            this.Btn_imprimir.Click += new System.EventHandler(this.Btn_imprimir_Click);
             // 
             // Btn_buscar
             // 
