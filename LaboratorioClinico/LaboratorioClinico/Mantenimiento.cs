@@ -41,5 +41,15 @@ namespace LaboratorioClinico
         {
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Gpb_datosPersonales_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
