@@ -42,52 +42,44 @@ namespace LaboratorioClinico
 
         private void Btn_ingresar_Click(object sender, EventArgs e)
         {
-            /*try
-            {
-              
-                    Menu nuevo = new Menu(Txt_usuario.Text);
-               
-                    this.Visible = false;
-                    nuevo.ShowDialog() ;
-                    this.Visible=true;
-               
-                
-                    
-            }catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex);
-            }*/
 
             string user = Txt_usuario.Text;
             string pass = Txt_contraseña.Text;
-   
 
 
-            MySqlDataAdapter sda = new MySqlDataAdapter("select count(*) from usuario where usuario='" + user + "'and contraseña ='" + pass + "'", conexion.ObtenerConexion());
-            MySqlCommand cmd = conexion.ObtenerConexion().CreateCommand();
-            DataTable datos = new DataTable();
-            sda.Fill(datos);
-
-            if (datos.Rows[0][0].ToString() == "1")
+            try
             {
-                MessageBox.Show("Usuario Correcto", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
-           
+                MySqlDataAdapter sda = new MySqlDataAdapter("select count(*) from usuario where usuario='" + user + "'and contraseña ='" + pass + "'", conexion.ObtenerConexion());
+                MySqlCommand cmd = conexion.ObtenerConexion().CreateCommand();
+                DataTable datos = new DataTable();
+                sda.Fill(datos);
+
+                if (datos.Rows[0][0].ToString() == "1")
+                {
+                    MessageBox.Show("Usuario Correcto", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
-                Txt_usuario.ResetText();
-                Txt_contraseña.ResetText();
-     
+                    Txt_usuario.ResetText();
+                    Txt_contraseña.ResetText();
 
-                this.Hide();
-                Menu abrir = new Menu(user);
-                abrir.ShowDialog();
-                this.Show();
 
-            }
-            else
+                    this.Hide();
+                    Menu abrir = new Menu(user);
+                    abrir.ShowDialog();
+                    this.Show();
+
+
+                }
+                else
+                {
+                    MessageBox.Show("Usuario o Contrasena Incorrecta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }catch(Exception ex)
             {
-                MessageBox.Show("Usuario o Contrasena Incorrecta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Imposible conectar a la base de datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
             }
+
         }
 
         private void Cbo_privi_SelectedIndexChanged(object sender, EventArgs e)
