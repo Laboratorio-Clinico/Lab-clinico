@@ -200,7 +200,7 @@
             this.Controls.Add(this.Gpb_llenador);
             this.Controls.Add(this.Gpb_requisitos);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Requerimientos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Requerimientos_Load);

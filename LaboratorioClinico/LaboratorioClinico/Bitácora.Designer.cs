@@ -152,7 +152,7 @@
             this.Controls.Add(this.Gpb_bitacora);
             this.Controls.Add(this.Btn_verb);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Bitácora";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Gpb_bitacora.ResumeLayout(false);
