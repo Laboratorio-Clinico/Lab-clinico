@@ -31,5 +31,10 @@ namespace LaboratorioClinico
         {
 
         }
+
+        private void Lbl_cargarf_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
