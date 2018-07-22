@@ -100,5 +100,18 @@ namespace LaboratorioClinico
        
      
         }
+
+        private void facturaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Factura formulario = new Factura();
+            formulario.ShowDialog();
+            this.Show();
+        }
+
+        private void bitácoraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
