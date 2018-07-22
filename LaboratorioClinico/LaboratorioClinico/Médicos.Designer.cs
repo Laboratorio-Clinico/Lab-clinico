@@ -50,6 +50,7 @@
             this.Dtp_fechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.Lbl_fechaDeNacimiento = new System.Windows.Forms.Label();
             this.Btn_guardar = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
             this.Gpb_medicos.SuspendLayout();
             this.Gpb_profesion.SuspendLayout();
             this.Gpb_datosPersonales.SuspendLayout();
@@ -267,6 +268,7 @@
             // Gpb_nacimiento
             // 
             this.Gpb_nacimiento.BackColor = System.Drawing.Color.Transparent;
+            this.Gpb_nacimiento.Controls.Add(this.label10);
             this.Gpb_nacimiento.Controls.Add(this.Picb_imagenDoctor);
             this.Gpb_nacimiento.Controls.Add(this.Dtp_fechaNacimiento);
             this.Gpb_nacimiento.Controls.Add(this.Lbl_fechaDeNacimiento);
@@ -312,12 +314,23 @@
             // 
             this.Btn_guardar.BackgroundImage = global::LaboratorioClinico.Properties.Resources.guardar;
             this.Btn_guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Btn_guardar.Location = new System.Drawing.Point(279, 404);
+            this.Btn_guardar.Location = new System.Drawing.Point(282, 397);
             this.Btn_guardar.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_guardar.Name = "Btn_guardar";
             this.Btn_guardar.Size = new System.Drawing.Size(53, 44);
             this.Btn_guardar.TabIndex = 24;
             this.Btn_guardar.UseVisualStyleBackColor = true;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(289, 445);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(46, 15);
+            this.label10.TabIndex = 44;
+            this.label10.Text = "Guardar";
             // 
             // Médicos
             // 
@@ -371,5 +384,6 @@
         private System.Windows.Forms.DateTimePicker Dtp_fechaNacimiento;
         private System.Windows.Forms.Label Lbl_fechaDeNacimiento;
         private System.Windows.Forms.Button Btn_guardar;
+        private System.Windows.Forms.Label label10;
     }
 }
