@@ -65,6 +65,8 @@
             this.lbl_hora = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lbl_fecha = new System.Windows.Forms.Label();
+            this.tm_menu = new System.Windows.Forms.Timer(this.components);
+            this.tm_menu2 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -149,7 +151,7 @@
             this.mantenimientoToolStripMenuItem.Name = "mantenimientoToolStripMenuItem";
             this.mantenimientoToolStripMenuItem.Size = new System.Drawing.Size(218, 28);
             this.mantenimientoToolStripMenuItem.Text = "Mantenimiento";
-            //this.mantenimientoToolStripMenuItem.Click += new System.EventHandler(this.mantenimientoToolStripMenuItem_Click);
+            this.mantenimientoToolStripMenuItem.Click += new System.EventHandler(this.mantenimientoToolStripMenuItem_Click);
             // 
             // médicosToolStripMenuItem
             // 
@@ -203,7 +205,6 @@
             this.resultadosToolStripMenuItem.Name = "resultadosToolStripMenuItem";
             this.resultadosToolStripMenuItem.Size = new System.Drawing.Size(223, 28);
             this.resultadosToolStripMenuItem.Text = "Resultados";
-         //   this.resultadosToolStripMenuItem.Click += new System.EventHandler(this.resultadosToolStripMenuItem_Click);
             // 
             // muestrasToolStripMenuItem
             // 
@@ -299,7 +300,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = global::LaboratorioClinico.Properties.Resources.salida__1_;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 44);
+            this.pictureBox2.Location = new System.Drawing.Point(0, 56);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(38, 32);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -313,18 +314,17 @@
             this.Pnl_menudespegable.Controls.Add(this.panel1);
             this.Pnl_menudespegable.Controls.Add(this.label2);
             this.Pnl_menudespegable.Controls.Add(this.pictureBox2);
-            this.Pnl_menudespegable.Location = new System.Drawing.Point(666, 33);
+            this.Pnl_menudespegable.Location = new System.Drawing.Point(666, 18);
             this.Pnl_menudespegable.Name = "Pnl_menudespegable";
-            this.Pnl_menudespegable.Size = new System.Drawing.Size(125, 77);
+            this.Pnl_menudespegable.Size = new System.Drawing.Size(125, 14);
             this.Pnl_menudespegable.TabIndex = 6;
-            this.Pnl_menudespegable.Visible = false;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkCyan;
             this.panel1.Controls.Add(this.flowLayoutPanel1);
             this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(0, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(125, 38);
             this.panel1.TabIndex = 7;
@@ -378,7 +378,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.DarkCyan;
             this.label2.Font = new System.Drawing.Font("Perpetua", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(40, 51);
+            this.label2.Location = new System.Drawing.Point(40, 63);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 14);
             this.label2.TabIndex = 7;
@@ -414,6 +414,15 @@
             this.lbl_fecha.Text = "label3";
             this.lbl_fecha.Click += new System.EventHandler(this.label3_Click);
             // 
+            // tm_menu
+            // 
+            this.tm_menu.Interval = 50;
+            this.tm_menu.Tick += new System.EventHandler(this.tm_menu_Tick);
+            // 
+            // tm_menu2
+            // 
+            this.tm_menu2.Tick += new System.EventHandler(this.tm_menu2_Tick);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -424,9 +433,9 @@
             this.Controls.Add(this.lbl_fecha);
             this.Controls.Add(this.lbl_hora);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.Pnl_menudespegable);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.Pnl_menudespegable);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Menu";
@@ -485,5 +494,7 @@
         private System.Windows.Forms.Label lbl_hora;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label lbl_fecha;
+        private System.Windows.Forms.Timer tm_menu;
+        private System.Windows.Forms.Timer tm_menu2;
     }
 }

@@ -19,6 +19,7 @@ namespace LaboratorioClinico
             lbl_tipo.Text = "Admin";
             lbl_hora.Text = DateTime.Now.ToLongTimeString();
             lbl_fecha.Text = DateTime.Now.ToLongDateString();
+            Pnl_menudespegable.Height = 10;
         }
 
         private void ayudaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -93,14 +94,20 @@ namespace LaboratorioClinico
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            if (Pnl_menudespegable.Visible == true)
+            if (Pnl_menudespegable.Height==10)
             {
-                Pnl_menudespegable.Visible = false;
+                tm_menu.Enabled = true;
+            }
+            else if(Pnl_menudespegable.Height == 90) 
+            {
+                tm_menu2.Enabled = true;
             }
             else
             {
-                Pnl_menudespegable.Visible = true;
+                MessageBox.Show("Invalido");
             }
+
+      
 
         }
 
@@ -135,6 +142,39 @@ namespace LaboratorioClinico
         private void label3_Click(object sender, EventArgs e)
         {
             lbl_fecha.Text = DateTime.Now.ToLongDateString();
+        }
+
+        private void mantenimientoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tm_menu_Tick(object sender, EventArgs e)
+        {
+            if (Pnl_menudespegable.Height<90)  //Desocultar
+            {
+                Pnl_menudespegable.Height = Pnl_menudespegable.Height + 10;
+            }
+            else
+            {
+                
+                tm_menu.Enabled = false;
+                
+            }
+        }
+
+        private void tm_menu2_Tick(object sender, EventArgs e)
+        {
+            if (Pnl_menudespegable.Height > 10)  //ocultar
+            {
+                Pnl_menudespegable.Height = Pnl_menudespegable.Height - 10;
+            }
+            else
+            {
+                
+                tm_menu2.Enabled = false;
+               
+            }
         }
     }
 }
