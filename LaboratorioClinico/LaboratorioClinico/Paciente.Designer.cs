@@ -435,7 +435,7 @@
             this.Controls.Add(this.Gpb_datosp);
             this.Controls.Add(this.Gpb_guardarp);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Paciente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Gpb_guardarp.ResumeLayout(false);

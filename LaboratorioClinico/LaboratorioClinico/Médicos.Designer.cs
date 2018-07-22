@@ -282,11 +282,11 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(289, 445);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(46, 15);
+            this.label10.Size = new System.Drawing.Size(52, 15);
             this.label10.TabIndex = 44;
             this.label10.Text = "Guardar";
             // 
@@ -325,7 +325,7 @@
             // 
             this.Btn_guardar.BackgroundImage = global::LaboratorioClinico.Properties.Resources.guardar;
             this.Btn_guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Btn_guardar.Location = new System.Drawing.Point(282, 397);
+            this.Btn_guardar.Location = new System.Drawing.Point(285, 401);
             this.Btn_guardar.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_guardar.Name = "Btn_guardar";
             this.Btn_guardar.Size = new System.Drawing.Size(53, 44);
