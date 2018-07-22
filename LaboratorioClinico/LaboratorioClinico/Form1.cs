@@ -59,7 +59,7 @@ namespace LaboratorioClinico
             }*/
 
             string user = Txt_usuario.Text;
-            string pass = Txt_contrasena.Text;
+            string pass = Txt_contraseña.Text;
    
 
 
@@ -68,14 +68,14 @@ namespace LaboratorioClinico
             DataTable datos = new DataTable();
             sda.Fill(datos);
 
-            if (datos.Rows[0][0].ToString() == "1")
+            if (datos.Rows[0][0] == Convert.ToString("1")
             {
                 MessageBox.Show("Usuario Correcto", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
            
 
 
                 Txt_usuario.ResetText();
-                Txt_contrasena.ResetText();
+                Txt_contraseña.ResetText();
      
 
                 this.Hide();

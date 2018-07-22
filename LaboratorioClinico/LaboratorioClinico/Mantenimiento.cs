@@ -21,5 +21,10 @@ namespace LaboratorioClinico
         {
 
         }
+
+        private void Gpb_mantenimiento_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

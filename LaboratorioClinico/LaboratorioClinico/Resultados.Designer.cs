@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.Imprimir = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.Dgv_resultados = new System.Windows.Forms.DataGridView();
+            this.Lbl_expe = new System.Windows.Forms.Label();
+            this.Txtx_expe = new System.Windows.Forms.TextBox();
+            this.Gpb_resultado = new System.Windows.Forms.GroupBox();
+            this.Lbl_correo = new System.Windows.Forms.Label();
+            this.Btn_buscar = new System.Windows.Forms.Button();
+            this.Btn_enviar = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_resultados)).BeginInit();
+            this.Gpb_resultado.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -48,86 +48,86 @@
             this.label2.Size = new System.Drawing.Size(0, 13);
             this.label2.TabIndex = 1;
             // 
-            // dataGridView1
+            // Dgv_resultados
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.LightBlue;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(19, 120);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(538, 208);
-            this.dataGridView1.TabIndex = 4;
+            this.Dgv_resultados.BackgroundColor = System.Drawing.Color.LightBlue;
+            this.Dgv_resultados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Dgv_resultados.Location = new System.Drawing.Point(19, 120);
+            this.Dgv_resultados.Name = "Dgv_resultados";
+            this.Dgv_resultados.Size = new System.Drawing.Size(538, 208);
+            this.Dgv_resultados.TabIndex = 4;
             // 
-            // label5
+            // Lbl_expe
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(97, 71);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(136, 22);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "No.Expediente:";
+            this.Lbl_expe.AutoSize = true;
+            this.Lbl_expe.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_expe.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_expe.ForeColor = System.Drawing.Color.White;
+            this.Lbl_expe.Location = new System.Drawing.Point(97, 71);
+            this.Lbl_expe.Name = "Lbl_expe";
+            this.Lbl_expe.Size = new System.Drawing.Size(136, 22);
+            this.Lbl_expe.TabIndex = 13;
+            this.Lbl_expe.Text = "No.Expediente:";
             // 
-            // textBox5
+            // Txtx_expe
             // 
-            this.textBox5.BackColor = System.Drawing.Color.LightBlue;
-            this.textBox5.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(239, 67);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(145, 26);
-            this.textBox5.TabIndex = 14;
+            this.Txtx_expe.BackColor = System.Drawing.Color.LightBlue;
+            this.Txtx_expe.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txtx_expe.Location = new System.Drawing.Point(239, 67);
+            this.Txtx_expe.Name = "Txtx_expe";
+            this.Txtx_expe.Size = new System.Drawing.Size(145, 26);
+            this.Txtx_expe.TabIndex = 14;
             // 
-            // groupBox1
+            // Gpb_resultado
             // 
-            this.groupBox1.BackgroundImage = global::LaboratorioClinico.Properties.Resources.FONDOO;
-            this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.Imprimir);
-            this.groupBox1.Font = new System.Drawing.Font("Perpetua", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.DarkKhaki;
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(582, 399);
-            this.groupBox1.TabIndex = 16;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Resultados Exámen";
+            this.Gpb_resultado.BackgroundImage = global::LaboratorioClinico.Properties.Resources.FONDOO;
+            this.Gpb_resultado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Gpb_resultado.Controls.Add(this.Lbl_correo);
+            this.Gpb_resultado.Controls.Add(this.Btn_buscar);
+            this.Gpb_resultado.Controls.Add(this.Dgv_resultados);
+            this.Gpb_resultado.Controls.Add(this.Txtx_expe);
+            this.Gpb_resultado.Controls.Add(this.Lbl_expe);
+            this.Gpb_resultado.Controls.Add(this.Btn_enviar);
+            this.Gpb_resultado.Font = new System.Drawing.Font("Perpetua", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Gpb_resultado.ForeColor = System.Drawing.Color.DarkKhaki;
+            this.Gpb_resultado.Location = new System.Drawing.Point(12, 12);
+            this.Gpb_resultado.Name = "Gpb_resultado";
+            this.Gpb_resultado.Size = new System.Drawing.Size(582, 399);
+            this.Gpb_resultado.TabIndex = 16;
+            this.Gpb_resultado.TabStop = false;
+            this.Gpb_resultado.Text = "Resultados Exámen";
             // 
-            // label1
+            // Lbl_correo
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(477, 384);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 15);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Enviar por correo";
+            this.Lbl_correo.AutoSize = true;
+            this.Lbl_correo.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_correo.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_correo.ForeColor = System.Drawing.Color.White;
+            this.Lbl_correo.Location = new System.Drawing.Point(477, 384);
+            this.Lbl_correo.Name = "Lbl_correo";
+            this.Lbl_correo.Size = new System.Drawing.Size(104, 15);
+            this.Lbl_correo.TabIndex = 16;
+            this.Lbl_correo.Text = "Enviar por correo";
             // 
-            // button2
+            // Btn_buscar
             // 
-            this.button2.BackgroundImage = global::LaboratorioClinico.Properties.Resources.file;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Location = new System.Drawing.Point(390, 59);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(53, 44);
-            this.button2.TabIndex = 15;
-            this.button2.UseVisualStyleBackColor = true;
+            this.Btn_buscar.BackgroundImage = global::LaboratorioClinico.Properties.Resources.file;
+            this.Btn_buscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_buscar.Location = new System.Drawing.Point(390, 59);
+            this.Btn_buscar.Name = "Btn_buscar";
+            this.Btn_buscar.Size = new System.Drawing.Size(53, 44);
+            this.Btn_buscar.TabIndex = 15;
+            this.Btn_buscar.UseVisualStyleBackColor = true;
             // 
-            // Imprimir
+            // Btn_enviar
             // 
-            this.Imprimir.BackgroundImage = global::LaboratorioClinico.Properties.Resources.correo;
-            this.Imprimir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Imprimir.Location = new System.Drawing.Point(506, 342);
-            this.Imprimir.Name = "Imprimir";
-            this.Imprimir.Size = new System.Drawing.Size(53, 44);
-            this.Imprimir.TabIndex = 5;
-            this.Imprimir.UseVisualStyleBackColor = true;
+            this.Btn_enviar.BackgroundImage = global::LaboratorioClinico.Properties.Resources.correo;
+            this.Btn_enviar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_enviar.Location = new System.Drawing.Point(506, 342);
+            this.Btn_enviar.Name = "Btn_enviar";
+            this.Btn_enviar.Size = new System.Drawing.Size(53, 44);
+            this.Btn_enviar.TabIndex = 5;
+            this.Btn_enviar.UseVisualStyleBackColor = true;
             // 
             // Resultados
             // 
@@ -138,15 +138,16 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(606, 423);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.Gpb_resultado);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Resultados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_resultados)).EndInit();
+            this.Gpb_resultado.ResumeLayout(false);
+            this.Gpb_resultado.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,12 +155,12 @@
 
         #endregion
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button Imprimir;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView Dgv_resultados;
+        private System.Windows.Forms.Button Btn_enviar;
+        private System.Windows.Forms.Button Btn_buscar;
+        private System.Windows.Forms.Label Lbl_expe;
+        private System.Windows.Forms.TextBox Txtx_expe;
+        private System.Windows.Forms.GroupBox Gpb_resultado;
+        private System.Windows.Forms.Label Lbl_correo;
     }
 }
