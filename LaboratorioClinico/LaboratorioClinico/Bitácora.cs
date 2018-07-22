@@ -22,7 +22,7 @@ namespace LaboratorioClinico
             /*
             conexionn.conectar();
             DataTable dtDatos = new DataTable();
-            MySqlDataAdapter tablaData = new MySqlDataAdapter("select *from bitacora", conexionn.conectar());
+            MySqlDataAdapter tablaData = new MySqlDataAdapter("select *from bitacoraLC", conexionn.conectar());
             tablaData.Fill(dtDatos);
             Dgv_bitacora.DataSource = dtDatos;
             conexionn.conectar().Close();

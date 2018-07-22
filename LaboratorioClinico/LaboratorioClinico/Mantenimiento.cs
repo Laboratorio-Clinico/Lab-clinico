@@ -26,5 +26,20 @@ namespace LaboratorioClinico
         {
 
         }
+
+        private void Txt_tsangrep_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Lbl_eliminarm_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
