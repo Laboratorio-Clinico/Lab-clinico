@@ -124,5 +124,10 @@ namespace LaboratorioClinico
             formulario.ShowDialog();
             this.Show();
         }
+
+        private void mantenimientoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
