@@ -33,12 +33,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.Txt_usuario = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.Txt_contrasena = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.Cbo_privi = new System.Windows.Forms.ComboBox();
+            this.Cmb_privilegio = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Lbl_usuario = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -89,15 +90,15 @@
             this.Txt_usuario.Size = new System.Drawing.Size(149, 26);
             this.Txt_usuario.TabIndex = 3;
             // 
-            // textBox2
+            // Txt_contrasena
             // 
-            this.textBox2.BackColor = System.Drawing.Color.LightBlue;
-            this.textBox2.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(147, 121);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(149, 26);
-            this.textBox2.TabIndex = 4;
+            this.Txt_contrasena.BackColor = System.Drawing.Color.LightBlue;
+            this.Txt_contrasena.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_contrasena.Location = new System.Drawing.Point(147, 121);
+            this.Txt_contrasena.Name = "Txt_contrasena";
+            this.Txt_contrasena.PasswordChar = '*';
+            this.Txt_contrasena.Size = new System.Drawing.Size(149, 26);
+            this.Txt_contrasena.TabIndex = 4;
             // 
             // label3
             // 
@@ -121,18 +122,20 @@
             this.label4.Text = "Privilegio";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // Cbo_privi
+            // Cmb_privilegio
             // 
-            this.Cbo_privi.BackColor = System.Drawing.Color.LightBlue;
-            this.Cbo_privi.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cbo_privi.FormattingEnabled = true;
-            this.Cbo_privi.Items.AddRange(new object[] {
+            this.Cmb_privilegio.BackColor = System.Drawing.Color.LightBlue;
+            this.Cmb_privilegio.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cmb_privilegio.FormattingEnabled = true;
+            this.Cmb_privilegio.Items.AddRange(new object[] {
             "Administrador",
+            "UsuarioL",
             "Usuario"});
-            this.Cbo_privi.Location = new System.Drawing.Point(147, 47);
-            this.Cbo_privi.Name = "Cbo_privi";
-            this.Cbo_privi.Size = new System.Drawing.Size(149, 26);
-            this.Cbo_privi.TabIndex = 7;
+            this.Cmb_privilegio.Location = new System.Drawing.Point(147, 47);
+            this.Cmb_privilegio.Name = "Cmb_privilegio";
+            this.Cmb_privilegio.Size = new System.Drawing.Size(149, 26);
+            this.Cmb_privilegio.TabIndex = 7;
+            this.Cmb_privilegio.SelectedIndexChanged += new System.EventHandler(this.Cbo_privi_SelectedIndexChanged);
             // 
             // pictureBox1
             // 
@@ -148,13 +151,13 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.Cbo_privi);
+            this.groupBox1.Controls.Add(this.Cmb_privilegio);
             this.groupBox1.Controls.Add(this.Btn_ingresar);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.Txt_usuario);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.Txt_contrasena);
             this.groupBox1.Font = new System.Drawing.Font("Perpetua", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.MidnightBlue;
             this.groupBox1.Location = new System.Drawing.Point(110, 132);
@@ -165,6 +168,15 @@
             this.groupBox1.Text = "LOGIN";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // Lbl_usuario
+            // 
+            this.Lbl_usuario.AutoSize = true;
+            this.Lbl_usuario.Location = new System.Drawing.Point(437, 38);
+            this.Lbl_usuario.Name = "Lbl_usuario";
+            this.Lbl_usuario.Size = new System.Drawing.Size(35, 13);
+            this.Lbl_usuario.TabIndex = 10;
+            this.Lbl_usuario.Text = "label5";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -173,6 +185,7 @@
             this.BackgroundImage = global::LaboratorioClinico.Properties.Resources.FONDOO;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(543, 430);
+            this.Controls.Add(this.Lbl_usuario);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
@@ -200,12 +213,13 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox Txt_usuario;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox Txt_contrasena;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox Cbo_privi;
+        private System.Windows.Forms.ComboBox Cmb_privilegio;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label Lbl_usuario;
     }
 }
 

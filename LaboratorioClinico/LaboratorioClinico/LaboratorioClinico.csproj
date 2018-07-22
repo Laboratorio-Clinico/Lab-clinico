@@ -37,6 +37,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\MessagingToolkit.Barcode.dll</HintPath>
     </Reference>
+    <Reference Include="MySql.Data, Version=8.0.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System">
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.dll</HintPath>
     </Reference>
@@ -58,6 +59,7 @@
     <Compile Include="Bitácora.Designer.cs">
       <DependentUpon>Bitácora.cs</DependentUpon>
     </Compile>
+    <Compile Include="conexion.cs" />
     <Compile Include="cotizar.cs">
       <SubType>Form</SubType>
     </Compile>
