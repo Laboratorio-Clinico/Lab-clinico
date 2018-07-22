@@ -13,7 +13,7 @@ namespace LaboratorioClinico
 {
     public partial class Form1 : Form
     {
-        int bandera=1;
+   
         public Form1()
         {
             InitializeComponent();
@@ -60,20 +60,10 @@ namespace LaboratorioClinico
 
             string user = Txt_usuario.Text;
             string pass = Txt_contrasena.Text;
-            int privi = 0;
+   
 
 
-
-            if (String.Compare(Cmb_privilegio.SelectedItem.ToString(), "Administrador") == 0)
-            {
-                privi = 1;
-            }
-            else if (String.Compare(Cmb_privilegio.SelectedItem.ToString(), "Usuario") == 0)
-            {
-                privi = 2;
-            }
-
-            MySqlDataAdapter sda = new MySql.Data.MySqlClient.MySqlDataAdapter("select count(*) from usuario where usuario='" + user + "'and contraseña ='" + pass + "'and idprivilegio='" + privi + "'", conexion.ObtenerConexion());
+            MySqlDataAdapter sda = new MySql.Data.MySqlClient.MySqlDataAdapter("select count(*) from usuario where usuario='" + user + "'and contraseña ='" + pass, conexion.ObtenerConexion());
             MySqlCommand cmd = conexion.ObtenerConexion().CreateCommand();
             DataTable datos = new DataTable();
             sda.Fill(datos);
@@ -81,20 +71,18 @@ namespace LaboratorioClinico
             if (datos.Rows[0][0].ToString() == "1")
             {
                 MessageBox.Show("Usuario Correcto", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
-               
-                Lbl_usuario.Text = Txt_usuario.Text;
+           
 
 
                 Txt_usuario.ResetText();
                 Txt_contrasena.ResetText();
-                Cmb_privilegio.ResetText();
+     
 
                 this.Hide();
-                Menu abrir = new Menu(Txt_usuario.Text, Cmb_privilegio.SelectedItem.ToString());
+                Menu abrir = new Menu(Txt_usuario.Text);
                 abrir.ShowDialog();
                 this.Show();
-        
-                Lbl_usuario.Text = "";
+
             }
             else
             {
