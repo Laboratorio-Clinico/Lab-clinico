@@ -31,29 +31,29 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.Txtx_expe = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.Gpb_examen = new System.Windows.Forms.GroupBox();
+            this.Gpb_guardar = new System.Windows.Forms.GroupBox();
+            this.Lbl_precio = new System.Windows.Forms.Label();
+            this.Lbl_quetzal = new System.Windows.Forms.Label();
+            this.Cmb_examen = new System.Windows.Forms.ComboBox();
+            this.Btn_Guardar = new System.Windows.Forms.Button();
+            this.Txtx_cod = new System.Windows.Forms.TextBox();
+            this.Gpb_paciente = new System.Windows.Forms.GroupBox();
+            this.Picb_paciente = new System.Windows.Forms.PictureBox();
+            this.Txtx_nit = new System.Windows.Forms.TextBox();
+            this.Txtx_tel = new System.Windows.Forms.TextBox();
+            this.Txtx_nombre = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.Btn_buscar = new System.Windows.Forms.Button();
+            this.Gpb_examen.SuspendLayout();
+            this.Gpb_guardar.SuspendLayout();
+            this.Gpb_paciente.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Picb_paciente)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -91,14 +91,14 @@
             this.label4.Text = "Nombre: ";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // textBox5
+            // Txtx_expe
             // 
-            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.textBox5.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(126, 39);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(145, 26);
-            this.textBox5.TabIndex = 10;
+            this.Txtx_expe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txtx_expe.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txtx_expe.Location = new System.Drawing.Point(126, 39);
+            this.Txtx_expe.Name = "Txtx_expe";
+            this.Txtx_expe.Size = new System.Drawing.Size(145, 26);
+            this.Txtx_expe.TabIndex = 10;
             // 
             // label5
             // 
@@ -111,152 +111,153 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "No.Expediente:";
             // 
-            // groupBox1
+            // Gpb_examen
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.groupBox1.Controls.Add(this.groupBox3);
-            this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Font = new System.Drawing.Font("Perpetua", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.DarkKhaki;
-            this.groupBox1.Location = new System.Drawing.Point(21, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(732, 504);
-            this.groupBox1.TabIndex = 12;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Exámenes";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            this.Gpb_examen.BackColor = System.Drawing.Color.Transparent;
+            this.Gpb_examen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Gpb_examen.Controls.Add(this.Gpb_guardar);
+            this.Gpb_examen.Controls.Add(this.Gpb_paciente);
+            this.Gpb_examen.Font = new System.Drawing.Font("Perpetua", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Gpb_examen.ForeColor = System.Drawing.Color.DarkKhaki;
+            this.Gpb_examen.Location = new System.Drawing.Point(21, 12);
+            this.Gpb_examen.Name = "Gpb_examen";
+            this.Gpb_examen.Size = new System.Drawing.Size(732, 504);
+            this.Gpb_examen.TabIndex = 12;
+            this.Gpb_examen.TabStop = false;
+            this.Gpb_examen.Text = "Exámenes";
+            this.Gpb_examen.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // groupBox3
+            // Gpb_guardar
             // 
-            this.groupBox3.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox3.Controls.Add(this.label10);
-            this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Controls.Add(this.comboBox1);
-            this.groupBox3.Controls.Add(this.button2);
-            this.groupBox3.Controls.Add(this.label1);
-            this.groupBox3.Controls.Add(this.textBox1);
-            this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Font = new System.Drawing.Font("Perpetua", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.groupBox3.Location = new System.Drawing.Point(20, 235);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(695, 187);
-            this.groupBox3.TabIndex = 12;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Guardar Exámen";
+            this.Gpb_guardar.BackColor = System.Drawing.Color.Transparent;
+            this.Gpb_guardar.Controls.Add(this.Lbl_precio);
+            this.Gpb_guardar.Controls.Add(this.Lbl_quetzal);
+            this.Gpb_guardar.Controls.Add(this.Cmb_examen);
+            this.Gpb_guardar.Controls.Add(this.Btn_Guardar);
+            this.Gpb_guardar.Controls.Add(this.label1);
+            this.Gpb_guardar.Controls.Add(this.Txtx_cod);
+            this.Gpb_guardar.Controls.Add(this.label4);
+            this.Gpb_guardar.Controls.Add(this.label3);
+            this.Gpb_guardar.Font = new System.Drawing.Font("Perpetua", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Gpb_guardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.Gpb_guardar.Location = new System.Drawing.Point(20, 274);
+            this.Gpb_guardar.Name = "Gpb_guardar";
+            this.Gpb_guardar.Size = new System.Drawing.Size(695, 187);
+            this.Gpb_guardar.TabIndex = 12;
+            this.Gpb_guardar.TabStop = false;
+            this.Gpb_guardar.Text = "Guardar Exámen";
             // 
-            // label10
+            // Lbl_precio
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(292, 107);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(33, 18);
-            this.label10.TabIndex = 16;
-            this.label10.Text = "0.00";
+            this.Lbl_precio.AutoSize = true;
+            this.Lbl_precio.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_precio.ForeColor = System.Drawing.Color.White;
+            this.Lbl_precio.Location = new System.Drawing.Point(292, 107);
+            this.Lbl_precio.Name = "Lbl_precio";
+            this.Lbl_precio.Size = new System.Drawing.Size(33, 18);
+            this.Lbl_precio.TabIndex = 16;
+            this.Lbl_precio.Text = "0.00";
             // 
-            // label9
+            // Lbl_quetzal
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(272, 107);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(24, 18);
-            this.label9.TabIndex = 15;
-            this.label9.Text = "Q.";
+            this.Lbl_quetzal.AutoSize = true;
+            this.Lbl_quetzal.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_quetzal.ForeColor = System.Drawing.Color.White;
+            this.Lbl_quetzal.Location = new System.Drawing.Point(272, 107);
+            this.Lbl_quetzal.Name = "Lbl_quetzal";
+            this.Lbl_quetzal.Size = new System.Drawing.Size(24, 18);
+            this.Lbl_quetzal.TabIndex = 15;
+            this.Lbl_quetzal.Text = "Q.";
             // 
-            // comboBox1
+            // Cmb_examen
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.comboBox1.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(126, 69);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(231, 26);
-            this.comboBox1.TabIndex = 14;
+            this.Cmb_examen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Cmb_examen.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cmb_examen.FormattingEnabled = true;
+            this.Cmb_examen.Location = new System.Drawing.Point(126, 69);
+            this.Cmb_examen.Name = "Cmb_examen";
+            this.Cmb_examen.Size = new System.Drawing.Size(231, 26);
+            this.Cmb_examen.TabIndex = 14;
             // 
-            // button2
+            // Btn_Guardar
             // 
-            this.button2.BackgroundImage = global::LaboratorioClinico.Properties.Resources.guardar;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Location = new System.Drawing.Point(629, 34);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(53, 44);
-            this.button2.TabIndex = 13;
-            this.button2.UseVisualStyleBackColor = true;
+            this.Btn_Guardar.BackgroundImage = global::LaboratorioClinico.Properties.Resources.guardar;
+            this.Btn_Guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_Guardar.Location = new System.Drawing.Point(626, 34);
+            this.Btn_Guardar.Name = "Btn_Guardar";
+            this.Btn_Guardar.Size = new System.Drawing.Size(53, 44);
+            this.Btn_Guardar.TabIndex = 13;
+            this.Btn_Guardar.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // Txtx_cod
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.textBox1.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(126, 104);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(65, 26);
-            this.textBox1.TabIndex = 4;
+            this.Txtx_cod.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txtx_cod.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txtx_cod.Location = new System.Drawing.Point(126, 104);
+            this.Txtx_cod.Name = "Txtx_cod";
+            this.Txtx_cod.Size = new System.Drawing.Size(65, 26);
+            this.Txtx_cod.TabIndex = 4;
             // 
-            // groupBox2
+            // Gpb_paciente
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox2.Controls.Add(this.pictureBox2);
-            this.groupBox2.Controls.Add(this.textBox7);
-            this.groupBox2.Controls.Add(this.textBox6);
-            this.groupBox2.Controls.Add(this.textBox2);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.textBox5);
-            this.groupBox2.Font = new System.Drawing.Font("Perpetua", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.groupBox2.Location = new System.Drawing.Point(20, 61);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(695, 168);
-            this.groupBox2.TabIndex = 11;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Buscar Paciente";
+            this.Gpb_paciente.BackColor = System.Drawing.Color.Transparent;
+            this.Gpb_paciente.Controls.Add(this.Picb_paciente);
+            this.Gpb_paciente.Controls.Add(this.Txtx_nit);
+            this.Gpb_paciente.Controls.Add(this.Txtx_tel);
+            this.Gpb_paciente.Controls.Add(this.Txtx_nombre);
+            this.Gpb_paciente.Controls.Add(this.label8);
+            this.Gpb_paciente.Controls.Add(this.label7);
+            this.Gpb_paciente.Controls.Add(this.label6);
+            this.Gpb_paciente.Controls.Add(this.label2);
+            this.Gpb_paciente.Controls.Add(this.Btn_buscar);
+            this.Gpb_paciente.Controls.Add(this.label5);
+            this.Gpb_paciente.Controls.Add(this.Txtx_expe);
+            this.Gpb_paciente.Font = new System.Drawing.Font("Perpetua", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Gpb_paciente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.Gpb_paciente.Location = new System.Drawing.Point(20, 55);
+            this.Gpb_paciente.Name = "Gpb_paciente";
+            this.Gpb_paciente.Size = new System.Drawing.Size(695, 168);
+            this.Gpb_paciente.TabIndex = 11;
+            this.Gpb_paciente.TabStop = false;
+            this.Gpb_paciente.Text = "Buscar Paciente";
             // 
-            // pictureBox2
+            // Picb_paciente
             // 
-            this.pictureBox2.Image = global::LaboratorioClinico.Properties.Resources.examen;
-            this.pictureBox2.Location = new System.Drawing.Point(599, 27);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(83, 69);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 21;
-            this.pictureBox2.TabStop = false;
+            this.Picb_paciente.Image = global::LaboratorioClinico.Properties.Resources.examen;
+            this.Picb_paciente.Location = new System.Drawing.Point(599, 27);
+            this.Picb_paciente.Name = "Picb_paciente";
+            this.Picb_paciente.Size = new System.Drawing.Size(83, 69);
+            this.Picb_paciente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Picb_paciente.TabIndex = 21;
+            this.Picb_paciente.TabStop = false;
+            this.Picb_paciente.Click += new System.EventHandler(this.Picb_paciente_Click);
             // 
-            // textBox7
+            // Txtx_nit
             // 
-            this.textBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.textBox7.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(363, 115);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(145, 26);
-            this.textBox7.TabIndex = 19;
+            this.Txtx_nit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txtx_nit.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txtx_nit.Location = new System.Drawing.Point(363, 115);
+            this.Txtx_nit.Name = "Txtx_nit";
+            this.Txtx_nit.Size = new System.Drawing.Size(145, 26);
+            this.Txtx_nit.TabIndex = 19;
             // 
-            // textBox6
+            // Txtx_tel
             // 
-            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.textBox6.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(126, 115);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(168, 26);
-            this.textBox6.TabIndex = 18;
+            this.Txtx_tel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txtx_tel.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txtx_tel.Location = new System.Drawing.Point(126, 115);
+            this.Txtx_tel.Name = "Txtx_tel";
+            this.Txtx_tel.Size = new System.Drawing.Size(168, 26);
+            this.Txtx_tel.TabIndex = 18;
             // 
-            // textBox2
+            // Txtx_nombre
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.textBox2.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(126, 77);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(382, 26);
-            this.textBox2.TabIndex = 17;
+            this.Txtx_nombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txtx_nombre.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txtx_nombre.Location = new System.Drawing.Point(126, 77);
+            this.Txtx_nombre.Name = "Txtx_nombre";
+            this.Txtx_nombre.Size = new System.Drawing.Size(382, 26);
+            this.Txtx_nombre.TabIndex = 17;
             // 
             // label8
             // 
@@ -305,15 +306,15 @@
             this.label2.Size = new System.Drawing.Size(0, 18);
             this.label2.TabIndex = 13;
             // 
-            // button1
+            // Btn_buscar
             // 
-            this.button1.BackgroundImage = global::LaboratorioClinico.Properties.Resources.file;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(290, 27);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(53, 44);
-            this.button1.TabIndex = 12;
-            this.button1.UseVisualStyleBackColor = true;
+            this.Btn_buscar.BackgroundImage = global::LaboratorioClinico.Properties.Resources.file;
+            this.Btn_buscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_buscar.Location = new System.Drawing.Point(290, 27);
+            this.Btn_buscar.Name = "Btn_buscar";
+            this.Btn_buscar.Size = new System.Drawing.Size(53, 44);
+            this.Btn_buscar.TabIndex = 12;
+            this.Btn_buscar.UseVisualStyleBackColor = true;
             // 
             // Exámen
             // 
@@ -322,18 +323,18 @@
             this.BackgroundImage = global::LaboratorioClinico.Properties.Resources.FONDOO;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(782, 528);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.Gpb_examen);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Exámen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Exámen_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.Gpb_examen.ResumeLayout(false);
+            this.Gpb_guardar.ResumeLayout(false);
+            this.Gpb_guardar.PerformLayout();
+            this.Gpb_paciente.ResumeLayout(false);
+            this.Gpb_paciente.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Picb_paciente)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -343,24 +344,24 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox Txtx_expe;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.GroupBox Gpb_examen;
+        private System.Windows.Forms.GroupBox Gpb_guardar;
+        private System.Windows.Forms.GroupBox Gpb_paciente;
+        private System.Windows.Forms.Button Btn_buscar;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button Btn_Guardar;
+        private System.Windows.Forms.TextBox Txtx_cod;
+        private System.Windows.Forms.TextBox Txtx_nit;
+        private System.Windows.Forms.TextBox Txtx_tel;
+        private System.Windows.Forms.TextBox Txtx_nombre;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ComboBox Cmb_examen;
+        private System.Windows.Forms.Label Lbl_precio;
+        private System.Windows.Forms.Label Lbl_quetzal;
+        private System.Windows.Forms.PictureBox Picb_paciente;
     }
 }

@@ -282,6 +282,7 @@
             this.lbl_tipo.Size = new System.Drawing.Size(50, 15);
             this.lbl_tipo.TabIndex = 2;
             this.lbl_tipo.Text = "Usuario";
+            this.lbl_tipo.Click += new System.EventHandler(this.lbl_tipo_Click);
             // 
             // lbl_usuario
             // 
@@ -308,7 +309,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Teal;
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::LaboratorioClinico.Properties.Resources.salida__1_;
             this.pictureBox2.Location = new System.Drawing.Point(0, 44);
             this.pictureBox2.Name = "pictureBox2";
@@ -320,7 +321,7 @@
             // 
             // Pnl_menudespegable
             // 
-            this.Pnl_menudespegable.BackColor = System.Drawing.Color.DarkCyan;
+            this.Pnl_menudespegable.BackColor = System.Drawing.Color.DarkGray;
             this.Pnl_menudespegable.Controls.Add(this.panel1);
             this.Pnl_menudespegable.Controls.Add(this.label2);
             this.Pnl_menudespegable.Controls.Add(this.pictureBox2);
@@ -339,10 +340,11 @@
             this.label2.Size = new System.Drawing.Size(76, 14);
             this.label2.TabIndex = 7;
             this.label2.Text = "Cerrar sesion";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BackColor = System.Drawing.Color.DarkCyan;
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.lbl_tipo);
             this.panel1.Controls.Add(this.lbl_usuario);

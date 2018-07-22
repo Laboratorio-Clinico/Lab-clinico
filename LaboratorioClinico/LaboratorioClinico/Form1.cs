@@ -46,9 +46,11 @@ namespace LaboratorioClinico
             {
               
                     Menu nuevo = new Menu(Txt_usuario.Text, Cbo_privi.SelectedItem.ToString());
-                    this.Hide();
-                    nuevo.ShowDialog();          
-                    this.ShowDialog();
+               
+                    this.Visible = false;
+                    nuevo.ShowDialog() ;
+                    this.Visible=true;
+               
                 
                     
             }catch (Exception ex)
