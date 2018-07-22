@@ -68,7 +68,7 @@ namespace LaboratorioClinico
             DataTable datos = new DataTable();
             sda.Fill(datos);
 
-            if (datos.Rows[0][0].ToString() == "Administrador")
+            if (datos.Rows[0][0].ToString() == Convert.ToString("1"))
             {
                 MessageBox.Show("Usuario Correcto", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
            
