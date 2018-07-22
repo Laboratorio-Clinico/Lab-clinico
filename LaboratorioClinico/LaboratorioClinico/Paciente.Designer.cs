@@ -370,9 +370,9 @@
             this.Lbl_fechaep.ForeColor = System.Drawing.Color.White;
             this.Lbl_fechaep.Location = new System.Drawing.Point(33, 28);
             this.Lbl_fechaep.Name = "Lbl_fechaep";
-            this.Lbl_fechaep.Size = new System.Drawing.Size(159, 18);
+            this.Lbl_fechaep.Size = new System.Drawing.Size(165, 18);
             this.Lbl_fechaep.TabIndex = 38;
-            this.Lbl_fechaep.Text = "Fecha emisión resultados:";
+            this.Lbl_fechaep.Text = "Fecha emisión expediente:";
             // 
             // Txt_horap
             // 
