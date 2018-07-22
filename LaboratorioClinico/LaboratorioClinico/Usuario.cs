@@ -36,6 +36,7 @@ namespace LaboratorioClinico
         {
 
         }
+
         public void proIngresarUsuario(int pPrivilegio)
         {
 
@@ -71,6 +72,7 @@ namespace LaboratorioClinico
 
         private void Btn_guardar_Click(object sender, EventArgs e)
         {
+
             int pPrivilegio = 0;
             if (String.Compare(Cmb_privelegio.SelectedItem.ToString(), "Administrador") == 0)
             {
