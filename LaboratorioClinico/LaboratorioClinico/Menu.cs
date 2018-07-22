@@ -176,5 +176,13 @@ namespace LaboratorioClinico
                
             }
         }
+
+        private void requerimientosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Requerimientos open = new Requerimientos();
+            open.ShowDialog();
+            this.Show();
+        }
     }
 }
