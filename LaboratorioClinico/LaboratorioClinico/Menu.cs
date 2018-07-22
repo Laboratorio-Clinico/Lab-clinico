@@ -36,7 +36,10 @@ namespace LaboratorioClinico
 
         private void ingresarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Exámen formulario = new Exámen();
+            formulario.ShowDialog();
+            this.Show();
         }
 
         private void segurToolStripMenuItem_Click(object sender, EventArgs e)
@@ -127,7 +130,19 @@ namespace LaboratorioClinico
 
         private void mantenimientoToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            Mantenimiento formulario = new Mantenimiento();
+            formulario.ShowDialog();
+            this.Show();
 
+        }
+
+        private void resultadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Resultados formulario = new Resultados();
+            formulario.ShowDialog();
+            this.Show();
         }
     }
 }

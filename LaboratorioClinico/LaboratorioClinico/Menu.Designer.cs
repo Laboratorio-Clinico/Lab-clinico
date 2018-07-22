@@ -200,6 +200,7 @@
             this.resultadosToolStripMenuItem.Name = "resultadosToolStripMenuItem";
             this.resultadosToolStripMenuItem.Size = new System.Drawing.Size(223, 28);
             this.resultadosToolStripMenuItem.Text = "Resultados";
+            this.resultadosToolStripMenuItem.Click += new System.EventHandler(this.resultadosToolStripMenuItem_Click);
             // 
             // muestrasToolStripMenuItem
             // 
