@@ -111,7 +111,18 @@ namespace LaboratorioClinico
 
         private void bitácoraToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            Bitácora formulario = new Bitácora();
+            formulario.ShowDialog();
+            this.Show();
+        }
 
+        private void requerimientosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Requerimientos formulario = new Requerimientos();
+            formulario.ShowDialog();
+            this.Show();
         }
 
         private void mantenimientoToolStripMenuItem_Click(object sender, EventArgs e)
