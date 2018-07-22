@@ -52,20 +52,22 @@
             this.facturaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
-            this.lbl_tipo = new System.Windows.Forms.Label();
-            this.lbl_usuario = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Pnl_menudespegable = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.lbl_usuario = new System.Windows.Forms.Label();
+            this.lbl_tipo = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.Pnl_menudespegable.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -272,29 +274,6 @@
             this.label1.Text = "LABORATORIO CLINICO";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // lbl_tipo
-            // 
-            this.lbl_tipo.AutoSize = true;
-            this.lbl_tipo.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_tipo.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_tipo.Location = new System.Drawing.Point(41, 23);
-            this.lbl_tipo.Name = "lbl_tipo";
-            this.lbl_tipo.Size = new System.Drawing.Size(50, 15);
-            this.lbl_tipo.TabIndex = 2;
-            this.lbl_tipo.Text = "Usuario";
-            this.lbl_tipo.Click += new System.EventHandler(this.lbl_tipo_Click);
-            // 
-            // lbl_usuario
-            // 
-            this.lbl_usuario.AutoSize = true;
-            this.lbl_usuario.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_usuario.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_usuario.Location = new System.Drawing.Point(41, 2);
-            this.lbl_usuario.Name = "lbl_usuario";
-            this.lbl_usuario.Size = new System.Drawing.Size(50, 15);
-            this.lbl_usuario.TabIndex = 3;
-            this.lbl_usuario.Text = "Usuario";
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.SeaShell;
@@ -335,9 +314,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkCyan;
+            this.panel1.Controls.Add(this.flowLayoutPanel1);
             this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.lbl_tipo);
-            this.panel1.Controls.Add(this.lbl_usuario);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(125, 38);
@@ -366,6 +344,39 @@
             this.label2.Text = "Cerrar sesion";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.flowLayoutPanel1.Controls.Add(this.lbl_usuario);
+            this.flowLayoutPanel1.Controls.Add(this.lbl_tipo);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(37, 3);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(85, 33);
+            this.flowLayoutPanel1.TabIndex = 8;
+            // 
+            // lbl_usuario
+            // 
+            this.lbl_usuario.AutoSize = true;
+            this.lbl_usuario.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_usuario.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_usuario.Location = new System.Drawing.Point(3, 0);
+            this.lbl_usuario.Name = "lbl_usuario";
+            this.lbl_usuario.Size = new System.Drawing.Size(50, 15);
+            this.lbl_usuario.TabIndex = 3;
+            this.lbl_usuario.Text = "Usuario";
+            // 
+            // lbl_tipo
+            // 
+            this.lbl_tipo.AutoSize = true;
+            this.lbl_tipo.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_tipo.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_tipo.Location = new System.Drawing.Point(3, 15);
+            this.lbl_tipo.Name = "lbl_tipo";
+            this.lbl_tipo.Size = new System.Drawing.Size(50, 15);
+            this.lbl_tipo.TabIndex = 2;
+            this.lbl_tipo.Text = "Usuario";
+            this.lbl_tipo.Click += new System.EventHandler(this.lbl_tipo_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -390,8 +401,9 @@
             this.Pnl_menudespegable.ResumeLayout(false);
             this.Pnl_menudespegable.PerformLayout();
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -422,13 +434,14 @@
         private System.Windows.Forms.ToolStripMenuItem bitácoraToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cambioDeContraseñaToolStripMenuItem;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lbl_tipo;
-        private System.Windows.Forms.Label lbl_usuario;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel Pnl_menudespegable;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Label lbl_usuario;
+        private System.Windows.Forms.Label lbl_tipo;
     }
 }

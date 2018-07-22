@@ -45,7 +45,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.Lbl_nombrep = new System.Windows.Forms.Label();
             this.Lbl_expedientep = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.Cmb_sexop = new System.Windows.Forms.ComboBox();
             this.Txt_expedientep = new System.Windows.Forms.TextBox();
             this.Txt_refierep = new System.Windows.Forms.TextBox();
             this.Txt_direccionp = new System.Windows.Forms.TextBox();
@@ -116,7 +116,7 @@
             this.Gpb_datosp.Controls.Add(this.label3);
             this.Gpb_datosp.Controls.Add(this.Lbl_nombrep);
             this.Gpb_datosp.Controls.Add(this.Lbl_expedientep);
-            this.Gpb_datosp.Controls.Add(this.comboBox2);
+            this.Gpb_datosp.Controls.Add(this.Cmb_sexop);
             this.Gpb_datosp.Controls.Add(this.Txt_expedientep);
             this.Gpb_datosp.Controls.Add(this.Txt_refierep);
             this.Gpb_datosp.Controls.Add(this.Txt_direccionp);
@@ -264,15 +264,15 @@
             this.Lbl_expedientep.TabIndex = 32;
             this.Lbl_expedientep.Text = "Expediente:";
             // 
-            // comboBox2
+            // Cmb_sexop
             // 
-            this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.comboBox2.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(410, 68);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(57, 25);
-            this.comboBox2.TabIndex = 31;
+            this.Cmb_sexop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Cmb_sexop.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cmb_sexop.FormattingEnabled = true;
+            this.Cmb_sexop.Location = new System.Drawing.Point(410, 68);
+            this.Cmb_sexop.Name = "Cmb_sexop";
+            this.Cmb_sexop.Size = new System.Drawing.Size(57, 25);
+            this.Cmb_sexop.TabIndex = 31;
             // 
             // Txt_expedientep
             // 
@@ -465,7 +465,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label Lbl_nombrep;
         private System.Windows.Forms.Label Lbl_expedientep;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox Cmb_sexop;
         private System.Windows.Forms.TextBox Txt_expedientep;
         private System.Windows.Forms.TextBox Txt_refierep;
         private System.Windows.Forms.TextBox Txt_direccionp;

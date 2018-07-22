@@ -79,7 +79,7 @@ namespace LaboratorioClinico
      
 
                 this.Hide();
-                Menu abrir = new Menu(Txt_usuario.Text);
+                Menu abrir = new Menu(user);
                 abrir.ShowDialog();
                 this.Show();
 
