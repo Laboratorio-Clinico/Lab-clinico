@@ -50,6 +50,8 @@
             this.Lbl_nombrep = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.Btn_buscar = new System.Windows.Forms.Button();
+            this.Dtp_emision = new System.Windows.Forms.DateTimePicker();
+            this.Lbl_fechaep = new System.Windows.Forms.Label();
             this.Gpb_examen.SuspendLayout();
             this.Gpb_guardar.SuspendLayout();
             this.Gpb_paciente.SuspendLayout();
@@ -61,7 +63,7 @@
             this.Lbl_codigo.AutoSize = true;
             this.Lbl_codigo.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_codigo.ForeColor = System.Drawing.Color.White;
-            this.Lbl_codigo.Location = new System.Drawing.Point(20, 107);
+            this.Lbl_codigo.Location = new System.Drawing.Point(20, 90);
             this.Lbl_codigo.Name = "Lbl_codigo";
             this.Lbl_codigo.Size = new System.Drawing.Size(93, 18);
             this.Lbl_codigo.TabIndex = 0;
@@ -73,7 +75,7 @@
             this.Lbl_costo.AutoSize = true;
             this.Lbl_costo.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_costo.ForeColor = System.Drawing.Color.White;
-            this.Lbl_costo.Location = new System.Drawing.Point(216, 107);
+            this.Lbl_costo.Location = new System.Drawing.Point(216, 90);
             this.Lbl_costo.Name = "Lbl_costo";
             this.Lbl_costo.Size = new System.Drawing.Size(50, 18);
             this.Lbl_costo.TabIndex = 2;
@@ -84,7 +86,7 @@
             this.Lbl_examen.AutoSize = true;
             this.Lbl_examen.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_examen.ForeColor = System.Drawing.Color.White;
-            this.Lbl_examen.Location = new System.Drawing.Point(53, 70);
+            this.Lbl_examen.Location = new System.Drawing.Point(53, 53);
             this.Lbl_examen.Name = "Lbl_examen";
             this.Lbl_examen.Size = new System.Drawing.Size(67, 18);
             this.Lbl_examen.TabIndex = 3;
@@ -130,6 +132,8 @@
             // Gpb_guardar
             // 
             this.Gpb_guardar.BackColor = System.Drawing.Color.Transparent;
+            this.Gpb_guardar.Controls.Add(this.Dtp_emision);
+            this.Gpb_guardar.Controls.Add(this.Lbl_fechaep);
             this.Gpb_guardar.Controls.Add(this.Lbl_precio);
             this.Gpb_guardar.Controls.Add(this.Lbl_quetzal);
             this.Gpb_guardar.Controls.Add(this.Cmb_examen);
@@ -152,7 +156,7 @@
             this.Lbl_precio.AutoSize = true;
             this.Lbl_precio.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_precio.ForeColor = System.Drawing.Color.White;
-            this.Lbl_precio.Location = new System.Drawing.Point(292, 107);
+            this.Lbl_precio.Location = new System.Drawing.Point(292, 90);
             this.Lbl_precio.Name = "Lbl_precio";
             this.Lbl_precio.Size = new System.Drawing.Size(33, 18);
             this.Lbl_precio.TabIndex = 16;
@@ -163,7 +167,7 @@
             this.Lbl_quetzal.AutoSize = true;
             this.Lbl_quetzal.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_quetzal.ForeColor = System.Drawing.Color.White;
-            this.Lbl_quetzal.Location = new System.Drawing.Point(272, 107);
+            this.Lbl_quetzal.Location = new System.Drawing.Point(272, 90);
             this.Lbl_quetzal.Name = "Lbl_quetzal";
             this.Lbl_quetzal.Size = new System.Drawing.Size(24, 18);
             this.Lbl_quetzal.TabIndex = 15;
@@ -174,7 +178,7 @@
             this.Cmb_examen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Cmb_examen.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cmb_examen.FormattingEnabled = true;
-            this.Cmb_examen.Location = new System.Drawing.Point(126, 69);
+            this.Cmb_examen.Location = new System.Drawing.Point(126, 52);
             this.Cmb_examen.Name = "Cmb_examen";
             this.Cmb_examen.Size = new System.Drawing.Size(231, 26);
             this.Cmb_examen.TabIndex = 14;
@@ -193,7 +197,7 @@
             // 
             this.Txt_cod.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Txt_cod.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_cod.Location = new System.Drawing.Point(126, 104);
+            this.Txt_cod.Location = new System.Drawing.Point(126, 87);
             this.Txt_cod.Name = "Txt_cod";
             this.Txt_cod.Size = new System.Drawing.Size(65, 26);
             this.Txt_cod.TabIndex = 4;
@@ -316,6 +320,25 @@
             this.Btn_buscar.TabIndex = 12;
             this.Btn_buscar.UseVisualStyleBackColor = true;
             // 
+            // Dtp_emision
+            // 
+            this.Dtp_emision.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Dtp_emision.Location = new System.Drawing.Point(423, 135);
+            this.Dtp_emision.Name = "Dtp_emision";
+            this.Dtp_emision.Size = new System.Drawing.Size(247, 26);
+            this.Dtp_emision.TabIndex = 43;
+            // 
+            // Lbl_fechaep
+            // 
+            this.Lbl_fechaep.AutoSize = true;
+            this.Lbl_fechaep.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_fechaep.ForeColor = System.Drawing.Color.White;
+            this.Lbl_fechaep.Location = new System.Drawing.Point(420, 110);
+            this.Lbl_fechaep.Name = "Lbl_fechaep";
+            this.Lbl_fechaep.Size = new System.Drawing.Size(159, 18);
+            this.Lbl_fechaep.TabIndex = 42;
+            this.Lbl_fechaep.Text = "Fecha emisión resultados:";
+            // 
             // Exámen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -363,5 +386,7 @@
         private System.Windows.Forms.Label Lbl_precio;
         private System.Windows.Forms.Label Lbl_quetzal;
         private System.Windows.Forms.PictureBox Picb_paciente;
+        private System.Windows.Forms.DateTimePicker Dtp_emision;
+        private System.Windows.Forms.Label Lbl_fechaep;
     }
 }
