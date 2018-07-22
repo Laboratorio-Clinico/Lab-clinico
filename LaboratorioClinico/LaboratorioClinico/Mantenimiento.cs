@@ -26,5 +26,10 @@ namespace LaboratorioClinico
         {
 
         }
+
+        private void Txt_tsangrep_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
