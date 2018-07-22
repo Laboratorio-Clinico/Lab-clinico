@@ -130,6 +130,7 @@
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.label14 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
+            this.Pnl_editarPaciente = new System.Windows.Forms.Panel();
             this.Gpb_mantenimiento.SuspendLayout();
             this.Tbc_paciente.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -162,6 +163,10 @@
             this.Cmb_tabla.BackColor = System.Drawing.Color.LightBlue;
             this.Cmb_tabla.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cmb_tabla.FormattingEnabled = true;
+            this.Cmb_tabla.Items.AddRange(new object[] {
+            "Paciente",
+            "Médico Asociado",
+            "Exámen"});
             this.Cmb_tabla.Location = new System.Drawing.Point(454, 35);
             this.Cmb_tabla.Margin = new System.Windows.Forms.Padding(4);
             this.Cmb_tabla.Name = "Cmb_tabla";
@@ -174,9 +179,9 @@
             this.Gpb_mantenimiento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Gpb_mantenimiento.Controls.Add(this.Lbl_tabla);
             this.Gpb_mantenimiento.Controls.Add(this.Cmb_tabla);
+            this.Gpb_mantenimiento.Controls.Add(this.Tbc_paciente);
             this.Gpb_mantenimiento.Controls.Add(this.Tbc_examen);
             this.Gpb_mantenimiento.Controls.Add(this.Tbc_medicos);
-            this.Gpb_mantenimiento.Controls.Add(this.Tbc_paciente);
             this.Gpb_mantenimiento.Font = new System.Drawing.Font("Perpetua", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Gpb_mantenimiento.ForeColor = System.Drawing.Color.DarkKhaki;
             this.Gpb_mantenimiento.Location = new System.Drawing.Point(9, 12);
@@ -504,6 +509,7 @@
             this.tabPage2.Controls.Add(this.Lbl_nombrep);
             this.tabPage2.Controls.Add(this.Lbl_expedientep);
             this.tabPage2.Controls.Add(this.Lbl_eliminarp);
+            this.tabPage2.Controls.Add(this.Pnl_editarPaciente);
             this.tabPage2.Location = new System.Drawing.Point(4, 31);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
@@ -670,6 +676,7 @@
             this.Btn_buscar.Size = new System.Drawing.Size(53, 44);
             this.Btn_buscar.TabIndex = 87;
             this.Btn_buscar.UseVisualStyleBackColor = false;
+            this.Btn_buscar.Click += new System.EventHandler(this.Btn_buscar_Click);
             // 
             // Lbl_refierep
             // 
@@ -1379,6 +1386,13 @@
             this.button5.TabIndex = 72;
             this.button5.UseVisualStyleBackColor = true;
             // 
+            // Pnl_editarPaciente
+            // 
+            this.Pnl_editarPaciente.Location = new System.Drawing.Point(97, 60);
+            this.Pnl_editarPaciente.Name = "Pnl_editarPaciente";
+            this.Pnl_editarPaciente.Size = new System.Drawing.Size(519, 253);
+            this.Pnl_editarPaciente.TabIndex = 95;
+            // 
             // Mantenimiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -1522,5 +1536,6 @@
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Panel Pnl_editarPaciente;
     }
 }
