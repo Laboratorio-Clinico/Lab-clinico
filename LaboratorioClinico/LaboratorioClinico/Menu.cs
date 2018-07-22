@@ -100,5 +100,22 @@ namespace LaboratorioClinico
        
      
         }
+
+        private void bitácoraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Bitácora open = new Bitácora();
+            open.ShowDialog();
+            this.Show();
+        }
+
+        private void nuevoPacienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            this.Hide();
+            Paciente open = new Paciente();
+            open.ShowDialog();
+            this.Show();
+        }
     }
 }

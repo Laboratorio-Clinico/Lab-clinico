@@ -71,7 +71,6 @@ namespace LaboratorioClinico
             if (datos.Rows[0][0].ToString() == "1")
             {
                 MessageBox.Show("Usuario Correcto", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
-           
 
 
                 Txt_usuario.ResetText();
@@ -82,6 +81,7 @@ namespace LaboratorioClinico
                 Menu abrir = new Menu(user);
                 abrir.ShowDialog();
                 this.Show();
+
 
             }
             else

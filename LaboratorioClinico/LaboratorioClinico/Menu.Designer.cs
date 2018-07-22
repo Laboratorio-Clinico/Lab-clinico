@@ -130,6 +130,7 @@
             this.bitácoraToolStripMenuItem.Name = "bitácoraToolStripMenuItem";
             this.bitácoraToolStripMenuItem.Size = new System.Drawing.Size(282, 28);
             this.bitácoraToolStripMenuItem.Text = "Bitácora";
+            this.bitácoraToolStripMenuItem.Click += new System.EventHandler(this.bitácoraToolStripMenuItem_Click);
             // 
             // cambioDeContraseñaToolStripMenuItem
             // 
@@ -247,6 +248,7 @@
             this.nuevoPacienteToolStripMenuItem.Name = "nuevoPacienteToolStripMenuItem";
             this.nuevoPacienteToolStripMenuItem.Size = new System.Drawing.Size(219, 28);
             this.nuevoPacienteToolStripMenuItem.Text = "Nuevo Paciente";
+            this.nuevoPacienteToolStripMenuItem.Click += new System.EventHandler(this.nuevoPacienteToolStripMenuItem_Click);
             // 
             // facturaciónToolStripMenuItem
             // 

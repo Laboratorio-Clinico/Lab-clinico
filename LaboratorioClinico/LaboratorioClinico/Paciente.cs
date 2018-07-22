@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -44,8 +45,8 @@ namespace LaboratorioClinico
 
         private void Btn_guardarp_Click(object sender, EventArgs e)
         {
-            /*MySqlCommand cm;
-            cm = new MySqlCommand("InsertaPaciente", conexionn.conectar());
+            MySqlCommand cm;
+            cm = new MySqlCommand("InsertaPaciente", conexion.ObtenerConexion());
             cm.CommandType = CommandType.StoredProcedure;
 
             cm.Parameters.AddWithValue("@expedientep", this.Txt_expedientep.Text);
@@ -70,7 +71,7 @@ namespace LaboratorioClinico
             else
             {
                 MessageBox.Show("No se pudo ingresar", "Incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }*/
+            }
         }
     }
 }
