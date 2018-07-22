@@ -63,12 +63,12 @@ namespace LaboratorioClinico
    
 
 
-            MySqlDataAdapter sda = new MySql.Data.MySqlClient.MySqlDataAdapter("select count(*) from usuario where usuario='" + user + "'and contraseña ='" + pass, conexion.ObtenerConexion());
+            MySqlDataAdapter sda = new MySqlDataAdapter("select count(*) from usuario where usuario='" + user + "'and contraseña ='" + pass + "'", conexion.ObtenerConexion());
             MySqlCommand cmd = conexion.ObtenerConexion().CreateCommand();
             DataTable datos = new DataTable();
             sda.Fill(datos);
 
-            if (datos.Rows[0][0] == Convert.ToString("1")
+            if (datos.Rows[0][0].ToString() == "1")
             {
                 MessageBox.Show("Usuario Correcto", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
            

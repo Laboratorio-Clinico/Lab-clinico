@@ -310,6 +310,7 @@
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = global::LaboratorioClinico.Properties.Resources.salida__1_;
             this.pictureBox2.Location = new System.Drawing.Point(0, 44);
             this.pictureBox2.Name = "pictureBox2";
