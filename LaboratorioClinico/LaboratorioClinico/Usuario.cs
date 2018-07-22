@@ -36,7 +36,8 @@ namespace LaboratorioClinico
         {
 
         }
-        public void proIngresarUsuario( int pPrivilegio) {
+        public void proIngresarUsuario(int pPrivilegio)
+        {
 
             MySqlCommand cm;
             cm = new MySqlCommand("Pro_ingresoUsuario", conexion.ObtenerConexion());
@@ -51,7 +52,6 @@ namespace LaboratorioClinico
 
             if (query == 1)
             {
-                MessageBox.Show("Cliente ingresado correctamente", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -61,6 +61,7 @@ namespace LaboratorioClinico
             Txt_codigoDeEmpleado.ResetText();
             Txt_usuario.ResetText();
             Txt_password.ResetText();
+            MessageBox.Show("Cliente ingresado correctamente", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Cmb_privelegio.ResetText();
 
 

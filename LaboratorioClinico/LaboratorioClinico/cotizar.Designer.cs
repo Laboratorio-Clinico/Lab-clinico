@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.Gpb_cotizacion = new System.Windows.Forms.GroupBox();
+            this.Cmb__doctor = new System.Windows.Forms.ComboBox();
+            this.Lbl_doctor = new System.Windows.Forms.Label();
+            this.Cmb_examen = new System.Windows.Forms.ComboBox();
+            this.Lbl_examen = new System.Windows.Forms.Label();
             this.Txt_laboratorio = new System.Windows.Forms.ComboBox();
             this.Lbl_laboratorio = new System.Windows.Forms.Label();
             this.Lbl_fecha = new System.Windows.Forms.Label();
@@ -54,10 +58,6 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.Dgv_verDatos = new System.Windows.Forms.DataGridView();
             this.label9 = new System.Windows.Forms.Label();
-            this.Cmb_examen = new System.Windows.Forms.ComboBox();
-            this.Lbl_examen = new System.Windows.Forms.Label();
-            this.Cmb__doctor = new System.Windows.Forms.ComboBox();
-            this.Lbl_doctor = new System.Windows.Forms.Label();
             this.Gpb_cotizacion.SuspendLayout();
             this.Gpb_botones.SuspendLayout();
             this.Gpb_verDatos.SuspendLayout();
@@ -95,6 +95,50 @@
             this.Gpb_cotizacion.TabIndex = 34;
             this.Gpb_cotizacion.TabStop = false;
             this.Gpb_cotizacion.Text = "Cotización";
+            // 
+            // Cmb__doctor
+            // 
+            this.Cmb__doctor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Cmb__doctor.Font = new System.Drawing.Font("Perpetua", 12F);
+            this.Cmb__doctor.FormattingEnabled = true;
+            this.Cmb__doctor.Location = new System.Drawing.Point(434, 131);
+            this.Cmb__doctor.Name = "Cmb__doctor";
+            this.Cmb__doctor.Size = new System.Drawing.Size(218, 26);
+            this.Cmb__doctor.TabIndex = 53;
+            // 
+            // Lbl_doctor
+            // 
+            this.Lbl_doctor.AutoSize = true;
+            this.Lbl_doctor.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_doctor.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_doctor.ForeColor = System.Drawing.Color.White;
+            this.Lbl_doctor.Location = new System.Drawing.Point(378, 137);
+            this.Lbl_doctor.Name = "Lbl_doctor";
+            this.Lbl_doctor.Size = new System.Drawing.Size(50, 18);
+            this.Lbl_doctor.TabIndex = 52;
+            this.Lbl_doctor.Text = "Doctor";
+            // 
+            // Cmb_examen
+            // 
+            this.Cmb_examen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Cmb_examen.Font = new System.Drawing.Font("Perpetua", 12F);
+            this.Cmb_examen.FormattingEnabled = true;
+            this.Cmb_examen.Location = new System.Drawing.Point(155, 136);
+            this.Cmb_examen.Name = "Cmb_examen";
+            this.Cmb_examen.Size = new System.Drawing.Size(211, 26);
+            this.Cmb_examen.TabIndex = 51;
+            // 
+            // Lbl_examen
+            // 
+            this.Lbl_examen.AutoSize = true;
+            this.Lbl_examen.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_examen.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_examen.ForeColor = System.Drawing.Color.White;
+            this.Lbl_examen.Location = new System.Drawing.Point(79, 139);
+            this.Lbl_examen.Name = "Lbl_examen";
+            this.Lbl_examen.Size = new System.Drawing.Size(55, 18);
+            this.Lbl_examen.TabIndex = 50;
+            this.Lbl_examen.Text = "Examen";
             // 
             // Txt_laboratorio
             // 
@@ -269,6 +313,7 @@
             this.Btn_requisitos.Size = new System.Drawing.Size(53, 44);
             this.Btn_requisitos.TabIndex = 10;
             this.Btn_requisitos.UseVisualStyleBackColor = true;
+            this.Btn_requisitos.Click += new System.EventHandler(this.Btn_requisitos_Click);
             // 
             // Lbl_imprimir
             // 
@@ -300,6 +345,7 @@
             this.Btn_buscar.Size = new System.Drawing.Size(53, 44);
             this.Btn_buscar.TabIndex = 11;
             this.Btn_buscar.UseVisualStyleBackColor = true;
+            this.Btn_buscar.Click += new System.EventHandler(this.Btn_buscar_Click);
             // 
             // Lbl_requisitos
             // 
@@ -362,50 +408,6 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(0, 33);
             this.label9.TabIndex = 34;
-            // 
-            // Cmb_examen
-            // 
-            this.Cmb_examen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.Cmb_examen.Font = new System.Drawing.Font("Perpetua", 12F);
-            this.Cmb_examen.FormattingEnabled = true;
-            this.Cmb_examen.Location = new System.Drawing.Point(155, 136);
-            this.Cmb_examen.Name = "Cmb_examen";
-            this.Cmb_examen.Size = new System.Drawing.Size(211, 26);
-            this.Cmb_examen.TabIndex = 51;
-            // 
-            // Lbl_examen
-            // 
-            this.Lbl_examen.AutoSize = true;
-            this.Lbl_examen.BackColor = System.Drawing.Color.Transparent;
-            this.Lbl_examen.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_examen.ForeColor = System.Drawing.Color.White;
-            this.Lbl_examen.Location = new System.Drawing.Point(79, 139);
-            this.Lbl_examen.Name = "Lbl_examen";
-            this.Lbl_examen.Size = new System.Drawing.Size(55, 18);
-            this.Lbl_examen.TabIndex = 50;
-            this.Lbl_examen.Text = "Examen";
-            // 
-            // Cmb__doctor
-            // 
-            this.Cmb__doctor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.Cmb__doctor.Font = new System.Drawing.Font("Perpetua", 12F);
-            this.Cmb__doctor.FormattingEnabled = true;
-            this.Cmb__doctor.Location = new System.Drawing.Point(434, 131);
-            this.Cmb__doctor.Name = "Cmb__doctor";
-            this.Cmb__doctor.Size = new System.Drawing.Size(218, 26);
-            this.Cmb__doctor.TabIndex = 53;
-            // 
-            // Lbl_doctor
-            // 
-            this.Lbl_doctor.AutoSize = true;
-            this.Lbl_doctor.BackColor = System.Drawing.Color.Transparent;
-            this.Lbl_doctor.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_doctor.ForeColor = System.Drawing.Color.White;
-            this.Lbl_doctor.Location = new System.Drawing.Point(378, 137);
-            this.Lbl_doctor.Name = "Lbl_doctor";
-            this.Lbl_doctor.Size = new System.Drawing.Size(50, 18);
-            this.Lbl_doctor.TabIndex = 52;
-            this.Lbl_doctor.Text = "Doctor";
             // 
             // cotizar
             // 
