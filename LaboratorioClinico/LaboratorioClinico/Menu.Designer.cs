@@ -57,9 +57,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Pnl_menudespegable = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -321,7 +321,7 @@
             // 
             // Pnl_menudespegable
             // 
-            this.Pnl_menudespegable.BackColor = System.Drawing.Color.DarkGray;
+            this.Pnl_menudespegable.BackColor = System.Drawing.Color.DarkCyan;
             this.Pnl_menudespegable.Controls.Add(this.panel1);
             this.Pnl_menudespegable.Controls.Add(this.label2);
             this.Pnl_menudespegable.Controls.Add(this.pictureBox2);
@@ -330,17 +330,6 @@
             this.Pnl_menudespegable.Size = new System.Drawing.Size(125, 77);
             this.Pnl_menudespegable.TabIndex = 6;
             this.Pnl_menudespegable.Visible = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Perpetua", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(40, 51);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 14);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Cerrar sesion";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // panel1
             // 
@@ -363,6 +352,18 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 7;
             this.pictureBox3.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.DarkCyan;
+            this.label2.Font = new System.Drawing.Font("Perpetua", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(40, 51);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(76, 14);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Cerrar sesion";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // Menu
             // 

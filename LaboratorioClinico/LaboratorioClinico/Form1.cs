@@ -13,7 +13,7 @@ namespace LaboratorioClinico
 {
     public partial class Form1 : Form
     {
-        int bandera=1;
+   
         public Form1()
         {
             InitializeComponent();
@@ -68,9 +68,13 @@ namespace LaboratorioClinico
             {
                 privi = 1;
             }
-            else if (String.Compare(Cmb_privilegio.SelectedItem.ToString(), "Usuario") == 0)
+            else if (String.Compare(Cmb_privilegio.SelectedItem.ToString(), "UsuarioL") == 0)
             {
                 privi = 2;
+            }
+            else if (String.Compare(Cmb_privilegio.SelectedItem.ToString(), "Usuario") == 0)
+            {
+                privi = 3;
             }
 
             MySqlDataAdapter sda = new MySql.Data.MySqlClient.MySqlDataAdapter("select count(*) from usuario where usuario='" + user + "'and contraseña ='" + pass + "'and idprivilegio='" + privi + "'", conexion.ObtenerConexion());
@@ -81,8 +85,7 @@ namespace LaboratorioClinico
             if (datos.Rows[0][0].ToString() == "1")
             {
                 MessageBox.Show("Usuario Correcto", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
-               
-                Lbl_usuario.Text = Txt_usuario.Text;
+           
 
 
                 Txt_usuario.ResetText();
@@ -93,8 +96,7 @@ namespace LaboratorioClinico
                 Menu abrir = new Menu(Txt_usuario.Text, Cmb_privilegio.SelectedItem.ToString());
                 abrir.ShowDialog();
                 this.Show();
-        
-                Lbl_usuario.Text = "";
+
             }
             else
             {
