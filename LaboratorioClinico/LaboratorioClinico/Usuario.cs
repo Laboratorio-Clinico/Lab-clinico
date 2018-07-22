@@ -44,7 +44,7 @@ namespace LaboratorioClinico
 
             cm.Parameters.AddWithValue("@iCodigoEmpleado", this.Txt_codigoDeEmpleado);
             cm.Parameters.AddWithValue("@sUsuario", this.Txt_usuario);
-            cm.Parameters.AddWithValue("@sContrasena", this.Txt_password);
+            cm.Parameters.AddWithValue("@sContrasena", this.Txt_password),
             cm.Parameters.AddWithValue("@iPrivilegios", pPrivilegio);
 
             int query = cm.ExecuteNonQuery();
