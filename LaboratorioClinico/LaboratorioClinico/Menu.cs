@@ -12,11 +12,11 @@ namespace LaboratorioClinico
 {
     public partial class Menu : Form
     {
-        public Menu(string nombre, string tipo)
+        public Menu(string nombre)
         {
             InitializeComponent();
             lbl_usuario.Text = nombre;
-            lbl_tipo.Text = tipo;
+            lbl_tipo.Text = "Admin";
         }
 
         private void ayudaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -93,6 +93,11 @@ namespace LaboratorioClinico
                 Pnl_menudespegable.Visible = true;
             }
 
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+   
         }
     }
 }
