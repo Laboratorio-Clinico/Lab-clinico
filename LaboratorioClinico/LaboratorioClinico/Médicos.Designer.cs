@@ -47,7 +47,7 @@
             this.Gpb_datosPersonales = new System.Windows.Forms.GroupBox();
             this.Gpb_nacimiento = new System.Windows.Forms.GroupBox();
             this.Picb_imagenDoctor = new System.Windows.Forms.PictureBox();
-            this.Mnc_fechaNacimiento = new System.Windows.Forms.DateTimePicker();
+            this.Dtp_fechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.Lbl_fechaDeNacimiento = new System.Windows.Forms.Label();
             this.Btn_guardar = new System.Windows.Forms.Button();
             this.Gpb_medicos.SuspendLayout();
@@ -268,7 +268,7 @@
             // 
             this.Gpb_nacimiento.BackColor = System.Drawing.Color.Transparent;
             this.Gpb_nacimiento.Controls.Add(this.Picb_imagenDoctor);
-            this.Gpb_nacimiento.Controls.Add(this.Mnc_fechaNacimiento);
+            this.Gpb_nacimiento.Controls.Add(this.Dtp_fechaNacimiento);
             this.Gpb_nacimiento.Controls.Add(this.Lbl_fechaDeNacimiento);
             this.Gpb_nacimiento.Controls.Add(this.Btn_guardar);
             this.Gpb_nacimiento.Location = new System.Drawing.Point(398, 12);
@@ -288,14 +288,14 @@
             this.Picb_imagenDoctor.TabIndex = 26;
             this.Picb_imagenDoctor.TabStop = false;
             // 
-            // Mnc_fechaNacimiento
+            // Dtp_fechaNacimiento
             // 
-            this.Mnc_fechaNacimiento.CustomFormat = "dd-MM-yy";
-            this.Mnc_fechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Mnc_fechaNacimiento.Location = new System.Drawing.Point(203, 350);
-            this.Mnc_fechaNacimiento.Name = "Mnc_fechaNacimiento";
-            this.Mnc_fechaNacimiento.Size = new System.Drawing.Size(92, 26);
-            this.Mnc_fechaNacimiento.TabIndex = 25;
+            this.Dtp_fechaNacimiento.CustomFormat = "dd-MM-yy";
+            this.Dtp_fechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.Dtp_fechaNacimiento.Location = new System.Drawing.Point(203, 350);
+            this.Dtp_fechaNacimiento.Name = "Dtp_fechaNacimiento";
+            this.Dtp_fechaNacimiento.Size = new System.Drawing.Size(92, 26);
+            this.Dtp_fechaNacimiento.TabIndex = 25;
             // 
             // Lbl_fechaDeNacimiento
             // 
@@ -368,7 +368,7 @@
         private System.Windows.Forms.GroupBox Gpb_datosPersonales;
         private System.Windows.Forms.GroupBox Gpb_nacimiento;
         private System.Windows.Forms.PictureBox Picb_imagenDoctor;
-        private System.Windows.Forms.DateTimePicker Mnc_fechaNacimiento;
+        private System.Windows.Forms.DateTimePicker Dtp_fechaNacimiento;
         private System.Windows.Forms.Label Lbl_fechaDeNacimiento;
         private System.Windows.Forms.Button Btn_guardar;
     }

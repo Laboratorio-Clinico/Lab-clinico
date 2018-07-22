@@ -32,10 +32,10 @@
             this.Btn_guardar = new System.Windows.Forms.Button();
             this.Lbl_privilegio = new System.Windows.Forms.Label();
             this.Chb_privelegio = new System.Windows.Forms.ComboBox();
-            this.Txtx_confirmarContrasena = new System.Windows.Forms.TextBox();
-            this.Txtx_contrasena = new System.Windows.Forms.TextBox();
-            this.Txtx_usuario = new System.Windows.Forms.TextBox();
-            this.Txtx_Lbl_codigoDeEmpleado = new System.Windows.Forms.TextBox();
+            this.Txt_confirmarPassword = new System.Windows.Forms.TextBox();
+            this.Txt_password = new System.Windows.Forms.TextBox();
+            this.Txt_usuario = new System.Windows.Forms.TextBox();
+            this.Txt_codigoDeEmpleado = new System.Windows.Forms.TextBox();
             this.Lbl_confirmarContraseña = new System.Windows.Forms.Label();
             this.Lbl_codigoDeEmpleado = new System.Windows.Forms.Label();
             this.Lbl_contrasena = new System.Windows.Forms.Label();
@@ -51,10 +51,10 @@
             this.Gpb_nuevoUsuario.Controls.Add(this.Btn_guardar);
             this.Gpb_nuevoUsuario.Controls.Add(this.Lbl_privilegio);
             this.Gpb_nuevoUsuario.Controls.Add(this.Chb_privelegio);
-            this.Gpb_nuevoUsuario.Controls.Add(this.Txtx_confirmarContrasena);
-            this.Gpb_nuevoUsuario.Controls.Add(this.Txtx_contrasena);
-            this.Gpb_nuevoUsuario.Controls.Add(this.Txtx_usuario);
-            this.Gpb_nuevoUsuario.Controls.Add(this.Txtx_Lbl_codigoDeEmpleado);
+            this.Gpb_nuevoUsuario.Controls.Add(this.Txt_confirmarPassword);
+            this.Gpb_nuevoUsuario.Controls.Add(this.Txt_password);
+            this.Gpb_nuevoUsuario.Controls.Add(this.Txt_usuario);
+            this.Gpb_nuevoUsuario.Controls.Add(this.Txt_codigoDeEmpleado);
             this.Gpb_nuevoUsuario.Controls.Add(this.Lbl_confirmarContraseña);
             this.Gpb_nuevoUsuario.Controls.Add(this.Lbl_codigoDeEmpleado);
             this.Gpb_nuevoUsuario.Controls.Add(this.Lbl_contrasena);
@@ -103,45 +103,45 @@
             this.Chb_privelegio.Size = new System.Drawing.Size(185, 26);
             this.Chb_privelegio.TabIndex = 35;
             // 
-            // Txtx_confirmarContrasena
+            // Txt_confirmarPassword
             // 
-            this.Txtx_confirmarContrasena.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.Txtx_confirmarContrasena.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txtx_confirmarContrasena.Location = new System.Drawing.Point(479, 231);
-            this.Txtx_confirmarContrasena.Margin = new System.Windows.Forms.Padding(4);
-            this.Txtx_confirmarContrasena.Name = "Txtx_confirmarContrasena";
-            this.Txtx_confirmarContrasena.Size = new System.Drawing.Size(185, 26);
-            this.Txtx_confirmarContrasena.TabIndex = 34;
+            this.Txt_confirmarPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_confirmarPassword.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_confirmarPassword.Location = new System.Drawing.Point(479, 231);
+            this.Txt_confirmarPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.Txt_confirmarPassword.Name = "Txt_confirmarPassword";
+            this.Txt_confirmarPassword.Size = new System.Drawing.Size(185, 26);
+            this.Txt_confirmarPassword.TabIndex = 34;
             // 
-            // Txtx_contrasena
+            // Txt_password
             // 
-            this.Txtx_contrasena.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.Txtx_contrasena.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txtx_contrasena.Location = new System.Drawing.Point(479, 187);
-            this.Txtx_contrasena.Margin = new System.Windows.Forms.Padding(4);
-            this.Txtx_contrasena.Name = "Txtx_contrasena";
-            this.Txtx_contrasena.Size = new System.Drawing.Size(185, 26);
-            this.Txtx_contrasena.TabIndex = 33;
+            this.Txt_password.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_password.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_password.Location = new System.Drawing.Point(479, 187);
+            this.Txt_password.Margin = new System.Windows.Forms.Padding(4);
+            this.Txt_password.Name = "Txt_password";
+            this.Txt_password.Size = new System.Drawing.Size(185, 26);
+            this.Txt_password.TabIndex = 33;
             // 
-            // Txtx_usuario
+            // Txt_usuario
             // 
-            this.Txtx_usuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.Txtx_usuario.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txtx_usuario.Location = new System.Drawing.Point(479, 142);
-            this.Txtx_usuario.Margin = new System.Windows.Forms.Padding(4);
-            this.Txtx_usuario.Name = "Txtx_usuario";
-            this.Txtx_usuario.Size = new System.Drawing.Size(185, 26);
-            this.Txtx_usuario.TabIndex = 32;
+            this.Txt_usuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_usuario.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_usuario.Location = new System.Drawing.Point(479, 142);
+            this.Txt_usuario.Margin = new System.Windows.Forms.Padding(4);
+            this.Txt_usuario.Name = "Txt_usuario";
+            this.Txt_usuario.Size = new System.Drawing.Size(185, 26);
+            this.Txt_usuario.TabIndex = 32;
             // 
-            // Txtx_Lbl_codigoDeEmpleado
+            // Txt_codigoDeEmpleado
             // 
-            this.Txtx_Lbl_codigoDeEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.Txtx_Lbl_codigoDeEmpleado.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txtx_Lbl_codigoDeEmpleado.Location = new System.Drawing.Point(479, 98);
-            this.Txtx_Lbl_codigoDeEmpleado.Margin = new System.Windows.Forms.Padding(4);
-            this.Txtx_Lbl_codigoDeEmpleado.Name = "Txtx_Lbl_codigoDeEmpleado";
-            this.Txtx_Lbl_codigoDeEmpleado.Size = new System.Drawing.Size(185, 26);
-            this.Txtx_Lbl_codigoDeEmpleado.TabIndex = 31;
+            this.Txt_codigoDeEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_codigoDeEmpleado.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_codigoDeEmpleado.Location = new System.Drawing.Point(479, 98);
+            this.Txt_codigoDeEmpleado.Margin = new System.Windows.Forms.Padding(4);
+            this.Txt_codigoDeEmpleado.Name = "Txt_codigoDeEmpleado";
+            this.Txt_codigoDeEmpleado.Size = new System.Drawing.Size(185, 26);
+            this.Txt_codigoDeEmpleado.TabIndex = 31;
             // 
             // Lbl_confirmarContraseña
             // 
@@ -212,6 +212,7 @@
             this.Controls.Add(this.Gpb_nuevoUsuario);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Usuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -230,10 +231,10 @@
         private System.Windows.Forms.Button Btn_guardar;
         private System.Windows.Forms.Label Lbl_privilegio;
         private System.Windows.Forms.ComboBox Chb_privelegio;
-        private System.Windows.Forms.TextBox Txtx_confirmarContrasena;
-        private System.Windows.Forms.TextBox Txtx_contrasena;
-        private System.Windows.Forms.TextBox Txtx_usuario;
-        private System.Windows.Forms.TextBox Txtx_Lbl_codigoDeEmpleado;
+        private System.Windows.Forms.TextBox Txt_confirmarPassword;
+        private System.Windows.Forms.TextBox Txt_password;
+        private System.Windows.Forms.TextBox Txt_usuario;
+        private System.Windows.Forms.TextBox Txt_codigoDeEmpleado;
         private System.Windows.Forms.Label Lbl_confirmarContraseña;
         private System.Windows.Forms.Label Lbl_codigoDeEmpleado;
         private System.Windows.Forms.Label Lbl_contrasena;
