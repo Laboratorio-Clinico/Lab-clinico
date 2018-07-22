@@ -39,7 +39,10 @@ namespace LaboratorioClinico
 
         private void ingresarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Exámen open = new Exámen();
+            open.ShowDialog();
+            this.Show();
         }
 
         private void segurToolStripMenuItem_Click(object sender, EventArgs e)
@@ -146,7 +149,10 @@ namespace LaboratorioClinico
 
         private void mantenimientoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Mantenimiento open = new Mantenimiento();
+            open.ShowDialog();
+            this.Show();
         }
 
         private void tm_menu_Tick(object sender, EventArgs e)
@@ -175,6 +181,22 @@ namespace LaboratorioClinico
                 tm_menu2.Enabled = false;
                
             }
+        }
+
+        private void facturaciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Factura open = new Factura();
+            open.ShowDialog();
+            this.Show();
+        }
+
+        private void resultadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Resultados open = new Resultados();
+            open.ShowDialog();
+            this.Show();
         }
     }
 }
