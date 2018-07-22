@@ -41,5 +41,28 @@ namespace LaboratorioClinico
         {
 
         }
+
+        private void Btn_guardarp_Click(object sender, EventArgs e)
+        {
+            /*MySqlCommand cm;
+            cm = new MySqlCommand("InsertaPaciente", conexionn.conectar());
+            cm.CommandType = CommandType.StoredProcedure;
+
+            cm.Parameters.AddWithValue("@nit", this.nitI.Text);
+            cm.Parameters.AddWithValue("@nomb", this.nombreI.Text);
+            cm.Parameters.AddWithValue("@dire", this.direccionI.Text);
+            cm.Parameters.AddWithValue("@tel", this.telefonoI.Text);
+            cm.Parameters.AddWithValue("@email", this.emailI.Text);
+
+            int query = cm.ExecuteNonQuery();
+            if (query == 1)
+            {
+                MessageBox.Show("Cliente ingresado correctamente", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("No se pudo ingresar", "Incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }*/
+        }
     }
 }
