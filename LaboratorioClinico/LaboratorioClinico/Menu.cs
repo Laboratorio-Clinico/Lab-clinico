@@ -17,6 +17,9 @@ namespace LaboratorioClinico
             InitializeComponent();
             lbl_usuario.Text = nombre;
             lbl_tipo.Text = "Admin";
+            lbl_hora.Text = DateTime.Now.ToLongTimeString();
+            lbl_fecha.Text = DateTime.Now.ToLongDateString();
+            Pnl_menudespegable.Height = 10;
         }
 
         private void ayudaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -36,10 +39,7 @@ namespace LaboratorioClinico
 
         private void ingresarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Exámen formulario = new Exámen();
-            formulario.ShowDialog();
-            this.Show();
+
         }
 
         private void segurToolStripMenuItem_Click(object sender, EventArgs e)
@@ -76,8 +76,15 @@ namespace LaboratorioClinico
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Cerrando sesión");
-            this.Close();
+            if ((MessageBox.Show("¿Quieres cerrar sesión?", "Cerrando sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question)) == DialogResult.Yes)
+            {
+                this.Close();
+            }
+            else
+            {
+
+            }
+            
         }
 
         private void lbl_tipo_Click(object sender, EventArgs e)
@@ -87,14 +94,20 @@ namespace LaboratorioClinico
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            if (Pnl_menudespegable.Visible == true)
+            if (Pnl_menudespegable.Height==10)
             {
-                Pnl_menudespegable.Visible = false;
+                tm_menu.Enabled = true;
+            }
+            else if(Pnl_menudespegable.Height == 90) 
+            {
+                tm_menu2.Enabled = true;
             }
             else
             {
-                Pnl_menudespegable.Visible = true;
+                MessageBox.Show("Invalido");
             }
+
+      
 
         }
 
@@ -104,45 +117,64 @@ namespace LaboratorioClinico
      
         }
 
-        private void facturaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Factura formulario = new Factura();
-            formulario.ShowDialog();
-            this.Show();
-        }
-
         private void bitácoraToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Bitácora formulario = new Bitácora();
-            formulario.ShowDialog();
+            Bitácora open = new Bitácora();
+            open.ShowDialog();
             this.Show();
         }
 
-        private void requerimientosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void nuevoPacienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
             this.Hide();
-            Requerimientos formulario = new Requerimientos();
-            formulario.ShowDialog();
+            Paciente open = new Paciente();
+            open.ShowDialog();
             this.Show();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lbl_hora.Text = DateTime.Now.ToLongTimeString();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            lbl_fecha.Text = DateTime.Now.ToLongDateString();
         }
 
         private void mantenimientoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Mantenimiento formulario = new Mantenimiento();
-            formulario.ShowDialog();
-            this.Show();
 
         }
 
-        private void resultadosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void tm_menu_Tick(object sender, EventArgs e)
         {
-            this.Hide();
-            Resultados formulario = new Resultados();
-            formulario.ShowDialog();
-            this.Show();
+            if (Pnl_menudespegable.Height<90)  //Desocultar
+            {
+                Pnl_menudespegable.Height = Pnl_menudespegable.Height + 10;
+            }
+            else
+            {
+                
+                tm_menu.Enabled = false;
+                
+            }
+        }
+
+        private void tm_menu2_Tick(object sender, EventArgs e)
+        {
+            if (Pnl_menudespegable.Height > 10)  //ocultar
+            {
+                Pnl_menudespegable.Height = Pnl_menudespegable.Height - 10;
+            }
+            else
+            {
+                
+                tm_menu2.Enabled = false;
+               
+            }
         }
     }
 }
