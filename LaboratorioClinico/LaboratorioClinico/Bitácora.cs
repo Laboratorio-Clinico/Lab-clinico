@@ -16,5 +16,18 @@ namespace LaboratorioClinico
         {
             InitializeComponent();
         }
+
+        private void Btn_verb_Click(object sender, EventArgs e)
+        {
+            /*
+            conexionn.conectar();
+            DataTable dtDatos = new DataTable();
+            MySqlDataAdapter tablaData = new MySqlDataAdapter("select *from bitacora", conexionn.conectar());
+            tablaData.Fill(dtDatos);
+            Dgv_bitacora.DataSource = dtDatos;
+            conexionn.conectar().Close();
+            */
+
+        }
     }
 }

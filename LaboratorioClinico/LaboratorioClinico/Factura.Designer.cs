@@ -60,6 +60,8 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.Btn_guardar = new System.Windows.Forms.Button();
+            this.Lbl_cargarf = new System.Windows.Forms.Label();
             this.Gpb_laboratoriof.SuspendLayout();
             this.Gpb_detallef.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgb_facturaf)).BeginInit();
@@ -157,6 +159,8 @@
             // Gpb_detallef
             // 
             this.Gpb_detallef.BackColor = System.Drawing.Color.Transparent;
+            this.Gpb_detallef.Controls.Add(this.Lbl_cargarf);
+            this.Gpb_detallef.Controls.Add(this.Btn_guardar);
             this.Gpb_detallef.Controls.Add(this.Btn_imprimirf);
             this.Gpb_detallef.Controls.Add(this.Lbl_imprimirf);
             this.Gpb_detallef.Controls.Add(this.Txt_totalf);
@@ -402,6 +406,29 @@
             this.label11.TabIndex = 6;
             this.label11.Text = "0001";
             // 
+            // Btn_guardar
+            // 
+            this.Btn_guardar.BackgroundImage = global::LaboratorioClinico.Properties.Resources.guardar;
+            this.Btn_guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_guardar.Location = new System.Drawing.Point(596, 146);
+            this.Btn_guardar.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_guardar.Name = "Btn_guardar";
+            this.Btn_guardar.Size = new System.Drawing.Size(53, 44);
+            this.Btn_guardar.TabIndex = 37;
+            this.Btn_guardar.UseVisualStyleBackColor = true;
+            this.Btn_guardar.Click += new System.EventHandler(this.Btn_guardar_Click);
+            // 
+            // Lbl_cargarf
+            // 
+            this.Lbl_cargarf.AutoSize = true;
+            this.Lbl_cargarf.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_cargarf.ForeColor = System.Drawing.Color.White;
+            this.Lbl_cargarf.Location = new System.Drawing.Point(602, 195);
+            this.Lbl_cargarf.Name = "Lbl_cargarf";
+            this.Lbl_cargarf.Size = new System.Drawing.Size(38, 15);
+            this.Lbl_cargarf.TabIndex = 38;
+            this.Lbl_cargarf.Text = "Cargar";
+            // 
             // Factura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -464,5 +491,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button Btn_imprimirf;
         private System.Windows.Forms.Label Lbl_imprimirf;
+        private System.Windows.Forms.Label Lbl_cargarf;
+        private System.Windows.Forms.Button Btn_guardar;
     }
 }
