@@ -113,5 +113,10 @@ namespace LaboratorioClinico
         {
 
         }
+
+        private void mantenimientoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

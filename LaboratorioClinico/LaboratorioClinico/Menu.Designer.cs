@@ -50,6 +50,7 @@
             this.controlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoPacienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.facturaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.facturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -61,7 +62,6 @@
             this.lbl_tipo = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.facturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -146,6 +146,7 @@
             this.mantenimientoToolStripMenuItem.Name = "mantenimientoToolStripMenuItem";
             this.mantenimientoToolStripMenuItem.Size = new System.Drawing.Size(218, 28);
             this.mantenimientoToolStripMenuItem.Text = "Mantenimiento";
+            this.mantenimientoToolStripMenuItem.Click += new System.EventHandler(this.mantenimientoToolStripMenuItem_Click);
             // 
             // médicosToolStripMenuItem
             // 
@@ -258,6 +259,14 @@
             this.facturaciónToolStripMenuItem.Name = "facturaciónToolStripMenuItem";
             this.facturaciónToolStripMenuItem.Size = new System.Drawing.Size(129, 28);
             this.facturaciónToolStripMenuItem.Text = "Facturación";
+            // 
+            // facturaToolStripMenuItem
+            // 
+            this.facturaToolStripMenuItem.BackColor = System.Drawing.Color.DarkCyan;
+            this.facturaToolStripMenuItem.Name = "facturaToolStripMenuItem";
+            this.facturaToolStripMenuItem.Size = new System.Drawing.Size(148, 28);
+            this.facturaToolStripMenuItem.Text = "Factura";
+            this.facturaToolStripMenuItem.Click += new System.EventHandler(this.facturaToolStripMenuItem_Click);
             // 
             // ayudaToolStripMenuItem
             // 
@@ -381,14 +390,6 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Cerrar sesion";
             this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // facturaToolStripMenuItem
-            // 
-            this.facturaToolStripMenuItem.BackColor = System.Drawing.Color.DarkCyan;
-            this.facturaToolStripMenuItem.Name = "facturaToolStripMenuItem";
-            this.facturaToolStripMenuItem.Size = new System.Drawing.Size(152, 28);
-            this.facturaToolStripMenuItem.Text = "Factura";
-            this.facturaToolStripMenuItem.Click += new System.EventHandler(this.facturaToolStripMenuItem_Click);
             // 
             // Menu
             // 

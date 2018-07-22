@@ -1392,6 +1392,7 @@
             this.Pnl_editarPaciente.Name = "Pnl_editarPaciente";
             this.Pnl_editarPaciente.Size = new System.Drawing.Size(519, 253);
             this.Pnl_editarPaciente.TabIndex = 95;
+            this.Pnl_editarPaciente.Visible = false;
             // 
             // Mantenimiento
             // 
