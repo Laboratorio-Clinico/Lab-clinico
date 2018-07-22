@@ -97,10 +97,8 @@ namespace LaboratorioClinico
 
         private void label2_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Form1 abrir = new Form1();
-            abrir.ShowDialog();
-            this.Show();
+       
+     
         }
     }
 }
