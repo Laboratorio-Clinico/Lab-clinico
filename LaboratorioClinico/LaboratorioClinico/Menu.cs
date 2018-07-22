@@ -73,8 +73,15 @@ namespace LaboratorioClinico
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Cerrando sesión", " ", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            this.Close();
+            if ((MessageBox.Show("¿Quieres cerrar sesión?", "Cerrando sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question)) == DialogResult.Yes)
+            {
+                this.Close();
+            }
+            else
+            {
+
+            }
+            
         }
 
         private void lbl_tipo_Click(object sender, EventArgs e)
