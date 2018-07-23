@@ -33,6 +33,13 @@
             this.Gpb_mantenimiento = new System.Windows.Forms.GroupBox();
             this.Tbc_examen = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.Lbl_precio = new System.Windows.Forms.Label();
+            this.Lbl_quetzal = new System.Windows.Forms.Label();
+            this.Cmb_examen = new System.Windows.Forms.ComboBox();
+            this.Lbl_codigo = new System.Windows.Forms.Label();
+            this.Txt_cod = new System.Windows.Forms.TextBox();
+            this.Lbl_examen = new System.Windows.Forms.Label();
+            this.Lbl_costo = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage6 = new System.Windows.Forms.TabPage();
@@ -131,13 +138,6 @@
             this.Lbl_expedientep = new System.Windows.Forms.Label();
             this.Lbl_eliminarp = new System.Windows.Forms.Label();
             this.Pnl_editarPaciente = new System.Windows.Forms.Panel();
-            this.Lbl_precio = new System.Windows.Forms.Label();
-            this.Lbl_quetzal = new System.Windows.Forms.Label();
-            this.Cmb_examen = new System.Windows.Forms.ComboBox();
-            this.Lbl_codigo = new System.Windows.Forms.Label();
-            this.Txt_cod = new System.Windows.Forms.TextBox();
-            this.Lbl_examen = new System.Windows.Forms.Label();
-            this.Lbl_costo = new System.Windows.Forms.Label();
             this.Gpb_mantenimiento.SuspendLayout();
             this.Tbc_examen.SuspendLayout();
             this.tabPage5.SuspendLayout();
@@ -231,6 +231,82 @@
             this.tabPage5.Text = "Modificar";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
+            // Lbl_precio
+            // 
+            this.Lbl_precio.AutoSize = true;
+            this.Lbl_precio.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_precio.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Lbl_precio.Location = new System.Drawing.Point(292, 80);
+            this.Lbl_precio.Name = "Lbl_precio";
+            this.Lbl_precio.Size = new System.Drawing.Size(33, 18);
+            this.Lbl_precio.TabIndex = 124;
+            this.Lbl_precio.Text = "0.00";
+            // 
+            // Lbl_quetzal
+            // 
+            this.Lbl_quetzal.AutoSize = true;
+            this.Lbl_quetzal.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_quetzal.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Lbl_quetzal.Location = new System.Drawing.Point(272, 80);
+            this.Lbl_quetzal.Name = "Lbl_quetzal";
+            this.Lbl_quetzal.Size = new System.Drawing.Size(24, 18);
+            this.Lbl_quetzal.TabIndex = 123;
+            this.Lbl_quetzal.Text = "Q.";
+            // 
+            // Cmb_examen
+            // 
+            this.Cmb_examen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Cmb_examen.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cmb_examen.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Cmb_examen.FormattingEnabled = true;
+            this.Cmb_examen.Location = new System.Drawing.Point(126, 42);
+            this.Cmb_examen.Name = "Cmb_examen";
+            this.Cmb_examen.Size = new System.Drawing.Size(231, 26);
+            this.Cmb_examen.TabIndex = 122;
+            // 
+            // Lbl_codigo
+            // 
+            this.Lbl_codigo.AutoSize = true;
+            this.Lbl_codigo.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_codigo.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Lbl_codigo.Location = new System.Drawing.Point(20, 80);
+            this.Lbl_codigo.Name = "Lbl_codigo";
+            this.Lbl_codigo.Size = new System.Drawing.Size(93, 18);
+            this.Lbl_codigo.TabIndex = 118;
+            this.Lbl_codigo.Text = "Cod. Exámen:";
+            // 
+            // Txt_cod
+            // 
+            this.Txt_cod.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_cod.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_cod.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Txt_cod.Location = new System.Drawing.Point(126, 77);
+            this.Txt_cod.Name = "Txt_cod";
+            this.Txt_cod.Size = new System.Drawing.Size(65, 26);
+            this.Txt_cod.TabIndex = 121;
+            // 
+            // Lbl_examen
+            // 
+            this.Lbl_examen.AutoSize = true;
+            this.Lbl_examen.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_examen.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Lbl_examen.Location = new System.Drawing.Point(53, 43);
+            this.Lbl_examen.Name = "Lbl_examen";
+            this.Lbl_examen.Size = new System.Drawing.Size(67, 18);
+            this.Lbl_examen.TabIndex = 120;
+            this.Lbl_examen.Text = "Nombre: ";
+            // 
+            // Lbl_costo
+            // 
+            this.Lbl_costo.AutoSize = true;
+            this.Lbl_costo.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_costo.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Lbl_costo.Location = new System.Drawing.Point(216, 80);
+            this.Lbl_costo.Name = "Lbl_costo";
+            this.Lbl_costo.Size = new System.Drawing.Size(50, 18);
+            this.Lbl_costo.TabIndex = 119;
+            this.Lbl_costo.Text = "Costo:";
+            // 
             // button3
             // 
             this.button3.BackgroundImage = global::LaboratorioClinico.Properties.Resources.usuario1;
@@ -248,9 +324,9 @@
             this.label2.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label2.Location = new System.Drawing.Point(594, 60);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 17);
+            this.label2.Size = new System.Drawing.Size(87, 17);
             this.label2.TabIndex = 117;
-            this.label2.Text = "Editar Médico";
+            this.label2.Text = "Editar Exámen";
             // 
             // tabPage6
             // 
@@ -272,9 +348,9 @@
             this.label14.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label14.Location = new System.Drawing.Point(600, 58);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(98, 17);
+            this.label14.Size = new System.Drawing.Size(101, 17);
             this.label14.TabIndex = 94;
-            this.label14.Text = "Eliminar Médico";
+            this.label14.Text = "Eliminar Exámen";
             // 
             // button5
             // 
@@ -1409,82 +1485,6 @@
             this.Pnl_editarPaciente.Size = new System.Drawing.Size(519, 253);
             this.Pnl_editarPaciente.TabIndex = 95;
             this.Pnl_editarPaciente.Visible = false;
-            // 
-            // Lbl_precio
-            // 
-            this.Lbl_precio.AutoSize = true;
-            this.Lbl_precio.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_precio.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Lbl_precio.Location = new System.Drawing.Point(454, 167);
-            this.Lbl_precio.Name = "Lbl_precio";
-            this.Lbl_precio.Size = new System.Drawing.Size(33, 18);
-            this.Lbl_precio.TabIndex = 124;
-            this.Lbl_precio.Text = "0.00";
-            // 
-            // Lbl_quetzal
-            // 
-            this.Lbl_quetzal.AutoSize = true;
-            this.Lbl_quetzal.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_quetzal.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Lbl_quetzal.Location = new System.Drawing.Point(434, 167);
-            this.Lbl_quetzal.Name = "Lbl_quetzal";
-            this.Lbl_quetzal.Size = new System.Drawing.Size(24, 18);
-            this.Lbl_quetzal.TabIndex = 123;
-            this.Lbl_quetzal.Text = "Q.";
-            // 
-            // Cmb_examen
-            // 
-            this.Cmb_examen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.Cmb_examen.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cmb_examen.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Cmb_examen.FormattingEnabled = true;
-            this.Cmb_examen.Location = new System.Drawing.Point(288, 129);
-            this.Cmb_examen.Name = "Cmb_examen";
-            this.Cmb_examen.Size = new System.Drawing.Size(231, 26);
-            this.Cmb_examen.TabIndex = 122;
-            // 
-            // Lbl_codigo
-            // 
-            this.Lbl_codigo.AutoSize = true;
-            this.Lbl_codigo.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_codigo.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Lbl_codigo.Location = new System.Drawing.Point(182, 167);
-            this.Lbl_codigo.Name = "Lbl_codigo";
-            this.Lbl_codigo.Size = new System.Drawing.Size(93, 18);
-            this.Lbl_codigo.TabIndex = 118;
-            this.Lbl_codigo.Text = "Cod. Exámen:";
-            // 
-            // Txt_cod
-            // 
-            this.Txt_cod.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.Txt_cod.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_cod.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Txt_cod.Location = new System.Drawing.Point(288, 164);
-            this.Txt_cod.Name = "Txt_cod";
-            this.Txt_cod.Size = new System.Drawing.Size(65, 26);
-            this.Txt_cod.TabIndex = 121;
-            // 
-            // Lbl_examen
-            // 
-            this.Lbl_examen.AutoSize = true;
-            this.Lbl_examen.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_examen.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Lbl_examen.Location = new System.Drawing.Point(215, 130);
-            this.Lbl_examen.Name = "Lbl_examen";
-            this.Lbl_examen.Size = new System.Drawing.Size(67, 18);
-            this.Lbl_examen.TabIndex = 120;
-            this.Lbl_examen.Text = "Nombre: ";
-            // 
-            // Lbl_costo
-            // 
-            this.Lbl_costo.AutoSize = true;
-            this.Lbl_costo.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_costo.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Lbl_costo.Location = new System.Drawing.Point(378, 167);
-            this.Lbl_costo.Name = "Lbl_costo";
-            this.Lbl_costo.Size = new System.Drawing.Size(50, 18);
-            this.Lbl_costo.TabIndex = 119;
-            this.Lbl_costo.Text = "Costo:";
             // 
             // Mantenimiento
             // 
