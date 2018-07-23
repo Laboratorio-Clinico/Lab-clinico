@@ -73,5 +73,31 @@ namespace LaboratorioClinico
                 MessageBox.Show("No se pudo ingresar", "Incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+        private bool Validar()
+        {
+            bool bValor = true;
+
+            if (Txt_alergiasp.Text == "")
+            {
+                bValor = false;
+                Er_validar.SetError(Txt_alergiasp, "Ingrese alergias o ninguna");
+            }
+            return bValor;
+        }
+
+       /* private void BorrarMsj()
+        {
+            Er_validar.SetError(Txt_contraseña, "");
+            Er_validar.SetError(Txt_usuario, "");
+        }*/
+        private void Paciente_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Txt_alergiasp_TextChanged(object sender, EventArgs e)
+        {
+           // Validar();
+        }
     }
 }

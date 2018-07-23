@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Paciente));
             this.Btn_guardarp = new System.Windows.Forms.Button();
             this.Gpb_guardarp = new System.Windows.Forms.GroupBox();
@@ -61,10 +62,13 @@
             this.Lbl_fechaep = new System.Windows.Forms.Label();
             this.Txt_horap = new System.Windows.Forms.TextBox();
             this.Gpb_fechap = new System.Windows.Forms.GroupBox();
+            this.Er_validar = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             this.Gpb_guardarp.SuspendLayout();
             this.Gpb_datosp.SuspendLayout();
             this.Gpb_fechanp.SuspendLayout();
             this.Gpb_fechap.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Er_validar)).BeginInit();
             this.SuspendLayout();
             // 
             // Btn_guardarp
@@ -103,6 +107,7 @@
             // Gpb_datosp
             // 
             this.Gpb_datosp.BackColor = System.Drawing.Color.Transparent;
+            this.Gpb_datosp.Controls.Add(this.label1);
             this.Gpb_datosp.Controls.Add(this.Lbl_correop);
             this.Gpb_datosp.Controls.Add(this.Txt_correoP);
             this.Gpb_datosp.Controls.Add(this.Lbl_tipoSangrep);
@@ -183,7 +188,7 @@
             this.Lbl_alergiasp.Name = "Lbl_alergiasp";
             this.Lbl_alergiasp.Size = new System.Drawing.Size(57, 18);
             this.Lbl_alergiasp.TabIndex = 44;
-            this.Lbl_alergiasp.Text = "Alergías";
+            this.Lbl_alergiasp.Text = "Alergias";
             // 
             // Txt_alergiasp
             // 
@@ -194,6 +199,7 @@
             this.Txt_alergiasp.Name = "Txt_alergiasp";
             this.Txt_alergiasp.Size = new System.Drawing.Size(470, 51);
             this.Txt_alergiasp.TabIndex = 43;
+            this.Txt_alergiasp.TextChanged += new System.EventHandler(this.Txt_alergiasp_TextChanged);
             // 
             // Btn_expedientep
             // 
@@ -424,6 +430,21 @@
             this.Gpb_fechap.TabStop = false;
             this.Gpb_fechap.Enter += new System.EventHandler(this.groupBox4_Enter);
             // 
+            // Er_validar
+            // 
+            this.Er_validar.ContainerControl = this;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(302, 31);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(79, 18);
+            this.label1.TabIndex = 49;
+            this.label1.Text = "Expediente:";
+            // 
             // Paciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -438,6 +459,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Paciente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.Paciente_Load);
             this.Gpb_guardarp.ResumeLayout(false);
             this.Gpb_guardarp.PerformLayout();
             this.Gpb_datosp.ResumeLayout(false);
@@ -445,6 +467,7 @@
             this.Gpb_fechanp.ResumeLayout(false);
             this.Gpb_fechap.ResumeLayout(false);
             this.Gpb_fechap.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Er_validar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -482,5 +505,7 @@
         private System.Windows.Forms.GroupBox Gpb_fechap;
         private System.Windows.Forms.Label Lbl_correop;
         private System.Windows.Forms.TextBox Txt_correoP;
+        private System.Windows.Forms.ErrorProvider Er_validar;
+        private System.Windows.Forms.Label label1;
     }
 }
