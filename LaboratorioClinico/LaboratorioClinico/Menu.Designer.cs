@@ -50,6 +50,7 @@
             this.requerimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.controlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoPacienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nuevoEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.facturaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
@@ -67,7 +68,6 @@
             this.lbl_fecha = new System.Windows.Forms.Label();
             this.tm_menu = new System.Windows.Forms.Timer(this.components);
             this.tm_menu2 = new System.Windows.Forms.Timer(this.components);
-            this.nuevoEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -262,6 +262,14 @@
             this.nuevoPacienteToolStripMenuItem.Text = "Nuevo Paciente";
             this.nuevoPacienteToolStripMenuItem.Click += new System.EventHandler(this.nuevoPacienteToolStripMenuItem_Click);
             // 
+            // nuevoEmpleadoToolStripMenuItem
+            // 
+            this.nuevoEmpleadoToolStripMenuItem.BackColor = System.Drawing.Color.PowderBlue;
+            this.nuevoEmpleadoToolStripMenuItem.Name = "nuevoEmpleadoToolStripMenuItem";
+            this.nuevoEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(231, 28);
+            this.nuevoEmpleadoToolStripMenuItem.Text = "Nuevo Empleado";
+            this.nuevoEmpleadoToolStripMenuItem.Click += new System.EventHandler(this.nuevoEmpleadoToolStripMenuItem_Click);
+            // 
             // facturaciónToolStripMenuItem
             // 
             this.facturaciónToolStripMenuItem.Name = "facturaciónToolStripMenuItem";
@@ -401,6 +409,7 @@
             this.lbl_hora.Size = new System.Drawing.Size(64, 24);
             this.lbl_hora.TabIndex = 7;
             this.lbl_hora.Text = "label3";
+            this.lbl_hora.Click += new System.EventHandler(this.lbl_hora_Click);
             // 
             // timer1
             // 
@@ -428,14 +437,6 @@
             // tm_menu2
             // 
             this.tm_menu2.Tick += new System.EventHandler(this.tm_menu2_Tick);
-            // 
-            // nuevoEmpleadoToolStripMenuItem
-            // 
-            this.nuevoEmpleadoToolStripMenuItem.BackColor = System.Drawing.Color.PowderBlue;
-            this.nuevoEmpleadoToolStripMenuItem.Name = "nuevoEmpleadoToolStripMenuItem";
-            this.nuevoEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(231, 28);
-            this.nuevoEmpleadoToolStripMenuItem.Text = "Nuevo Empleado";
-            this.nuevoEmpleadoToolStripMenuItem.Click += new System.EventHandler(this.nuevoEmpleadoToolStripMenuItem_Click);
             // 
             // Menu
             // 
