@@ -39,7 +39,10 @@ namespace LaboratorioClinico
 
         private void ingresarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Exámen open = new Exámen();
+            open.ShowDialog();
+            this.Show();
         }
 
         private void segurToolStripMenuItem_Click(object sender, EventArgs e)
@@ -49,7 +52,10 @@ namespace LaboratorioClinico
 
         private void cotizacionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            cotizar formaDeCotizar = new cotizar();
+            formaDeCotizar.ShowDialog();
+            this.Show();
         }
 
         private void Menu_Load(object sender, EventArgs e)
@@ -59,14 +65,18 @@ namespace LaboratorioClinico
 
         private void crearCódigoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CrearCodigo nuevo = new CrearCodigo();
-            nuevo.ShowDialog();
+            this.Hide();
+            CrearCodigo open = new CrearCodigo();
+            open.ShowDialog();
+            this.Show();
         }
 
         private void leerCódigoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            LeerCodigo nuevo = new LeerCodigo();
-            nuevo.ShowDialog();
+            this.Hide();
+            LeerCodigo open = new LeerCodigo();
+            open.ShowDialog();
+            this.Show();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -146,7 +156,10 @@ namespace LaboratorioClinico
 
         private void mantenimientoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Mantenimiento open = new Mantenimiento();
+            open.ShowDialog();
+            this.Show();
         }
 
         private void tm_menu_Tick(object sender, EventArgs e)
@@ -177,15 +190,47 @@ namespace LaboratorioClinico
             }
         }
 
-        private void requerimientosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void facturaciónToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Requerimientos open = new Requerimientos();
+            Factura open = new Factura();
             open.ShowDialog();
             this.Show();
         }
 
-        private void facturaciónToolStripMenuItem_Click(object sender, EventArgs e)
+        private void resultadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Resultados open = new Resultados();
+            open.ShowDialog();
+            this.Show();
+        }
+
+        private void médicosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Médicos formaDeMedicos = new Médicos();
+            formaDeMedicos.ShowDialog();
+            this.Show();
+        }
+
+        private void nuevoUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Usuario formaDeUsuarios = new Usuario();
+            formaDeUsuarios.ShowDialog();
+            this.Show();
+        }
+
+        private void nuevoEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Empleado  formaDeEmpleado = new Empleado();
+            formaDeEmpleado.ShowDialog();
+            this.Show();
+        }
+
+        private void lbl_hora_Click(object sender, EventArgs e)
         {
 
         }
