@@ -34,10 +34,10 @@
             this.Gpb_guardarp = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
             this.Gpb_datosp = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.Lbl_correop = new System.Windows.Forms.Label();
             this.Txt_correoP = new System.Windows.Forms.TextBox();
             this.Lbl_tipoSangrep = new System.Windows.Forms.Label();
-            this.Txt_tsangrep = new System.Windows.Forms.TextBox();
             this.Lbl_alergiasp = new System.Windows.Forms.Label();
             this.Txt_alergiasp = new System.Windows.Forms.TextBox();
             this.Btn_expedientep = new System.Windows.Forms.Button();
@@ -63,7 +63,7 @@
             this.Txt_horap = new System.Windows.Forms.TextBox();
             this.Gpb_fechap = new System.Windows.Forms.GroupBox();
             this.Er_validar = new System.Windows.Forms.ErrorProvider(this.components);
-            this.label1 = new System.Windows.Forms.Label();
+            this.Cmb_sangrep = new System.Windows.Forms.ComboBox();
             this.Gpb_guardarp.SuspendLayout();
             this.Gpb_datosp.SuspendLayout();
             this.Gpb_fechanp.SuspendLayout();
@@ -107,11 +107,11 @@
             // Gpb_datosp
             // 
             this.Gpb_datosp.BackColor = System.Drawing.Color.Transparent;
+            this.Gpb_datosp.Controls.Add(this.Cmb_sangrep);
             this.Gpb_datosp.Controls.Add(this.label1);
             this.Gpb_datosp.Controls.Add(this.Lbl_correop);
             this.Gpb_datosp.Controls.Add(this.Txt_correoP);
             this.Gpb_datosp.Controls.Add(this.Lbl_tipoSangrep);
-            this.Gpb_datosp.Controls.Add(this.Txt_tsangrep);
             this.Gpb_datosp.Controls.Add(this.Lbl_alergiasp);
             this.Gpb_datosp.Controls.Add(this.Txt_alergiasp);
             this.Gpb_datosp.Controls.Add(this.Btn_expedientep);
@@ -138,6 +138,17 @@
             this.Gpb_datosp.TabIndex = 2;
             this.Gpb_datosp.TabStop = false;
             this.Gpb_datosp.Text = "Datos Paciente";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(302, 31);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(79, 18);
+            this.label1.TabIndex = 49;
+            this.label1.Text = "Expediente:";
             // 
             // Lbl_correop
             // 
@@ -169,15 +180,6 @@
             this.Lbl_tipoSangrep.Size = new System.Drawing.Size(79, 18);
             this.Lbl_tipoSangrep.TabIndex = 46;
             this.Lbl_tipoSangrep.Text = "Tipo Sangre";
-            // 
-            // Txt_tsangrep
-            // 
-            this.Txt_tsangrep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.Txt_tsangrep.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_tsangrep.Location = new System.Drawing.Point(410, 117);
-            this.Txt_tsangrep.Name = "Txt_tsangrep";
-            this.Txt_tsangrep.Size = new System.Drawing.Size(180, 25);
-            this.Txt_tsangrep.TabIndex = 45;
             // 
             // Lbl_alergiasp
             // 
@@ -296,6 +298,9 @@
             this.Cmb_sexop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Cmb_sexop.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cmb_sexop.FormattingEnabled = true;
+            this.Cmb_sexop.Items.AddRange(new object[] {
+            "M",
+            "F"});
             this.Cmb_sexop.Location = new System.Drawing.Point(410, 68);
             this.Cmb_sexop.Name = "Cmb_sexop";
             this.Cmb_sexop.Size = new System.Drawing.Size(57, 25);
@@ -376,6 +381,7 @@
             this.Dtp_fechap.Name = "Dtp_fechap";
             this.Dtp_fechap.Size = new System.Drawing.Size(104, 26);
             this.Dtp_fechap.TabIndex = 21;
+            this.Dtp_fechap.ValueChanged += new System.EventHandler(this.Dtp_fechap_ValueChanged);
             // 
             // Dtp_fecha2p
             // 
@@ -434,16 +440,15 @@
             // 
             this.Er_validar.ContainerControl = this;
             // 
-            // label1
+            // Cmb_sangrep
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(302, 31);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 18);
-            this.label1.TabIndex = 49;
-            this.label1.Text = "Expediente:";
+            this.Cmb_sangrep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Cmb_sangrep.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cmb_sangrep.FormattingEnabled = true;
+            this.Cmb_sangrep.Location = new System.Drawing.Point(410, 117);
+            this.Cmb_sangrep.Name = "Cmb_sangrep";
+            this.Cmb_sangrep.Size = new System.Drawing.Size(180, 25);
+            this.Cmb_sangrep.TabIndex = 50;
             // 
             // Paciente
             // 
@@ -459,6 +464,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Paciente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "  ";
             this.Load += new System.EventHandler(this.Paciente_Load);
             this.Gpb_guardarp.ResumeLayout(false);
             this.Gpb_guardarp.PerformLayout();
@@ -478,7 +484,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.GroupBox Gpb_datosp;
         private System.Windows.Forms.Label Lbl_tipoSangrep;
-        private System.Windows.Forms.TextBox Txt_tsangrep;
         private System.Windows.Forms.Label Lbl_alergiasp;
         private System.Windows.Forms.TextBox Txt_alergiasp;
         private System.Windows.Forms.Button Btn_expedientep;
@@ -507,5 +512,6 @@
         private System.Windows.Forms.TextBox Txt_correoP;
         private System.Windows.Forms.ErrorProvider Er_validar;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox Cmb_sangrep;
     }
 }

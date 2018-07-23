@@ -243,5 +243,13 @@ namespace LaboratorioClinico
         {
 
         }
+
+        private void requerimientosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Requerimientos formaDeEmpleado = new Requerimientos();
+            formaDeEmpleado.ShowDialog();
+            this.Show();
+        }
     }
 }
