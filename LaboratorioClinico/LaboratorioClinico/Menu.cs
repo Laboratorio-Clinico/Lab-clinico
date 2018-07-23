@@ -17,8 +17,8 @@ namespace LaboratorioClinico
             InitializeComponent();
             lbl_usuario.Text = nombre;
             lbl_tipo.Text = "Usuario";
-            lbl_hora.Text = DateTime.Now.ToLongTimeString();
-            lbl_fecha.Text = DateTime.Now.ToLongDateString();
+            Lbl_hora.Text = DateTime.Now.ToLongTimeString();
+            Lbl_fecha.Text = DateTime.Now.ToLongDateString();
             Pnl_menudespegable.Height = 10;
         }
 
@@ -150,12 +150,12 @@ namespace LaboratorioClinico
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            lbl_hora.Text = DateTime.Now.ToLongTimeString();
+            Lbl_hora.Text = DateTime.Now.ToLongTimeString();
         }
 
         private void label3_Click(object sender, EventArgs e)
         {
-            lbl_fecha.Text = DateTime.Now.ToLongDateString();
+            Lbl_fecha.Text = DateTime.Now.ToLongDateString();
         }
 
         private void mantenimientoToolStripMenuItem_Click(object sender, EventArgs e)
