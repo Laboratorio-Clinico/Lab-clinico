@@ -53,15 +53,6 @@ namespace LaboratorioClinico
             cm.Parameters.AddWithValue("@nombrep", this.Txt_nombrep.Text);
             cm.Parameters.AddWithValue("@telefonop", this.Txt_telefonop.Text);
             cm.Parameters.AddWithValue("@nitp", this.Txt_nitp.Text);
-            cm.Parameters.AddWithValue("@tipoSangrep", this.Txt_tsangrep.Text);
-            cm.Parameters.AddWithValue("@direccionp", this.Txt_direccionp.Text);
-            cm.Parameters.AddWithValue("@correop", this.Txt_correoP.Text);
-            cm.Parameters.AddWithValue("@alergiasp", this.Txt_alergiasp.Text);
-            cm.Parameters.AddWithValue("@quienRefp", this.Txt_refierep.Text);
-            cm.Parameters.AddWithValue("@sexop", this.Cmb_sexop.Text);
-            cm.Parameters.AddWithValue("@fechaNacip", this.Dtp_fechap.Text);
-            cm.Parameters.AddWithValue("@fechaEmip", this.Dtp_fecha2p.Text);
-            cm.Parameters.AddWithValue("@horaEmip", this.Txt_horap.Text);
 
             int query = cm.ExecuteNonQuery();
             if (query == 1)
@@ -72,6 +63,11 @@ namespace LaboratorioClinico
             {
                 MessageBox.Show("No se pudo ingresar", "Incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void Gpb_guardarp_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
