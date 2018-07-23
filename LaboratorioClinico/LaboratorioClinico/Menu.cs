@@ -17,6 +17,9 @@ namespace LaboratorioClinico
             InitializeComponent();
             lbl_usuario.Text = nombre;
             lbl_tipo.Text = "Admin";
+            lbl_hora.Text = DateTime.Now.ToLongTimeString();
+            lbl_fecha.Text = DateTime.Now.ToLongDateString();
+            Pnl_menudespegable.Height = 10;
         }
 
         private void ayudaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -36,7 +39,10 @@ namespace LaboratorioClinico
 
         private void ingresarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Exámen open = new Exámen();
+            open.ShowDialog();
+            this.Show();
         }
 
         private void segurToolStripMenuItem_Click(object sender, EventArgs e)
@@ -46,7 +52,10 @@ namespace LaboratorioClinico
 
         private void cotizacionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            cotizar formaDeCotizar = new cotizar();
+            formaDeCotizar.ShowDialog();
+            this.Show();
         }
 
         private void Menu_Load(object sender, EventArgs e)
@@ -56,14 +65,18 @@ namespace LaboratorioClinico
 
         private void crearCódigoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CrearCodigo nuevo = new CrearCodigo();
-            nuevo.ShowDialog();
+            this.Hide();
+            CrearCodigo open = new CrearCodigo();
+            open.ShowDialog();
+            this.Show();
         }
 
         private void leerCódigoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            LeerCodigo nuevo = new LeerCodigo();
-            nuevo.ShowDialog();
+            this.Hide();
+            LeerCodigo open = new LeerCodigo();
+            open.ShowDialog();
+            this.Show();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -73,8 +86,15 @@ namespace LaboratorioClinico
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Cerrando sesión");
-            this.Close();
+            if ((MessageBox.Show("¿Quieres cerrar sesión?", "Cerrando sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question)) == DialogResult.Yes)
+            {
+                this.Close();
+            }
+            else
+            {
+
+            }
+            
         }
 
         private void lbl_tipo_Click(object sender, EventArgs e)
@@ -84,14 +104,20 @@ namespace LaboratorioClinico
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            if (Pnl_menudespegable.Visible == true)
+            if (Pnl_menudespegable.Height==10)
             {
-                Pnl_menudespegable.Visible = false;
+                tm_menu.Enabled = true;
+            }
+            else if(Pnl_menudespegable.Height == 90) 
+            {
+                tm_menu2.Enabled = true;
             }
             else
             {
-                Pnl_menudespegable.Visible = true;
+                MessageBox.Show("Invalido");
             }
+
+      
 
         }
 
@@ -101,33 +127,107 @@ namespace LaboratorioClinico
      
         }
 
-        private void facturaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Factura formulario = new Factura();
-            formulario.ShowDialog();
-            this.Show();
-        }
-
         private void bitácoraToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Bitácora formulario = new Bitácora();
-            formulario.ShowDialog();
+            Bitácora open = new Bitácora();
+            open.ShowDialog();
             this.Show();
         }
 
-        private void requerimientosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void nuevoPacienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
             this.Hide();
-            Requerimientos formulario = new Requerimientos();
-            formulario.ShowDialog();
+            Paciente open = new Paciente();
+            open.ShowDialog();
             this.Show();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lbl_hora.Text = DateTime.Now.ToLongTimeString();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            lbl_fecha.Text = DateTime.Now.ToLongDateString();
         }
 
         private void mantenimientoToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            Mantenimiento open = new Mantenimiento();
+            open.ShowDialog();
+            this.Show();
+        }
 
+        private void tm_menu_Tick(object sender, EventArgs e)
+        {
+            if (Pnl_menudespegable.Height<90)  //Desocultar
+            {
+                Pnl_menudespegable.Height = Pnl_menudespegable.Height + 10;
+            }
+            else
+            {
+                
+                tm_menu.Enabled = false;
+                
+            }
+        }
+
+        private void tm_menu2_Tick(object sender, EventArgs e)
+        {
+            if (Pnl_menudespegable.Height > 10)  //ocultar
+            {
+                Pnl_menudespegable.Height = Pnl_menudespegable.Height - 10;
+            }
+            else
+            {
+                
+                tm_menu2.Enabled = false;
+               
+            }
+        }
+
+        private void facturaciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Factura open = new Factura();
+            open.ShowDialog();
+            this.Show();
+        }
+
+        private void resultadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Resultados open = new Resultados();
+            open.ShowDialog();
+            this.Show();
+        }
+
+        private void médicosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Médicos formaDeMedicos = new Médicos();
+            formaDeMedicos.ShowDialog();
+            this.Show();
+        }
+
+        private void nuevoUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Usuario formaDeUsuarios = new Usuario();
+            formaDeUsuarios.ShowDialog();
+            this.Show();
+        }
+
+        private void nuevoEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Empleado  formaDeEmpleado = new Empleado();
+            formaDeEmpleado.ShowDialog();
+            this.Show();
         }
     }
 }
