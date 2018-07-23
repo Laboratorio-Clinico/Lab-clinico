@@ -12,9 +12,9 @@ namespace LaboratorioClinico
     {
         public static MySqlConnection ObtenerConexion()
         {
-            MySqlConnection conectar = new MySqlConnection("server=localhost;database=login;Uid=root;pwd=2018;");
+            MySqlConnection conectar = new MySqlConnection("server=192.168.1.20;database=labclinico;Uid=grupo;pwd=2018;");
             conectar.Open();
-            // MessageBox.Show("Conexion Exitosa");
+            //MessageBox.Show("Conexion Exitosa");
             return conectar;
         }
     }
