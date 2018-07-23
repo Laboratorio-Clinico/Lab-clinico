@@ -81,7 +81,7 @@
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.DarkCyan;
-            this.menuStrip1.Font = new System.Drawing.Font("Perpetua", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip1.Font = new System.Drawing.Font("Perpetua", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.pacienteToolStripMenuItem,
             this.Tm_admin,
@@ -99,7 +99,7 @@
             // pacienteToolStripMenuItem
             // 
             this.pacienteToolStripMenuItem.Name = "pacienteToolStripMenuItem";
-            this.pacienteToolStripMenuItem.Size = new System.Drawing.Size(75, 28);
+            this.pacienteToolStripMenuItem.Size = new System.Drawing.Size(65, 28);
             this.pacienteToolStripMenuItem.Text = "Inicio";
             // 
             // Tm_admin
@@ -110,7 +110,7 @@
             this.mantenimientoToolStripMenuItem,
             this.médicosToolStripMenuItem});
             this.Tm_admin.Name = "Tm_admin";
-            this.Tm_admin.Size = new System.Drawing.Size(161, 28);
+            this.Tm_admin.Size = new System.Drawing.Size(140, 28);
             this.Tm_admin.Text = "Administración";
             // 
             // segurToolStripMenuItem
@@ -120,54 +120,66 @@
             this.nuevoUsuarioToolStripMenuItem,
             this.bitácoraToolStripMenuItem,
             this.cambioDeContraseñaToolStripMenuItem});
+            this.segurToolStripMenuItem.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.segurToolStripMenuItem.Image = global::LaboratorioClinico.Properties.Resources.bloqueado;
             this.segurToolStripMenuItem.Name = "segurToolStripMenuItem";
-            this.segurToolStripMenuItem.Size = new System.Drawing.Size(218, 28);
+            this.segurToolStripMenuItem.Size = new System.Drawing.Size(188, 26);
             this.segurToolStripMenuItem.Text = "Seguridad";
             this.segurToolStripMenuItem.Click += new System.EventHandler(this.segurToolStripMenuItem_Click);
             // 
             // nuevoUsuarioToolStripMenuItem
             // 
             this.nuevoUsuarioToolStripMenuItem.BackColor = System.Drawing.Color.PowderBlue;
+            this.nuevoUsuarioToolStripMenuItem.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nuevoUsuarioToolStripMenuItem.Image = global::LaboratorioClinico.Properties.Resources.nuevo_usuario;
             this.nuevoUsuarioToolStripMenuItem.Name = "nuevoUsuarioToolStripMenuItem";
-            this.nuevoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(321, 28);
+            this.nuevoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(265, 26);
             this.nuevoUsuarioToolStripMenuItem.Text = "Nuevo Usuario";
             this.nuevoUsuarioToolStripMenuItem.Click += new System.EventHandler(this.nuevoUsuarioToolStripMenuItem_Click);
             // 
             // bitácoraToolStripMenuItem
             // 
             this.bitácoraToolStripMenuItem.BackColor = System.Drawing.Color.PowderBlue;
+            this.bitácoraToolStripMenuItem.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bitácoraToolStripMenuItem.Image = global::LaboratorioClinico.Properties.Resources.registro;
             this.bitácoraToolStripMenuItem.Name = "bitácoraToolStripMenuItem";
-            this.bitácoraToolStripMenuItem.Size = new System.Drawing.Size(321, 28);
+            this.bitácoraToolStripMenuItem.Size = new System.Drawing.Size(265, 26);
             this.bitácoraToolStripMenuItem.Text = "Bitácora";
             this.bitácoraToolStripMenuItem.Click += new System.EventHandler(this.bitácoraToolStripMenuItem_Click);
             // 
             // cambioDeContraseñaToolStripMenuItem
             // 
             this.cambioDeContraseñaToolStripMenuItem.BackColor = System.Drawing.Color.PowderBlue;
+            this.cambioDeContraseñaToolStripMenuItem.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cambioDeContraseñaToolStripMenuItem.Image = global::LaboratorioClinico.Properties.Resources.configuracion_de_usuario;
             this.cambioDeContraseñaToolStripMenuItem.Name = "cambioDeContraseñaToolStripMenuItem";
-            this.cambioDeContraseñaToolStripMenuItem.Size = new System.Drawing.Size(321, 28);
+            this.cambioDeContraseñaToolStripMenuItem.Size = new System.Drawing.Size(265, 26);
             this.cambioDeContraseñaToolStripMenuItem.Text = "Configuracion de Usuarios";
             // 
             // mantenimientoToolStripMenuItem
             // 
             this.mantenimientoToolStripMenuItem.BackColor = System.Drawing.Color.PowderBlue;
+            this.mantenimientoToolStripMenuItem.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mantenimientoToolStripMenuItem.Image = global::LaboratorioClinico.Properties.Resources.ajustes;
             this.mantenimientoToolStripMenuItem.Name = "mantenimientoToolStripMenuItem";
-            this.mantenimientoToolStripMenuItem.Size = new System.Drawing.Size(218, 28);
+            this.mantenimientoToolStripMenuItem.Size = new System.Drawing.Size(188, 26);
             this.mantenimientoToolStripMenuItem.Text = "Mantenimiento";
             this.mantenimientoToolStripMenuItem.Click += new System.EventHandler(this.mantenimientoToolStripMenuItem_Click);
             // 
             // médicosToolStripMenuItem
             // 
             this.médicosToolStripMenuItem.BackColor = System.Drawing.Color.PowderBlue;
+            this.médicosToolStripMenuItem.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.médicosToolStripMenuItem.Image = global::LaboratorioClinico.Properties.Resources.doctor1;
             this.médicosToolStripMenuItem.Name = "médicosToolStripMenuItem";
-            this.médicosToolStripMenuItem.Size = new System.Drawing.Size(218, 28);
+            this.médicosToolStripMenuItem.Size = new System.Drawing.Size(188, 26);
             this.médicosToolStripMenuItem.Text = "Médicos";
             this.médicosToolStripMenuItem.Click += new System.EventHandler(this.médicosToolStripMenuItem_Click);
             // 
             // reportesToolStripMenuItem
             // 
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
-            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(103, 28);
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(92, 28);
             this.reportesToolStripMenuItem.Text = "Reportes";
             // 
             // cotizaciónToolStripMenuItem
@@ -180,34 +192,40 @@
             this.muestrasToolStripMenuItem,
             this.requerimientosToolStripMenuItem});
             this.cotizaciónToolStripMenuItem.Name = "cotizaciónToolStripMenuItem";
-            this.cotizaciónToolStripMenuItem.Size = new System.Drawing.Size(111, 28);
+            this.cotizaciónToolStripMenuItem.Size = new System.Drawing.Size(101, 28);
             this.cotizaciónToolStripMenuItem.Text = "Exámenes";
             this.cotizaciónToolStripMenuItem.Click += new System.EventHandler(this.cotizaciónToolStripMenuItem_Click);
             // 
             // ingresarToolStripMenuItem
             // 
             this.ingresarToolStripMenuItem.BackColor = System.Drawing.Color.PowderBlue;
+            this.ingresarToolStripMenuItem.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ingresarToolStripMenuItem.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.ingresarToolStripMenuItem.Image = global::LaboratorioClinico.Properties.Resources.anadir;
             this.ingresarToolStripMenuItem.Name = "ingresarToolStripMenuItem";
-            this.ingresarToolStripMenuItem.Size = new System.Drawing.Size(223, 28);
+            this.ingresarToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
             this.ingresarToolStripMenuItem.Text = "Nuevo";
             this.ingresarToolStripMenuItem.Click += new System.EventHandler(this.ingresarToolStripMenuItem_Click);
             // 
             // cotizacionesToolStripMenuItem
             // 
             this.cotizacionesToolStripMenuItem.BackColor = System.Drawing.Color.PowderBlue;
+            this.cotizacionesToolStripMenuItem.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cotizacionesToolStripMenuItem.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.cotizacionesToolStripMenuItem.Image = global::LaboratorioClinico.Properties.Resources.banco;
             this.cotizacionesToolStripMenuItem.Name = "cotizacionesToolStripMenuItem";
-            this.cotizacionesToolStripMenuItem.Size = new System.Drawing.Size(223, 28);
+            this.cotizacionesToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
             this.cotizacionesToolStripMenuItem.Text = "Cotizaciones";
             this.cotizacionesToolStripMenuItem.Click += new System.EventHandler(this.cotizacionesToolStripMenuItem_Click);
             // 
             // resultadosToolStripMenuItem
             // 
             this.resultadosToolStripMenuItem.BackColor = System.Drawing.Color.PowderBlue;
+            this.resultadosToolStripMenuItem.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resultadosToolStripMenuItem.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.resultadosToolStripMenuItem.Image = global::LaboratorioClinico.Properties.Resources.prueba;
             this.resultadosToolStripMenuItem.Name = "resultadosToolStripMenuItem";
-            this.resultadosToolStripMenuItem.Size = new System.Drawing.Size(223, 28);
+            this.resultadosToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
             this.resultadosToolStripMenuItem.Text = "Resultados";
             this.resultadosToolStripMenuItem.Click += new System.EventHandler(this.resultadosToolStripMenuItem_Click);
             // 
@@ -217,33 +235,39 @@
             this.muestrasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.leerCódigoToolStripMenuItem,
             this.Tm_crearCodigo});
+            this.muestrasToolStripMenuItem.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.muestrasToolStripMenuItem.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.muestrasToolStripMenuItem.Image = global::LaboratorioClinico.Properties.Resources.frascos1;
             this.muestrasToolStripMenuItem.Name = "muestrasToolStripMenuItem";
-            this.muestrasToolStripMenuItem.Size = new System.Drawing.Size(223, 28);
+            this.muestrasToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
             this.muestrasToolStripMenuItem.Text = "Muestras";
             // 
             // leerCódigoToolStripMenuItem
             // 
             this.leerCódigoToolStripMenuItem.BackColor = System.Drawing.Color.PowderBlue;
+            this.leerCódigoToolStripMenuItem.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.leerCódigoToolStripMenuItem.Name = "leerCódigoToolStripMenuItem";
-            this.leerCódigoToolStripMenuItem.Size = new System.Drawing.Size(197, 28);
+            this.leerCódigoToolStripMenuItem.Size = new System.Drawing.Size(171, 26);
             this.leerCódigoToolStripMenuItem.Text = "Leer código";
             this.leerCódigoToolStripMenuItem.Click += new System.EventHandler(this.leerCódigoToolStripMenuItem_Click);
             // 
             // Tm_crearCodigo
             // 
             this.Tm_crearCodigo.BackColor = System.Drawing.Color.PowderBlue;
+            this.Tm_crearCodigo.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tm_crearCodigo.Name = "Tm_crearCodigo";
-            this.Tm_crearCodigo.Size = new System.Drawing.Size(197, 28);
+            this.Tm_crearCodigo.Size = new System.Drawing.Size(171, 26);
             this.Tm_crearCodigo.Text = "Crear código";
             this.Tm_crearCodigo.Click += new System.EventHandler(this.crearCódigoToolStripMenuItem_Click);
             // 
             // requerimientosToolStripMenuItem
             // 
             this.requerimientosToolStripMenuItem.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.requerimientosToolStripMenuItem.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.requerimientosToolStripMenuItem.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.requerimientosToolStripMenuItem.Image = global::LaboratorioClinico.Properties.Resources.pregunta;
             this.requerimientosToolStripMenuItem.Name = "requerimientosToolStripMenuItem";
-            this.requerimientosToolStripMenuItem.Size = new System.Drawing.Size(223, 28);
+            this.requerimientosToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
             this.requerimientosToolStripMenuItem.Text = "Requerimientos";
             // 
             // controlToolStripMenuItem
@@ -251,37 +275,40 @@
             this.controlToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nuevoPacienteToolStripMenuItem,
             this.nuevoEmpleadoToolStripMenuItem});
+            this.controlToolStripMenuItem.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.controlToolStripMenuItem.Name = "controlToolStripMenuItem";
-            this.controlToolStripMenuItem.Size = new System.Drawing.Size(91, 28);
+            this.controlToolStripMenuItem.Size = new System.Drawing.Size(79, 28);
             this.controlToolStripMenuItem.Text = "Control";
             // 
             // nuevoPacienteToolStripMenuItem
             // 
             this.nuevoPacienteToolStripMenuItem.BackColor = System.Drawing.Color.PowderBlue;
+            this.nuevoPacienteToolStripMenuItem.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nuevoPacienteToolStripMenuItem.Name = "nuevoPacienteToolStripMenuItem";
-            this.nuevoPacienteToolStripMenuItem.Size = new System.Drawing.Size(231, 28);
+            this.nuevoPacienteToolStripMenuItem.Size = new System.Drawing.Size(202, 26);
             this.nuevoPacienteToolStripMenuItem.Text = "Nuevo Paciente";
             this.nuevoPacienteToolStripMenuItem.Click += new System.EventHandler(this.nuevoPacienteToolStripMenuItem_Click);
             // 
             // nuevoEmpleadoToolStripMenuItem
             // 
             this.nuevoEmpleadoToolStripMenuItem.BackColor = System.Drawing.Color.PowderBlue;
+            this.nuevoEmpleadoToolStripMenuItem.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nuevoEmpleadoToolStripMenuItem.Name = "nuevoEmpleadoToolStripMenuItem";
-            this.nuevoEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(231, 28);
+            this.nuevoEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(202, 26);
             this.nuevoEmpleadoToolStripMenuItem.Text = "Nuevo Empleado";
             this.nuevoEmpleadoToolStripMenuItem.Click += new System.EventHandler(this.nuevoEmpleadoToolStripMenuItem_Click);
             // 
             // facturaciónToolStripMenuItem
             // 
             this.facturaciónToolStripMenuItem.Name = "facturaciónToolStripMenuItem";
-            this.facturaciónToolStripMenuItem.Size = new System.Drawing.Size(129, 28);
+            this.facturaciónToolStripMenuItem.Size = new System.Drawing.Size(112, 28);
             this.facturaciónToolStripMenuItem.Text = "Facturación";
             this.facturaciónToolStripMenuItem.Click += new System.EventHandler(this.facturaciónToolStripMenuItem_Click);
             // 
             // ayudaToolStripMenuItem
             // 
             this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
-            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(81, 28);
+            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(71, 28);
             this.ayudaToolStripMenuItem.Text = "Ayuda";
             this.ayudaToolStripMenuItem.Click += new System.EventHandler(this.ayudaToolStripMenuItem_Click);
             // 
@@ -404,10 +431,10 @@
             // 
             this.lbl_hora.AutoSize = true;
             this.lbl_hora.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_hora.Font = new System.Drawing.Font("Perpetua", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_hora.Font = new System.Drawing.Font("Perpetua", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_hora.Location = new System.Drawing.Point(12, 357);
             this.lbl_hora.Name = "lbl_hora";
-            this.lbl_hora.Size = new System.Drawing.Size(64, 24);
+            this.lbl_hora.Size = new System.Drawing.Size(56, 24);
             this.lbl_hora.TabIndex = 7;
             this.lbl_hora.Text = "label3";
             this.lbl_hora.Click += new System.EventHandler(this.lbl_hora_Click);
@@ -422,10 +449,10 @@
             // 
             this.lbl_fecha.AutoSize = true;
             this.lbl_fecha.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_fecha.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_fecha.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_fecha.Location = new System.Drawing.Point(12, 380);
             this.lbl_fecha.Name = "lbl_fecha";
-            this.lbl_fecha.Size = new System.Drawing.Size(49, 18);
+            this.lbl_fecha.Size = new System.Drawing.Size(43, 18);
             this.lbl_fecha.TabIndex = 8;
             this.lbl_fecha.Text = "label3";
             this.lbl_fecha.Click += new System.EventHandler(this.label3_Click);

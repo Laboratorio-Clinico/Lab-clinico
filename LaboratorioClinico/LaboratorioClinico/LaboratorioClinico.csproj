@@ -349,6 +349,45 @@
   <ItemGroup>
     <None Include="Resources\archivo %281%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bloqueado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nuevo-usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\registro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ajuste-personal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ajustes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\configuracion-de-usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doctor1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apoyar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\servicio-al-cliente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prueba.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frascos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pregunta.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
