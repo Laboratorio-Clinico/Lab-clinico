@@ -29,33 +29,33 @@
         private void InitializeComponent()
         {
             this.Gpb_datosEmpleado = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.Gpb_contacto = new System.Windows.Forms.GroupBox();
+            this.Txt_telefono = new System.Windows.Forms.TextBox();
+            this.Lbl_telefono = new System.Windows.Forms.Label();
+            this.Txt_correo = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.Txt_direccion = new System.Windows.Forms.TextBox();
+            this.Lbl_direccion = new System.Windows.Forms.Label();
+            this.Gpb_puesto = new System.Windows.Forms.GroupBox();
+            this.Cmb_cargo = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Txt_sueldo = new System.Windows.Forms.TextBox();
             this.Btn_guardar = new System.Windows.Forms.Button();
             this.Picb_imagen = new System.Windows.Forms.PictureBox();
             this.Gpb_datosPersonales = new System.Windows.Forms.GroupBox();
             this.Dtp_fechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.Lbl_fechaDeNacimiento = new System.Windows.Forms.Label();
-            this.Txt_correo = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.Txt_sueldo = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.Cmb_cargo = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.Txt_apellido = new System.Windows.Forms.TextBox();
             this.Txt_nombre = new System.Windows.Forms.TextBox();
-            this.Lbl_telefono = new System.Windows.Forms.Label();
             this.Lbl_apellido = new System.Windows.Forms.Label();
-            this.Txt_direccion = new System.Windows.Forms.TextBox();
             this.Lbl_nombre = new System.Windows.Forms.Label();
-            this.Txt_telefono = new System.Windows.Forms.TextBox();
-            this.Lbl_direccion = new System.Windows.Forms.Label();
-            this.Gpb_puesto = new System.Windows.Forms.GroupBox();
-            this.Gpb_contacto = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.Gpb_datosEmpleado.SuspendLayout();
+            this.Gpb_contacto.SuspendLayout();
+            this.Gpb_puesto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Picb_imagen)).BeginInit();
             this.Gpb_datosPersonales.SuspendLayout();
-            this.Gpb_puesto.SuspendLayout();
-            this.Gpb_contacto.SuspendLayout();
             this.SuspendLayout();
             // 
             // Gpb_datosEmpleado
@@ -76,6 +76,163 @@
             this.Gpb_datosEmpleado.TabStop = false;
             this.Gpb_datosEmpleado.Text = "Datos de Empleados";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(519, 431);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(46, 15);
+            this.label4.TabIndex = 49;
+            this.label4.Text = "Guardar";
+            // 
+            // Gpb_contacto
+            // 
+            this.Gpb_contacto.Controls.Add(this.Txt_telefono);
+            this.Gpb_contacto.Controls.Add(this.Lbl_telefono);
+            this.Gpb_contacto.Controls.Add(this.Txt_correo);
+            this.Gpb_contacto.Controls.Add(this.label3);
+            this.Gpb_contacto.Controls.Add(this.Txt_direccion);
+            this.Gpb_contacto.Controls.Add(this.Lbl_direccion);
+            this.Gpb_contacto.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Gpb_contacto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.Gpb_contacto.Location = new System.Drawing.Point(26, 236);
+            this.Gpb_contacto.Name = "Gpb_contacto";
+            this.Gpb_contacto.Size = new System.Drawing.Size(322, 172);
+            this.Gpb_contacto.TabIndex = 48;
+            this.Gpb_contacto.TabStop = false;
+            this.Gpb_contacto.Text = "Contacto";
+            // 
+            // Txt_telefono
+            // 
+            this.Txt_telefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_telefono.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_telefono.ForeColor = System.Drawing.Color.Black;
+            this.Txt_telefono.Location = new System.Drawing.Point(83, 53);
+            this.Txt_telefono.Margin = new System.Windows.Forms.Padding(4);
+            this.Txt_telefono.Name = "Txt_telefono";
+            this.Txt_telefono.Size = new System.Drawing.Size(197, 26);
+            this.Txt_telefono.TabIndex = 16;
+            // 
+            // Lbl_telefono
+            // 
+            this.Lbl_telefono.AutoSize = true;
+            this.Lbl_telefono.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_telefono.ForeColor = System.Drawing.Color.White;
+            this.Lbl_telefono.Location = new System.Drawing.Point(9, 54);
+            this.Lbl_telefono.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_telefono.Name = "Lbl_telefono";
+            this.Lbl_telefono.Size = new System.Drawing.Size(60, 18);
+            this.Lbl_telefono.TabIndex = 11;
+            this.Lbl_telefono.Text = "Telefono";
+            // 
+            // Txt_correo
+            // 
+            this.Txt_correo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_correo.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_correo.ForeColor = System.Drawing.Color.Black;
+            this.Txt_correo.Location = new System.Drawing.Point(83, 88);
+            this.Txt_correo.Margin = new System.Windows.Forms.Padding(4);
+            this.Txt_correo.Name = "Txt_correo";
+            this.Txt_correo.Size = new System.Drawing.Size(197, 26);
+            this.Txt_correo.TabIndex = 24;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(9, 90);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(51, 18);
+            this.label3.TabIndex = 23;
+            this.label3.Text = "Correo";
+            // 
+            // Txt_direccion
+            // 
+            this.Txt_direccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_direccion.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_direccion.ForeColor = System.Drawing.Color.Black;
+            this.Txt_direccion.Location = new System.Drawing.Point(83, 122);
+            this.Txt_direccion.Margin = new System.Windows.Forms.Padding(4);
+            this.Txt_direccion.Name = "Txt_direccion";
+            this.Txt_direccion.Size = new System.Drawing.Size(197, 26);
+            this.Txt_direccion.TabIndex = 17;
+            // 
+            // Lbl_direccion
+            // 
+            this.Lbl_direccion.AutoSize = true;
+            this.Lbl_direccion.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_direccion.ForeColor = System.Drawing.Color.White;
+            this.Lbl_direccion.Location = new System.Drawing.Point(9, 125);
+            this.Lbl_direccion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_direccion.Name = "Lbl_direccion";
+            this.Lbl_direccion.Size = new System.Drawing.Size(66, 18);
+            this.Lbl_direccion.TabIndex = 12;
+            this.Lbl_direccion.Text = "Dirección";
+            // 
+            // Gpb_puesto
+            // 
+            this.Gpb_puesto.Controls.Add(this.Cmb_cargo);
+            this.Gpb_puesto.Controls.Add(this.label1);
+            this.Gpb_puesto.Controls.Add(this.label2);
+            this.Gpb_puesto.Controls.Add(this.Txt_sueldo);
+            this.Gpb_puesto.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Gpb_puesto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.Gpb_puesto.Location = new System.Drawing.Point(390, 47);
+            this.Gpb_puesto.Name = "Gpb_puesto";
+            this.Gpb_puesto.Size = new System.Drawing.Size(310, 118);
+            this.Gpb_puesto.TabIndex = 47;
+            this.Gpb_puesto.TabStop = false;
+            this.Gpb_puesto.Text = "Puesto";
+            // 
+            // Cmb_cargo
+            // 
+            this.Cmb_cargo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Cmb_cargo.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cmb_cargo.FormattingEnabled = true;
+            this.Cmb_cargo.Location = new System.Drawing.Point(83, 40);
+            this.Cmb_cargo.Name = "Cmb_cargo";
+            this.Cmb_cargo.Size = new System.Drawing.Size(197, 26);
+            this.Cmb_cargo.TabIndex = 20;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(9, 44);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(44, 18);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Cargo";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(9, 80);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(47, 18);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "Sueldo";
+            // 
+            // Txt_sueldo
+            // 
+            this.Txt_sueldo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_sueldo.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_sueldo.ForeColor = System.Drawing.Color.Black;
+            this.Txt_sueldo.Location = new System.Drawing.Point(83, 75);
+            this.Txt_sueldo.Margin = new System.Windows.Forms.Padding(4);
+            this.Txt_sueldo.Name = "Txt_sueldo";
+            this.Txt_sueldo.Size = new System.Drawing.Size(197, 26);
+            this.Txt_sueldo.TabIndex = 22;
+            // 
             // Btn_guardar
             // 
             this.Btn_guardar.BackgroundImage = global::LaboratorioClinico.Properties.Resources.guardar;
@@ -93,7 +250,7 @@
             this.Picb_imagen.Image = global::LaboratorioClinico.Properties.Resources.laboratorio3;
             this.Picb_imagen.Location = new System.Drawing.Point(390, 194);
             this.Picb_imagen.Name = "Picb_imagen";
-            this.Picb_imagen.Size = new System.Drawing.Size(310, 171);
+            this.Picb_imagen.Size = new System.Drawing.Size(310, 150);
             this.Picb_imagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Picb_imagen.TabIndex = 1;
             this.Picb_imagen.TabStop = false;
@@ -137,74 +294,6 @@
             this.Lbl_fechaDeNacimiento.TabIndex = 26;
             this.Lbl_fechaDeNacimiento.Text = "Fecha de nacimiento";
             // 
-            // Txt_correo
-            // 
-            this.Txt_correo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.Txt_correo.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_correo.ForeColor = System.Drawing.Color.Black;
-            this.Txt_correo.Location = new System.Drawing.Point(83, 88);
-            this.Txt_correo.Margin = new System.Windows.Forms.Padding(4);
-            this.Txt_correo.Name = "Txt_correo";
-            this.Txt_correo.Size = new System.Drawing.Size(197, 26);
-            this.Txt_correo.TabIndex = 24;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(9, 90);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 18);
-            this.label3.TabIndex = 23;
-            this.label3.Text = "Correo";
-            // 
-            // Txt_sueldo
-            // 
-            this.Txt_sueldo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.Txt_sueldo.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_sueldo.ForeColor = System.Drawing.Color.Black;
-            this.Txt_sueldo.Location = new System.Drawing.Point(83, 75);
-            this.Txt_sueldo.Margin = new System.Windows.Forms.Padding(4);
-            this.Txt_sueldo.Name = "Txt_sueldo";
-            this.Txt_sueldo.Size = new System.Drawing.Size(197, 26);
-            this.Txt_sueldo.TabIndex = 22;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(9, 80);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 18);
-            this.label2.TabIndex = 21;
-            this.label2.Text = "Sueldo";
-            // 
-            // Cmb_cargo
-            // 
-            this.Cmb_cargo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.Cmb_cargo.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cmb_cargo.FormattingEnabled = true;
-            this.Cmb_cargo.Location = new System.Drawing.Point(83, 40);
-            this.Cmb_cargo.Name = "Cmb_cargo";
-            this.Cmb_cargo.Size = new System.Drawing.Size(197, 26);
-            this.Cmb_cargo.TabIndex = 20;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(9, 44);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 18);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "Cargo";
-            // 
             // Txt_apellido
             // 
             this.Txt_apellido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
@@ -227,18 +316,6 @@
             this.Txt_nombre.Size = new System.Drawing.Size(197, 26);
             this.Txt_nombre.TabIndex = 13;
             // 
-            // Lbl_telefono
-            // 
-            this.Lbl_telefono.AutoSize = true;
-            this.Lbl_telefono.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_telefono.ForeColor = System.Drawing.Color.White;
-            this.Lbl_telefono.Location = new System.Drawing.Point(9, 54);
-            this.Lbl_telefono.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Lbl_telefono.Name = "Lbl_telefono";
-            this.Lbl_telefono.Size = new System.Drawing.Size(60, 18);
-            this.Lbl_telefono.TabIndex = 11;
-            this.Lbl_telefono.Text = "Telefono";
-            // 
             // Lbl_apellido
             // 
             this.Lbl_apellido.AutoSize = true;
@@ -251,17 +328,6 @@
             this.Lbl_apellido.TabIndex = 14;
             this.Lbl_apellido.Text = "Apellido";
             // 
-            // Txt_direccion
-            // 
-            this.Txt_direccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.Txt_direccion.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_direccion.ForeColor = System.Drawing.Color.Black;
-            this.Txt_direccion.Location = new System.Drawing.Point(83, 122);
-            this.Txt_direccion.Margin = new System.Windows.Forms.Padding(4);
-            this.Txt_direccion.Name = "Txt_direccion";
-            this.Txt_direccion.Size = new System.Drawing.Size(197, 26);
-            this.Txt_direccion.TabIndex = 17;
-            // 
             // Lbl_nombre
             // 
             this.Lbl_nombre.AutoSize = true;
@@ -273,72 +339,6 @@
             this.Lbl_nombre.Size = new System.Drawing.Size(58, 18);
             this.Lbl_nombre.TabIndex = 10;
             this.Lbl_nombre.Text = "Nombre";
-            // 
-            // Txt_telefono
-            // 
-            this.Txt_telefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.Txt_telefono.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_telefono.ForeColor = System.Drawing.Color.Black;
-            this.Txt_telefono.Location = new System.Drawing.Point(83, 53);
-            this.Txt_telefono.Margin = new System.Windows.Forms.Padding(4);
-            this.Txt_telefono.Name = "Txt_telefono";
-            this.Txt_telefono.Size = new System.Drawing.Size(197, 26);
-            this.Txt_telefono.TabIndex = 16;
-            // 
-            // Lbl_direccion
-            // 
-            this.Lbl_direccion.AutoSize = true;
-            this.Lbl_direccion.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_direccion.ForeColor = System.Drawing.Color.White;
-            this.Lbl_direccion.Location = new System.Drawing.Point(9, 125);
-            this.Lbl_direccion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Lbl_direccion.Name = "Lbl_direccion";
-            this.Lbl_direccion.Size = new System.Drawing.Size(66, 18);
-            this.Lbl_direccion.TabIndex = 12;
-            this.Lbl_direccion.Text = "Dirección";
-            // 
-            // Gpb_puesto
-            // 
-            this.Gpb_puesto.Controls.Add(this.Cmb_cargo);
-            this.Gpb_puesto.Controls.Add(this.label1);
-            this.Gpb_puesto.Controls.Add(this.label2);
-            this.Gpb_puesto.Controls.Add(this.Txt_sueldo);
-            this.Gpb_puesto.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Gpb_puesto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.Gpb_puesto.Location = new System.Drawing.Point(390, 47);
-            this.Gpb_puesto.Name = "Gpb_puesto";
-            this.Gpb_puesto.Size = new System.Drawing.Size(310, 118);
-            this.Gpb_puesto.TabIndex = 47;
-            this.Gpb_puesto.TabStop = false;
-            this.Gpb_puesto.Text = "Puesto";
-            // 
-            // Gpb_contacto
-            // 
-            this.Gpb_contacto.Controls.Add(this.Txt_telefono);
-            this.Gpb_contacto.Controls.Add(this.Lbl_telefono);
-            this.Gpb_contacto.Controls.Add(this.Txt_correo);
-            this.Gpb_contacto.Controls.Add(this.label3);
-            this.Gpb_contacto.Controls.Add(this.Txt_direccion);
-            this.Gpb_contacto.Controls.Add(this.Lbl_direccion);
-            this.Gpb_contacto.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Gpb_contacto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.Gpb_contacto.Location = new System.Drawing.Point(26, 236);
-            this.Gpb_contacto.Name = "Gpb_contacto";
-            this.Gpb_contacto.Size = new System.Drawing.Size(322, 172);
-            this.Gpb_contacto.TabIndex = 48;
-            this.Gpb_contacto.TabStop = false;
-            this.Gpb_contacto.Text = "Contacto";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(519, 431);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 15);
-            this.label4.TabIndex = 49;
-            this.label4.Text = "Guardar";
             // 
             // Empleado
             // 
@@ -354,13 +354,13 @@
             this.Text = "Empleado";
             this.Gpb_datosEmpleado.ResumeLayout(false);
             this.Gpb_datosEmpleado.PerformLayout();
+            this.Gpb_contacto.ResumeLayout(false);
+            this.Gpb_contacto.PerformLayout();
+            this.Gpb_puesto.ResumeLayout(false);
+            this.Gpb_puesto.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Picb_imagen)).EndInit();
             this.Gpb_datosPersonales.ResumeLayout(false);
             this.Gpb_datosPersonales.PerformLayout();
-            this.Gpb_puesto.ResumeLayout(false);
-            this.Gpb_puesto.PerformLayout();
-            this.Gpb_contacto.ResumeLayout(false);
-            this.Gpb_contacto.PerformLayout();
             this.ResumeLayout(false);
 
         }
