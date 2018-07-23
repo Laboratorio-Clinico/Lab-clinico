@@ -15,6 +15,7 @@ namespace LaboratorioClinico
         public LeerCodigo()
         {
             InitializeComponent();
+            Txt_codigo.TabIndex = 1;
         }
 
         private void LeerCodigo_Load(object sender, EventArgs e)
@@ -25,6 +26,16 @@ namespace LaboratorioClinico
         private void Bt_cerrar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Txt_codigo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void Txt_codigo_KeyDown(object sender, KeyEventArgs e)
+        {
+            
         }
     }
 }
