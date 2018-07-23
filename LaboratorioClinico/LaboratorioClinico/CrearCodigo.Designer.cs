@@ -154,6 +154,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Txt_texto);
             this.DoubleBuffered = true;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "CrearCodigo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.CrearCodigo_Load);
