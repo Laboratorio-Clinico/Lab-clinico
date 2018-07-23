@@ -19,7 +19,7 @@ namespace LaboratorioClinico
             InitializeComponent();
         }
 
-        public void Pro_guardarDatos(int cargo) {
+        public void Pro_guardarDatos(int iCargo) {
             MySqlCommand cm;
             cm = new MySqlCommand("Pro_ingresoNuevoEmpleado", conexion.ObtenerConexion());
             cm.CommandType = CommandType.StoredProcedure;
@@ -29,7 +29,7 @@ namespace LaboratorioClinico
             cm.Parameters.AddWithValue("@deTelefono", this.Txt_telefono);
             cm.Parameters.AddWithValue("@sDireccion", this.Txt_direccion);
             cm.Parameters.AddWithValue("@sCorreo", this.Txt_correo);
-            cm.Parameters.AddWithValue("@iidCargo", cargo);
+            cm.Parameters.AddWithValue("@iidCargo", iCargo);
             cm.Parameters.AddWithValue("@fSueldo", this.Txt_sueldo);
             cm.Parameters.AddWithValue("@dFechaDeNacimiento", this.Dtp_fechaNacimiento);
 
@@ -81,9 +81,12 @@ namespace LaboratorioClinico
             catch (MySqlException error) { MessageBox.Show(error.Message); }
         }
 
+
         private void Btn_guardar_Click(object sender, EventArgs e)
         {
-            
-    }
+            int iCargo = Convert.ToInt32(Cmb_cargo.SelectedValue);
+            Pro_guardarDatos(iCargo);
+
+        }
     }
 }

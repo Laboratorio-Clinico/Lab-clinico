@@ -112,7 +112,7 @@ namespace LaboratorioClinico
 
         private void Btn_eliminarp_Click(object sender, EventArgs e)
         {
-            conexion.ObtenerConexion();
+            conexion.ObtenerConexion(); 
             MySqlCommand cmd = conexion.ObtenerConexion().CreateCommand();
 
             cmd.CommandText = "delete from paciente where expedientep = '" + Convert.ToInt64(Txt_expe.Text) + "'";
