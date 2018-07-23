@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace LaboratorioClinico
 {
@@ -34,14 +35,15 @@ namespace LaboratorioClinico
 
         private void button1_Click(object sender, EventArgs e)
         {
-            /*
-            conexionn.conectar();
+            
+            conexion.ObtenerConexion();
             DataTable dtDatos = new DataTable();
-            MySqlDataAdapter sda = new MySqlDataAdapter("select Codigo, Nombre, Cargo, Telefono,Direccion from requerimientos where Codigo='" + Convert.ToInt32(Txt_nombrer.Text) + "'", conexionn.conectar());
+            MySqlDataAdapter sda = new MySqlDataAdapter("select *from examenes where sDescripcion='" + Convert.ToInt32(Txt_nombrer.Text) + "'", conexion.ObtenerConexion());
             sda.Fill(dtDatos);
-            Gpb_llenador.DataSource = dtDatos;
+            Dgb_requisitosr.DataSource = dtDatos;
             Txt_nombrer.ResetText();
-            */
+           
+           
         }
 
         private void button2_Click(object sender, EventArgs e)

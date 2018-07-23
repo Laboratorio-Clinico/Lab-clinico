@@ -36,5 +36,51 @@ namespace LaboratorioClinico
         {
 
         }
+
+        private void Txt_nitf_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            /*
+             cont++;
+             MySqlDataAdapter sda = new MySqlDataAdapter("select count(*) from Examenes where sDescripcion= '" + Txt_descripcion.Text + "'", conexion.ObtenerConexion());
+             MySqlCommand cmd = conexion.ObtenerConexion().CreateCommand();
+             DataTable datos = new DataTable();
+             sda.Fill(datos);
+
+             MySqlDataAdapter sda2 = new MySqlDataAdapter("select Codigo, Precio from articulo where nombre = '" + anombreP.Text + "'", conexion.ObtenerConexion());
+             DataTable datos2 = new DataTable();
+             sda2.Fill(datos2);
+
+           
+             int total;
+             int p, c;
+             c = Convert.ToInt32(cantidadP.Text);
+             p = Convert.ToInt32(datos2.Rows[0][1].ToString());
+             total = c * p;
+             acumulado = acumulado + total;
+
+             if (datos.Rows[0][0].ToString() == "1")
+             {
+                 detalle.Rows.Add(datos2.Rows[0][0].ToString(), anombreP.Text, cantidadP.Text, datos2.Rows[0][1].ToString(), total.ToString());
+                 tl.Text = acumulado.ToString();
+                 //
+                 cmd.CommandText = "insert into detalle values('" + cont + "','" + Convert.ToInt32(orden.Text) + "','" + datos2.Rows[0][0] + "','" + Convert.ToInt32(cantidadP.Text.ToString()) + "')";
+                 cmd.ExecuteNonQuery();
+             }
+             else
+             {
+                 MessageBox.Show("No existe producto");
+             }*/
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
