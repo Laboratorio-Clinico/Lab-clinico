@@ -62,14 +62,18 @@ namespace LaboratorioClinico
 
         private void crearCódigoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CrearCodigo nuevo = new CrearCodigo();
-            nuevo.ShowDialog();
+            this.Hide();
+            CrearCodigo open = new CrearCodigo();
+            open.ShowDialog();
+            this.Show();
         }
 
         private void leerCódigoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            LeerCodigo nuevo = new LeerCodigo();
-            nuevo.ShowDialog();
+            this.Hide();
+            LeerCodigo open = new LeerCodigo();
+            open.ShowDialog();
+            this.Show();
         }
 
         private void label1_Click(object sender, EventArgs e)
