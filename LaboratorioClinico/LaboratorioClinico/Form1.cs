@@ -42,7 +42,8 @@ namespace LaboratorioClinico
 
         private void Btn_ingresar_Click(object sender, EventArgs e)
         {
-
+            BorrarMsj();
+            Validar();
             string user = Txt_usuario.Text;
             string pass = Txt_contraseña.Text;
 
@@ -82,7 +83,36 @@ namespace LaboratorioClinico
 
         }
 
+        private bool Validar()
+        {
+            bool bValor = true;
+
+            if (Txt_usuario.Text == "")
+            {
+                bValor = false;
+                Er_validar.SetError(Txt_usuario, "Ingrese Usuario");
+            } 
+
+            if (Txt_contraseña.Text == "")
+            {
+                bValor = false;
+                Er_validar.SetError(Txt_contraseña, "Ingrese Contraseña");
+            }
+            return bValor;
+        }
+
+        private void BorrarMsj()
+        {
+            Er_validar.SetError(Txt_contraseña, "");
+            Er_validar.SetError(Txt_usuario, "");
+        }
+
         private void Cbo_privi_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Txt_contraseña_Validating(object sender, CancelEventArgs e)
         {
 
         }

@@ -63,5 +63,17 @@ namespace LaboratorioClinico
         {
 
         }
+
+        private void Txt_texto_Validating(object sender, CancelEventArgs e)
+        {
+            int iNum;
+            if(!int.TryParse(Txt_texto.Text, out iNum)){
+                Er_validar.SetError(Txt_texto,"Solo números se acepta");
+            }else
+            {
+                Er_validar.SetError(Txt_texto, "");
+            }
+
+        }
     }
 }
