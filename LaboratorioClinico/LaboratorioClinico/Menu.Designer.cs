@@ -67,6 +67,7 @@
             this.lbl_fecha = new System.Windows.Forms.Label();
             this.tm_menu = new System.Windows.Forms.Timer(this.components);
             this.tm_menu2 = new System.Windows.Forms.Timer(this.components);
+            this.nuevoEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -129,6 +130,7 @@
             this.nuevoUsuarioToolStripMenuItem.Name = "nuevoUsuarioToolStripMenuItem";
             this.nuevoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(282, 28);
             this.nuevoUsuarioToolStripMenuItem.Text = "Nuevo Usuario";
+            this.nuevoUsuarioToolStripMenuItem.Click += new System.EventHandler(this.nuevoUsuarioToolStripMenuItem_Click);
             // 
             // bitácoraToolStripMenuItem
             // 
@@ -159,6 +161,7 @@
             this.médicosToolStripMenuItem.Name = "médicosToolStripMenuItem";
             this.médicosToolStripMenuItem.Size = new System.Drawing.Size(218, 28);
             this.médicosToolStripMenuItem.Text = "Médicos";
+            this.médicosToolStripMenuItem.Click += new System.EventHandler(this.médicosToolStripMenuItem_Click);
             // 
             // reportesToolStripMenuItem
             // 
@@ -245,7 +248,8 @@
             // controlToolStripMenuItem
             // 
             this.controlToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.nuevoPacienteToolStripMenuItem});
+            this.nuevoPacienteToolStripMenuItem,
+            this.nuevoEmpleadoToolStripMenuItem});
             this.controlToolStripMenuItem.Name = "controlToolStripMenuItem";
             this.controlToolStripMenuItem.Size = new System.Drawing.Size(91, 28);
             this.controlToolStripMenuItem.Text = "Control";
@@ -254,7 +258,7 @@
             // 
             this.nuevoPacienteToolStripMenuItem.BackColor = System.Drawing.Color.PowderBlue;
             this.nuevoPacienteToolStripMenuItem.Name = "nuevoPacienteToolStripMenuItem";
-            this.nuevoPacienteToolStripMenuItem.Size = new System.Drawing.Size(219, 28);
+            this.nuevoPacienteToolStripMenuItem.Size = new System.Drawing.Size(231, 28);
             this.nuevoPacienteToolStripMenuItem.Text = "Nuevo Paciente";
             this.nuevoPacienteToolStripMenuItem.Click += new System.EventHandler(this.nuevoPacienteToolStripMenuItem_Click);
             // 
@@ -425,6 +429,14 @@
             // 
             this.tm_menu2.Tick += new System.EventHandler(this.tm_menu2_Tick);
             // 
+            // nuevoEmpleadoToolStripMenuItem
+            // 
+            this.nuevoEmpleadoToolStripMenuItem.BackColor = System.Drawing.Color.PowderBlue;
+            this.nuevoEmpleadoToolStripMenuItem.Name = "nuevoEmpleadoToolStripMenuItem";
+            this.nuevoEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(231, 28);
+            this.nuevoEmpleadoToolStripMenuItem.Text = "Nuevo Empleado";
+            this.nuevoEmpleadoToolStripMenuItem.Click += new System.EventHandler(this.nuevoEmpleadoToolStripMenuItem_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -498,5 +510,6 @@
         private System.Windows.Forms.Label lbl_fecha;
         private System.Windows.Forms.Timer tm_menu;
         private System.Windows.Forms.Timer tm_menu2;
+        private System.Windows.Forms.ToolStripMenuItem nuevoEmpleadoToolStripMenuItem;
     }
 }

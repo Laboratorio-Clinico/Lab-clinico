@@ -52,7 +52,10 @@ namespace LaboratorioClinico
 
         private void cotizacionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            cotizar formaDeCotizar = new cotizar();
+            formaDeCotizar.ShowDialog();
+            this.Show();
         }
 
         private void Menu_Load(object sender, EventArgs e)
@@ -62,17 +65,17 @@ namespace LaboratorioClinico
 
         private void crearCódigoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CrearCodigo nuevo = new CrearCodigo();
             this.Hide();
-            nuevo.ShowDialog();
+            CrearCodigo open = new CrearCodigo();
+            open.ShowDialog();
             this.Show();
         }
 
         private void leerCódigoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            LeerCodigo nuevo = new LeerCodigo();
             this.Hide();
-            nuevo.ShowDialog();
+            LeerCodigo open = new LeerCodigo();
+            open.ShowDialog();
             this.Show();
         }
 
@@ -200,6 +203,30 @@ namespace LaboratorioClinico
             this.Hide();
             Resultados open = new Resultados();
             open.ShowDialog();
+            this.Show();
+        }
+
+        private void médicosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Médicos formaDeMedicos = new Médicos();
+            formaDeMedicos.ShowDialog();
+            this.Show();
+        }
+
+        private void nuevoUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Usuario formaDeUsuarios = new Usuario();
+            formaDeUsuarios.ShowDialog();
+            this.Show();
+        }
+
+        private void nuevoEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Empleado  formaDeEmpleado = new Empleado();
+            formaDeEmpleado.ShowDialog();
             this.Show();
         }
     }
