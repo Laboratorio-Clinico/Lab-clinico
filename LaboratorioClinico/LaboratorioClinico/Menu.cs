@@ -184,5 +184,10 @@ namespace LaboratorioClinico
             open.ShowDialog();
             this.Show();
         }
+
+        private void facturaciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

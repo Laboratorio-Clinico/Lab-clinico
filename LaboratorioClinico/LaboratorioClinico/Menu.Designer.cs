@@ -263,6 +263,7 @@
             this.facturaciónToolStripMenuItem.Name = "facturaciónToolStripMenuItem";
             this.facturaciónToolStripMenuItem.Size = new System.Drawing.Size(129, 28);
             this.facturaciónToolStripMenuItem.Text = "Facturación";
+            this.facturaciónToolStripMenuItem.Click += new System.EventHandler(this.facturaciónToolStripMenuItem_Click);
             // 
             // ayudaToolStripMenuItem
             // 

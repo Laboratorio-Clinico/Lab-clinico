@@ -61,8 +61,7 @@ namespace LaboratorioClinico
             cm.Parameters.AddWithValue("@sexop", this.Cmb_sexop.Text);
             cm.Parameters.AddWithValue("@fechaNacip", this.Dtp_fechap.Text);
             cm.Parameters.AddWithValue("@fechaEmip", this.Dtp_fecha2p.Text);
-            cm.Parameters.AddWithValue("@horaEmip", this.Txt_horap.Text);
-
+          
             int query = cm.ExecuteNonQuery();
             if (query == 1)
             {
