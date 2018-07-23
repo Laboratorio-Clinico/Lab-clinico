@@ -17,6 +17,7 @@ namespace LaboratorioClinico
         public Form1()
         {
             InitializeComponent();
+            Txt_usuario.Focus();
             
         }
 

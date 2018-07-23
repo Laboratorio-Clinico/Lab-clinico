@@ -87,6 +87,8 @@
             this.Txt_codigo.Name = "Txt_codigo";
             this.Txt_codigo.Size = new System.Drawing.Size(218, 20);
             this.Txt_codigo.TabIndex = 5;
+            this.Txt_codigo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Txt_codigo_KeyDown);
+            this.Txt_codigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_codigo_KeyPress);
             // 
             // LeerCodigo
             // 
