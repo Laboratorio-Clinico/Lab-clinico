@@ -86,6 +86,7 @@
             this.Gpb_guardarp.Size = new System.Drawing.Size(95, 82);
             this.Gpb_guardarp.TabIndex = 2;
             this.Gpb_guardarp.TabStop = false;
+            this.Gpb_guardarp.Enter += new System.EventHandler(this.Gpb_guardarp_Enter);
             // 
             // label10
             // 
