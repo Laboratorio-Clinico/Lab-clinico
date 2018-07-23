@@ -45,13 +45,21 @@ namespace LaboratorioClinico
 
         private void Btn_crear_Click(object sender, EventArgs e)
         {
+            int iAux;
             try
             {
-                Crear = new BarcodeEncoder();
-                Crear.IncludeLabel = true;
-                Crear.CustomLabel = Txt_texto.Text;
-                if (Txt_texto.Text != "")
-                    Pic_img.Image = new Bitmap(Crear.Encode(BarcodeFormat.Code39, Txt_texto.Text));
+                if (int.TryParse(Txt_texto.Text, out iAux))
+                {
+                    Er_validar.SetError(Txt_texto, "");
+                    Crear = new BarcodeEncoder();
+                    Crear.IncludeLabel = true;
+                    Crear.CustomLabel = Txt_texto.Text;
+                    if (Txt_texto.Text != "")
+                        Pic_img.Image = new Bitmap(Crear.Encode(BarcodeFormat.Code39, Txt_texto.Text));
+                }else
+                {
+                    Er_validar.SetError(Txt_texto, "Solo números se acepta");
+                }
             }catch(Exception ex)
             {
                 MessageBox.Show("Dato invalido: " + ex.Message);
@@ -66,13 +74,13 @@ namespace LaboratorioClinico
 
         private void Txt_texto_Validating(object sender, CancelEventArgs e)
         {
-            int iNum;
+           /* int iNum;
             if(!int.TryParse(Txt_texto.Text, out iNum)){
                 Er_validar.SetError(Txt_texto,"Solo números se acepta");
             }else
             {
                 Er_validar.SetError(Txt_texto, "");
-            }
+            }*/
 
         }
     }
