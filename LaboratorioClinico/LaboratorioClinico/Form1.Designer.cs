@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.Btn_ingresar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -37,8 +38,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Er_validar = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Er_validar)).BeginInit();
             this.SuspendLayout();
             // 
             // Btn_ingresar
@@ -96,6 +99,7 @@
             this.Txt_contraseña.PasswordChar = '*';
             this.Txt_contraseña.Size = new System.Drawing.Size(149, 26);
             this.Txt_contraseña.TabIndex = 4;
+            this.Txt_contraseña.Validating += new System.ComponentModel.CancelEventHandler(this.Txt_contraseña_Validating);
             // 
             // label3
             // 
@@ -136,6 +140,10 @@
             this.groupBox1.Text = "LOGIN";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // Er_validar
+            // 
+            this.Er_validar.ContainerControl = this;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -160,6 +168,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Er_validar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -175,6 +184,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ErrorProvider Er_validar;
     }
 }
 

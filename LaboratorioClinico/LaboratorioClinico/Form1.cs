@@ -17,6 +17,7 @@ namespace LaboratorioClinico
         public Form1()
         {
             InitializeComponent();
+            Txt_usuario.Focus();
             
         }
 
@@ -42,14 +43,15 @@ namespace LaboratorioClinico
 
         private void Btn_ingresar_Click(object sender, EventArgs e)
         {
-
+            BorrarMsj();
+            Validar();
             string user = Txt_usuario.Text;
             string pass = Txt_contraseña.Text;
 
 
             try
             {
-                MySqlDataAdapter sda = new MySqlDataAdapter("select count(*) from usuario where usuario='" + user + "'and contraseña ='" + pass + "'", conexion.ObtenerConexion());
+                MySqlDataAdapter sda = new MySqlDataAdapter("select count(*) from usuario where usuarsio='" + user + "'and contraseña ='" + pass + "'", conexion.ObtenerConexion());
                 MySqlCommand cmd = conexion.ObtenerConexion().CreateCommand();
                 DataTable datos = new DataTable();
                 sda.Fill(datos);
@@ -76,13 +78,42 @@ namespace LaboratorioClinico
                 }
             }catch(Exception ex)
             {
-                MessageBox.Show("Imposible conectar a la base de datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Imposible conectar a la base de datos o tabla no existe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 
             }
 
         }
 
+        private bool Validar()
+        {
+            bool bValor = true;
+
+            if (Txt_usuario.Text == "")
+            {
+                bValor = false;
+                Er_validar.SetError(Txt_usuario, "Ingrese Usuario");
+            } 
+
+            if (Txt_contraseña.Text == "")
+            {
+                bValor = false;
+                Er_validar.SetError(Txt_contraseña, "Ingrese Contraseña");
+            }
+            return bValor;
+        }
+
+        private void BorrarMsj()
+        {
+            Er_validar.SetError(Txt_contraseña, "");
+            Er_validar.SetError(Txt_usuario, "");
+        }
+
         private void Cbo_privi_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Txt_contraseña_Validating(object sender, CancelEventArgs e)
         {
 
         }

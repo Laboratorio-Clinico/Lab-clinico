@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.Txt_texto = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -36,7 +37,9 @@
             this.Btn_guardar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.Er_validar = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.Pic_img)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Er_validar)).BeginInit();
             this.SuspendLayout();
             // 
             // Txt_texto
@@ -46,6 +49,7 @@
             this.Txt_texto.Size = new System.Drawing.Size(320, 20);
             this.Txt_texto.TabIndex = 0;
             this.Txt_texto.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.Txt_texto.Validating += new System.ComponentModel.CancelEventHandler(this.Txt_texto_Validating);
             // 
             // label1
             // 
@@ -130,6 +134,10 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Crear";
             // 
+            // Er_validar
+            // 
+            this.Er_validar.ContainerControl = this;
+            // 
             // CrearCodigo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -146,10 +154,14 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Txt_texto);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "CrearCodigo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.CrearCodigo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Pic_img)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Er_validar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -165,5 +177,6 @@
         private System.Windows.Forms.Button Btn_guardar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ErrorProvider Er_validar;
     }
 }

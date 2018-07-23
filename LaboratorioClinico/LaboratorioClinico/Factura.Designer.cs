@@ -597,6 +597,7 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Factura";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Factura";
             this.Gpb_laboratoriof.ResumeLayout(false);
             this.Gpb_laboratoriof.PerformLayout();

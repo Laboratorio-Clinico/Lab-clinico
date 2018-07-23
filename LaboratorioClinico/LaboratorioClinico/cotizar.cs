@@ -40,16 +40,16 @@ namespace LaboratorioClinico
                 Cmb_examen.Text = "Seleccione el examen que desea buscar";
                 Cmb_examen.Items.Clear();
                 conexion.ObtenerConexion();
-                MySqlCommand cmd = new MySqlCommand("Select descripcion from examenes", conexion.ObtenerConexion());
-                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
+                MySqlCommand comando= new MySqlCommand("Select sDescripcion from examenes", conexion.ObtenerConexion());
+                MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
+                DataTable tabla = new DataTable();
 
-                da.Fill(dt);
+                adaptador.Fill(tabla);
 
-                Cmb_examen.ValueMember = "codigo";
-                Cmb_examen.DisplayMember = "descripcion";
+                Cmb_examen.ValueMember = "iCodigo";
+                Cmb_examen.DisplayMember = "sDescripcion";
 
-                Cmb_examen.DataSource = dt;
+                Cmb_examen.DataSource = tabla;
 
                 conexion.ObtenerConexion().Close();
 
@@ -64,16 +64,16 @@ namespace LaboratorioClinico
                 Cmb__doctor.Text = "Seleccione el doctor que desea buscar";
                 Cmb__doctor.Items.Clear();
                 conexion.ObtenerConexion();
-                MySqlCommand cmd = new MySqlCommand("proVerDoctores", conexion.ObtenerConexion());
-                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
+                MySqlCommand comando = new MySqlCommand("proVerDoctores", conexion.ObtenerConexion());
+                MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
+                DataTable tabla = new DataTable();
 
-                da.Fill(dt);
+                adaptador.Fill(tabla);
 
-                Cmb__doctor.ValueMember = "idEmpleado";
-                Cmb__doctor.DisplayMember = "nombre";
+                Cmb__doctor.ValueMember = "iIdEmpleado";
+                Cmb__doctor.DisplayMember = "sNombre";
 
-                Cmb__doctor.DataSource = dt;
+                Cmb__doctor.DataSource = tabla;
 
                 conexion.ObtenerConexion().Close();
 
@@ -81,19 +81,19 @@ namespace LaboratorioClinico
             catch (MySqlException error) { MessageBox.Show(error.Message); }
         }
 
-        public void proBuscarCotizacion(int idExamen, int idEmpleado) {
+        public void proBuscarCotizacion(int iIdExamen, int iIdEmpleado) {
             try
             {
-                MySqlCommand cmd = new MySqlCommand("Pro_cotizacionDeExamenes", conexion.ObtenerConexion());
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("idExamen", idExamen);
-                cmd.Parameters.AddWithValue("idEmpleado", idEmpleado);
+                MySqlCommand comando= new MySqlCommand("Pro_cotizacionDeExamenes", conexion.ObtenerConexion());
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("iIdExamen", iIdExamen);
+                comando.Parameters.AddWithValue("iIdEmpleado", iIdEmpleado);
                 conexion.ObtenerConexion().Open();
-                cmd.ExecuteNonQuery();
-                DataTable dt = new DataTable();
-                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-                da.Fill(dt);
-                Dgv_verDatos.DataSource = dt;
+                comando.ExecuteNonQuery();
+                DataTable tabla = new DataTable();
+                MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
+                adaptador.Fill(tabla);
+                Dgv_verDatos.DataSource = tabla;
             }
             catch (MySqlException error) { MessageBox.Show(error.Message); }
             finally { conexion.ObtenerConexion().Close(); }
@@ -104,9 +104,9 @@ namespace LaboratorioClinico
 
         private void Btn_buscar_Click(object sender, EventArgs e)
         {
-            int idExamen = Convert.ToInt32(Cmb_examen.SelectedValue);
-            int idEmpleado = Convert.ToInt32(Cmb__doctor.SelectedValue);
-            proBuscarCotizacion(idExamen, idEmpleado);
+            int iIdExamen = Convert.ToInt32(Cmb_examen.SelectedValue);
+            int iIdEmpleado = Convert.ToInt32(Cmb__doctor.SelectedValue);
+            proBuscarCotizacion(iIdExamen, iIdEmpleado);
 
 
 

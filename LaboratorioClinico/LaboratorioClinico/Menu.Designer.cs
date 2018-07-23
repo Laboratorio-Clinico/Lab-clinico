@@ -50,6 +50,7 @@
             this.requerimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.controlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoPacienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nuevoEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.facturaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
@@ -129,6 +130,7 @@
             this.nuevoUsuarioToolStripMenuItem.Name = "nuevoUsuarioToolStripMenuItem";
             this.nuevoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(282, 28);
             this.nuevoUsuarioToolStripMenuItem.Text = "Nuevo Usuario";
+            this.nuevoUsuarioToolStripMenuItem.Click += new System.EventHandler(this.nuevoUsuarioToolStripMenuItem_Click);
             // 
             // bitácoraToolStripMenuItem
             // 
@@ -159,6 +161,7 @@
             this.médicosToolStripMenuItem.Name = "médicosToolStripMenuItem";
             this.médicosToolStripMenuItem.Size = new System.Drawing.Size(218, 28);
             this.médicosToolStripMenuItem.Text = "Médicos";
+            this.médicosToolStripMenuItem.Click += new System.EventHandler(this.médicosToolStripMenuItem_Click);
             // 
             // reportesToolStripMenuItem
             // 
@@ -205,6 +208,7 @@
             this.resultadosToolStripMenuItem.Name = "resultadosToolStripMenuItem";
             this.resultadosToolStripMenuItem.Size = new System.Drawing.Size(223, 28);
             this.resultadosToolStripMenuItem.Text = "Resultados";
+            this.resultadosToolStripMenuItem.Click += new System.EventHandler(this.resultadosToolStripMenuItem_Click);
             // 
             // muestrasToolStripMenuItem
             // 
@@ -245,7 +249,8 @@
             // controlToolStripMenuItem
             // 
             this.controlToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.nuevoPacienteToolStripMenuItem});
+            this.nuevoPacienteToolStripMenuItem,
+            this.nuevoEmpleadoToolStripMenuItem});
             this.controlToolStripMenuItem.Name = "controlToolStripMenuItem";
             this.controlToolStripMenuItem.Size = new System.Drawing.Size(91, 28);
             this.controlToolStripMenuItem.Text = "Control";
@@ -254,9 +259,17 @@
             // 
             this.nuevoPacienteToolStripMenuItem.BackColor = System.Drawing.Color.PowderBlue;
             this.nuevoPacienteToolStripMenuItem.Name = "nuevoPacienteToolStripMenuItem";
-            this.nuevoPacienteToolStripMenuItem.Size = new System.Drawing.Size(219, 28);
+            this.nuevoPacienteToolStripMenuItem.Size = new System.Drawing.Size(231, 28);
             this.nuevoPacienteToolStripMenuItem.Text = "Nuevo Paciente";
             this.nuevoPacienteToolStripMenuItem.Click += new System.EventHandler(this.nuevoPacienteToolStripMenuItem_Click);
+            // 
+            // nuevoEmpleadoToolStripMenuItem
+            // 
+            this.nuevoEmpleadoToolStripMenuItem.BackColor = System.Drawing.Color.PowderBlue;
+            this.nuevoEmpleadoToolStripMenuItem.Name = "nuevoEmpleadoToolStripMenuItem";
+            this.nuevoEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(231, 28);
+            this.nuevoEmpleadoToolStripMenuItem.Text = "Nuevo Empleado";
+            this.nuevoEmpleadoToolStripMenuItem.Click += new System.EventHandler(this.nuevoEmpleadoToolStripMenuItem_Click);
             // 
             // facturaciónToolStripMenuItem
             // 
@@ -397,6 +410,7 @@
             this.lbl_hora.Size = new System.Drawing.Size(64, 24);
             this.lbl_hora.TabIndex = 7;
             this.lbl_hora.Text = "label3";
+            this.lbl_hora.Click += new System.EventHandler(this.lbl_hora_Click);
             // 
             // timer1
             // 
@@ -498,5 +512,6 @@
         private System.Windows.Forms.Label lbl_fecha;
         private System.Windows.Forms.Timer tm_menu;
         private System.Windows.Forms.Timer tm_menu2;
+        private System.Windows.Forms.ToolStripMenuItem nuevoEmpleadoToolStripMenuItem;
     }
 }

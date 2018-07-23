@@ -72,6 +72,12 @@
     <Compile Include="CrearCodigo.Designer.cs">
       <DependentUpon>CrearCodigo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empleado.Designer.cs">
+      <DependentUpon>Empleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Exámen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +160,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CrearCodigo.resx">
       <DependentUpon>CrearCodigo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empleado.resx">
+      <DependentUpon>Empleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Exámen.resx">
       <DependentUpon>Exámen.cs</DependentUpon>
@@ -315,6 +324,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\usuario %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frascos.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\business-man-2452808_960_720.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xagua-laboratorio.jpg.pagespeed.ic.EPJznFd7a2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\labmed.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\labo.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laboratorio3.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
