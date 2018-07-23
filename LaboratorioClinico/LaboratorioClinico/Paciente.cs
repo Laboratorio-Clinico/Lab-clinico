@@ -59,9 +59,10 @@ namespace LaboratorioClinico
             cm.Parameters.AddWithValue("@alergiasp", this.Txt_alergiasp.Text);
             cm.Parameters.AddWithValue("@quienRefp", this.Txt_refierep.Text);
             cm.Parameters.AddWithValue("@sexop", this.Cmb_sexop.Text);
-            cm.Parameters.AddWithValue("@fechaNacip", this.Dtp_fechap.Value.ToString("yyyy-MM-dd"));
-            cm.Parameters.AddWithValue("@fechaEmip", this.Dtp_fecha2p.Value.ToString("yyyy-MM-dd"));
-          
+            cm.Parameters.AddWithValue("@fechaNacip", this.Dtp_fechap.Text);
+            cm.Parameters.AddWithValue("@fechaEmip", this.Dtp_fecha2p.Text);
+            cm.Parameters.AddWithValue("@horaEmip", this.Txt_horap.Text);
+
             int query = cm.ExecuteNonQuery();
             if (query == 1)
             {
@@ -71,6 +72,32 @@ namespace LaboratorioClinico
             {
                 MessageBox.Show("No se pudo ingresar", "Incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+        private bool Validar()
+        {
+            bool bValor = true;
+
+            if (Txt_alergiasp.Text == "")
+            {
+                bValor = false;
+                Er_validar.SetError(Txt_alergiasp, "Ingrese alergias o ninguna");
+            }
+            return bValor;
+        }
+
+       /* private void BorrarMsj()
+        {
+            Er_validar.SetError(Txt_contraseña, "");
+            Er_validar.SetError(Txt_usuario, "");
+        }*/
+        private void Paciente_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Txt_alergiasp_TextChanged(object sender, EventArgs e)
+        {
+           // Validar();
         }
     }
 }

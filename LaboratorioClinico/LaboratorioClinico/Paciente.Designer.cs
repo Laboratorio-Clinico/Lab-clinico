@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Paciente));
             this.Btn_guardarp = new System.Windows.Forms.Button();
             this.Gpb_guardarp = new System.Windows.Forms.GroupBox();
@@ -57,12 +58,17 @@
             this.Gpb_fechanp = new System.Windows.Forms.GroupBox();
             this.Dtp_fechap = new System.Windows.Forms.DateTimePicker();
             this.Dtp_fecha2p = new System.Windows.Forms.DateTimePicker();
+            this.Lbl_horap = new System.Windows.Forms.Label();
             this.Lbl_fechaep = new System.Windows.Forms.Label();
+            this.Txt_horap = new System.Windows.Forms.TextBox();
             this.Gpb_fechap = new System.Windows.Forms.GroupBox();
+            this.Er_validar = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             this.Gpb_guardarp.SuspendLayout();
             this.Gpb_datosp.SuspendLayout();
             this.Gpb_fechanp.SuspendLayout();
             this.Gpb_fechap.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Er_validar)).BeginInit();
             this.SuspendLayout();
             // 
             // Btn_guardarp
@@ -86,7 +92,6 @@
             this.Gpb_guardarp.Size = new System.Drawing.Size(95, 82);
             this.Gpb_guardarp.TabIndex = 2;
             this.Gpb_guardarp.TabStop = false;
-            this.Gpb_guardarp.Enter += new System.EventHandler(this.Gpb_guardarp_Enter);
             // 
             // label10
             // 
@@ -102,6 +107,7 @@
             // Gpb_datosp
             // 
             this.Gpb_datosp.BackColor = System.Drawing.Color.Transparent;
+            this.Gpb_datosp.Controls.Add(this.label1);
             this.Gpb_datosp.Controls.Add(this.Lbl_correop);
             this.Gpb_datosp.Controls.Add(this.Txt_correoP);
             this.Gpb_datosp.Controls.Add(this.Lbl_tipoSangrep);
@@ -182,7 +188,7 @@
             this.Lbl_alergiasp.Name = "Lbl_alergiasp";
             this.Lbl_alergiasp.Size = new System.Drawing.Size(57, 18);
             this.Lbl_alergiasp.TabIndex = 44;
-            this.Lbl_alergiasp.Text = "Alergías";
+            this.Lbl_alergiasp.Text = "Alergias";
             // 
             // Txt_alergiasp
             // 
@@ -193,6 +199,7 @@
             this.Txt_alergiasp.Name = "Txt_alergiasp";
             this.Txt_alergiasp.Size = new System.Drawing.Size(470, 51);
             this.Txt_alergiasp.TabIndex = 43;
+            this.Txt_alergiasp.TextChanged += new System.EventHandler(this.Txt_alergiasp_TextChanged);
             // 
             // Btn_expedientep
             // 
@@ -378,6 +385,17 @@
             this.Dtp_fecha2p.Size = new System.Drawing.Size(247, 26);
             this.Dtp_fecha2p.TabIndex = 41;
             // 
+            // Lbl_horap
+            // 
+            this.Lbl_horap.AutoSize = true;
+            this.Lbl_horap.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_horap.ForeColor = System.Drawing.Color.White;
+            this.Lbl_horap.Location = new System.Drawing.Point(302, 20);
+            this.Lbl_horap.Name = "Lbl_horap";
+            this.Lbl_horap.Size = new System.Drawing.Size(43, 18);
+            this.Lbl_horap.TabIndex = 39;
+            this.Lbl_horap.Text = "Hora:";
+            // 
             // Lbl_fechaep
             // 
             this.Lbl_fechaep.AutoSize = true;
@@ -389,17 +407,43 @@
             this.Lbl_fechaep.TabIndex = 38;
             this.Lbl_fechaep.Text = "Fecha emisión expediente:";
             // 
+            // Txt_horap
+            // 
+            this.Txt_horap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_horap.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_horap.Location = new System.Drawing.Point(300, 45);
+            this.Txt_horap.Name = "Txt_horap";
+            this.Txt_horap.Size = new System.Drawing.Size(67, 25);
+            this.Txt_horap.TabIndex = 29;
+            // 
             // Gpb_fechap
             // 
             this.Gpb_fechap.BackColor = System.Drawing.Color.Transparent;
             this.Gpb_fechap.Controls.Add(this.Dtp_fecha2p);
             this.Gpb_fechap.Controls.Add(this.Lbl_fechaep);
+            this.Gpb_fechap.Controls.Add(this.Txt_horap);
+            this.Gpb_fechap.Controls.Add(this.Lbl_horap);
             this.Gpb_fechap.Location = new System.Drawing.Point(31, 371);
             this.Gpb_fechap.Name = "Gpb_fechap";
             this.Gpb_fechap.Size = new System.Drawing.Size(590, 82);
             this.Gpb_fechap.TabIndex = 3;
             this.Gpb_fechap.TabStop = false;
             this.Gpb_fechap.Enter += new System.EventHandler(this.groupBox4_Enter);
+            // 
+            // Er_validar
+            // 
+            this.Er_validar.ContainerControl = this;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(302, 31);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(79, 18);
+            this.label1.TabIndex = 49;
+            this.label1.Text = "Expediente:";
             // 
             // Paciente
             // 
@@ -415,6 +459,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Paciente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.Paciente_Load);
             this.Gpb_guardarp.ResumeLayout(false);
             this.Gpb_guardarp.PerformLayout();
             this.Gpb_datosp.ResumeLayout(false);
@@ -422,6 +467,7 @@
             this.Gpb_fechanp.ResumeLayout(false);
             this.Gpb_fechap.ResumeLayout(false);
             this.Gpb_fechap.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Er_validar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -453,9 +499,13 @@
         private System.Windows.Forms.GroupBox Gpb_fechanp;
         private System.Windows.Forms.DateTimePicker Dtp_fechap;
         private System.Windows.Forms.DateTimePicker Dtp_fecha2p;
+        private System.Windows.Forms.Label Lbl_horap;
         private System.Windows.Forms.Label Lbl_fechaep;
+        private System.Windows.Forms.TextBox Txt_horap;
         private System.Windows.Forms.GroupBox Gpb_fechap;
         private System.Windows.Forms.Label Lbl_correop;
         private System.Windows.Forms.TextBox Txt_correoP;
+        private System.Windows.Forms.ErrorProvider Er_validar;
+        private System.Windows.Forms.Label label1;
     }
 }

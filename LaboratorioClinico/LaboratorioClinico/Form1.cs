@@ -51,7 +51,7 @@ namespace LaboratorioClinico
 
             try
             {
-                MySqlDataAdapter sda = new MySqlDataAdapter("select count(*) from usuario where usuarsio='" + user + "'and contraseña ='" + pass + "'", conexion.ObtenerConexion());
+                MySqlDataAdapter sda = new MySqlDataAdapter("select count(*) from usuario where usuario='" + user + "'and contraseña ='" + pass + "'", conexion.ObtenerConexion());
                 MySqlCommand cmd = conexion.ObtenerConexion().CreateCommand();
                 DataTable datos = new DataTable();
                 sda.Fill(datos);
@@ -75,6 +75,8 @@ namespace LaboratorioClinico
                 else
                 {
                     MessageBox.Show("Usuario o Contrasena Incorrecta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Txt_usuario.ResetText();
+                    Txt_contraseña.ResetText();
                 }
             }catch(Exception ex)
             {

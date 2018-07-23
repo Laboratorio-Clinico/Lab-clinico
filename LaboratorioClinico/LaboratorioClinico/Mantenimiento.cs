@@ -119,15 +119,5 @@ namespace LaboratorioClinico
             cmd.ExecuteNonQuery();
             MessageBox.Show("Cliente Eliminado Exitosamente");
         }
-
-        private void tabPage6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage5_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

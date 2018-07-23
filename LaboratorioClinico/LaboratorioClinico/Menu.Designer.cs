@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.pacienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.administraciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Tm_admin = new System.Windows.Forms.ToolStripMenuItem();
             this.segurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bitácoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,7 +46,7 @@
             this.resultadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.muestrasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.leerCódigoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.crearCódigoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Tm_crearCodigo = new System.Windows.Forms.ToolStripMenuItem();
             this.requerimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.controlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoPacienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -68,6 +68,7 @@
             this.lbl_fecha = new System.Windows.Forms.Label();
             this.tm_menu = new System.Windows.Forms.Timer(this.components);
             this.tm_menu2 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -83,7 +84,7 @@
             this.menuStrip1.Font = new System.Drawing.Font("Perpetua", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.pacienteToolStripMenuItem,
-            this.administraciónToolStripMenuItem,
+            this.Tm_admin,
             this.reportesToolStripMenuItem,
             this.cotizaciónToolStripMenuItem,
             this.controlToolStripMenuItem,
@@ -101,16 +102,16 @@
             this.pacienteToolStripMenuItem.Size = new System.Drawing.Size(75, 28);
             this.pacienteToolStripMenuItem.Text = "Inicio";
             // 
-            // administraciónToolStripMenuItem
+            // Tm_admin
             // 
-            this.administraciónToolStripMenuItem.BackColor = System.Drawing.Color.Teal;
-            this.administraciónToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Tm_admin.BackColor = System.Drawing.Color.Teal;
+            this.Tm_admin.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.segurToolStripMenuItem,
             this.mantenimientoToolStripMenuItem,
             this.médicosToolStripMenuItem});
-            this.administraciónToolStripMenuItem.Name = "administraciónToolStripMenuItem";
-            this.administraciónToolStripMenuItem.Size = new System.Drawing.Size(161, 28);
-            this.administraciónToolStripMenuItem.Text = "Administración";
+            this.Tm_admin.Name = "Tm_admin";
+            this.Tm_admin.Size = new System.Drawing.Size(161, 28);
+            this.Tm_admin.Text = "Administración";
             // 
             // segurToolStripMenuItem
             // 
@@ -128,7 +129,7 @@
             // 
             this.nuevoUsuarioToolStripMenuItem.BackColor = System.Drawing.Color.PowderBlue;
             this.nuevoUsuarioToolStripMenuItem.Name = "nuevoUsuarioToolStripMenuItem";
-            this.nuevoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(282, 28);
+            this.nuevoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(321, 28);
             this.nuevoUsuarioToolStripMenuItem.Text = "Nuevo Usuario";
             this.nuevoUsuarioToolStripMenuItem.Click += new System.EventHandler(this.nuevoUsuarioToolStripMenuItem_Click);
             // 
@@ -136,7 +137,7 @@
             // 
             this.bitácoraToolStripMenuItem.BackColor = System.Drawing.Color.PowderBlue;
             this.bitácoraToolStripMenuItem.Name = "bitácoraToolStripMenuItem";
-            this.bitácoraToolStripMenuItem.Size = new System.Drawing.Size(282, 28);
+            this.bitácoraToolStripMenuItem.Size = new System.Drawing.Size(321, 28);
             this.bitácoraToolStripMenuItem.Text = "Bitácora";
             this.bitácoraToolStripMenuItem.Click += new System.EventHandler(this.bitácoraToolStripMenuItem_Click);
             // 
@@ -144,8 +145,8 @@
             // 
             this.cambioDeContraseñaToolStripMenuItem.BackColor = System.Drawing.Color.PowderBlue;
             this.cambioDeContraseñaToolStripMenuItem.Name = "cambioDeContraseñaToolStripMenuItem";
-            this.cambioDeContraseñaToolStripMenuItem.Size = new System.Drawing.Size(282, 28);
-            this.cambioDeContraseñaToolStripMenuItem.Text = "Cambio de Contraseña";
+            this.cambioDeContraseñaToolStripMenuItem.Size = new System.Drawing.Size(321, 28);
+            this.cambioDeContraseñaToolStripMenuItem.Text = "Configuracion de Usuarios";
             // 
             // mantenimientoToolStripMenuItem
             // 
@@ -215,7 +216,7 @@
             this.muestrasToolStripMenuItem.BackColor = System.Drawing.Color.PowderBlue;
             this.muestrasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.leerCódigoToolStripMenuItem,
-            this.crearCódigoToolStripMenuItem});
+            this.Tm_crearCodigo});
             this.muestrasToolStripMenuItem.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.muestrasToolStripMenuItem.Name = "muestrasToolStripMenuItem";
             this.muestrasToolStripMenuItem.Size = new System.Drawing.Size(223, 28);
@@ -229,13 +230,13 @@
             this.leerCódigoToolStripMenuItem.Text = "Leer código";
             this.leerCódigoToolStripMenuItem.Click += new System.EventHandler(this.leerCódigoToolStripMenuItem_Click);
             // 
-            // crearCódigoToolStripMenuItem
+            // Tm_crearCodigo
             // 
-            this.crearCódigoToolStripMenuItem.BackColor = System.Drawing.Color.PowderBlue;
-            this.crearCódigoToolStripMenuItem.Name = "crearCódigoToolStripMenuItem";
-            this.crearCódigoToolStripMenuItem.Size = new System.Drawing.Size(197, 28);
-            this.crearCódigoToolStripMenuItem.Text = "Crear código";
-            this.crearCódigoToolStripMenuItem.Click += new System.EventHandler(this.crearCódigoToolStripMenuItem_Click);
+            this.Tm_crearCodigo.BackColor = System.Drawing.Color.PowderBlue;
+            this.Tm_crearCodigo.Name = "Tm_crearCodigo";
+            this.Tm_crearCodigo.Size = new System.Drawing.Size(197, 28);
+            this.Tm_crearCodigo.Text = "Crear código";
+            this.Tm_crearCodigo.Click += new System.EventHandler(this.crearCódigoToolStripMenuItem_Click);
             // 
             // requerimientosToolStripMenuItem
             // 
@@ -244,7 +245,6 @@
             this.requerimientosToolStripMenuItem.Name = "requerimientosToolStripMenuItem";
             this.requerimientosToolStripMenuItem.Size = new System.Drawing.Size(223, 28);
             this.requerimientosToolStripMenuItem.Text = "Requerimientos";
-            this.requerimientosToolStripMenuItem.Click += new System.EventHandler(this.requerimientosToolStripMenuItem_Click);
             // 
             // controlToolStripMenuItem
             // 
@@ -432,11 +432,12 @@
             // 
             // tm_menu
             // 
-            this.tm_menu.Interval = 50;
+            this.tm_menu.Interval = 10;
             this.tm_menu.Tick += new System.EventHandler(this.tm_menu_Tick);
             // 
             // tm_menu2
             // 
+            this.tm_menu2.Interval = 10;
             this.tm_menu2.Tick += new System.EventHandler(this.tm_menu2_Tick);
             // 
             // Menu
@@ -477,7 +478,7 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem pacienteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem administraciónToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem Tm_admin;
         private System.Windows.Forms.ToolStripMenuItem cotizaciónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem facturaciónToolStripMenuItem;
@@ -488,7 +489,7 @@
         private System.Windows.Forms.ToolStripMenuItem muestrasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem leerCódigoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem crearCódigoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem Tm_crearCodigo;
         private System.Windows.Forms.ToolStripMenuItem requerimientosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ingresarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem controlToolStripMenuItem;
@@ -513,5 +514,6 @@
         private System.Windows.Forms.Timer tm_menu;
         private System.Windows.Forms.Timer tm_menu2;
         private System.Windows.Forms.ToolStripMenuItem nuevoEmpleadoToolStripMenuItem;
+        private System.Windows.Forms.Timer timer2;
     }
 }
