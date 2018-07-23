@@ -41,7 +41,7 @@ namespace LaboratorioClinico
                 Cmb_examen.Text = "Seleccione el examen que desea buscar";
                 Cmb_examen.Items.Clear();
                 conexion.ObtenerConexion();
-                MySqlCommand comando= new MySqlCommand("Select sDescripcion from Examenes", conexion.ObtenerConexion());
+                MySqlCommand comando= new MySqlCommand("Select iIdExamen, sDescripcion from Examenes", conexion.ObtenerConexion());
                 MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
                 DataTable tabla = new DataTable();
 
@@ -105,10 +105,9 @@ namespace LaboratorioClinico
 
         private void Btn_buscar_Click(object sender, EventArgs e)
         {
-            int iIdExamen = Convert.ToInt32(Cmb_examen.SelectedValue);
-            MessageBox.Show("Valor" + iIdExamen);
-            ////int iIdEmpleado = Convert.ToInt32(Cmb__doctor.SelectedValue);
-          ///  proBuscarCotizacion(iIdExamen, iIdEmpleado);
+           int iIdExamen = Convert.ToInt32(Cmb_examen.SelectedValue);
+           int iIdEmpleado = Convert.ToInt32(Cmb__doctor.SelectedValue);
+           proBuscarCotizacion(iIdExamen, iIdEmpleado);
 
 
 
