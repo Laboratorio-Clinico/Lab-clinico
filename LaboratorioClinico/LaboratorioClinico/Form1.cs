@@ -75,6 +75,8 @@ namespace LaboratorioClinico
                 else
                 {
                     MessageBox.Show("Usuario o Contrasena Incorrecta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Txt_usuario.ResetText();
+                    Txt_contraseña.ResetText();
                 }
             }catch(Exception ex)
             {
