@@ -38,7 +38,7 @@ namespace LaboratorioClinico
             
             conexion.ObtenerConexion();
             DataTable dtDatos = new DataTable();
-            MySqlDataAdapter sda = new MySqlDataAdapter("select *from examenes where sDescripcion='" + Convert.ToInt32(Txt_nombrer.Text) + "'", conexion.ObtenerConexion());
+            MySqlDataAdapter sda = new MySqlDataAdapter("select *from examenes where sDescripcion='" + Convert.ToString(Txt_nombrer.Text) + "'", conexion.ObtenerConexion());
             sda.Fill(dtDatos);
             Dgb_requisitosr.DataSource = dtDatos;
             Txt_nombrer.ResetText();
