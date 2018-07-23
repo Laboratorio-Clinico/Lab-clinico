@@ -68,6 +68,7 @@
             this.lbl_fecha = new System.Windows.Forms.Label();
             this.tm_menu = new System.Windows.Forms.Timer(this.components);
             this.tm_menu2 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -128,7 +129,7 @@
             // 
             this.nuevoUsuarioToolStripMenuItem.BackColor = System.Drawing.Color.PowderBlue;
             this.nuevoUsuarioToolStripMenuItem.Name = "nuevoUsuarioToolStripMenuItem";
-            this.nuevoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(282, 28);
+            this.nuevoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(321, 28);
             this.nuevoUsuarioToolStripMenuItem.Text = "Nuevo Usuario";
             this.nuevoUsuarioToolStripMenuItem.Click += new System.EventHandler(this.nuevoUsuarioToolStripMenuItem_Click);
             // 
@@ -136,7 +137,7 @@
             // 
             this.bitácoraToolStripMenuItem.BackColor = System.Drawing.Color.PowderBlue;
             this.bitácoraToolStripMenuItem.Name = "bitácoraToolStripMenuItem";
-            this.bitácoraToolStripMenuItem.Size = new System.Drawing.Size(282, 28);
+            this.bitácoraToolStripMenuItem.Size = new System.Drawing.Size(321, 28);
             this.bitácoraToolStripMenuItem.Text = "Bitácora";
             this.bitácoraToolStripMenuItem.Click += new System.EventHandler(this.bitácoraToolStripMenuItem_Click);
             // 
@@ -144,8 +145,8 @@
             // 
             this.cambioDeContraseñaToolStripMenuItem.BackColor = System.Drawing.Color.PowderBlue;
             this.cambioDeContraseñaToolStripMenuItem.Name = "cambioDeContraseñaToolStripMenuItem";
-            this.cambioDeContraseñaToolStripMenuItem.Size = new System.Drawing.Size(282, 28);
-            this.cambioDeContraseñaToolStripMenuItem.Text = "Cambio de Contraseña";
+            this.cambioDeContraseñaToolStripMenuItem.Size = new System.Drawing.Size(321, 28);
+            this.cambioDeContraseñaToolStripMenuItem.Text = "Configuracion de Usuarios";
             // 
             // mantenimientoToolStripMenuItem
             // 
@@ -431,11 +432,12 @@
             // 
             // tm_menu
             // 
-            this.tm_menu.Interval = 50;
+            this.tm_menu.Interval = 10;
             this.tm_menu.Tick += new System.EventHandler(this.tm_menu_Tick);
             // 
             // tm_menu2
             // 
+            this.tm_menu2.Interval = 10;
             this.tm_menu2.Tick += new System.EventHandler(this.tm_menu2_Tick);
             // 
             // Menu
@@ -512,5 +514,6 @@
         private System.Windows.Forms.Timer tm_menu;
         private System.Windows.Forms.Timer tm_menu2;
         private System.Windows.Forms.ToolStripMenuItem nuevoEmpleadoToolStripMenuItem;
+        private System.Windows.Forms.Timer timer2;
     }
 }

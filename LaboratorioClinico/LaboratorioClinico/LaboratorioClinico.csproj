@@ -62,6 +62,12 @@
       <DependentUpon>Bitácora.cs</DependentUpon>
     </Compile>
     <Compile Include="conexion.cs" />
+    <Compile Include="ConfiguracionUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfiguracionUsuarios.Designer.cs">
+      <DependentUpon>ConfiguracionUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="cotizar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +162,9 @@
     </Compile>
     <EmbeddedResource Include="Bitácora.resx">
       <DependentUpon>Bitácora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfiguracionUsuarios.resx">
+      <DependentUpon>ConfiguracionUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="cotizar.resx">
       <DependentUpon>cotizar.cs</DependentUpon>
