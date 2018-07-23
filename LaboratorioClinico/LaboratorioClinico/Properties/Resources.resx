@@ -121,20 +121,20 @@
   <data name="fondo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fondo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="goma-de-borrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\goma-de-borrar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="frascos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\frascos.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="correo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\correo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="impresora" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\impresora1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="a" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\a.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="xagua-laboratorio.jpg.pagespeed.ic.EPJznFd7a2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\xagua-laboratorio.jpg.pagespeed.ic.EPJznFd7a2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="goma-de-borrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\goma-de-borrar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cancelar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cancelar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,8 +163,8 @@
   <data name="logo3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="a1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\a1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="correo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\correo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="doctor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\doctor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -190,6 +190,12 @@
   <data name="file" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\file.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="laboratorio3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\laboratorio3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="archivo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\archivo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="imagen-monografico-que-deberias-saber-cuentas-de-usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imagen-monografico-que-deberias-saber-cuentas-de-usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -199,8 +205,8 @@
   <data name="fondo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fondo2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="a" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\a.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="enfermera" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\enfermera.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -217,6 +223,9 @@
   <data name="fondomedico" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fondomedico1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="a1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\a1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="labo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\labo.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -229,14 +238,11 @@
   <data name="NPW-cartoon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\NPW-cartoon1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="impresora" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\impresora1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="usuario (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\usuario (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="anadir" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\anadir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="usuario (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\usuario (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="business-man-2452808_960_720" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\business-man-2452808_960_720.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -244,7 +250,7 @@
   <data name="fondo3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fondo3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="laboratorio3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\laboratorio3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="archivo (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\archivo (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

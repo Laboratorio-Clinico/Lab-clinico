@@ -244,6 +244,7 @@
             this.requerimientosToolStripMenuItem.Name = "requerimientosToolStripMenuItem";
             this.requerimientosToolStripMenuItem.Size = new System.Drawing.Size(223, 28);
             this.requerimientosToolStripMenuItem.Text = "Requerimientos";
+            this.requerimientosToolStripMenuItem.Click += new System.EventHandler(this.requerimientosToolStripMenuItem_Click);
             // 
             // controlToolStripMenuItem
             // 
