@@ -163,6 +163,26 @@ namespace LaboratorioClinico.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap codigo_de_seguridad {
+            get {
+                object obj = ResourceManager.GetObject("codigo-de-seguridad", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap codigo_qr {
+            get {
+                object obj = ResourceManager.GetObject("codigo-qr", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap codigobarra {
             get {
                 object obj = ResourceManager.GetObject("codigobarra", resourceCulture);

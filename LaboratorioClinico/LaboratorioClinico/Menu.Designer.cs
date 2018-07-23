@@ -246,8 +246,9 @@
             // 
             this.leerCódigoToolStripMenuItem.BackColor = System.Drawing.Color.PowderBlue;
             this.leerCódigoToolStripMenuItem.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.leerCódigoToolStripMenuItem.Image = global::LaboratorioClinico.Properties.Resources.codigo_qr;
             this.leerCódigoToolStripMenuItem.Name = "leerCódigoToolStripMenuItem";
-            this.leerCódigoToolStripMenuItem.Size = new System.Drawing.Size(171, 26);
+            this.leerCódigoToolStripMenuItem.Size = new System.Drawing.Size(188, 26);
             this.leerCódigoToolStripMenuItem.Text = "Leer código";
             this.leerCódigoToolStripMenuItem.Click += new System.EventHandler(this.leerCódigoToolStripMenuItem_Click);
             // 
@@ -255,9 +256,10 @@
             // 
             this.Tm_crearCodigo.BackColor = System.Drawing.Color.PowderBlue;
             this.Tm_crearCodigo.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tm_crearCodigo.Image = global::LaboratorioClinico.Properties.Resources.codigo_de_seguridad;
             this.Tm_crearCodigo.Name = "Tm_crearCodigo";
-            this.Tm_crearCodigo.Size = new System.Drawing.Size(171, 26);
-            this.Tm_crearCodigo.Text = "Crear código";
+            this.Tm_crearCodigo.Size = new System.Drawing.Size(188, 26);
+            this.Tm_crearCodigo.Text = "Generar código";
             this.Tm_crearCodigo.Click += new System.EventHandler(this.crearCódigoToolStripMenuItem_Click);
             // 
             // requerimientosToolStripMenuItem
@@ -284,6 +286,7 @@
             // 
             this.nuevoPacienteToolStripMenuItem.BackColor = System.Drawing.Color.PowderBlue;
             this.nuevoPacienteToolStripMenuItem.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nuevoPacienteToolStripMenuItem.Image = global::LaboratorioClinico.Properties.Resources.anadir;
             this.nuevoPacienteToolStripMenuItem.Name = "nuevoPacienteToolStripMenuItem";
             this.nuevoPacienteToolStripMenuItem.Size = new System.Drawing.Size(202, 26);
             this.nuevoPacienteToolStripMenuItem.Text = "Nuevo Paciente";
@@ -293,6 +296,7 @@
             // 
             this.nuevoEmpleadoToolStripMenuItem.BackColor = System.Drawing.Color.PowderBlue;
             this.nuevoEmpleadoToolStripMenuItem.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nuevoEmpleadoToolStripMenuItem.Image = global::LaboratorioClinico.Properties.Resources.examen;
             this.nuevoEmpleadoToolStripMenuItem.Name = "nuevoEmpleadoToolStripMenuItem";
             this.nuevoEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(202, 26);
             this.nuevoEmpleadoToolStripMenuItem.Text = "Nuevo Empleado";
