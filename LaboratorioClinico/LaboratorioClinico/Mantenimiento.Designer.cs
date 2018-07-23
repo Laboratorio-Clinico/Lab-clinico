@@ -530,6 +530,7 @@
             this.Btn_eliminarp.Size = new System.Drawing.Size(53, 44);
             this.Btn_eliminarp.TabIndex = 72;
             this.Btn_eliminarp.UseVisualStyleBackColor = true;
+            this.Btn_eliminarp.Click += new System.EventHandler(this.Btn_eliminarp_Click);
             // 
             // Txt_alergiasp
             // 

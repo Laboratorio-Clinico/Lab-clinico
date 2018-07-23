@@ -229,5 +229,10 @@ namespace LaboratorioClinico
             formaDeEmpleado.ShowDialog();
             this.Show();
         }
+
+        private void lbl_hora_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
