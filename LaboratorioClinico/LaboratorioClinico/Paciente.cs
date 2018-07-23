@@ -43,25 +43,51 @@ namespace LaboratorioClinico
 
         }
 
+        public void proLlenareExamen()
+        {
+
+
+            try
+            {
+                Cmb_sangrep.Text = "Seleccione el tipo de sangre";
+                Cmb_sangrep.Items.Clear();
+                conexion.ObtenerConexion();
+                MySqlCommand comando = new MySqlCommand("Select iIdTipoDeSangre,sGrupoSanguineo from tipoDeSangre", conexion.ObtenerConexion());
+                MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
+                DataTable tabla = new DataTable();
+
+                adaptador.Fill(tabla);
+
+                Cmb_sangrep.ValueMember = "iIdTipoDeSangre";
+                Cmb_sangrep.DisplayMember = "sGrupoSanguineo";
+
+                Cmb_sangrep.DataSource = tabla;
+
+                conexion.ObtenerConexion().Close();
+
+            }
+            catch (MySqlException error) { MessageBox.Show(error.Message); }
+        }
         private void Btn_guardarp_Click(object sender, EventArgs e)
         {
             MySqlCommand cm;
             cm = new MySqlCommand("InsertaPaciente", conexion.ObtenerConexion());
             cm.CommandType = CommandType.StoredProcedure;
 
-            cm.Parameters.AddWithValue("@expedientep", this.Txt_expedientep.Text);
-            cm.Parameters.AddWithValue("@nombrep", this.Txt_nombrep.Text);
-            cm.Parameters.AddWithValue("@telefonop", this.Txt_telefonop.Text);
-            cm.Parameters.AddWithValue("@nitp", this.Txt_nitp.Text);
-            cm.Parameters.AddWithValue("@tipoSangrep", this.Txt_tsangrep.Text);
-            cm.Parameters.AddWithValue("@direccionp", this.Txt_direccionp.Text);
-            cm.Parameters.AddWithValue("@correop", this.Txt_correoP.Text);
-            cm.Parameters.AddWithValue("@alergiasp", this.Txt_alergiasp.Text);
-            cm.Parameters.AddWithValue("@quienRefp", this.Txt_refierep.Text);
-            cm.Parameters.AddWithValue("@sexop", this.Cmb_sexop.Text);
-            cm.Parameters.AddWithValue("@fechaNacip", this.Dtp_fechap.Text);
-            cm.Parameters.AddWithValue("@fechaEmip", this.Dtp_fecha2p.Text);
-            cm.Parameters.AddWithValue("@horaEmip", this.Txt_horap.Text);
+            int idPaciente = Convert.ToInt32(Cmb_sangrep.SelectedValue);
+
+
+            cm.Parameters.AddWithValue("@nIdOaciente", this.Txt_expedientep.Text);
+            cm.Parameters.AddWithValue("@sNit", this.Txt_nitp.Text);
+            cm.Parameters.AddWithValue("@sNombre", this.Txt_nombrep.Text);
+            cm.Parameters.AddWithValue("@sDireccion", this.Txt_direccionp.Text);
+            cm.Parameters.AddWithValue("@sGenero", this.Cmb_sexop.Text);
+            cm.Parameters.AddWithValue("@dFechaDeNacimiento", this.Dtp_fechap.Value);
+            cm.Parameters.AddWithValue("@dFechaDeEmision", this.Dtp_fecha2p.Value);
+            cm.Parameters.AddWithValue("@iIdTipoDeSangre", idPaciente);
+            cm.Parameters.AddWithValue("@iIdAlergia", this.Txt_alergiasp.Text);
+            cm.Parameters.AddWithValue("@sRefiere", this.Txt_refierep.Text);
+            
 
             int query = cm.ExecuteNonQuery();
             if (query == 1)
@@ -98,6 +124,11 @@ namespace LaboratorioClinico
         private void Txt_alergiasp_TextChanged(object sender, EventArgs e)
         {
            // Validar();
+        }
+
+        private void Dtp_fechap_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
