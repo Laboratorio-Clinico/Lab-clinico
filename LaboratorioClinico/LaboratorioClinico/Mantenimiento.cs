@@ -100,17 +100,20 @@ namespace LaboratorioClinico
             
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button2_Click(object sender, EventArgs e)
         {
             try
             {
                 Pnl_modificarP.Visible = true;
-                MySqlDataAdapter sda = new MySqlDataAdapter("SELECT pa.sNombre, te.iTelefono, pa.sNit, sa.iIdTipoDeSangre, pa.sDireccion, co.sCorreo, pa.sAlergia, pa.sRefiere, pa.sGenero'" + 
-                                                            "' FROM paciente pa, telefono te, correo co, tipodesangre sa'" +
-                                                            "'WHERE pa.nIdPaciente = te.nDPI AND pa.nIdPaciente = co.nDPI AND pa.nIdPaciente = sa.iIdTipoDeSangre AND'"+
-                                                            "'pa.nIdPaciente='" + Convert.ToInt32(Txt_expe.Text) + "'", conexion.ObtenerConexion());
+                MySqlDataAdapter sda = new MySqlDataAdapter("SELECT pa.sNombre, te.iTelefono  , pa.sNit, sa.iIdTipoDeSangre, pa.sDireccion, co.sCorreo, pa.sAlergia, pa.sRefiere, pa.sGenero FROM paciente pa, telefono te, correo co, tipodesangre sa WHERE pa.nIdPaciente = te.nIdPaciente AND pa.nIdPaciente = co.nIdPaciente AND pa.iIdTipoDeSangre = sa.iIdTipoDeSangre AND pa.nIdPaciente='" + Convert.ToInt32(Txt_expe.Text) + "'", conexion.ObtenerConexion());
                 DataTable datos = new DataTable();
                 sda.Fill(datos);
+
                 Txt_nombre.Text = datos.Rows[0][0].ToString();
                 Txt_telefono.Text = datos.Rows[0][1].ToString();
                 Txt_nit.Text = datos.Rows[0][2].ToString();
@@ -154,7 +157,7 @@ namespace LaboratorioClinico
                 cmd.CommandText = "update paciente set sGenero = '" + Cmb_sexo.Text + "' where nIdPaciente = '" + Convert.ToInt32(Txt_expe.Text) + "'";
                 cmd.ExecuteNonQuery();
 
-                MessageBox.Show("Cliente Modificado Exitosamente.");
+                MessageBox.Show("Paciente Modificado Exitosamente.");
             }
             catch(Exception ex)
             {

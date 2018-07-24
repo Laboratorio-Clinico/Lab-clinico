@@ -1,4 +1,4 @@
-﻿//using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,14 +20,14 @@ namespace LaboratorioClinico
 
         private void Btn_verb_Click(object sender, EventArgs e)
         {
-            /*
+            
             conexion.ObtenerConexion();
             DataTable dtDatos = new DataTable();
-            MySqlDataAdapter tablaData = new MySqlDataAdapter("select *from bitacoraLC", conexion.ObtenerConexion());
+            MySqlDataAdapter tablaData = new MySqlDataAdapter("select *from bitacora", conexion.ObtenerConexion());
             tablaData.Fill(dtDatos);
             Dgv_bitacora.DataSource = dtDatos;
             conexion.ObtenerConexion().Close();
-            */
+            
 
         }
     }
