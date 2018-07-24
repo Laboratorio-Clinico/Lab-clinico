@@ -146,22 +146,16 @@ namespace LaboratorioClinico
           }
         
 
-        public void proBuscarCotizacion(int iIdExamen, int iIdEmpleado, int iIdLaboratorio, int iIdTipoDescuento)
+        public void proBuscarCotizacion(int iIdExamenes, int iIdEmpleado, int iIdLaboratorio, int iIdTipoDescuento)
         {
+           
             try
             {
-                MySqlCommand comando = new MySqlCommand("Pro_cotizacionDeExamenes", conexion.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand("Pro_cotizacionesPrecio", conexion.ObtenerConexion());
                 comando.CommandType = CommandType.StoredProcedure;
                 comando.Parameters.Add("@iIdExamen", MySqlDbType.Int16);
-                comando.Parameters.Add("@iIdEmpleado", MySqlDbType.Int16);
-                comando.Parameters.Add("@iIdLaboratorio", MySqlDbType.Int16);
-                comando.Parameters.Add("@iIdTipoDescuento", MySqlDbType.Int16);
-                comando.Parameters["@iIdExamen"].Value = iIdExamen;
-                comando.Parameters["@iIdEmpleado"].Value = iIdEmpleado;
-                comando.Parameters["@iIdlaboratorio"].Value = iIdLaboratorio;
-                comando.Parameters["@iIdTipoDescuento"].Value = iIdTipoDescuento;
-                comando.Parameters.AddWithValue("iIdExamen", iIdExamen);
-                comando.Parameters.AddWithValue("iIdEmpleado", iIdEmpleado);
+                comando.Parameters["@iIdExamen"].Value = iIdExamenes;
+                comando.Parameters.AddWithValue("iIdExamen", iIdExamenes);
                 conexion.ObtenerConexion().Open();
                 comando.ExecuteNonQuery();
                 DataTable tabla = new DataTable();
@@ -175,16 +169,16 @@ namespace LaboratorioClinico
 
 
         }
-        public void proPrecioyTotal(int iIdExamen){
+        public void proPrecioyTotal(int iIdExamenes){
             double doPrecio = 0;
             double doDescuento = 0;
             double doTotal = 0;
             try
             {
-                MySqlCommand comando = new MySqlCommand("Pro_consultaDePrecio", conexion.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand("Pro_cotizacionesPrecio", conexion.ObtenerConexion());
                 comando.CommandType = CommandType.StoredProcedure;
                 comando.Parameters.Add("@iIdExamen", MySqlDbType.Int16);
-                comando.Parameters["@iIdExamen"].Value = iIdExamen;
+                comando.Parameters["@iIdExamen"].Value = iIdExamenes;
                 conexion.ObtenerConexion().Open();
                 comando.ExecuteNonQuery();
                 MySqlDataReader buscador = comando.ExecuteReader();
@@ -202,12 +196,12 @@ namespace LaboratorioClinico
 
         private void Btn_buscar_Click(object sender, EventArgs e)
         {
-            int iIdExamen = Convert.ToInt32(Cmb_examen.SelectedValue);
+            int iIdExamenes = Convert.ToInt32(Cmb_examen.SelectedValue);
             int iIdEmpleado = Convert.ToInt32(Cmb__doctor.SelectedValue);
             int iIdTipoDescuento = Convert.ToInt32(Cmb_tipoDeDescuento.SelectedValue);
             int iIdLaboratorio = Convert.ToInt32(Cmb_laboratorio.SelectedValue);
-            proBuscarCotizacion(iIdExamen, iIdEmpleado, iIdLaboratorio, iIdTipoDescuento);
-            proPrecioyTotal(iIdExamen);
+            proBuscarCotizacion(iIdExamenes, iIdEmpleado, iIdLaboratorio, iIdTipoDescuento);
+            proPrecioyTotal(iIdExamenes);
 
 
         }
