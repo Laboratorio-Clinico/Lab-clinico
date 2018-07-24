@@ -156,7 +156,7 @@ namespace LaboratorioClinico
             {
 
                 MySqlCommand comando;
-                comando = new MySqlCommand("Pro_ingresoNuevoEmpleado", conexion.ObtenerConexion());
+                comando = new MySqlCommand("Pro_agregarCotizacion", conexion.ObtenerConexion());
                 comando.CommandType = CommandType.StoredProcedure;
 
                 comando.Parameters.AddWithValue("@iAIdLaboratorio", iIdLaboratorio);
