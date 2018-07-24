@@ -35,13 +35,24 @@ namespace LaboratorioClinico
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+         
             conexion.ObtenerConexion();
             DataTable dtDatos = new DataTable();
             MySqlDataAdapter sda = new MySqlDataAdapter("select *from examenes where sDescripcion='" + Convert.ToString(Txt_nombrer.Text) + "'", conexion.ObtenerConexion());
             sda.Fill(dtDatos);
-            Dgb_requisitosr.DataSource = dtDatos;
-            Txt_nombrer.ResetText();
+            int a = 1;
+            try
+            {                
+                    Dgb_requisitosr.DataSource = dtDatos;
+                
+            }catch (Exception ex){
+
+                MessageBox.Show("No se encuentra el examen intente de nuevo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Txt_nombrer.ResetText();
+
+            }
+           
+          
            
            
         }

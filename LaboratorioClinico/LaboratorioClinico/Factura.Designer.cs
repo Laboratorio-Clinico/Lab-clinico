@@ -37,6 +37,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Gpb_detallef = new System.Windows.Forms.GroupBox();
+            this.Lbl_codigof = new System.Windows.Forms.Label();
+            this.Txt_codigof = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
@@ -56,12 +58,6 @@
             this.Lbl_imprimirf = new System.Windows.Forms.Label();
             this.Txt_cantidadf = new System.Windows.Forms.TextBox();
             this.Dgb_facturaf = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label4 = new System.Windows.Forms.Label();
             this.Gpb_datosf = new System.Windows.Forms.GroupBox();
             this.Dtp_fechaf = new System.Windows.Forms.DateTimePicker();
             this.Txt_direccionf = new System.Windows.Forms.TextBox();
@@ -74,8 +70,12 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.Lbl_codigof = new System.Windows.Forms.Label();
-            this.Txt_codigof = new System.Windows.Forms.TextBox();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Gpb_laboratoriof.SuspendLayout();
             this.Gpb_detallef.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgb_facturaf)).BeginInit();
@@ -195,12 +195,33 @@
             this.Gpb_detallef.Controls.Add(this.Txt_cantidadf);
             this.Gpb_detallef.Controls.Add(this.Dgb_facturaf);
             this.Gpb_detallef.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Gpb_detallef.Location = new System.Drawing.Point(12, 223);
+            this.Gpb_detallef.Location = new System.Drawing.Point(12, 210);
             this.Gpb_detallef.Name = "Gpb_detallef";
-            this.Gpb_detallef.Size = new System.Drawing.Size(742, 242);
+            this.Gpb_detallef.Size = new System.Drawing.Size(742, 267);
             this.Gpb_detallef.TabIndex = 1;
             this.Gpb_detallef.TabStop = false;
             this.Gpb_detallef.Text = "Detalle factura";
+            // 
+            // Lbl_codigof
+            // 
+            this.Lbl_codigof.AutoSize = true;
+            this.Lbl_codigof.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_codigof.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_codigof.ForeColor = System.Drawing.Color.White;
+            this.Lbl_codigof.Location = new System.Drawing.Point(28, 23);
+            this.Lbl_codigof.Name = "Lbl_codigof";
+            this.Lbl_codigof.Size = new System.Drawing.Size(56, 18);
+            this.Lbl_codigof.TabIndex = 49;
+            this.Lbl_codigof.Text = "Codigo";
+            // 
+            // Txt_codigof
+            // 
+            this.Txt_codigof.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_codigof.Location = new System.Drawing.Point(26, 41);
+            this.Txt_codigof.Multiline = true;
+            this.Txt_codigof.Name = "Txt_codigof";
+            this.Txt_codigof.Size = new System.Drawing.Size(76, 20);
+            this.Txt_codigof.TabIndex = 50;
             // 
             // label12
             // 
@@ -232,7 +253,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(427, 182);
+            this.label9.Location = new System.Drawing.Point(427, 204);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(43, 18);
             this.label9.TabIndex = 46;
@@ -265,7 +286,7 @@
             // Txt_totalf
             // 
             this.Txt_totalf.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_totalf.Location = new System.Drawing.Point(17, 201);
+            this.Txt_totalf.Location = new System.Drawing.Point(17, 223);
             this.Txt_totalf.Multiline = true;
             this.Txt_totalf.Name = "Txt_totalf";
             this.Txt_totalf.Size = new System.Drawing.Size(379, 20);
@@ -298,7 +319,7 @@
             // Txt_totalff
             // 
             this.Txt_totalff.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_totalff.Location = new System.Drawing.Point(430, 200);
+            this.Txt_totalff.Location = new System.Drawing.Point(430, 222);
             this.Txt_totalff.Multiline = true;
             this.Txt_totalff.Name = "Txt_totalff";
             this.Txt_totalff.Size = new System.Drawing.Size(102, 20);
@@ -310,7 +331,7 @@
             this.Lbl_totalf.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_totalf.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_totalf.ForeColor = System.Drawing.Color.White;
-            this.Lbl_totalf.Location = new System.Drawing.Point(14, 180);
+            this.Lbl_totalf.Location = new System.Drawing.Point(14, 202);
             this.Lbl_totalf.Name = "Lbl_totalf";
             this.Lbl_totalf.Size = new System.Drawing.Size(182, 18);
             this.Lbl_totalf.TabIndex = 33;
@@ -338,7 +359,7 @@
             // 
             this.Btn_guardar.BackgroundImage = global::LaboratorioClinico.Properties.Resources.guardar;
             this.Btn_guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Btn_guardar.Location = new System.Drawing.Point(619, 175);
+            this.Btn_guardar.Location = new System.Drawing.Point(619, 197);
             this.Btn_guardar.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_guardar.Name = "Btn_guardar";
             this.Btn_guardar.Size = new System.Drawing.Size(53, 44);
@@ -351,7 +372,7 @@
             this.Lbl_cargarf.AutoSize = true;
             this.Lbl_cargarf.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_cargarf.ForeColor = System.Drawing.Color.White;
-            this.Lbl_cargarf.Location = new System.Drawing.Point(625, 224);
+            this.Lbl_cargarf.Location = new System.Drawing.Point(625, 246);
             this.Lbl_cargarf.Name = "Lbl_cargarf";
             this.Lbl_cargarf.Size = new System.Drawing.Size(38, 15);
             this.Lbl_cargarf.TabIndex = 38;
@@ -371,7 +392,7 @@
             // 
             this.Btn_imprimirf.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Btn_imprimirf.BackgroundImage")));
             this.Btn_imprimirf.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Btn_imprimirf.Location = new System.Drawing.Point(679, 175);
+            this.Btn_imprimirf.Location = new System.Drawing.Point(679, 197);
             this.Btn_imprimirf.Name = "Btn_imprimirf";
             this.Btn_imprimirf.Size = new System.Drawing.Size(53, 44);
             this.Btn_imprimirf.TabIndex = 35;
@@ -382,7 +403,7 @@
             this.Lbl_imprimirf.AutoSize = true;
             this.Lbl_imprimirf.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_imprimirf.ForeColor = System.Drawing.Color.White;
-            this.Lbl_imprimirf.Location = new System.Drawing.Point(684, 224);
+            this.Lbl_imprimirf.Location = new System.Drawing.Point(684, 246);
             this.Lbl_imprimirf.Name = "Lbl_imprimirf";
             this.Lbl_imprimirf.Size = new System.Drawing.Size(48, 15);
             this.Lbl_imprimirf.TabIndex = 36;
@@ -401,6 +422,7 @@
             // 
             this.Dgb_facturaf.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Dgb_facturaf.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column6,
             this.Column1,
             this.Column2,
             this.Column3,
@@ -408,48 +430,8 @@
             this.Column5});
             this.Dgb_facturaf.Location = new System.Drawing.Point(11, 72);
             this.Dgb_facturaf.Name = "Dgb_facturaf";
-            this.Dgb_facturaf.Size = new System.Drawing.Size(703, 95);
+            this.Dgb_facturaf.Size = new System.Drawing.Size(721, 118);
             this.Dgb_facturaf.TabIndex = 34;
-            // 
-            // Column1
-            // 
-            this.Column1.FillWeight = 120F;
-            this.Column1.HeaderText = "Cantidad";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Descripción";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 210;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Precio Unitario";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 160;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Descuento";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Total";
-            this.Column5.Name = "Column5";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(667, 468);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(87, 15);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Ingenieros S.A";
             // 
             // Gpb_datosf
             // 
@@ -464,7 +446,7 @@
             this.Gpb_datosf.Controls.Add(this.Lbl_nombref);
             this.Gpb_datosf.Controls.Add(this.textBox2);
             this.Gpb_datosf.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Gpb_datosf.Location = new System.Drawing.Point(12, 116);
+            this.Gpb_datosf.Location = new System.Drawing.Point(12, 109);
             this.Gpb_datosf.Name = "Gpb_datosf";
             this.Gpb_datosf.Size = new System.Drawing.Size(736, 101);
             this.Gpb_datosf.TabIndex = 2;
@@ -570,7 +552,7 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.DarkRed;
-            this.label10.Location = new System.Drawing.Point(627, 107);
+            this.label10.Location = new System.Drawing.Point(627, 102);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(76, 18);
             this.label10.TabIndex = 5;
@@ -582,32 +564,47 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.DarkRed;
-            this.label11.Location = new System.Drawing.Point(703, 108);
+            this.label11.Location = new System.Drawing.Point(703, 101);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(36, 18);
             this.label11.TabIndex = 6;
             this.label11.Text = "0001";
             // 
-            // Lbl_codigof
+            // Column6
             // 
-            this.Lbl_codigof.AutoSize = true;
-            this.Lbl_codigof.BackColor = System.Drawing.Color.Transparent;
-            this.Lbl_codigof.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_codigof.ForeColor = System.Drawing.Color.White;
-            this.Lbl_codigof.Location = new System.Drawing.Point(28, 23);
-            this.Lbl_codigof.Name = "Lbl_codigof";
-            this.Lbl_codigof.Size = new System.Drawing.Size(56, 18);
-            this.Lbl_codigof.TabIndex = 49;
-            this.Lbl_codigof.Text = "Codigo";
+            this.Column6.HeaderText = "Codigo";
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 70;
             // 
-            // Txt_codigof
+            // Column1
             // 
-            this.Txt_codigof.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_codigof.Location = new System.Drawing.Point(26, 41);
-            this.Txt_codigof.Multiline = true;
-            this.Txt_codigof.Name = "Txt_codigof";
-            this.Txt_codigof.Size = new System.Drawing.Size(76, 20);
-            this.Txt_codigof.TabIndex = 50;
+            this.Column1.FillWeight = 120F;
+            this.Column1.HeaderText = "Cantidad";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 90;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Descripción";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 210;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Precio Unitario";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 120;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Descuento";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 90;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Total";
+            this.Column5.Name = "Column5";
             // 
             // Factura
             // 
@@ -619,7 +616,6 @@
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.Gpb_datosf);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.Gpb_detallef);
             this.Controls.Add(this.Gpb_laboratoriof);
             this.DoubleBuffered = true;
@@ -646,7 +642,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox Gpb_detallef;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox Gpb_datosf;
         private System.Windows.Forms.TextBox Txt_direccionf;
@@ -663,11 +658,6 @@
         private System.Windows.Forms.DateTimePicker Dtp_fechaf;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button Btn_imprimirf;
@@ -688,5 +678,11 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label Lbl_codigof;
         private System.Windows.Forms.TextBox Txt_codigof;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
 }

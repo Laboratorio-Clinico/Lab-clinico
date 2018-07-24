@@ -58,9 +58,7 @@
             this.Gpb_fechanp = new System.Windows.Forms.GroupBox();
             this.Dtp_fechap = new System.Windows.Forms.DateTimePicker();
             this.Dtp_fecha2p = new System.Windows.Forms.DateTimePicker();
-            this.Lbl_horap = new System.Windows.Forms.Label();
             this.Lbl_fechaep = new System.Windows.Forms.Label();
-            this.Txt_horap = new System.Windows.Forms.TextBox();
             this.Gpb_fechap = new System.Windows.Forms.GroupBox();
             this.Er_validar = new System.Windows.Forms.ErrorProvider(this.components);
             this.Cmb_sangrep = new System.Windows.Forms.ComboBox();
@@ -375,7 +373,7 @@
             // Dtp_fechap
             // 
             this.Dtp_fechap.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.Dtp_fechap.CustomFormat = "dd-MM-yy";
+            this.Dtp_fechap.CustomFormat = "yyyy-mm-dd";
             this.Dtp_fechap.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.Dtp_fechap.Location = new System.Drawing.Point(26, 25);
             this.Dtp_fechap.Name = "Dtp_fechap";
@@ -385,22 +383,13 @@
             // 
             // Dtp_fecha2p
             // 
+            this.Dtp_fecha2p.CustomFormat = "yyyy-mm-dd";
             this.Dtp_fecha2p.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Dtp_fecha2p.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.Dtp_fecha2p.Location = new System.Drawing.Point(36, 45);
             this.Dtp_fecha2p.Name = "Dtp_fecha2p";
             this.Dtp_fecha2p.Size = new System.Drawing.Size(247, 26);
             this.Dtp_fecha2p.TabIndex = 41;
-            // 
-            // Lbl_horap
-            // 
-            this.Lbl_horap.AutoSize = true;
-            this.Lbl_horap.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_horap.ForeColor = System.Drawing.Color.White;
-            this.Lbl_horap.Location = new System.Drawing.Point(302, 20);
-            this.Lbl_horap.Name = "Lbl_horap";
-            this.Lbl_horap.Size = new System.Drawing.Size(43, 18);
-            this.Lbl_horap.TabIndex = 39;
-            this.Lbl_horap.Text = "Hora:";
             // 
             // Lbl_fechaep
             // 
@@ -413,22 +402,11 @@
             this.Lbl_fechaep.TabIndex = 38;
             this.Lbl_fechaep.Text = "Fecha emisión expediente:";
             // 
-            // Txt_horap
-            // 
-            this.Txt_horap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.Txt_horap.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_horap.Location = new System.Drawing.Point(300, 45);
-            this.Txt_horap.Name = "Txt_horap";
-            this.Txt_horap.Size = new System.Drawing.Size(67, 25);
-            this.Txt_horap.TabIndex = 29;
-            // 
             // Gpb_fechap
             // 
             this.Gpb_fechap.BackColor = System.Drawing.Color.Transparent;
             this.Gpb_fechap.Controls.Add(this.Dtp_fecha2p);
             this.Gpb_fechap.Controls.Add(this.Lbl_fechaep);
-            this.Gpb_fechap.Controls.Add(this.Txt_horap);
-            this.Gpb_fechap.Controls.Add(this.Lbl_horap);
             this.Gpb_fechap.Location = new System.Drawing.Point(31, 371);
             this.Gpb_fechap.Name = "Gpb_fechap";
             this.Gpb_fechap.Size = new System.Drawing.Size(590, 82);
@@ -504,9 +482,7 @@
         private System.Windows.Forms.GroupBox Gpb_fechanp;
         private System.Windows.Forms.DateTimePicker Dtp_fechap;
         private System.Windows.Forms.DateTimePicker Dtp_fecha2p;
-        private System.Windows.Forms.Label Lbl_horap;
         private System.Windows.Forms.Label Lbl_fechaep;
-        private System.Windows.Forms.TextBox Txt_horap;
         private System.Windows.Forms.GroupBox Gpb_fechap;
         private System.Windows.Forms.Label Lbl_correop;
         private System.Windows.Forms.TextBox Txt_correoP;
