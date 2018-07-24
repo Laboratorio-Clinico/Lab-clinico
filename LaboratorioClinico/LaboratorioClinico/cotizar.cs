@@ -172,6 +172,7 @@ namespace LaboratorioClinico
         public void proPrecioyTotal(int iIdExamenes){
             double doPrecio = 0;
             double doDescuento = 0;
+            double doCantidad = 0;
             double doTotal = 0;
             try
             {
@@ -185,8 +186,9 @@ namespace LaboratorioClinico
                 if (buscador.Read() == true)
                 {
                     doPrecio = Convert.ToDouble(buscador["fPrecio"]);
+                    doCantidad = Convert.ToDouble(Txt_Cantidad);
                     doDescuento = Convert.ToDouble(Txt_porcentajeDeDescuento);
-                    doTotal = doPrecio + doDescuento;
+                    doTotal = doPrecio * doCantidad * doDescuento;
                     Txt_Total.Text = Convert.ToString(doTotal);
                 }
             }

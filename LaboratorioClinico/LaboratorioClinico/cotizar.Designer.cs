@@ -54,6 +54,8 @@
             this.Txt_Total = new System.Windows.Forms.TextBox();
             this.Dgv_verDatos = new System.Windows.Forms.DataGridView();
             this.label9 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Txt_Cantidad = new System.Windows.Forms.TextBox();
             this.Gpb_cotizacion.SuspendLayout();
             this.Gpb_botones.SuspendLayout();
             this.Gpb_verDatos.SuspendLayout();
@@ -63,6 +65,8 @@
             // Gpb_cotizacion
             // 
             this.Gpb_cotizacion.BackColor = System.Drawing.Color.Transparent;
+            this.Gpb_cotizacion.Controls.Add(this.label1);
+            this.Gpb_cotizacion.Controls.Add(this.Txt_Cantidad);
             this.Gpb_cotizacion.Controls.Add(this.Cmb__doctor);
             this.Gpb_cotizacion.Controls.Add(this.Lbl_doctor);
             this.Gpb_cotizacion.Controls.Add(this.Cmb_examen);
@@ -216,7 +220,7 @@
             this.Lbl_porcentajeDescuento.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_porcentajeDescuento.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_porcentajeDescuento.ForeColor = System.Drawing.Color.White;
-            this.Lbl_porcentajeDescuento.Location = new System.Drawing.Point(442, 186);
+            this.Lbl_porcentajeDescuento.Location = new System.Drawing.Point(321, 186);
             this.Lbl_porcentajeDescuento.Name = "Lbl_porcentajeDescuento";
             this.Lbl_porcentajeDescuento.Size = new System.Drawing.Size(155, 18);
             this.Lbl_porcentajeDescuento.TabIndex = 44;
@@ -226,7 +230,7 @@
             // 
             this.Txt_porcentajeDeDescuento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Txt_porcentajeDeDescuento.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_porcentajeDeDescuento.Location = new System.Drawing.Point(603, 178);
+            this.Txt_porcentajeDeDescuento.Location = new System.Drawing.Point(482, 178);
             this.Txt_porcentajeDeDescuento.Name = "Txt_porcentajeDeDescuento";
             this.Txt_porcentajeDeDescuento.Size = new System.Drawing.Size(49, 26);
             this.Txt_porcentajeDeDescuento.TabIndex = 43;
@@ -363,6 +367,27 @@
             this.label9.Size = new System.Drawing.Size(0, 33);
             this.label9.TabIndex = 34;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(537, 186);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 18);
+            this.label1.TabIndex = 55;
+            this.label1.Text = "Cantidad";
+            // 
+            // Txt_Cantidad
+            // 
+            this.Txt_Cantidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_Cantidad.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_Cantidad.Location = new System.Drawing.Point(603, 178);
+            this.Txt_Cantidad.Name = "Txt_Cantidad";
+            this.Txt_Cantidad.Size = new System.Drawing.Size(49, 26);
+            this.Txt_Cantidad.TabIndex = 54;
+            // 
             // cotizar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -415,5 +440,7 @@
         private System.Windows.Forms.Label Lbl_doctor;
         private System.Windows.Forms.ComboBox Cmb_examen;
         private System.Windows.Forms.Label Lbl_examen;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox Txt_Cantidad;
     }
 }
