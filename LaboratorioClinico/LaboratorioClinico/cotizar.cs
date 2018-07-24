@@ -176,7 +176,7 @@ namespace LaboratorioClinico
             Txt_noLaboratorio.ResetText();
             Txt_Total.ResetText();
             Txt_porcentajeDeDescuento.ResetText();
-            
+
         }
 
         public void proBuscarCotizacion(int iIdExamenes)
