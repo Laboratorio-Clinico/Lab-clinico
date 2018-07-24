@@ -154,7 +154,8 @@
             this.cambioDeContraseñaToolStripMenuItem.Image = global::LaboratorioClinico.Properties.Resources.configuracion_de_usuario;
             this.cambioDeContraseñaToolStripMenuItem.Name = "cambioDeContraseñaToolStripMenuItem";
             this.cambioDeContraseñaToolStripMenuItem.Size = new System.Drawing.Size(265, 26);
-            this.cambioDeContraseñaToolStripMenuItem.Text = "Configuracion de Usuarios";
+            this.cambioDeContraseñaToolStripMenuItem.Text = "Configuración de Usuarios";
+            this.cambioDeContraseñaToolStripMenuItem.Click += new System.EventHandler(this.cambioDeContraseñaToolStripMenuItem_Click);
             // 
             // mantenimientoToolStripMenuItem
             // 
