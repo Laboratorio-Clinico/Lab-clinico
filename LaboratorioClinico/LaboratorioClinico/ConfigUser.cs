@@ -35,9 +35,23 @@ namespace LaboratorioClinico
             }
             conexion.ObtenerConexion().Close();
             almacen2.Close();
-            
-            
-           
+
+
+            //----------------------------------Cargar Privilegio-----------------------------------------------
+            MySqlCommand cmd = new MySqlCommand("Select sPrivilegio from privilegio", conexion.ObtenerConexion());
+            MySqlDataReader almacen = cmd.ExecuteReader();
+
+            while (almacen2.Read())
+            {
+                Cmb_privi.Refresh();
+                Cmb_privi.Items.Add(almacen.GetValue(0).ToString());
+
+            }
+            conexion.ObtenerConexion().Close();
+            almacen2.Close();
+
+
+
 
 
 
@@ -114,6 +128,11 @@ namespace LaboratorioClinico
         }
 
         private void Tbc_control_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Cmb_privi_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

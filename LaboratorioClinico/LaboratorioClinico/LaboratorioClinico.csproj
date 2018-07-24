@@ -108,18 +108,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="ganacias.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ganacias.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Ganancias.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ganancias.Designer.cs">
-      <DependentUpon>Ganancias.cs</DependentUpon>
-    </Compile>
     <Compile Include="LeerCodigo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -199,13 +187,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ganacias.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>ganacias.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Ganancias.resx">
-      <DependentUpon>Ganancias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LeerCodigo.resx">
       <DependentUpon>LeerCodigo.cs</DependentUpon>

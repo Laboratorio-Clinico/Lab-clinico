@@ -90,6 +90,7 @@
             this.Cmb_privi.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Cmb_privi.Size = new System.Drawing.Size(172, 30);
             this.Cmb_privi.TabIndex = 17;
+            this.Cmb_privi.SelectedIndexChanged += new System.EventHandler(this.Cmb_privi_SelectedIndexChanged);
             // 
             // Btn_cambiar
             // 
