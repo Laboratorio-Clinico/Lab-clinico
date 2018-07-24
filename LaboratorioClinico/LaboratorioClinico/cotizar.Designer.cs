@@ -33,19 +33,15 @@
             this.Lbl_doctor = new System.Windows.Forms.Label();
             this.Cmb_examen = new System.Windows.Forms.ComboBox();
             this.Lbl_examen = new System.Windows.Forms.Label();
-            this.Txt_laboratorio = new System.Windows.Forms.ComboBox();
+            this.Cmb_laboratorio = new System.Windows.Forms.ComboBox();
             this.Lbl_laboratorio = new System.Windows.Forms.Label();
             this.Lbl_fecha = new System.Windows.Forms.Label();
             this.Cmb_tipoDeDescuento = new System.Windows.Forms.ComboBox();
-            this.Lbl_noCotizacion = new System.Windows.Forms.Label();
             this.Lbl_tipoDeDescuento = new System.Windows.Forms.Label();
             this.Txt_noLaboratorio = new System.Windows.Forms.TextBox();
             this.Dtp_fecha = new System.Windows.Forms.DateTimePicker();
             this.Lbl_porcentajeDescuento = new System.Windows.Forms.Label();
             this.Txt_porcentajeDeDescuento = new System.Windows.Forms.TextBox();
-            this.Txt_noCotizacion = new System.Windows.Forms.TextBox();
-            this.Txt_precio = new System.Windows.Forms.TextBox();
-            this.Lbl_precio = new System.Windows.Forms.Label();
             this.Gpb_botones = new System.Windows.Forms.GroupBox();
             this.Lbl_buscar = new System.Windows.Forms.Label();
             this.Btn_requisitos = new System.Windows.Forms.Button();
@@ -55,9 +51,11 @@
             this.Lbl_requisitos = new System.Windows.Forms.Label();
             this.Gpb_verDatos = new System.Windows.Forms.GroupBox();
             this.Lbl_total = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.Txt_Total = new System.Windows.Forms.TextBox();
             this.Dgv_verDatos = new System.Windows.Forms.DataGridView();
             this.label9 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Txt_Cantidad = new System.Windows.Forms.TextBox();
             this.Gpb_cotizacion.SuspendLayout();
             this.Gpb_botones.SuspendLayout();
             this.Gpb_verDatos.SuspendLayout();
@@ -67,23 +65,21 @@
             // Gpb_cotizacion
             // 
             this.Gpb_cotizacion.BackColor = System.Drawing.Color.Transparent;
+            this.Gpb_cotizacion.Controls.Add(this.label1);
+            this.Gpb_cotizacion.Controls.Add(this.Txt_Cantidad);
             this.Gpb_cotizacion.Controls.Add(this.Cmb__doctor);
             this.Gpb_cotizacion.Controls.Add(this.Lbl_doctor);
             this.Gpb_cotizacion.Controls.Add(this.Cmb_examen);
             this.Gpb_cotizacion.Controls.Add(this.Lbl_examen);
-            this.Gpb_cotizacion.Controls.Add(this.Txt_laboratorio);
+            this.Gpb_cotizacion.Controls.Add(this.Cmb_laboratorio);
             this.Gpb_cotizacion.Controls.Add(this.Lbl_laboratorio);
             this.Gpb_cotizacion.Controls.Add(this.Lbl_fecha);
             this.Gpb_cotizacion.Controls.Add(this.Cmb_tipoDeDescuento);
-            this.Gpb_cotizacion.Controls.Add(this.Lbl_noCotizacion);
             this.Gpb_cotizacion.Controls.Add(this.Lbl_tipoDeDescuento);
             this.Gpb_cotizacion.Controls.Add(this.Txt_noLaboratorio);
             this.Gpb_cotizacion.Controls.Add(this.Dtp_fecha);
             this.Gpb_cotizacion.Controls.Add(this.Lbl_porcentajeDescuento);
             this.Gpb_cotizacion.Controls.Add(this.Txt_porcentajeDeDescuento);
-            this.Gpb_cotizacion.Controls.Add(this.Txt_noCotizacion);
-            this.Gpb_cotizacion.Controls.Add(this.Txt_precio);
-            this.Gpb_cotizacion.Controls.Add(this.Lbl_precio);
             this.Gpb_cotizacion.Controls.Add(this.Gpb_botones);
             this.Gpb_cotizacion.Controls.Add(this.Gpb_verDatos);
             this.Gpb_cotizacion.Controls.Add(this.label9);
@@ -127,6 +123,7 @@
             this.Cmb_examen.Name = "Cmb_examen";
             this.Cmb_examen.Size = new System.Drawing.Size(211, 26);
             this.Cmb_examen.TabIndex = 51;
+            this.Cmb_examen.SelectedIndexChanged += new System.EventHandler(this.Cmb_examen_SelectedIndexChanged);
             // 
             // Lbl_examen
             // 
@@ -140,15 +137,16 @@
             this.Lbl_examen.TabIndex = 50;
             this.Lbl_examen.Text = "Examen";
             // 
-            // Txt_laboratorio
+            // Cmb_laboratorio
             // 
-            this.Txt_laboratorio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.Txt_laboratorio.Font = new System.Drawing.Font("Perpetua", 12F);
-            this.Txt_laboratorio.FormattingEnabled = true;
-            this.Txt_laboratorio.Location = new System.Drawing.Point(404, 53);
-            this.Txt_laboratorio.Name = "Txt_laboratorio";
-            this.Txt_laboratorio.Size = new System.Drawing.Size(248, 26);
-            this.Txt_laboratorio.TabIndex = 47;
+            this.Cmb_laboratorio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Cmb_laboratorio.Font = new System.Drawing.Font("Perpetua", 12F);
+            this.Cmb_laboratorio.FormattingEnabled = true;
+            this.Cmb_laboratorio.Location = new System.Drawing.Point(228, 58);
+            this.Cmb_laboratorio.Name = "Cmb_laboratorio";
+            this.Cmb_laboratorio.Size = new System.Drawing.Size(424, 26);
+            this.Cmb_laboratorio.TabIndex = 47;
+            this.Cmb_laboratorio.SelectedIndexChanged += new System.EventHandler(this.Cmb_laboratorio_SelectedIndexChanged);
             // 
             // Lbl_laboratorio
             // 
@@ -156,7 +154,7 @@
             this.Lbl_laboratorio.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_laboratorio.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_laboratorio.ForeColor = System.Drawing.Color.White;
-            this.Lbl_laboratorio.Location = new System.Drawing.Point(255, 56);
+            this.Lbl_laboratorio.Location = new System.Drawing.Point(57, 61);
             this.Lbl_laboratorio.Name = "Lbl_laboratorio";
             this.Lbl_laboratorio.Size = new System.Drawing.Size(77, 18);
             this.Lbl_laboratorio.TabIndex = 37;
@@ -183,18 +181,7 @@
             this.Cmb_tipoDeDescuento.Name = "Cmb_tipoDeDescuento";
             this.Cmb_tipoDeDescuento.Size = new System.Drawing.Size(248, 26);
             this.Cmb_tipoDeDescuento.TabIndex = 49;
-            // 
-            // Lbl_noCotizacion
-            // 
-            this.Lbl_noCotizacion.AutoSize = true;
-            this.Lbl_noCotizacion.BackColor = System.Drawing.Color.Transparent;
-            this.Lbl_noCotizacion.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_noCotizacion.ForeColor = System.Drawing.Color.White;
-            this.Lbl_noCotizacion.Location = new System.Drawing.Point(46, 56);
-            this.Lbl_noCotizacion.Name = "Lbl_noCotizacion";
-            this.Lbl_noCotizacion.Size = new System.Drawing.Size(97, 18);
-            this.Lbl_noCotizacion.TabIndex = 39;
-            this.Lbl_noCotizacion.Text = "No. Cotización";
+            this.Cmb_tipoDeDescuento.SelectedIndexChanged += new System.EventHandler(this.Cmb_tipoDeDescuento_SelectedIndexChanged);
             // 
             // Lbl_tipoDeDescuento
             // 
@@ -212,9 +199,9 @@
             // 
             this.Txt_noLaboratorio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Txt_noLaboratorio.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_noLaboratorio.Location = new System.Drawing.Point(358, 53);
+            this.Txt_noLaboratorio.Location = new System.Drawing.Point(159, 58);
             this.Txt_noLaboratorio.Name = "Txt_noLaboratorio";
-            this.Txt_noLaboratorio.Size = new System.Drawing.Size(40, 26);
+            this.Txt_noLaboratorio.Size = new System.Drawing.Size(49, 26);
             this.Txt_noLaboratorio.TabIndex = 40;
             // 
             // Dtp_fecha
@@ -233,7 +220,7 @@
             this.Lbl_porcentajeDescuento.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_porcentajeDescuento.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_porcentajeDescuento.ForeColor = System.Drawing.Color.White;
-            this.Lbl_porcentajeDescuento.Location = new System.Drawing.Point(319, 186);
+            this.Lbl_porcentajeDescuento.Location = new System.Drawing.Point(321, 186);
             this.Lbl_porcentajeDescuento.Name = "Lbl_porcentajeDescuento";
             this.Lbl_porcentajeDescuento.Size = new System.Drawing.Size(155, 18);
             this.Lbl_porcentajeDescuento.TabIndex = 44;
@@ -243,40 +230,10 @@
             // 
             this.Txt_porcentajeDeDescuento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Txt_porcentajeDeDescuento.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_porcentajeDeDescuento.Location = new System.Drawing.Point(480, 178);
+            this.Txt_porcentajeDeDescuento.Location = new System.Drawing.Point(482, 178);
             this.Txt_porcentajeDeDescuento.Name = "Txt_porcentajeDeDescuento";
             this.Txt_porcentajeDeDescuento.Size = new System.Drawing.Size(49, 26);
             this.Txt_porcentajeDeDescuento.TabIndex = 43;
-            // 
-            // Txt_noCotizacion
-            // 
-            this.Txt_noCotizacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.Txt_noCotizacion.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_noCotizacion.Location = new System.Drawing.Point(159, 53);
-            this.Txt_noCotizacion.Name = "Txt_noCotizacion";
-            this.Txt_noCotizacion.Size = new System.Drawing.Size(88, 26);
-            this.Txt_noCotizacion.TabIndex = 42;
-            // 
-            // Txt_precio
-            // 
-            this.Txt_precio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.Txt_precio.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_precio.Location = new System.Drawing.Point(603, 178);
-            this.Txt_precio.Name = "Txt_precio";
-            this.Txt_precio.Size = new System.Drawing.Size(49, 26);
-            this.Txt_precio.TabIndex = 46;
-            // 
-            // Lbl_precio
-            // 
-            this.Lbl_precio.AutoSize = true;
-            this.Lbl_precio.BackColor = System.Drawing.Color.Transparent;
-            this.Lbl_precio.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_precio.ForeColor = System.Drawing.Color.White;
-            this.Lbl_precio.Location = new System.Drawing.Point(551, 181);
-            this.Lbl_precio.Name = "Lbl_precio";
-            this.Lbl_precio.Size = new System.Drawing.Size(46, 18);
-            this.Lbl_precio.TabIndex = 45;
-            this.Lbl_precio.Text = "Precio";
             // 
             // Gpb_botones
             // 
@@ -363,7 +320,7 @@
             // 
             this.Gpb_verDatos.BackColor = System.Drawing.Color.Transparent;
             this.Gpb_verDatos.Controls.Add(this.Lbl_total);
-            this.Gpb_verDatos.Controls.Add(this.textBox2);
+            this.Gpb_verDatos.Controls.Add(this.Txt_Total);
             this.Gpb_verDatos.Controls.Add(this.Dgv_verDatos);
             this.Gpb_verDatos.Location = new System.Drawing.Point(7, 210);
             this.Gpb_verDatos.Name = "Gpb_verDatos";
@@ -382,14 +339,14 @@
             this.Lbl_total.TabIndex = 31;
             this.Lbl_total.Text = "Total";
             // 
-            // textBox2
+            // Txt_Total
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.textBox2.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(489, 196);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(74, 26);
-            this.textBox2.TabIndex = 32;
+            this.Txt_Total.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_Total.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_Total.Location = new System.Drawing.Point(489, 196);
+            this.Txt_Total.Name = "Txt_Total";
+            this.Txt_Total.Size = new System.Drawing.Size(74, 26);
+            this.Txt_Total.TabIndex = 32;
             // 
             // Dgv_verDatos
             // 
@@ -409,6 +366,27 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(0, 33);
             this.label9.TabIndex = 34;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(537, 186);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 18);
+            this.label1.TabIndex = 55;
+            this.label1.Text = "Cantidad";
+            // 
+            // Txt_Cantidad
+            // 
+            this.Txt_Cantidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_Cantidad.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_Cantidad.Location = new System.Drawing.Point(603, 178);
+            this.Txt_Cantidad.Name = "Txt_Cantidad";
+            this.Txt_Cantidad.Size = new System.Drawing.Size(49, 26);
+            this.Txt_Cantidad.TabIndex = 54;
             // 
             // cotizar
             // 
@@ -437,19 +415,15 @@
         #endregion
 
         private System.Windows.Forms.GroupBox Gpb_cotizacion;
-        private System.Windows.Forms.ComboBox Txt_laboratorio;
+        private System.Windows.Forms.ComboBox Cmb_laboratorio;
         private System.Windows.Forms.Label Lbl_laboratorio;
         private System.Windows.Forms.Label Lbl_fecha;
         private System.Windows.Forms.ComboBox Cmb_tipoDeDescuento;
-        private System.Windows.Forms.Label Lbl_noCotizacion;
         private System.Windows.Forms.Label Lbl_tipoDeDescuento;
         private System.Windows.Forms.TextBox Txt_noLaboratorio;
         private System.Windows.Forms.DateTimePicker Dtp_fecha;
         private System.Windows.Forms.Label Lbl_porcentajeDescuento;
         private System.Windows.Forms.TextBox Txt_porcentajeDeDescuento;
-        private System.Windows.Forms.TextBox Txt_noCotizacion;
-        private System.Windows.Forms.TextBox Txt_precio;
-        private System.Windows.Forms.Label Lbl_precio;
         private System.Windows.Forms.GroupBox Gpb_botones;
         private System.Windows.Forms.Label Lbl_buscar;
         private System.Windows.Forms.Button Btn_requisitos;
@@ -459,12 +433,14 @@
         private System.Windows.Forms.Label Lbl_requisitos;
         private System.Windows.Forms.GroupBox Gpb_verDatos;
         private System.Windows.Forms.Label Lbl_total;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox Txt_Total;
         private System.Windows.Forms.DataGridView Dgv_verDatos;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox Cmb__doctor;
         private System.Windows.Forms.Label Lbl_doctor;
         private System.Windows.Forms.ComboBox Cmb_examen;
         private System.Windows.Forms.Label Lbl_examen;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox Txt_Cantidad;
     }
 }

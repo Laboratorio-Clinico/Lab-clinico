@@ -233,6 +233,16 @@ namespace LaboratorioClinico.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cubo_de_basura {
+            get {
+                object obj = ResourceManager.GetObject("cubo-de-basura", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap doctor {
             get {
                 object obj = ResourceManager.GetObject("doctor", resourceCulture);

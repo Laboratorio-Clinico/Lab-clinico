@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -41,6 +42,13 @@ namespace LaboratorioClinico
 
         }
 
+        public static string EncripContra(string password)
+        {
+            SHA1 sha1 = new System.Security.Cryptography.SHA1CryptoServiceProvider();
+            byte[] input = (new UnicodeEncoding()).GetBytes(password); byte[] hash = sha1.ComputeHash(input);
+            return Convert.ToBase64String(hash);
+
+        }
         private void Btn_ingresar_Click(object sender, EventArgs e)
         {
             BorrarMsj();
