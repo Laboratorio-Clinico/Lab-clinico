@@ -37,7 +37,7 @@ namespace LaboratorioClinico
 
             if (query == 1)
             {
-                MessageBox.Show("Cliente ingresado correctamente", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Empleado ingresado correctamente", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {

@@ -144,9 +144,42 @@ namespace LaboratorioClinico
             else if (iTipoDeDescuento == 9005) { Txt_porcentajeDeDescuento.Text = "0.50"; }
 
           }
-        
 
-        public void proBuscarCotizacion(int iIdExamenes, int iIdEmpleado, int iIdLaboratorio, int iIdTipoDescuento)
+        public void proGuardarCotizacion(int iIdExamenes, int iIdEmpleado, int iIdLaboratorio, int iIdTipoDescuento)
+        {
+
+            double doTotalExamenes = Convert.ToDouble(Txt_Total);
+            double doDescuento = Convert.ToDouble(Txt_porcentajeDeDescuento);
+            double doCantidad = Convert.ToDouble(Txt_Cantidad);
+            double doPrecio = (doTotalExamenes / doDescuento) / doCantidad;
+            try
+            {
+
+                MySqlCommand comando;
+                comando = new MySqlCommand("Pro_ingresoNuevoEmpleado", conexion.ObtenerConexion());
+                comando.CommandType = CommandType.StoredProcedure;
+
+                comando.Parameters.AddWithValue("@iAIdLaboratorio", iIdLaboratorio);
+                comando.Parameters.AddWithValue("@dAFecha", this.Dtp_fecha);
+                comando.Parameters.AddWithValue("@iAIdTipoDeDescuento", iIdTipoDescuento);
+                comando.Parameters.AddWithValue("@iAIdexamen", iIdExamenes);
+                comando.Parameters.AddWithValue("@iACantidad", doCantidad);
+                comando.Parameters.AddWithValue("@iAfPrecio", doPrecio);
+                comando.Parameters.AddWithValue("@iAfDescuento", doDescuento);
+                comando.Parameters.AddWithValue("@iAidEmpleado", iIdEmpleado);
+
+            }
+            catch (MySqlException error) { MessageBox.Show(error.Message); }
+            finally { conexion.ObtenerConexion().Close(); }
+
+            Txt_Cantidad.ResetText();
+            Txt_noLaboratorio.ResetText();
+            Txt_Total.ResetText();
+            Txt_porcentajeDeDescuento.ResetText();
+            
+        }
+
+        public void proBuscarCotizacion(int iIdExamenes)
         {
            
             try
