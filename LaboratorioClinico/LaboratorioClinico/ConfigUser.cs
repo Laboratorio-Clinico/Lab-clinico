@@ -22,7 +22,7 @@ namespace LaboratorioClinico
         {
 
             
-            //----------------------------------Eliminar usuario-----------------------------------------------
+            //----------------------------------Cargar usuario-----------------------------------------------
             MySqlCommand cmd2 = new MySqlCommand("Select sUsuario from usuario", conexion.ObtenerConexion());
             MySqlDataReader almacen2 = cmd2.ExecuteReader();
 
@@ -30,6 +30,8 @@ namespace LaboratorioClinico
             {
                 Cmb_usuarioEliminar.Refresh();
                 Cmb_usuarioEliminar.Items.Add(almacen2.GetValue(0).ToString());
+                Cmb_usuario.Refresh();
+                Cmb_usuario.Items.Add(almacen2.GetValue(0).ToString());
             }
             conexion.ObtenerConexion().Close();
             almacen2.Close();
@@ -78,11 +80,15 @@ namespace LaboratorioClinico
 
             Cmb_usuarioEliminar.ResetText();
             Cmb_usuarioEliminar.Items.Clear();
+            Cmb_usuario.ResetText();
+            Cmb_usuario.Items.Clear();
 
             while (almacen2.Read())
             {
                 Cmb_usuarioEliminar.Refresh();
                 Cmb_usuarioEliminar.Items.Add(almacen2.GetValue(0).ToString());
+                Cmb_usuario.Refresh();
+                Cmb_usuario.Items.Add(almacen2.GetValue(0).ToString());
             }
             conexion.ObtenerConexion().Close();
             almacen2.Close();
@@ -100,6 +106,16 @@ namespace LaboratorioClinico
             
 
             Txt_privilegio.Text = datos.Rows[0][0].ToString();
+        }
+
+        private void Cmb_usuario_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Tbc_control_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

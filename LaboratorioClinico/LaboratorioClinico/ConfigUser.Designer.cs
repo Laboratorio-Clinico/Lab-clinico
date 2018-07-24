@@ -80,6 +80,7 @@
             this.Tbc_control.TabIndex = 2;
             this.Tbc_control.Text = "Privilegios";
             this.Tbc_control.UseVisualStyleBackColor = true;
+            this.Tbc_control.Click += new System.EventHandler(this.Tbc_control_Click);
             // 
             // Cmb_privi
             // 
@@ -129,6 +130,7 @@
             this.Cmb_usuario.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Cmb_usuario.Size = new System.Drawing.Size(172, 30);
             this.Cmb_usuario.TabIndex = 12;
+            this.Cmb_usuario.SelectedIndexChanged += new System.EventHandler(this.Cmb_usuario_SelectedIndexChanged);
             // 
             // label7
             // 
@@ -201,6 +203,7 @@
             this.Txt_privilegio.Enabled = false;
             this.Txt_privilegio.Location = new System.Drawing.Point(141, 186);
             this.Txt_privilegio.Name = "Txt_privilegio";
+            this.Txt_privilegio.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Txt_privilegio.Size = new System.Drawing.Size(172, 29);
             this.Txt_privilegio.TabIndex = 11;
             // 
