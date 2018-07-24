@@ -236,8 +236,9 @@ namespace LaboratorioClinico
             int iIdEmpleado = Convert.ToInt32(Cmb__doctor.SelectedValue);
             int iIdTipoDescuento = Convert.ToInt32(Cmb_tipoDeDescuento.SelectedValue);
             int iIdLaboratorio = Convert.ToInt32(Cmb_laboratorio.SelectedValue);
-            //proBuscarCotizacion(iIdExamenes, iIdEmpleado, iIdLaboratorio, iIdTipoDescuento);
+            proGuardarCotizacion(iIdExamenes, iIdEmpleado, iIdLaboratorio, iIdTipoDescuento);
             proPrecioyTotal(iIdExamenes);
+            proBuscarCotizacion(iIdExamenes);
 
 
         }
