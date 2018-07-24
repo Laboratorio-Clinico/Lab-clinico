@@ -59,7 +59,7 @@ namespace LaboratorioClinico
 
             try
             {
-                MySqlDataAdapter sda = new MySqlDataAdapter("select count(*) from usuario where sUsuario='" + user + "'and sContraseña ='" + pass + "'", conexion.ObtenerConexion());
+                MySqlDataAdapter sda = new MySqlDataAdapter("select count(*) from usuario where sUsuario='" + user + "'and sContrasena ='" + pass + "'", conexion.ObtenerConexion());
                 MySqlCommand cmd = conexion.ObtenerConexion().CreateCommand();
                 DataTable datos = new DataTable();
                 sda.Fill(datos);
