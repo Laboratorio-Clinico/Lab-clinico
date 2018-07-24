@@ -42,18 +42,20 @@ namespace LaboratorioClinico
         {
 
             MySqlCommand cm;
-            cm = new MySqlCommand("Pro_ingresoUsuario", conexion.ObtenerConexion());
+            cm = new MySqlCommand("ingresaUsuario", conexion.ObtenerConexion());
             cm.CommandType = CommandType.StoredProcedure;
 
-            cm.Parameters.AddWithValue("@iCodigoEmpleado", this.Txt_codigoDeEmpleado);
+            cm.Parameters.AddWithValue("@iIdPrivilegio", pPrivilegio);
+            cm.Parameters.AddWithValue("@nDPI", this.Txt_codigoDeEmpleado);
             cm.Parameters.AddWithValue("@sUsuario", this.Txt_usuario);
             cm.Parameters.AddWithValue("@sContrasena", this.Txt_password);
-            cm.Parameters.AddWithValue("@iPrivilegios", pPrivilegio);
+            
 
             int query = cm.ExecuteNonQuery();
 
             if (query == 1)
             {
+                MessageBox.Show("Usuario ingresado correctamente", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -63,7 +65,6 @@ namespace LaboratorioClinico
             Txt_codigoDeEmpleado.ResetText();
             Txt_usuario.ResetText();
             Txt_password.ResetText();
-            MessageBox.Show("Cliente ingresado correctamente", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Cmb_privelegio.ResetText();
 
 
@@ -80,9 +81,14 @@ namespace LaboratorioClinico
                 pPrivilegio = 1;
 
             }
-            if (String.Compare(Cmb_privelegio.SelectedItem.ToString(), "Usuario") == 0)
+            if (String.Compare(Cmb_privelegio.SelectedItem.ToString(), "UsuarioL") == 0)
             {
                 pPrivilegio = 2;
+
+            }
+            if (String.Compare(Cmb_privelegio.SelectedItem.ToString(), "Usuario") == 0)
+            {
+                pPrivilegio =3;
 
             }
 
@@ -91,6 +97,32 @@ namespace LaboratorioClinico
         }
 
         private void Gpb_nuevoUsuario_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Btn_Click(object sender, EventArgs e)
+        {
+            string dpiE = Txt_codigoDeEmpleado.Text;
+
+            MySqlDataAdapter sda = new MySqlDataAdapter("select count(*) from empleado where nIdEmpleado='" + Convert.ToInt64(dpiE) + "'", conexion.ObtenerConexion());
+            DataTable datos = new DataTable();
+            sda.Fill(datos);
+
+            if (datos.Rows[0][0].ToString() == "1")
+            {
+                Pnl_usuario.Visible = true;
+            }
+            else
+            {
+                MessageBox.Show("DPI no encontrado y/o no se encuentra registrado en la base de datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Txt_codigoDeEmpleado.ResetText();
+
+
+            }
+        }
+
+        private void Txt_codigoDeEmpleado_TextChanged(object sender, EventArgs e)
         {
 
         }

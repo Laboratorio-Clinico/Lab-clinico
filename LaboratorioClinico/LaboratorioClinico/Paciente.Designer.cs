@@ -34,6 +34,7 @@
             this.Gpb_guardarp = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
             this.Gpb_datosp = new System.Windows.Forms.GroupBox();
+            this.Cmb_sangrep = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Lbl_correop = new System.Windows.Forms.Label();
             this.Txt_correoP = new System.Windows.Forms.TextBox();
@@ -61,7 +62,6 @@
             this.Lbl_fechaep = new System.Windows.Forms.Label();
             this.Gpb_fechap = new System.Windows.Forms.GroupBox();
             this.Er_validar = new System.Windows.Forms.ErrorProvider(this.components);
-            this.Cmb_sangrep = new System.Windows.Forms.ComboBox();
             this.Gpb_guardarp.SuspendLayout();
             this.Gpb_datosp.SuspendLayout();
             this.Gpb_fechanp.SuspendLayout();
@@ -136,6 +136,17 @@
             this.Gpb_datosp.TabIndex = 2;
             this.Gpb_datosp.TabStop = false;
             this.Gpb_datosp.Text = "Datos Paciente";
+            // 
+            // Cmb_sangrep
+            // 
+            this.Cmb_sangrep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Cmb_sangrep.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cmb_sangrep.FormattingEnabled = true;
+            this.Cmb_sangrep.Location = new System.Drawing.Point(410, 117);
+            this.Cmb_sangrep.Name = "Cmb_sangrep";
+            this.Cmb_sangrep.Size = new System.Drawing.Size(180, 25);
+            this.Cmb_sangrep.TabIndex = 50;
+            this.Cmb_sangrep.SelectedIndexChanged += new System.EventHandler(this.Cmb_sangrep_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -417,16 +428,6 @@
             // Er_validar
             // 
             this.Er_validar.ContainerControl = this;
-            // 
-            // Cmb_sangrep
-            // 
-            this.Cmb_sangrep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.Cmb_sangrep.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cmb_sangrep.FormattingEnabled = true;
-            this.Cmb_sangrep.Location = new System.Drawing.Point(410, 117);
-            this.Cmb_sangrep.Name = "Cmb_sangrep";
-            this.Cmb_sangrep.Size = new System.Drawing.Size(180, 25);
-            this.Cmb_sangrep.TabIndex = 50;
             // 
             // Paciente
             // 
