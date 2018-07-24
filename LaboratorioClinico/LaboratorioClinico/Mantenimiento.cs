@@ -106,7 +106,7 @@ namespace LaboratorioClinico
             {
                 Pnl_modificarP.Visible = true;
                 MySqlDataAdapter sda = new MySqlDataAdapter("SELECT pa.sNombre, te.iTelefono, pa.sNit, sa.iIdTipoDeSangre, pa.sDireccion, co.sCorreo, pa.sAlergia, pa.sRefiere, pa.sGenero'" + 
-                                                            "' FROM paciente pa, telefono te, correo co, tipodesangre sa, alergias al'" +
+                                                            "' FROM paciente pa, telefono te, correo co, tipodesangre sa'" +
                                                             "'WHERE pa.nIdPaciente = te.nDPI AND pa.nIdPaciente = co.nDPI AND pa.nIdPaciente = sa.iIdTipoDeSangre AND'"+
                                                             "'pa.nIdPaciente='" + Convert.ToInt32(Txt_expe.Text) + "'", conexion.ObtenerConexion());
                 DataTable datos = new DataTable();
@@ -135,23 +135,23 @@ namespace LaboratorioClinico
             {
                 conexion.ObtenerConexion();
                 MySqlCommand cmd = conexion.ObtenerConexion().CreateCommand();
-                cmd.CommandText = "update paciente set sNombre = '" + Txt_nombre.Text + "' where expedientep = '" + Convert.ToInt32(Txt_expe.Text) + "'";
+                cmd.CommandText = "update paciente set sNombre = '" + Txt_nombre.Text + "' where nIdPaciente = '" + Convert.ToInt32(Txt_expe.Text) + "'";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "update paciente set iTelefono = '" + Txt_telefono.Text + "' where expedientep = '" + Convert.ToInt32(Txt_expe.Text) + "'";
+                cmd.CommandText = "update telefono set iTelefono = '" + Txt_telefono.Text + "' where nIdPaciente = '" + Convert.ToInt32(Txt_expe.Text) + "'";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "update paciente set sNit = '" + Txt_nit.Text + "' where expedientep = '" + Convert.ToInt32(Txt_expe.Text) + "'";
+                cmd.CommandText = "update paciente set sNit = '" + Txt_nit.Text + "' where nIdPaciente = '" + Convert.ToInt32(Txt_expe.Text) + "'";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "update paciente set iIdTipoDeSangre = '" + Txt_tipoSangre.Text + "' where expedientep = '" + Convert.ToInt32(Txt_expe.Text) + "'";
+                cmd.CommandText = "update paciente set iIdTipoDeSangre = '" + Txt_tipoSangre.Text + "' where nIdPaciente = '" + Convert.ToInt32(Txt_expe.Text) + "'";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "update paciente set sDireccion = '" + Txt_direccion.Text + "' where expedientep = '" + Convert.ToInt32(Txt_expe.Text) + "'";
+                cmd.CommandText = "update paciente set sDireccion = '" + Txt_direccion.Text + "' where nIdPaciente = '" + Convert.ToInt32(Txt_expe.Text) + "'";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "update paciente set sCorreo = '" + Txt_correo.Text + "' where expedientep = '" + Convert.ToInt32(Txt_expe.Text) + "'";
+                cmd.CommandText = "update correo set sCorreo = '" + Txt_correo.Text + "' where nIdPaciente = '" + Convert.ToInt32(Txt_expe.Text) + "'";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "update paciente set sAlergia = '" + Txt_alergias.Text + "' where expedientep = '" + Convert.ToInt32(Txt_expe.Text) + "'";
+                cmd.CommandText = "update paciente set sAlergia = '" + Txt_alergias.Text + "' where nIdPaciente = '" + Convert.ToInt32(Txt_expe.Text) + "'";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "update paciente set sRefiere = '" + Txt_refiere.Text + "' where expedientep = '" + Convert.ToInt32(Txt_expe.Text) + "'";
+                cmd.CommandText = "update paciente set sRefiere = '" + Txt_refiere.Text + "' where nIdPaciente = '" + Convert.ToInt32(Txt_expe.Text) + "'";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "update paciente set sGenero = '" + Cmb_sexo.Text + "' where expedientep = '" + Convert.ToInt32(Txt_expe.Text) + "'";
+                cmd.CommandText = "update paciente set sGenero = '" + Cmb_sexo.Text + "' where nIdPaciente = '" + Convert.ToInt32(Txt_expe.Text) + "'";
                 cmd.ExecuteNonQuery();
 
                 MessageBox.Show("Cliente Modificado Exitosamente.");
