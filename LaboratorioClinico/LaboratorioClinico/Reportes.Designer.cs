@@ -246,7 +246,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Reportes";
             this.Text = "Reportes";
             this.Load += new System.EventHandler(this.Reportes_Load);
