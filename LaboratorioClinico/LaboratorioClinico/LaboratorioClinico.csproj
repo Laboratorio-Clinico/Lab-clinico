@@ -44,7 +44,6 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
@@ -60,6 +59,12 @@
       <DependentUpon>Bitácora.cs</DependentUpon>
     </Compile>
     <Compile Include="conexion.cs" />
+    <Compile Include="ConfigUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigUser.Designer.cs">
+      <DependentUpon>ConfigUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="cotizar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +159,9 @@
     </Compile>
     <EmbeddedResource Include="Bitácora.resx">
       <DependentUpon>Bitácora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigUser.resx">
+      <DependentUpon>ConfigUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="cotizar.resx">
       <DependentUpon>cotizar.cs</DependentUpon>
@@ -393,6 +401,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\codigo-de-seguridad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nuevo-usuario1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eliminar_user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\administrador.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cubo-de-basura.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

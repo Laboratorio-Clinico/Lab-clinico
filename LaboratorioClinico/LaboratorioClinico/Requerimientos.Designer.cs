@@ -41,14 +41,18 @@
             this.Lbl_fechar = new System.Windows.Forms.Label();
             this.Gpb_imprimirr = new System.Windows.Forms.GroupBox();
             this.Gpb_requisitos = new System.Windows.Forms.GroupBox();
+            this.Dgb_requisitosr = new System.Windows.Forms.DataGridView();
+            this.Gpb_llenador.SuspendLayout();
             this.Gpb_fechar.SuspendLayout();
             this.Gpb_imprimirr.SuspendLayout();
             this.Gpb_requisitos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgb_requisitosr)).BeginInit();
             this.SuspendLayout();
             // 
             // Gpb_llenador
             // 
             this.Gpb_llenador.BackColor = System.Drawing.Color.Transparent;
+            this.Gpb_llenador.Controls.Add(this.Dgb_requisitosr);
             this.Gpb_llenador.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Gpb_llenador.Location = new System.Drawing.Point(94, 124);
             this.Gpb_llenador.Name = "Gpb_llenador";
@@ -186,6 +190,14 @@
             this.Gpb_requisitos.TabStop = false;
             this.Gpb_requisitos.Text = "Requisitos";
             // 
+            // Dgb_requisitosr
+            // 
+            this.Dgb_requisitosr.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Dgb_requisitosr.Location = new System.Drawing.Point(6, 12);
+            this.Dgb_requisitosr.Name = "Dgb_requisitosr";
+            this.Dgb_requisitosr.Size = new System.Drawing.Size(524, 221);
+            this.Dgb_requisitosr.TabIndex = 0;
+            // 
             // Requerimientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -204,12 +216,14 @@
             this.Name = "Requerimientos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Requerimientos_Load);
+            this.Gpb_llenador.ResumeLayout(false);
             this.Gpb_fechar.ResumeLayout(false);
             this.Gpb_fechar.PerformLayout();
             this.Gpb_imprimirr.ResumeLayout(false);
             this.Gpb_imprimirr.PerformLayout();
             this.Gpb_requisitos.ResumeLayout(false);
             this.Gpb_requisitos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgb_requisitosr)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -229,5 +243,6 @@
         private System.Windows.Forms.DateTimePicker Dtp_fechar;
         private System.Windows.Forms.GroupBox Gpb_imprimirr;
         private System.Windows.Forms.GroupBox Gpb_requisitos;
+        private System.Windows.Forms.DataGridView Dgb_requisitosr;
     }
 }

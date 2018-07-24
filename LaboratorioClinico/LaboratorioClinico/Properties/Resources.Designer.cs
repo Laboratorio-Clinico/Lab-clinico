@@ -83,6 +83,16 @@ namespace LaboratorioClinico.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap administrador {
+            get {
+                object obj = ResourceManager.GetObject("administrador", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ajuste_personal {
             get {
                 object obj = ResourceManager.GetObject("ajuste-personal", resourceCulture);
@@ -223,6 +233,16 @@ namespace LaboratorioClinico.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cubo_de_basura {
+            get {
+                object obj = ResourceManager.GetObject("cubo-de-basura", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap doctor {
             get {
                 object obj = ResourceManager.GetObject("doctor", resourceCulture);
@@ -256,6 +276,16 @@ namespace LaboratorioClinico.Properties {
         internal static System.Drawing.Bitmap editar1 {
             get {
                 object obj = ResourceManager.GetObject("editar1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap eliminar_user {
+            get {
+                object obj = ResourceManager.GetObject("eliminar_user", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -516,6 +546,16 @@ namespace LaboratorioClinico.Properties {
         internal static System.Drawing.Bitmap nuevo_usuario {
             get {
                 object obj = ResourceManager.GetObject("nuevo-usuario", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nuevo_usuario1 {
+            get {
+                object obj = ResourceManager.GetObject("nuevo-usuario1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

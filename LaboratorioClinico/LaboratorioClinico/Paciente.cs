@@ -16,6 +16,7 @@ namespace LaboratorioClinico
         public Paciente()
         {
             InitializeComponent();
+            llenarSangre();
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -43,7 +44,7 @@ namespace LaboratorioClinico
 
         }
 
-        public void proLlenareExamen()
+        public void llenarSangre()
         {
 
 
@@ -71,13 +72,13 @@ namespace LaboratorioClinico
         private void Btn_guardarp_Click(object sender, EventArgs e)
         {
             MySqlCommand cm;
-            cm = new MySqlCommand("InsertaPaciente", conexion.ObtenerConexion());
+            cm = new MySqlCommand("InsertaPrueba", conexion.ObtenerConexion());
             cm.CommandType = CommandType.StoredProcedure;
 
             int idPaciente = Convert.ToInt32(Cmb_sangrep.SelectedValue);
+           
 
-
-            cm.Parameters.AddWithValue("@nIdOaciente", this.Txt_expedientep.Text);
+            cm.Parameters.AddWithValue("@nIdPaciente", this.Txt_expedientep.Text);
             cm.Parameters.AddWithValue("@sNit", this.Txt_nitp.Text);
             cm.Parameters.AddWithValue("@sNombre", this.Txt_nombrep.Text);
             cm.Parameters.AddWithValue("@sDireccion", this.Txt_direccionp.Text);
@@ -85,9 +86,12 @@ namespace LaboratorioClinico
             cm.Parameters.AddWithValue("@dFechaDeNacimiento", this.Dtp_fechap.Value);
             cm.Parameters.AddWithValue("@dFechaDeEmision", this.Dtp_fecha2p.Value);
             cm.Parameters.AddWithValue("@iIdTipoDeSangre", idPaciente);
-            cm.Parameters.AddWithValue("@iIdAlergia", this.Txt_alergiasp.Text);
+            cm.Parameters.AddWithValue("@sAlergia", this.Txt_alergiasp.Text);
             cm.Parameters.AddWithValue("@sRefiere", this.Txt_refierep.Text);
-            
+            cm.Parameters.AddWithValue("@correo", this.Txt_correoP.Text);
+            cm.Parameters.AddWithValue("@telefono", this.Txt_telefonop.Text);
+
+
 
             int query = cm.ExecuteNonQuery();
             if (query == 1)
@@ -98,6 +102,11 @@ namespace LaboratorioClinico
             {
                 MessageBox.Show("No se pudo ingresar", "Incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+
+
+   
+
+
         }
         private bool Validar()
         {
