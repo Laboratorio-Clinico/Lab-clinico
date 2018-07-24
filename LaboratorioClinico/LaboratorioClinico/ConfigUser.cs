@@ -70,9 +70,9 @@ namespace LaboratorioClinico
         {
             MySqlCommand borrar = new MySqlCommand("delete from usuario where sUsuario = '" + Cmb_usuarioEliminar.SelectedItem.ToString() + "'", conexion.ObtenerConexion());
             borrar.ExecuteNonQuery();
+            Txt_privilegio.Text = "";
 
-
-          
+          //-------------------ELIMINAR-----------------------------------------------------------------//
             MySqlCommand cmd2 = new MySqlCommand("Select sUsuario from usuario", conexion.ObtenerConexion());
             MySqlDataReader almacen2 = cmd2.ExecuteReader();
 
