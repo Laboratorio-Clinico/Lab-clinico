@@ -143,7 +143,7 @@ namespace LaboratorioClinico
             else if (iTipoDeDescuento == 9004) { Txt_porcentajeDeDescuento.Text = "0.15"; }
             else if (iTipoDeDescuento == 9005) { Txt_porcentajeDeDescuento.Text = "0.50"; }
 
-          }
+        }
 
         public void proGuardarCotizacion(int iIdExamenes, int iIdEmpleado, int iIdLaboratorio, int iIdTipoDescuento)
         {
@@ -181,7 +181,7 @@ namespace LaboratorioClinico
 
         public void proBuscarCotizacion(int iIdExamenes)
         {
-           
+
             try
             {
                 MySqlCommand comando = new MySqlCommand("Pro_cotizacionesPrecio", conexion.ObtenerConexion());
@@ -202,7 +202,8 @@ namespace LaboratorioClinico
 
 
         }
-        public void proPrecioyTotal(int iIdExamenes){
+        public void proPrecioyTotal(int iIdExamenes)
+        {
             double doPrecio = 0;
             double doDescuento = 0;
             double doCantidad = 0;
@@ -260,7 +261,7 @@ namespace LaboratorioClinico
             {
                 int iTipoDeDescuento = Convert.ToInt32(Cmb_tipoDeDescuento);
                 proSeleccionDeDescuento(iTipoDeDescuento);
-  
+
             }
         }
 
@@ -276,7 +277,7 @@ namespace LaboratorioClinico
 
         private void Cmb_examen_SelectedIndexChanged(object sender, EventArgs e)
         {
-          
+
         }
     }
 }
