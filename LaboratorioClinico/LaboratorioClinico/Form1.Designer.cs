@@ -37,9 +37,9 @@
             this.Pnl_nombre = new System.Windows.Forms.Panel();
             this.Lbl_lab = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.Er_validar)).BeginInit();
             this.Pnl_nombre.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -70,7 +70,7 @@
             this.Txt_usuario.Location = new System.Drawing.Point(78, 32);
             this.Txt_usuario.Multiline = true;
             this.Txt_usuario.Name = "Txt_usuario";
-            this.Txt_usuario.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.Txt_usuario.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Txt_usuario.Size = new System.Drawing.Size(226, 32);
             this.Txt_usuario.TabIndex = 3;
             this.Txt_usuario.TextChanged += new System.EventHandler(this.Txt_usuario_TextChanged);
@@ -85,7 +85,7 @@
             this.Txt_contraseña.Multiline = true;
             this.Txt_contraseña.Name = "Txt_contraseña";
             this.Txt_contraseña.PasswordChar = '*';
-            this.Txt_contraseña.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.Txt_contraseña.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Txt_contraseña.Size = new System.Drawing.Size(226, 32);
             this.Txt_contraseña.TabIndex = 4;
             this.Txt_contraseña.Validating += new System.ComponentModel.CancelEventHandler(this.Txt_contraseña_Validating);
@@ -98,7 +98,7 @@
             // 
             this.Pnl_nombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(173)))), ((int)(((byte)(229)))));
             this.Pnl_nombre.Controls.Add(this.Lbl_lab);
-            this.Pnl_nombre.Location = new System.Drawing.Point(93, 40);
+            this.Pnl_nombre.Location = new System.Drawing.Point(62, 36);
             this.Pnl_nombre.Name = "Pnl_nombre";
             this.Pnl_nombre.Size = new System.Drawing.Size(340, 46);
             this.Pnl_nombre.TabIndex = 10;
@@ -122,15 +122,10 @@
             this.panel1.Controls.Add(this.Txt_contraseña);
             this.panel1.Controls.Add(this.Btn_ingresar);
             this.panel1.Controls.Add(this.Txt_usuario);
-            this.panel1.Location = new System.Drawing.Point(93, 114);
+            this.panel1.Location = new System.Drawing.Point(62, 110);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(340, 200);
             this.panel1.TabIndex = 11;
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // pictureBox2
             // 
@@ -154,13 +149,18 @@
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(224)))), ((int)(((byte)(223)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(530, 357);
+            this.ClientSize = new System.Drawing.Size(470, 357);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Pnl_nombre);
             this.DoubleBuffered = true;
