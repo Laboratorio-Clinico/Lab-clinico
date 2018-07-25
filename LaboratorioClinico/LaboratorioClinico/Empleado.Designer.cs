@@ -377,9 +377,9 @@
             this.ClientSize = new System.Drawing.Size(766, 489);
             this.Controls.Add(this.Gpb_datosEmpleado);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Empleado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Empleado";
             this.Gpb_datosEmpleado.ResumeLayout(false);
             this.Gpb_datosEmpleado.PerformLayout();
             this.Gpb_contacto.ResumeLayout(false);
