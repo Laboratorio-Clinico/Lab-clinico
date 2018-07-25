@@ -65,7 +65,7 @@
             // 
             this.Txt_usuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(224)))), ((int)(((byte)(223)))));
             this.Txt_usuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Txt_usuario.Font = new System.Drawing.Font("Perpetua", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_usuario.Font = new System.Drawing.Font("Perpetua", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_usuario.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.Txt_usuario.Location = new System.Drawing.Point(78, 32);
             this.Txt_usuario.Multiline = true;
@@ -73,13 +73,14 @@
             this.Txt_usuario.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Txt_usuario.Size = new System.Drawing.Size(226, 32);
             this.Txt_usuario.TabIndex = 3;
+            this.Txt_usuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Txt_usuario.TextChanged += new System.EventHandler(this.Txt_usuario_TextChanged);
             // 
             // Txt_contraseña
             // 
             this.Txt_contraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(224)))), ((int)(((byte)(223)))));
             this.Txt_contraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Txt_contraseña.Font = new System.Drawing.Font("Perpetua", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_contraseña.Font = new System.Drawing.Font("Perpetua", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_contraseña.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.Txt_contraseña.Location = new System.Drawing.Point(78, 82);
             this.Txt_contraseña.Multiline = true;
@@ -88,6 +89,7 @@
             this.Txt_contraseña.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Txt_contraseña.Size = new System.Drawing.Size(226, 32);
             this.Txt_contraseña.TabIndex = 4;
+            this.Txt_contraseña.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Txt_contraseña.Validating += new System.ComponentModel.CancelEventHandler(this.Txt_contraseña_Validating);
             // 
             // Er_validar
