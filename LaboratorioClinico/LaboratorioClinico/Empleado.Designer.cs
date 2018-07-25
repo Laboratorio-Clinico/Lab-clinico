@@ -199,6 +199,7 @@
             this.Cmb_cargo.Name = "Cmb_cargo";
             this.Cmb_cargo.Size = new System.Drawing.Size(197, 26);
             this.Cmb_cargo.TabIndex = 20;
+            this.Cmb_cargo.SelectedIndexChanged += new System.EventHandler(this.Cmb_cargo_SelectedIndexChanged);
             // 
             // label1
             // 

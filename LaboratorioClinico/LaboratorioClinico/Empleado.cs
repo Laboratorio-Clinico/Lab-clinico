@@ -87,5 +87,10 @@ namespace LaboratorioClinico
             Pro_guardarDatos(iCargo);
 
         }
+
+        private void Cmb_cargo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
