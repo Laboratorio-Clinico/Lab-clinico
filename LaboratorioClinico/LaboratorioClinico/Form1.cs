@@ -54,7 +54,7 @@ namespace LaboratorioClinico
             BorrarMsj();
             Validar();
             string user = Txt_usuario.Text;
-            string pass = Txt_contraseña.Text;
+            string pass = EncripContra(Txt_contraseña.Text);
             string tipo;
 
 
@@ -165,7 +165,7 @@ namespace LaboratorioClinico
             if (Txt_usuario.Text == "")
             {
                 Txt_usuario.Text = "Usuario";
-                Txt_usuario.ForeColor = Color.MidnightBlue;
+                Txt_usuario.ForeColor = Color.CornflowerBlue;
             }
         }
 
@@ -184,7 +184,7 @@ namespace LaboratorioClinico
             if (Txt_contraseña.Text == "")
             {
                 Txt_contraseña.Text = "Contraseña";
-                Txt_contraseña.ForeColor = Color.MidnightBlue;
+                Txt_contraseña.ForeColor = Color.CornflowerBlue;
                 Txt_contraseña.PasswordChar = ' ';
             }
         }
