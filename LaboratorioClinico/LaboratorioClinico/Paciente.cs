@@ -71,39 +71,44 @@ namespace LaboratorioClinico
         }
         private void Btn_guardarp_Click(object sender, EventArgs e)
         {
-            MySqlCommand cm;
-            cm = new MySqlCommand("InsertaPrueba", conexion.ObtenerConexion());
-            cm.CommandType = CommandType.StoredProcedure;
-
-            int idPaciente = Convert.ToInt32(Cmb_sangrep.SelectedValue);
-           
-
-            cm.Parameters.AddWithValue("@nIdPaciente", this.Txt_expedientep.Text);
-            cm.Parameters.AddWithValue("@sNit", this.Txt_nitp.Text);
-            cm.Parameters.AddWithValue("@sNombre", this.Txt_nombrep.Text);
-            cm.Parameters.AddWithValue("@sDireccion", this.Txt_direccionp.Text);
-            cm.Parameters.AddWithValue("@sGenero", this.Cmb_sexop.Text);
-            cm.Parameters.AddWithValue("@dFechaDeNacimiento", this.Dtp_fechap.Value);
-            cm.Parameters.AddWithValue("@dFechaDeEmision", this.Dtp_fecha2p.Value);
-            cm.Parameters.AddWithValue("@iIdTipoDeSangre", idPaciente);
-            cm.Parameters.AddWithValue("@sAlergia", this.Txt_alergiasp.Text);
-            cm.Parameters.AddWithValue("@sRefiere", this.Txt_refierep.Text);
-            cm.Parameters.AddWithValue("@correo", this.Txt_correoP.Text);
-            cm.Parameters.AddWithValue("@telefono", this.Txt_telefonop.Text);
-
-
-
-            int query = cm.ExecuteNonQuery();
-            if (query == 1)
+            try
             {
-                MessageBox.Show("Paciente guardado correctamente", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("No se pudo ingresar", "Incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+                MySqlCommand cm;
+                cm = new MySqlCommand("InsertaPrueba", conexion.ObtenerConexion());
+                cm.CommandType = CommandType.StoredProcedure;
+
+                int idPaciente = Convert.ToInt32(Cmb_sangrep.SelectedValue);
 
 
+                cm.Parameters.AddWithValue("@nIdPaciente", this.Txt_expedientep.Text);
+                cm.Parameters.AddWithValue("@sNit", this.Txt_nitp.Text);
+                cm.Parameters.AddWithValue("@sNombre", this.Txt_nombrep.Text);
+                cm.Parameters.AddWithValue("@sDireccion", this.Txt_direccionp.Text);
+                cm.Parameters.AddWithValue("@sGenero", this.Cmb_sexop.Text);
+                cm.Parameters.AddWithValue("@dFechaDeNacimiento", this.Dtp_fechap.Value);
+                cm.Parameters.AddWithValue("@dFechaDeEmision", this.Dtp_fecha2p.Value);
+                cm.Parameters.AddWithValue("@iIdTipoDeSangre", idPaciente);
+                cm.Parameters.AddWithValue("@sAlergia", this.Txt_alergiasp.Text);
+                cm.Parameters.AddWithValue("@sRefiere", this.Txt_refierep.Text);
+                cm.Parameters.AddWithValue("@correo", this.Txt_correoP.Text);
+                cm.Parameters.AddWithValue("@telefono", this.Txt_telefonop.Text);
+
+
+
+                int query = cm.ExecuteNonQuery();
+                if (query == 1)
+                {
+                    MessageBox.Show("Paciente guardado correctamente", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo ingresar", "Incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+            }catch (Exception ex){
+
+                MessageBox.Show("Intente de nuevo", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+            }
    
 
 
@@ -141,6 +146,11 @@ namespace LaboratorioClinico
         }
 
         private void Cmb_sangrep_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Txt_nombrep_TextChanged(object sender, EventArgs e)
         {
 
         }

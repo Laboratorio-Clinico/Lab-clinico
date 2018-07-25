@@ -101,6 +101,7 @@
             this.Btn_cambiar.Size = new System.Drawing.Size(53, 44);
             this.Btn_cambiar.TabIndex = 16;
             this.Btn_cambiar.UseVisualStyleBackColor = true;
+            this.Btn_cambiar.Click += new System.EventHandler(this.Btn_cambiar_Click);
             // 
             // pictureBox3
             // 
@@ -249,6 +250,7 @@
             this.Controls.Add(this.Tbc_cuerpo);
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "ConfigUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ConfigUser";
