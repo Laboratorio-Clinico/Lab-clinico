@@ -1380,7 +1380,7 @@
             // 
             // button3
             // 
-            this.button3.BackgroundImage = global::LaboratorioClinico.Properties.Resources.archivo;
+            this.button3.BackgroundImage = global::LaboratorioClinico.Properties.Resources.guardar;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button3.Location = new System.Drawing.Point(609, 17);
             this.button3.Name = "button3";
@@ -1425,7 +1425,7 @@
             // 
             // button5
             // 
-            this.button5.BackgroundImage = global::LaboratorioClinico.Properties.Resources.archivo__1_;
+            this.button5.BackgroundImage = global::LaboratorioClinico.Properties.Resources.guardar;
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button5.Location = new System.Drawing.Point(627, 11);
             this.button5.Name = "button5";

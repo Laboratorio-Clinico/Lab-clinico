@@ -266,5 +266,12 @@ namespace LaboratorioClinico
             new ConfigUser().ShowDialog();
             this.Show();
         }
+
+        private void Tm_reportes_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Reportes().ShowDialog();
+            this.Show();
+        }
     }
 }

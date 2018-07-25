@@ -182,6 +182,7 @@
             this.Tm_reportes.Name = "Tm_reportes";
             this.Tm_reportes.Size = new System.Drawing.Size(92, 28);
             this.Tm_reportes.Text = "Reportes";
+            this.Tm_reportes.Click += new System.EventHandler(this.Tm_reportes_Click);
             // 
             // Tm_Examen
             // 
