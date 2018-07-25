@@ -180,6 +180,16 @@ namespace LaboratorioClinico
 
                 cmd.CommandText = "delete from paciente where nIdPaciente = '" + Convert.ToInt32(Txt_expedientep.Text) + "'";
                 cmd.ExecuteNonQuery();
+                cmd.CommandText = "delete from telefono where nIdPaciente = '" + Convert.ToInt32(Txt_expedientep.Text) + "'";
+                cmd.ExecuteNonQuery();
+                cmd.CommandText = "delete from correo where nIdPaciente = '" + Convert.ToInt32(Txt_expedientep.Text) + "'";
+                cmd.ExecuteNonQuery();
+                cmd.CommandText = "delete from correo where nIdPaciente = '" + Convert.ToInt32(Txt_expedientep.Text) + "'";
+                cmd.ExecuteNonQuery();
+                cmd.CommandText = "delete from tipodesangre where iIdTipoDeSangre = '" + Convert.ToInt32(Txt_expedientep.Text) + "'";
+                cmd.ExecuteNonQuery();
+                
+
                 MessageBox.Show("Paciente Eliminado Exitosamente", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
                 //Limpiar todos los textbox / combobox
