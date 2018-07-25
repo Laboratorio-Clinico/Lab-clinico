@@ -102,11 +102,6 @@ namespace LaboratorioClinico
             {
                 MessageBox.Show("No se pudo ingresar", "Incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
-
-   
-
-
         }
         private bool Validar()
         {
