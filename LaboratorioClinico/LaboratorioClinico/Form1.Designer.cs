@@ -37,9 +37,9 @@
             this.Pnl_nombre = new System.Windows.Forms.Panel();
             this.Lbl_lab = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.Er_validar)).BeginInit();
             this.Pnl_nombre.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -66,7 +66,7 @@
             this.Txt_usuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(224)))), ((int)(((byte)(223)))));
             this.Txt_usuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_usuario.Font = new System.Drawing.Font("Perpetua", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_usuario.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.Txt_usuario.ForeColor = System.Drawing.Color.MidnightBlue;
             this.Txt_usuario.Location = new System.Drawing.Point(78, 32);
             this.Txt_usuario.Multiline = true;
             this.Txt_usuario.Name = "Txt_usuario";
@@ -81,7 +81,7 @@
             this.Txt_contraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(224)))), ((int)(((byte)(223)))));
             this.Txt_contraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Txt_contraseña.Font = new System.Drawing.Font("Perpetua", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_contraseña.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.Txt_contraseña.ForeColor = System.Drawing.Color.MidnightBlue;
             this.Txt_contraseña.Location = new System.Drawing.Point(78, 82);
             this.Txt_contraseña.Multiline = true;
             this.Txt_contraseña.Name = "Txt_contraseña";
@@ -129,11 +129,6 @@
             this.panel1.Size = new System.Drawing.Size(340, 200);
             this.panel1.TabIndex = 11;
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(173)))), ((int)(((byte)(229)))));
@@ -155,6 +150,11 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // Form1
             // 
