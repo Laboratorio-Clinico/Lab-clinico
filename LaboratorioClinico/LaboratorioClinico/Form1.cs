@@ -55,6 +55,7 @@ namespace LaboratorioClinico
             Validar();
             string user = Txt_usuario.Text;
             string pass = Txt_contraseña.Text;
+            string tipo;
 
 
             try
@@ -69,14 +70,30 @@ namespace LaboratorioClinico
                     MessageBox.Show("Usuario Correcto", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
-                    Txt_usuario.ResetText();
-                    Txt_contraseña.ResetText();
+                    
+                   
+                    try
+                    {
+                        //--------------------------Saber privilegio--------------------------------
+                        MySqlDataAdapter sda2 = new MySqlDataAdapter("select sPrivilegio from privilegio where iIdPrivilegio = (select iIdPrivilegio from usuario where sUsuario = '" + Txt_usuario.Text + "')", conexion.ObtenerConexion());
+                        MySqlCommand cmd2 = conexion.ObtenerConexion().CreateCommand();
+                        DataTable datos2 = new DataTable();
+                        sda2.Fill(datos2);
 
 
-                    this.Hide();
-                    Menu abrir = new Menu(user);
-                    abrir.ShowDialog();
-                    this.Show();
+                        tipo = datos2.Rows[0][0].ToString();
+                        
+
+                        this.Hide();
+                        Menu abrir = new Menu(user, tipo);
+                        abrir.ShowDialog();
+                        this.Show();
+                    }
+                    catch(Exception ex)
+                    {
+                        MessageBox.Show("Error");
+                    }
+                   
 
 
                 }
@@ -124,6 +141,11 @@ namespace LaboratorioClinico
         }
 
         private void Txt_contraseña_Validating(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void Txt_usuario_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -186,12 +186,12 @@ namespace LaboratorioClinico
                 Txt_nombrep.Clear();
                 Txt_telefonop.Clear();
                 Txt_nitp.Clear();
-                Cmb_tipoSangrep.Items.Clear(); Cmb_tipoSangrep.Refresh();
+                Cmb_tipoSangrep.ResetText(); Cmb_tipoSangrep.Items.Clear(); 
                 Txt_direccionp.Clear();
                 Txt_correoP.Clear();
                 Txt_alergiasp.Clear();
                 Txt_refierep.Clear();
-                Cmb_sexop.Items.Clear(); Cmb_sexop.Refresh();
+                Cmb_sexop.ResetText();  Cmb_sexop.Items.Clear(); 
 
                 //Volver a habilitar todos los textbox / combobox
                 Txt_nombrep.Enabled = true;

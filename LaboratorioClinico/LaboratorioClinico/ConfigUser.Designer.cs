@@ -101,6 +101,7 @@
             this.Btn_cambiar.Size = new System.Drawing.Size(53, 44);
             this.Btn_cambiar.TabIndex = 16;
             this.Btn_cambiar.UseVisualStyleBackColor = true;
+            this.Btn_cambiar.Click += new System.EventHandler(this.Btn_cambiar_Click);
             // 
             // pictureBox3
             // 

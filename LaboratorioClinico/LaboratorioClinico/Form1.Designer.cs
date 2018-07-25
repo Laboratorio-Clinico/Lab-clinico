@@ -73,6 +73,7 @@
             this.Txt_usuario.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Txt_usuario.Size = new System.Drawing.Size(226, 32);
             this.Txt_usuario.TabIndex = 3;
+            this.Txt_usuario.TextChanged += new System.EventHandler(this.Txt_usuario_TextChanged);
             // 
             // Txt_contraseña
             // 
