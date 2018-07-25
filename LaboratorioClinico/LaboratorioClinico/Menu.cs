@@ -12,11 +12,11 @@ namespace LaboratorioClinico
 {
     public partial class Menu : Form
     {
-        public Menu(string nombre)
+        public Menu(string nombre, string tipo)
         {
             InitializeComponent();
             lbl_usuario.Text = nombre;
-            lbl_tipo.Text = "Administrador";
+            lbl_tipo.Text = tipo;
             lbl_hora.Text = DateTime.Now.ToLongTimeString();
             lbl_fecha.Text = DateTime.Now.ToLongDateString();
             Pnl_menudespegable.Height = 10;
@@ -64,6 +64,14 @@ namespace LaboratorioClinico
             {
                 Tm_admin.Enabled = false;
                 Tm_crearCodigo.Enabled = false;
+            }else if (lbl_tipo.Text == "UsuarioL")
+            {
+                Tm_admin.Enabled = false;
+                Tm_Control.Enabled = false;
+                Tm_Erequerimientos.Enabled = false;
+                Tm_Eresultados.Enabled = false;
+                Tm_Enuevo.Enabled = false;
+                
             }
         }
 
