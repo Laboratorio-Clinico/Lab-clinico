@@ -63,15 +63,15 @@ namespace LaboratorioClinico
             if (lbl_tipo.Text == "Usuario")
             {
                 Tm_admin.Enabled = false;
-                Tm_crearCodigo.Enabled = false;
+               
             }else if (lbl_tipo.Text == "UsuarioL")
             {
                 Tm_admin.Enabled = false;
                 Tm_Control.Enabled = false;
                 Tm_Erequerimientos.Enabled = false;
-                Tm_Eresultados.Enabled = false;
+                Tm_cotizaciones.Enabled = false;
                 Tm_Enuevo.Enabled = false;
-                
+                Tm_crearCodigo.Enabled = false;
             }
         }
 

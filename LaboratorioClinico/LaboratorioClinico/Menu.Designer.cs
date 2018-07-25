@@ -42,7 +42,7 @@
             this.Tm_reportes = new System.Windows.Forms.ToolStripMenuItem();
             this.Tm_Examen = new System.Windows.Forms.ToolStripMenuItem();
             this.Tm_Enuevo = new System.Windows.Forms.ToolStripMenuItem();
-            this.cotizacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Tm_cotizaciones = new System.Windows.Forms.ToolStripMenuItem();
             this.Tm_Eresultados = new System.Windows.Forms.ToolStripMenuItem();
             this.muestrasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.leerCódigoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,11 +57,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Pnl_menudespegable = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.lbl_usuario = new System.Windows.Forms.Label();
             this.lbl_tipo = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lbl_hora = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -69,12 +66,11 @@
             this.tm_menu = new System.Windows.Forms.Timer(this.components);
             this.tm_menu2 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.Pnl_menudespegable.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -189,7 +185,7 @@
             this.Tm_Examen.BackColor = System.Drawing.Color.DarkCyan;
             this.Tm_Examen.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Tm_Enuevo,
-            this.cotizacionesToolStripMenuItem,
+            this.Tm_cotizaciones,
             this.Tm_Eresultados,
             this.muestrasToolStripMenuItem,
             this.Tm_Erequerimientos});
@@ -209,16 +205,16 @@
             this.Tm_Enuevo.Text = "Nuevo";
             this.Tm_Enuevo.Click += new System.EventHandler(this.ingresarToolStripMenuItem_Click);
             // 
-            // cotizacionesToolStripMenuItem
+            // Tm_cotizaciones
             // 
-            this.cotizacionesToolStripMenuItem.BackColor = System.Drawing.Color.PowderBlue;
-            this.cotizacionesToolStripMenuItem.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cotizacionesToolStripMenuItem.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.cotizacionesToolStripMenuItem.Image = global::LaboratorioClinico.Properties.Resources.banco;
-            this.cotizacionesToolStripMenuItem.Name = "cotizacionesToolStripMenuItem";
-            this.cotizacionesToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
-            this.cotizacionesToolStripMenuItem.Text = "Cotizaciones";
-            this.cotizacionesToolStripMenuItem.Click += new System.EventHandler(this.cotizacionesToolStripMenuItem_Click);
+            this.Tm_cotizaciones.BackColor = System.Drawing.Color.PowderBlue;
+            this.Tm_cotizaciones.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tm_cotizaciones.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.Tm_cotizaciones.Image = global::LaboratorioClinico.Properties.Resources.banco;
+            this.Tm_cotizaciones.Name = "Tm_cotizaciones";
+            this.Tm_cotizaciones.Size = new System.Drawing.Size(192, 26);
+            this.Tm_cotizaciones.Text = "Cotizaciones";
+            this.Tm_cotizaciones.Click += new System.EventHandler(this.cotizacionesToolStripMenuItem_Click);
             // 
             // Tm_Eresultados
             // 
@@ -349,7 +345,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = global::LaboratorioClinico.Properties.Resources.salida__1_;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 56);
+            this.pictureBox2.Location = new System.Drawing.Point(0, 57);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(38, 32);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -360,43 +356,25 @@
             // Pnl_menudespegable
             // 
             this.Pnl_menudespegable.BackColor = System.Drawing.Color.DarkCyan;
-            this.Pnl_menudespegable.Controls.Add(this.panel1);
+            this.Pnl_menudespegable.Controls.Add(this.lbl_tipo);
+            this.Pnl_menudespegable.Controls.Add(this.pictureBox3);
             this.Pnl_menudespegable.Controls.Add(this.label2);
+            this.Pnl_menudespegable.Controls.Add(this.lbl_usuario);
             this.Pnl_menudespegable.Controls.Add(this.pictureBox2);
             this.Pnl_menudespegable.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pnl_menudespegable.Location = new System.Drawing.Point(638, 18);
             this.Pnl_menudespegable.Name = "Pnl_menudespegable";
-            this.Pnl_menudespegable.Size = new System.Drawing.Size(153, 14);
+            this.Pnl_menudespegable.Size = new System.Drawing.Size(153, 100);
             this.Pnl_menudespegable.TabIndex = 6;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.DarkCyan;
-            this.panel1.Controls.Add(this.flowLayoutPanel1);
-            this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Location = new System.Drawing.Point(0, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(125, 38);
-            this.panel1.TabIndex = 7;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.flowLayoutPanel1.Controls.Add(this.lbl_usuario);
-            this.flowLayoutPanel1.Controls.Add(this.lbl_tipo);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(37, 3);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(113, 33);
-            this.flowLayoutPanel1.TabIndex = 8;
             // 
             // lbl_usuario
             // 
             this.lbl_usuario.AutoSize = true;
             this.lbl_usuario.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_usuario.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_usuario.Location = new System.Drawing.Point(3, 0);
+            this.lbl_usuario.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_usuario.Location = new System.Drawing.Point(41, 14);
             this.lbl_usuario.Name = "lbl_usuario";
-            this.lbl_usuario.Size = new System.Drawing.Size(50, 15);
+            this.lbl_usuario.Size = new System.Drawing.Size(57, 17);
             this.lbl_usuario.TabIndex = 3;
             this.lbl_usuario.Text = "Usuario";
             // 
@@ -404,33 +382,22 @@
             // 
             this.lbl_tipo.AutoSize = true;
             this.lbl_tipo.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_tipo.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_tipo.Location = new System.Drawing.Point(3, 15);
+            this.lbl_tipo.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_tipo.Location = new System.Drawing.Point(40, 36);
             this.lbl_tipo.Name = "lbl_tipo";
-            this.lbl_tipo.Size = new System.Drawing.Size(50, 15);
+            this.lbl_tipo.Size = new System.Drawing.Size(57, 17);
             this.lbl_tipo.TabIndex = 2;
             this.lbl_tipo.Text = "Usuario";
             this.lbl_tipo.Click += new System.EventHandler(this.lbl_tipo_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = global::LaboratorioClinico.Properties.Resources.usuario;
-            this.pictureBox3.Location = new System.Drawing.Point(0, 2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(35, 39);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 7;
-            this.pictureBox3.TabStop = false;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.DarkCyan;
-            this.label2.Font = new System.Drawing.Font("Perpetua", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(40, 63);
+            this.label2.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(40, 71);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 14);
+            this.label2.Size = new System.Drawing.Size(89, 17);
             this.label2.TabIndex = 7;
             this.label2.Text = "Cerrar sesion";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -475,6 +442,17 @@
             this.tm_menu2.Interval = 10;
             this.tm_menu2.Tick += new System.EventHandler(this.tm_menu2_Tick);
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = global::LaboratorioClinico.Properties.Resources.usuario;
+            this.pictureBox3.Location = new System.Drawing.Point(0, 12);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(35, 39);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 7;
+            this.pictureBox3.TabStop = false;
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -500,9 +478,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.Pnl_menudespegable.ResumeLayout(false);
             this.Pnl_menudespegable.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -519,7 +494,7 @@
         private System.Windows.Forms.ToolStripMenuItem Tm_Factura;
         private System.Windows.Forms.ToolStripMenuItem segurToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mantenimientoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cotizacionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem Tm_cotizaciones;
         private System.Windows.Forms.ToolStripMenuItem Tm_Eresultados;
         private System.Windows.Forms.ToolStripMenuItem muestrasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem Tm_reportes;
@@ -538,9 +513,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel Pnl_menudespegable;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label lbl_usuario;
         private System.Windows.Forms.Label lbl_tipo;
         private System.Windows.Forms.Label lbl_hora;
@@ -550,5 +522,6 @@
         private System.Windows.Forms.Timer tm_menu2;
         private System.Windows.Forms.ToolStripMenuItem nuevoEmpleadoToolStripMenuItem;
         private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
