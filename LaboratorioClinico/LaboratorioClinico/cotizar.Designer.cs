@@ -29,7 +29,9 @@
         private void InitializeComponent()
         {
             this.Gpb_cotizacion = new System.Windows.Forms.GroupBox();
-            this.Cmb__doctor = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Txt_Cantidad = new System.Windows.Forms.TextBox();
+            this.Cmb_doctor = new System.Windows.Forms.ComboBox();
             this.Lbl_doctor = new System.Windows.Forms.Label();
             this.Cmb_examen = new System.Windows.Forms.ComboBox();
             this.Lbl_examen = new System.Windows.Forms.Label();
@@ -54,8 +56,6 @@
             this.Txt_Total = new System.Windows.Forms.TextBox();
             this.Dgv_verDatos = new System.Windows.Forms.DataGridView();
             this.label9 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.Txt_Cantidad = new System.Windows.Forms.TextBox();
             this.Gpb_cotizacion.SuspendLayout();
             this.Gpb_botones.SuspendLayout();
             this.Gpb_verDatos.SuspendLayout();
@@ -67,7 +67,7 @@
             this.Gpb_cotizacion.BackColor = System.Drawing.Color.Transparent;
             this.Gpb_cotizacion.Controls.Add(this.label1);
             this.Gpb_cotizacion.Controls.Add(this.Txt_Cantidad);
-            this.Gpb_cotizacion.Controls.Add(this.Cmb__doctor);
+            this.Gpb_cotizacion.Controls.Add(this.Cmb_doctor);
             this.Gpb_cotizacion.Controls.Add(this.Lbl_doctor);
             this.Gpb_cotizacion.Controls.Add(this.Cmb_examen);
             this.Gpb_cotizacion.Controls.Add(this.Lbl_examen);
@@ -92,15 +92,36 @@
             this.Gpb_cotizacion.TabStop = false;
             this.Gpb_cotizacion.Text = "Cotización";
             // 
-            // Cmb__doctor
+            // label1
             // 
-            this.Cmb__doctor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.Cmb__doctor.Font = new System.Drawing.Font("Perpetua", 12F);
-            this.Cmb__doctor.FormattingEnabled = true;
-            this.Cmb__doctor.Location = new System.Drawing.Point(434, 131);
-            this.Cmb__doctor.Name = "Cmb__doctor";
-            this.Cmb__doctor.Size = new System.Drawing.Size(218, 26);
-            this.Cmb__doctor.TabIndex = 53;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(537, 186);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 18);
+            this.label1.TabIndex = 55;
+            this.label1.Text = "Cantidad";
+            // 
+            // Txt_Cantidad
+            // 
+            this.Txt_Cantidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_Cantidad.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_Cantidad.Location = new System.Drawing.Point(603, 178);
+            this.Txt_Cantidad.Name = "Txt_Cantidad";
+            this.Txt_Cantidad.Size = new System.Drawing.Size(49, 26);
+            this.Txt_Cantidad.TabIndex = 54;
+            // 
+            // Cmb_doctor
+            // 
+            this.Cmb_doctor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Cmb_doctor.Font = new System.Drawing.Font("Perpetua", 12F);
+            this.Cmb_doctor.FormattingEnabled = true;
+            this.Cmb_doctor.Location = new System.Drawing.Point(434, 131);
+            this.Cmb_doctor.Name = "Cmb_doctor";
+            this.Cmb_doctor.Size = new System.Drawing.Size(218, 26);
+            this.Cmb_doctor.TabIndex = 53;
             // 
             // Lbl_doctor
             // 
@@ -367,27 +388,6 @@
             this.label9.Size = new System.Drawing.Size(0, 33);
             this.label9.TabIndex = 34;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(537, 186);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 18);
-            this.label1.TabIndex = 55;
-            this.label1.Text = "Cantidad";
-            // 
-            // Txt_Cantidad
-            // 
-            this.Txt_Cantidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.Txt_Cantidad.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_Cantidad.Location = new System.Drawing.Point(603, 178);
-            this.Txt_Cantidad.Name = "Txt_Cantidad";
-            this.Txt_Cantidad.Size = new System.Drawing.Size(49, 26);
-            this.Txt_Cantidad.TabIndex = 54;
-            // 
             // cotizar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -436,7 +436,7 @@
         private System.Windows.Forms.TextBox Txt_Total;
         private System.Windows.Forms.DataGridView Dgv_verDatos;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox Cmb__doctor;
+        private System.Windows.Forms.ComboBox Cmb_doctor;
         private System.Windows.Forms.Label Lbl_doctor;
         private System.Windows.Forms.ComboBox Cmb_examen;
         private System.Windows.Forms.Label Lbl_examen;

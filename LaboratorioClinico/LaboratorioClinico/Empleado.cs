@@ -17,33 +17,34 @@ namespace LaboratorioClinico
         public Empleado()
         {
             InitializeComponent();
+            proLlenareCargo();
         }
 
         public void Pro_guardarDatos(int iCargo) {
-            MySqlCommand cm;
-            cm = new MySqlCommand("Pro_ingresoNuevoEmpleado", conexion.ObtenerConexion());
-            cm.CommandType = CommandType.StoredProcedure;
+            try {
 
-            cm.Parameters.AddWithValue("@sNombre", this.Txt_nombre);
-            cm.Parameters.AddWithValue("@sApellido", this.Txt_apellido);
-            cm.Parameters.AddWithValue("@deTelefono", this.Txt_telefono);
-            cm.Parameters.AddWithValue("@sDireccion", this.Txt_direccion);
-            cm.Parameters.AddWithValue("@sCorreo", this.Txt_correo);
-            cm.Parameters.AddWithValue("@iidCargo", iCargo);
-            cm.Parameters.AddWithValue("@fSueldo", this.Txt_sueldo);
-            cm.Parameters.AddWithValue("@dFechaDeNacimiento", this.Dtp_fechaNacimiento);
+                MySqlCommand cm;
+                cm = new MySqlCommand("Pro_ingresoNuevoEmpleado", conexion.ObtenerConexion());
+                cm.CommandType = CommandType.StoredProcedure;
+                cm.Parameters.AddWithValue("@iIdEmpleado", this.Txt_DPIEmpleado.Text);
+                cm.Parameters.AddWithValue("@sNombre", this.Txt_nombre.Text);
+                cm.Parameters.AddWithValue("@sApellido", this.Txt_apellido.Text);
+                cm.Parameters.AddWithValue("@nTelefono", this.Txt_telefono.Text);
+                cm.Parameters.AddWithValue("@sDireccion", this.Txt_direccion.Text);
+                cm.Parameters.AddWithValue("@sCorreo", this.Txt_correo.Text);
+                cm.Parameters.AddWithValue("@iIdCargo", iCargo);
+                cm.Parameters.AddWithValue("@fSueldo", this.Txt_sueldo.Text);
+                cm.Parameters.AddWithValue("@dFechaDeNacimiento", this.Dtp_fechaNacimiento.Text);
+                cm.Parameters.AddWithValue("@iIdUsuario", this.Txt_DPIEmpleado.Text);
+                cm.ExecuteNonQuery();
+                MessageBox.Show("Datos insertados correctamente");
+                
+            } catch(MySqlException error) { MessageBox.Show(error.Message); }
 
-            int query = cm.ExecuteNonQuery();
+            finally {
 
-            if (query == 1)
-            {
-                MessageBox.Show("Empleado ingresado correctamente", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("No se pudo ingresar", "Incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-
+            conexion.ObtenerConexion().Close(); }
+            Txt_DPIEmpleado.ResetText();
             Txt_nombre.ResetText();
             Txt_apellido.ResetText();
             Txt_telefono.ResetText();
@@ -52,8 +53,6 @@ namespace LaboratorioClinico
             Txt_sueldo.ResetText();
             Cmb_cargo.ResetText();
             Dtp_fechaNacimiento.ResetText();
-
-
         }
         public void proLlenareCargo()
         {
@@ -64,13 +63,13 @@ namespace LaboratorioClinico
                 Cmb_cargo.Text = "Seleccione el cargo correspondiente";
                 Cmb_cargo.Items.Clear();
                 conexion.ObtenerConexion();
-                MySqlCommand comando = new MySqlCommand("Select sCargo from examenes", conexion.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand("Select iIdCargo,sDescripcion from Cargo", conexion.ObtenerConexion());
                 MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
                 DataTable tabla = new DataTable();
 
                 adaptador.Fill(tabla);
 
-                Cmb_cargo.ValueMember = "iCodigo";
+                Cmb_cargo.ValueMember = "iIdCargo";
                 Cmb_cargo.DisplayMember = "sDescripcion";
 
                 Cmb_cargo.DataSource = tabla;

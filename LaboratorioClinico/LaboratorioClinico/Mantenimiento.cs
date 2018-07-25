@@ -180,6 +180,16 @@ namespace LaboratorioClinico
 
                 cmd.CommandText = "delete from paciente where nIdPaciente = '" + Convert.ToInt32(Txt_expedientep.Text) + "'";
                 cmd.ExecuteNonQuery();
+                cmd.CommandText = "delete from telefono where nIdPaciente = '" + Convert.ToInt32(Txt_expedientep.Text) + "'";
+                cmd.ExecuteNonQuery();
+                cmd.CommandText = "delete from correo where nIdPaciente = '" + Convert.ToInt32(Txt_expedientep.Text) + "'";
+                cmd.ExecuteNonQuery();
+                cmd.CommandText = "delete from correo where nIdPaciente = '" + Convert.ToInt32(Txt_expedientep.Text) + "'";
+                cmd.ExecuteNonQuery();
+                cmd.CommandText = "delete from tipodesangre where iIdTipoDeSangre = '" + Convert.ToInt32(Txt_expedientep.Text) + "'";
+                cmd.ExecuteNonQuery();
+                
+
                 MessageBox.Show("Paciente Eliminado Exitosamente", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
                 //Limpiar todos los textbox / combobox
@@ -238,6 +248,85 @@ namespace LaboratorioClinico
                 Tbc_medicos.Visible = false;
                 Tbc_examen.Visible = true;
                 Picb_fondo.Visible = false;
+            }
+        }
+
+        private void Txt_direMedicoM_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Btn_buscarm_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Gpb_datos.Visible = true;
+                MySqlDataAdapter sda = new MySqlDataAdapter("SELECT me.sNombre, me.sApellido, te.itelefono, me.sDireccion, es.sEspecialidad, em.sEmpresa me.dFechaDeNacimiento FROM medicosasociados me, telefono te, especialidad es, empresa em WHERE me.nNoColegiado = te.nIdPaciente AND me.nNoColegiado = es.iIdEspecialidad AND me.nNoColegiado = em.iIdEmpresa AND me.nNoColegiado ='" + Convert.ToInt32(Txt_colegiadoM.Text) + "'", conexion.ObtenerConexion());
+                DataTable datos = new DataTable();
+                sda.Fill(datos);
+
+                Txt_nombreMedicoM.Text = datos.Rows[0][0].ToString();
+                Txt_apellidoMedicoM.Text = datos.Rows[0][1].ToString();
+                Txt_telefonoMedicoM.Text = datos.Rows[0][2].ToString();
+                Txt_direMedicoM.Text = datos.Rows[0][3].ToString();
+                Txt_especialidadMedicoM.Text = datos.Rows[0][4].ToString();
+                Cmb_empresaMedicoM.Text = datos.Rows[0][5].ToString();
+                Dtp_nacimiento.Text = datos.Rows[0][6].ToString();
+
+                Txt_colegiadoM.Enabled = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Intente de nuevo.", "Error en la búsqueda.", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void Txt_apellidoMedicoM_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Btn_editarm_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                conexion.ObtenerConexion();
+                MySqlCommand cmd = conexion.ObtenerConexion().CreateCommand();
+
+                cmd.CommandText = "update medicosasociados set sNombre = '" + Txt_nombreMedicoM.Text + "' where nNoColegiado = '" + Convert.ToInt32(Txt_colegiadoM.Text) + "'";
+                cmd.ExecuteNonQuery();
+                cmd.CommandText = "update medicosasociados set sApellido = '" + Txt_apellidoMedicoM.Text + "' where nNoColegiado = '" + Convert.ToInt32(Txt_colegiadoM.Text) + "'";
+                cmd.ExecuteNonQuery();
+                cmd.CommandText = "update telefono set iTelefono = '" + Txt_telefonoMedicoM.Text + "' where nNoColegiado = '" + Convert.ToInt32(Txt_colegiadoM.Text) + "'";
+                cmd.ExecuteNonQuery();
+                cmd.CommandText = "update medicosasociados set sDireccion = '" + Txt_direMedicoM.Text + "' where nNoColegiado = '" + Convert.ToInt32(Txt_colegiadoM.Text) + "'";
+                cmd.ExecuteNonQuery();
+                cmd.CommandText = "update especialidad set sEspecialidad = '" + Txt_especialidadMedicoM.Text + "' where nNoColegiado = '" + Convert.ToInt32(Txt_colegiadoM.Text) + "'";
+                cmd.ExecuteNonQuery();
+                cmd.CommandText = "update empresa set sEmpresa = '" + Cmb_empresaMedicoM.Text + "' where nNoColegiado = '" + Convert.ToInt32(Txt_colegiadoM.Text) + "'";
+                cmd.ExecuteNonQuery();
+                cmd.CommandText = "update medicos set dFechaDeNacimiento = '" + Dtp_nacimiento.Text + "' where nNoColegiado = '" + Convert.ToInt32(Txt_colegiadoM.Text) + "'";
+                cmd.ExecuteNonQuery();
+                // borrar..............................LO DE ABAJO
+
+                MessageBox.Show("Médico Modificado Exitosamente.", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
+
+                Txt_colegiadoM.Enabled = true;
+                Txt_colegiadoM.Clear();
+
+                Txt_nombreMedicoM.Clear();
+                Txt_apellidoMedicoM.Clear();
+                Txt_telefonoMedicoM.Clear();
+                Txt_direMedicoM.Clear();
+                Txt_especialidadMedicoM.Clear();
+                Cmb_empresaMedicoM.ResetText(); Cmb_empresaMedicoM.Items.Clear();
+                Dtp_nacimiento.Refresh();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo modificar el registro.", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
             }
         }
     }
