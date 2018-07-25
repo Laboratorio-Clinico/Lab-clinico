@@ -58,6 +58,12 @@
             this.Lbl_imprimirf = new System.Windows.Forms.Label();
             this.Txt_cantidadf = new System.Windows.Forms.TextBox();
             this.Dgb_facturaf = new System.Windows.Forms.DataGridView();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Gpb_datosf = new System.Windows.Forms.GroupBox();
             this.Dtp_fechaf = new System.Windows.Forms.DateTimePicker();
             this.Txt_direccionf = new System.Windows.Forms.TextBox();
@@ -70,12 +76,6 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Gpb_laboratoriof.SuspendLayout();
             this.Gpb_detallef.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgb_facturaf)).BeginInit();
@@ -106,7 +106,7 @@
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.Black;
+            this.label14.ForeColor = System.Drawing.Color.Silver;
             this.label14.Location = new System.Drawing.Point(6, 52);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(163, 17);
@@ -118,7 +118,7 @@
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Black;
+            this.label13.ForeColor = System.Drawing.Color.Silver;
             this.label13.Location = new System.Drawing.Point(6, 34);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(434, 17);
@@ -130,7 +130,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.ForeColor = System.Drawing.Color.Silver;
             this.label5.Location = new System.Drawing.Point(637, 60);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(99, 18);
@@ -195,6 +195,7 @@
             this.Gpb_detallef.Controls.Add(this.Txt_cantidadf);
             this.Gpb_detallef.Controls.Add(this.Dgb_facturaf);
             this.Gpb_detallef.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Gpb_detallef.ForeColor = System.Drawing.SystemColors.Info;
             this.Gpb_detallef.Location = new System.Drawing.Point(12, 210);
             this.Gpb_detallef.Name = "Gpb_detallef";
             this.Gpb_detallef.Size = new System.Drawing.Size(742, 267);
@@ -433,6 +434,42 @@
             this.Dgb_facturaf.Size = new System.Drawing.Size(721, 118);
             this.Dgb_facturaf.TabIndex = 34;
             // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Codigo";
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 70;
+            // 
+            // Column1
+            // 
+            this.Column1.FillWeight = 120F;
+            this.Column1.HeaderText = "Cantidad";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 90;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Descripción";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 210;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Precio Unitario";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 120;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Descuento";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 90;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Total";
+            this.Column5.Name = "Column5";
+            // 
             // Gpb_datosf
             // 
             this.Gpb_datosf.BackColor = System.Drawing.Color.Transparent;
@@ -446,6 +483,7 @@
             this.Gpb_datosf.Controls.Add(this.Lbl_nombref);
             this.Gpb_datosf.Controls.Add(this.textBox2);
             this.Gpb_datosf.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Gpb_datosf.ForeColor = System.Drawing.SystemColors.Info;
             this.Gpb_datosf.Location = new System.Drawing.Point(12, 109);
             this.Gpb_datosf.Name = "Gpb_datosf";
             this.Gpb_datosf.Size = new System.Drawing.Size(736, 101);
@@ -569,42 +607,6 @@
             this.label11.Size = new System.Drawing.Size(36, 18);
             this.label11.TabIndex = 6;
             this.label11.Text = "0001";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Codigo";
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 70;
-            // 
-            // Column1
-            // 
-            this.Column1.FillWeight = 120F;
-            this.Column1.HeaderText = "Cantidad";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 90;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Descripción";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 210;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Precio Unitario";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 120;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Descuento";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 90;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Total";
-            this.Column5.Name = "Column5";
             // 
             // Factura
             // 

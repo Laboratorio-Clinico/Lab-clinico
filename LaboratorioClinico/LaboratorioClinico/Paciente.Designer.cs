@@ -34,7 +34,6 @@
             this.Gpb_guardarp = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
             this.Gpb_datosp = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Cmb_sangrep = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Lbl_correop = new System.Windows.Forms.Label();
@@ -42,6 +41,7 @@
             this.Lbl_tipoSangrep = new System.Windows.Forms.Label();
             this.Lbl_alergiasp = new System.Windows.Forms.Label();
             this.Txt_alergiasp = new System.Windows.Forms.TextBox();
+            this.Btn_expedientep = new System.Windows.Forms.Button();
             this.Lbl_refierep = new System.Windows.Forms.Label();
             this.Lbl_direccionp = new System.Windows.Forms.Label();
             this.Lbl_nitp = new System.Windows.Forms.Label();
@@ -64,7 +64,6 @@
             this.Er_validar = new System.Windows.Forms.ErrorProvider(this.components);
             this.Gpb_guardarp.SuspendLayout();
             this.Gpb_datosp.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Gpb_fechanp.SuspendLayout();
             this.Gpb_fechap.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Er_validar)).BeginInit();
@@ -86,7 +85,7 @@
             this.Gpb_guardarp.BackColor = System.Drawing.Color.Transparent;
             this.Gpb_guardarp.Controls.Add(this.label10);
             this.Gpb_guardarp.Controls.Add(this.Btn_guardarp);
-            this.Gpb_guardarp.Location = new System.Drawing.Point(467, 371);
+            this.Gpb_guardarp.Location = new System.Drawing.Point(627, 371);
             this.Gpb_guardarp.Name = "Gpb_guardarp";
             this.Gpb_guardarp.Size = new System.Drawing.Size(95, 82);
             this.Gpb_guardarp.TabIndex = 2;
@@ -102,11 +101,11 @@
             this.label10.Size = new System.Drawing.Size(46, 15);
             this.label10.TabIndex = 43;
             this.label10.Text = "Guardar";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // Gpb_datosp
             // 
             this.Gpb_datosp.BackColor = System.Drawing.Color.Transparent;
-            this.Gpb_datosp.Controls.Add(this.pictureBox1);
             this.Gpb_datosp.Controls.Add(this.Cmb_sangrep);
             this.Gpb_datosp.Controls.Add(this.label1);
             this.Gpb_datosp.Controls.Add(this.Lbl_correop);
@@ -114,6 +113,7 @@
             this.Gpb_datosp.Controls.Add(this.Lbl_tipoSangrep);
             this.Gpb_datosp.Controls.Add(this.Lbl_alergiasp);
             this.Gpb_datosp.Controls.Add(this.Txt_alergiasp);
+            this.Gpb_datosp.Controls.Add(this.Btn_expedientep);
             this.Gpb_datosp.Controls.Add(this.Lbl_refierep);
             this.Gpb_datosp.Controls.Add(this.Lbl_direccionp);
             this.Gpb_datosp.Controls.Add(this.Lbl_nitp);
@@ -138,16 +138,6 @@
             this.Gpb_datosp.TabStop = false;
             this.Gpb_datosp.Text = "Datos Paciente";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::LaboratorioClinico.Properties.Resources.historial_medico;
-            this.pictureBox1.Location = new System.Drawing.Point(24, 100);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(67, 66);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
             // Cmb_sangrep
             // 
             this.Cmb_sangrep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
@@ -157,7 +147,6 @@
             this.Cmb_sangrep.Name = "Cmb_sangrep";
             this.Cmb_sangrep.Size = new System.Drawing.Size(180, 25);
             this.Cmb_sangrep.TabIndex = 50;
-            this.Cmb_sangrep.SelectedIndexChanged += new System.EventHandler(this.Cmb_sangrep_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -222,6 +211,19 @@
             this.Txt_alergiasp.Size = new System.Drawing.Size(470, 51);
             this.Txt_alergiasp.TabIndex = 43;
             this.Txt_alergiasp.TextChanged += new System.EventHandler(this.Txt_alergiasp_TextChanged);
+            // 
+            // Btn_expedientep
+            // 
+            this.Btn_expedientep.BackColor = System.Drawing.Color.Transparent;
+            this.Btn_expedientep.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Btn_expedientep.BackgroundImage")));
+            this.Btn_expedientep.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_expedientep.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_expedientep.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Btn_expedientep.Location = new System.Drawing.Point(18, 108);
+            this.Btn_expedientep.Name = "Btn_expedientep";
+            this.Btn_expedientep.Size = new System.Drawing.Size(53, 44);
+            this.Btn_expedientep.TabIndex = 42;
+            this.Btn_expedientep.UseVisualStyleBackColor = false;
             // 
             // Lbl_refierep
             // 
@@ -294,11 +296,11 @@
             this.Lbl_expedientep.AutoSize = true;
             this.Lbl_expedientep.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_expedientep.ForeColor = System.Drawing.Color.White;
-            this.Lbl_expedientep.Location = new System.Drawing.Point(35, 48);
+            this.Lbl_expedientep.Location = new System.Drawing.Point(15, 53);
             this.Lbl_expedientep.Name = "Lbl_expedientep";
-            this.Lbl_expedientep.Size = new System.Drawing.Size(36, 18);
+            this.Lbl_expedientep.Size = new System.Drawing.Size(79, 18);
             this.Lbl_expedientep.TabIndex = 32;
-            this.Lbl_expedientep.Text = "DPI:";
+            this.Lbl_expedientep.Text = "Expediente:";
             // 
             // Cmb_sexop
             // 
@@ -317,9 +319,9 @@
             // 
             this.Txt_expedientep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Txt_expedientep.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_expedientep.Location = new System.Drawing.Point(8, 69);
+            this.Txt_expedientep.Location = new System.Drawing.Point(18, 74);
             this.Txt_expedientep.Name = "Txt_expedientep";
-            this.Txt_expedientep.Size = new System.Drawing.Size(106, 25);
+            this.Txt_expedientep.Size = new System.Drawing.Size(82, 25);
             this.Txt_expedientep.TabIndex = 30;
             // 
             // Txt_refierep
@@ -366,7 +368,6 @@
             this.Txt_nombrep.Name = "Txt_nombrep";
             this.Txt_nombrep.Size = new System.Drawing.Size(271, 25);
             this.Txt_nombrep.TabIndex = 24;
-            this.Txt_nombrep.TextChanged += new System.EventHandler(this.Txt_nombrep_TextChanged);
             // 
             // Gpb_fechanp
             // 
@@ -383,23 +384,22 @@
             // Dtp_fechap
             // 
             this.Dtp_fechap.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.Dtp_fechap.CustomFormat = "yyyy-MM-dd";
+            this.Dtp_fechap.CustomFormat = "yyyy-mm-dd";
             this.Dtp_fechap.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.Dtp_fechap.Location = new System.Drawing.Point(26, 25);
             this.Dtp_fechap.Name = "Dtp_fechap";
             this.Dtp_fechap.Size = new System.Drawing.Size(104, 26);
             this.Dtp_fechap.TabIndex = 21;
-            this.Dtp_fechap.Value = new System.DateTime(2018, 7, 24, 17, 47, 0, 0);
             this.Dtp_fechap.ValueChanged += new System.EventHandler(this.Dtp_fechap_ValueChanged);
             // 
             // Dtp_fecha2p
             // 
-            this.Dtp_fecha2p.CustomFormat = "yyyy-MM-dd";
+            this.Dtp_fecha2p.CustomFormat = "yyyy-mm-dd";
             this.Dtp_fecha2p.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Dtp_fecha2p.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Dtp_fecha2p.Location = new System.Drawing.Point(77, 41);
+            this.Dtp_fecha2p.Location = new System.Drawing.Point(36, 45);
             this.Dtp_fecha2p.Name = "Dtp_fecha2p";
-            this.Dtp_fecha2p.Size = new System.Drawing.Size(131, 26);
+            this.Dtp_fecha2p.Size = new System.Drawing.Size(247, 26);
             this.Dtp_fecha2p.TabIndex = 41;
             // 
             // Lbl_fechaep
@@ -418,9 +418,9 @@
             this.Gpb_fechap.BackColor = System.Drawing.Color.Transparent;
             this.Gpb_fechap.Controls.Add(this.Dtp_fecha2p);
             this.Gpb_fechap.Controls.Add(this.Lbl_fechaep);
-            this.Gpb_fechap.Location = new System.Drawing.Point(154, 371);
+            this.Gpb_fechap.Location = new System.Drawing.Point(31, 371);
             this.Gpb_fechap.Name = "Gpb_fechap";
-            this.Gpb_fechap.Size = new System.Drawing.Size(286, 82);
+            this.Gpb_fechap.Size = new System.Drawing.Size(590, 82);
             this.Gpb_fechap.TabIndex = 3;
             this.Gpb_fechap.TabStop = false;
             this.Gpb_fechap.Enter += new System.EventHandler(this.groupBox4_Enter);
@@ -449,7 +449,6 @@
             this.Gpb_guardarp.PerformLayout();
             this.Gpb_datosp.ResumeLayout(false);
             this.Gpb_datosp.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.Gpb_fechanp.ResumeLayout(false);
             this.Gpb_fechap.ResumeLayout(false);
             this.Gpb_fechap.PerformLayout();
@@ -466,6 +465,7 @@
         private System.Windows.Forms.Label Lbl_tipoSangrep;
         private System.Windows.Forms.Label Lbl_alergiasp;
         private System.Windows.Forms.TextBox Txt_alergiasp;
+        private System.Windows.Forms.Button Btn_expedientep;
         private System.Windows.Forms.Label Lbl_refierep;
         private System.Windows.Forms.Label Lbl_direccionp;
         private System.Windows.Forms.Label Lbl_nitp;
@@ -490,6 +490,5 @@
         private System.Windows.Forms.ErrorProvider Er_validar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox Cmb_sangrep;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

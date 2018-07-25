@@ -185,10 +185,10 @@
             this.Gpb_mantenimiento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Gpb_mantenimiento.Controls.Add(this.Lbl_tabla);
             this.Gpb_mantenimiento.Controls.Add(this.Cmb_tabla);
-            this.Gpb_mantenimiento.Controls.Add(this.Tbc_paciente);
-            this.Gpb_mantenimiento.Controls.Add(this.Tbc_examen);
             this.Gpb_mantenimiento.Controls.Add(this.Tbc_medicos);
             this.Gpb_mantenimiento.Controls.Add(this.Picb_fondo);
+            this.Gpb_mantenimiento.Controls.Add(this.Tbc_paciente);
+            this.Gpb_mantenimiento.Controls.Add(this.Tbc_examen);
             this.Gpb_mantenimiento.Font = new System.Drawing.Font("Perpetua", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Gpb_mantenimiento.ForeColor = System.Drawing.Color.DarkKhaki;
             this.Gpb_mantenimiento.Location = new System.Drawing.Point(9, 12);
@@ -1380,7 +1380,7 @@
             // 
             // button3
             // 
-            this.button3.BackgroundImage = global::LaboratorioClinico.Properties.Resources.archivo;
+            this.button3.BackgroundImage = global::LaboratorioClinico.Properties.Resources.guardar;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button3.Location = new System.Drawing.Point(609, 17);
             this.button3.Name = "button3";
@@ -1425,7 +1425,7 @@
             // 
             // button5
             // 
-            this.button5.BackgroundImage = global::LaboratorioClinico.Properties.Resources.archivo__1_;
+            this.button5.BackgroundImage = global::LaboratorioClinico.Properties.Resources.guardar;
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button5.Location = new System.Drawing.Point(627, 11);
             this.button5.Name = "button5";

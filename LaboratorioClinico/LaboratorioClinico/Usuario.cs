@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -44,7 +45,13 @@ namespace LaboratorioClinico
 
         }
 
+        public static string EncripContra(string password)
+        {
+            SHA1 sha1 = new System.Security.Cryptography.SHA1CryptoServiceProvider();
+            byte[] input = (new UnicodeEncoding()).GetBytes(password); byte[] hash = sha1.ComputeHash(input);
+            return Convert.ToBase64String(hash);
 
+        }
 
         private void Btn_guardar_Click(object sender, EventArgs e)
         {
@@ -74,7 +81,7 @@ namespace LaboratorioClinico
             cm.Parameters.AddWithValue("@iIdPrivilegio", pPrivilegio);
             cm.Parameters.AddWithValue("@nDPI", this.Txt_codigoDeEmpleado.Text);
             cm.Parameters.AddWithValue("@sUsuario", this.Txt_usuario.Text);
-            cm.Parameters.AddWithValue("@sContrasena", this.Txt_password.Text);
+            cm.Parameters.AddWithValue("@sContrasena", EncripContra(this.Txt_password.Text));
 
 
             int query = cm.ExecuteNonQuery();

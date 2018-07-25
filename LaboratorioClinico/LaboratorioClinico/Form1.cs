@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -54,7 +55,7 @@ namespace LaboratorioClinico
             BorrarMsj();
             Validar();
             string user = Txt_usuario.Text;
-            string pass = Txt_contraseña.Text;
+            string pass = EncripContra(Txt_contraseña.Text);
             string tipo;
 
 
@@ -151,5 +152,49 @@ namespace LaboratorioClinico
         {
 
         }
+
+        private void Txt_usuario_Enter(object sender, EventArgs e)
+        {
+            if (Txt_usuario.Text == "Usuario") {
+                Txt_usuario.Text = "";
+                Txt_usuario.ForeColor = Color.MidnightBlue;
+            }
+        }
+
+        private void Txt_usuario_Leave(object sender, EventArgs e)
+        {
+            if (Txt_usuario.Text == "")
+            {
+                Txt_usuario.Text = "Usuario";
+                Txt_usuario.ForeColor = Color.CornflowerBlue;
+            }
+        }
+
+        private void Txt_contraseña_Enter(object sender, EventArgs e)
+        {
+            if (Txt_contraseña.Text == "Contraseña")
+            {
+                Txt_contraseña.Text = "";
+                Txt_contraseña.ForeColor = Color.MidnightBlue;
+                Txt_contraseña.PasswordChar = '*';
+            }
+        }
+
+        private void Txt_contraseña_Leave(object sender, EventArgs e)
+        {
+            if (Txt_contraseña.Text == "")
+            {
+                Txt_contraseña.Text = "Contraseña";
+                Txt_contraseña.ForeColor = Color.CornflowerBlue;
+                Txt_contraseña.PasswordChar = ' ';
+            }
+        }
+
+        private void Txt_contraseña_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }

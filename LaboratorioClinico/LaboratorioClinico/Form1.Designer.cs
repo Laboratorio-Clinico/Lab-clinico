@@ -75,8 +75,11 @@
             this.Txt_usuario.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Txt_usuario.Size = new System.Drawing.Size(226, 32);
             this.Txt_usuario.TabIndex = 3;
+            this.Txt_usuario.Text = "Usuario";
             this.Txt_usuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Txt_usuario.TextChanged += new System.EventHandler(this.Txt_usuario_TextChanged);
+            this.Txt_usuario.Enter += new System.EventHandler(this.Txt_usuario_Enter);
+            this.Txt_usuario.Leave += new System.EventHandler(this.Txt_usuario_Leave);
             // 
             // Txt_contraseña
             // 
@@ -87,11 +90,14 @@
             this.Txt_contraseña.Location = new System.Drawing.Point(78, 82);
             this.Txt_contraseña.Multiline = true;
             this.Txt_contraseña.Name = "Txt_contraseña";
-            this.Txt_contraseña.PasswordChar = '*';
             this.Txt_contraseña.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Txt_contraseña.Size = new System.Drawing.Size(226, 32);
             this.Txt_contraseña.TabIndex = 4;
+            this.Txt_contraseña.Text = "Contraseña";
             this.Txt_contraseña.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Txt_contraseña.TextChanged += new System.EventHandler(this.Txt_contraseña_TextChanged);
+            this.Txt_contraseña.Enter += new System.EventHandler(this.Txt_contraseña_Enter);
+            this.Txt_contraseña.Leave += new System.EventHandler(this.Txt_contraseña_Leave);
             this.Txt_contraseña.Validating += new System.ComponentModel.CancelEventHandler(this.Txt_contraseña_Validating);
             // 
             // Er_validar
