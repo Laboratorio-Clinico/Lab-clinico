@@ -424,6 +424,30 @@
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salina.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\historial-medico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loginI+.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bloqueado1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bloquear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario-hombre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bl.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -31,130 +31,137 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.Btn_ingresar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.Txt_usuario = new System.Windows.Forms.TextBox();
             this.Txt_contraseña = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Er_validar = new System.Windows.Forms.ErrorProvider(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.Pnl_nombre = new System.Windows.Forms.Panel();
+            this.Lbl_lab = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Er_validar)).BeginInit();
+            this.Pnl_nombre.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // Btn_ingresar
             // 
-            this.Btn_ingresar.BackColor = System.Drawing.Color.Maroon;
+            this.Btn_ingresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(173)))), ((int)(((byte)(229)))));
             this.Btn_ingresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Btn_ingresar.Font = new System.Drawing.Font("Agency FB", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_ingresar.ForeColor = System.Drawing.Color.LightCoral;
-            this.Btn_ingresar.Location = new System.Drawing.Point(175, 169);
+            this.Btn_ingresar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.Btn_ingresar.ForeColor = System.Drawing.Color.White;
+            this.Btn_ingresar.Location = new System.Drawing.Point(42, 131);
             this.Btn_ingresar.Name = "Btn_ingresar";
-            this.Btn_ingresar.Size = new System.Drawing.Size(97, 29);
+            this.Btn_ingresar.Size = new System.Drawing.Size(262, 39);
             this.Btn_ingresar.TabIndex = 0;
-            this.Btn_ingresar.Text = "INGRESAR";
+            this.Btn_ingresar.Text = "LOGIN";
             this.Btn_ingresar.UseVisualStyleBackColor = false;
             this.Btn_ingresar.Click += new System.EventHandler(this.Btn_ingresar_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.PowderBlue;
-            this.label1.Location = new System.Drawing.Point(38, 83);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 22);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Usuario";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.PowderBlue;
-            this.label2.Location = new System.Drawing.Point(38, 121);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 22);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Contraseña";
-            // 
             // Txt_usuario
             // 
-            this.Txt_usuario.BackColor = System.Drawing.Color.LightBlue;
-            this.Txt_usuario.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_usuario.Location = new System.Drawing.Point(147, 83);
+            this.Txt_usuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(224)))), ((int)(((byte)(223)))));
+            this.Txt_usuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Txt_usuario.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_usuario.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.Txt_usuario.Location = new System.Drawing.Point(78, 32);
+            this.Txt_usuario.Multiline = true;
             this.Txt_usuario.Name = "Txt_usuario";
-            this.Txt_usuario.Size = new System.Drawing.Size(149, 26);
+            this.Txt_usuario.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.Txt_usuario.Size = new System.Drawing.Size(226, 32);
             this.Txt_usuario.TabIndex = 3;
             // 
             // Txt_contraseña
             // 
-            this.Txt_contraseña.BackColor = System.Drawing.Color.LightBlue;
-            this.Txt_contraseña.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_contraseña.Location = new System.Drawing.Point(147, 121);
+            this.Txt_contraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(224)))), ((int)(((byte)(223)))));
+            this.Txt_contraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Txt_contraseña.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_contraseña.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.Txt_contraseña.Location = new System.Drawing.Point(78, 82);
+            this.Txt_contraseña.Multiline = true;
             this.Txt_contraseña.Name = "Txt_contraseña";
             this.Txt_contraseña.PasswordChar = '*';
-            this.Txt_contraseña.Size = new System.Drawing.Size(149, 26);
+            this.Txt_contraseña.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.Txt_contraseña.Size = new System.Drawing.Size(226, 32);
             this.Txt_contraseña.TabIndex = 4;
             this.Txt_contraseña.Validating += new System.ComponentModel.CancelEventHandler(this.Txt_contraseña_Validating);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Perpetua", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(222, 160);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 28);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "LOGIN";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(222, 35);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(93, 91);
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.Btn_ingresar);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.Txt_usuario);
-            this.groupBox1.Controls.Add(this.Txt_contraseña);
-            this.groupBox1.Font = new System.Drawing.Font("Perpetua", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.groupBox1.Location = new System.Drawing.Point(110, 132);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(327, 226);
-            this.groupBox1.TabIndex = 9;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "LOGIN";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // Er_validar
             // 
             this.Er_validar.ContainerControl = this;
             // 
+            // Pnl_nombre
+            // 
+            this.Pnl_nombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(173)))), ((int)(((byte)(229)))));
+            this.Pnl_nombre.Controls.Add(this.Lbl_lab);
+            this.Pnl_nombre.Location = new System.Drawing.Point(93, 40);
+            this.Pnl_nombre.Name = "Pnl_nombre";
+            this.Pnl_nombre.Size = new System.Drawing.Size(340, 46);
+            this.Pnl_nombre.TabIndex = 10;
+            // 
+            // Lbl_lab
+            // 
+            this.Lbl_lab.AutoSize = true;
+            this.Lbl_lab.Font = new System.Drawing.Font("Myanmar Text", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_lab.ForeColor = System.Drawing.Color.White;
+            this.Lbl_lab.Location = new System.Drawing.Point(35, 9);
+            this.Lbl_lab.Name = "Lbl_lab";
+            this.Lbl_lab.Size = new System.Drawing.Size(256, 37);
+            this.Lbl_lab.TabIndex = 0;
+            this.Lbl_lab.Text = "LABORATORIO CLINICO";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.Txt_contraseña);
+            this.panel1.Controls.Add(this.Btn_ingresar);
+            this.panel1.Controls.Add(this.Txt_usuario);
+            this.panel1.Location = new System.Drawing.Point(93, 114);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(340, 200);
+            this.panel1.TabIndex = 11;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(173)))), ((int)(((byte)(229)))));
+            this.pictureBox2.Image = global::LaboratorioClinico.Properties.Resources.bl;
+            this.pictureBox2.Location = new System.Drawing.Point(42, 82);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(37, 32);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 14;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(173)))), ((int)(((byte)(229)))));
+            this.pictureBox1.Image = global::LaboratorioClinico.Properties.Resources.usuario_hombre;
+            this.pictureBox1.Location = new System.Drawing.Point(42, 32);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(37, 32);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.BackgroundImage = global::LaboratorioClinico.Properties.Resources.FONDOO;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(224)))), ((int)(((byte)(223)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(543, 430);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label3);
+            this.ClientSize = new System.Drawing.Size(530, 357);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.Pnl_nombre);
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.PaleTurquoise;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -165,26 +172,29 @@
             this.Text = "Login";
             this.TransparencyKey = System.Drawing.Color.AliceBlue;
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Er_validar)).EndInit();
+            this.Pnl_nombre.ResumeLayout(false);
+            this.Pnl_nombre.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Button Btn_ingresar;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox Txt_usuario;
         private System.Windows.Forms.TextBox Txt_contraseña;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ErrorProvider Er_validar;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel Pnl_nombre;
+        private System.Windows.Forms.Label Lbl_lab;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 
