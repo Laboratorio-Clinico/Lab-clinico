@@ -41,32 +41,6 @@ namespace LaboratorioClinico
         public void proIngresarUsuario(int pPrivilegio)
         {
 
-            MySqlCommand cm;
-            cm = new MySqlCommand("ingresaUsuario", conexion.ObtenerConexion());
-            cm.CommandType = CommandType.StoredProcedure;
-
-            cm.Parameters.AddWithValue("@iIdPrivilegio", pPrivilegio);
-            cm.Parameters.AddWithValue("@nDPI", this.Txt_codigoDeEmpleado);
-            cm.Parameters.AddWithValue("@sUsuario", this.Txt_usuario);
-            cm.Parameters.AddWithValue("@sContrasena", this.Txt_password);
-            
-
-            int query = cm.ExecuteNonQuery();
-
-            if (query == 1)
-            {
-                MessageBox.Show("Usuario ingresado correctamente", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("No se pudo ingresar", "Incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-
-            Txt_codigoDeEmpleado.ResetText();
-            Txt_usuario.ResetText();
-            Txt_password.ResetText();
-            Cmb_privelegio.ResetText();
-
 
         }
 
@@ -92,9 +66,38 @@ namespace LaboratorioClinico
 
             }
 
-            proIngresarUsuario(pPrivilegio);
+            try { 
+            MySqlCommand cm;
+            cm = new MySqlCommand("ingresaUsuario", conexion.ObtenerConexion());
+            cm.CommandType = CommandType.StoredProcedure;
 
-        }
+            cm.Parameters.AddWithValue("@iIdPrivilegio", pPrivilegio);
+            cm.Parameters.AddWithValue("@nDPI", this.Txt_codigoDeEmpleado.Text);
+            cm.Parameters.AddWithValue("@sUsuario", this.Txt_usuario.Text);
+            cm.Parameters.AddWithValue("@sContrasena", this.Txt_password.Text);
+
+
+            int query = cm.ExecuteNonQuery();
+
+            if (query == 1)
+            {
+                MessageBox.Show("Usuario ingresado correctamente", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("No se pudo ingresar", "Incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            Txt_codigoDeEmpleado.ResetText();
+            Txt_usuario.ResetText();
+            Txt_password.ResetText();
+            Cmb_privelegio.ResetText();
+        }catch (Exception ex){
+
+                MessageBox.Show("No se pudo ingresar", "Incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+}
 
         private void Gpb_nuevoUsuario_Enter(object sender, EventArgs e)
         {
@@ -105,6 +108,7 @@ namespace LaboratorioClinico
         {
             string dpiE = Txt_codigoDeEmpleado.Text;
 
+            try { 
             MySqlDataAdapter sda = new MySqlDataAdapter("select count(*) from empleado where nIdEmpleado='" + Convert.ToInt64(dpiE) + "'", conexion.ObtenerConexion());
             DataTable datos = new DataTable();
             sda.Fill(datos);
@@ -120,7 +124,12 @@ namespace LaboratorioClinico
 
 
             }
-        }
+
+        }catch (Exception ex){
+
+                MessageBox.Show("Intente de nuevo", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+            }
+}
 
         private void Txt_codigoDeEmpleado_TextChanged(object sender, EventArgs e)
         {
