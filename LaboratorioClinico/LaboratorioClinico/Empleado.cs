@@ -36,12 +36,15 @@ namespace LaboratorioClinico
                 cm.Parameters.AddWithValue("@fSueldo", this.Txt_sueldo.Text);
                 cm.Parameters.AddWithValue("@dFechaDeNacimiento", this.Dtp_fechaNacimiento.Text);
                 cm.Parameters.AddWithValue("@iIdUsuario", this.Txt_DPIEmpleado.Text);
+                cm.ExecuteNonQuery();
                 MessageBox.Show("Datos insertados correctamente");
+                
             } catch(MySqlException error) { MessageBox.Show(error.Message); }
 
             finally {
 
             conexion.ObtenerConexion().Close(); }
+            Txt_DPIEmpleado.ResetText();
             Txt_nombre.ResetText();
             Txt_apellido.ResetText();
             Txt_telefono.ResetText();
