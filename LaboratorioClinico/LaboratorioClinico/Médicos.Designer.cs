@@ -44,6 +44,7 @@
             this.Gpb_profesion = new System.Windows.Forms.GroupBox();
             this.Cmb_empresa = new System.Windows.Forms.ComboBox();
             this.Gpb_datosPersonales = new System.Windows.Forms.GroupBox();
+            this.Cmb_especialidad = new System.Windows.Forms.ComboBox();
             this.Txt_Correo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Gpb_nacimiento = new System.Windows.Forms.GroupBox();
@@ -52,7 +53,6 @@
             this.Dtp_fechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.Lbl_fechaDeNacimiento = new System.Windows.Forms.Label();
             this.Btn_guardar = new System.Windows.Forms.Button();
-            this.Cmb_especialidad = new System.Windows.Forms.ComboBox();
             this.Gpb_medicos.SuspendLayout();
             this.Gpb_profesion.SuspendLayout();
             this.Gpb_datosPersonales.SuspendLayout();
@@ -258,6 +258,16 @@
             this.Gpb_datosPersonales.TabStop = false;
             this.Gpb_datosPersonales.Text = "Datos Personales";
             // 
+            // Cmb_especialidad
+            // 
+            this.Cmb_especialidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Cmb_especialidad.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cmb_especialidad.FormattingEnabled = true;
+            this.Cmb_especialidad.Location = new System.Drawing.Point(111, 225);
+            this.Cmb_especialidad.Name = "Cmb_especialidad";
+            this.Cmb_especialidad.Size = new System.Drawing.Size(197, 25);
+            this.Cmb_especialidad.TabIndex = 53;
+            // 
             // Txt_Correo
             // 
             this.Txt_Correo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
@@ -294,6 +304,7 @@
             this.Gpb_nacimiento.Size = new System.Drawing.Size(356, 465);
             this.Gpb_nacimiento.TabIndex = 17;
             this.Gpb_nacimiento.TabStop = false;
+            this.Gpb_nacimiento.Enter += new System.EventHandler(this.Gpb_nacimiento_Enter);
             // 
             // label10
             // 
@@ -348,16 +359,6 @@
             this.Btn_guardar.TabIndex = 24;
             this.Btn_guardar.UseVisualStyleBackColor = true;
             this.Btn_guardar.Click += new System.EventHandler(this.Btn_guardar_Click);
-            // 
-            // Cmb_especialidad
-            // 
-            this.Cmb_especialidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.Cmb_especialidad.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cmb_especialidad.FormattingEnabled = true;
-            this.Cmb_especialidad.Location = new System.Drawing.Point(111, 225);
-            this.Cmb_especialidad.Name = "Cmb_especialidad";
-            this.Cmb_especialidad.Size = new System.Drawing.Size(197, 25);
-            this.Cmb_especialidad.TabIndex = 53;
             // 
             // Médicos
             // 

@@ -64,8 +64,7 @@ namespace LaboratorioClinico
                 Cmb_empresa.ResetText();
                 Dtp_fechaNacimiento.ResetText();
             }
-            catch (Exception error) { MessageBox.Show(error.Message); }
-            finally { conexion.ObtenerConexion().Close(); }
+            catch (Exception error) { MessageBox.Show("Error"); }
         }
         public void proLlenarEmpresa()
         {
@@ -89,10 +88,10 @@ namespace LaboratorioClinico
                 conexion.ObtenerConexion().Close();
 
             }
-            catch (MySqlException error) { MessageBox.Show(error.Message); }
-        
+            catch (Exception error) { MessageBox.Show("Error al llenar campos de Empresa"); }
 
-    }
+
+        }
         public void proLlenarEspecialidad()
         {
 
@@ -115,17 +114,32 @@ namespace LaboratorioClinico
                 conexion.ObtenerConexion().Close();
 
             }
-            catch (MySqlException error) { MessageBox.Show(error.Message); }
+            catch (Exception error) { MessageBox.Show("Error al llenar especialidad"); }
 
 
         }
         private void Btn_guardar_Click(object sender, EventArgs e)
         {
-            int iEmpresa = Convert.ToInt32(Cmb_empresa.SelectedValue);
-            int iEspecialidad = Convert.ToInt32(Cmb_especialidad.SelectedValue);
-            proGuardarDatos(iEmpresa, iEspecialidad);
 
 
+            try
+            {
+
+                int iEmpresa = Convert.ToInt32(Cmb_empresa.SelectedValue);
+                int iEspecialidad = Convert.ToInt32(Cmb_especialidad.SelectedValue);
+                proGuardarDatos(iEmpresa, iEspecialidad);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Error", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+
+
+        }
+
+        private void Gpb_nacimiento_Enter(object sender, EventArgs e)
+        {
 
         }
     }
