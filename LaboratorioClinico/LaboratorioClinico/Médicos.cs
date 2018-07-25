@@ -45,7 +45,7 @@ namespace LaboratorioClinico
             cm.Parameters.AddWithValue("@sDireccion", this.Txt_direccion);
             cm.Parameters.AddWithValue("@sEspecialidad", this.Txt_especialidad);
             cm.Parameters.AddWithValue("@iColegiado", this.Txt_colegiado);
-            cm.Parameters.AddWithValue("@sEmpresa", this.Txt_empresa);
+            cm.Parameters.AddWithValue("@sEmpresa", this.Cmb_empresa);
             cm.Parameters.AddWithValue("@dFechaDeNacimiento", this.Dtp_fechaNacimiento);
 
             int query = cm.ExecuteNonQuery();
@@ -65,7 +65,7 @@ namespace LaboratorioClinico
             Txt_direccion.ResetText();
             Txt_especialidad.ResetText();
             Txt_colegiado.ResetText();
-            Txt_empresa.ResetText();
+            Cmb_empresa.ResetText();
             Dtp_fechaNacimiento.ResetText();
 
 

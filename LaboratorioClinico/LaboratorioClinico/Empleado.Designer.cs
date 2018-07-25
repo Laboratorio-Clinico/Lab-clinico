@@ -45,6 +45,8 @@
             this.Btn_guardar = new System.Windows.Forms.Button();
             this.Picb_imagen = new System.Windows.Forms.PictureBox();
             this.Gpb_datosPersonales = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.Txt_DPIEmpleado = new System.Windows.Forms.TextBox();
             this.Dtp_fechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.Lbl_fechaDeNacimiento = new System.Windows.Forms.Label();
             this.Txt_apellido = new System.Windows.Forms.TextBox();
@@ -97,7 +99,7 @@
             this.Gpb_contacto.Controls.Add(this.Lbl_direccion);
             this.Gpb_contacto.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Gpb_contacto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.Gpb_contacto.Location = new System.Drawing.Point(26, 236);
+            this.Gpb_contacto.Location = new System.Drawing.Point(26, 255);
             this.Gpb_contacto.Name = "Gpb_contacto";
             this.Gpb_contacto.Size = new System.Drawing.Size(322, 172);
             this.Gpb_contacto.TabIndex = 48;
@@ -257,6 +259,8 @@
             // 
             // Gpb_datosPersonales
             // 
+            this.Gpb_datosPersonales.Controls.Add(this.label5);
+            this.Gpb_datosPersonales.Controls.Add(this.Txt_DPIEmpleado);
             this.Gpb_datosPersonales.Controls.Add(this.Dtp_fechaNacimiento);
             this.Gpb_datosPersonales.Controls.Add(this.Lbl_fechaDeNacimiento);
             this.Gpb_datosPersonales.Controls.Add(this.Txt_apellido);
@@ -267,17 +271,40 @@
             this.Gpb_datosPersonales.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.Gpb_datosPersonales.Location = new System.Drawing.Point(26, 47);
             this.Gpb_datosPersonales.Name = "Gpb_datosPersonales";
-            this.Gpb_datosPersonales.Size = new System.Drawing.Size(322, 164);
+            this.Gpb_datosPersonales.Size = new System.Drawing.Size(322, 189);
             this.Gpb_datosPersonales.TabIndex = 0;
             this.Gpb_datosPersonales.TabStop = false;
             this.Gpb_datosPersonales.Text = "Datos Personales";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(25, 44);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(31, 18);
+            this.label5.TabIndex = 29;
+            this.label5.Text = "DPI";
+            // 
+            // Txt_DPIEmpleado
+            // 
+            this.Txt_DPIEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_DPIEmpleado.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_DPIEmpleado.ForeColor = System.Drawing.Color.Black;
+            this.Txt_DPIEmpleado.Location = new System.Drawing.Point(99, 41);
+            this.Txt_DPIEmpleado.Margin = new System.Windows.Forms.Padding(4);
+            this.Txt_DPIEmpleado.Name = "Txt_DPIEmpleado";
+            this.Txt_DPIEmpleado.Size = new System.Drawing.Size(197, 26);
+            this.Txt_DPIEmpleado.TabIndex = 28;
+            // 
             // Dtp_fechaNacimiento
             // 
-            this.Dtp_fechaNacimiento.CustomFormat = "dd-MM-yy";
+            this.Dtp_fechaNacimiento.CustomFormat = "yyyy-MM-dd";
             this.Dtp_fechaNacimiento.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Dtp_fechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Dtp_fechaNacimiento.Location = new System.Drawing.Point(172, 126);
+            this.Dtp_fechaNacimiento.Location = new System.Drawing.Point(176, 146);
             this.Dtp_fechaNacimiento.Name = "Dtp_fechaNacimiento";
             this.Dtp_fechaNacimiento.Size = new System.Drawing.Size(120, 26);
             this.Dtp_fechaNacimiento.TabIndex = 27;
@@ -287,7 +314,7 @@
             this.Lbl_fechaDeNacimiento.AutoSize = true;
             this.Lbl_fechaDeNacimiento.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_fechaDeNacimiento.ForeColor = System.Drawing.Color.White;
-            this.Lbl_fechaDeNacimiento.Location = new System.Drawing.Point(21, 132);
+            this.Lbl_fechaDeNacimiento.Location = new System.Drawing.Point(25, 152);
             this.Lbl_fechaDeNacimiento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_fechaDeNacimiento.Name = "Lbl_fechaDeNacimiento";
             this.Lbl_fechaDeNacimiento.Size = new System.Drawing.Size(128, 18);
@@ -299,7 +326,7 @@
             this.Txt_apellido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Txt_apellido.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_apellido.ForeColor = System.Drawing.Color.Black;
-            this.Txt_apellido.Location = new System.Drawing.Point(95, 78);
+            this.Txt_apellido.Location = new System.Drawing.Point(99, 109);
             this.Txt_apellido.Margin = new System.Windows.Forms.Padding(4);
             this.Txt_apellido.Name = "Txt_apellido";
             this.Txt_apellido.Size = new System.Drawing.Size(197, 26);
@@ -310,7 +337,7 @@
             this.Txt_nombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Txt_nombre.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_nombre.ForeColor = System.Drawing.Color.Black;
-            this.Txt_nombre.Location = new System.Drawing.Point(95, 43);
+            this.Txt_nombre.Location = new System.Drawing.Point(99, 75);
             this.Txt_nombre.Margin = new System.Windows.Forms.Padding(4);
             this.Txt_nombre.Name = "Txt_nombre";
             this.Txt_nombre.Size = new System.Drawing.Size(197, 26);
@@ -321,7 +348,7 @@
             this.Lbl_apellido.AutoSize = true;
             this.Lbl_apellido.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_apellido.ForeColor = System.Drawing.Color.White;
-            this.Lbl_apellido.Location = new System.Drawing.Point(21, 78);
+            this.Lbl_apellido.Location = new System.Drawing.Point(25, 110);
             this.Lbl_apellido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_apellido.Name = "Lbl_apellido";
             this.Lbl_apellido.Size = new System.Drawing.Size(58, 18);
@@ -333,7 +360,7 @@
             this.Lbl_nombre.AutoSize = true;
             this.Lbl_nombre.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_nombre.ForeColor = System.Drawing.Color.White;
-            this.Lbl_nombre.Location = new System.Drawing.Point(21, 42);
+            this.Lbl_nombre.Location = new System.Drawing.Point(25, 74);
             this.Lbl_nombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_nombre.Name = "Lbl_nombre";
             this.Lbl_nombre.Size = new System.Drawing.Size(58, 18);
@@ -390,5 +417,7 @@
         private System.Windows.Forms.GroupBox Gpb_contacto;
         private System.Windows.Forms.GroupBox Gpb_puesto;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox Txt_DPIEmpleado;
     }
 }

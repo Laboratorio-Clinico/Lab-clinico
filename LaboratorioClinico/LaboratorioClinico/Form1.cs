@@ -55,11 +55,12 @@ namespace LaboratorioClinico
             Validar();
             string user = Txt_usuario.Text;
             string pass = Txt_contraseña.Text;
+            string tipo;
 
 
             try
             {
-                MySqlDataAdapter sda = new MySqlDataAdapter("select count(*) from usuario where sUsuario='" + user + "'and sContraseña ='" + pass + "'", conexion.ObtenerConexion());
+                MySqlDataAdapter sda = new MySqlDataAdapter("select count(*) from usuario where sUsuario='" + user + "'and sContrasena ='" + pass + "'", conexion.ObtenerConexion());
                 MySqlCommand cmd = conexion.ObtenerConexion().CreateCommand();
                 DataTable datos = new DataTable();
                 sda.Fill(datos);
@@ -69,14 +70,32 @@ namespace LaboratorioClinico
                     MessageBox.Show("Usuario Correcto", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
-                    Txt_usuario.ResetText();
-                    Txt_contraseña.ResetText();
+                    
+                   
+                    try
+                    {
+                        //--------------------------Saber privilegio--------------------------------
+                        MySqlDataAdapter sda2 = new MySqlDataAdapter("select sPrivilegio from privilegio where iIdPrivilegio = (select iIdPrivilegio from usuario where sUsuario = '" + Txt_usuario.Text + "')", conexion.ObtenerConexion());
+                        MySqlCommand cmd2 = conexion.ObtenerConexion().CreateCommand();
+                        DataTable datos2 = new DataTable();
+                        sda2.Fill(datos2);
 
 
-                    this.Hide();
-                    Menu abrir = new Menu(user);
-                    abrir.ShowDialog();
-                    this.Show();
+                        tipo = datos2.Rows[0][0].ToString();
+                        
+
+                        this.Hide();
+                        Menu abrir = new Menu(user, tipo);
+                        abrir.ShowDialog();
+                        Txt_usuario.ResetText();
+                        Txt_contraseña.ResetText();
+                        this.Show();
+                    }
+                    catch(Exception ex)
+                    {
+                        MessageBox.Show("Error");
+                    }
+                   
 
 
                 }
@@ -127,5 +146,54 @@ namespace LaboratorioClinico
         {
 
         }
+
+        private void Txt_usuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Txt_usuario_Enter(object sender, EventArgs e)
+        {
+            if (Txt_usuario.Text == "Usuario") {
+                Txt_usuario.Text = "";
+                Txt_usuario.ForeColor = Color.MidnightBlue;
+            }
+        }
+
+        private void Txt_usuario_Leave(object sender, EventArgs e)
+        {
+            if (Txt_usuario.Text == "")
+            {
+                Txt_usuario.Text = "Usuario";
+                Txt_usuario.ForeColor = Color.MidnightBlue;
+            }
+        }
+
+        private void Txt_contraseña_Enter(object sender, EventArgs e)
+        {
+            if (Txt_contraseña.Text == "Contraseña")
+            {
+                Txt_contraseña.Text = "";
+                Txt_contraseña.ForeColor = Color.MidnightBlue;
+                Txt_contraseña.PasswordChar = '*';
+            }
+        }
+
+        private void Txt_contraseña_Leave(object sender, EventArgs e)
+        {
+            if (Txt_contraseña.Text == "")
+            {
+                Txt_contraseña.Text = "Contraseña";
+                Txt_contraseña.ForeColor = Color.MidnightBlue;
+                Txt_contraseña.PasswordChar = ' ';
+            }
+        }
+
+        private void Txt_contraseña_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }

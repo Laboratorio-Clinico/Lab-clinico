@@ -41,31 +41,6 @@ namespace LaboratorioClinico
         public void proIngresarUsuario(int pPrivilegio)
         {
 
-            MySqlCommand cm;
-            cm = new MySqlCommand("Pro_ingresoUsuario", conexion.ObtenerConexion());
-            cm.CommandType = CommandType.StoredProcedure;
-
-            cm.Parameters.AddWithValue("@iCodigoEmpleado", this.Txt_codigoDeEmpleado);
-            cm.Parameters.AddWithValue("@sUsuario", this.Txt_usuario);
-            cm.Parameters.AddWithValue("@sContrasena", this.Txt_password);
-            cm.Parameters.AddWithValue("@iPrivilegios", pPrivilegio);
-
-            int query = cm.ExecuteNonQuery();
-
-            if (query == 1)
-            {
-            }
-            else
-            {
-                MessageBox.Show("No se pudo ingresar", "Incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-
-            Txt_codigoDeEmpleado.ResetText();
-            Txt_usuario.ResetText();
-            Txt_password.ResetText();
-            MessageBox.Show("Cliente ingresado correctamente", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            Cmb_privelegio.ResetText();
-
 
         }
 
@@ -80,17 +55,83 @@ namespace LaboratorioClinico
                 pPrivilegio = 1;
 
             }
-            if (String.Compare(Cmb_privelegio.SelectedItem.ToString(), "Usuario") == 0)
+            if (String.Compare(Cmb_privelegio.SelectedItem.ToString(), "UsuarioL") == 0)
             {
                 pPrivilegio = 2;
 
             }
+            if (String.Compare(Cmb_privelegio.SelectedItem.ToString(), "Usuario") == 0)
+            {
+                pPrivilegio =3;
 
-            proIngresarUsuario(pPrivilegio);
+            }
+
+            try { 
+            MySqlCommand cm;
+            cm = new MySqlCommand("ingresaUsuario", conexion.ObtenerConexion());
+            cm.CommandType = CommandType.StoredProcedure;
+
+            cm.Parameters.AddWithValue("@iIdPrivilegio", pPrivilegio);
+            cm.Parameters.AddWithValue("@nDPI", this.Txt_codigoDeEmpleado.Text);
+            cm.Parameters.AddWithValue("@sUsuario", this.Txt_usuario.Text);
+            cm.Parameters.AddWithValue("@sContrasena", this.Txt_password.Text);
+
+
+            int query = cm.ExecuteNonQuery();
+
+            if (query == 1)
+            {
+                MessageBox.Show("Usuario ingresado correctamente", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("No se pudo ingresar", "Incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            Txt_codigoDeEmpleado.ResetText();
+            Txt_usuario.ResetText();
+            Txt_password.ResetText();
+            Cmb_privelegio.ResetText();
+        }catch (Exception ex){
+
+                MessageBox.Show("No se pudo ingresar", "Incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+}
+
+        private void Gpb_nuevoUsuario_Enter(object sender, EventArgs e)
+        {
 
         }
 
-        private void Gpb_nuevoUsuario_Enter(object sender, EventArgs e)
+        private void Btn_Click(object sender, EventArgs e)
+        {
+            string dpiE = Txt_codigoDeEmpleado.Text;
+
+            try { 
+            MySqlDataAdapter sda = new MySqlDataAdapter("select count(*) from empleado where nIdEmpleado='" + Convert.ToInt64(dpiE) + "'", conexion.ObtenerConexion());
+            DataTable datos = new DataTable();
+            sda.Fill(datos);
+
+            if (datos.Rows[0][0].ToString() == "1")
+            {
+                Pnl_usuario.Visible = true;
+            }
+            else
+            {
+                MessageBox.Show("DPI no encontrado y/o no se encuentra registrado en la base de datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Txt_codigoDeEmpleado.ResetText();
+
+
+            }
+
+        }catch (Exception ex){
+
+                MessageBox.Show("Intente de nuevo", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+            }
+}
+
+        private void Txt_codigoDeEmpleado_TextChanged(object sender, EventArgs e)
         {
 
         }

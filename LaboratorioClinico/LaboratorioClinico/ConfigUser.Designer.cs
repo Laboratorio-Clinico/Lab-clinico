@@ -80,6 +80,7 @@
             this.Tbc_control.TabIndex = 2;
             this.Tbc_control.Text = "Privilegios";
             this.Tbc_control.UseVisualStyleBackColor = true;
+            this.Tbc_control.Click += new System.EventHandler(this.Tbc_control_Click);
             // 
             // Cmb_privi
             // 
@@ -89,6 +90,7 @@
             this.Cmb_privi.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Cmb_privi.Size = new System.Drawing.Size(172, 30);
             this.Cmb_privi.TabIndex = 17;
+            this.Cmb_privi.SelectedIndexChanged += new System.EventHandler(this.Cmb_privi_SelectedIndexChanged);
             // 
             // Btn_cambiar
             // 
@@ -99,6 +101,7 @@
             this.Btn_cambiar.Size = new System.Drawing.Size(53, 44);
             this.Btn_cambiar.TabIndex = 16;
             this.Btn_cambiar.UseVisualStyleBackColor = true;
+            this.Btn_cambiar.Click += new System.EventHandler(this.Btn_cambiar_Click);
             // 
             // pictureBox3
             // 
@@ -129,6 +132,7 @@
             this.Cmb_usuario.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Cmb_usuario.Size = new System.Drawing.Size(172, 30);
             this.Cmb_usuario.TabIndex = 12;
+            this.Cmb_usuario.SelectedIndexChanged += new System.EventHandler(this.Cmb_usuario_SelectedIndexChanged);
             // 
             // label7
             // 
@@ -201,6 +205,7 @@
             this.Txt_privilegio.Enabled = false;
             this.Txt_privilegio.Location = new System.Drawing.Point(141, 186);
             this.Txt_privilegio.Name = "Txt_privilegio";
+            this.Txt_privilegio.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Txt_privilegio.Size = new System.Drawing.Size(172, 29);
             this.Txt_privilegio.TabIndex = 11;
             // 
@@ -245,6 +250,7 @@
             this.Controls.Add(this.Tbc_cuerpo);
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "ConfigUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ConfigUser";

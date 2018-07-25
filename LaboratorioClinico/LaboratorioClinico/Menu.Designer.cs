@@ -39,19 +39,19 @@
             this.cambioDeContraseñaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mantenimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.médicosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cotizaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ingresarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Tm_reportes = new System.Windows.Forms.ToolStripMenuItem();
+            this.Tm_Examen = new System.Windows.Forms.ToolStripMenuItem();
+            this.Tm_Enuevo = new System.Windows.Forms.ToolStripMenuItem();
             this.cotizacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.resultadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Tm_Eresultados = new System.Windows.Forms.ToolStripMenuItem();
             this.muestrasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.leerCódigoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Tm_crearCodigo = new System.Windows.Forms.ToolStripMenuItem();
-            this.requerimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.controlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Tm_Erequerimientos = new System.Windows.Forms.ToolStripMenuItem();
+            this.Tm_Control = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoPacienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.facturaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Tm_Factura = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -85,10 +85,10 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.pacienteToolStripMenuItem,
             this.Tm_admin,
-            this.reportesToolStripMenuItem,
-            this.cotizaciónToolStripMenuItem,
-            this.controlToolStripMenuItem,
-            this.facturaciónToolStripMenuItem,
+            this.Tm_reportes,
+            this.Tm_Examen,
+            this.Tm_Control,
+            this.Tm_Factura,
             this.ayudaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -177,36 +177,36 @@
             this.médicosToolStripMenuItem.Text = "Médicos";
             this.médicosToolStripMenuItem.Click += new System.EventHandler(this.médicosToolStripMenuItem_Click);
             // 
-            // reportesToolStripMenuItem
+            // Tm_reportes
             // 
-            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
-            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(92, 28);
-            this.reportesToolStripMenuItem.Text = "Reportes";
+            this.Tm_reportes.Name = "Tm_reportes";
+            this.Tm_reportes.Size = new System.Drawing.Size(92, 28);
+            this.Tm_reportes.Text = "Reportes";
             // 
-            // cotizaciónToolStripMenuItem
+            // Tm_Examen
             // 
-            this.cotizaciónToolStripMenuItem.BackColor = System.Drawing.Color.DarkCyan;
-            this.cotizaciónToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ingresarToolStripMenuItem,
+            this.Tm_Examen.BackColor = System.Drawing.Color.DarkCyan;
+            this.Tm_Examen.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Tm_Enuevo,
             this.cotizacionesToolStripMenuItem,
-            this.resultadosToolStripMenuItem,
+            this.Tm_Eresultados,
             this.muestrasToolStripMenuItem,
-            this.requerimientosToolStripMenuItem});
-            this.cotizaciónToolStripMenuItem.Name = "cotizaciónToolStripMenuItem";
-            this.cotizaciónToolStripMenuItem.Size = new System.Drawing.Size(101, 28);
-            this.cotizaciónToolStripMenuItem.Text = "Exámenes";
-            this.cotizaciónToolStripMenuItem.Click += new System.EventHandler(this.cotizaciónToolStripMenuItem_Click);
+            this.Tm_Erequerimientos});
+            this.Tm_Examen.Name = "Tm_Examen";
+            this.Tm_Examen.Size = new System.Drawing.Size(101, 28);
+            this.Tm_Examen.Text = "Exámenes";
+            this.Tm_Examen.Click += new System.EventHandler(this.cotizaciónToolStripMenuItem_Click);
             // 
-            // ingresarToolStripMenuItem
+            // Tm_Enuevo
             // 
-            this.ingresarToolStripMenuItem.BackColor = System.Drawing.Color.PowderBlue;
-            this.ingresarToolStripMenuItem.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ingresarToolStripMenuItem.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.ingresarToolStripMenuItem.Image = global::LaboratorioClinico.Properties.Resources.anadir;
-            this.ingresarToolStripMenuItem.Name = "ingresarToolStripMenuItem";
-            this.ingresarToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
-            this.ingresarToolStripMenuItem.Text = "Nuevo";
-            this.ingresarToolStripMenuItem.Click += new System.EventHandler(this.ingresarToolStripMenuItem_Click);
+            this.Tm_Enuevo.BackColor = System.Drawing.Color.PowderBlue;
+            this.Tm_Enuevo.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tm_Enuevo.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.Tm_Enuevo.Image = global::LaboratorioClinico.Properties.Resources.anadir;
+            this.Tm_Enuevo.Name = "Tm_Enuevo";
+            this.Tm_Enuevo.Size = new System.Drawing.Size(192, 26);
+            this.Tm_Enuevo.Text = "Nuevo";
+            this.Tm_Enuevo.Click += new System.EventHandler(this.ingresarToolStripMenuItem_Click);
             // 
             // cotizacionesToolStripMenuItem
             // 
@@ -219,16 +219,16 @@
             this.cotizacionesToolStripMenuItem.Text = "Cotizaciones";
             this.cotizacionesToolStripMenuItem.Click += new System.EventHandler(this.cotizacionesToolStripMenuItem_Click);
             // 
-            // resultadosToolStripMenuItem
+            // Tm_Eresultados
             // 
-            this.resultadosToolStripMenuItem.BackColor = System.Drawing.Color.PowderBlue;
-            this.resultadosToolStripMenuItem.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.resultadosToolStripMenuItem.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.resultadosToolStripMenuItem.Image = global::LaboratorioClinico.Properties.Resources.prueba;
-            this.resultadosToolStripMenuItem.Name = "resultadosToolStripMenuItem";
-            this.resultadosToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
-            this.resultadosToolStripMenuItem.Text = "Resultados";
-            this.resultadosToolStripMenuItem.Click += new System.EventHandler(this.resultadosToolStripMenuItem_Click);
+            this.Tm_Eresultados.BackColor = System.Drawing.Color.PowderBlue;
+            this.Tm_Eresultados.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tm_Eresultados.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.Tm_Eresultados.Image = global::LaboratorioClinico.Properties.Resources.prueba;
+            this.Tm_Eresultados.Name = "Tm_Eresultados";
+            this.Tm_Eresultados.Size = new System.Drawing.Size(192, 26);
+            this.Tm_Eresultados.Text = "Resultados";
+            this.Tm_Eresultados.Click += new System.EventHandler(this.resultadosToolStripMenuItem_Click);
             // 
             // muestrasToolStripMenuItem
             // 
@@ -263,26 +263,26 @@
             this.Tm_crearCodigo.Text = "Generar código";
             this.Tm_crearCodigo.Click += new System.EventHandler(this.crearCódigoToolStripMenuItem_Click);
             // 
-            // requerimientosToolStripMenuItem
+            // Tm_Erequerimientos
             // 
-            this.requerimientosToolStripMenuItem.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.requerimientosToolStripMenuItem.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.requerimientosToolStripMenuItem.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.requerimientosToolStripMenuItem.Image = global::LaboratorioClinico.Properties.Resources.pregunta;
-            this.requerimientosToolStripMenuItem.Name = "requerimientosToolStripMenuItem";
-            this.requerimientosToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
-            this.requerimientosToolStripMenuItem.Text = "Requerimientos";
-            this.requerimientosToolStripMenuItem.Click += new System.EventHandler(this.requerimientosToolStripMenuItem_Click);
+            this.Tm_Erequerimientos.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.Tm_Erequerimientos.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tm_Erequerimientos.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.Tm_Erequerimientos.Image = global::LaboratorioClinico.Properties.Resources.pregunta;
+            this.Tm_Erequerimientos.Name = "Tm_Erequerimientos";
+            this.Tm_Erequerimientos.Size = new System.Drawing.Size(192, 26);
+            this.Tm_Erequerimientos.Text = "Requerimientos";
+            this.Tm_Erequerimientos.Click += new System.EventHandler(this.requerimientosToolStripMenuItem_Click);
             // 
-            // controlToolStripMenuItem
+            // Tm_Control
             // 
-            this.controlToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Tm_Control.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nuevoPacienteToolStripMenuItem,
             this.nuevoEmpleadoToolStripMenuItem});
-            this.controlToolStripMenuItem.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.controlToolStripMenuItem.Name = "controlToolStripMenuItem";
-            this.controlToolStripMenuItem.Size = new System.Drawing.Size(79, 28);
-            this.controlToolStripMenuItem.Text = "Control";
+            this.Tm_Control.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tm_Control.Name = "Tm_Control";
+            this.Tm_Control.Size = new System.Drawing.Size(79, 28);
+            this.Tm_Control.Text = "Control";
             // 
             // nuevoPacienteToolStripMenuItem
             // 
@@ -304,12 +304,12 @@
             this.nuevoEmpleadoToolStripMenuItem.Text = "Nuevo Empleado";
             this.nuevoEmpleadoToolStripMenuItem.Click += new System.EventHandler(this.nuevoEmpleadoToolStripMenuItem_Click);
             // 
-            // facturaciónToolStripMenuItem
+            // Tm_Factura
             // 
-            this.facturaciónToolStripMenuItem.Name = "facturaciónToolStripMenuItem";
-            this.facturaciónToolStripMenuItem.Size = new System.Drawing.Size(112, 28);
-            this.facturaciónToolStripMenuItem.Text = "Facturación";
-            this.facturaciónToolStripMenuItem.Click += new System.EventHandler(this.facturaciónToolStripMenuItem_Click);
+            this.Tm_Factura.Name = "Tm_Factura";
+            this.Tm_Factura.Size = new System.Drawing.Size(112, 28);
+            this.Tm_Factura.Text = "Facturación";
+            this.Tm_Factura.Click += new System.EventHandler(this.facturaciónToolStripMenuItem_Click);
             // 
             // ayudaToolStripMenuItem
             // 
@@ -362,9 +362,10 @@
             this.Pnl_menudespegable.Controls.Add(this.panel1);
             this.Pnl_menudespegable.Controls.Add(this.label2);
             this.Pnl_menudespegable.Controls.Add(this.pictureBox2);
-            this.Pnl_menudespegable.Location = new System.Drawing.Point(666, 18);
+            this.Pnl_menudespegable.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pnl_menudespegable.Location = new System.Drawing.Point(638, 18);
             this.Pnl_menudespegable.Name = "Pnl_menudespegable";
-            this.Pnl_menudespegable.Size = new System.Drawing.Size(125, 14);
+            this.Pnl_menudespegable.Size = new System.Drawing.Size(153, 14);
             this.Pnl_menudespegable.TabIndex = 6;
             // 
             // panel1
@@ -384,7 +385,7 @@
             this.flowLayoutPanel1.Controls.Add(this.lbl_tipo);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(37, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(85, 33);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(113, 33);
             this.flowLayoutPanel1.TabIndex = 8;
             // 
             // lbl_usuario
@@ -512,20 +513,20 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem pacienteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem Tm_admin;
-        private System.Windows.Forms.ToolStripMenuItem cotizaciónToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem Tm_Examen;
         private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem facturaciónToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem Tm_Factura;
         private System.Windows.Forms.ToolStripMenuItem segurToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mantenimientoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cotizacionesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem resultadosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem Tm_Eresultados;
         private System.Windows.Forms.ToolStripMenuItem muestrasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem Tm_reportes;
         private System.Windows.Forms.ToolStripMenuItem leerCódigoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem Tm_crearCodigo;
-        private System.Windows.Forms.ToolStripMenuItem requerimientosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ingresarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem controlToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem Tm_Erequerimientos;
+        private System.Windows.Forms.ToolStripMenuItem Tm_Enuevo;
+        private System.Windows.Forms.ToolStripMenuItem Tm_Control;
         private System.Windows.Forms.ToolStripMenuItem nuevoPacienteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem médicosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nuevoUsuarioToolStripMenuItem;

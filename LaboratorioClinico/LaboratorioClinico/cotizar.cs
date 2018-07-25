@@ -19,6 +19,8 @@ namespace LaboratorioClinico
             InitializeComponent();
             proLlenareExamen();
             proLlenareDoctor();
+            proLlenareTipoDeDescuento();
+            proLlenarLaboratorio();
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -66,8 +68,8 @@ namespace LaboratorioClinico
 
             try
             {
-                Cmb__doctor.Text = "Seleccione el doctor que desea buscar";
-                Cmb__doctor.Items.Clear();
+                Cmb_doctor.Text = "Seleccione el doctor que desea buscar";
+                Cmb_doctor.Items.Clear();
                 conexion.ObtenerConexion();
                 MySqlCommand comando = new MySqlCommand("Select nIdEmpleado, sApellido from Empleado where iIdCargo > 5010 && iIdCargo <5015", conexion.ObtenerConexion());
                 MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
@@ -75,10 +77,10 @@ namespace LaboratorioClinico
 
                 adaptador.Fill(tabla);
 
-                Cmb__doctor.ValueMember = "iIdEmpleado";
-                Cmb__doctor.DisplayMember = "sApellido";
+                Cmb_doctor.ValueMember = "iIdEmpleado";
+                Cmb_doctor.DisplayMember = "sApellido";
 
-                Cmb__doctor.DataSource = tabla;
+                Cmb_doctor.DataSource = tabla;
 
                 conexion.ObtenerConexion().Close();
 
@@ -87,12 +89,10 @@ namespace LaboratorioClinico
         }
         public void proLlenarLaboratorio()
         {
-
-
             try
             {
-                Cmb__doctor.Text = "Seleccione el laboratorio en el que realizará el exámen";
-                Cmb__doctor.Items.Clear();
+                Cmb_laboratorio.Text = "Seleccione el laboratorio en el que realizará el exámen";
+                Cmb_laboratorio.Items.Clear();
                 conexion.ObtenerConexion();
                 MySqlCommand comando = new MySqlCommand("Select iIdLaboratorio, sUbicacion from Laboratorio", conexion.ObtenerConexion());
                 MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
@@ -100,10 +100,10 @@ namespace LaboratorioClinico
 
                 adaptador.Fill(tabla);
 
-                Cmb__doctor.ValueMember = "iIdLaboratorio";
-                Cmb__doctor.DisplayMember = "sUbicacion";
+                Cmb_laboratorio.ValueMember = "iIdLaboratorio";
+                Cmb_laboratorio.DisplayMember = "sUbicacion";
 
-                Cmb__doctor.DataSource = tabla;
+                Cmb_laboratorio.DataSource = tabla;
 
                 conexion.ObtenerConexion().Close();
 
@@ -113,22 +113,21 @@ namespace LaboratorioClinico
         public void proLlenareTipoDeDescuento()
         {
 
-
             try
             {
-                Cmb__doctor.Text = "Seleccione el tipo de descuento a utilizar";
-                Cmb__doctor.Items.Clear();
+                Cmb_tipoDeDescuento.Text = "Seleccione el tipo de descuento a utilizar";
+                Cmb_tipoDeDescuento.Items.Clear();
                 conexion.ObtenerConexion();
-                MySqlCommand comando = new MySqlCommand("Select iIdTipoDeDescuento, sDescripcion from TipoDeDescuento", conexion.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand("Select iIdTipoDescuento, sDescripcion from TipoDescuento", conexion.ObtenerConexion());
                 MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
                 DataTable tabla = new DataTable();
 
                 adaptador.Fill(tabla);
 
-                Cmb__doctor.ValueMember = "iIdTipoDeDescuento";
-                Cmb__doctor.DisplayMember = "sDescripcion";
+                Cmb_tipoDeDescuento.ValueMember = "iIdTipoDescuento";
+                Cmb_tipoDeDescuento.DisplayMember = "sDescripcion";
 
-                Cmb__doctor.DataSource = tabla;
+                Cmb_tipoDeDescuento.DataSource = tabla;
 
                 conexion.ObtenerConexion().Close();
 
@@ -137,11 +136,11 @@ namespace LaboratorioClinico
         }
         public void proSeleccionDeDescuento(int iTipoDeDescuento)
         {
-            if (iTipoDeDescuento == 9001) { Txt_porcentajeDeDescuento.Text = "0.45"; }
-            else if (iTipoDeDescuento == 9002) { Txt_porcentajeDeDescuento.Text = "0.35"; }
-            else if (iTipoDeDescuento == 9003) { Txt_porcentajeDeDescuento.Text = "0.25"; }
-            else if (iTipoDeDescuento == 9004) { Txt_porcentajeDeDescuento.Text = "0.15"; }
-            else if (iTipoDeDescuento == 9005) { Txt_porcentajeDeDescuento.Text = "0.50"; }
+            if (iTipoDeDescuento == 3001) { Txt_porcentajeDeDescuento.Text = "0.45"; }
+            else if (iTipoDeDescuento == 3002) { Txt_porcentajeDeDescuento.Text = "0.35"; }
+            else if (iTipoDeDescuento == 3003) { Txt_porcentajeDeDescuento.Text = "0.25"; }
+            else if (iTipoDeDescuento == 3004) { Txt_porcentajeDeDescuento.Text = "0.15"; }
+            else if (iTipoDeDescuento == 3005) { Txt_porcentajeDeDescuento.Text = "0.50"; }
 
         }
 
@@ -181,15 +180,12 @@ namespace LaboratorioClinico
 
         public void proBuscarCotizacion(int iIdExamenes)
         {
-
+    
             try
             {
                 MySqlCommand comando = new MySqlCommand("Pro_cotizacionesPrecio", conexion.ObtenerConexion());
                 comando.CommandType = CommandType.StoredProcedure;
-                comando.Parameters.Add("@iIdExamen", MySqlDbType.Int16);
-                comando.Parameters["@iIdExamen"].Value = iIdExamenes;
-                comando.Parameters.AddWithValue("iIdExamen", iIdExamenes);
-                conexion.ObtenerConexion().Open();
+                comando.Parameters.AddWithValue("@iIdExamenes",iIdExamenes);
                 comando.ExecuteNonQuery();
                 DataTable tabla = new DataTable();
                 MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
@@ -202,8 +198,9 @@ namespace LaboratorioClinico
 
 
         }
-        public void proPrecioyTotal(int iIdExamenes)
+       public void proPrecioyTotal(int iIdExamenes)
         {
+
             double doPrecio = 0;
             double doDescuento = 0;
             double doCantidad = 0;
@@ -212,33 +209,41 @@ namespace LaboratorioClinico
             {
                 MySqlCommand comando = new MySqlCommand("Pro_cotizacionesPrecio", conexion.ObtenerConexion());
                 comando.CommandType = CommandType.StoredProcedure;
-                comando.Parameters.Add("@iIdExamen", MySqlDbType.Int16);
-                comando.Parameters["@iIdExamen"].Value = iIdExamenes;
-                conexion.ObtenerConexion().Open();
+                comando.Parameters.AddWithValue("@iIdExamenes", iIdExamenes);
                 comando.ExecuteNonQuery();
+
                 MySqlDataReader buscador = comando.ExecuteReader();
                 if (buscador.Read() == true)
                 {
+                    
                     doPrecio = Convert.ToDouble(buscador["fPrecio"]);
-                    doCantidad = Convert.ToDouble(Txt_Cantidad);
-                    doDescuento = Convert.ToDouble(Txt_porcentajeDeDescuento);
+                    doCantidad = Convert.ToDouble(Txt_Cantidad.Text);
+                    doDescuento = Convert.ToDouble(Txt_porcentajeDeDescuento.Text);
                     doTotal = doPrecio * doCantidad * doDescuento;
                     Txt_Total.Text = Convert.ToString(doTotal);
                 }
+            
             }
             catch (MySqlException error) { MessageBox.Show(error.Message); }
             finally { conexion.ObtenerConexion().Close(); }
         }
-
+   
         private void Btn_buscar_Click(object sender, EventArgs e)
         {
+           
             int iIdExamenes = Convert.ToInt32(Cmb_examen.SelectedValue);
-            int iIdEmpleado = Convert.ToInt32(Cmb__doctor.SelectedValue);
-            int iIdTipoDescuento = Convert.ToInt32(Cmb_tipoDeDescuento.SelectedValue);
-            int iIdLaboratorio = Convert.ToInt32(Cmb_laboratorio.SelectedValue);
-            proGuardarCotizacion(iIdExamenes, iIdEmpleado, iIdLaboratorio, iIdTipoDescuento);
-            proPrecioyTotal(iIdExamenes);
+            /// MessageBox.Show("Aqui2");
+            /* int iIdEmpleado = Convert.ToInt32(Cmb_doctor.SelectedValue);
+             MessageBox.Show("Aqui3");
+             int iIdTipoDescuento = Convert.ToInt32(Cmb_tipoDeDescuento.SelectedValue);
+             MessageBox.Show("Aqui4");
+             int iIdLaboratorio = Convert.ToInt32(Cmb_laboratorio.SelectedValue);
+             MessageBox.Show("Aqui5");
+             
+             */
             proBuscarCotizacion(iIdExamenes);
+            proPrecioyTotal(iIdExamenes);
+            
 
 
         }
@@ -253,14 +258,14 @@ namespace LaboratorioClinico
 
         private void Btn_imprimir_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void Cmb_tipoDeDescuento_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (Cmb_tipoDeDescuento.SelectedValue.ToString() != null)
             {
-                int iTipoDeDescuento = Convert.ToInt32(Cmb_tipoDeDescuento);
+                int iTipoDeDescuento = Convert.ToInt32(Cmb_tipoDeDescuento.SelectedValue);
                 proSeleccionDeDescuento(iTipoDeDescuento);
 
             }
@@ -270,7 +275,7 @@ namespace LaboratorioClinico
         {
             if (Cmb_laboratorio.SelectedValue.ToString() != null)
             {
-                int iLaboratorio = Convert.ToInt32(Cmb_laboratorio);
+                int iLaboratorio = Convert.ToInt32(Cmb_laboratorio.SelectedValue);
                 Txt_noLaboratorio.Text = iLaboratorio.ToString();
 
             }
