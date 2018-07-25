@@ -59,15 +59,16 @@ namespace LaboratorioClinico
 
            
              int total;
-             int p, c;
+             int p, c,d;
              c = Convert.ToInt32(Txt_cantidadf.Text);
              p = Convert.ToInt32(datos2.Rows[0][1].ToString());
-             total = c * p;
+             d = Convert.ToInt32(datos2.Rows[0][2].ToString());
+             total = (c * p)-d;
              acumulado = acumulado + total;
 
              if (datos.Rows[0][0].ToString() == "1")
              {
-                Dgb_facturaf.Rows.Add(datos2.Rows[0][0].ToString(), Txt_cantidadf.Text, Txt_descripcion.Text, datos2.Rows[0][1].ToString(), total.ToString());
+                Dgb_facturaf.Rows.Add(datos2.Rows[0][0].ToString(), Txt_cantidadf.Text, Txt_descripcion.Text, datos2.Rows[0][1].ToString(),datos2.Rows[0][2].ToString(), total.ToString());
                  Txt_totalff.Text = acumulado.ToString();
                  //
                  cmd.CommandText = "insert into detalledefactura values('" + cont + "','" + Convert.ToInt32(Txt_nombref.Text) + "','" + datos2.Rows[0][0] + "','" + Convert.ToInt32(Txt_cantidadf.Text.ToString()) + "')";
