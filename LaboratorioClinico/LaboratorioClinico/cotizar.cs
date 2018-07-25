@@ -68,8 +68,8 @@ namespace LaboratorioClinico
 
             try
             {
-                Cmb__doctor.Text = "Seleccione el doctor que desea buscar";
-                Cmb__doctor.Items.Clear();
+                Cmb_doctor.Text = "Seleccione el doctor que desea buscar";
+                Cmb_doctor.Items.Clear();
                 conexion.ObtenerConexion();
                 MySqlCommand comando = new MySqlCommand("Select nIdEmpleado, sApellido from Empleado where iIdCargo > 5010 && iIdCargo <5015", conexion.ObtenerConexion());
                 MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
@@ -77,10 +77,10 @@ namespace LaboratorioClinico
 
                 adaptador.Fill(tabla);
 
-                Cmb__doctor.ValueMember = "iIdEmpleado";
-                Cmb__doctor.DisplayMember = "sApellido";
+                Cmb_doctor.ValueMember = "iIdEmpleado";
+                Cmb_doctor.DisplayMember = "sApellido";
 
-                Cmb__doctor.DataSource = tabla;
+                Cmb_doctor.DataSource = tabla;
 
                 conexion.ObtenerConexion().Close();
 
@@ -180,15 +180,12 @@ namespace LaboratorioClinico
 
         public void proBuscarCotizacion(int iIdExamenes)
         {
-
+    
             try
             {
-                
                 MySqlCommand comando = new MySqlCommand("Pro_cotizacionesPrecio", conexion.ObtenerConexion());
                 comando.CommandType = CommandType.StoredProcedure;
-                comando.Parameters.Add("@iIdExamenes", MySqlDbType.Int16);
-                comando.Parameters["@iIdExamenes"].Value = iIdExamenes;
-                conexion.ObtenerConexion().Open();
+                comando.Parameters.AddWithValue("@iIdExamenes",iIdExamenes);
                 comando.ExecuteNonQuery();
                 DataTable tabla = new DataTable();
                 MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
@@ -203,6 +200,7 @@ namespace LaboratorioClinico
         }
        public void proPrecioyTotal(int iIdExamenes)
         {
+
             double doPrecio = 0;
             double doDescuento = 0;
             double doCantidad = 0;
@@ -211,19 +209,20 @@ namespace LaboratorioClinico
             {
                 MySqlCommand comando = new MySqlCommand("Pro_cotizacionesPrecio", conexion.ObtenerConexion());
                 comando.CommandType = CommandType.StoredProcedure;
-                comando.Parameters.Add("@iIdExamenes", MySqlDbType.Int16);
-                comando.Parameters["@iIdExamenes"].Value = iIdExamenes;
-                conexion.ObtenerConexion().Open();
+                comando.Parameters.AddWithValue("@iIdExamenes", iIdExamenes);
                 comando.ExecuteNonQuery();
+
                 MySqlDataReader buscador = comando.ExecuteReader();
                 if (buscador.Read() == true)
                 {
+                    
                     doPrecio = Convert.ToDouble(buscador["fPrecio"]);
-                    doCantidad = Convert.ToDouble(Txt_Cantidad);
-                    doDescuento = Convert.ToDouble(Txt_porcentajeDeDescuento);
+                    doCantidad = Convert.ToDouble(Txt_Cantidad.Text);
+                    doDescuento = Convert.ToDouble(Txt_porcentajeDeDescuento.Text);
                     doTotal = doPrecio * doCantidad * doDescuento;
                     Txt_Total.Text = Convert.ToString(doTotal);
                 }
+            
             }
             catch (MySqlException error) { MessageBox.Show(error.Message); }
             finally { conexion.ObtenerConexion().Close(); }
@@ -231,12 +230,20 @@ namespace LaboratorioClinico
    
         private void Btn_buscar_Click(object sender, EventArgs e)
         {
+           
             int iIdExamenes = Convert.ToInt32(Cmb_examen.SelectedValue);
-            int iIdEmpleado = Convert.ToInt32(Cmb__doctor.SelectedValue);
-            int iIdTipoDescuento = Convert.ToInt32(Cmb_tipoDeDescuento.SelectedValue);
-            int iIdLaboratorio = Convert.ToInt32(Cmb_laboratorio.SelectedValue);
-           /// proPrecioyTotal(iIdExamenes);
-            ///proBuscarCotizacion(iIdExamenes);
+            /// MessageBox.Show("Aqui2");
+            /* int iIdEmpleado = Convert.ToInt32(Cmb_doctor.SelectedValue);
+             MessageBox.Show("Aqui3");
+             int iIdTipoDescuento = Convert.ToInt32(Cmb_tipoDeDescuento.SelectedValue);
+             MessageBox.Show("Aqui4");
+             int iIdLaboratorio = Convert.ToInt32(Cmb_laboratorio.SelectedValue);
+             MessageBox.Show("Aqui5");
+             
+             */
+            proBuscarCotizacion(iIdExamenes);
+            proPrecioyTotal(iIdExamenes);
+            
 
 
         }
