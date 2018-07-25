@@ -37,9 +37,9 @@
             this.Pnl_nombre = new System.Windows.Forms.Panel();
             this.Lbl_lab = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.Er_validar)).BeginInit();
             this.Pnl_nombre.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -129,6 +129,11 @@
             this.panel1.Size = new System.Drawing.Size(340, 200);
             this.panel1.TabIndex = 11;
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(173)))), ((int)(((byte)(229)))));
@@ -143,7 +148,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(173)))), ((int)(((byte)(229)))));
-            this.pictureBox1.Image = global::LaboratorioClinico.Properties.Resources.usuario_hombre;
+            this.pictureBox1.Image = global::LaboratorioClinico.Properties.Resources.uh;
             this.pictureBox1.Location = new System.Drawing.Point(42, 32);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(37, 32);
@@ -151,16 +156,12 @@
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(224)))), ((int)(((byte)(223)))));
+            this.BackgroundImage = global::LaboratorioClinico.Properties.Resources.blue_minimalistic_gaussian_b_pics_710306;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(470, 357);
             this.Controls.Add(this.panel1);

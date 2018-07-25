@@ -124,8 +124,8 @@
   <data name="cubo-de-basura" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cubo-de-basura.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bloquear" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bloquear.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -232,11 +232,20 @@
   <data name="labmed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\labmed.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="imagen-monografico-que-deberias-saber-cuentas-de-usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imagen-monografico-que-deberias-saber-cuentas-de-usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="bl1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bl1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="frascos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\frascos.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bl" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bl.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="configuracion-de-usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\configuracion-de-usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -289,6 +298,9 @@
   <data name="correo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\correo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="uh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\uh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="nuevo-usuario1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\nuevo-usuario1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -297,9 +309,6 @@
   </data>
   <data name="salida" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\salida.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bloquear" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bloquear.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="laboratorio3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\laboratorio3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -325,7 +334,7 @@
   <data name="eliminar_user" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\eliminar_user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bl" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bl.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="blue-minimalistic-gaussian-b-pics-710306" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blue-minimalistic-gaussian-b-pics-710306.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -153,6 +153,16 @@ namespace LaboratorioClinico.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bl1 {
+            get {
+                object obj = ResourceManager.GetObject("bl1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bloqueado {
             get {
                 object obj = ResourceManager.GetObject("bloqueado", resourceCulture);
@@ -176,6 +186,16 @@ namespace LaboratorioClinico.Properties {
         internal static System.Drawing.Bitmap bloquear {
             get {
                 object obj = ResourceManager.GetObject("bloquear", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap blue_minimalistic_gaussian_b_pics_710306 {
+            get {
+                object obj = ResourceManager.GetObject("blue-minimalistic-gaussian-b-pics-710306", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -686,6 +706,16 @@ namespace LaboratorioClinico.Properties {
         internal static System.Drawing.Bitmap servicio_al_cliente {
             get {
                 object obj = ResourceManager.GetObject("servicio-al-cliente", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap uh {
+            get {
+                object obj = ResourceManager.GetObject("uh", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
