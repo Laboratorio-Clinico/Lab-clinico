@@ -87,6 +87,8 @@ namespace LaboratorioClinico
                         this.Hide();
                         Menu abrir = new Menu(user, tipo);
                         abrir.ShowDialog();
+                        Txt_usuario.ResetText();
+                        Txt_contraseña.ResetText();
                         this.Show();
                     }
                     catch(Exception ex)
