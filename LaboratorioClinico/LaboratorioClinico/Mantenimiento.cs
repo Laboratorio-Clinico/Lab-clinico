@@ -56,7 +56,7 @@ namespace LaboratorioClinico
 
         }
 
-        private void Btn_buscar_Click(object sender, EventArgs e)
+        private void Btn_buscar_Click(object sender, EventArgs e)  //Buscar paciente para poder eliminarlo.......................
         {
             try
             {
@@ -65,6 +65,7 @@ namespace LaboratorioClinico
                 DataTable datos = new DataTable();
                 sda.Fill(datos);
 
+                //Llenar los campos con el paciente encontrado
                 Txt_nombrep.Text = datos.Rows[0][0].ToString();
                 Txt_telefonop.Text = datos.Rows[0][1].ToString();
                 Txt_nitp.Text = datos.Rows[0][2].ToString();
@@ -75,6 +76,7 @@ namespace LaboratorioClinico
                 Txt_refierep.Text = datos.Rows[0][7].ToString();
                 Cmb_sexop.Text = datos.Rows[0][8].ToString();
 
+                //Deshabilitar los campos, que sean solo de lectura
                 Txt_nombrep.Enabled = false;
                 Txt_telefonop.Enabled = false;
                 Txt_nitp.Enabled = false;
@@ -97,7 +99,7 @@ namespace LaboratorioClinico
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)  //Buscar paciente para modificarlo................................
         {
             try
             {
@@ -106,6 +108,7 @@ namespace LaboratorioClinico
                 DataTable datos = new DataTable();
                 sda.Fill(datos);
 
+                //Llenar todos los campos con los datos del paciente encontrado................................
                 Txt_nombre.Text = datos.Rows[0][0].ToString();
                 Txt_telefono.Text = datos.Rows[0][1].ToString();
                 Txt_nit.Text = datos.Rows[0][2].ToString();
@@ -130,6 +133,8 @@ namespace LaboratorioClinico
             {
                 conexion.ObtenerConexion();
                 OdbcCommand cmd = conexion.ObtenerConexion().CreateCommand();
+
+                //Realizar updates de cada dato del paciente por si se llegó a modificar alguno.
                 cmd.CommandText = "update paciente set sNombre = '" + Txt_nombre.Text + "' where nIdPaciente = '" + Convert.ToInt32(Txt_expe.Text) + "'";
                 cmd.ExecuteNonQuery();
                 cmd.CommandText = "update telefono set iTelefono = '" + Txt_telefono.Text + "' where nIdPaciente = '" + Convert.ToInt32(Txt_expe.Text) + "'";
@@ -152,6 +157,7 @@ namespace LaboratorioClinico
                 MessageBox.Show("Paciente Modificado Exitosamente.", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
 
+                //Limpiar la información previamente cargada para volver a buscar otro paciente
                 Txt_expe.Enabled = true;
                 Txt_expe.Clear();
 
@@ -171,13 +177,14 @@ namespace LaboratorioClinico
             }
         }
 
-        private void Btn_eliminarp_Click(object sender, EventArgs e)
+        private void Btn_eliminarp_Click(object sender, EventArgs e) //Eliminar paciente..................................
         {
             try
             {
                 conexion.ObtenerConexion();
                 OdbcCommand cmd = conexion.ObtenerConexion().CreateCommand();
 
+                //Eliminar los datos del paciente de 3 tablas que guardan su información
                 cmd.CommandText = "delete from paciente where nIdPaciente = '" + Convert.ToInt32(Txt_expedientep.Text) + "'";
                 cmd.ExecuteNonQuery();
                 cmd.CommandText = "delete from telefono where nIdPaciente = '" + Convert.ToInt32(Txt_expedientep.Text) + "'";
@@ -269,7 +276,7 @@ namespace LaboratorioClinico
                 Txt_apellidoMedicoM.Text = datos.Rows[0][1].ToString();
                 Txt_telefonoMedicoM.Text = datos.Rows[0][2].ToString();
                 Txt_direMedicoM.Text = datos.Rows[0][3].ToString();
-                Txt_especialidadMedicoM.Text = datos.Rows[0][4].ToString();
+                Cmb_especialidadMedicoM.Text = datos.Rows[0][4].ToString();
                 Cmb_empresaMedicoM.Text = datos.Rows[0][5].ToString();
                 Dtp_nacimiento.Text = datos.Rows[0][6].ToString();
 
