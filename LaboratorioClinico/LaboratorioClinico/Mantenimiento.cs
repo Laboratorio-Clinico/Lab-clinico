@@ -268,7 +268,7 @@ namespace LaboratorioClinico
             try
             {
                 Gpb_datos.Visible = true;
-                OdbcDataAdapter sda = new OdbcDataAdapter("SELECT me.sNombre, me.sApellido, te.itelefono, me.sDireccion, es.sEspecialidad, em.sEmpresa, me.dFechaDeNacimiento FROM medicosasociados me, telefono te, especialidad es, empresa em WHERE me.nNoColegiado = te.nIdPaciente AND me.nNoColegiado = es.iIdEspecialidad AND me.nNoColegiado = em.iIdEmpresa AND me.nNoColegiado ='" + Convert.ToInt32(Txt_colegiadoM.Text) + "'", conexion.ObtenerConexion());
+                OdbcDataAdapter sda = new OdbcDataAdapter("SELECT me.sNombre, me.sApellido, te.itelefono, me.sDireccion, es.sEspecialidad, em.sEmpresa, me.dFechaDeNacimiento FROM medicosasociados me, telefono te, especialidad es, empresa em WHERE me.nNoColegiado = te.nIdPaciente AND me.iIdEspecialidad = es.iIdEspecialidad AND me.iIdEmpresa = em.iIdEmpresa AND me.nNoColegiado = '" + Convert.ToInt32(Txt_colegiadoM.Text) + "'", conexion.ObtenerConexion());
                 DataTable datos = new DataTable();
                 sda.Fill(datos);
 

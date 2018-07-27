@@ -1426,7 +1426,7 @@
             // 
             this.Cmb_especialidadMedicoM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Cmb_especialidadMedicoM.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cmb_especialidadMedicoM.ForeColor = System.Drawing.Color.Wheat;
+            this.Cmb_especialidadMedicoM.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Cmb_especialidadMedicoM.FormattingEnabled = true;
             this.Cmb_especialidadMedicoM.Location = new System.Drawing.Point(17, 138);
             this.Cmb_especialidadMedicoM.Name = "Cmb_especialidadMedicoM";
