@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
+using System.Data.Odbc;
 
 
 namespace LaboratorioClinico
@@ -48,12 +48,12 @@ namespace LaboratorioClinico
         {
             /*
              cont++;
-             MySqlDataAdapter sda = new MySqlDataAdapter("select count(*) from Examenes where sDescripcion= '" + Txt_descripcion.Text + "'", conexion.ObtenerConexion());
-             MySqlCommand cmd = conexion.ObtenerConexion().CreateCommand();
+             OdbcDataAdapter sda = new OdbcDataAdapter("select count(*) from Examenes where sDescripcion= '" + Txt_descripcion.Text + "'", conexion.ObtenerConexion());
+             OdbcCommand cmd = conexion.ObtenerConexion().CreateCommand();
              DataTable datos = new DataTable();
              sda.Fill(datos);
 
-             MySqlDataAdapter sda2 = new MySqlDataAdapter("select iIdExamen, fPrecio from examenes where sDescripcion = '" + Txt_descripcion.Text + "'", conexion.ObtenerConexion());
+             OdbcDataAdapter sda2 = new OdbcDataAdapter("select iIdExamen, fPrecio from examenes where sDescripcion = '" + Txt_descripcion.Text + "'", conexion.ObtenerConexion());
              DataTable datos2 = new DataTable();
              sda2.Fill(datos2);
 

@@ -1,4 +1,4 @@
-﻿using MySql.Data.MySqlClient;
+﻿using System.Data.Odbc;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -53,8 +53,8 @@ namespace LaboratorioClinico
                 Cmb_sangrep.Text = "Seleccione el tipo de sangre";
                 Cmb_sangrep.Items.Clear();
                 conexion.ObtenerConexion();
-                MySqlCommand comando = new MySqlCommand("Select iIdTipoDeSangre,sGrupoSanguineo from tipoDeSangre", conexion.ObtenerConexion());
-                MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
+                OdbcCommand comando = new OdbcCommand("Select iIdTipoDeSangre,sGrupoSanguineo from tipoDeSangre", conexion.ObtenerConexion());
+                OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
                 DataTable tabla = new DataTable();
 
                 adaptador.Fill(tabla);
@@ -67,12 +67,12 @@ namespace LaboratorioClinico
                 conexion.ObtenerConexion().Close();
 
             }
-            catch (MySqlException error) { MessageBox.Show(error.Message); }
+            catch (OdbcException error) { MessageBox.Show(error.Message); }
         }
         private void Btn_guardarp_Click(object sender, EventArgs e)
         {
-            MySqlCommand cm;
-            cm = new MySqlCommand("InsertaPrueba", conexion.ObtenerConexion());
+            OdbcCommand cm;
+            cm = new OdbcCommand("InsertaPrueba", conexion.ObtenerConexion());
             cm.CommandType = CommandType.StoredProcedure;
 
             int idPaciente = Convert.ToInt32(Cmb_sangrep.SelectedValue);

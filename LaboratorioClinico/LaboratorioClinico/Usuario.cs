@@ -1,4 +1,4 @@
-﻿using MySql.Data.MySqlClient;
+﻿using System.Data.Odbc;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -74,8 +74,8 @@ namespace LaboratorioClinico
             }
 
             try { 
-            MySqlCommand cm;
-            cm = new MySqlCommand("ingresaUsuario", conexion.ObtenerConexion());
+            OdbcCommand cm;
+            cm = new OdbcCommand("ingresaUsuario", conexion.ObtenerConexion());
             cm.CommandType = CommandType.StoredProcedure;
 
             cm.Parameters.AddWithValue("@iIdPrivilegio", pPrivilegio);
@@ -116,7 +116,7 @@ namespace LaboratorioClinico
             string dpiE = Txt_codigoDeEmpleado.Text;
 
             try { 
-            MySqlDataAdapter sda = new MySqlDataAdapter("select count(*) from empleado where nIdEmpleado='" + Convert.ToInt64(dpiE) + "'", conexion.ObtenerConexion());
+            OdbcDataAdapter sda = new OdbcDataAdapter("select count(*) from empleado where nIdEmpleado='" + Convert.ToInt64(dpiE) + "'", conexion.ObtenerConexion());
             DataTable datos = new DataTable();
             sda.Fill(datos);
 
