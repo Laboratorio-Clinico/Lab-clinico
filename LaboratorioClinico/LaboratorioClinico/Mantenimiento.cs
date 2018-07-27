@@ -263,12 +263,12 @@ namespace LaboratorioClinico
 
         }
 
-        private void Btn_buscarm_Click(object sender, EventArgs e)
+        private void Btn_buscarm_Click(object sender, EventArgs e) //Buscar médico para modificar
         {
             try
             {
                 Gpb_datos.Visible = true;
-                OdbcDataAdapter sda = new OdbcDataAdapter("SELECT me.sNombre, me.sApellido, te.itelefono, me.sDireccion, es.sEspecialidad, em.sEmpresa me.dFechaDeNacimiento FROM medicosasociados me, telefono te, especialidad es, empresa em WHERE me.nNoColegiado = te.nIdPaciente AND me.nNoColegiado = es.iIdEspecialidad AND me.nNoColegiado = em.iIdEmpresa AND me.nNoColegiado ='" + Convert.ToInt32(Txt_colegiadoM.Text) + "'", conexion.ObtenerConexion());
+                OdbcDataAdapter sda = new OdbcDataAdapter("SELECT me.sNombre, me.sApellido, te.itelefono, me.sDireccion, es.sEspecialidad, em.sEmpresa, me.dFechaDeNacimiento FROM medicosasociados me, telefono te, especialidad es, empresa em WHERE me.nNoColegiado = te.nIdPaciente AND me.nNoColegiado = es.iIdEspecialidad AND me.nNoColegiado = em.iIdEmpresa AND me.nNoColegiado ='" + Convert.ToInt32(Txt_colegiadoM.Text) + "'", conexion.ObtenerConexion());
                 DataTable datos = new DataTable();
                 sda.Fill(datos);
 
@@ -308,7 +308,7 @@ namespace LaboratorioClinico
                 cmd.ExecuteNonQuery();
                 cmd.CommandText = "update medicosasociados set sDireccion = '" + Txt_direMedicoM.Text + "' where nNoColegiado = '" + Convert.ToInt32(Txt_colegiadoM.Text) + "'";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "update especialidad set sEspecialidad = '" + Txt_especialidadMedicoM.Text + "' where nNoColegiado = '" + Convert.ToInt32(Txt_colegiadoM.Text) + "'";
+                cmd.CommandText = "update especialidad set sEspecialidad = '" + Cmb_especialidadMedicoM.Text + "' where nNoColegiado = '" + Convert.ToInt32(Txt_colegiadoM.Text) + "'";
                 cmd.ExecuteNonQuery();
                 cmd.CommandText = "update empresa set sEmpresa = '" + Cmb_empresaMedicoM.Text + "' where nNoColegiado = '" + Convert.ToInt32(Txt_colegiadoM.Text) + "'";
                 cmd.ExecuteNonQuery();
@@ -324,7 +324,7 @@ namespace LaboratorioClinico
                 Txt_apellidoMedicoM.Clear();
                 Txt_telefonoMedicoM.Clear();
                 Txt_direMedicoM.Clear();
-                Txt_especialidadMedicoM.Clear();
+                Cmb_especialidadMedicoM.ResetText(); Cmb_especialidadMedicoM.Items.Clear();
                 Cmb_empresaMedicoM.ResetText(); Cmb_empresaMedicoM.Items.Clear();
                 Dtp_nacimiento.Refresh();
 
