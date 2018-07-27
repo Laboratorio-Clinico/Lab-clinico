@@ -95,9 +95,9 @@ namespace LaboratorioClinico
                         Txt_contraseña.ResetText();
                         this.Show();
                     }
-                    catch(Exception ex)
+                    catch(OdbcException error)
                     {
-                        MessageBox.Show("Error P");
+                        MessageBox.Show(error.Message);
                     }
                    
 
