@@ -308,7 +308,7 @@ namespace LaboratorioClinico
                 cmd.ExecuteNonQuery();
                 cmd.CommandText = "update medicosasociados set sDireccion = '" + Txt_direMedicoM.Text + "' where nNoColegiado = '" + Convert.ToInt32(Txt_colegiadoM.Text) + "'";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "update especialidad set sEspecialidad = '" + Txt_especialidadMedicoM.Text + "' where nNoColegiado = '" + Convert.ToInt32(Txt_colegiadoM.Text) + "'";
+               //// cmd.CommandText = "update especialidad set sEspecialidad = '" + Txt_especialidadMedicoM.Text + "' where nNoColegiado = '" + Convert.ToInt32(Txt_colegiadoM.Text) + "'";
                 cmd.ExecuteNonQuery();
                 cmd.CommandText = "update empresa set sEmpresa = '" + Cmb_empresaMedicoM.Text + "' where nNoColegiado = '" + Convert.ToInt32(Txt_colegiadoM.Text) + "'";
                 cmd.ExecuteNonQuery();
@@ -324,7 +324,7 @@ namespace LaboratorioClinico
                 Txt_apellidoMedicoM.Clear();
                 Txt_telefonoMedicoM.Clear();
                 Txt_direMedicoM.Clear();
-                Txt_especialidadMedicoM.Clear();
+               // Txt_especialidadMedicoM.Clear();
                 Cmb_empresaMedicoM.ResetText(); Cmb_empresaMedicoM.Items.Clear();
                 Dtp_nacimiento.Refresh();
 

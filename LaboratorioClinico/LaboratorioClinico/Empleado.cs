@@ -62,15 +62,18 @@ namespace LaboratorioClinico
 
             try
             {
-                Cmb_cargo.Refresh();
-                Cmb_cargo.Text = "Seleccione el cargo correspondiente";
-                Cmb_cargo.Items.Clear();
+                
+                
                 conexion.ObtenerConexion();
                 OdbcCommand comando = new OdbcCommand("Select iIdCargo,sDescripcion from Cargo", conexion.ObtenerConexion());
                 OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
                 DataTable tabla = new DataTable();
 
                 adaptador.Fill(tabla);
+
+                DataRow fila = tabla.NewRow();
+                fila["sDescripcion"] = "Seleccione el puesto";
+                tabla.Rows.InsertAt(fila, 0);
 
                 Cmb_cargo.ValueMember = "iIdCargo";
                 Cmb_cargo.DisplayMember = "sDescripcion";
@@ -92,6 +95,11 @@ namespace LaboratorioClinico
         }
 
         private void Cmb_cargo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Dtp_fechaNacimiento_ValueChanged(object sender, EventArgs e)
         {
 
         }

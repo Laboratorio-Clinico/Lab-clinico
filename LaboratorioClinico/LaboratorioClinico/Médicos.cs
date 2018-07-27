@@ -34,7 +34,7 @@ namespace LaboratorioClinico
         {
 
         }
-        public void proGuardarDatos(int iEmpresa,int iEspecialidad) {
+        public void proGuardarDatos(int iEmpresa,int iEspecialidades) {
 
             try
             {
@@ -42,15 +42,16 @@ namespace LaboratorioClinico
                 cm = new OdbcCommand("Pro_ingresoNuevoMedico", conexion.ObtenerConexion());
                 cm.CommandType = CommandType.StoredProcedure;
 
-                cm.Parameters.AddWithValue("@sNombre", this.Txt_nombre);
-                cm.Parameters.AddWithValue("@sApellido", this.Txt_apellido);
-                cm.Parameters.AddWithValue("@nTelefono", this.Txt_telefono);
-                cm.Parameters.AddWithValue("@sDireccion", this.Txt_direccion);
-                cm.Parameters.AddWithValue("@sCorreo", this.Txt_Correo);
-                cm.Parameters.AddWithValue("@sEspecialidad", iEspecialidad);
-                cm.Parameters.AddWithValue("@iColegiado", this.Txt_colegiado);
+                cm.Parameters.AddWithValue("@iColegiado", this.Txt_colegiado.Text);
+                cm.Parameters.AddWithValue("@sNombre", this.Txt_nombre.Text);
+                cm.Parameters.AddWithValue("@sApellido", this.Txt_apellido.Text);
+                cm.Parameters.AddWithValue("@nTelefono", this.Txt_telefono.Text);
+                cm.Parameters.AddWithValue("@sDireccion", this.Txt_direccion.Text);
+                cm.Parameters.AddWithValue("@sCorreo", this.Txt_Correo.Text);
+                cm.Parameters.AddWithValue("@iEspecialidad", iEspecialidades);
                 cm.Parameters.AddWithValue("@iEmpresa", iEmpresa);
-                cm.Parameters.AddWithValue("@dFechaDeNacimiento", this.Dtp_fechaNacimiento);
+                cm.Parameters.AddWithValue("@dFechaDeNacimiento", this.Dtp_fechaNacimiento.Value);
+
                 cm.ExecuteNonQuery();
                 MessageBox.Show("Datos agregados exitosamente");
 
@@ -64,15 +65,16 @@ namespace LaboratorioClinico
                 Cmb_empresa.ResetText();
                 Dtp_fechaNacimiento.ResetText();
             }
-            catch (Exception error) { MessageBox.Show("Error"); }
+            catch (Exception error) { MessageBox.Show("Error"+error); }
         }
         public void proLlenarEmpresa()
         {
 
             try
+               
             {
-                Cmb_empresa.Text = "Seleccione una empresa";
                 Cmb_empresa.Items.Clear();
+                Cmb_empresa.Text = "Seleccione una empresa";
                 conexion.ObtenerConexion();
                 OdbcCommand comando = new OdbcCommand("Select iIdEmpresa,sEmpresa from Empresa", conexion.ObtenerConexion());
                 OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
@@ -84,7 +86,7 @@ namespace LaboratorioClinico
                 Cmb_empresa.DisplayMember = "sEmpresa";
 
                 Cmb_empresa.DataSource = tabla;
-
+                
                 conexion.ObtenerConexion().Close();
 
             }
@@ -97,8 +99,8 @@ namespace LaboratorioClinico
 
             try
             {
-                Cmb_empresa.Text = "Seleccione la especialidad";
-                Cmb_empresa.Items.Clear();
+        
+                
                 conexion.ObtenerConexion();
                 OdbcCommand comando = new OdbcCommand("Select iIdEspecialidad,sEspecialidad from Especialidad", conexion.ObtenerConexion());
                 OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
@@ -106,11 +108,11 @@ namespace LaboratorioClinico
 
                 adaptador.Fill(tabla);
 
-                Cmb_empresa.ValueMember = "iIdEspecialidad";
-                Cmb_empresa.DisplayMember = "sEspecialidad";
+                Cmb_especialidad.ValueMember = "iIdEspecialidad";
+                Cmb_especialidad.DisplayMember = "sEspecialidad";
 
-                Cmb_empresa.DataSource = tabla;
-
+                Cmb_especialidad.DataSource = tabla;
+                
                 conexion.ObtenerConexion().Close();
 
             }
@@ -122,17 +124,10 @@ namespace LaboratorioClinico
         {
 
 
-            try
-            {
-
                 int iEmpresa = Convert.ToInt32(Cmb_empresa.SelectedValue);
-                int iEspecialidad = Convert.ToInt32(Cmb_especialidad.SelectedValue);
-                proGuardarDatos(iEmpresa, iEspecialidad);
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show("Error", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+                int iEspecialidades = Convert.ToInt32(Cmb_especialidad.SelectedValue);
+            
+                proGuardarDatos(iEmpresa, iEspecialidades);
 
 
 
