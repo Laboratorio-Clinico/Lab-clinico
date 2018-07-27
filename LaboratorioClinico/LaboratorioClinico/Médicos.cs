@@ -1,4 +1,4 @@
-﻿using MySql.Data.MySqlClient;
+﻿using System.Data.Odbc;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -38,8 +38,8 @@ namespace LaboratorioClinico
 
             try
             {
-                MySqlCommand cm;
-                cm = new MySqlCommand("Pro_ingresoNuevoMedico", conexion.ObtenerConexion());
+                OdbcCommand cm;
+                cm = new OdbcCommand("Pro_ingresoNuevoMedico", conexion.ObtenerConexion());
                 cm.CommandType = CommandType.StoredProcedure;
 
                 cm.Parameters.AddWithValue("@sNombre", this.Txt_nombre);
@@ -74,8 +74,8 @@ namespace LaboratorioClinico
                 Cmb_empresa.Text = "Seleccione una empresa";
                 Cmb_empresa.Items.Clear();
                 conexion.ObtenerConexion();
-                MySqlCommand comando = new MySqlCommand("Select iIdEmpresa,sEmpresa from Empresa", conexion.ObtenerConexion());
-                MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
+                OdbcCommand comando = new OdbcCommand("Select iIdEmpresa,sEmpresa from Empresa", conexion.ObtenerConexion());
+                OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
                 DataTable tabla = new DataTable();
 
                 adaptador.Fill(tabla);
@@ -100,8 +100,8 @@ namespace LaboratorioClinico
                 Cmb_empresa.Text = "Seleccione la especialidad";
                 Cmb_empresa.Items.Clear();
                 conexion.ObtenerConexion();
-                MySqlCommand comando = new MySqlCommand("Select iIdEspecialidad,sEspecialidad from Especialidad", conexion.ObtenerConexion());
-                MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
+                OdbcCommand comando = new OdbcCommand("Select iIdEspecialidad,sEspecialidad from Especialidad", conexion.ObtenerConexion());
+                OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
                 DataTable tabla = new DataTable();
 
                 adaptador.Fill(tabla);

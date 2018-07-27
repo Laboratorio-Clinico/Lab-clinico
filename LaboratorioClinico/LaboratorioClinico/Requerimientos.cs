@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
+using System.Data.Odbc;
 
 namespace LaboratorioClinico
 {
@@ -38,7 +38,7 @@ namespace LaboratorioClinico
          
             conexion.ObtenerConexion();
             DataTable dtDatos = new DataTable();
-            MySqlDataAdapter sda = new MySqlDataAdapter("select *from examenes where sDescripcion='" + Convert.ToString(Txt_nombrer.Text) + "'", conexion.ObtenerConexion());
+            OdbcDataAdapter sda = new OdbcDataAdapter("select *from examenes where sDescripcion='" + Convert.ToString(Txt_nombrer.Text) + "'", conexion.ObtenerConexion());
             sda.Fill(dtDatos);
             int a = 1;
             try

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
+using System.Data.Odbc;
 
 
 namespace LaboratorioClinico
@@ -45,8 +45,8 @@ namespace LaboratorioClinico
                 Cmb_examen.Text = "Seleccione el examen que desea buscar";
                 Cmb_examen.Items.Clear();
                 conexion.ObtenerConexion();
-                MySqlCommand comando = new MySqlCommand("Select iIdExamen, sDescripcion from Examenes", conexion.ObtenerConexion());
-                MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
+                OdbcCommand comando = new OdbcCommand("Select iIdExamen, sDescripcion from Examenes", conexion.ObtenerConexion());
+                OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
                 DataTable tabla = new DataTable();
 
                 adaptador.Fill(tabla);
@@ -59,7 +59,7 @@ namespace LaboratorioClinico
                 conexion.ObtenerConexion().Close();
 
             }
-            catch (MySqlException error) { MessageBox.Show(error.Message); }
+            catch (OdbcException error) { MessageBox.Show(error.Message); }
 
         }
         public void proLlenareDoctor()
@@ -71,8 +71,8 @@ namespace LaboratorioClinico
                 Cmb_doctor.Text = "Seleccione el doctor que desea buscar";
                 Cmb_doctor.Items.Clear();
                 conexion.ObtenerConexion();
-                MySqlCommand comando = new MySqlCommand("Select nIdEmpleado, sApellido from Empleado where iIdCargo > 5010 && iIdCargo <5015", conexion.ObtenerConexion());
-                MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
+                OdbcCommand comando = new OdbcCommand("Select nIdEmpleado, sApellido from Empleado where iIdCargo > 5010 && iIdCargo <5015", conexion.ObtenerConexion());
+                OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
                 DataTable tabla = new DataTable();
 
                 adaptador.Fill(tabla);
@@ -85,7 +85,7 @@ namespace LaboratorioClinico
                 conexion.ObtenerConexion().Close();
 
             }
-            catch (MySqlException error) { MessageBox.Show(error.Message); }
+            catch (OdbcException error) { MessageBox.Show(error.Message); }
         }
         public void proLlenarLaboratorio()
         {
@@ -94,8 +94,8 @@ namespace LaboratorioClinico
                 Cmb_laboratorio.Text = "Seleccione el laboratorio en el que realizará el exámen";
                 Cmb_laboratorio.Items.Clear();
                 conexion.ObtenerConexion();
-                MySqlCommand comando = new MySqlCommand("Select iIdLaboratorio, sUbicacion from Laboratorio", conexion.ObtenerConexion());
-                MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
+                OdbcCommand comando = new OdbcCommand("Select iIdLaboratorio, sUbicacion from Laboratorio", conexion.ObtenerConexion());
+                OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
                 DataTable tabla = new DataTable();
 
                 adaptador.Fill(tabla);
@@ -108,7 +108,7 @@ namespace LaboratorioClinico
                 conexion.ObtenerConexion().Close();
 
             }
-            catch (MySqlException error) { MessageBox.Show(error.Message); }
+            catch (OdbcException error) { MessageBox.Show(error.Message); }
         }
         public void proLlenareTipoDeDescuento()
         {
@@ -118,8 +118,8 @@ namespace LaboratorioClinico
                 Cmb_tipoDeDescuento.Text = "Seleccione el tipo de descuento a utilizar";
                 Cmb_tipoDeDescuento.Items.Clear();
                 conexion.ObtenerConexion();
-                MySqlCommand comando = new MySqlCommand("Select iIdTipoDescuento, sDescripcion from TipoDescuento", conexion.ObtenerConexion());
-                MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
+                OdbcCommand comando = new OdbcCommand("Select iIdTipoDescuento, sDescripcion from TipoDescuento", conexion.ObtenerConexion());
+                OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
                 DataTable tabla = new DataTable();
 
                 adaptador.Fill(tabla);
@@ -127,12 +127,13 @@ namespace LaboratorioClinico
                 Cmb_tipoDeDescuento.ValueMember = "iIdTipoDescuento";
                 Cmb_tipoDeDescuento.DisplayMember = "sDescripcion";
 
+                Cmb_tipoDeDescuento.Refresh();
                 Cmb_tipoDeDescuento.DataSource = tabla;
 
                 conexion.ObtenerConexion().Close();
 
             }
-            catch (MySqlException error) { MessageBox.Show(error.Message); }
+            catch (OdbcException error) { MessageBox.Show(error.Message); }
         }
         public void proSeleccionDeDescuento(int iTipoDeDescuento)
         {
@@ -154,8 +155,8 @@ namespace LaboratorioClinico
             try
             {
 
-                MySqlCommand comando;
-                comando = new MySqlCommand("Pro_agregarCotizacion", conexion.ObtenerConexion());
+                OdbcCommand comando;
+                comando = new OdbcCommand("Pro_agregarCotizacion", conexion.ObtenerConexion());
                 comando.CommandType = CommandType.StoredProcedure;
 
                 comando.Parameters.AddWithValue("@iAIdLaboratorio", iIdLaboratorio);
@@ -168,7 +169,7 @@ namespace LaboratorioClinico
                 comando.Parameters.AddWithValue("@iAidEmpleado", iIdEmpleado);
 
             }
-            catch (MySqlException error) { MessageBox.Show(error.Message); }
+            catch (OdbcException error) { MessageBox.Show(error.Message); }
             finally { conexion.ObtenerConexion().Close(); }
 
             Txt_Cantidad.ResetText();
@@ -183,16 +184,16 @@ namespace LaboratorioClinico
     
             try
             {
-                MySqlCommand comando = new MySqlCommand("Pro_cotizacionesPrecio", conexion.ObtenerConexion());
+                OdbcCommand comando = new OdbcCommand("Pro_cotizacionesPrecio", conexion.ObtenerConexion());
                 comando.CommandType = CommandType.StoredProcedure;
                 comando.Parameters.AddWithValue("@iIdExamenes",iIdExamenes);
                 comando.ExecuteNonQuery();
                 DataTable tabla = new DataTable();
-                MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
+                OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
                 adaptador.Fill(tabla);
                 Dgv_verDatos.DataSource = tabla;
             }
-            catch (MySqlException error) { MessageBox.Show(error.Message); }
+            catch (OdbcException error) { MessageBox.Show(error.Message); }
             finally { conexion.ObtenerConexion().Close(); }
 
 
@@ -207,12 +208,12 @@ namespace LaboratorioClinico
             double doTotal = 0;
             try
             {
-                MySqlCommand comando = new MySqlCommand("Pro_cotizacionesPrecio", conexion.ObtenerConexion());
+                OdbcCommand comando = new OdbcCommand("Pro_cotizacionesPrecio", conexion.ObtenerConexion());
                 comando.CommandType = CommandType.StoredProcedure;
                 comando.Parameters.AddWithValue("@iIdExamenes", iIdExamenes);
                 comando.ExecuteNonQuery();
 
-                MySqlDataReader buscador = comando.ExecuteReader();
+                OdbcDataReader buscador = comando.ExecuteReader();
                 if (buscador.Read() == true)
                 {
                     
@@ -224,7 +225,7 @@ namespace LaboratorioClinico
                 }
             
             }
-            catch (MySqlException error) { MessageBox.Show(error.Message); }
+            catch (OdbcException error) { MessageBox.Show(error.Message); }
             finally { conexion.ObtenerConexion().Close(); }
         }
    

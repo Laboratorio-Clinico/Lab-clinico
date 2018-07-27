@@ -1,4 +1,4 @@
-﻿using MySql.Data.MySqlClient;
+﻿using System.Data.Odbc;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,8 +23,8 @@ namespace LaboratorioClinico
         public void Pro_guardarDatos(int iCargo) {
             try {
 
-                MySqlCommand cm;
-                cm = new MySqlCommand("Pro_ingresoNuevoEmpleado", conexion.ObtenerConexion());
+                OdbcCommand cm;
+                cm = new OdbcCommand("Pro_ingresoNuevoEmpleado", conexion.ObtenerConexion());
                 cm.CommandType = CommandType.StoredProcedure;
                 cm.Parameters.AddWithValue("@iIdEmpleado", this.Txt_DPIEmpleado.Text);
                 cm.Parameters.AddWithValue("@sNombre", this.Txt_nombre.Text);
@@ -39,8 +39,10 @@ namespace LaboratorioClinico
                 cm.ExecuteNonQuery();
                 MessageBox.Show("Datos insertados correctamente");
                 
-            } catch(MySqlException error) { MessageBox.Show(error.Message); }
-
+            } catch(OdbcException error) { MessageBox.Show(error.Message); }
+            
+           
+             
             finally {
 
             conexion.ObtenerConexion().Close(); }
@@ -64,8 +66,8 @@ namespace LaboratorioClinico
                 Cmb_cargo.Text = "Seleccione el cargo correspondiente";
                 Cmb_cargo.Items.Clear();
                 conexion.ObtenerConexion();
-                MySqlCommand comando = new MySqlCommand("Select iIdCargo,sDescripcion from Cargo", conexion.ObtenerConexion());
-                MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
+                OdbcCommand comando = new OdbcCommand("Select iIdCargo,sDescripcion from Cargo", conexion.ObtenerConexion());
+                OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
                 DataTable tabla = new DataTable();
 
                 adaptador.Fill(tabla);
@@ -78,7 +80,7 @@ namespace LaboratorioClinico
                 conexion.ObtenerConexion().Close();
 
             }
-            catch (MySqlException error) { MessageBox.Show(error.Message); }
+            catch (OdbcException error) { MessageBox.Show(error.Message); }
         }
 
 
