@@ -62,6 +62,7 @@ namespace LaboratorioClinico
 
             try
             {
+                Cmb_cargo.Refresh();
                 Cmb_cargo.Text = "Seleccione el cargo correspondiente";
                 Cmb_cargo.Items.Clear();
                 conexion.ObtenerConexion();
