@@ -73,8 +73,9 @@ namespace LaboratorioClinico
                     MessageBox.Show("Usuario Correcto", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
-                    
-                   
+                    conexion.ObtenerConexion().Close();
+
+
                     try
                     {
                         //--------------------------Saber privilegio--------------------------------
