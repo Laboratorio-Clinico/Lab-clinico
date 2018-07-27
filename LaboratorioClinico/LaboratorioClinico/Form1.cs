@@ -96,7 +96,7 @@ namespace LaboratorioClinico
                     }
                     catch(Exception ex)
                     {
-                        MessageBox.Show("Error");
+                        MessageBox.Show("Error P");
                     }
                    
 
