@@ -285,10 +285,10 @@ namespace LaboratorioClinico
                 Txt_apellidoMedicoM.Text = datos.Rows[0][1].ToString();
                 Txt_telefonoMedicoM.Text = datos.Rows[0][2].ToString();
                 Txt_direMedicoM.Text = datos.Rows[0][3].ToString();
-                Txt_correoMedicoM.Text = datos.Rows[0][3].ToString();
-                Cmb_especialidadMedicoM.Text = datos.Rows[0][4].ToString();
-                Cmb_empresaMedicoM.Text = datos.Rows[0][5].ToString();
-                Dtp_nacimiento.Text = datos.Rows[0][6].ToString();
+                Txt_correoMedicoM.Text = datos.Rows[0][4].ToString();
+                Cmb_especialidadMedicoM.Text = datos.Rows[0][5].ToString();
+                Cmb_empresaMedicoM.Text = datos.Rows[0][6].ToString();
+                Dtp_nacimiento.Text = datos.Rows[0][7].ToString();
 
                 Txt_colegiadoM.Enabled = false;
             }
