@@ -379,7 +379,7 @@
             // 
             // Dtp_nacimientoE
             // 
-            this.Dtp_nacimientoE.CustomFormat = "dd-MM-yy";
+            this.Dtp_nacimientoE.CustomFormat = "yyyy-MM-dd";
             this.Dtp_nacimientoE.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Dtp_nacimientoE.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.Dtp_nacimientoE.Location = new System.Drawing.Point(445, 44);
@@ -660,7 +660,7 @@
             // 
             // Dtp_nacimiento
             // 
-            this.Dtp_nacimiento.CustomFormat = "dd-MM-yy";
+            this.Dtp_nacimiento.CustomFormat = "yyyy-MM-dd";
             this.Dtp_nacimiento.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Dtp_nacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.Dtp_nacimiento.Location = new System.Drawing.Point(445, 44);
