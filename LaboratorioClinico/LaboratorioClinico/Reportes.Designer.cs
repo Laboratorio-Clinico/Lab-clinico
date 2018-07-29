@@ -46,6 +46,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.Btn_ganancias = new System.Windows.Forms.Button();
+            this.Pnl_Contenedor = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.Pnl_enca.SuspendLayout();
             this.Pnl_Menu.SuspendLayout();
@@ -321,6 +322,15 @@
             this.Btn_ganancias.Text = "Ganancias";
             this.Btn_ganancias.UseVisualStyleBackColor = false;
             // 
+            // Pnl_Contenedor
+            // 
+            this.Pnl_Contenedor.BackColor = System.Drawing.Color.Transparent;
+            this.Pnl_Contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Pnl_Contenedor.Location = new System.Drawing.Point(200, 34);
+            this.Pnl_Contenedor.Name = "Pnl_Contenedor";
+            this.Pnl_Contenedor.Size = new System.Drawing.Size(859, 700);
+            this.Pnl_Contenedor.TabIndex = 18;
+            // 
             // Reportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -328,6 +338,7 @@
             this.BackgroundImage = global::LaboratorioClinico.Properties.Resources.fondomedico;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1059, 734);
+            this.Controls.Add(this.Pnl_Contenedor);
             this.Controls.Add(this.Pnl_Menu);
             this.Controls.Add(this.Pnl_enca);
             this.DoubleBuffered = true;
@@ -366,5 +377,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel Pnl_Contenedor;
     }
 }
