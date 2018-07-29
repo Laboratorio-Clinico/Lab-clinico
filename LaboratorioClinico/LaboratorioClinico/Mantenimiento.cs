@@ -401,8 +401,8 @@ namespace LaboratorioClinico
                 Txt_telefonoMedicoM.Clear();
                 Txt_direMedicoM.Clear();
                 Txt_correoMedicoM.Clear();
-                Cmb_especialidadMedicoM.ResetText(); Cmb_especialidadMedicoM.Items.Clear();
-                Cmb_empresaMedicoM.ResetText(); Cmb_empresaMedicoM.Items.Clear();
+                Cmb_especialidadMedicoM.Items.Clear();
+                Cmb_empresaMedicoM.Items.Clear();
                 Dtp_nacimiento.Refresh();
 
             }
