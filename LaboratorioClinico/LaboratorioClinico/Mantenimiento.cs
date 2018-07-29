@@ -225,6 +225,7 @@ namespace LaboratorioClinico
                 //Limpiar la información previamente cargada para volver a buscar otro paciente
                 Txt_expe.Enabled = true;
                 Txt_expe.Clear();
+                Pnl_modificarP.Visible = false;
 
                 Txt_nombre.Clear();
                 Txt_telefono.Clear();
@@ -271,9 +272,11 @@ namespace LaboratorioClinico
                 Txt_correoP.Clear();
                 Txt_alergiasp.Clear();
                 Txt_refierep.Clear();
-                Cmb_sexop.ResetText();  Cmb_sexop.Items.Clear(); 
+                Cmb_sexop.ResetText();  Cmb_sexop.Items.Clear();
 
                 //Volver a habilitar todos los textbox / combobox
+                Pnl_eliminarP.Visible = false;
+
                 Txt_nombrep.Enabled = true;
                 Txt_telefonop.Enabled = true;
                 Txt_nitp.Enabled = true;
@@ -393,8 +396,10 @@ namespace LaboratorioClinico
 
                 MessageBox.Show("Médico Modificado Exitosamente.", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
+                //Limpiar la información previamente cargada para volver a buscar otro medico
                 Txt_colegiadoM.Enabled = true;
                 Txt_colegiadoM.Clear();
+                Gpb_datos.Visible = false;
 
                 Txt_nombreMedicoM.Clear();
                 Txt_apellidoMedicoM.Clear();
