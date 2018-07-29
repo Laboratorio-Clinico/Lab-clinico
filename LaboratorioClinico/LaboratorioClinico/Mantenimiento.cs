@@ -174,14 +174,14 @@ namespace LaboratorioClinico
                 Txt_nombre.Text = datos.Rows[0][0].ToString();
                 Txt_telefono.Text = datos.Rows[0][1].ToString();
                 Txt_nit.Text = datos.Rows[0][2].ToString();
-                Cmb_tipoSangre.Text = datos.Rows[0][3].ToString();
+                Txt_tipoSangre.Text = datos.Rows[0][3].ToString();
                 Txt_direccion.Text = datos.Rows[0][4].ToString();
                 Txt_correo.Text = datos.Rows[0][5].ToString(); ;
                 Txt_alergias.Text = datos.Rows[0][6].ToString();
                 Txt_refiere.Text = datos.Rows[0][7].ToString();
                 Cmb_sexo.Text = datos.Rows[0][8].ToString();
 
-                Txt_expe.Enabled = false;
+                Txt_tipoSangre.Enabled = false;
             }
             catch(Exception ex)
             {
@@ -203,7 +203,7 @@ namespace LaboratorioClinico
                 cmd.ExecuteNonQuery();
                 cmd.CommandText = "update paciente set sNit = '" + Txt_nit.Text + "' where nIdPaciente = '" + Convert.ToInt32(Txt_expe.Text) + "'";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "update paciente set iIdTipoDeSangre = '" + Cmb_tipoSangre.Text + "' where nIdPaciente = '" + Convert.ToInt32(Txt_expe.Text) + "'";
+                cmd.CommandText = "update paciente set iIdTipoDeSangre = '" + Txt_tipoSangre.Text + "' where nIdPaciente = '" + Convert.ToInt32(Txt_expe.Text) + "'";
                 cmd.ExecuteNonQuery();
                 cmd.CommandText = "update paciente set sDireccion = '" + Txt_direccion.Text + "' where nIdPaciente = '" + Convert.ToInt32(Txt_expe.Text) + "'";
                 cmd.ExecuteNonQuery();
@@ -227,7 +227,7 @@ namespace LaboratorioClinico
                 Txt_nombre.Clear();
                 Txt_telefono.Clear();
                 Txt_nit.Clear();
-                Cmb_tipoSangre.Refresh();
+                Txt_tipoSangre.Clear();
                 Txt_direccion.Clear();
                 Txt_correo.Clear();
                 Txt_alergias.Clear();
@@ -354,7 +354,7 @@ namespace LaboratorioClinico
                 Cmb_empresaMedicoM.Text = datos.Rows[0][6].ToString();
                 Dtp_nacimiento.Text = datos.Rows[0][7].ToString();
 
-                Txt_colegiadoM.Enabled = false;
+                //Txt_colegiadoM.Enabled = false;
             }
             catch (Exception ex)
             {
@@ -494,12 +494,21 @@ namespace LaboratorioClinico
 
         private void Cmb_especialidadMedicoM_SelectedIndexChanged(object sender, EventArgs e)
         {
-            prollenarEspecialidad();
+           
         }
 
         private void Cmb_empresaMedicoM_SelectedIndexChanged(object sender, EventArgs e)
         {
-            prollenarEmpresa();
+           
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Cmb_tipoSangre.Visible = true;
+            Lbl_editarSangrep.Visible = true;
+            Btn_editarSangrep.Visible = true;
+            prollenarSangre();
+            Txt_tipoSangre.Text = Cmb_tipoSangre.SelectedText;
         }
     }
 }

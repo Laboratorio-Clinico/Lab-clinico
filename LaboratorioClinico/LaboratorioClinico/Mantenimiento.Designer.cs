@@ -182,6 +182,10 @@
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.label14 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
+            this.Txt_tipoSangre = new System.Windows.Forms.TextBox();
+            this.Lbl_editarSangrep = new System.Windows.Forms.Label();
+            this.Gpb_sangrep = new System.Windows.Forms.GroupBox();
+            this.Btn_editarSangrep = new System.Windows.Forms.Button();
             this.Gpb_mantenimiento.SuspendLayout();
             this.Tbc_medicos.SuspendLayout();
             this.tabPage4.SuspendLayout();
@@ -202,6 +206,7 @@
             this.Tbc_examen.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.tabPage6.SuspendLayout();
+            this.Gpb_sangrep.SuspendLayout();
             this.SuspendLayout();
             // 
             // Lbl_tabla
@@ -240,11 +245,11 @@
             this.Gpb_mantenimiento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Gpb_mantenimiento.Controls.Add(this.Lbl_tabla);
             this.Gpb_mantenimiento.Controls.Add(this.Cmb_tabla);
-            this.Gpb_mantenimiento.Controls.Add(this.Tbc_medicos);
-            this.Gpb_mantenimiento.Controls.Add(this.Picb_fondo);
             this.Gpb_mantenimiento.Controls.Add(this.Tbc_paciente);
             this.Gpb_mantenimiento.Controls.Add(this.Tbc_empleado);
             this.Gpb_mantenimiento.Controls.Add(this.Tbc_examen);
+            this.Gpb_mantenimiento.Controls.Add(this.Tbc_medicos);
+            this.Gpb_mantenimiento.Controls.Add(this.Picb_fondo);
             this.Gpb_mantenimiento.Font = new System.Drawing.Font("Perpetua", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Gpb_mantenimiento.ForeColor = System.Drawing.Color.DarkKhaki;
             this.Gpb_mantenimiento.Location = new System.Drawing.Point(9, 12);
@@ -1221,9 +1226,7 @@
             // 
             // Pnl_modificarP
             // 
-            this.Pnl_modificarP.Controls.Add(this.Cmb_tipoSangre);
             this.Pnl_modificarP.Controls.Add(this.Txt_nombre);
-            this.Pnl_modificarP.Controls.Add(this.Lbl_tipoSangre);
             this.Pnl_modificarP.Controls.Add(this.Txt_alergias);
             this.Pnl_modificarP.Controls.Add(this.Txt_correo);
             this.Pnl_modificarP.Controls.Add(this.Cmb_sexo);
@@ -1239,9 +1242,10 @@
             this.Pnl_modificarP.Controls.Add(this.Lbl_nit);
             this.Pnl_modificarP.Controls.Add(this.Lbl_direccion);
             this.Pnl_modificarP.Controls.Add(this.Lbl_refiere);
-            this.Pnl_modificarP.Location = new System.Drawing.Point(97, 60);
+            this.Pnl_modificarP.Controls.Add(this.Gpb_sangrep);
+            this.Pnl_modificarP.Location = new System.Drawing.Point(31, 54);
             this.Pnl_modificarP.Name = "Pnl_modificarP";
-            this.Pnl_modificarP.Size = new System.Drawing.Size(519, 253);
+            this.Pnl_modificarP.Size = new System.Drawing.Size(645, 269);
             this.Pnl_modificarP.TabIndex = 96;
             this.Pnl_modificarP.Visible = false;
             // 
@@ -1250,10 +1254,11 @@
             this.Cmb_tipoSangre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Cmb_tipoSangre.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cmb_tipoSangre.FormattingEnabled = true;
-            this.Cmb_tipoSangre.Location = new System.Drawing.Point(310, 69);
+            this.Cmb_tipoSangre.Location = new System.Drawing.Point(158, 31);
             this.Cmb_tipoSangre.Name = "Cmb_tipoSangre";
-            this.Cmb_tipoSangre.Size = new System.Drawing.Size(180, 25);
+            this.Cmb_tipoSangre.Size = new System.Drawing.Size(157, 25);
             this.Cmb_tipoSangre.TabIndex = 51;
+            this.Cmb_tipoSangre.Visible = false;
             this.Cmb_tipoSangre.SelectedIndexChanged += new System.EventHandler(this.Cmb_tipoSangre_SelectedIndexChanged);
             // 
             // Txt_nombre
@@ -1271,7 +1276,7 @@
             this.Lbl_tipoSangre.AutoSize = true;
             this.Lbl_tipoSangre.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_tipoSangre.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Lbl_tipoSangre.Location = new System.Drawing.Point(307, 55);
+            this.Lbl_tipoSangre.Location = new System.Drawing.Point(9, 16);
             this.Lbl_tipoSangre.Name = "Lbl_tipoSangre";
             this.Lbl_tipoSangre.Size = new System.Drawing.Size(84, 18);
             this.Lbl_tipoSangre.TabIndex = 114;
@@ -2101,6 +2106,53 @@
             this.button5.TabIndex = 72;
             this.button5.UseVisualStyleBackColor = true;
             // 
+            // Txt_tipoSangre
+            // 
+            this.Txt_tipoSangre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_tipoSangre.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_tipoSangre.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Txt_tipoSangre.Location = new System.Drawing.Point(12, 31);
+            this.Txt_tipoSangre.Name = "Txt_tipoSangre";
+            this.Txt_tipoSangre.Size = new System.Drawing.Size(140, 25);
+            this.Txt_tipoSangre.TabIndex = 117;
+            // 
+            // Lbl_editarSangrep
+            // 
+            this.Lbl_editarSangrep.AutoSize = true;
+            this.Lbl_editarSangrep.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_editarSangrep.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Lbl_editarSangrep.Location = new System.Drawing.Point(157, 16);
+            this.Lbl_editarSangrep.Name = "Lbl_editarSangrep";
+            this.Lbl_editarSangrep.Size = new System.Drawing.Size(49, 18);
+            this.Lbl_editarSangrep.TabIndex = 118;
+            this.Lbl_editarSangrep.Text = "Editar:";
+            this.Lbl_editarSangrep.Visible = false;
+            // 
+            // Gpb_sangrep
+            // 
+            this.Gpb_sangrep.Controls.Add(this.Btn_editarSangrep);
+            this.Gpb_sangrep.Controls.Add(this.Txt_tipoSangre);
+            this.Gpb_sangrep.Controls.Add(this.Lbl_tipoSangre);
+            this.Gpb_sangrep.Controls.Add(this.Cmb_tipoSangre);
+            this.Gpb_sangrep.Controls.Add(this.Lbl_editarSangrep);
+            this.Gpb_sangrep.Location = new System.Drawing.Point(309, 35);
+            this.Gpb_sangrep.Name = "Gpb_sangrep";
+            this.Gpb_sangrep.Size = new System.Drawing.Size(327, 71);
+            this.Gpb_sangrep.TabIndex = 118;
+            this.Gpb_sangrep.TabStop = false;
+            // 
+            // Btn_editarSangrep
+            // 
+            this.Btn_editarSangrep.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_editarSangrep.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.Btn_editarSangrep.Location = new System.Drawing.Point(160, 24);
+            this.Btn_editarSangrep.Name = "Btn_editarSangrep";
+            this.Btn_editarSangrep.Size = new System.Drawing.Size(93, 34);
+            this.Btn_editarSangrep.TabIndex = 118;
+            this.Btn_editarSangrep.Text = "Editar...";
+            this.Btn_editarSangrep.UseVisualStyleBackColor = true;
+            this.Btn_editarSangrep.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Mantenimiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -2151,6 +2203,8 @@
             this.tabPage5.PerformLayout();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
+            this.Gpb_sangrep.ResumeLayout(false);
+            this.Gpb_sangrep.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2310,5 +2364,9 @@
         private System.Windows.Forms.Label Lbl_eliminarEmpe;
         private System.Windows.Forms.TextBox Txt_correoMedicoM;
         private System.Windows.Forms.Label Lbl_correoMedicoM;
+        private System.Windows.Forms.TextBox Txt_tipoSangre;
+        private System.Windows.Forms.Label Lbl_editarSangrep;
+        private System.Windows.Forms.GroupBox Gpb_sangrep;
+        private System.Windows.Forms.Button Btn_editarSangrep;
     }
 }
