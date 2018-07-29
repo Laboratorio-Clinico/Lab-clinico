@@ -54,18 +54,22 @@ namespace LaboratorioClinico
 
                 cm.ExecuteNonQuery();
                 MessageBox.Show("Datos agregados exitosamente");
-                Txt_Correo.ResetText();
+            }
+            catch (Exception error) { MessageBox.Show("Error"+error); }
+            finally
+            {
+
+                conexion.ObtenerConexion().Close();
+                Txt_colegiado.ResetText();
                 Txt_nombre.ResetText();
                 Txt_apellido.ResetText();
                 Txt_telefono.ResetText();
+                Txt_Correo.ResetText();
                 Txt_direccion.ResetText();
-                Cmb_especialidad.ResetText();
-                Txt_colegiado.ResetText();
-                Cmb_empresa.ResetText();
                 Dtp_fechaNacimiento.ResetText();
-            }
-            catch (Exception error) { MessageBox.Show("Error"+error); }
+            
         }
+    }
         public void proLlenarEmpresa()
         {
 
