@@ -397,9 +397,9 @@ namespace LaboratorioClinico
                 cmd.ExecuteNonQuery();
                 cmd.CommandText = "update correo set sCorreo = '" + Txt_correoMedicoM.Text + "' where nIdPaciente = '" + Convert.ToInt32(Txt_colegiadoM.Text) + "'";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "update especialidad set sEspecialidad = '" + Cmb_especialidadMedicoM.Text + "' where iIdEspecialidad = '" + Convert.ToInt32(Txt_colegiadoM.Text) + "'";
+                cmd.CommandText = "update medicosasociados set iIdEspecialidad = '" + Cmb_especialidadMedicoM.Text + "' where nNoColegiado = '" + Convert.ToInt32(Cmb_especialidadMedicoM.SelectedValue) + "'";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "update empresa set sEmpresa = '" + Cmb_empresaMedicoM.Text + "' where iIdEmpresa = '" + Convert.ToInt32(Txt_colegiadoM.Text) + "'";
+                cmd.CommandText = "update medicosasociados set iIdEmpresa = '" + Cmb_empresaMedicoM.Text + "' where nNoColegiado = '" + Convert.ToInt32(Cmb_empresaMedicoM.SelectedValue) + "'";
                 cmd.ExecuteNonQuery();
                 cmd.CommandText = "update medicosasociados set dFechaDeNacimiento = '" + Dtp_nacimiento.Value + "' where nNoColegiado = '" + Convert.ToInt32(Txt_colegiadoM.Text) + "'";
                 cmd.ExecuteNonQuery();
