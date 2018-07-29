@@ -34,7 +34,7 @@ namespace LaboratorioClinico
         {
 
         }
-        public void proGuardarDatos(int iEmpresa,int iEspecialidades) {
+        public void proGuardarDatos(int iEmpresas,int iEspecialidades) {
 
             try
             {
@@ -49,12 +49,11 @@ namespace LaboratorioClinico
                 cm.Parameters.AddWithValue("@sDireccion", this.Txt_direccion.Text);
                 cm.Parameters.AddWithValue("@sCorreo", this.Txt_Correo.Text);
                 cm.Parameters.AddWithValue("@iEspecialidad", iEspecialidades);
-                cm.Parameters.AddWithValue("@iEmpresa", iEmpresa);
+                cm.Parameters.AddWithValue("@iEmpresa", iEmpresas);
                 cm.Parameters.AddWithValue("@dFechaDeNacimiento", this.Dtp_fechaNacimiento.Value);
 
                 cm.ExecuteNonQuery();
                 MessageBox.Show("Datos agregados exitosamente");
-
                 Txt_Correo.ResetText();
                 Txt_nombre.ResetText();
                 Txt_apellido.ResetText();
@@ -124,10 +123,10 @@ namespace LaboratorioClinico
         {
 
 
-                int iEmpresa = Convert.ToInt32(Cmb_empresa.SelectedValue);
+                int iEmpresas = Convert.ToInt32(Cmb_empresa.SelectedValue);
                 int iEspecialidades = Convert.ToInt32(Cmb_especialidad.SelectedValue);
             
-                proGuardarDatos(iEmpresa, iEspecialidades);
+                proGuardarDatos(iEmpresas, iEspecialidades);
 
 
 
