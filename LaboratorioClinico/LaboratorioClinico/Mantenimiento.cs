@@ -34,8 +34,6 @@ namespace LaboratorioClinico
         {
             try
             {
-                Cmb_tipoSangre.Items.Clear();
-                Cmb_tipoSangre.Text = "Seleccione el tipo de sangre";
                 conexion.ObtenerConexion();
                 OdbcCommand comando = new OdbcCommand("Select iIdTipoDeSangre,sGrupoSanguineo from tipoDeSangre", conexion.ObtenerConexion());
                 OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
@@ -76,8 +74,6 @@ namespace LaboratorioClinico
         {
             try
             {
-                Cmb_empresaMedicoM.Items.Clear();
-                Cmb_empresaMedicoM.Text = "Seleccione una empresa";
                 conexion.ObtenerConexion();
                 OdbcCommand comando = new OdbcCommand("Select iIdEmpresa,sEmpresa from Empresa", conexion.ObtenerConexion());
                 OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
