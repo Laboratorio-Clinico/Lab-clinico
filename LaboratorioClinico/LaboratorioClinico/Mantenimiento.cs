@@ -16,7 +16,7 @@ namespace LaboratorioClinico
         public Mantenimiento()
         {
             InitializeComponent();
-            prollenarEspecialidad();
+            //prollenarEspecialidad();
             prollenarEmpresa();
         }
 
@@ -496,7 +496,7 @@ namespace LaboratorioClinico
 
         private void Cmb_especialidadMedicoM_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
+            prollenarEspecialidad();
         }
 
         private void Cmb_empresaMedicoM_SelectedIndexChanged(object sender, EventArgs e)
