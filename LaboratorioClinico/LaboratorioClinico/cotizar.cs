@@ -44,14 +44,17 @@ namespace LaboratorioClinico
 
             try
             {
-                Cmb_examen.Text = "Seleccione el examen que desea buscar";
-                Cmb_examen.Items.Clear();
+                
                 conexion.ObtenerConexion();
                 OdbcCommand comando = new OdbcCommand("Select iIdExamen, sDescripcion from Examenes", conexion.ObtenerConexion());
                 OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
                 DataTable tabla = new DataTable();
 
                 adaptador.Fill(tabla);
+
+                DataRow fila = tabla.NewRow();
+                fila["sDescripcion"] = "Seleccione el examen";
+                tabla.Rows.InsertAt(fila, 0);
 
                 Cmb_examen.ValueMember = "iIdExamen";
                 Cmb_examen.DisplayMember = "sDescripcion";
@@ -70,14 +73,17 @@ namespace LaboratorioClinico
 
             try
             {
-                Cmb_doctor.Text = "Seleccione el doctor que desea buscar";
-                Cmb_doctor.Items.Clear();
+               
                 conexion.ObtenerConexion();
                 OdbcCommand comando = new OdbcCommand("Select nIdEmpleado, sApellido from Empleado where iIdCargo > 5010 && iIdCargo <5015", conexion.ObtenerConexion());
                 OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
                 DataTable tabla = new DataTable();
 
                 adaptador.Fill(tabla);
+
+                DataRow fila = tabla.NewRow();
+                fila["sApellido"] = "Seleccione el doctor";
+                tabla.Rows.InsertAt(fila, 0);
 
                 Cmb_doctor.ValueMember = "iIdEmpleado";
                 Cmb_doctor.DisplayMember = "sApellido";
@@ -93,14 +99,16 @@ namespace LaboratorioClinico
         {
             try
             {
-                Cmb_laboratorio.Text = "Seleccione el laboratorio en el que realizará el exámen";
-                Cmb_laboratorio.Items.Clear();
+           
                 conexion.ObtenerConexion();
                 OdbcCommand comando = new OdbcCommand("Select iIdLaboratorio, sUbicacion from Laboratorio", conexion.ObtenerConexion());
                 OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
                 DataTable tabla = new DataTable();
 
                 adaptador.Fill(tabla);
+                DataRow fila = tabla.NewRow();
+                fila["sUbicacion"] = "Seleccione el laboratorio en el que se desea realizar el exámen";
+                tabla.Rows.InsertAt(fila, 0);
 
                 Cmb_laboratorio.ValueMember = "iIdLaboratorio";
                 Cmb_laboratorio.DisplayMember = "sUbicacion";
@@ -117,14 +125,16 @@ namespace LaboratorioClinico
 
             try
             {
-                Cmb_tipoDeDescuento.Text = "Seleccione el tipo de descuento a utilizar";
-                Cmb_tipoDeDescuento.Items.Clear();
+                
                 conexion.ObtenerConexion();
                 OdbcCommand comando = new OdbcCommand("Select iIdTipoDescuento, sDescripcion from TipoDescuento", conexion.ObtenerConexion());
                 OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
                 DataTable tabla = new DataTable();
 
                 adaptador.Fill(tabla);
+                DataRow fila = tabla.NewRow();
+                fila["sDescripcion"] = "Seleccione el tipo de descuento";
+                tabla.Rows.InsertAt(fila, 0);
 
                 Cmb_tipoDeDescuento.ValueMember = "iIdTipoDescuento";
                 Cmb_tipoDeDescuento.DisplayMember = "sDescripcion";
@@ -257,7 +267,8 @@ namespace LaboratorioClinico
             int iEmpleado = Convert.ToInt32(Cmb_doctor.SelectedValue);
             int iTipoDescuento = Convert.ToInt32(Cmb_tipoDeDescuento.SelectedValue);
             int iLaboratorio = Convert.ToInt32(Cmb_laboratorio.SelectedValue);
-            proGuardarCotizacion( iExamenes,iEmpleado, iLaboratorio, iTipoDescuento)
+            proGuardarCotizacion(iExamenes, iEmpleado, iLaboratorio, iTipoDescuento);
+            printDocument1.Print();
         }
 
         private void Cmb_tipoDeDescuento_SelectedIndexChanged(object sender, EventArgs e)

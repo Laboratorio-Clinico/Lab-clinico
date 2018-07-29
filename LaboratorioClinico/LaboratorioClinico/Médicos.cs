@@ -80,6 +80,9 @@ namespace LaboratorioClinico
                 DataTable tabla = new DataTable();
 
                 adaptador.Fill(tabla);
+                DataRow fila = tabla.NewRow();
+                fila["sEmpresa"] = "Seleccione una Empresa";
+                tabla.Rows.InsertAt(fila, 0);
 
                 Cmb_empresa.ValueMember = "iIdEmpresa";
                 Cmb_empresa.DisplayMember = "sEmpresa";
@@ -106,6 +109,10 @@ namespace LaboratorioClinico
                 DataTable tabla = new DataTable();
 
                 adaptador.Fill(tabla);
+
+                DataRow fila = tabla.NewRow();
+                fila["sEspecialidad"] = "Seleccione la especialidad";
+                tabla.Rows.InsertAt(fila, 0);
 
                 Cmb_especialidad.ValueMember = "iIdEspecialidad";
                 Cmb_especialidad.DisplayMember = "sEspecialidad";

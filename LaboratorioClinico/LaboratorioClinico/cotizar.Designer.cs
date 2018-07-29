@@ -56,6 +56,7 @@
             this.Txt_Total = new System.Windows.Forms.TextBox();
             this.Dgv_verDatos = new System.Windows.Forms.DataGridView();
             this.label9 = new System.Windows.Forms.Label();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.Gpb_cotizacion.SuspendLayout();
             this.Gpb_botones.SuspendLayout();
             this.Gpb_verDatos.SuspendLayout();
@@ -442,5 +443,6 @@
         private System.Windows.Forms.Label Lbl_examen;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox Txt_Cantidad;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }
