@@ -16,8 +16,6 @@ namespace LaboratorioClinico
         public Mantenimiento()
         {
             InitializeComponent();
-            //prollenarEspecialidad();
-            prollenarEmpresa();
         }
 
         private void Mantenimiento_Load(object sender, EventArgs e)
@@ -496,12 +494,12 @@ namespace LaboratorioClinico
 
         private void Cmb_especialidadMedicoM_SelectedIndexChanged(object sender, EventArgs e)
         {
-            prollenarEspecialidad();
+            
         }
 
         private void Cmb_empresaMedicoM_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -510,7 +508,7 @@ namespace LaboratorioClinico
             Lbl_editarSangrep.Visible = true;
             Btn_editarSangrep.Visible = false;
             prollenarSangre();
-            Txt_tipoSangre.Text = Cmb_tipoSangre.Text;
+            Txt_tipoSangre.Text = Convert.ToString(Cmb_tipoSangre.SelectedItem);
         }
     }
 }
