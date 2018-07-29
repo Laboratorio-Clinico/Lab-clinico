@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Odbc;
+using System.Drawing.Printing;
+using System.Drawing;
 
 
 namespace LaboratorioClinico
@@ -160,7 +162,7 @@ namespace LaboratorioClinico
                 comando.CommandType = CommandType.StoredProcedure;
 
                 comando.Parameters.AddWithValue("@iAIdLaboratorio", iIdLaboratorio);
-                comando.Parameters.AddWithValue("@dAFecha", this.Dtp_fecha);
+                comando.Parameters.AddWithValue("@dAFecha", this.Dtp_fecha.Value);
                 comando.Parameters.AddWithValue("@iAIdTipoDeDescuento", iIdTipoDescuento);
                 comando.Parameters.AddWithValue("@iAIdexamen", iIdExamenes);
                 comando.Parameters.AddWithValue("@iACantidad", doCantidad);
@@ -232,16 +234,8 @@ namespace LaboratorioClinico
         private void Btn_buscar_Click(object sender, EventArgs e)
         {
            
-            int iIdExamenes = Convert.ToInt32(Cmb_examen.SelectedValue);
-            /// MessageBox.Show("Aqui2");
-            /* int iIdEmpleado = Convert.ToInt32(Cmb_doctor.SelectedValue);
-             MessageBox.Show("Aqui3");
-             int iIdTipoDescuento = Convert.ToInt32(Cmb_tipoDeDescuento.SelectedValue);
-             MessageBox.Show("Aqui4");
-             int iIdLaboratorio = Convert.ToInt32(Cmb_laboratorio.SelectedValue);
-             MessageBox.Show("Aqui5");
-             
-             */
+            int iIdExamenes = Convert.ToInt32(Cmb_examen.SelectedValue);           
+ 
             proBuscarCotizacion(iIdExamenes);
             proPrecioyTotal(iIdExamenes);
             
@@ -259,7 +253,11 @@ namespace LaboratorioClinico
 
         private void Btn_imprimir_Click(object sender, EventArgs e)
         {
-            
+            int iExamenes = Convert.ToInt32(Cmb_examen.SelectedValue);
+            int iEmpleado = Convert.ToInt32(Cmb_doctor.SelectedValue);
+            int iTipoDescuento = Convert.ToInt32(Cmb_tipoDeDescuento.SelectedValue);
+            int iLaboratorio = Convert.ToInt32(Cmb_laboratorio.SelectedValue);
+            proGuardarCotizacion( iExamenes,iEmpleado, iLaboratorio, iTipoDescuento)
         }
 
         private void Cmb_tipoDeDescuento_SelectedIndexChanged(object sender, EventArgs e)
