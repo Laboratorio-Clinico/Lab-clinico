@@ -62,11 +62,6 @@ namespace LaboratorioClinico
                 DataTable tabla = new DataTable();
 
                 adaptador.Fill(tabla);
-
-                DataRow fila = tabla.NewRow();
-                fila["sEspecialidad"] = "Seleccione la especialidad";
-                tabla.Rows.InsertAt(fila, 0);
-
                 Cmb_especialidadMedicoM.ValueMember = "iIdEspecialidad";
                 Cmb_especialidadMedicoM.DisplayMember = "sEspecialidad";
                 Cmb_especialidadMedicoM.DataSource = tabla;
@@ -87,12 +82,8 @@ namespace LaboratorioClinico
                 OdbcCommand comando = new OdbcCommand("Select iIdEmpresa,sEmpresa from Empresa", conexion.ObtenerConexion());
                 OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
                 DataTable tabla = new DataTable();
-
+            
                 adaptador.Fill(tabla);
-                DataRow fila = tabla.NewRow();
-                fila["sEmpresa"] = "Seleccione una Empresa";
-                tabla.Rows.InsertAt(fila, 0);
-
                 Cmb_empresaMedicoM.ValueMember = "iIdEmpresa";
                 Cmb_empresaMedicoM.DisplayMember = "sEmpresa";
                 Cmb_empresaMedicoM.DataSource = tabla;
