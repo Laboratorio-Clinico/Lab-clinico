@@ -137,21 +137,21 @@ namespace LaboratorioClinico
 
                 //Realizar updates de cada dato del paciente por si se llegó a modificar alguno.
                 cmd.CommandText = "update paciente set sNombre = '" + Txt_nombre.Text + "' where nIdPaciente = '" + Convert.ToInt32(Txt_expe.Text) + "'";
-                cmd.ExecuteNonQuery();
+      
                 cmd.CommandText = "update telefono set iTelefono = '" + Txt_telefono.Text + "' where nIdPaciente = '" + Convert.ToInt32(Txt_expe.Text) + "'";
-                cmd.ExecuteNonQuery();
+      
                 cmd.CommandText = "update paciente set sNit = '" + Txt_nit.Text + "' where nIdPaciente = '" + Convert.ToInt32(Txt_expe.Text) + "'";
-                cmd.ExecuteNonQuery();
+      
                 cmd.CommandText = "update paciente set iIdTipoDeSangre = '" + Cmb_tipoSangre.Text + "' where nIdPaciente = '" + Convert.ToInt32(Txt_expe.Text) + "'";
-                cmd.ExecuteNonQuery();
+
                 cmd.CommandText = "update paciente set sDireccion = '" + Txt_direccion.Text + "' where nIdPaciente = '" + Convert.ToInt32(Txt_expe.Text) + "'";
-                cmd.ExecuteNonQuery();
+
                 cmd.CommandText = "update correo set sCorreo = '" + Txt_correo.Text + "' where nIdPaciente = '" + Convert.ToInt32(Txt_expe.Text) + "'";
-                cmd.ExecuteNonQuery();
+
                 cmd.CommandText = "update paciente set sAlergia = '" + Txt_alergias.Text + "' where nIdPaciente = '" + Convert.ToInt32(Txt_expe.Text) + "'";
-                cmd.ExecuteNonQuery();
+
                 cmd.CommandText = "update paciente set sRefiere = '" + Txt_refiere.Text + "' where nIdPaciente = '" + Convert.ToInt32(Txt_expe.Text) + "'";
-                cmd.ExecuteNonQuery();
+         
                 cmd.CommandText = "update paciente set sGenero = '" + Cmb_sexo.Text + "' where nIdPaciente = '" + Convert.ToInt32(Txt_expe.Text) + "'";
                 cmd.ExecuteNonQuery();
 
@@ -322,7 +322,7 @@ namespace LaboratorioClinico
                 cmd.ExecuteNonQuery();
                 cmd.CommandText = "update especialidad set sEspecialidad = '" + Cmb_especialidadMedicoM.Text + "' where iIdEspecialidad = '" + Convert.ToInt32(Txt_colegiadoM.Text) + "'";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "update empresa set sEmpresa = '" + Cmb_empresaMedicoM.Text + "' where nNoColegiado = '" + Convert.ToInt32(Txt_colegiadoM.Text) + "'";
+                cmd.CommandText = "update empresa set sEmpresa = '" + Cmb_empresaMedicoM.Text + "' where iIdEmpresa = '" + Convert.ToInt32(Txt_colegiadoM.Text) + "'";
                 cmd.ExecuteNonQuery();
                 cmd.CommandText = "update medicosasociados set dFechaDeNacimiento = '" + Dtp_nacimiento.Value + "' where nNoColegiado = '" + Convert.ToInt32(Txt_colegiadoM.Text) + "'";
                 cmd.ExecuteNonQuery();
