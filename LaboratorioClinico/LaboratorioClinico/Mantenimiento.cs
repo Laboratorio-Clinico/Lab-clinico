@@ -205,7 +205,7 @@ namespace LaboratorioClinico
             }
         }
 
-        private void Btn_editarp_Click(object sender, EventArgs e)
+        private void Btn_editarp_Click(object sender, EventArgs e) //EDITAR PACIENTE.........................................
         {
             try
             {
