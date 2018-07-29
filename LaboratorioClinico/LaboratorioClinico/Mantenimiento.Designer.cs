@@ -636,6 +636,7 @@
             this.Cmb_especialidadMedicoM.Name = "Cmb_especialidadMedicoM";
             this.Cmb_especialidadMedicoM.Size = new System.Drawing.Size(192, 25);
             this.Cmb_especialidadMedicoM.TabIndex = 121;
+            this.Cmb_especialidadMedicoM.SelectedIndexChanged += new System.EventHandler(this.Cmb_especialidadMedicoM_SelectedIndexChanged);
             // 
             // Cmb_empresaMedicoM
             // 
@@ -646,6 +647,7 @@
             this.Cmb_empresaMedicoM.Name = "Cmb_empresaMedicoM";
             this.Cmb_empresaMedicoM.Size = new System.Drawing.Size(193, 25);
             this.Cmb_empresaMedicoM.TabIndex = 120;
+            this.Cmb_empresaMedicoM.SelectedIndexChanged += new System.EventHandler(this.Cmb_empresaMedicoM_SelectedIndexChanged);
             // 
             // Txt_telefonoMedicoM
             // 

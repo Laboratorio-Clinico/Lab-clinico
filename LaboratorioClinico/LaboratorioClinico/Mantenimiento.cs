@@ -16,9 +16,6 @@ namespace LaboratorioClinico
         public Mantenimiento()
         {
             InitializeComponent();
-            prollenarSangre();
-            prollenarEspecialidad();
-            prollenarEmpresa();
         }
 
         private void Mantenimiento_Load(object sender, EventArgs e)
@@ -230,7 +227,7 @@ namespace LaboratorioClinico
                 Txt_nombre.Clear();
                 Txt_telefono.Clear();
                 Txt_nit.Clear();
-                prollenarSangre();
+                Cmb_tipoSangre.Refresh();
                 Txt_direccion.Clear();
                 Txt_correo.Clear();
                 Txt_alergias.Clear();
@@ -354,9 +351,7 @@ namespace LaboratorioClinico
                 Txt_direMedicoM.Text = datos.Rows[0][3].ToString();
                 Txt_correoMedicoM.Text = datos.Rows[0][4].ToString();
                 Cmb_especialidadMedicoM.Text = datos.Rows[0][5].ToString();
-                prollenarEspecialidad();
                 Cmb_empresaMedicoM.Text = datos.Rows[0][6].ToString();
-                prollenarEmpresa();
                 Dtp_nacimiento.Text = datos.Rows[0][7].ToString();
 
                 Txt_colegiadoM.Enabled = false;
@@ -408,8 +403,8 @@ namespace LaboratorioClinico
                 Txt_telefonoMedicoM.Clear();
                 Txt_direMedicoM.Clear();
                 Txt_correoMedicoM.Clear();
-                prollenarEspecialidad();
-                prollenarEmpresa();
+                Cmb_especialidadMedicoM.Refresh();
+                Cmb_empresaMedicoM.Refresh();
                 Dtp_nacimiento.Refresh();
 
             }
@@ -495,6 +490,16 @@ namespace LaboratorioClinico
         private void label22_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Cmb_especialidadMedicoM_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            prollenarEspecialidad();
+        }
+
+        private void Cmb_empresaMedicoM_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            prollenarEmpresa();
         }
     }
 }
