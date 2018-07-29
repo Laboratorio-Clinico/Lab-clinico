@@ -16,6 +16,9 @@ namespace LaboratorioClinico
         public Mantenimiento()
         {
             InitializeComponent();
+            prollenarSangre();
+            prollenarEspecialidad();
+            prollenarEmpresa();
         }
 
         private void Mantenimiento_Load(object sender, EventArgs e)
@@ -351,7 +354,9 @@ namespace LaboratorioClinico
                 Txt_direMedicoM.Text = datos.Rows[0][3].ToString();
                 Txt_correoMedicoM.Text = datos.Rows[0][4].ToString();
                 Cmb_especialidadMedicoM.Text = datos.Rows[0][5].ToString();
+                prollenarEspecialidad();
                 Cmb_empresaMedicoM.Text = datos.Rows[0][6].ToString();
+                prollenarEmpresa();
                 Dtp_nacimiento.Text = datos.Rows[0][7].ToString();
 
                 Txt_colegiadoM.Enabled = false;
