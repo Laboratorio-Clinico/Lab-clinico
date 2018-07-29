@@ -16,6 +16,8 @@ namespace LaboratorioClinico
         public Mantenimiento()
         {
             InitializeComponent();
+            prollenarEspecialidad();
+            prollenarEmpresa();
         }
 
         private void Mantenimiento_Load(object sender, EventArgs e)
@@ -508,7 +510,7 @@ namespace LaboratorioClinico
             Lbl_editarSangrep.Visible = true;
             Btn_editarSangrep.Visible = false;
             prollenarSangre();
-            Txt_tipoSangre.Text = Cmb_tipoSangre.SelectedText;
+            Txt_tipoSangre.Text = Cmb_tipoSangre.Text;
         }
     }
 }
