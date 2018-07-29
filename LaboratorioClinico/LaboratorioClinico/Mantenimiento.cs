@@ -314,11 +314,13 @@ namespace LaboratorioClinico
                 cmd.ExecuteNonQuery();
                 cmd.CommandText = "update medicosasociados set sApellido = '" + Txt_apellidoMedicoM.Text + "' where nNoColegiado = '" + Convert.ToInt32(Txt_colegiadoM.Text) + "'";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "update telefono set iTelefono = '" + Txt_telefonoMedicoM.Text + "' where nNoColegiado = '" + Convert.ToInt32(Txt_colegiadoM.Text) + "'";
+                cmd.CommandText = "update telefono set iTelefono = '" + Txt_telefonoMedicoM.Text + "' where nIdPaciente = '" + Convert.ToInt32(Txt_colegiadoM.Text) + "'";
                 cmd.ExecuteNonQuery();
                 cmd.CommandText = "update medicosasociados set sDireccion = '" + Txt_direMedicoM.Text + "' where nNoColegiado = '" + Convert.ToInt32(Txt_colegiadoM.Text) + "'";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "update especialidad set sEspecialidad = '" + Cmb_especialidadMedicoM.Text + "' where nNoColegiado = '" + Convert.ToInt32(Txt_colegiadoM.Text) + "'";
+                cmd.CommandText = "update correo set sCorreo = '" + Txt_correoMedicoM.Text + "' where nIdPaciente = '" + Convert.ToInt32(Txt_colegiadoM.Text) + "'";
+                cmd.ExecuteNonQuery();
+                cmd.CommandText = "update especialidad set sEspecialidad = '" + Cmb_especialidadMedicoM.Text + "' where iIdEspecialidad = '" + Convert.ToInt32(Txt_colegiadoM.Text) + "'";
                 cmd.ExecuteNonQuery();
                 cmd.CommandText = "update empresa set sEmpresa = '" + Cmb_empresaMedicoM.Text + "' where nNoColegiado = '" + Convert.ToInt32(Txt_colegiadoM.Text) + "'";
                 cmd.ExecuteNonQuery();
