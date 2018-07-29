@@ -2091,7 +2091,7 @@
             this.Lbl_correoMedicoM.AutoSize = true;
             this.Lbl_correoMedicoM.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_correoMedicoM.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Lbl_correoMedicoM.Location = new System.Drawing.Point(20, 122);
+            this.Lbl_correoMedicoM.Location = new System.Drawing.Point(19, 122);
             this.Lbl_correoMedicoM.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_correoMedicoM.Name = "Lbl_correoMedicoM";
             this.Lbl_correoMedicoM.Size = new System.Drawing.Size(49, 24);
