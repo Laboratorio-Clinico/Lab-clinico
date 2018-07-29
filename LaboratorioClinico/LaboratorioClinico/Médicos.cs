@@ -48,8 +48,8 @@ namespace LaboratorioClinico
                 cm.Parameters.AddWithValue("@nTelefono", this.Txt_telefono.Text);
                 cm.Parameters.AddWithValue("@sDireccion", this.Txt_direccion.Text);
                 cm.Parameters.AddWithValue("@sCorreo", this.Txt_Correo.Text);
-                cm.Parameters.AddWithValue("@iEspecialidad", iEspecialidades);
-                cm.Parameters.AddWithValue("@iEmpresa", iEmpresas);
+                cm.Parameters.AddWithValue("@iIdEspecialidad", iEspecialidades);
+                cm.Parameters.AddWithValue("@iIdEmpresa", iEmpresas);
                 cm.Parameters.AddWithValue("@dFechaDeNacimiento", this.Dtp_fechaNacimiento.Value);
 
                 cm.ExecuteNonQuery();

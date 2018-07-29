@@ -268,7 +268,7 @@ namespace LaboratorioClinico
             int iTipoDescuento = Convert.ToInt32(Cmb_tipoDeDescuento.SelectedValue);
             int iLaboratorio = Convert.ToInt32(Cmb_laboratorio.SelectedValue);
             proGuardarCotizacion(iExamenes, iEmpleado, iLaboratorio, iTipoDescuento);
-            printDocument1.Print();
+            
         }
 
         private void Cmb_tipoDeDescuento_SelectedIndexChanged(object sender, EventArgs e)
