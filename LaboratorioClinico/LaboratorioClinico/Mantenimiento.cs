@@ -277,7 +277,7 @@ namespace LaboratorioClinico
             try
             {
                 Gpb_datos.Visible = true;
-                OdbcDataAdapter sda = new OdbcDataAdapter("SELECT me.sNombre, me.sApellido, te.itelefono, me.sDireccion, es.sEspecialidad, em.sEmpresa, me.dFechaDeNacimiento FROM medicosasociados me, telefono te, especialidad es, empresa em WHERE me.nNoColegiado = te.nIdPaciente AND me.iIdEspecialidad = es.iIdEspecialidad AND me.iIdEmpresa = em.iIdEmpresa AND me.nNoColegiado = '" + Convert.ToInt32(Txt_colegiadoM.Text) + "'", conexion.ObtenerConexion());
+                OdbcDataAdapter sda = new OdbcDataAdapter("SELECT me.sNombre, me.sApellido, te.itelefono, me.sDireccion, co.sCorreo, es.sEspecialidad, em.sEmpresa, me.dFechaDeNacimiento FROM medicosasociados me, telefono te, correo co, especialidad es, empresa em  WHERE me.nNoColegiado = te.nIdPaciente AND me.nNoColegiado = co.nIdPaciente AND me.iIdEspecialidad = es.iIdEspecialidad AND me.iIdEmpresa = em.iIdEmpresa AND me.nNoColegiado = '" + Convert.ToInt32(Txt_colegiadoM.Text) + "'", conexion.ObtenerConexion());
                 DataTable datos = new DataTable();
                 sda.Fill(datos);
 
@@ -285,6 +285,7 @@ namespace LaboratorioClinico
                 Txt_apellidoMedicoM.Text = datos.Rows[0][1].ToString();
                 Txt_telefonoMedicoM.Text = datos.Rows[0][2].ToString();
                 Txt_direMedicoM.Text = datos.Rows[0][3].ToString();
+                Txt_correoMedicoM.Text = datos.Rows[0][3].ToString();
                 Cmb_especialidadMedicoM.Text = datos.Rows[0][4].ToString();
                 Cmb_empresaMedicoM.Text = datos.Rows[0][5].ToString();
                 Dtp_nacimiento.Text = datos.Rows[0][6].ToString();

@@ -128,35 +128,30 @@
             this.Lbl_refierep = new System.Windows.Forms.Label();
             this.Tbc_empleado = new System.Windows.Forms.TabControl();
             this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.Btn_editarEmpm = new System.Windows.Forms.Button();
-            this.tabPage8 = new System.Windows.Forms.TabPage();
-            this.Tbc_examen = new System.Windows.Forms.TabControl();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.label14 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.Gpb_datosEmpm = new System.Windows.Forms.GroupBox();
-            this.Lbl_dpiEmpm = new System.Windows.Forms.Label();
+            this.Lbl_editarEmpm = new System.Windows.Forms.Label();
+            this.Btn_buscarEmpm = new System.Windows.Forms.Button();
             this.Txt_DPIEmpm = new System.Windows.Forms.TextBox();
+            this.Lbl_dpiEmpm = new System.Windows.Forms.Label();
+            this.Btn_editarEmpm = new System.Windows.Forms.Button();
+            this.Gpb_datosEmpm = new System.Windows.Forms.GroupBox();
+            this.Txt_correoEmpm = new System.Windows.Forms.TextBox();
+            this.Txt_direEmpm = new System.Windows.Forms.TextBox();
+            this.Lbl_sueldoEmpm = new System.Windows.Forms.Label();
+            this.Txt_telEmpm = new System.Windows.Forms.TextBox();
+            this.Txt_sueldoEmpm = new System.Windows.Forms.TextBox();
+            this.Cmb_cargoEmpm = new System.Windows.Forms.ComboBox();
+            this.Lbl_telEmpm = new System.Windows.Forms.Label();
             this.Dtp_fechaEmpm = new System.Windows.Forms.DateTimePicker();
             this.Lbl_nacimientoEmpm = new System.Windows.Forms.Label();
             this.Txt_apellidoEmpm = new System.Windows.Forms.TextBox();
             this.Txt_nombreEmpm = new System.Windows.Forms.TextBox();
             this.Lbl_apellidoEmpm = new System.Windows.Forms.Label();
             this.Lbl_nombreEmpm = new System.Windows.Forms.Label();
-            this.Txt_telEmpm = new System.Windows.Forms.TextBox();
-            this.Lbl_telEmpm = new System.Windows.Forms.Label();
-            this.Txt_direEmpm = new System.Windows.Forms.TextBox();
-            this.Lbl_correoEmpm = new System.Windows.Forms.Label();
-            this.Txt_correoEmpm = new System.Windows.Forms.TextBox();
-            this.Lbl_direEmpm = new System.Windows.Forms.Label();
-            this.Cmb_cargoEmpm = new System.Windows.Forms.ComboBox();
             this.Lbl_cargoEmpm = new System.Windows.Forms.Label();
-            this.Lbl_sueldoEmpm = new System.Windows.Forms.Label();
-            this.Txt_sueldoEmpm = new System.Windows.Forms.TextBox();
-            this.Btn_buscarEmpm = new System.Windows.Forms.Button();
+            this.Lbl_direEmpm = new System.Windows.Forms.Label();
+            this.Lbl_correoEmpm = new System.Windows.Forms.Label();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.Lbl_eliminarEmpe = new System.Windows.Forms.Label();
             this.Btn_buscarEmpe = new System.Windows.Forms.Button();
             this.Txt_dpiEmpe = new System.Windows.Forms.TextBox();
             this.Lbl_DPIEmpe = new System.Windows.Forms.Label();
@@ -178,8 +173,15 @@
             this.Lbl_cargoEmpe = new System.Windows.Forms.Label();
             this.Lbl_direEmpe = new System.Windows.Forms.Label();
             this.Lbl_correoEmpe = new System.Windows.Forms.Label();
-            this.Lbl_editarEmpm = new System.Windows.Forms.Label();
-            this.Lbl_eliminarEmpe = new System.Windows.Forms.Label();
+            this.Tbc_examen = new System.Windows.Forms.TabControl();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.label14 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
+            this.Txt_correoMedicoM = new System.Windows.Forms.TextBox();
+            this.Lbl_correoMedicoM = new System.Windows.Forms.Label();
             this.Gpb_mantenimiento.SuspendLayout();
             this.Tbc_medicos.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -194,12 +196,12 @@
             this.Pnl_eliminarP.SuspendLayout();
             this.Tbc_empleado.SuspendLayout();
             this.tabPage7.SuspendLayout();
+            this.Gpb_datosEmpm.SuspendLayout();
             this.tabPage8.SuspendLayout();
+            this.Gpb_datosEmpe.SuspendLayout();
             this.Tbc_examen.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.tabPage6.SuspendLayout();
-            this.Gpb_datosEmpm.SuspendLayout();
-            this.Gpb_datosEmpe.SuspendLayout();
             this.SuspendLayout();
             // 
             // Lbl_tabla
@@ -320,6 +322,7 @@
             // 
             // Gpb_datos
             // 
+            this.Gpb_datos.Controls.Add(this.Txt_correoMedicoM);
             this.Gpb_datos.Controls.Add(this.Cmb_especialidadMedicoM);
             this.Gpb_datos.Controls.Add(this.Cmb_empresaMedicoM);
             this.Gpb_datos.Controls.Add(this.Txt_telefonoMedicoM);
@@ -334,6 +337,7 @@
             this.Gpb_datos.Controls.Add(this.Lbl_especialidadm);
             this.Gpb_datos.Controls.Add(this.Lbl_direccionm);
             this.Gpb_datos.Controls.Add(this.Lbl_nacimiento);
+            this.Gpb_datos.Controls.Add(this.Lbl_correoMedicoM);
             this.Gpb_datos.Font = new System.Drawing.Font("Perpetua", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Gpb_datos.ForeColor = System.Drawing.Color.DarkKhaki;
             this.Gpb_datos.Location = new System.Drawing.Point(45, 74);
@@ -351,9 +355,9 @@
             this.Cmb_especialidadMedicoM.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cmb_especialidadMedicoM.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Cmb_especialidadMedicoM.FormattingEnabled = true;
-            this.Cmb_especialidadMedicoM.Location = new System.Drawing.Point(17, 138);
+            this.Cmb_especialidadMedicoM.Location = new System.Drawing.Point(17, 183);
             this.Cmb_especialidadMedicoM.Name = "Cmb_especialidadMedicoM";
-            this.Cmb_especialidadMedicoM.Size = new System.Drawing.Size(197, 25);
+            this.Cmb_especialidadMedicoM.Size = new System.Drawing.Size(192, 25);
             this.Cmb_especialidadMedicoM.TabIndex = 121;
             // 
             // Cmb_empresaMedicoM
@@ -361,9 +365,9 @@
             this.Cmb_empresaMedicoM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Cmb_empresaMedicoM.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cmb_empresaMedicoM.FormattingEnabled = true;
-            this.Cmb_empresaMedicoM.Location = new System.Drawing.Point(225, 138);
+            this.Cmb_empresaMedicoM.Location = new System.Drawing.Point(225, 183);
             this.Cmb_empresaMedicoM.Name = "Cmb_empresaMedicoM";
-            this.Cmb_empresaMedicoM.Size = new System.Drawing.Size(197, 25);
+            this.Cmb_empresaMedicoM.Size = new System.Drawing.Size(193, 25);
             this.Cmb_empresaMedicoM.TabIndex = 120;
             // 
             // Txt_telefonoMedicoM
@@ -404,7 +408,7 @@
             this.Lbl_empresam.AutoSize = true;
             this.Lbl_empresam.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_empresam.ForeColor = System.Drawing.Color.Black;
-            this.Lbl_empresam.Location = new System.Drawing.Point(222, 123);
+            this.Lbl_empresam.Location = new System.Drawing.Point(222, 168);
             this.Lbl_empresam.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_empresam.Name = "Lbl_empresam";
             this.Lbl_empresam.Size = new System.Drawing.Size(59, 18);
@@ -479,7 +483,7 @@
             this.Lbl_especialidadm.AutoSize = true;
             this.Lbl_especialidadm.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_especialidadm.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Lbl_especialidadm.Location = new System.Drawing.Point(17, 123);
+            this.Lbl_especialidadm.Location = new System.Drawing.Point(17, 168);
             this.Lbl_especialidadm.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_especialidadm.Name = "Lbl_especialidadm";
             this.Lbl_especialidadm.Size = new System.Drawing.Size(79, 24);
@@ -619,7 +623,7 @@
             this.Cmb_especialidadMedicoE.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cmb_especialidadMedicoE.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Cmb_especialidadMedicoE.FormattingEnabled = true;
-            this.Cmb_especialidadMedicoE.Location = new System.Drawing.Point(19, 138);
+            this.Cmb_especialidadMedicoE.Location = new System.Drawing.Point(15, 139);
             this.Cmb_especialidadMedicoE.Name = "Cmb_especialidadMedicoE";
             this.Cmb_especialidadMedicoE.Size = new System.Drawing.Size(197, 25);
             this.Cmb_especialidadMedicoE.TabIndex = 122;
@@ -629,7 +633,7 @@
             this.Cmb_empresaMedicoE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Cmb_empresaMedicoE.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cmb_empresaMedicoE.FormattingEnabled = true;
-            this.Cmb_empresaMedicoE.Location = new System.Drawing.Point(222, 138);
+            this.Cmb_empresaMedicoE.Location = new System.Drawing.Point(227, 139);
             this.Cmb_empresaMedicoE.Name = "Cmb_empresaMedicoE";
             this.Cmb_empresaMedicoE.Size = new System.Drawing.Size(197, 25);
             this.Cmb_empresaMedicoE.TabIndex = 121;
@@ -1440,6 +1444,53 @@
             this.tabPage7.Text = "Modificar";
             this.tabPage7.UseVisualStyleBackColor = true;
             // 
+            // Lbl_editarEmpm
+            // 
+            this.Lbl_editarEmpm.AutoSize = true;
+            this.Lbl_editarEmpm.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_editarEmpm.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.Lbl_editarEmpm.Location = new System.Drawing.Point(569, 62);
+            this.Lbl_editarEmpm.Name = "Lbl_editarEmpm";
+            this.Lbl_editarEmpm.Size = new System.Drawing.Size(98, 17);
+            this.Lbl_editarEmpm.TabIndex = 131;
+            this.Lbl_editarEmpm.Text = "Editar Empleado";
+            // 
+            // Btn_buscarEmpm
+            // 
+            this.Btn_buscarEmpm.BackColor = System.Drawing.Color.Transparent;
+            this.Btn_buscarEmpm.BackgroundImage = global::LaboratorioClinico.Properties.Resources.file;
+            this.Btn_buscarEmpm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_buscarEmpm.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_buscarEmpm.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Btn_buscarEmpm.Location = new System.Drawing.Point(200, 16);
+            this.Btn_buscarEmpm.Name = "Btn_buscarEmpm";
+            this.Btn_buscarEmpm.Size = new System.Drawing.Size(53, 44);
+            this.Btn_buscarEmpm.TabIndex = 126;
+            this.Btn_buscarEmpm.UseVisualStyleBackColor = false;
+            // 
+            // Txt_DPIEmpm
+            // 
+            this.Txt_DPIEmpm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_DPIEmpm.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_DPIEmpm.ForeColor = System.Drawing.Color.Black;
+            this.Txt_DPIEmpm.Location = new System.Drawing.Point(64, 26);
+            this.Txt_DPIEmpm.Margin = new System.Windows.Forms.Padding(4);
+            this.Txt_DPIEmpm.Name = "Txt_DPIEmpm";
+            this.Txt_DPIEmpm.Size = new System.Drawing.Size(127, 26);
+            this.Txt_DPIEmpm.TabIndex = 28;
+            // 
+            // Lbl_dpiEmpm
+            // 
+            this.Lbl_dpiEmpm.AutoSize = true;
+            this.Lbl_dpiEmpm.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_dpiEmpm.ForeColor = System.Drawing.Color.Black;
+            this.Lbl_dpiEmpm.Location = new System.Drawing.Point(28, 29);
+            this.Lbl_dpiEmpm.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_dpiEmpm.Name = "Lbl_dpiEmpm";
+            this.Lbl_dpiEmpm.Size = new System.Drawing.Size(31, 18);
+            this.Lbl_dpiEmpm.TabIndex = 29;
+            this.Lbl_dpiEmpm.Text = "DPI";
+            // 
             // Btn_editarEmpm
             // 
             this.Btn_editarEmpm.BackgroundImage = global::LaboratorioClinico.Properties.Resources.archivo;
@@ -1449,104 +1500,6 @@
             this.Btn_editarEmpm.Size = new System.Drawing.Size(53, 44);
             this.Btn_editarEmpm.TabIndex = 95;
             this.Btn_editarEmpm.UseVisualStyleBackColor = true;
-            // 
-            // tabPage8
-            // 
-            this.tabPage8.Controls.Add(this.Lbl_eliminarEmpe);
-            this.tabPage8.Controls.Add(this.Btn_buscarEmpe);
-            this.tabPage8.Controls.Add(this.Txt_dpiEmpe);
-            this.tabPage8.Controls.Add(this.Lbl_DPIEmpe);
-            this.tabPage8.Controls.Add(this.Btn_eliminarEmpe);
-            this.tabPage8.Controls.Add(this.Gpb_datosEmpe);
-            this.tabPage8.Location = new System.Drawing.Point(4, 31);
-            this.tabPage8.Margin = new System.Windows.Forms.Padding(4);
-            this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage8.Size = new System.Drawing.Size(700, 316);
-            this.tabPage8.TabIndex = 1;
-            this.tabPage8.Text = "Eliminar";
-            this.tabPage8.UseVisualStyleBackColor = true;
-            // 
-            // Tbc_examen
-            // 
-            this.Tbc_examen.Controls.Add(this.tabPage5);
-            this.Tbc_examen.Controls.Add(this.tabPage6);
-            this.Tbc_examen.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tbc_examen.Location = new System.Drawing.Point(16, 86);
-            this.Tbc_examen.Margin = new System.Windows.Forms.Padding(4);
-            this.Tbc_examen.Name = "Tbc_examen";
-            this.Tbc_examen.SelectedIndex = 0;
-            this.Tbc_examen.Size = new System.Drawing.Size(708, 354);
-            this.Tbc_examen.TabIndex = 3;
-            this.Tbc_examen.Visible = false;
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.Controls.Add(this.button3);
-            this.tabPage5.Controls.Add(this.label2);
-            this.tabPage5.Location = new System.Drawing.Point(4, 31);
-            this.tabPage5.Margin = new System.Windows.Forms.Padding(4);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage5.Size = new System.Drawing.Size(700, 319);
-            this.tabPage5.TabIndex = 0;
-            this.tabPage5.Text = "Modificar";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.BackgroundImage = global::LaboratorioClinico.Properties.Resources.archivo;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.Location = new System.Drawing.Point(609, 17);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(53, 44);
-            this.button3.TabIndex = 95;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label2.Location = new System.Drawing.Point(594, 60);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 17);
-            this.label2.TabIndex = 117;
-            this.label2.Text = "Editar Exámen";
-            // 
-            // tabPage6
-            // 
-            this.tabPage6.Controls.Add(this.label14);
-            this.tabPage6.Controls.Add(this.button5);
-            this.tabPage6.Location = new System.Drawing.Point(4, 31);
-            this.tabPage6.Margin = new System.Windows.Forms.Padding(4);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage6.Size = new System.Drawing.Size(700, 319);
-            this.tabPage6.TabIndex = 1;
-            this.tabPage6.Text = "Eliminar";
-            this.tabPage6.UseVisualStyleBackColor = true;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label14.Location = new System.Drawing.Point(582, 67);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(101, 17);
-            this.label14.TabIndex = 94;
-            this.label14.Text = "Eliminar Exámen";
-            // 
-            // button5
-            // 
-            this.button5.BackgroundImage = global::LaboratorioClinico.Properties.Resources.archivo__1_;
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button5.Location = new System.Drawing.Point(609, 20);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(53, 44);
-            this.button5.TabIndex = 72;
-            this.button5.UseVisualStyleBackColor = true;
             // 
             // Gpb_datosEmpm
             // 
@@ -1575,28 +1528,83 @@
             this.Gpb_datosEmpm.TabStop = false;
             this.Gpb_datosEmpm.Text = "Datos Personales";
             // 
-            // Lbl_dpiEmpm
+            // Txt_correoEmpm
             // 
-            this.Lbl_dpiEmpm.AutoSize = true;
-            this.Lbl_dpiEmpm.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_dpiEmpm.ForeColor = System.Drawing.Color.Black;
-            this.Lbl_dpiEmpm.Location = new System.Drawing.Point(28, 29);
-            this.Lbl_dpiEmpm.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Lbl_dpiEmpm.Name = "Lbl_dpiEmpm";
-            this.Lbl_dpiEmpm.Size = new System.Drawing.Size(31, 18);
-            this.Lbl_dpiEmpm.TabIndex = 29;
-            this.Lbl_dpiEmpm.Text = "DPI";
+            this.Txt_correoEmpm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_correoEmpm.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_correoEmpm.ForeColor = System.Drawing.Color.Black;
+            this.Txt_correoEmpm.Location = new System.Drawing.Point(341, 147);
+            this.Txt_correoEmpm.Margin = new System.Windows.Forms.Padding(4);
+            this.Txt_correoEmpm.Name = "Txt_correoEmpm";
+            this.Txt_correoEmpm.Size = new System.Drawing.Size(230, 26);
+            this.Txt_correoEmpm.TabIndex = 17;
             // 
-            // Txt_DPIEmpm
+            // Txt_direEmpm
             // 
-            this.Txt_DPIEmpm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.Txt_DPIEmpm.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_DPIEmpm.ForeColor = System.Drawing.Color.Black;
-            this.Txt_DPIEmpm.Location = new System.Drawing.Point(64, 26);
-            this.Txt_DPIEmpm.Margin = new System.Windows.Forms.Padding(4);
-            this.Txt_DPIEmpm.Name = "Txt_DPIEmpm";
-            this.Txt_DPIEmpm.Size = new System.Drawing.Size(127, 26);
-            this.Txt_DPIEmpm.TabIndex = 28;
+            this.Txt_direEmpm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_direEmpm.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_direEmpm.ForeColor = System.Drawing.Color.Black;
+            this.Txt_direEmpm.Location = new System.Drawing.Point(40, 147);
+            this.Txt_direEmpm.Margin = new System.Windows.Forms.Padding(4);
+            this.Txt_direEmpm.Name = "Txt_direEmpm";
+            this.Txt_direEmpm.Size = new System.Drawing.Size(291, 26);
+            this.Txt_direEmpm.TabIndex = 24;
+            // 
+            // Lbl_sueldoEmpm
+            // 
+            this.Lbl_sueldoEmpm.AutoSize = true;
+            this.Lbl_sueldoEmpm.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_sueldoEmpm.ForeColor = System.Drawing.Color.Black;
+            this.Lbl_sueldoEmpm.Location = new System.Drawing.Point(365, 87);
+            this.Lbl_sueldoEmpm.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_sueldoEmpm.Name = "Lbl_sueldoEmpm";
+            this.Lbl_sueldoEmpm.Size = new System.Drawing.Size(47, 18);
+            this.Lbl_sueldoEmpm.TabIndex = 21;
+            this.Lbl_sueldoEmpm.Text = "Sueldo";
+            // 
+            // Txt_telEmpm
+            // 
+            this.Txt_telEmpm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_telEmpm.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_telEmpm.ForeColor = System.Drawing.Color.Black;
+            this.Txt_telEmpm.Location = new System.Drawing.Point(251, 105);
+            this.Txt_telEmpm.Margin = new System.Windows.Forms.Padding(4);
+            this.Txt_telEmpm.Name = "Txt_telEmpm";
+            this.Txt_telEmpm.Size = new System.Drawing.Size(112, 26);
+            this.Txt_telEmpm.TabIndex = 16;
+            // 
+            // Txt_sueldoEmpm
+            // 
+            this.Txt_sueldoEmpm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_sueldoEmpm.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_sueldoEmpm.ForeColor = System.Drawing.Color.Black;
+            this.Txt_sueldoEmpm.Location = new System.Drawing.Point(374, 105);
+            this.Txt_sueldoEmpm.Margin = new System.Windows.Forms.Padding(4);
+            this.Txt_sueldoEmpm.Name = "Txt_sueldoEmpm";
+            this.Txt_sueldoEmpm.Size = new System.Drawing.Size(104, 26);
+            this.Txt_sueldoEmpm.TabIndex = 22;
+            // 
+            // Cmb_cargoEmpm
+            // 
+            this.Cmb_cargoEmpm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Cmb_cargoEmpm.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cmb_cargoEmpm.FormattingEnabled = true;
+            this.Cmb_cargoEmpm.Location = new System.Drawing.Point(40, 105);
+            this.Cmb_cargoEmpm.Name = "Cmb_cargoEmpm";
+            this.Cmb_cargoEmpm.Size = new System.Drawing.Size(197, 26);
+            this.Cmb_cargoEmpm.TabIndex = 20;
+            // 
+            // Lbl_telEmpm
+            // 
+            this.Lbl_telEmpm.AutoSize = true;
+            this.Lbl_telEmpm.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_telEmpm.ForeColor = System.Drawing.Color.Black;
+            this.Lbl_telEmpm.Location = new System.Drawing.Point(239, 89);
+            this.Lbl_telEmpm.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_telEmpm.Name = "Lbl_telEmpm";
+            this.Lbl_telEmpm.Size = new System.Drawing.Size(60, 18);
+            this.Lbl_telEmpm.TabIndex = 11;
+            this.Lbl_telEmpm.Text = "Telefono";
             // 
             // Dtp_fechaEmpm
             // 
@@ -1666,62 +1674,17 @@
             this.Lbl_nombreEmpm.TabIndex = 10;
             this.Lbl_nombreEmpm.Text = "Nombre";
             // 
-            // Txt_telEmpm
+            // Lbl_cargoEmpm
             // 
-            this.Txt_telEmpm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.Txt_telEmpm.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_telEmpm.ForeColor = System.Drawing.Color.Black;
-            this.Txt_telEmpm.Location = new System.Drawing.Point(251, 105);
-            this.Txt_telEmpm.Margin = new System.Windows.Forms.Padding(4);
-            this.Txt_telEmpm.Name = "Txt_telEmpm";
-            this.Txt_telEmpm.Size = new System.Drawing.Size(112, 26);
-            this.Txt_telEmpm.TabIndex = 16;
-            // 
-            // Lbl_telEmpm
-            // 
-            this.Lbl_telEmpm.AutoSize = true;
-            this.Lbl_telEmpm.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_telEmpm.ForeColor = System.Drawing.Color.Black;
-            this.Lbl_telEmpm.Location = new System.Drawing.Point(239, 89);
-            this.Lbl_telEmpm.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Lbl_telEmpm.Name = "Lbl_telEmpm";
-            this.Lbl_telEmpm.Size = new System.Drawing.Size(60, 18);
-            this.Lbl_telEmpm.TabIndex = 11;
-            this.Lbl_telEmpm.Text = "Telefono";
-            // 
-            // Txt_direEmpm
-            // 
-            this.Txt_direEmpm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.Txt_direEmpm.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_direEmpm.ForeColor = System.Drawing.Color.Black;
-            this.Txt_direEmpm.Location = new System.Drawing.Point(40, 147);
-            this.Txt_direEmpm.Margin = new System.Windows.Forms.Padding(4);
-            this.Txt_direEmpm.Name = "Txt_direEmpm";
-            this.Txt_direEmpm.Size = new System.Drawing.Size(291, 26);
-            this.Txt_direEmpm.TabIndex = 24;
-            // 
-            // Lbl_correoEmpm
-            // 
-            this.Lbl_correoEmpm.AutoSize = true;
-            this.Lbl_correoEmpm.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_correoEmpm.ForeColor = System.Drawing.Color.Black;
-            this.Lbl_correoEmpm.Location = new System.Drawing.Point(326, 132);
-            this.Lbl_correoEmpm.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Lbl_correoEmpm.Name = "Lbl_correoEmpm";
-            this.Lbl_correoEmpm.Size = new System.Drawing.Size(51, 18);
-            this.Lbl_correoEmpm.TabIndex = 23;
-            this.Lbl_correoEmpm.Text = "Correo";
-            // 
-            // Txt_correoEmpm
-            // 
-            this.Txt_correoEmpm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.Txt_correoEmpm.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_correoEmpm.ForeColor = System.Drawing.Color.Black;
-            this.Txt_correoEmpm.Location = new System.Drawing.Point(341, 147);
-            this.Txt_correoEmpm.Margin = new System.Windows.Forms.Padding(4);
-            this.Txt_correoEmpm.Name = "Txt_correoEmpm";
-            this.Txt_correoEmpm.Size = new System.Drawing.Size(230, 26);
-            this.Txt_correoEmpm.TabIndex = 17;
+            this.Lbl_cargoEmpm.AutoSize = true;
+            this.Lbl_cargoEmpm.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_cargoEmpm.ForeColor = System.Drawing.Color.Black;
+            this.Lbl_cargoEmpm.Location = new System.Drawing.Point(28, 87);
+            this.Lbl_cargoEmpm.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_cargoEmpm.Name = "Lbl_cargoEmpm";
+            this.Lbl_cargoEmpm.Size = new System.Drawing.Size(44, 18);
+            this.Lbl_cargoEmpm.TabIndex = 18;
+            this.Lbl_cargoEmpm.Text = "Cargo";
             // 
             // Lbl_direEmpm
             // 
@@ -1735,63 +1698,45 @@
             this.Lbl_direEmpm.TabIndex = 12;
             this.Lbl_direEmpm.Text = "Dirección";
             // 
-            // Cmb_cargoEmpm
+            // Lbl_correoEmpm
             // 
-            this.Cmb_cargoEmpm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.Cmb_cargoEmpm.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cmb_cargoEmpm.FormattingEnabled = true;
-            this.Cmb_cargoEmpm.Location = new System.Drawing.Point(40, 105);
-            this.Cmb_cargoEmpm.Name = "Cmb_cargoEmpm";
-            this.Cmb_cargoEmpm.Size = new System.Drawing.Size(197, 26);
-            this.Cmb_cargoEmpm.TabIndex = 20;
+            this.Lbl_correoEmpm.AutoSize = true;
+            this.Lbl_correoEmpm.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_correoEmpm.ForeColor = System.Drawing.Color.Black;
+            this.Lbl_correoEmpm.Location = new System.Drawing.Point(326, 132);
+            this.Lbl_correoEmpm.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_correoEmpm.Name = "Lbl_correoEmpm";
+            this.Lbl_correoEmpm.Size = new System.Drawing.Size(51, 18);
+            this.Lbl_correoEmpm.TabIndex = 23;
+            this.Lbl_correoEmpm.Text = "Correo";
             // 
-            // Lbl_cargoEmpm
+            // tabPage8
             // 
-            this.Lbl_cargoEmpm.AutoSize = true;
-            this.Lbl_cargoEmpm.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_cargoEmpm.ForeColor = System.Drawing.Color.Black;
-            this.Lbl_cargoEmpm.Location = new System.Drawing.Point(28, 87);
-            this.Lbl_cargoEmpm.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Lbl_cargoEmpm.Name = "Lbl_cargoEmpm";
-            this.Lbl_cargoEmpm.Size = new System.Drawing.Size(44, 18);
-            this.Lbl_cargoEmpm.TabIndex = 18;
-            this.Lbl_cargoEmpm.Text = "Cargo";
+            this.tabPage8.Controls.Add(this.Lbl_eliminarEmpe);
+            this.tabPage8.Controls.Add(this.Btn_buscarEmpe);
+            this.tabPage8.Controls.Add(this.Txt_dpiEmpe);
+            this.tabPage8.Controls.Add(this.Lbl_DPIEmpe);
+            this.tabPage8.Controls.Add(this.Btn_eliminarEmpe);
+            this.tabPage8.Controls.Add(this.Gpb_datosEmpe);
+            this.tabPage8.Location = new System.Drawing.Point(4, 31);
+            this.tabPage8.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage8.Size = new System.Drawing.Size(700, 316);
+            this.tabPage8.TabIndex = 1;
+            this.tabPage8.Text = "Eliminar";
+            this.tabPage8.UseVisualStyleBackColor = true;
             // 
-            // Lbl_sueldoEmpm
+            // Lbl_eliminarEmpe
             // 
-            this.Lbl_sueldoEmpm.AutoSize = true;
-            this.Lbl_sueldoEmpm.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_sueldoEmpm.ForeColor = System.Drawing.Color.Black;
-            this.Lbl_sueldoEmpm.Location = new System.Drawing.Point(365, 87);
-            this.Lbl_sueldoEmpm.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Lbl_sueldoEmpm.Name = "Lbl_sueldoEmpm";
-            this.Lbl_sueldoEmpm.Size = new System.Drawing.Size(47, 18);
-            this.Lbl_sueldoEmpm.TabIndex = 21;
-            this.Lbl_sueldoEmpm.Text = "Sueldo";
-            // 
-            // Txt_sueldoEmpm
-            // 
-            this.Txt_sueldoEmpm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.Txt_sueldoEmpm.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_sueldoEmpm.ForeColor = System.Drawing.Color.Black;
-            this.Txt_sueldoEmpm.Location = new System.Drawing.Point(374, 105);
-            this.Txt_sueldoEmpm.Margin = new System.Windows.Forms.Padding(4);
-            this.Txt_sueldoEmpm.Name = "Txt_sueldoEmpm";
-            this.Txt_sueldoEmpm.Size = new System.Drawing.Size(104, 26);
-            this.Txt_sueldoEmpm.TabIndex = 22;
-            // 
-            // Btn_buscarEmpm
-            // 
-            this.Btn_buscarEmpm.BackColor = System.Drawing.Color.Transparent;
-            this.Btn_buscarEmpm.BackgroundImage = global::LaboratorioClinico.Properties.Resources.file;
-            this.Btn_buscarEmpm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Btn_buscarEmpm.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_buscarEmpm.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Btn_buscarEmpm.Location = new System.Drawing.Point(200, 16);
-            this.Btn_buscarEmpm.Name = "Btn_buscarEmpm";
-            this.Btn_buscarEmpm.Size = new System.Drawing.Size(53, 44);
-            this.Btn_buscarEmpm.TabIndex = 126;
-            this.Btn_buscarEmpm.UseVisualStyleBackColor = false;
+            this.Lbl_eliminarEmpe.AutoSize = true;
+            this.Lbl_eliminarEmpe.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_eliminarEmpe.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.Lbl_eliminarEmpe.Location = new System.Drawing.Point(561, 62);
+            this.Lbl_eliminarEmpe.Name = "Lbl_eliminarEmpe";
+            this.Lbl_eliminarEmpe.Size = new System.Drawing.Size(112, 17);
+            this.Lbl_eliminarEmpe.TabIndex = 133;
+            this.Lbl_eliminarEmpe.Text = "Eliminar Empleado";
             // 
             // Btn_buscarEmpe
             // 
@@ -2049,27 +1994,110 @@
             this.Lbl_correoEmpe.TabIndex = 23;
             this.Lbl_correoEmpe.Text = "Correo";
             // 
-            // Lbl_editarEmpm
+            // Tbc_examen
             // 
-            this.Lbl_editarEmpm.AutoSize = true;
-            this.Lbl_editarEmpm.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_editarEmpm.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.Lbl_editarEmpm.Location = new System.Drawing.Point(569, 62);
-            this.Lbl_editarEmpm.Name = "Lbl_editarEmpm";
-            this.Lbl_editarEmpm.Size = new System.Drawing.Size(98, 17);
-            this.Lbl_editarEmpm.TabIndex = 131;
-            this.Lbl_editarEmpm.Text = "Editar Empleado";
+            this.Tbc_examen.Controls.Add(this.tabPage5);
+            this.Tbc_examen.Controls.Add(this.tabPage6);
+            this.Tbc_examen.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tbc_examen.Location = new System.Drawing.Point(16, 86);
+            this.Tbc_examen.Margin = new System.Windows.Forms.Padding(4);
+            this.Tbc_examen.Name = "Tbc_examen";
+            this.Tbc_examen.SelectedIndex = 0;
+            this.Tbc_examen.Size = new System.Drawing.Size(708, 354);
+            this.Tbc_examen.TabIndex = 3;
+            this.Tbc_examen.Visible = false;
             // 
-            // Lbl_eliminarEmpe
+            // tabPage5
             // 
-            this.Lbl_eliminarEmpe.AutoSize = true;
-            this.Lbl_eliminarEmpe.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_eliminarEmpe.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.Lbl_eliminarEmpe.Location = new System.Drawing.Point(561, 62);
-            this.Lbl_eliminarEmpe.Name = "Lbl_eliminarEmpe";
-            this.Lbl_eliminarEmpe.Size = new System.Drawing.Size(112, 17);
-            this.Lbl_eliminarEmpe.TabIndex = 133;
-            this.Lbl_eliminarEmpe.Text = "Eliminar Empleado";
+            this.tabPage5.Controls.Add(this.button3);
+            this.tabPage5.Controls.Add(this.label2);
+            this.tabPage5.Location = new System.Drawing.Point(4, 31);
+            this.tabPage5.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage5.Size = new System.Drawing.Size(700, 319);
+            this.tabPage5.TabIndex = 0;
+            this.tabPage5.Text = "Modificar";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.BackgroundImage = global::LaboratorioClinico.Properties.Resources.archivo;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.Location = new System.Drawing.Point(609, 17);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(53, 44);
+            this.button3.TabIndex = 95;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label2.Location = new System.Drawing.Point(594, 60);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(87, 17);
+            this.label2.TabIndex = 117;
+            this.label2.Text = "Editar Exámen";
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Controls.Add(this.label14);
+            this.tabPage6.Controls.Add(this.button5);
+            this.tabPage6.Location = new System.Drawing.Point(4, 31);
+            this.tabPage6.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage6.Size = new System.Drawing.Size(700, 319);
+            this.tabPage6.TabIndex = 1;
+            this.tabPage6.Text = "Eliminar";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label14.Location = new System.Drawing.Point(582, 67);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(101, 17);
+            this.label14.TabIndex = 94;
+            this.label14.Text = "Eliminar Exámen";
+            // 
+            // button5
+            // 
+            this.button5.BackgroundImage = global::LaboratorioClinico.Properties.Resources.archivo__1_;
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button5.Location = new System.Drawing.Point(609, 20);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(53, 44);
+            this.button5.TabIndex = 72;
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // Txt_correoMedicoM
+            // 
+            this.Txt_correoMedicoM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_correoMedicoM.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_correoMedicoM.ForeColor = System.Drawing.Color.Black;
+            this.Txt_correoMedicoM.Location = new System.Drawing.Point(17, 138);
+            this.Txt_correoMedicoM.Margin = new System.Windows.Forms.Padding(4);
+            this.Txt_correoMedicoM.Name = "Txt_correoMedicoM";
+            this.Txt_correoMedicoM.Size = new System.Drawing.Size(401, 25);
+            this.Txt_correoMedicoM.TabIndex = 122;
+            // 
+            // Lbl_correoMedicoM
+            // 
+            this.Lbl_correoMedicoM.AutoSize = true;
+            this.Lbl_correoMedicoM.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_correoMedicoM.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Lbl_correoMedicoM.Location = new System.Drawing.Point(20, 122);
+            this.Lbl_correoMedicoM.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_correoMedicoM.Name = "Lbl_correoMedicoM";
+            this.Lbl_correoMedicoM.Size = new System.Drawing.Size(49, 24);
+            this.Lbl_correoMedicoM.TabIndex = 123;
+            this.Lbl_correoMedicoM.Text = "Correo";
+            this.Lbl_correoMedicoM.UseCompatibleTextRendering = true;
             // 
             // Mantenimiento
             // 
@@ -2110,17 +2138,17 @@
             this.Tbc_empleado.ResumeLayout(false);
             this.tabPage7.ResumeLayout(false);
             this.tabPage7.PerformLayout();
+            this.Gpb_datosEmpm.ResumeLayout(false);
+            this.Gpb_datosEmpm.PerformLayout();
             this.tabPage8.ResumeLayout(false);
             this.tabPage8.PerformLayout();
+            this.Gpb_datosEmpe.ResumeLayout(false);
+            this.Gpb_datosEmpe.PerformLayout();
             this.Tbc_examen.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
-            this.Gpb_datosEmpm.ResumeLayout(false);
-            this.Gpb_datosEmpm.PerformLayout();
-            this.Gpb_datosEmpe.ResumeLayout(false);
-            this.Gpb_datosEmpe.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2278,5 +2306,7 @@
         private System.Windows.Forms.Label Lbl_correoEmpe;
         private System.Windows.Forms.Label Lbl_editarEmpm;
         private System.Windows.Forms.Label Lbl_eliminarEmpe;
+        private System.Windows.Forms.TextBox Txt_correoMedicoM;
+        private System.Windows.Forms.Label Lbl_correoMedicoM;
     }
 }
