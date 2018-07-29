@@ -416,7 +416,7 @@ namespace LaboratorioClinico
 
         private void Cmb_tipoSangre_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            Txt_tipoSangre.Text = Cmb_tipoSangre.Text;
         }
 
         private void Btn_eliminarm_Click(object sender, EventArgs e) //Eliminar médico asociado.........................
@@ -508,7 +508,7 @@ namespace LaboratorioClinico
             Lbl_editarSangrep.Visible = true;
             Btn_editarSangrep.Visible = false;
             prollenarSangre();
-            Txt_tipoSangre.Text = Convert.ToString(Cmb_tipoSangre.SelectedItem);
+            
         }
     }
 }
