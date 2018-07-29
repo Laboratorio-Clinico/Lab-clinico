@@ -71,11 +71,13 @@ namespace LaboratorioClinico
         }
         private void Btn_guardarp_Click(object sender, EventArgs e)
         {
-            OdbcCommand cm;
-            cm = new OdbcCommand("InsertaPrueba", conexion.ObtenerConexion());
-            cm.CommandType = CommandType.StoredProcedure;
+        ///    OdbcCommand cm;
+            OdbcCommand cm = new OdbcCommand("{CALL InsertaPrueba (nIdPaciente,sNit,sNombre,sDireccion,sGenero,dFechaDeNacimiento,dFechaDeEmision,iIdTipoDeSangre,sAlergia,sRefiere,correo,telefono)}", conexion.ObtenerConexion());
+///            cm = new OdbcCommand("InsertaPrueba", conexion.ObtenerConexion());
+           cm.CommandType = CommandType.StoredProcedure;
 
             int idPaciente = Convert.ToInt32(Cmb_sangrep.SelectedValue);
+           /// int idPaciente = int.Parse(Cmb_sangrep.ToString());
            
 
             cm.Parameters.AddWithValue("@nIdPaciente", this.Txt_expedientep.Text);

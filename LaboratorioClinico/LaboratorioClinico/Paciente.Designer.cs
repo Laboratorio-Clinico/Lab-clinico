@@ -372,7 +372,7 @@
             // Dtp_fechap
             // 
             this.Dtp_fechap.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.Dtp_fechap.CustomFormat = "yyyy-mm-dd";
+            this.Dtp_fechap.CustomFormat = "yyyy-MM-dd";
             this.Dtp_fechap.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.Dtp_fechap.Location = new System.Drawing.Point(26, 25);
             this.Dtp_fechap.Name = "Dtp_fechap";
@@ -382,7 +382,7 @@
             // 
             // Dtp_fecha2p
             // 
-            this.Dtp_fecha2p.CustomFormat = "yyyy-mm-dd";
+            this.Dtp_fecha2p.CustomFormat = "yyyy-MM-dd";
             this.Dtp_fecha2p.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Dtp_fecha2p.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.Dtp_fecha2p.Location = new System.Drawing.Point(36, 45);
