@@ -506,7 +506,7 @@ namespace LaboratorioClinico
         {
             Cmb_tipoSangre.Visible = true;
             Lbl_editarSangrep.Visible = true;
-            Btn_editarSangrep.Visible = true;
+            Btn_editarSangrep.Visible = false;
             prollenarSangre();
             Txt_tipoSangre.Text = Cmb_tipoSangre.SelectedText;
         }
