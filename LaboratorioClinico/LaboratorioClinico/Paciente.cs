@@ -144,5 +144,10 @@ namespace LaboratorioClinico
         {
 
         }
+
+        private void Cmb_sangrep_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
