@@ -257,8 +257,8 @@
             // 
             // Tbc_medicos
             // 
-            this.Tbc_medicos.Controls.Add(this.tabPage3);
             this.Tbc_medicos.Controls.Add(this.tabPage4);
+            this.Tbc_medicos.Controls.Add(this.tabPage3);
             this.Tbc_medicos.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tbc_medicos.Location = new System.Drawing.Point(16, 85);
             this.Tbc_medicos.Margin = new System.Windows.Forms.Padding(4);

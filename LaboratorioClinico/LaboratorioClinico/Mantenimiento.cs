@@ -16,6 +16,9 @@ namespace LaboratorioClinico
         public Mantenimiento()
         {
             InitializeComponent();
+            prollenarSangre();
+            prollenarEspecialidad();
+            prollenarEmpresa();
         }
 
         private void Mantenimiento_Load(object sender, EventArgs e)
@@ -25,6 +28,80 @@ namespace LaboratorioClinico
             Tbc_examen.Visible = false;
             Tbc_empleado.Visible = false;
             Picb_fondo.Visible = true;
+        }
+
+        public void prollenarSangre() //LLENAR EL COMBOBOX DE TIPO DE SANGRE EN "PACIENTE", POR MEDIO DE UNA CONSULTA
+        {
+            try
+            {
+                Cmb_tipoSangre.Items.Clear();
+                Cmb_tipoSangre.Text = "Seleccione el tipo de sangre";
+                conexion.ObtenerConexion();
+                OdbcCommand comando = new OdbcCommand("Select iIdTipoDeSangre,sGrupoSanguineo from tipoDeSangre", conexion.ObtenerConexion());
+                OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
+                DataTable tabla = new DataTable();
+
+                adaptador.Fill(tabla);
+                Cmb_tipoSangre.ValueMember = "iIdTipoDeSangre";
+                Cmb_tipoSangre.DisplayMember = "sGrupoSanguineo";
+                Cmb_tipoSangre.DataSource = tabla;
+
+                conexion.ObtenerConexion().Close();
+
+            }
+            catch (OdbcException error) { MessageBox.Show(error.Message); }
+        }
+        
+        public void prollenarEspecialidad() //LLENAR EL COMBOBOX DE ESPECIALIDAD EN "MÉDICO", POR MEDIO DE UNA CONSULTA
+        {
+            try
+            {
+                conexion.ObtenerConexion();
+                OdbcCommand comando = new OdbcCommand("Select iIdEspecialidad,sEspecialidad from Especialidad", conexion.ObtenerConexion());
+                OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
+                DataTable tabla = new DataTable();
+
+                adaptador.Fill(tabla);
+
+                DataRow fila = tabla.NewRow();
+                fila["sEspecialidad"] = "Seleccione la especialidad";
+                tabla.Rows.InsertAt(fila, 0);
+
+                Cmb_especialidadMedicoM.ValueMember = "iIdEspecialidad";
+                Cmb_especialidadMedicoM.DisplayMember = "sEspecialidad";
+                Cmb_especialidadMedicoM.DataSource = tabla;
+
+                conexion.ObtenerConexion().Close();
+
+            }
+            catch (Exception error) { MessageBox.Show(error.Message); }
+        }
+
+        public void prollenarEmpresa()  //LLENAR EL COMBOBOX DE EMPRESA EN "MÉDICO", POR MEDIO DE UNA CONSULTA
+        {
+            try
+            {
+                Cmb_empresaMedicoM.Items.Clear();
+                Cmb_empresaMedicoM.Text = "Seleccione una empresa";
+                conexion.ObtenerConexion();
+                OdbcCommand comando = new OdbcCommand("Select iIdEmpresa,sEmpresa from Empresa", conexion.ObtenerConexion());
+                OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
+                DataTable tabla = new DataTable();
+
+                adaptador.Fill(tabla);
+                DataRow fila = tabla.NewRow();
+                fila["sEmpresa"] = "Seleccione una Empresa";
+                tabla.Rows.InsertAt(fila, 0);
+
+                Cmb_empresaMedicoM.ValueMember = "iIdEmpresa";
+                Cmb_empresaMedicoM.DisplayMember = "sEmpresa";
+                Cmb_empresaMedicoM.DataSource = tabla;
+
+                conexion.ObtenerConexion().Close();
+            }
+            catch (Exception error) { MessageBox.Show(error.Message); }
+
+
         }
 
         private void Gpb_mantenimiento_Enter(object sender, EventArgs e)
