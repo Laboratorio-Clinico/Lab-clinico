@@ -23,6 +23,7 @@ namespace LaboratorioClinico
             Tbc_paciente.Visible = false;
             Tbc_medicos.Visible = false;
             Tbc_examen.Visible = false;
+            Tbc_empleado.Visible = false;
             Picb_fondo.Visible = true;
         }
 
@@ -236,6 +237,7 @@ namespace LaboratorioClinico
                 Tbc_paciente.Visible = true;
                 Tbc_medicos.Visible = false;
                 Tbc_examen.Visible = false;
+                Tbc_empleado.Visible = false;
                 Picb_fondo.Visible = false;
 
             }
@@ -244,6 +246,7 @@ namespace LaboratorioClinico
                 Tbc_paciente.Visible = false;
                 Tbc_medicos.Visible = true;
                 Tbc_examen.Visible = false;
+                Tbc_empleado.Visible = false;
                 Picb_fondo.Visible = false;
 
             }
@@ -252,10 +255,18 @@ namespace LaboratorioClinico
                 Tbc_paciente.Visible = false;
                 Tbc_medicos.Visible = false;
                 Tbc_examen.Visible = true;
+                Tbc_empleado.Visible = false;
+                Picb_fondo.Visible = false;
+            }
+            else if (Cmb_tabla.SelectedItem.ToString() == "Empleado")
+            {
+                Tbc_paciente.Visible = false;
+                Tbc_medicos.Visible = false;
+                Tbc_examen.Visible = false;
+                Tbc_empleado.Visible = true;
                 Picb_fondo.Visible = false;
             }
         }
-
         private void Txt_direMedicoM_TextChanged(object sender, EventArgs e)
         {
 
@@ -291,7 +302,7 @@ namespace LaboratorioClinico
 
         }
 
-        private void Btn_editarm_Click(object sender, EventArgs e)
+        private void Btn_editarm_Click(object sender, EventArgs e) //Modificar médico asociado...................................
         {
             try
             {
@@ -310,7 +321,7 @@ namespace LaboratorioClinico
                 cmd.ExecuteNonQuery();
                 cmd.CommandText = "update empresa set sEmpresa = '" + Cmb_empresaMedicoM.Text + "' where nNoColegiado = '" + Convert.ToInt32(Txt_colegiadoM.Text) + "'";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "update medicosasociados set dFechaDeNacimiento = '" + Dtp_nacimiento.Text + "' where nNoColegiado = '" + Convert.ToInt32(Txt_colegiadoM.Text) + "'";
+                cmd.CommandText = "update medicosasociados set dFechaDeNacimiento = '" + Dtp_nacimiento.Value + "' where nNoColegiado = '" + Convert.ToInt32(Txt_colegiadoM.Text) + "'";
                 cmd.ExecuteNonQuery();
 
                 MessageBox.Show("Médico Modificado Exitosamente.", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
@@ -346,11 +357,11 @@ namespace LaboratorioClinico
                 OdbcCommand cmd = conexion.ObtenerConexion().CreateCommand();
 
                 //Eliminar los datos del medico de 3 tablas que guardan su información
-                cmd.CommandText = "delete from medicosasociados where nIdPaciente = '" + Convert.ToInt32(Txt_expedientep.Text) + "'";
+                cmd.CommandText = "delete from medicosasociados where nIdPaciente = '" + Convert.ToInt32(Txt_colegiadoE.Text) + "'";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "delete from telefono where nIdPaciente = '" + Convert.ToInt32(Txt_expedientep.Text) + "'";
+                cmd.CommandText = "delete from telefono where nIdPaciente = '" + Convert.ToInt32(Txt_colegiadoE.Text) + "'";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "delete from correo where nIdPaciente = '" + Convert.ToInt32(Txt_expedientep.Text) + "'";
+                cmd.CommandText = "delete from correo where nIdPaciente = '" + Convert.ToInt32(Txt_colegiadoE.Text) + "'";
                 cmd.ExecuteNonQuery();
 
                 MessageBox.Show("Médico Eliminado Exitosamente", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
@@ -379,6 +390,36 @@ namespace LaboratorioClinico
             {
                 MessageBox.Show("No se pudo eliminar el registro.", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
             }
+        }
+
+        private void Btn_buscarE_Click(object sender, EventArgs e) // Buscar médico para eliminarlo............................
+        {
+            try
+            {
+                Gpb_datosEliminar.Visible = true;
+                OdbcDataAdapter sda = new OdbcDataAdapter("SELECT me.sNombre, me.sApellido, te.itelefono, me.sDireccion, es.sEspecialidad, em.sEmpresa, me.dFechaDeNacimiento FROM medicosasociados me, telefono te, especialidad es, empresa em WHERE me.nNoColegiado = te.nIdPaciente AND me.iIdEspecialidad = es.iIdEspecialidad AND me.iIdEmpresa = em.iIdEmpresa AND me.nNoColegiado = '" + Convert.ToInt32(Txt_colegiadoE.Text) + "'", conexion.ObtenerConexion());
+                DataTable datos = new DataTable();
+                sda.Fill(datos);
+
+                Txt_nombreMedicoE.Text = datos.Rows[0][0].ToString();
+                Txt_apellidoMedicoE.Text = datos.Rows[0][1].ToString();
+                Txt_telMedicoE.Text = datos.Rows[0][2].ToString();
+                Txt_direMedicoE.Text = datos.Rows[0][3].ToString();
+                Cmb_especialidadMedicoE.Text = datos.Rows[0][4].ToString();
+                Cmb_empresaMedicoE.Text = datos.Rows[0][5].ToString();
+                Dtp_nacimientoE.Text = datos.Rows[0][6].ToString();
+
+                Txt_colegiadoE.Enabled = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Intente de nuevo.", "Error en la búsqueda.", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void label22_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
