@@ -16,9 +16,6 @@ namespace LaboratorioClinico
         public Mantenimiento()
         {
             InitializeComponent();
-            prollenarSangre();
-            prollenarEspecialidad();
-            prollenarEmpresa();
         }
 
         private void Mantenimiento_Load(object sender, EventArgs e)
@@ -230,7 +227,7 @@ namespace LaboratorioClinico
                 Txt_nombre.Clear();
                 Txt_telefono.Clear();
                 Txt_nit.Clear();
-                Cmb_tipoSangre.ResetText(); Cmb_tipoSangre.Items.Clear();
+                prollenarSangre();
                 Txt_direccion.Clear();
                 Txt_correo.Clear();
                 Txt_alergias.Clear();
