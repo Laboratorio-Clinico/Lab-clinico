@@ -20,23 +20,24 @@ namespace LaboratorioClinico
             proLlenareCargo();
         }
 
-        public void Pro_guardarDatos(int iCargo) {
+        public void Pro_guardarDatos() {
             try {
 
-                OdbcCommand cm;
-                cm = new OdbcCommand("Pro_ingresoNuevoEmpleado", conexion.ObtenerConexion());
-                cm.CommandType = CommandType.StoredProcedure;
-                cm.Parameters.AddWithValue("@iIdEmpleado", this.Txt_DPIEmpleado.Text);
-                cm.Parameters.AddWithValue("@sNombre", this.Txt_nombre.Text);
-                cm.Parameters.AddWithValue("@sApellido", this.Txt_apellido.Text);
-                cm.Parameters.AddWithValue("@nTelefono", this.Txt_telefono.Text);
-                cm.Parameters.AddWithValue("@sDireccion", this.Txt_direccion.Text);
-                cm.Parameters.AddWithValue("@sCorreo", this.Txt_correo.Text);
-                cm.Parameters.AddWithValue("@iIdCargo", iCargo);
-                cm.Parameters.AddWithValue("@fSueldo", this.Txt_sueldo.Text);
-                cm.Parameters.AddWithValue("@dFechaDeNacimiento", this.Dtp_fechaNacimiento.Text);
-                cm.Parameters.AddWithValue("@iIdUsuario", this.Txt_DPIEmpleado.Text);
-                cm.ExecuteNonQuery();
+                int iCargo = Convert.ToInt32(Cmb_cargo.SelectedValue);
+
+                OdbcCommand comando = new OdbcCommand("Pro_ingresoNuevoEmpleado", conexion.ObtenerConexion());
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("@iIdEmpleado", this.Txt_DPIEmpleado.Text);
+                comando.Parameters.AddWithValue("@sNombre", this.Txt_nombre.Text);
+                comando.Parameters.AddWithValue("@sApellido", this.Txt_apellido.Text);
+                comando.Parameters.AddWithValue("@nTelefono", this.Txt_telefono.Text);
+                comando.Parameters.AddWithValue("@sDireccion", this.Txt_direccion.Text);
+                comando.Parameters.AddWithValue("@sCorreo", this.Txt_correo.Text);
+                comando.Parameters.AddWithValue("@iIdCargo", iCargo);
+                comando.Parameters.AddWithValue("@fSueldo", this.Txt_sueldo.Text);
+                comando.Parameters.AddWithValue("@dFechaDeNacimiento", this.Dtp_fechaNacimiento.Text);
+                comando.Parameters.AddWithValue("@iIdUsuario", this.Txt_DPIEmpleado.Text);
+                comando.ExecuteNonQuery();
                 MessageBox.Show("Datos insertados correctamente");
                 
             } catch(OdbcException error) { MessageBox.Show(error.Message); }
@@ -89,8 +90,8 @@ namespace LaboratorioClinico
 
         private void Btn_guardar_Click(object sender, EventArgs e)
         {
-            int iCargo = Convert.ToInt32(Cmb_cargo.SelectedValue);
-            Pro_guardarDatos(iCargo);
+           
+            Pro_guardarDatos();
 
         }
 

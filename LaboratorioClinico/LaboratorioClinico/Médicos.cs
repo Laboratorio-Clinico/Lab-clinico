@@ -50,7 +50,7 @@ namespace LaboratorioClinico
                 cm.Parameters.AddWithValue("@sCorreo", this.Txt_Correo.Text);
                 cm.Parameters.AddWithValue("@iIdEspecialidad", iEspecialidades);
                 cm.Parameters.AddWithValue("@iIdEmpresa", iEmpresas);
-                cm.Parameters.AddWithValue("@dFechaDeNacimiento", this.Dtp_fechaNacimiento.Value);
+                cm.Parameters.AddWithValue("@dFechaDeNacimiento", this.Dtp_fechaNacimiento.Text);
 
                 cm.ExecuteNonQuery();
                 MessageBox.Show("Datos agregados exitosamente");
