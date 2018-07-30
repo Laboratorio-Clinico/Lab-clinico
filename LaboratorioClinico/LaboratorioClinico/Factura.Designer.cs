@@ -65,6 +65,7 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Gpb_datosf = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.Dtp_fechaf = new System.Windows.Forms.DateTimePicker();
             this.Txt_direccionf = new System.Windows.Forms.TextBox();
             this.Lbl_fechaf = new System.Windows.Forms.Label();
@@ -473,6 +474,7 @@
             // Gpb_datosf
             // 
             this.Gpb_datosf.BackColor = System.Drawing.Color.Transparent;
+            this.Gpb_datosf.Controls.Add(this.button2);
             this.Gpb_datosf.Controls.Add(this.Dtp_fechaf);
             this.Gpb_datosf.Controls.Add(this.Txt_direccionf);
             this.Gpb_datosf.Controls.Add(this.Lbl_fechaf);
@@ -491,12 +493,24 @@
             this.Gpb_datosf.TabStop = false;
             this.Gpb_datosf.Text = "Datos Paciente";
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.BackgroundImage = global::LaboratorioClinico.Properties.Resources.lupa;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.Location = new System.Drawing.Point(250, 58);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(41, 38);
+            this.button2.TabIndex = 51;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
             // Dtp_fechaf
             // 
             this.Dtp_fechaf.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Dtp_fechaf.CustomFormat = "dd-MM-yy";
             this.Dtp_fechaf.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Dtp_fechaf.Location = new System.Drawing.Point(575, 28);
+            this.Dtp_fechaf.Location = new System.Drawing.Point(596, 28);
             this.Dtp_fechaf.Name = "Dtp_fechaf";
             this.Dtp_fechaf.Size = new System.Drawing.Size(104, 29);
             this.Dtp_fechaf.TabIndex = 22;
@@ -504,7 +518,7 @@
             // Txt_direccionf
             // 
             this.Txt_direccionf.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_direccionf.Location = new System.Drawing.Point(360, 69);
+            this.Txt_direccionf.Location = new System.Drawing.Point(382, 69);
             this.Txt_direccionf.Multiline = true;
             this.Txt_direccionf.Name = "Txt_direccionf";
             this.Txt_direccionf.Size = new System.Drawing.Size(319, 20);
@@ -516,7 +530,7 @@
             this.Lbl_fechaf.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_fechaf.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_fechaf.ForeColor = System.Drawing.Color.White;
-            this.Lbl_fechaf.Location = new System.Drawing.Point(518, 31);
+            this.Lbl_fechaf.Location = new System.Drawing.Point(539, 31);
             this.Lbl_fechaf.Name = "Lbl_fechaf";
             this.Lbl_fechaf.Size = new System.Drawing.Size(48, 18);
             this.Lbl_fechaf.TabIndex = 10;
@@ -538,7 +552,7 @@
             this.Lbl_direccionf.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_direccionf.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_direccionf.ForeColor = System.Drawing.Color.White;
-            this.Lbl_direccionf.Location = new System.Drawing.Point(276, 69);
+            this.Lbl_direccionf.Location = new System.Drawing.Point(298, 69);
             this.Lbl_direccionf.Name = "Lbl_direccionf";
             this.Lbl_direccionf.Size = new System.Drawing.Size(78, 18);
             this.Lbl_direccionf.TabIndex = 7;
@@ -686,5 +700,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.Button button2;
     }
 }
