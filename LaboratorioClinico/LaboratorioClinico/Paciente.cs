@@ -53,7 +53,7 @@ namespace LaboratorioClinico
                 Cmb_sangrep.Items.Clear();
                 Cmb_sangrep.Text = "Seleccione el tipo de sangre";
                 conexion.ObtenerConexion();
-                OdbcCommand comando = new OdbcCommand("Select iIdTipoDeSangre,sGrupoSanguineo from tipoDeSangre", conexion.ObtenerConexion());
+                OdbcCommand comando = new OdbcCommand("Select iIdTipoDeSangre,sGrupoSanguineo from tipodesangre", conexion.ObtenerConexion());
                 OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
                 DataTable tabla = new DataTable();
 
