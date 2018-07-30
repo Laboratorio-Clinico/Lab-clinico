@@ -81,6 +81,25 @@ namespace LaboratorioClinico
              */
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+              
+                OdbcDataAdapter sda = new OdbcDataAdapter("SELECT pa.sNombre, pa.sDireccion FROM paciente pa WHERE pa.sNit = '" + Convert.ToInt32(Txt_nitf.Text) + "'", conexion.ObtenerConexion());
+                DataTable datos = new DataTable();
+                sda.Fill(datos);
+
+                Txt_nombref.Text = datos.Rows[0][0].ToString();
+                Txt_direccionf.Text = datos.Rows[0][1].ToString();
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Intente de nuevo.", "Paciente no registrado.", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
+            }
+        }
+
         private void label12_Click(object sender, EventArgs e)
         {
 
