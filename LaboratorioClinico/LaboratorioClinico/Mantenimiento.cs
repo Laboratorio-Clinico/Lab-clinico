@@ -350,11 +350,13 @@ namespace LaboratorioClinico
                 Txt_telefonoMedicoM.Text = datos.Rows[0][2].ToString();
                 Txt_direMedicoM.Text = datos.Rows[0][3].ToString();
                 Txt_correoMedicoM.Text = datos.Rows[0][4].ToString();
-                Cmb_especialidadMedicoM.Text = datos.Rows[0][5].ToString();
-                Cmb_empresaMedicoM.Text = datos.Rows[0][6].ToString();
+                Txt_especialidadMedicoM.Text = datos.Rows[0][5].ToString();
+                Txt_empresaMedicoM.Text = datos.Rows[0][6].ToString();
                 Dtp_nacimiento.Text = datos.Rows[0][7].ToString();
 
-                //Txt_colegiadoM.Enabled = false;
+                Txt_especialidadMedicoM.Enabled = false;
+                Txt_empresaMedicoM.Enabled = false;
+
             }
             catch (Exception ex)
             {
@@ -384,9 +386,9 @@ namespace LaboratorioClinico
                 cmd.ExecuteNonQuery();
                 cmd.CommandText = "update correo set sCorreo = '" + Txt_correoMedicoM.Text + "' where nIdPaciente = '" + Convert.ToInt32(Txt_colegiadoM.Text) + "'";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "update medicosasociados set iIdEspecialidad = '" + Cmb_especialidadMedicoM.Text + "' where nNoColegiado = '" + Convert.ToInt32(Cmb_especialidadMedicoM.SelectedValue) + "'";
+                cmd.CommandText = "update medicosasociados set iIdEspecialidad = '" + Txt_especialidadMedicoM.Text + "' where nNoColegiado = '" + Convert.ToInt32(Cmb_especialidadMedicoM.SelectedValue) + "'";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "update medicosasociados set iIdEmpresa = '" + Cmb_empresaMedicoM.Text + "' where nNoColegiado = '" + Convert.ToInt32(Cmb_empresaMedicoM.SelectedValue) + "'";
+                cmd.CommandText = "update medicosasociados set iIdEmpresa = '" + Txt_empresaMedicoM.Text + "' where nNoColegiado = '" + Convert.ToInt32(Cmb_empresaMedicoM.SelectedValue) + "'";
                 cmd.ExecuteNonQuery();
                 cmd.CommandText = "update medicosasociados set dFechaDeNacimiento = '" + Dtp_nacimiento.Text + "' where nNoColegiado = '" + Convert.ToInt32(Txt_colegiadoM.Text) + "'";
                 cmd.ExecuteNonQuery();
@@ -403,8 +405,7 @@ namespace LaboratorioClinico
                 Txt_telefonoMedicoM.Clear();
                 Txt_direMedicoM.Clear();
                 Txt_correoMedicoM.Clear();
-                Cmb_especialidadMedicoM.Refresh();
-                Cmb_empresaMedicoM.Refresh();
+                Txt_empresaMedicoM.Clear();
                 Dtp_nacimiento.Refresh();
 
             }
@@ -494,7 +495,7 @@ namespace LaboratorioClinico
 
         private void Cmb_especialidadMedicoM_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            Txt_especialidadMedicoM.Text = Cmb_especialidadMedicoM.Text;
         }
 
         private void Cmb_empresaMedicoM_SelectedIndexChanged(object sender, EventArgs e)
@@ -508,7 +509,22 @@ namespace LaboratorioClinico
             Lbl_editarSangrep.Visible = true;
             Btn_editarSangrep.Visible = false;
             prollenarSangre();
-            
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Cmb_especialidadMedicoM.Visible = true;
+            Lbl_edEspecialidadEspm.Visible = true;
+            Btn_edEspeMedicoM.Visible = false;
+            prollenarEspecialidad();
+        }
+
+        private void Btn_edEmpreMedicoM_Click(object sender, EventArgs e)
+        {
+            Cmb_empresaMedicoM.Visible = true;
+            Lbl_edEmpresaEmpm.Visible = true;
+            Btn_edEmpreMedicoM.Visible = true;
+            prollenarEmpresa();
         }
     }
 }
