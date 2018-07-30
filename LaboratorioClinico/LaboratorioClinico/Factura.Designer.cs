@@ -131,7 +131,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Silver;
-            this.label5.Location = new System.Drawing.Point(637, 60);
+            this.label5.Location = new System.Drawing.Point(637, 58);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(99, 18);
             this.label5.TabIndex = 4;
@@ -484,9 +484,9 @@
             this.Gpb_datosf.Controls.Add(this.textBox2);
             this.Gpb_datosf.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Gpb_datosf.ForeColor = System.Drawing.SystemColors.Info;
-            this.Gpb_datosf.Location = new System.Drawing.Point(12, 109);
+            this.Gpb_datosf.Location = new System.Drawing.Point(12, 107);
             this.Gpb_datosf.Name = "Gpb_datosf";
-            this.Gpb_datosf.Size = new System.Drawing.Size(736, 101);
+            this.Gpb_datosf.Size = new System.Drawing.Size(736, 103);
             this.Gpb_datosf.TabIndex = 2;
             this.Gpb_datosf.TabStop = false;
             this.Gpb_datosf.Text = "Datos Paciente";
@@ -588,11 +588,11 @@
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.DarkRed;
-            this.label10.Location = new System.Drawing.Point(627, 102);
+            this.label10.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Red;
+            this.label10.Location = new System.Drawing.Point(627, 99);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(76, 18);
+            this.label10.Size = new System.Drawing.Size(90, 22);
             this.label10.TabIndex = 5;
             this.label10.Text = "Serie \"A\"";
             // 
@@ -600,11 +600,11 @@
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.DarkRed;
-            this.label11.Location = new System.Drawing.Point(703, 101);
+            this.label11.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Red;
+            this.label11.Location = new System.Drawing.Point(703, 98);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(36, 18);
+            this.label11.Size = new System.Drawing.Size(46, 22);
             this.label11.TabIndex = 6;
             this.label11.Text = "0001";
             // 
