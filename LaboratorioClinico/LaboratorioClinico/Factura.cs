@@ -46,8 +46,38 @@ namespace LaboratorioClinico
         int acumulado = 0, cont = 0;
         private void button1_Click(object sender, EventArgs e)
         {
-            
-             
+            cont++;
+
+            OdbcDataAdapter sda = new OdbcDataAdapter("select count(*) from examenes where iIdExamen= '" + Txt_codigof.Text + "'", conexion.ObtenerConexion());
+            DataTable datos = new DataTable();
+            sda.Fill(datos);
+
+            OdbcDataAdapter sda2 = new OdbcDataAdapter("select ex.iIdExamen, ex.sDescripcion,ex.fPrecio from examenes ex where ex.iIdExamen = '" + Txt_codigof.Text + "'", conexion.ObtenerConexion());
+            DataTable datos2 = new DataTable();
+            sda2.Fill(datos2);
+
+            int total; int descuento;
+            int p, c;
+            c = Convert.ToInt32(Txt_cantidadf.Text);
+            p = Convert.ToInt32(datos2.Rows[0][2].ToString());
+            total = c * p;
+            descuento = 1;
+            acumulado = acumulado + total;
+
+            if (datos.Rows[0][0].ToString() == "1")
+            {
+                Dgb_facturaf.Rows.Add(datos2.Rows[0][0].ToString(), Txt_cantidadf.Text, Txt_descripcion.Text, datos2.Rows[0][2].ToString(), descuento.ToString(), total.ToString());
+                Txt_totalff.Text = acumulado.ToString();
+                /*
+                cmd.CommandText = "insert into detalle values('" + cont + "','" + Convert.ToInt32(orden.Text) + "','" + datos2.Rows[0][0] + "','" + Convert.ToInt32(cantidadP.Text.ToString()) + "')";
+                cmd.ExecuteNonQuery();
+		*/
+            }
+            else
+            {
+                MessageBox.Show("No existe producto");
+            }
+
         }
 
         private void button2_Click(object sender, EventArgs e)
