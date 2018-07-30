@@ -35,7 +35,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.Gpb_datosp = new System.Windows.Forms.GroupBox();
             this.Cmb_sangrep = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.Lbl_correop = new System.Windows.Forms.Label();
             this.Txt_correoP = new System.Windows.Forms.TextBox();
             this.Lbl_tipoSangrep = new System.Windows.Forms.Label();
@@ -107,7 +106,6 @@
             // 
             this.Gpb_datosp.BackColor = System.Drawing.Color.Transparent;
             this.Gpb_datosp.Controls.Add(this.Cmb_sangrep);
-            this.Gpb_datosp.Controls.Add(this.label1);
             this.Gpb_datosp.Controls.Add(this.Lbl_correop);
             this.Gpb_datosp.Controls.Add(this.Txt_correoP);
             this.Gpb_datosp.Controls.Add(this.Lbl_tipoSangrep);
@@ -147,17 +145,7 @@
             this.Cmb_sangrep.Name = "Cmb_sangrep";
             this.Cmb_sangrep.Size = new System.Drawing.Size(180, 25);
             this.Cmb_sangrep.TabIndex = 50;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(302, 31);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 18);
-            this.label1.TabIndex = 49;
-            this.label1.Text = "Expediente:";
+            this.Cmb_sangrep.SelectedIndexChanged += new System.EventHandler(this.Cmb_sangrep_SelectedIndexChanged);
             // 
             // Lbl_correop
             // 
@@ -215,13 +203,13 @@
             // Btn_expedientep
             // 
             this.Btn_expedientep.BackColor = System.Drawing.Color.Transparent;
-            this.Btn_expedientep.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Btn_expedientep.BackgroundImage")));
+            this.Btn_expedientep.BackgroundImage = global::LaboratorioClinico.Properties.Resources.historial_medico;
             this.Btn_expedientep.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Btn_expedientep.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_expedientep.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Btn_expedientep.ForeColor = System.Drawing.Color.Transparent;
             this.Btn_expedientep.Location = new System.Drawing.Point(18, 108);
             this.Btn_expedientep.Name = "Btn_expedientep";
-            this.Btn_expedientep.Size = new System.Drawing.Size(53, 44);
+            this.Btn_expedientep.Size = new System.Drawing.Size(82, 77);
             this.Btn_expedientep.TabIndex = 42;
             this.Btn_expedientep.UseVisualStyleBackColor = false;
             // 
@@ -298,9 +286,9 @@
             this.Lbl_expedientep.ForeColor = System.Drawing.Color.White;
             this.Lbl_expedientep.Location = new System.Drawing.Point(15, 53);
             this.Lbl_expedientep.Name = "Lbl_expedientep";
-            this.Lbl_expedientep.Size = new System.Drawing.Size(79, 18);
+            this.Lbl_expedientep.Size = new System.Drawing.Size(36, 18);
             this.Lbl_expedientep.TabIndex = 32;
-            this.Lbl_expedientep.Text = "Expediente:";
+            this.Lbl_expedientep.Text = "DPI:";
             // 
             // Cmb_sexop
             // 
@@ -384,7 +372,7 @@
             // Dtp_fechap
             // 
             this.Dtp_fechap.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.Dtp_fechap.CustomFormat = "yyyy-mm-dd";
+            this.Dtp_fechap.CustomFormat = "yyyy-MM-dd";
             this.Dtp_fechap.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.Dtp_fechap.Location = new System.Drawing.Point(26, 25);
             this.Dtp_fechap.Name = "Dtp_fechap";
@@ -394,7 +382,7 @@
             // 
             // Dtp_fecha2p
             // 
-            this.Dtp_fecha2p.CustomFormat = "yyyy-mm-dd";
+            this.Dtp_fecha2p.CustomFormat = "yyyy-MM-dd";
             this.Dtp_fecha2p.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Dtp_fecha2p.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.Dtp_fecha2p.Location = new System.Drawing.Point(36, 45);
@@ -488,7 +476,6 @@
         private System.Windows.Forms.Label Lbl_correop;
         private System.Windows.Forms.TextBox Txt_correoP;
         private System.Windows.Forms.ErrorProvider Er_validar;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox Cmb_sangrep;
     }
 }

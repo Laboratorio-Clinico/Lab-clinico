@@ -42,7 +42,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\MessagingToolkit.Barcode.dll</HintPath>
     </Reference>
-    <Reference Include="MySql.Data, Version=6.9.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=8.0.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System">
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.dll</HintPath>
     </Reference>
@@ -225,6 +225,7 @@
     <EmbeddedResource Include="Usuario.resx">
       <DependentUpon>Usuario.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Properties\DataSources\Exámen.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -456,6 +457,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\blue-minimalistic-gaussian-b-pics-710306.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancelar %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\archivo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\archivo %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\periodico.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

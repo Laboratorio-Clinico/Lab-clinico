@@ -199,6 +199,7 @@
             this.Cmb_cargo.Name = "Cmb_cargo";
             this.Cmb_cargo.Size = new System.Drawing.Size(197, 26);
             this.Cmb_cargo.TabIndex = 20;
+            this.Cmb_cargo.SelectedIndexChanged += new System.EventHandler(this.Cmb_cargo_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -308,6 +309,7 @@
             this.Dtp_fechaNacimiento.Name = "Dtp_fechaNacimiento";
             this.Dtp_fechaNacimiento.Size = new System.Drawing.Size(120, 26);
             this.Dtp_fechaNacimiento.TabIndex = 27;
+            this.Dtp_fechaNacimiento.ValueChanged += new System.EventHandler(this.Dtp_fechaNacimiento_ValueChanged);
             // 
             // Lbl_fechaDeNacimiento
             // 
@@ -376,9 +378,9 @@
             this.ClientSize = new System.Drawing.Size(766, 489);
             this.Controls.Add(this.Gpb_datosEmpleado);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Empleado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Empleado";
             this.Gpb_datosEmpleado.ResumeLayout(false);
             this.Gpb_datosEmpleado.PerformLayout();
             this.Gpb_contacto.ResumeLayout(false);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(cotizar));
             this.Gpb_cotizacion = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Txt_Cantidad = new System.Windows.Forms.TextBox();
@@ -56,6 +57,8 @@
             this.Txt_Total = new System.Windows.Forms.TextBox();
             this.Dgv_verDatos = new System.Windows.Forms.DataGridView();
             this.label9 = new System.Windows.Forms.Label();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.Gpb_cotizacion.SuspendLayout();
             this.Gpb_botones.SuspendLayout();
             this.Gpb_verDatos.SuspendLayout();
@@ -388,6 +391,16 @@
             this.label9.Size = new System.Drawing.Size(0, 33);
             this.label9.TabIndex = 34;
             // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
             // cotizar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -442,5 +455,7 @@
         private System.Windows.Forms.Label Lbl_examen;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox Txt_Cantidad;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
     }
 }

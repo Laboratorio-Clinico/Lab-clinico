@@ -166,6 +166,12 @@
   <data name="bloqueado1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bloqueado1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="archivo (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\archivo (1)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="archivo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\archivo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ajuste-personal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ajuste-personal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -256,6 +262,9 @@
   <data name="impresora" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\impresora1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="blue-minimalistic-gaussian-b-pics-710306" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blue-minimalistic-gaussian-b-pics-710306.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="examen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\examen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -310,6 +319,9 @@
   <data name="salida" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\salida.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="cancelar (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cancelar (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="laboratorio3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\laboratorio3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -334,7 +346,7 @@
   <data name="eliminar_user" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\eliminar_user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="blue-minimalistic-gaussian-b-pics-710306" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\blue-minimalistic-gaussian-b-pics-710306.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="periodico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\periodico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

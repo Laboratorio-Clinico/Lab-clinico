@@ -63,15 +63,15 @@ namespace LaboratorioClinico
             if (lbl_tipo.Text == "Usuario")
             {
                 Tm_admin.Enabled = false;
-                Tm_crearCodigo.Enabled = false;
+               
             }else if (lbl_tipo.Text == "UsuarioL")
             {
                 Tm_admin.Enabled = false;
                 Tm_Control.Enabled = false;
                 Tm_Erequerimientos.Enabled = false;
-                Tm_Eresultados.Enabled = false;
+                Tm_cotizaciones.Enabled = false;
                 Tm_Enuevo.Enabled = false;
-                
+                Tm_crearCodigo.Enabled = false;
             }
         }
 
@@ -264,6 +264,13 @@ namespace LaboratorioClinico
         {
             this.Hide();
             new ConfigUser().ShowDialog();
+            this.Show();
+        }
+
+        private void Tm_reportes_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Reportes().ShowDialog();
             this.Show();
         }
     }

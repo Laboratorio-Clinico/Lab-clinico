@@ -243,6 +243,16 @@ namespace LaboratorioClinico.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cancelar__1_ {
+            get {
+                object obj = ResourceManager.GetObject("cancelar (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap codigo_de_seguridad {
             get {
                 object obj = ResourceManager.GetObject("codigo-de-seguridad", resourceCulture);
@@ -646,6 +656,16 @@ namespace LaboratorioClinico.Properties {
         internal static System.Drawing.Bitmap nuevo_usuario1 {
             get {
                 object obj = ResourceManager.GetObject("nuevo-usuario1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap periodico {
+            get {
+                object obj = ResourceManager.GetObject("periodico", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

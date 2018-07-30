@@ -1,4 +1,6 @@
-﻿using MySql.Data.MySqlClient;
+﻿
+using System.Data.Odbc;
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -54,14 +56,15 @@ namespace LaboratorioClinico
             BorrarMsj();
             Validar();
             string user = Txt_usuario.Text;
+            //string pass = EncripContra(Txt_contraseña.Text);
             string pass = Txt_contraseña.Text;
             string tipo;
 
 
             try
             {
-                MySqlDataAdapter sda = new MySqlDataAdapter("select count(*) from usuario where sUsuario='" + user + "'and sContrasena ='" + pass + "'", conexion.ObtenerConexion());
-                MySqlCommand cmd = conexion.ObtenerConexion().CreateCommand();
+                OdbcDataAdapter sda = new OdbcDataAdapter("select count(*) from usuario where sUsuario='" + user + "'and sContrasena ='" + pass + "'", conexion.ObtenerConexion());
+                OdbcCommand cmd = conexion.ObtenerConexion().CreateCommand();
                 DataTable datos = new DataTable();
                 sda.Fill(datos);
 
@@ -70,13 +73,14 @@ namespace LaboratorioClinico
                     MessageBox.Show("Usuario Correcto", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
-                    
-                   
+                    conexion.ObtenerConexion().Close();
+
+
                     try
                     {
                         //--------------------------Saber privilegio--------------------------------
-                        MySqlDataAdapter sda2 = new MySqlDataAdapter("select sPrivilegio from privilegio where iIdPrivilegio = (select iIdPrivilegio from usuario where sUsuario = '" + Txt_usuario.Text + "')", conexion.ObtenerConexion());
-                        MySqlCommand cmd2 = conexion.ObtenerConexion().CreateCommand();
+                        OdbcDataAdapter sda2 = new OdbcDataAdapter("select sPrivilegio from privilegio where iIdPrivilegio = (select iIdPrivilegio from usuario where sUsuario = '" + Txt_usuario.Text + "')", conexion.ObtenerConexion());
+                        OdbcCommand cmd2 = conexion.ObtenerConexion().CreateCommand();
                         DataTable datos2 = new DataTable();
                         sda2.Fill(datos2);
 
@@ -91,9 +95,9 @@ namespace LaboratorioClinico
                         Txt_contraseña.ResetText();
                         this.Show();
                     }
-                    catch(Exception ex)
+                    catch(OdbcException error)
                     {
-                        MessageBox.Show("Error");
+                        MessageBox.Show(error.Message);
                     }
                    
 
@@ -165,7 +169,7 @@ namespace LaboratorioClinico
             if (Txt_usuario.Text == "")
             {
                 Txt_usuario.Text = "Usuario";
-                Txt_usuario.ForeColor = Color.MidnightBlue;
+                Txt_usuario.ForeColor = Color.CornflowerBlue;
             }
         }
 
@@ -184,7 +188,7 @@ namespace LaboratorioClinico
             if (Txt_contraseña.Text == "")
             {
                 Txt_contraseña.Text = "Contraseña";
-                Txt_contraseña.ForeColor = Color.MidnightBlue;
+                Txt_contraseña.ForeColor = Color.CornflowerBlue;
                 Txt_contraseña.PasswordChar = ' ';
             }
         }
@@ -194,6 +198,9 @@ namespace LaboratorioClinico
 
         }
 
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

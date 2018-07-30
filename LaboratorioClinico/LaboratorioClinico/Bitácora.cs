@@ -1,4 +1,4 @@
-﻿using MySql.Data.MySqlClient;
+﻿using System.Data.Odbc;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,7 +23,7 @@ namespace LaboratorioClinico
             
             conexion.ObtenerConexion();
             DataTable dtDatos = new DataTable();
-            MySqlDataAdapter tablaData = new MySqlDataAdapter("select *from bitacora", conexion.ObtenerConexion());
+            OdbcDataAdapter tablaData = new OdbcDataAdapter("select *from bitacora", conexion.ObtenerConexion());
             tablaData.Fill(dtDatos);
             Dgv_bitacora.DataSource = dtDatos;
             conexion.ObtenerConexion().Close();
