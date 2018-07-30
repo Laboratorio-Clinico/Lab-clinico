@@ -181,7 +181,7 @@ namespace LaboratorioClinico
                 Txt_refiere.Text = datos.Rows[0][7].ToString();
                 Cmb_sexo.Text = datos.Rows[0][8].ToString();
 
-                Txt_tipoSangre.Enabled = false;
+                //Txt_tipoSangre.Enabled = false;
             }
             catch(Exception ex)
             {
@@ -468,7 +468,7 @@ namespace LaboratorioClinico
             try
             {
                 Gpb_datosEliminar.Visible = true;
-                OdbcDataAdapter sda = new OdbcDataAdapter("SELECT me.sNombre, me.sApellido, te.itelefono, me.sDireccion, es.sEspecialidad, em.sEmpresa, me.dFechaDeNacimiento FROM medicosasociados me, telefono te, especialidad es, empresa em WHERE me.nNoColegiado = te.nIdPaciente AND me.iIdEspecialidad = es.iIdEspecialidad AND me.iIdEmpresa = em.iIdEmpresa AND me.nNoColegiado = '" + Convert.ToInt32(Txt_colegiadoE.Text) + "'", conexion.ObtenerConexion());
+                OdbcDataAdapter sda = new OdbcDataAdapter("SELECT me.sNombre, me.sApellido, te.itelefono, me.sDireccion, co.sCorreo, es.sEspecialidad, em.sEmpresa, me.dFechaDeNacimiento FROM medicosasociados me, telefono te, correo co, especialidad es, empresa em  WHERE me.nNoColegiado = te.nIdPaciente AND me.nNoColegiado = co.nIdPaciente AND me.iIdEspecialidad = es.iIdEspecialidad AND me.iIdEmpresa = em.iIdEmpresa AND me.nNoColegiado = '" + Convert.ToInt32(Txt_colegiadoE.Text) + "'", conexion.ObtenerConexion());
                 DataTable datos = new DataTable();
                 sda.Fill(datos);
 
@@ -480,7 +480,7 @@ namespace LaboratorioClinico
                 Cmb_empresaMedicoE.Text = datos.Rows[0][5].ToString();
                 Dtp_nacimientoE.Text = datos.Rows[0][6].ToString();
 
-                Txt_colegiadoE.Enabled = false;
+                //Txt_colegiadoE.Enabled = false;
             }
             catch (Exception ex)
             {
@@ -525,6 +525,21 @@ namespace LaboratorioClinico
             Lbl_edEmpresaEmpm.Visible = true;
             Btn_edEmpreMedicoM.Visible = true;
             prollenarEmpresa();
+        }
+
+        private void Gpb_datosEmpm_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Btn_buscarEmpe_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Btn_buscarEmpm_Click(object sender, EventArgs e) //BUSCAR EMPLEADO PARA MODIFICARLO.............................................
+        {
+            
         }
     }
 }
