@@ -66,7 +66,7 @@ namespace LaboratorioClinico
                 
                 
                 conexion.ObtenerConexion();
-                OdbcCommand comando = new OdbcCommand("Select iIdCargo,sDescripcion from Cargo", conexion.ObtenerConexion());
+                OdbcCommand comando = new OdbcCommand("Select iIdCargo,sDescripcion from cargo", conexion.ObtenerConexion());
                 OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
                 DataTable tabla = new DataTable();
 
