@@ -73,7 +73,7 @@
             this.Lbl_nombref = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.Lbl_noserie = new System.Windows.Forms.Label();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -615,17 +615,17 @@
             this.label10.TabIndex = 5;
             this.label10.Text = "Serie \"A\"";
             // 
-            // label11
+            // Lbl_noserie
             // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Red;
-            this.label11.Location = new System.Drawing.Point(703, 83);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(46, 22);
-            this.label11.TabIndex = 6;
-            this.label11.Text = "0001";
+            this.Lbl_noserie.AutoSize = true;
+            this.Lbl_noserie.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_noserie.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_noserie.ForeColor = System.Drawing.Color.Red;
+            this.Lbl_noserie.Location = new System.Drawing.Point(703, 83);
+            this.Lbl_noserie.Name = "Lbl_noserie";
+            this.Lbl_noserie.Size = new System.Drawing.Size(46, 22);
+            this.Lbl_noserie.TabIndex = 6;
+            this.Lbl_noserie.Text = "0001";
             // 
             // Column6
             // 
@@ -801,7 +801,7 @@
             this.BackgroundImage = global::LaboratorioClinico.Properties.Resources.FONDOO;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(766, 489);
-            this.Controls.Add(this.label11);
+            this.Controls.Add(this.Lbl_noserie);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.Gpb_datosf);
             this.Controls.Add(this.Gpb_detallef);
@@ -847,7 +847,7 @@
         private System.Windows.Forms.Label Lbl_totalf;
         private System.Windows.Forms.DateTimePicker Dtp_fechaf;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label Lbl_noserie;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button Btn_imprimirf;
