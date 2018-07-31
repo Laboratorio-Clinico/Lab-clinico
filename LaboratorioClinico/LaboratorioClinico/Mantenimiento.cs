@@ -22,7 +22,7 @@ namespace LaboratorioClinico
         {
             Tbc_paciente.Visible = false;
             Tbc_medicos.Visible = false;
-            Tbc_examen.Visible = false;
+            //Tbc_examen.Visible = false;
             Tbc_empleado.Visible = false;
             Picb_fondo.Visible = true;
         }
@@ -84,8 +84,6 @@ namespace LaboratorioClinico
                 conexion.ObtenerConexion().Close();
             }
             catch (Exception error) { MessageBox.Show(error.Message); }
-
-
         }
 
         public void prollenarCargo()  //LLENAR EL COMBOBOX DE CARGO EN "EMPLEADO", POR MEDIO DE UNA CONSULTA
@@ -319,7 +317,7 @@ namespace LaboratorioClinico
             {
                 Tbc_paciente.Visible = true;
                 Tbc_medicos.Visible = false;
-                Tbc_examen.Visible = false;
+                //Tbc_examen.Visible = false;
                 Tbc_empleado.Visible = false;
                 Picb_fondo.Visible = false;
 
@@ -328,7 +326,7 @@ namespace LaboratorioClinico
             {
                 Tbc_paciente.Visible = false;
                 Tbc_medicos.Visible = true;
-                Tbc_examen.Visible = false;
+                //Tbc_examen.Visible = false;
                 Tbc_empleado.Visible = false;
                 Picb_fondo.Visible = false;
 
@@ -337,7 +335,7 @@ namespace LaboratorioClinico
             {
                 Tbc_paciente.Visible = false;
                 Tbc_medicos.Visible = false;
-                Tbc_examen.Visible = true;
+                //Tbc_examen.Visible = true;
                 Tbc_empleado.Visible = false;
                 Picb_fondo.Visible = false;
             }
@@ -345,7 +343,7 @@ namespace LaboratorioClinico
             {
                 Tbc_paciente.Visible = false;
                 Tbc_medicos.Visible = false;
-                Tbc_examen.Visible = false;
+                //Tbc_examen.Visible = false;
                 Tbc_empleado.Visible = true;
                 Picb_fondo.Visible = false;
             }
@@ -573,7 +571,39 @@ namespace LaboratorioClinico
 
         private void Btn_buscarEmpe_Click(object sender, EventArgs e)//BUSCAR EMPLEADO PARA ELIMINARLO
         {
+            try
+            {
+                Gpb_datosEmpe.Visible = true;
+                OdbcDataAdapter sda = new OdbcDataAdapter("SELECT em.sNombre, em.sApellido, em.sDireccion, te.itelefono, co.sCorreo, em.fSueldo, ca.sDescripcion, em.dFechaDeNacimiento FROM empleado em, telefono te, correo co, cargo ca WHERE em.nIdEmpleado = te.nIdPaciente AND em.nIdEmpleado = co.nIdPaciente AND em.iIdCargo = ca.iIdCargo AND em.nIdEmpleado ='" + Convert.ToInt32(Txt_dpiEmpe.Text) + "'", conexion.ObtenerConexion());
+                DataTable datos = new DataTable();
+                sda.Fill(datos);
 
+                Txt_nombreEmpe.Text = datos.Rows[0][0].ToString();
+                Txt_apellidoEmpe.Text = datos.Rows[0][1].ToString();
+                Txt_direEmpe.Text = datos.Rows[0][2].ToString();
+                Txt_telEmpe.Text = datos.Rows[0][3].ToString();
+                Txt_correoEmpe.Text = datos.Rows[0][4].ToString();
+                Txt_sueldoEmpe.Text = datos.Rows[0][5].ToString();
+                Txt_cargoEmpe.Text = datos.Rows[0][6].ToString();
+                Dtp_fechaEmpe.Text = datos.Rows[0][7].ToString();
+
+                //Deshabilitar los campos, que sean solo de lectura
+                Txt_nombreEmpe.Enabled = false;
+                Txt_apellidoEmpe.Enabled = false;
+                Txt_direEmpe.Enabled = false;
+                Txt_telEmpe.Enabled = false;
+                Txt_correoEmpe.Enabled = false;
+                Txt_sueldoEmpe.Enabled = false;
+                Txt_cargoEmpe.Enabled = false;
+                Dtp_fechaEmpe.Enabled = false;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Intente de nuevo.", "Error en la búsqueda.", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
+                //MessageBox.Show("error:"+ex);
+
+            }
         }
 
         private void Btn_buscarEmpm_Click(object sender, EventArgs e) //BUSCAR EMPLEADO PARA MODIFICARLO.............................................
@@ -595,7 +625,8 @@ namespace LaboratorioClinico
                 Dtp_fechaEmpm.Text = datos.Rows[0][7].ToString();
 
                 Txt_cargoEmpm.Enabled = false;
-               
+
+            
             }
             catch (Exception ex)
             {
@@ -665,6 +696,51 @@ namespace LaboratorioClinico
             catch (Exception ex)
             {
                 MessageBox.Show("No se pudo modificar el registro.", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void Btn_eliminarEmpe_Click(object sender, EventArgs e) //ELIMINAR EMPLEADO
+        {
+            try
+            {
+                conexion.ObtenerConexion();
+                OdbcCommand cmd = conexion.ObtenerConexion().CreateCommand();
+
+                //Eliminar los datos del empleado de 3 tablas que guardan su información
+                cmd.CommandText = "delete from empleado where nIdEmpleado = '" + Convert.ToInt32(Txt_dpiEmpe.Text) + "'";
+                cmd.ExecuteNonQuery();
+                cmd.CommandText = "delete from telefono where nIdPaciente = '" + Convert.ToInt32(Txt_dpiEmpe.Text) + "'";
+                cmd.ExecuteNonQuery();
+                cmd.CommandText = "delete from correo where nIdPaciente = '" + Convert.ToInt32(Txt_dpiEmpe.Text) + "'";
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Empleado Eliminado Exitosamente", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
+                //Limpiar todos los textbox / combobox
+                Txt_nombreEmpe.Clear();
+                Txt_apellidoEmpe.Clear();
+                Txt_direEmpe.Clear();
+                Txt_telEmpe.Clear();
+                Txt_correoEmpe.Clear();
+                Txt_cargoEmpe.Clear();
+                Txt_sueldoEmpe.Clear();
+                Dtp_fechaEmpe.Refresh();
+
+
+                //Volver a habilitar todos los textbox / combobox
+                Txt_nombreEmpe.Enabled = true;
+                Txt_apellidoEmpe.Enabled = true;
+                Txt_direEmpe.Enabled = true;
+                Txt_telEmpe.Enabled = true;
+                Txt_correoEmpe.Enabled = true;
+                Txt_cargoEmpe.Enabled = true;
+                Txt_sueldoEmpe.Enabled = true;
+                Dtp_fechaEmpe.Enabled = true;
+            }
+            catch (Exception ex)
+            {
+                //MessageBox.Show("No se pudo eliminar el registro.", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
+                MessageBox.Show("error:"+ex);
             }
         }
     }
