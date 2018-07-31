@@ -25,7 +25,7 @@ namespace LaboratorioClinico
 
                 int iCargo = Convert.ToInt32(Cmb_cargo.SelectedValue);
 
-                OdbcCommand comando = new OdbcCommand("Pro_ingresoNuevoEmpleado", conexion.ObtenerConexion());
+                OdbcCommand comando = new OdbcCommand("Pro_ingresoEmpleado", conexion.ObtenerConexion());
                 comando.CommandType = CommandType.StoredProcedure;
                 comando.Parameters.AddWithValue("@iIdEmpleado", this.Txt_DPIEmpleado.Text);
                 comando.Parameters.AddWithValue("@sNombre", this.Txt_nombre.Text);
