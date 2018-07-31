@@ -44,6 +44,7 @@ namespace LaboratorioClinico
 
         }
         int acumulado = 0, cont = 0;
+        int acumulado1 = 0, descTotal=0;
         private void button1_Click(object sender, EventArgs e)
         {
             cont++;
@@ -57,18 +58,23 @@ namespace LaboratorioClinico
             sda2.Fill(datos2);
 
             int subtotal; int descuento;int total;
-            int p, c;
+            int p, c,d;
             c = Convert.ToInt32(Txt_cantidadf.Text);
             p = Convert.ToInt32(datos2.Rows[0][2].ToString());
+            d = Convert.ToInt32(Txt_descuentof.Text);
             subtotal = c * p;
-            descuento = 1;
-            //descuento = (subtotal) / 100;
-            acumulado = acumulado + subtotal;//Subtotal
+            descuento = ((subtotal * d)/100);
+            total = subtotal-descuento;
+            acumulado  = acumulado + subtotal;//Subtotal
+            descTotal = descTotal + descuento;
+            acumulado1 = acumulado1 + total;
 
             if (datos.Rows[0][0].ToString() == "1")
             {
-                Dgb_facturaf.Rows.Add(datos2.Rows[0][0].ToString(), Txt_cantidadf.Text, Txt_descripcion.Text, datos2.Rows[0][2].ToString(), descuento.ToString(), subtotal.ToString());
-                Txt_totalff.Text = acumulado.ToString();
+                Dgb_facturaf.Rows.Add(datos2.Rows[0][0].ToString(), Txt_cantidadf.Text, Txt_descripcion.Text, datos2.Rows[0][2].ToString(), subtotal.ToString(), Txt_descuentof.Text, total.ToString());
+                Lbl_subFf.Text= acumulado.ToString();
+                Lbl_desc.Text = descTotal.ToString();
+                Lbl_totalFf.Text = acumulado1.ToString();
                 /*
                 cmd.CommandText = "insert into detalle values('" + cont + "','" + Convert.ToInt32(orden.Text) + "','" + datos2.Rows[0][0] + "','" + Convert.ToInt32(cantidadP.Text.ToString()) + "')";
                 cmd.ExecuteNonQuery();
