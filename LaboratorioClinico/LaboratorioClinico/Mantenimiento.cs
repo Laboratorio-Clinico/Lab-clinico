@@ -254,8 +254,8 @@ namespace LaboratorioClinico
                 cmd.ExecuteNonQuery();
                 cmd.CommandText = "delete from correo where nIdPaciente = '" + Convert.ToInt32(Txt_expedientep.Text) + "'";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "delete from tipodesangre where iIdTipoDeSangre = '" + Convert.ToInt32(Txt_expedientep.Text) + "'";
-                cmd.ExecuteNonQuery();
+                //cmd.CommandText = "delete from tipodesangre where iIdTipoDeSangre = '" + Convert.ToInt32(Txt_expedientep.Text) + "'";
+                //cmd.ExecuteNonQuery();
                 
 
                 MessageBox.Show("Paciente Eliminado Exitosamente", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
@@ -436,7 +436,7 @@ namespace LaboratorioClinico
                 OdbcCommand cmd = conexion.ObtenerConexion().CreateCommand();
 
                 //Eliminar los datos del medico de 3 tablas que guardan su información
-                cmd.CommandText = "delete from medicosasociados where nIdPaciente = '" + Convert.ToInt32(Txt_colegiadoE.Text) + "'";
+                cmd.CommandText = "delete from medicosasociados where nNoColegiado = '" + Convert.ToInt32(Txt_colegiadoE.Text) + "'";
                 cmd.ExecuteNonQuery();
                 cmd.CommandText = "delete from telefono where nIdPaciente = '" + Convert.ToInt32(Txt_colegiadoE.Text) + "'";
                 cmd.ExecuteNonQuery();
@@ -450,6 +450,7 @@ namespace LaboratorioClinico
                 Txt_apellidoMedicoE.Clear();
                 Txt_telMedicoE.Clear();
                 Txt_direMedicoE.Clear();
+                Txt_correoMedicoE.Clear();
                 Cmb_especialidadMedicoE.ResetText(); Cmb_especialidadMedicoE.Items.Clear();
                 Cmb_empresaMedicoE.ResetText(); Cmb_empresaMedicoE.Items.Clear();
                 Dtp_nacimientoE.Refresh();
@@ -461,6 +462,7 @@ namespace LaboratorioClinico
                 Txt_apellidoMedicoE.Enabled = true;
                 Txt_telMedicoE.Enabled = true;
                 Txt_direMedicoE.Enabled = true;
+                Txt_correoMedicoE.Enabled = true;
                 Cmb_especialidadMedicoE.Enabled = true;
                 Cmb_empresaMedicoE.Enabled = true;
                 Dtp_nacimientoE.Enabled = true;
@@ -476,7 +478,7 @@ namespace LaboratorioClinico
             try
             {
                 Gpb_datosEliminar.Visible = true;
-                OdbcDataAdapter sda = new OdbcDataAdapter("SELECT me.sNombre, me.sApellido, te.itelefono, me.sDireccion, co.sCorreo, es.sEspecialidad, em.sEmpresa, me.dFechaDeNacimiento FROM medicosasociados me, telefono te, correo co, especialidad es, empresa em  WHERE me.nNoColegiado = te.nIdPaciente AND me.nNoColegiado = co.nIdPaciente AND me.iIdEspecialidad = es.iIdEspecialidad AND me.iIdEmpresa = em.iIdEmpresa AND me.nNoColegiado = '" + Convert.ToInt32(Txt_colegiadoE.Text) + "'", conexion.ObtenerConexion());
+                OdbcDataAdapter sda = new OdbcDataAdapter("SELECT me.sNombre, me.sApellido, te.itelefono, me.sDireccion, co.sCorreo, es.sEspecialidad, em.sEmpresa, me.dFechaDeNacimiento FROM medicosasociados me, telefono te, correo co, especialidad es, empresa em  WHERE me.nNoColegiado = te.nIdPaciente AND me.nNoColegiado = co.nIdPaciente AND me.iIdEspecialidad = es.iIdEspecialidad AND me.iIdEmpresa = em.iIdEmpresa AND me.nNoColegiado ='" + Convert.ToInt32(Txt_colegiadoE.Text) + "'", conexion.ObtenerConexion());
                 DataTable datos = new DataTable();
                 sda.Fill(datos);
 
@@ -484,11 +486,21 @@ namespace LaboratorioClinico
                 Txt_apellidoMedicoE.Text = datos.Rows[0][1].ToString();
                 Txt_telMedicoE.Text = datos.Rows[0][2].ToString();
                 Txt_direMedicoE.Text = datos.Rows[0][3].ToString();
-                Cmb_especialidadMedicoE.Text = datos.Rows[0][4].ToString();
-                Cmb_empresaMedicoE.Text = datos.Rows[0][5].ToString();
-                Dtp_nacimientoE.Text = datos.Rows[0][6].ToString();
+                Txt_correoMedicoE.Text = datos.Rows[0][4].ToString();
+                Cmb_especialidadMedicoE.Text = datos.Rows[0][5].ToString();
+                Cmb_empresaMedicoE.Text = datos.Rows[0][6].ToString();
+                Dtp_nacimientoE.Text = datos.Rows[0][7].ToString();
 
-                //Txt_colegiadoE.Enabled = false;
+                //Deshabilitar los campos, que sean solo de lectura
+                Txt_nombreMedicoE.Enabled = false;
+                Txt_apellidoMedicoE.Enabled = false;
+                Txt_telMedicoE.Enabled = false;
+                Txt_direMedicoE.Enabled = false;
+                Txt_correoMedicoE.Enabled = false;
+                Cmb_especialidadMedicoE.Enabled = false;
+                Cmb_empresaMedicoE.Enabled = false;
+                Dtp_nacimientoE.Enabled = false;
+
             }
             catch (Exception ex)
             {
