@@ -21,42 +21,72 @@ namespace LaboratorioClinico
         }
 
         public void Pro_guardarDatos() {
-            try {
+
+            try
+            {
 
                 int iCargo = Convert.ToInt32(Cmb_cargo.SelectedValue);
+                OdbcDataAdapter adapter = new OdbcDataAdapter();
+                OdbcCommand comando = new OdbcCommand("Pro_ingresoNuevoEmpleado", conexion.ObtenerConexion());
+                adapter.InsertCommand = comando;
 
-                OdbcCommand comando = new OdbcCommand("Pro_ingresoEmpleado", conexion.ObtenerConexion());
-                comando.CommandType = CommandType.StoredProcedure;
-                comando.Parameters.AddWithValue("@iIdEmpleado", this.Txt_DPIEmpleado.Text);
-                comando.Parameters.AddWithValue("@sNombre", this.Txt_nombre.Text);
-                comando.Parameters.AddWithValue("@sApellido", this.Txt_apellido.Text);
-                comando.Parameters.AddWithValue("@nTelefono", this.Txt_telefono.Text);
-                comando.Parameters.AddWithValue("@sDireccion", this.Txt_direccion.Text);
-                comando.Parameters.AddWithValue("@sCorreo", this.Txt_correo.Text);
-                comando.Parameters.AddWithValue("@iIdCargo", iCargo);
-                comando.Parameters.AddWithValue("@fSueldo", this.Txt_sueldo.Text);
-                comando.Parameters.AddWithValue("@dFechaDeNacimiento", this.Dtp_fechaNacimiento.Text);
-                comando.Parameters.AddWithValue("@iIdUsuario", this.Txt_DPIEmpleado.Text);
-                comando.ExecuteNonQuery();
+               /// comando.CommandType = CommandType.StoredProcedure;
+
+                comando.Parameters.Add("@iIdEmpleado", OdbcType.Decimal, 13).Value = Txt_DPIEmpleado.Text;
+                comando.Parameters.Add("@sNombre", OdbcType.VarChar,25).Value = Txt_nombre.Text;
+                comando.Parameters.Add("@sApellido", OdbcType.VarChar, 25).Value = Txt_apellido.Text;
+                comando.Parameters.Add("@nTelefono",OdbcType.Decimal, 8).Value = Txt_telefono.Text;
+                comando.Parameters.Add("@sDireccion", OdbcType.VarChar, 45).Value =Txt_direccion.Text;
+                comando.Parameters.Add("@sCorreo", OdbcType.VarChar, 50).Value = Txt_correo.Text;
+                comando.Parameters.Add("@iIdCargo", OdbcType.Int).Value = iCargo;
+                comando.Parameters.Add("@fSueldo", OdbcType.Double).Value =Txt_sueldo.Text;
+                comando.Parameters.Add("@dFechaDeNacimiento", OdbcType.Date).Value =Dtp_fechaNacimiento.Text;
+                comando.Parameters.Add("@iIdUsuario", OdbcType.Decimal,13).Value = Txt_DPIEmpleado.Text;
+                //comando.ExecuteNonQuery();
                 MessageBox.Show("Datos insertados correctamente");
                 
-            } catch(OdbcException error) { MessageBox.Show(error.Message); }
-            
-           
-             
-            finally {
 
-            conexion.ObtenerConexion().Close(); }
-            Txt_DPIEmpleado.ResetText();
-            Txt_nombre.ResetText();
-            Txt_apellido.ResetText();
-            Txt_telefono.ResetText();
-            Txt_correo.ResetText();
-            Txt_direccion.ResetText();
-            Txt_sueldo.ResetText();
-            Cmb_cargo.ResetText();
-            Dtp_fechaNacimiento.ResetText();
-        }
+
+            }
+            catch (Exception error) { MessageBox.Show("Error"+error); }
+          
+                /*  try {
+
+                      int iCargo = Convert.ToInt32(Cmb_cargo.SelectedValue);
+
+                      OdbcCommand comando = new OdbcCommand("Pro_ingresoNuevoEmpleado", conexion.ObtenerConexion());
+                      comando.CommandType = CommandType.StoredProcedure;
+                      comando.Parameters.AddWithValue("@iIdEmpleado", this.Txt_DPIEmpleado.Text);
+                      comando.Parameters.AddWithValue("@sNombre", this.Txt_nombre.Text);
+                      comando.Parameters.AddWithValue("@sApellido", this.Txt_apellido.Text);
+                      comando.Parameters.AddWithValue("@nTelefono", this.Txt_telefono.Text);
+                      comando.Parameters.AddWithValue("@sDireccion", this.Txt_direccion.Text);
+                      comando.Parameters.AddWithValue("@sCorreo", this.Txt_correo.Text);
+                      comando.Parameters.AddWithValue("@iIdCargo", iCargo);
+                      comando.Parameters.AddWithValue("@fSueldo", this.Txt_sueldo.Text);
+                      comando.Parameters.AddWithValue("@dFechaDeNacimiento", this.Dtp_fechaNacimiento.Text);
+                      comando.Parameters.AddWithValue("@iIdUsuario", this.Txt_DPIEmpleado.Text);
+                      comando.ExecuteNonQuery();
+                      MessageBox.Show("Datos insertados correctamente");
+
+                  } catch(OdbcException error) { MessageBox.Show(error.Message); }*/
+
+
+
+                  finally
+            {
+
+                  conexion.ObtenerConexion().Close(); }
+                  Txt_DPIEmpleado.ResetText();
+                  Txt_nombre.ResetText();
+                  Txt_apellido.ResetText();
+                  Txt_telefono.ResetText();
+                  Txt_correo.ResetText();
+                  Txt_direccion.ResetText();
+                  Txt_sueldo.ResetText();
+                  Cmb_cargo.ResetText();
+                  Dtp_fechaNacimiento.ResetText();
+            } 
         public void proLlenareCargo()
         {
 
