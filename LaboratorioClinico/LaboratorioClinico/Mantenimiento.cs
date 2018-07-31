@@ -32,7 +32,7 @@ namespace LaboratorioClinico
             try
             {
                 conexion.ObtenerConexion();
-                OdbcCommand comando = new OdbcCommand("Select iIdTipoDeSangre,sGrupoSanguineo from tipoDeSangre", conexion.ObtenerConexion());
+                OdbcCommand comando = new OdbcCommand("Select iIdTipoDeSangre,sGrupoSanguineo from tipodesangre", conexion.ObtenerConexion());
                 OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
                 DataTable tabla = new DataTable();
 
@@ -52,7 +52,7 @@ namespace LaboratorioClinico
             try
             {
                 conexion.ObtenerConexion();
-                OdbcCommand comando = new OdbcCommand("Select iIdEspecialidad,sEspecialidad from Especialidad", conexion.ObtenerConexion());
+                OdbcCommand comando = new OdbcCommand("Select iIdEspecialidad,sEspecialidad from especialidad", conexion.ObtenerConexion());
                 OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
                 DataTable tabla = new DataTable();
 
@@ -72,7 +72,7 @@ namespace LaboratorioClinico
             try
             {
                 conexion.ObtenerConexion();
-                OdbcCommand comando = new OdbcCommand("Select iIdEmpresa,sEmpresa from Empresa", conexion.ObtenerConexion());
+                OdbcCommand comando = new OdbcCommand("Select iIdEmpresa,sEmpresa from empresa", conexion.ObtenerConexion());
                 OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
                 DataTable tabla = new DataTable();
             
@@ -386,9 +386,9 @@ namespace LaboratorioClinico
                 cmd.ExecuteNonQuery();
                 cmd.CommandText = "update correo set sCorreo = '" + Txt_correoMedicoM.Text + "' where nIdPaciente = '" + Convert.ToInt32(Txt_colegiadoM.Text) + "'";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "update medicosasociados set iIdEspecialidad = '" + Txt_especialidadMedicoM.Text + "' where nNoColegiado = '" + Convert.ToInt32(Cmb_especialidadMedicoM.SelectedValue) + "'";
+                cmd.CommandText = "update medicosasociados set iIdEspecialidad = '" + Convert.ToInt32(Cmb_especialidadMedicoM.SelectedValue) + "' where nNoColegiado = '" + Convert.ToInt32(Txt_colegiadoM.Text) + "'";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "update medicosasociados set iIdEmpresa = '" + Txt_empresaMedicoM.Text + "' where nNoColegiado = '" + Convert.ToInt32(Cmb_empresaMedicoM.SelectedValue) + "'";
+                cmd.CommandText = "update medicosasociados set iIdEmpresa = '" + Convert.ToInt32(Cmb_empresaMedicoM.SelectedValue) + "' where nNoColegiado = '" + Convert.ToInt32(Txt_colegiadoM.Text) + "'";
                 cmd.ExecuteNonQuery();
                 cmd.CommandText = "update medicosasociados set dFechaDeNacimiento = '" + Dtp_nacimiento.Text + "' where nNoColegiado = '" + Convert.ToInt32(Txt_colegiadoM.Text) + "'";
                 cmd.ExecuteNonQuery();
@@ -408,6 +408,14 @@ namespace LaboratorioClinico
                 Txt_empresaMedicoM.Clear();
                 Dtp_nacimiento.Refresh();
 
+                //Volver a ocultar los combobox que editan EMPRESA Y ESPECIALIDAD
+                Cmb_especialidadMedicoM.Visible = false;
+                Lbl_edEspecialidadEspm.Visible = false;
+                Btn_edEspeMedicoM.Visible = true;
+
+                Cmb_empresaMedicoM.Visible = false;
+                Lbl_edEmpresaEmpm.Visible = false;
+                Btn_edEmpreMedicoM.Visible = true;
             }
             catch (Exception ex)
             {
@@ -500,7 +508,7 @@ namespace LaboratorioClinico
 
         private void Cmb_empresaMedicoM_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            Txt_empresaMedicoM.Text = Cmb_empresaMedicoM.Text;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -523,7 +531,7 @@ namespace LaboratorioClinico
         {
             Cmb_empresaMedicoM.Visible = true;
             Lbl_edEmpresaEmpm.Visible = true;
-            Btn_edEmpreMedicoM.Visible = true;
+            Btn_edEmpreMedicoM.Visible = false;
             prollenarEmpresa();
         }
 
