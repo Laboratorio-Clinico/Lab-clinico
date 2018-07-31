@@ -38,22 +38,20 @@ namespace LaboratorioClinico
 
             try
             {
-                OdbcCommand cm;
-                cm = new OdbcCommand("Pro_ingresoNuevoMedico", conexion.ObtenerConexion());
-                cm.CommandType = CommandType.StoredProcedure;
 
-                cm.Parameters.AddWithValue("@iColegiado", this.Txt_colegiado.Text);
-                cm.Parameters.AddWithValue("@sNombre", this.Txt_nombre.Text);
-                cm.Parameters.AddWithValue("@sApellido", this.Txt_apellido.Text);
-                cm.Parameters.AddWithValue("@nTelefono", this.Txt_telefono.Text);
-                cm.Parameters.AddWithValue("@sDireccion", this.Txt_direccion.Text);
-                cm.Parameters.AddWithValue("@sCorreo", this.Txt_Correo.Text);
-                cm.Parameters.AddWithValue("@iIdEspecialidad", iEspecialidades);
-                cm.Parameters.AddWithValue("@iIdEmpresa", iEmpresas);
-                cm.Parameters.AddWithValue("@dFechaDeNacimiento", this.Dtp_fechaNacimiento.Text);
-
-                cm.ExecuteNonQuery();
-                MessageBox.Show("Datos agregados exitosamente");
+                OdbcCommand comando = new OdbcCommand("{CALL Pro_ingresoNuevoMedico(?,?,?,?,?,?,?,?,?)}", conexion.ObtenerConexion());
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("iColegiado", Txt_colegiado.Text);
+                comando.Parameters.AddWithValue("sNombre", Txt_nombre.Text);
+                comando.Parameters.AddWithValue("sApellido", Txt_apellido.Text);
+                comando.Parameters.AddWithValue("nTelefono", Txt_telefono.Text);
+                comando.Parameters.AddWithValue("sDireccion", Txt_direccion.Text);
+                comando.Parameters.AddWithValue("sCorreo", Txt_Correo.Text);
+                comando.Parameters.AddWithValue("iIdEspecialidad", iEspecialidades);
+                comando.Parameters.AddWithValue("iIdEmpresa", iEmpresas);
+                comando.Parameters.AddWithValue("dFechaDeNacimiento", Dtp_fechaNacimiento.Text);
+                comando.ExecuteNonQuery();
+                MessageBox.Show("Datos insertados correctamente");
             }
             catch (Exception error) { MessageBox.Show("Error"+error); }
             finally
@@ -79,7 +77,7 @@ namespace LaboratorioClinico
                 Cmb_empresa.Items.Clear();
                 Cmb_empresa.Text = "Seleccione una empresa";
                 conexion.ObtenerConexion();
-                OdbcCommand comando = new OdbcCommand("Select iIdEmpresa,sEmpresa from Empresa", conexion.ObtenerConexion());
+                OdbcCommand comando = new OdbcCommand("Select iIdEmpresa,sEmpresa from empresa", conexion.ObtenerConexion());
                 OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
                 DataTable tabla = new DataTable();
 
@@ -108,7 +106,7 @@ namespace LaboratorioClinico
         
                 
                 conexion.ObtenerConexion();
-                OdbcCommand comando = new OdbcCommand("Select iIdEspecialidad,sEspecialidad from Especialidad", conexion.ObtenerConexion());
+                OdbcCommand comando = new OdbcCommand("Select iIdEspecialidad,sEspecialidad from especialidad", conexion.ObtenerConexion());
                 OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
                 DataTable tabla = new DataTable();
 
