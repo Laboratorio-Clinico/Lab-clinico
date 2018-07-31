@@ -28,9 +28,18 @@ namespace LaboratorioClinico
                 int iCargo = Convert.ToInt32(Cmb_cargo.SelectedValue);
       
 
-                OdbcCommand comando = new OdbcCommand("{CALL pr(?)}", conexion.ObtenerConexion());
+                OdbcCommand comando = new OdbcCommand("{CALL Pro_insertarEmpleado(?,?,?,?,?,?,?,?,?,?)}", conexion.ObtenerConexion());
                 comando.CommandType = CommandType.StoredProcedure;
-                comando.Parameters.AddWithValue("p", Txt_nombre.Text);
+                comando.Parameters.AddWithValue("iEmpleado", Txt_DPIEmpleado.Text);
+                comando.Parameters.AddWithValue("sNombre", Txt_nombre.Text);
+                comando.Parameters.AddWithValue("sApellido", Txt_apellido.Text);
+                comando.Parameters.AddWithValue("nTelefono", Txt_telefono.Text);
+                comando.Parameters.AddWithValue("sDireccion", Txt_direccion.Text);
+                comando.Parameters.AddWithValue("sCorreo", Txt_correo.Text);
+                comando.Parameters.AddWithValue("iCargo", iCargo);
+                comando.Parameters.AddWithValue("fSueldo", Txt_sueldo.Text);
+                comando.Parameters.AddWithValue("dFechaDeNacimiento", Dtp_fechaNacimiento.Text);
+                comando.Parameters.AddWithValue("iUsuario", Txt_DPIEmpleado.Text);
                 comando.ExecuteNonQuery();
                 MessageBox.Show("Datos insertados correctamente");
 
