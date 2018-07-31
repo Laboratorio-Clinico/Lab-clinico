@@ -14,6 +14,34 @@ namespace LaboratorioClinico
 {
     public partial class Factura : Form
     {
+
+        public void proGuardarDatos()
+        {
+
+            try
+            {
+                OdbcCommand cm;
+                cm = new OdbcCommand("InsertaDetalleFactura", conexion.ObtenerConexion());
+                cm.CommandType = CommandType.StoredProcedure;
+
+                cm.Parameters.AddWithValue("@nIdFactura", this.Lbl_noserie.Text);
+                cm.Parameters.AddWithValue("@iIdExamen", this.Txt_codigof.Text);
+                cm.Parameters.AddWithValue("@iCantidad", this.Txt_cantidadf.Text);
+                cm.Parameters.AddWithValue("@fPrecio", this.Txt_preciouf.Text);
+                cm.Parameters.AddWithValue("@fDescuento", this.Txt_descuentof.Text);
+
+                cm.ExecuteNonQuery();
+                MessageBox.Show("Datos agregados exitosamente");
+            }
+            catch (Exception error) { MessageBox.Show("Error" + error); }
+            finally
+            {
+
+                conexion.ObtenerConexion().Close();
+  
+
+            }
+        }
         public Factura()
         {
             InitializeComponent();
@@ -56,6 +84,8 @@ namespace LaboratorioClinico
                 int subtotal; int descuento; int total;
                 int p, c, d; int a = 0;
 
+        
+
                 OdbcDataAdapter sda = new OdbcDataAdapter("select count(*) from examenes where iIdExamen= '" + Txt_codigof.Text + "'", conexion.ObtenerConexion());
                 DataTable datos = new DataTable();
                 sda.Fill(datos);
@@ -83,10 +113,11 @@ namespace LaboratorioClinico
                     Lbl_subFf.Text = acumulado.ToString();
                     Lbl_desc.Text = descTotal.ToString();
                     Lbl_totalFf.Text = acumulado1.ToString();
-                    Lbl_noserie.Text = a.ToString();
 
                     /*cmd.CommandText = "insert into detalledefactura values('" + Convert.ToInt32(Lbl_noserie.Text) + "','" + datos2.Rows[0][0] + "','" + Convert.ToInt32(Txt_cantidadf.Text) + "','" + datos2.Rows[0][2].ToString() + "','" + Convert.ToInt32(Txt_descuentof.Text) + "')";
                     cmd.ExecuteNonQuery();*/
+
+                    proGuardarDatos();
 
                     Txt_codigof.ResetText();
                     Txt_cantidadf.ResetText();
