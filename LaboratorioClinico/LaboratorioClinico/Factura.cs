@@ -47,13 +47,14 @@ namespace LaboratorioClinico
         int acumulado1 = 0, descTotal=0;
         private void button1_Click(object sender, EventArgs e)
         {
+           
             cont++;
-
             OdbcDataAdapter sda = new OdbcDataAdapter("select count(*) from examenes where iIdExamen= '" + Txt_codigof.Text + "'", conexion.ObtenerConexion());
             DataTable datos = new DataTable();
             sda.Fill(datos);
 
             OdbcDataAdapter sda2 = new OdbcDataAdapter("select ex.iIdExamen, ex.sDescripcion,ex.fPrecio from examenes ex where ex.iIdExamen = '" + Txt_codigof.Text + "'", conexion.ObtenerConexion());
+ 
             DataTable datos2 = new DataTable();
             sda2.Fill(datos2);
 
@@ -68,6 +69,8 @@ namespace LaboratorioClinico
             acumulado  = acumulado + subtotal;//Subtotal
             descTotal = descTotal + descuento;
             acumulado1 = acumulado1 + total;
+            int a = 0;
+            a = a + cont;
 
             if (datos.Rows[0][0].ToString() == "1")
             {
@@ -75,10 +78,11 @@ namespace LaboratorioClinico
                 Lbl_subFf.Text= acumulado.ToString();
                 Lbl_desc.Text = descTotal.ToString();
                 Lbl_totalFf.Text = acumulado1.ToString();
-                /*
-                cmd.CommandText = "insert into detalle values('" + cont + "','" + Convert.ToInt32(orden.Text) + "','" + datos2.Rows[0][0] + "','" + Convert.ToInt32(cantidadP.Text.ToString()) + "')";
-                cmd.ExecuteNonQuery();
-		        */
+                Lbl_noserie.Text = a.ToString();
+                
+                /*cmd.CommandText = "insert into detalledefactura values('" + Convert.ToInt32(Lbl_noserie.Text) + "','" + datos2.Rows[0][0] + "','" + Convert.ToInt32(Txt_cantidadf.Text) + "','" + datos2.Rows[0][2].ToString() + "','" + Convert.ToInt32(Txt_descuentof.Text) + "')";
+                cmd.ExecuteNonQuery();*/
+		        
                 Txt_codigof.ResetText();
                 Txt_cantidadf.ResetText();
                 Txt_descripcion.ResetText();
@@ -90,7 +94,7 @@ namespace LaboratorioClinico
             {
                 MessageBox.Show("No existe producto");
             }
-
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -127,7 +131,7 @@ namespace LaboratorioClinico
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Intente de nuevo.", "Paciente no registrado.", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Intente de nuevo.", "Código no encontrado.", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Exclamation);
             }
         }
 
