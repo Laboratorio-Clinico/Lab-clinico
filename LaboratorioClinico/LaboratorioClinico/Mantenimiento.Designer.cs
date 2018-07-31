@@ -175,7 +175,7 @@
             this.Txt_telEmpe = new System.Windows.Forms.TextBox();
             this.Txt_sueldoEmpe = new System.Windows.Forms.TextBox();
             this.Lbl_telEmpe = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.Dtp_fechaEmpe = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.Txt_apellidoEmpe = new System.Windows.Forms.TextBox();
             this.Txt_nombreEmpe = new System.Windows.Forms.TextBox();
@@ -1963,7 +1963,7 @@
             this.Gpb_datosEmpe.Controls.Add(this.Txt_telEmpe);
             this.Gpb_datosEmpe.Controls.Add(this.Txt_sueldoEmpe);
             this.Gpb_datosEmpe.Controls.Add(this.Lbl_telEmpe);
-            this.Gpb_datosEmpe.Controls.Add(this.dateTimePicker1);
+            this.Gpb_datosEmpe.Controls.Add(this.Dtp_fechaEmpe);
             this.Gpb_datosEmpe.Controls.Add(this.label4);
             this.Gpb_datosEmpe.Controls.Add(this.Txt_apellidoEmpe);
             this.Gpb_datosEmpe.Controls.Add(this.Txt_nombreEmpe);
@@ -2061,15 +2061,15 @@
             this.Lbl_telEmpe.TabIndex = 11;
             this.Lbl_telEmpe.Text = "Telefono";
             // 
-            // dateTimePicker1
+            // Dtp_fechaEmpe
             // 
-            this.dateTimePicker1.CustomFormat = "yyyy-MM-dd";
-            this.dateTimePicker1.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(503, 57);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(120, 26);
-            this.dateTimePicker1.TabIndex = 27;
+            this.Dtp_fechaEmpe.CustomFormat = "yyyy-MM-dd";
+            this.Dtp_fechaEmpe.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Dtp_fechaEmpe.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.Dtp_fechaEmpe.Location = new System.Drawing.Point(503, 57);
+            this.Dtp_fechaEmpe.Name = "Dtp_fechaEmpe";
+            this.Dtp_fechaEmpe.Size = new System.Drawing.Size(120, 26);
+            this.Dtp_fechaEmpe.TabIndex = 27;
             // 
             // label4
             // 
@@ -2211,6 +2211,7 @@
             this.Btn_eliminarEmpe.Size = new System.Drawing.Size(53, 44);
             this.Btn_eliminarEmpe.TabIndex = 129;
             this.Btn_eliminarEmpe.UseVisualStyleBackColor = true;
+            this.Btn_eliminarEmpe.Click += new System.EventHandler(this.Btn_eliminarEmpe_Click);
             // 
             // Tbc_examen
             // 
@@ -2571,7 +2572,7 @@
         private System.Windows.Forms.TextBox Txt_telEmpe;
         private System.Windows.Forms.TextBox Txt_sueldoEmpe;
         private System.Windows.Forms.Label Lbl_telEmpe;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker Dtp_fechaEmpe;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox Txt_apellidoEmpe;
         private System.Windows.Forms.TextBox Txt_nombreEmpe;
