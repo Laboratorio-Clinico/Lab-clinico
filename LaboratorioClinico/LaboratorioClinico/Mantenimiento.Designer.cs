@@ -197,6 +197,8 @@
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.label14 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
+            this.Txt_correoMedicoE = new System.Windows.Forms.TextBox();
+            this.Lbl_correoMedicoE = new System.Windows.Forms.Label();
             this.Gpb_mantenimiento.SuspendLayout();
             this.Tbc_medicos.SuspendLayout();
             this.tabPage4.SuspendLayout();
@@ -340,6 +342,8 @@
             // 
             // Gpb_datosEliminar
             // 
+            this.Gpb_datosEliminar.Controls.Add(this.Txt_correoMedicoE);
+            this.Gpb_datosEliminar.Controls.Add(this.Lbl_correoMedicoE);
             this.Gpb_datosEliminar.Controls.Add(this.Cmb_especialidadMedicoE);
             this.Gpb_datosEliminar.Controls.Add(this.Cmb_empresaMedicoE);
             this.Gpb_datosEliminar.Controls.Add(this.Txt_telMedicoE);
@@ -370,7 +374,7 @@
             this.Cmb_especialidadMedicoE.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cmb_especialidadMedicoE.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Cmb_especialidadMedicoE.FormattingEnabled = true;
-            this.Cmb_especialidadMedicoE.Location = new System.Drawing.Point(15, 139);
+            this.Cmb_especialidadMedicoE.Location = new System.Drawing.Point(38, 179);
             this.Cmb_especialidadMedicoE.Name = "Cmb_especialidadMedicoE";
             this.Cmb_especialidadMedicoE.Size = new System.Drawing.Size(197, 25);
             this.Cmb_especialidadMedicoE.TabIndex = 122;
@@ -380,7 +384,7 @@
             this.Cmb_empresaMedicoE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Cmb_empresaMedicoE.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cmb_empresaMedicoE.FormattingEnabled = true;
-            this.Cmb_empresaMedicoE.Location = new System.Drawing.Point(227, 139);
+            this.Cmb_empresaMedicoE.Location = new System.Drawing.Point(250, 179);
             this.Cmb_empresaMedicoE.Name = "Cmb_empresaMedicoE";
             this.Cmb_empresaMedicoE.Size = new System.Drawing.Size(197, 25);
             this.Cmb_empresaMedicoE.TabIndex = 121;
@@ -390,7 +394,7 @@
             this.Txt_telMedicoE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Txt_telMedicoE.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_telMedicoE.ForeColor = System.Drawing.Color.Black;
-            this.Txt_telMedicoE.Location = new System.Drawing.Point(17, 93);
+            this.Txt_telMedicoE.Location = new System.Drawing.Point(38, 93);
             this.Txt_telMedicoE.Margin = new System.Windows.Forms.Padding(4);
             this.Txt_telMedicoE.Name = "Txt_telMedicoE";
             this.Txt_telMedicoE.Size = new System.Drawing.Size(106, 25);
@@ -401,7 +405,7 @@
             this.Dtp_nacimientoE.CustomFormat = "yyyy-MM-dd";
             this.Dtp_nacimientoE.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Dtp_nacimientoE.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Dtp_nacimientoE.Location = new System.Drawing.Point(445, 44);
+            this.Dtp_nacimientoE.Location = new System.Drawing.Point(477, 44);
             this.Dtp_nacimientoE.Name = "Dtp_nacimientoE";
             this.Dtp_nacimientoE.Size = new System.Drawing.Size(92, 26);
             this.Dtp_nacimientoE.TabIndex = 119;
@@ -411,7 +415,7 @@
             this.Txt_apellidoMedicoE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Txt_apellidoMedicoE.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_apellidoMedicoE.ForeColor = System.Drawing.Color.Black;
-            this.Txt_apellidoMedicoE.Location = new System.Drawing.Point(221, 47);
+            this.Txt_apellidoMedicoE.Location = new System.Drawing.Point(242, 47);
             this.Txt_apellidoMedicoE.Margin = new System.Windows.Forms.Padding(4);
             this.Txt_apellidoMedicoE.Name = "Txt_apellidoMedicoE";
             this.Txt_apellidoMedicoE.Size = new System.Drawing.Size(197, 25);
@@ -422,7 +426,7 @@
             this.Lbl_empresaMedicoE.AutoSize = true;
             this.Lbl_empresaMedicoE.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_empresaMedicoE.ForeColor = System.Drawing.Color.Black;
-            this.Lbl_empresaMedicoE.Location = new System.Drawing.Point(222, 123);
+            this.Lbl_empresaMedicoE.Location = new System.Drawing.Point(245, 163);
             this.Lbl_empresaMedicoE.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_empresaMedicoE.Name = "Lbl_empresaMedicoE";
             this.Lbl_empresaMedicoE.Size = new System.Drawing.Size(59, 18);
@@ -434,7 +438,7 @@
             this.Txt_nombreMedicoE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Txt_nombreMedicoE.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_nombreMedicoE.ForeColor = System.Drawing.Color.Black;
-            this.Txt_nombreMedicoE.Location = new System.Drawing.Point(17, 47);
+            this.Txt_nombreMedicoE.Location = new System.Drawing.Point(38, 47);
             this.Txt_nombreMedicoE.Margin = new System.Windows.Forms.Padding(4);
             this.Txt_nombreMedicoE.Name = "Txt_nombreMedicoE";
             this.Txt_nombreMedicoE.Size = new System.Drawing.Size(197, 25);
@@ -445,7 +449,7 @@
             this.Lbl_telMedicoE.AutoSize = true;
             this.Lbl_telMedicoE.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_telMedicoE.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Lbl_telMedicoE.Location = new System.Drawing.Point(17, 78);
+            this.Lbl_telMedicoE.Location = new System.Drawing.Point(36, 78);
             this.Lbl_telMedicoE.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_telMedicoE.Name = "Lbl_telMedicoE";
             this.Lbl_telMedicoE.Size = new System.Drawing.Size(59, 24);
@@ -458,7 +462,7 @@
             this.Lbl_apellidoMedicoE.AutoSize = true;
             this.Lbl_apellidoMedicoE.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_apellidoMedicoE.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Lbl_apellidoMedicoE.Location = new System.Drawing.Point(221, 33);
+            this.Lbl_apellidoMedicoE.Location = new System.Drawing.Point(242, 33);
             this.Lbl_apellidoMedicoE.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_apellidoMedicoE.Name = "Lbl_apellidoMedicoE";
             this.Lbl_apellidoMedicoE.Size = new System.Drawing.Size(57, 24);
@@ -471,7 +475,7 @@
             this.Txt_direMedicoE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Txt_direMedicoE.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_direMedicoE.ForeColor = System.Drawing.Color.Black;
-            this.Txt_direMedicoE.Location = new System.Drawing.Point(131, 93);
+            this.Txt_direMedicoE.Location = new System.Drawing.Point(152, 93);
             this.Txt_direMedicoE.Margin = new System.Windows.Forms.Padding(4);
             this.Txt_direMedicoE.Name = "Txt_direMedicoE";
             this.Txt_direMedicoE.Size = new System.Drawing.Size(287, 25);
@@ -482,7 +486,7 @@
             this.Lbl_nombreMedicoE.AutoSize = true;
             this.Lbl_nombreMedicoE.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_nombreMedicoE.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Lbl_nombreMedicoE.Location = new System.Drawing.Point(15, 33);
+            this.Lbl_nombreMedicoE.Location = new System.Drawing.Point(36, 33);
             this.Lbl_nombreMedicoE.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_nombreMedicoE.Name = "Lbl_nombreMedicoE";
             this.Lbl_nombreMedicoE.Size = new System.Drawing.Size(56, 24);
@@ -495,7 +499,7 @@
             this.Lbl_especialidadMedicoE.AutoSize = true;
             this.Lbl_especialidadMedicoE.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_especialidadMedicoE.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Lbl_especialidadMedicoE.Location = new System.Drawing.Point(17, 123);
+            this.Lbl_especialidadMedicoE.Location = new System.Drawing.Point(36, 163);
             this.Lbl_especialidadMedicoE.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_especialidadMedicoE.Name = "Lbl_especialidadMedicoE";
             this.Lbl_especialidadMedicoE.Size = new System.Drawing.Size(79, 24);
@@ -508,7 +512,7 @@
             this.Lbl_direMedicoE.AutoSize = true;
             this.Lbl_direMedicoE.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_direMedicoE.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Lbl_direMedicoE.Location = new System.Drawing.Point(132, 78);
+            this.Lbl_direMedicoE.Location = new System.Drawing.Point(153, 78);
             this.Lbl_direMedicoE.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_direMedicoE.Name = "Lbl_direMedicoE";
             this.Lbl_direMedicoE.Size = new System.Drawing.Size(65, 24);
@@ -521,7 +525,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label11.Location = new System.Drawing.Point(435, 29);
+            this.label11.Location = new System.Drawing.Point(467, 29);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(118, 24);
@@ -2305,6 +2309,30 @@
             this.button5.TabIndex = 72;
             this.button5.UseVisualStyleBackColor = true;
             // 
+            // Txt_correoMedicoE
+            // 
+            this.Txt_correoMedicoE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_correoMedicoE.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_correoMedicoE.ForeColor = System.Drawing.Color.Black;
+            this.Txt_correoMedicoE.Location = new System.Drawing.Point(38, 136);
+            this.Txt_correoMedicoE.Margin = new System.Windows.Forms.Padding(4);
+            this.Txt_correoMedicoE.Name = "Txt_correoMedicoE";
+            this.Txt_correoMedicoE.Size = new System.Drawing.Size(401, 25);
+            this.Txt_correoMedicoE.TabIndex = 124;
+            // 
+            // Lbl_correoMedicoE
+            // 
+            this.Lbl_correoMedicoE.AutoSize = true;
+            this.Lbl_correoMedicoE.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_correoMedicoE.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Lbl_correoMedicoE.Location = new System.Drawing.Point(36, 120);
+            this.Lbl_correoMedicoE.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_correoMedicoE.Name = "Lbl_correoMedicoE";
+            this.Lbl_correoMedicoE.Size = new System.Drawing.Size(49, 24);
+            this.Lbl_correoMedicoE.TabIndex = 125;
+            this.Lbl_correoMedicoE.Text = "Correo";
+            this.Lbl_correoMedicoE.UseCompatibleTextRendering = true;
+            // 
             // Mantenimiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -2537,5 +2565,7 @@
         private System.Windows.Forms.Label Lbl_sueldoEmpe;
         private System.Windows.Forms.TextBox Txt_cargoEmpe;
         private System.Windows.Forms.Label Lbl_cargoEmpe;
+        private System.Windows.Forms.TextBox Txt_correoMedicoE;
+        private System.Windows.Forms.Label Lbl_correoMedicoE;
     }
 }
