@@ -41,7 +41,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.Btn_bitacora = new System.Windows.Forms.Button();
             this.Btn_ganancias = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -87,7 +87,7 @@
             this.Pnl_Menu.Controls.Add(this.button5);
             this.Pnl_Menu.Controls.Add(this.button4);
             this.Pnl_Menu.Controls.Add(this.button3);
-            this.Pnl_Menu.Controls.Add(this.button2);
+            this.Pnl_Menu.Controls.Add(this.Btn_bitacora);
             this.Pnl_Menu.Controls.Add(this.Btn_ganancias);
             this.Pnl_Menu.Controls.Add(this.panel1);
             this.Pnl_Menu.Dock = System.Windows.Forms.DockStyle.Left;
@@ -256,23 +256,23 @@
             this.button3.Text = "Registro Clientes";
             this.button3.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // Btn_bitacora
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(0, 150);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(200, 50);
-            this.button2.TabIndex = 42;
-            this.button2.Text = "Bitácora";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            this.Btn_bitacora.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Btn_bitacora.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_bitacora.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Btn_bitacora.FlatAppearance.BorderSize = 0;
+            this.Btn_bitacora.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
+            this.Btn_bitacora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_bitacora.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_bitacora.ForeColor = System.Drawing.Color.Black;
+            this.Btn_bitacora.Location = new System.Drawing.Point(0, 150);
+            this.Btn_bitacora.Name = "Btn_bitacora";
+            this.Btn_bitacora.Size = new System.Drawing.Size(200, 50);
+            this.Btn_bitacora.TabIndex = 42;
+            this.Btn_bitacora.Text = "Bitácora";
+            this.Btn_bitacora.UseVisualStyleBackColor = false;
+            this.Btn_bitacora.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // Btn_ganancias
             // 
@@ -377,7 +377,7 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button Btn_bitacora;
         private System.Windows.Forms.Button Btn_ganancias;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
