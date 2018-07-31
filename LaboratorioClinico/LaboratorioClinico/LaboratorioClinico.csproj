@@ -33,6 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="MessagingToolkit.Barcode, Version=1.8.3.0, Culture=neutral, PublicKeyToken=4d44dd7196d3c1ac, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\MessagingToolkit.Barcode.dll</HintPath>
@@ -103,6 +108,24 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Gan.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Gan.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ganancia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ganancia.Designer.cs">
+      <DependentUpon>Ganancia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InicioReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InicioReportes.Designer.cs">
+      <DependentUpon>InicioReportes.cs</DependentUpon>
+    </Compile>
     <Compile Include="LeerCodigo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +158,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegCli.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RegCli.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RegClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegClientes.Designer.cs">
+      <DependentUpon>RegClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reportes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +218,16 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Gan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Gan.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ganancia.resx">
+      <DependentUpon>Ganancia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InicioReportes.resx">
+      <DependentUpon>InicioReportes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LeerCodigo.resx">
       <DependentUpon>LeerCodigo.cs</DependentUpon>
     </EmbeddedResource>
@@ -208,6 +253,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RegCli.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RegCli.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegClientes.resx">
+      <DependentUpon>RegClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes.resx">
       <DependentUpon>Reportes.cs</DependentUpon>
     </EmbeddedResource>

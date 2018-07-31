@@ -57,16 +57,16 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Pnl_menudespegable = new System.Windows.Forms.Panel();
-            this.lbl_usuario = new System.Windows.Forms.Label();
             this.lbl_tipo = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.lbl_usuario = new System.Windows.Forms.Label();
             this.lbl_hora = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lbl_fecha = new System.Windows.Forms.Label();
             this.tm_menu = new System.Windows.Forms.Timer(this.components);
             this.tm_menu2 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -97,6 +97,7 @@
             this.pacienteToolStripMenuItem.Name = "pacienteToolStripMenuItem";
             this.pacienteToolStripMenuItem.Size = new System.Drawing.Size(65, 28);
             this.pacienteToolStripMenuItem.Text = "Inicio";
+            this.pacienteToolStripMenuItem.Click += new System.EventHandler(this.pacienteToolStripMenuItem_Click);
             // 
             // Tm_admin
             // 
@@ -367,17 +368,6 @@
             this.Pnl_menudespegable.Size = new System.Drawing.Size(153, 100);
             this.Pnl_menudespegable.TabIndex = 6;
             // 
-            // lbl_usuario
-            // 
-            this.lbl_usuario.AutoSize = true;
-            this.lbl_usuario.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_usuario.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_usuario.Location = new System.Drawing.Point(41, 14);
-            this.lbl_usuario.Name = "lbl_usuario";
-            this.lbl_usuario.Size = new System.Drawing.Size(57, 17);
-            this.lbl_usuario.TabIndex = 3;
-            this.lbl_usuario.Text = "Usuario";
-            // 
             // lbl_tipo
             // 
             this.lbl_tipo.AutoSize = true;
@@ -390,6 +380,17 @@
             this.lbl_tipo.Text = "Usuario";
             this.lbl_tipo.Click += new System.EventHandler(this.lbl_tipo_Click);
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = global::LaboratorioClinico.Properties.Resources.usuario;
+            this.pictureBox3.Location = new System.Drawing.Point(0, 12);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(35, 39);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 7;
+            this.pictureBox3.TabStop = false;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -401,6 +402,17 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Cerrar sesion";
             this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // lbl_usuario
+            // 
+            this.lbl_usuario.AutoSize = true;
+            this.lbl_usuario.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_usuario.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_usuario.Location = new System.Drawing.Point(41, 14);
+            this.lbl_usuario.Name = "lbl_usuario";
+            this.lbl_usuario.Size = new System.Drawing.Size(57, 17);
+            this.lbl_usuario.TabIndex = 3;
+            this.lbl_usuario.Text = "Usuario";
             // 
             // lbl_hora
             // 
@@ -441,17 +453,6 @@
             // 
             this.tm_menu2.Interval = 10;
             this.tm_menu2.Tick += new System.EventHandler(this.tm_menu2_Tick);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = global::LaboratorioClinico.Properties.Resources.usuario;
-            this.pictureBox3.Location = new System.Drawing.Point(0, 12);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(35, 39);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 7;
-            this.pictureBox3.TabStop = false;
             // 
             // Menu
             // 

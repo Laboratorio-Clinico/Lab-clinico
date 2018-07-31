@@ -15,6 +15,7 @@ namespace LaboratorioClinico
         public Reportes()
         {
             InitializeComponent();
+            AbrirReporte(new InicioReportes());
         }
 
         private void Reportes_Load(object sender, EventArgs e)
@@ -50,6 +51,44 @@ namespace LaboratorioClinico
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Btn_ganancias_Click(object sender, EventArgs e)
+        {
+            AbrirReporte(new Ganancia());
+        }
+
+        private void AbrirReporte(object formReport)
+        {
+            //Para abrir un form dentro un panel
+            if (this.Pnl_Contenedor.Controls.Count > 0)
+                this.Pnl_Contenedor.Controls.RemoveAt(0);
+            Form fh = formReport as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.Pnl_Contenedor.Controls.Add(fh);
+            this.Pnl_Contenedor.Tag = fh;
+            fh.Show();
+        }
+
+        private void Lbl_boton_Click(object sender, EventArgs e)
+        {
+            AbrirReporte(new InicioReportes());
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Lbl_inicio_Click(object sender, EventArgs e)
+        {
+            AbrirReporte(new InicioReportes());
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            AbrirReporte(new RegClientes());
         }
     }
 }
