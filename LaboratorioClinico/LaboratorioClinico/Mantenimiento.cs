@@ -22,7 +22,7 @@ namespace LaboratorioClinico
         {
             Tbc_paciente.Visible = false;
             Tbc_medicos.Visible = false;
-            Tbc_examen.Visible = false;
+            //Tbc_examen.Visible = false;
             Tbc_empleado.Visible = false;
             Picb_fondo.Visible = true;
         }
@@ -84,8 +84,6 @@ namespace LaboratorioClinico
                 conexion.ObtenerConexion().Close();
             }
             catch (Exception error) { MessageBox.Show(error.Message); }
-
-
         }
 
         public void prollenarCargo()  //LLENAR EL COMBOBOX DE CARGO EN "EMPLEADO", POR MEDIO DE UNA CONSULTA
@@ -319,7 +317,7 @@ namespace LaboratorioClinico
             {
                 Tbc_paciente.Visible = true;
                 Tbc_medicos.Visible = false;
-                Tbc_examen.Visible = false;
+                //Tbc_examen.Visible = false;
                 Tbc_empleado.Visible = false;
                 Picb_fondo.Visible = false;
 
@@ -328,7 +326,7 @@ namespace LaboratorioClinico
             {
                 Tbc_paciente.Visible = false;
                 Tbc_medicos.Visible = true;
-                Tbc_examen.Visible = false;
+                //Tbc_examen.Visible = false;
                 Tbc_empleado.Visible = false;
                 Picb_fondo.Visible = false;
 
@@ -337,7 +335,7 @@ namespace LaboratorioClinico
             {
                 Tbc_paciente.Visible = false;
                 Tbc_medicos.Visible = false;
-                Tbc_examen.Visible = true;
+                //Tbc_examen.Visible = true;
                 Tbc_empleado.Visible = false;
                 Picb_fondo.Visible = false;
             }
@@ -345,7 +343,7 @@ namespace LaboratorioClinico
             {
                 Tbc_paciente.Visible = false;
                 Tbc_medicos.Visible = false;
-                Tbc_examen.Visible = false;
+                //Tbc_examen.Visible = false;
                 Tbc_empleado.Visible = true;
                 Picb_fondo.Visible = false;
             }
