@@ -56,22 +56,29 @@ namespace LaboratorioClinico
             DataTable datos2 = new DataTable();
             sda2.Fill(datos2);
 
-            int total; int descuento;
+            int subtotal; int descuento;int total;
             int p, c;
             c = Convert.ToInt32(Txt_cantidadf.Text);
             p = Convert.ToInt32(datos2.Rows[0][2].ToString());
-            total = c * p;
+            subtotal = c * p;
             descuento = 1;
-            acumulado = acumulado + total;
+            //descuento = (subtotal) / 100;
+            acumulado = acumulado + subtotal;//Subtotal
 
             if (datos.Rows[0][0].ToString() == "1")
             {
-                Dgb_facturaf.Rows.Add(datos2.Rows[0][0].ToString(), Txt_cantidadf.Text, Txt_descripcion.Text, datos2.Rows[0][2].ToString(), descuento.ToString(), total.ToString());
+                Dgb_facturaf.Rows.Add(datos2.Rows[0][0].ToString(), Txt_cantidadf.Text, Txt_descripcion.Text, datos2.Rows[0][2].ToString(), descuento.ToString(), subtotal.ToString());
                 Txt_totalff.Text = acumulado.ToString();
                 /*
                 cmd.CommandText = "insert into detalle values('" + cont + "','" + Convert.ToInt32(orden.Text) + "','" + datos2.Rows[0][0] + "','" + Convert.ToInt32(cantidadP.Text.ToString()) + "')";
                 cmd.ExecuteNonQuery();
-		*/
+		        */
+                Txt_codigof.ResetText();
+                Txt_cantidadf.ResetText();
+                Txt_descripcion.ResetText();
+                Txt_preciouf.ResetText();
+                Txt_descuentof.ResetText();
+
             }
             else
             {
