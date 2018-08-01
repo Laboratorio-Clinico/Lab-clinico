@@ -15,30 +15,29 @@ namespace LaboratorioClinico
     public partial class Factura : Form
     {
 
-        public void proGuardarDatos()
+        public void proGuardarDatosDetalleFactura()
         {
 
             try
             {
-                OdbcCommand cm;
-                cm = new OdbcCommand("InsertaDetalleFactura", conexion.ObtenerConexion());
-                cm.CommandType = CommandType.StoredProcedure;
 
-                cm.Parameters.AddWithValue("@nIdFactura", this.Lbl_noserie.Text);
-                cm.Parameters.AddWithValue("@iIdExamen", this.Txt_codigof.Text);
-                cm.Parameters.AddWithValue("@iCantidad", this.Txt_cantidadf.Text);
-                cm.Parameters.AddWithValue("@fPrecio", this.Txt_preciouf.Text);
-                cm.Parameters.AddWithValue("@fDescuento", this.Txt_descuentof.Text);
-
-                cm.ExecuteNonQuery();
-                MessageBox.Show("Datos agregados exitosamente");
+                OdbcCommand comando = new OdbcCommand("{CALL InsertaDetalleFactura(?,?,?,?,?)}", conexion.ObtenerConexion());
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("nIdFactura", Lbl_noserie.Text);
+                comando.Parameters.AddWithValue("iIdExamen", Txt_codigof.Text);
+                comando.Parameters.AddWithValue("iCantidad", Txt_cantidadf.Text);
+                comando.Parameters.AddWithValue("fPrecio", Txt_preciouf.Text);
+                comando.Parameters.AddWithValue("fDescuento", Txt_descuentof.Text);
+                
+                comando.ExecuteNonQuery();
+                MessageBox.Show("Datos insertados correctamente");
             }
             catch (Exception error) { MessageBox.Show("Error" + error); }
             finally
             {
 
                 conexion.ObtenerConexion().Close();
-  
+             
 
             }
         }
@@ -117,7 +116,7 @@ namespace LaboratorioClinico
                     /*cmd.CommandText = "insert into detalledefactura values('" + Convert.ToInt32(Lbl_noserie.Text) + "','" + datos2.Rows[0][0] + "','" + Convert.ToInt32(Txt_cantidadf.Text) + "','" + datos2.Rows[0][2].ToString() + "','" + Convert.ToInt32(Txt_descuentof.Text) + "')";
                     cmd.ExecuteNonQuery();*/
 
-                    proGuardarDatos();
+                    proGuardarDatosDetalleFactura();
 
                     Txt_codigof.ResetText();
                     Txt_cantidadf.ResetText();
