@@ -73,26 +73,41 @@ namespace LaboratorioClinico
 
             }
 
-            try { 
-            OdbcCommand cm;
-            cm = new OdbcCommand("ingresaUsuario", conexion.ObtenerConexion());
-            cm.CommandType = CommandType.StoredProcedure;
+            try {
+                /* OdbcCommand cm;
+                 cm = new OdbcCommand("ingresaUsuario", conexion.ObtenerConexion());
+                 cm.CommandType = CommandType.StoredProcedure;
 
-            cm.Parameters.AddWithValue("@iIdPrivilegio", pPrivilegio);
-            cm.Parameters.AddWithValue("@nDPI", this.Txt_codigoDeEmpleado.Text);
-            cm.Parameters.AddWithValue("@sUsuario", this.Txt_usuario.Text);
-            cm.Parameters.AddWithValue("@sContrasena", EncripContra(this.Txt_password.Text));
+                 OdbcParameter parametros = new OdbcParameter();
+                 parametros.Direction = ParameterDirection.ReturnValue;
+
+                 parametros = cm.Parameters.Add("@iIdPrivilegio", OdbcType.Numeric, 13);
+                 parametros.Value = pPrivilegio;
+                 parametros = cm.Parameters.Add("@nDPI", OdbcType.Numeric, 20);
+                 parametros.Value = Txt_codigoDeEmpleado.Text;
+                 parametros = cm.Parameters.Add("@sUsuario", OdbcType.VarChar, 200);
+                 parametros.Value = Txt_usuario.Text;
+                 parametros = cm.Parameters.Add("@sContrasena", OdbcType.VarChar, 100000);
+                 parametros.Value = EncripContra(Txt_password.Text);
+                 */
+                OdbcCommand comando = new OdbcCommand("{CALL IngresaUsuario(?,?,?,?)}", conexion.ObtenerConexion());
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("iIdPrivilegio", pPrivilegio);
+                comando.Parameters.AddWithValue("nDPI", Txt_codigoDeEmpleado.Text);
+                comando.Parameters.AddWithValue("sUsuario", Txt_usuario.Text);
+                comando.Parameters.AddWithValue("sContrasena", EncripContra(Txt_password.Text));
 
 
-            int query = cm.ExecuteNonQuery();
+                //int query = cm.ExecuteNonQuery();
+                int query = comando.ExecuteNonQuery();
 
-            if (query == 1)
+                if (query == 1)
             {
                 MessageBox.Show("Usuario ingresado correctamente", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("No se pudo ingresar", "Incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Usuario NO ingresado", "Incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
             Txt_codigoDeEmpleado.ResetText();
