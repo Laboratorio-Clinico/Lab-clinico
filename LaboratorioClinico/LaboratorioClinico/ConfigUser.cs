@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
+using System.Data.Odbc;
 
 namespace LaboratorioClinico
 {
@@ -23,8 +23,9 @@ namespace LaboratorioClinico
 
             
             //----------------------------------Cargar usuario-----------------------------------------------
-            MySqlCommand cmd2 = new MySqlCommand("Select sUsuario from usuario", conexion.ObtenerConexion());
-            MySqlDataReader almacen2 = cmd2.ExecuteReader();
+            OdbcCommand cmd2 = new OdbcCommand("Select sUsuario from usuario", conexion.ObtenerConexion());
+            OdbcDataReader almacen2 = cmd2.ExecuteReader();
+            
 
             while (almacen2.Read())
             {
@@ -39,8 +40,8 @@ namespace LaboratorioClinico
             try
             {
                 //----------------------------------Cargar Privilegio-----------------------------------------------
-                MySqlCommand cmd = new MySqlCommand("Select sPrivilegio from privilegio", conexion.ObtenerConexion());
-                MySqlDataReader almacen = cmd.ExecuteReader();
+                OdbcCommand cmd = new OdbcCommand("Select sPrivilegio from privilegio", conexion.ObtenerConexion());
+                OdbcDataReader almacen = cmd.ExecuteReader();
 
                 while (almacen.Read())
                 {
@@ -94,13 +95,13 @@ namespace LaboratorioClinico
         {
             try
             {
-                MySqlCommand borrar = new MySqlCommand("delete from usuario where sUsuario = '" + Cmb_usuarioEliminar.SelectedItem.ToString() + "'", conexion.ObtenerConexion());
+                OdbcCommand borrar = new OdbcCommand("delete from usuario where sUsuario = '" + Cmb_usuarioEliminar.SelectedItem.ToString() + "'", conexion.ObtenerConexion());
                 borrar.ExecuteNonQuery();
                 Txt_privilegio.Text = "";
 
                 //-------------------ELIMINAR-----------------------------------------------------------------//
-                MySqlCommand cmd2 = new MySqlCommand("Select sUsuario from usuario", conexion.ObtenerConexion());
-                MySqlDataReader almacen2 = cmd2.ExecuteReader();
+                OdbcCommand cmd2 = new OdbcCommand("Select sUsuario from usuario", conexion.ObtenerConexion());
+                OdbcDataReader almacen2 = cmd2.ExecuteReader();
 
                 Cmb_usuarioEliminar.ResetText();
                 Cmb_usuarioEliminar.Items.Clear();
@@ -130,8 +131,8 @@ namespace LaboratorioClinico
         {
             try
             {
-                MySqlDataAdapter sda = new MySqlDataAdapter("select sPrivilegio from privilegio where iIdPrivilegio = (select iIdPrivilegio from usuario where sUsuario = '" + Cmb_usuarioEliminar.SelectedItem.ToString() + "')", conexion.ObtenerConexion());
-                MySqlCommand cmd = conexion.ObtenerConexion().CreateCommand();
+                OdbcDataAdapter sda = new OdbcDataAdapter("select sPrivilegio from privilegio where iIdPrivilegio = (select iIdPrivilegio from usuario where sUsuario = '" + Cmb_usuarioEliminar.SelectedItem.ToString() + "')", conexion.ObtenerConexion());
+                OdbcCommand cmd = conexion.ObtenerConexion().CreateCommand();
                 DataTable datos = new DataTable();
                 sda.Fill(datos);
 
@@ -163,7 +164,7 @@ namespace LaboratorioClinico
         {
             try
             {
-                MySqlCommand borrar = new MySqlCommand("update usuario set iIdPrivilegio = (select iIdPrivilegio from privilegio where sPrivilegio = '" + Cmb_privi.Text + "') where sUsuario ='" + Cmb_usuario.SelectedItem.ToString() + "'", conexion.ObtenerConexion());
+                OdbcCommand borrar = new OdbcCommand("update usuario set iIdPrivilegio = (select iIdPrivilegio from privilegio where sPrivilegio = '" + Cmb_privi.Text + "') where sUsuario ='" + Cmb_usuario.SelectedItem.ToString() + "'", conexion.ObtenerConexion());
                 borrar.ExecuteNonQuery();
                 MessageBox.Show("Cambios Realizados", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

@@ -273,5 +273,10 @@ namespace LaboratorioClinico
             new Reportes().ShowDialog();
             this.Show();
         }
+
+        private void pacienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

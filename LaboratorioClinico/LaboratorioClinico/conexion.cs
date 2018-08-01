@@ -1,4 +1,4 @@
-﻿using MySql.Data.MySqlClient;
+﻿using System.Data.Odbc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,12 +10,19 @@ namespace LaboratorioClinico
 {
     class conexion
     {
-        public static MySqlConnection ObtenerConexion()
+        /* public static MySqlConnection ObtenerConexion()
+         {
+             MySqlConnection conectar = new MySqlConnection("server=192.168.43.91;database=labclinico;Uid=grupo;pwd=2018;");
+             conectar.Open();
+             //MessageBox.Show("Conexion Exitosa");
+             return conectar;
+         }*/
+        public static OdbcConnection ObtenerConexion()
         {
-            MySqlConnection conectar = new MySqlConnection("server=192.168.43.91;database=labclinico;Uid=grupo;pwd=2018;");
+            OdbcConnection conectar = new OdbcConnection("Dsn=BD_LabClinica");
             conectar.Open();
-            //MessageBox.Show("Conexion Exitosa");
             return conectar;
-        }
+        }  
+
     }
 }

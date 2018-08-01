@@ -309,6 +309,7 @@
             this.Dtp_fechaNacimiento.Name = "Dtp_fechaNacimiento";
             this.Dtp_fechaNacimiento.Size = new System.Drawing.Size(120, 26);
             this.Dtp_fechaNacimiento.TabIndex = 27;
+            this.Dtp_fechaNacimiento.ValueChanged += new System.EventHandler(this.Dtp_fechaNacimiento_ValueChanged);
             // 
             // Lbl_fechaDeNacimiento
             // 

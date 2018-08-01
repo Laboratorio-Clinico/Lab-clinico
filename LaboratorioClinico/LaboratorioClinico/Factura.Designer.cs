@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Factura));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Gpb_laboratoriof = new System.Windows.Forms.GroupBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -37,17 +40,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Gpb_detallef = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             this.Lbl_codigof = new System.Windows.Forms.Label();
             this.Txt_codigof = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.Lbl_descuentto = new System.Windows.Forms.Label();
+            this.Lbl_preciouf = new System.Windows.Forms.Label();
             this.Txt_totalf = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.Lbl_descripcionff = new System.Windows.Forms.Label();
             this.Lbl_nombredf = new System.Windows.Forms.Label();
-            this.Txt_totalff = new System.Windows.Forms.TextBox();
             this.Lbl_totalf = new System.Windows.Forms.Label();
             this.Txt_descuentof = new System.Windows.Forms.TextBox();
             this.Txt_preciouf = new System.Windows.Forms.TextBox();
@@ -58,13 +61,8 @@
             this.Lbl_imprimirf = new System.Windows.Forms.Label();
             this.Txt_cantidadf = new System.Windows.Forms.TextBox();
             this.Dgb_facturaf = new System.Windows.Forms.DataGridView();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Gpb_datosf = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.Dtp_fechaf = new System.Windows.Forms.DateTimePicker();
             this.Txt_direccionf = new System.Windows.Forms.TextBox();
             this.Lbl_fechaf = new System.Windows.Forms.Label();
@@ -75,11 +73,29 @@
             this.Lbl_nombref = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.Lbl_noserie = new System.Windows.Forms.Label();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Lbl_subtotal = new System.Windows.Forms.Label();
+            this.Lbl_descuentos = new System.Windows.Forms.Label();
+            this.Lbl_total = new System.Windows.Forms.Label();
+            this.Lbl_subF = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.Lbl_subFf = new System.Windows.Forms.Label();
+            this.Lbl_desc = new System.Windows.Forms.Label();
+            this.Lbl_totalFf = new System.Windows.Forms.Label();
             this.Gpb_laboratoriof.SuspendLayout();
             this.Gpb_detallef.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgb_facturaf)).BeginInit();
             this.Gpb_datosf.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Gpb_laboratoriof
@@ -95,7 +111,7 @@
             this.Gpb_laboratoriof.ForeColor = System.Drawing.Color.DarkKhaki;
             this.Gpb_laboratoriof.Location = new System.Drawing.Point(12, 12);
             this.Gpb_laboratoriof.Name = "Gpb_laboratoriof";
-            this.Gpb_laboratoriof.Size = new System.Drawing.Size(742, 89);
+            this.Gpb_laboratoriof.Size = new System.Drawing.Size(742, 75);
             this.Gpb_laboratoriof.TabIndex = 0;
             this.Gpb_laboratoriof.TabStop = false;
             this.Gpb_laboratoriof.Text = "LABORATORIO CLINICO";
@@ -131,7 +147,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Silver;
-            this.label5.Location = new System.Drawing.Point(637, 60);
+            this.label5.Location = new System.Drawing.Point(639, 53);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(99, 18);
             this.label5.TabIndex = 4;
@@ -143,7 +159,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(593, 39);
+            this.label3.Location = new System.Drawing.Point(595, 34);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 18);
             this.label3.TabIndex = 2;
@@ -154,7 +170,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(593, 21);
+            this.label2.Location = new System.Drawing.Point(595, 16);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(143, 18);
             this.label2.TabIndex = 1;
@@ -173,17 +189,18 @@
             // Gpb_detallef
             // 
             this.Gpb_detallef.BackColor = System.Drawing.Color.Transparent;
+            this.Gpb_detallef.Controls.Add(this.groupBox1);
+            this.Gpb_detallef.Controls.Add(this.label4);
+            this.Gpb_detallef.Controls.Add(this.button3);
             this.Gpb_detallef.Controls.Add(this.Lbl_codigof);
             this.Gpb_detallef.Controls.Add(this.Txt_codigof);
             this.Gpb_detallef.Controls.Add(this.label12);
             this.Gpb_detallef.Controls.Add(this.button1);
-            this.Gpb_detallef.Controls.Add(this.label9);
-            this.Gpb_detallef.Controls.Add(this.label8);
-            this.Gpb_detallef.Controls.Add(this.label7);
+            this.Gpb_detallef.Controls.Add(this.Lbl_descuentto);
+            this.Gpb_detallef.Controls.Add(this.Lbl_preciouf);
             this.Gpb_detallef.Controls.Add(this.Txt_totalf);
-            this.Gpb_detallef.Controls.Add(this.label6);
+            this.Gpb_detallef.Controls.Add(this.Lbl_descripcionff);
             this.Gpb_detallef.Controls.Add(this.Lbl_nombredf);
-            this.Gpb_detallef.Controls.Add(this.Txt_totalff);
             this.Gpb_detallef.Controls.Add(this.Lbl_totalf);
             this.Gpb_detallef.Controls.Add(this.Txt_descuentof);
             this.Gpb_detallef.Controls.Add(this.Txt_preciouf);
@@ -196,12 +213,37 @@
             this.Gpb_detallef.Controls.Add(this.Dgb_facturaf);
             this.Gpb_detallef.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Gpb_detallef.ForeColor = System.Drawing.SystemColors.Info;
-            this.Gpb_detallef.Location = new System.Drawing.Point(12, 210);
+            this.Gpb_detallef.Location = new System.Drawing.Point(12, 186);
             this.Gpb_detallef.Name = "Gpb_detallef";
-            this.Gpb_detallef.Size = new System.Drawing.Size(742, 267);
+            this.Gpb_detallef.Size = new System.Drawing.Size(742, 291);
             this.Gpb_detallef.TabIndex = 1;
             this.Gpb_detallef.TabStop = false;
             this.Gpb_detallef.Text = "Detalle factura";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(636, 40);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(25, 22);
+            this.label4.TabIndex = 53;
+            this.label4.Text = "%";
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.White;
+            this.button3.BackgroundImage = global::LaboratorioClinico.Properties.Resources.codigobarra;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.Location = new System.Drawing.Point(10, 27);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(41, 38);
+            this.button3.TabIndex = 52;
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Lbl_codigof
             // 
@@ -209,7 +251,7 @@
             this.Lbl_codigof.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_codigof.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_codigof.ForeColor = System.Drawing.Color.White;
-            this.Lbl_codigof.Location = new System.Drawing.Point(28, 23);
+            this.Lbl_codigof.Location = new System.Drawing.Point(60, 23);
             this.Lbl_codigof.Name = "Lbl_codigof";
             this.Lbl_codigof.Size = new System.Drawing.Size(56, 18);
             this.Lbl_codigof.TabIndex = 49;
@@ -218,7 +260,7 @@
             // Txt_codigof
             // 
             this.Txt_codigof.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_codigof.Location = new System.Drawing.Point(26, 41);
+            this.Txt_codigof.Location = new System.Drawing.Point(58, 41);
             this.Txt_codigof.Multiline = true;
             this.Txt_codigof.Name = "Txt_codigof";
             this.Txt_codigof.Size = new System.Drawing.Size(76, 20);
@@ -248,62 +290,50 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label9
+            // Lbl_descuentto
             // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(427, 204);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(43, 18);
-            this.label9.TabIndex = 46;
-            this.label9.Text = "Total";
+            this.Lbl_descuentto.AutoSize = true;
+            this.Lbl_descuentto.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_descuentto.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_descuentto.ForeColor = System.Drawing.Color.White;
+            this.Lbl_descuentto.Location = new System.Drawing.Point(556, 23);
+            this.Lbl_descuentto.Name = "Lbl_descuentto";
+            this.Lbl_descuentto.Size = new System.Drawing.Size(82, 18);
+            this.Lbl_descuentto.TabIndex = 45;
+            this.Lbl_descuentto.Text = "Descuento";
             // 
-            // label8
+            // Lbl_preciouf
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(524, 23);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(82, 18);
-            this.label8.TabIndex = 45;
-            this.label8.Text = "Descuento";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(391, 23);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(116, 18);
-            this.label7.TabIndex = 44;
-            this.label7.Text = "Precio Unitario";
+            this.Lbl_preciouf.AutoSize = true;
+            this.Lbl_preciouf.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_preciouf.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_preciouf.ForeColor = System.Drawing.Color.White;
+            this.Lbl_preciouf.Location = new System.Drawing.Point(423, 23);
+            this.Lbl_preciouf.Name = "Lbl_preciouf";
+            this.Lbl_preciouf.Size = new System.Drawing.Size(116, 18);
+            this.Lbl_preciouf.TabIndex = 44;
+            this.Lbl_preciouf.Text = "Precio Unitario";
             // 
             // Txt_totalf
             // 
             this.Txt_totalf.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_totalf.Location = new System.Drawing.Point(17, 223);
+            this.Txt_totalf.Location = new System.Drawing.Point(20, 242);
             this.Txt_totalf.Multiline = true;
             this.Txt_totalf.Name = "Txt_totalf";
-            this.Txt_totalf.Size = new System.Drawing.Size(379, 20);
+            this.Txt_totalf.Size = new System.Drawing.Size(313, 20);
             this.Txt_totalf.TabIndex = 23;
             // 
-            // label6
+            // Lbl_descripcionff
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(193, 23);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(93, 18);
-            this.label6.TabIndex = 43;
-            this.label6.Text = "Descripción";
+            this.Lbl_descripcionff.AutoSize = true;
+            this.Lbl_descripcionff.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_descripcionff.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_descripcionff.ForeColor = System.Drawing.Color.White;
+            this.Lbl_descripcionff.Location = new System.Drawing.Point(225, 23);
+            this.Lbl_descripcionff.Name = "Lbl_descripcionff";
+            this.Lbl_descripcionff.Size = new System.Drawing.Size(93, 18);
+            this.Lbl_descripcionff.TabIndex = 43;
+            this.Lbl_descripcionff.Text = "Descripción";
             // 
             // Lbl_nombredf
             // 
@@ -311,20 +341,11 @@
             this.Lbl_nombredf.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_nombredf.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_nombredf.ForeColor = System.Drawing.Color.White;
-            this.Lbl_nombredf.Location = new System.Drawing.Point(113, 23);
+            this.Lbl_nombredf.Location = new System.Drawing.Point(145, 23);
             this.Lbl_nombredf.Name = "Lbl_nombredf";
             this.Lbl_nombredf.Size = new System.Drawing.Size(70, 18);
             this.Lbl_nombredf.TabIndex = 23;
             this.Lbl_nombredf.Text = "Cantidad";
-            // 
-            // Txt_totalff
-            // 
-            this.Txt_totalff.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_totalff.Location = new System.Drawing.Point(430, 222);
-            this.Txt_totalff.Multiline = true;
-            this.Txt_totalff.Name = "Txt_totalff";
-            this.Txt_totalff.Size = new System.Drawing.Size(102, 20);
-            this.Txt_totalff.TabIndex = 42;
             // 
             // Lbl_totalf
             // 
@@ -332,7 +353,7 @@
             this.Lbl_totalf.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_totalf.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_totalf.ForeColor = System.Drawing.Color.White;
-            this.Lbl_totalf.Location = new System.Drawing.Point(14, 202);
+            this.Lbl_totalf.Location = new System.Drawing.Point(17, 221);
             this.Lbl_totalf.Name = "Lbl_totalf";
             this.Lbl_totalf.Size = new System.Drawing.Size(182, 18);
             this.Lbl_totalf.TabIndex = 33;
@@ -341,16 +362,16 @@
             // Txt_descuentof
             // 
             this.Txt_descuentof.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_descuentof.Location = new System.Drawing.Point(524, 41);
+            this.Txt_descuentof.Location = new System.Drawing.Point(556, 41);
             this.Txt_descuentof.Multiline = true;
             this.Txt_descuentof.Name = "Txt_descuentof";
-            this.Txt_descuentof.Size = new System.Drawing.Size(105, 20);
+            this.Txt_descuentof.Size = new System.Drawing.Size(82, 20);
             this.Txt_descuentof.TabIndex = 41;
             // 
             // Txt_preciouf
             // 
             this.Txt_preciouf.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_preciouf.Location = new System.Drawing.Point(394, 41);
+            this.Txt_preciouf.Location = new System.Drawing.Point(426, 41);
             this.Txt_preciouf.Multiline = true;
             this.Txt_preciouf.Name = "Txt_preciouf";
             this.Txt_preciouf.Size = new System.Drawing.Size(124, 20);
@@ -360,7 +381,7 @@
             // 
             this.Btn_guardar.BackgroundImage = global::LaboratorioClinico.Properties.Resources.guardar;
             this.Btn_guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Btn_guardar.Location = new System.Drawing.Point(619, 197);
+            this.Btn_guardar.Location = new System.Drawing.Point(619, 223);
             this.Btn_guardar.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_guardar.Name = "Btn_guardar";
             this.Btn_guardar.Size = new System.Drawing.Size(53, 44);
@@ -373,7 +394,7 @@
             this.Lbl_cargarf.AutoSize = true;
             this.Lbl_cargarf.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_cargarf.ForeColor = System.Drawing.Color.White;
-            this.Lbl_cargarf.Location = new System.Drawing.Point(625, 246);
+            this.Lbl_cargarf.Location = new System.Drawing.Point(625, 272);
             this.Lbl_cargarf.Name = "Lbl_cargarf";
             this.Lbl_cargarf.Size = new System.Drawing.Size(38, 15);
             this.Lbl_cargarf.TabIndex = 38;
@@ -383,7 +404,7 @@
             // Txt_descripcion
             // 
             this.Txt_descripcion.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_descripcion.Location = new System.Drawing.Point(192, 41);
+            this.Txt_descripcion.Location = new System.Drawing.Point(224, 41);
             this.Txt_descripcion.Multiline = true;
             this.Txt_descripcion.Name = "Txt_descripcion";
             this.Txt_descripcion.Size = new System.Drawing.Size(194, 20);
@@ -393,7 +414,7 @@
             // 
             this.Btn_imprimirf.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Btn_imprimirf.BackgroundImage")));
             this.Btn_imprimirf.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Btn_imprimirf.Location = new System.Drawing.Point(679, 197);
+            this.Btn_imprimirf.Location = new System.Drawing.Point(679, 223);
             this.Btn_imprimirf.Name = "Btn_imprimirf";
             this.Btn_imprimirf.Size = new System.Drawing.Size(53, 44);
             this.Btn_imprimirf.TabIndex = 35;
@@ -404,7 +425,7 @@
             this.Lbl_imprimirf.AutoSize = true;
             this.Lbl_imprimirf.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_imprimirf.ForeColor = System.Drawing.Color.White;
-            this.Lbl_imprimirf.Location = new System.Drawing.Point(684, 246);
+            this.Lbl_imprimirf.Location = new System.Drawing.Point(684, 272);
             this.Lbl_imprimirf.Name = "Lbl_imprimirf";
             this.Lbl_imprimirf.Size = new System.Drawing.Size(48, 15);
             this.Lbl_imprimirf.TabIndex = 36;
@@ -413,7 +434,7 @@
             // Txt_cantidadf
             // 
             this.Txt_cantidadf.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_cantidadf.Location = new System.Drawing.Point(111, 41);
+            this.Txt_cantidadf.Location = new System.Drawing.Point(143, 41);
             this.Txt_cantidadf.Multiline = true;
             this.Txt_cantidadf.Name = "Txt_cantidadf";
             this.Txt_cantidadf.Size = new System.Drawing.Size(76, 20);
@@ -421,58 +442,43 @@
             // 
             // Dgb_facturaf
             // 
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.Dgb_facturaf.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgb_facturaf.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.Dgb_facturaf.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Dgb_facturaf.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column6,
             this.Column1,
             this.Column2,
             this.Column3,
+            this.Column7,
             this.Column4,
             this.Column5});
-            this.Dgb_facturaf.Location = new System.Drawing.Point(11, 72);
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Dgb_facturaf.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Dgb_facturaf.Location = new System.Drawing.Point(9, 72);
             this.Dgb_facturaf.Name = "Dgb_facturaf";
-            this.Dgb_facturaf.Size = new System.Drawing.Size(721, 118);
+            this.Dgb_facturaf.Size = new System.Drawing.Size(721, 130);
             this.Dgb_facturaf.TabIndex = 34;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Codigo";
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 70;
-            // 
-            // Column1
-            // 
-            this.Column1.FillWeight = 120F;
-            this.Column1.HeaderText = "Cantidad";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 90;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Descripción";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 210;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Precio Unitario";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 120;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Descuento";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 90;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Total";
-            this.Column5.Name = "Column5";
             // 
             // Gpb_datosf
             // 
             this.Gpb_datosf.BackColor = System.Drawing.Color.Transparent;
+            this.Gpb_datosf.Controls.Add(this.button2);
             this.Gpb_datosf.Controls.Add(this.Dtp_fechaf);
             this.Gpb_datosf.Controls.Add(this.Txt_direccionf);
             this.Gpb_datosf.Controls.Add(this.Lbl_fechaf);
@@ -484,19 +490,32 @@
             this.Gpb_datosf.Controls.Add(this.textBox2);
             this.Gpb_datosf.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Gpb_datosf.ForeColor = System.Drawing.SystemColors.Info;
-            this.Gpb_datosf.Location = new System.Drawing.Point(12, 109);
+            this.Gpb_datosf.Location = new System.Drawing.Point(12, 92);
             this.Gpb_datosf.Name = "Gpb_datosf";
-            this.Gpb_datosf.Size = new System.Drawing.Size(736, 101);
+            this.Gpb_datosf.Size = new System.Drawing.Size(736, 95);
             this.Gpb_datosf.TabIndex = 2;
             this.Gpb_datosf.TabStop = false;
             this.Gpb_datosf.Text = "Datos Paciente";
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.BackgroundImage = global::LaboratorioClinico.Properties.Resources.lupa;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.Location = new System.Drawing.Point(250, 51);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(41, 38);
+            this.button2.TabIndex = 51;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Dtp_fechaf
             // 
             this.Dtp_fechaf.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Dtp_fechaf.CustomFormat = "dd-MM-yy";
             this.Dtp_fechaf.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Dtp_fechaf.Location = new System.Drawing.Point(575, 28);
+            this.Dtp_fechaf.Location = new System.Drawing.Point(596, 21);
             this.Dtp_fechaf.Name = "Dtp_fechaf";
             this.Dtp_fechaf.Size = new System.Drawing.Size(104, 29);
             this.Dtp_fechaf.TabIndex = 22;
@@ -504,7 +523,7 @@
             // Txt_direccionf
             // 
             this.Txt_direccionf.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_direccionf.Location = new System.Drawing.Point(360, 69);
+            this.Txt_direccionf.Location = new System.Drawing.Point(382, 62);
             this.Txt_direccionf.Multiline = true;
             this.Txt_direccionf.Name = "Txt_direccionf";
             this.Txt_direccionf.Size = new System.Drawing.Size(319, 20);
@@ -516,7 +535,7 @@
             this.Lbl_fechaf.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_fechaf.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_fechaf.ForeColor = System.Drawing.Color.White;
-            this.Lbl_fechaf.Location = new System.Drawing.Point(518, 31);
+            this.Lbl_fechaf.Location = new System.Drawing.Point(539, 24);
             this.Lbl_fechaf.Name = "Lbl_fechaf";
             this.Lbl_fechaf.Size = new System.Drawing.Size(48, 18);
             this.Lbl_fechaf.TabIndex = 10;
@@ -525,7 +544,7 @@
             // Txt_nitf
             // 
             this.Txt_nitf.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_nitf.Location = new System.Drawing.Point(124, 69);
+            this.Txt_nitf.Location = new System.Drawing.Point(124, 62);
             this.Txt_nitf.Multiline = true;
             this.Txt_nitf.Name = "Txt_nitf";
             this.Txt_nitf.Size = new System.Drawing.Size(124, 20);
@@ -538,7 +557,7 @@
             this.Lbl_direccionf.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_direccionf.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_direccionf.ForeColor = System.Drawing.Color.White;
-            this.Lbl_direccionf.Location = new System.Drawing.Point(276, 69);
+            this.Lbl_direccionf.Location = new System.Drawing.Point(298, 62);
             this.Lbl_direccionf.Name = "Lbl_direccionf";
             this.Lbl_direccionf.Size = new System.Drawing.Size(78, 18);
             this.Lbl_direccionf.TabIndex = 7;
@@ -547,7 +566,7 @@
             // Txt_nombref
             // 
             this.Txt_nombref.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_nombref.Location = new System.Drawing.Point(124, 31);
+            this.Txt_nombref.Location = new System.Drawing.Point(124, 24);
             this.Txt_nombref.Multiline = true;
             this.Txt_nombref.Name = "Txt_nombref";
             this.Txt_nombref.Size = new System.Drawing.Size(379, 20);
@@ -559,7 +578,7 @@
             this.Lbl_nitf.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_nitf.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_nitf.ForeColor = System.Drawing.Color.White;
-            this.Lbl_nitf.Location = new System.Drawing.Point(29, 71);
+            this.Lbl_nitf.Location = new System.Drawing.Point(29, 64);
             this.Lbl_nitf.Name = "Lbl_nitf";
             this.Lbl_nitf.Size = new System.Drawing.Size(30, 18);
             this.Lbl_nitf.TabIndex = 6;
@@ -571,7 +590,7 @@
             this.Lbl_nombref.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_nombref.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_nombref.ForeColor = System.Drawing.Color.White;
-            this.Lbl_nombref.Location = new System.Drawing.Point(29, 31);
+            this.Lbl_nombref.Location = new System.Drawing.Point(29, 24);
             this.Lbl_nombref.Name = "Lbl_nombref";
             this.Lbl_nombref.Size = new System.Drawing.Size(64, 18);
             this.Lbl_nombref.TabIndex = 5;
@@ -588,25 +607,192 @@
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(627, 102);
+            this.label10.Location = new System.Drawing.Point(627, 84);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(76, 18);
+            this.label10.Size = new System.Drawing.Size(90, 22);
             this.label10.TabIndex = 5;
             this.label10.Text = "Serie \"A\"";
             // 
-            // label11
+            // Lbl_noserie
             // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Red;
-            this.label11.Location = new System.Drawing.Point(703, 101);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(36, 18);
-            this.label11.TabIndex = 6;
-            this.label11.Text = "0001";
+            this.Lbl_noserie.AutoSize = true;
+            this.Lbl_noserie.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_noserie.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_noserie.ForeColor = System.Drawing.Color.Red;
+            this.Lbl_noserie.Location = new System.Drawing.Point(703, 83);
+            this.Lbl_noserie.Name = "Lbl_noserie";
+            this.Lbl_noserie.Size = new System.Drawing.Size(46, 22);
+            this.Lbl_noserie.TabIndex = 6;
+            this.Lbl_noserie.Text = "0001";
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Codigo";
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 65;
+            // 
+            // Column1
+            // 
+            this.Column1.FillWeight = 120F;
+            this.Column1.HeaderText = "Cantidad";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 75;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Descripción";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 190;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Precio Unitario";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 85;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Sub-Total";
+            this.Column7.Name = "Column7";
+            this.Column7.Width = 90;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Descuento";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 90;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Total";
+            this.Column5.Name = "Column5";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.Lbl_totalFf);
+            this.groupBox1.Controls.Add(this.Lbl_desc);
+            this.groupBox1.Controls.Add(this.Lbl_subFf);
+            this.groupBox1.Controls.Add(this.label19);
+            this.groupBox1.Controls.Add(this.label18);
+            this.groupBox1.Controls.Add(this.Lbl_subF);
+            this.groupBox1.Controls.Add(this.Lbl_total);
+            this.groupBox1.Controls.Add(this.Lbl_descuentos);
+            this.groupBox1.Controls.Add(this.Lbl_subtotal);
+            this.groupBox1.Location = new System.Drawing.Point(402, 208);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(185, 75);
+            this.groupBox1.TabIndex = 54;
+            this.groupBox1.TabStop = false;
+            // 
+            // Lbl_subtotal
+            // 
+            this.Lbl_subtotal.AutoSize = true;
+            this.Lbl_subtotal.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_subtotal.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_subtotal.ForeColor = System.Drawing.Color.White;
+            this.Lbl_subtotal.Location = new System.Drawing.Point(6, 13);
+            this.Lbl_subtotal.Name = "Lbl_subtotal";
+            this.Lbl_subtotal.Size = new System.Drawing.Size(74, 18);
+            this.Lbl_subtotal.TabIndex = 55;
+            this.Lbl_subtotal.Text = "Sub-Total";
+            // 
+            // Lbl_descuentos
+            // 
+            this.Lbl_descuentos.AutoSize = true;
+            this.Lbl_descuentos.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_descuentos.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_descuentos.ForeColor = System.Drawing.Color.White;
+            this.Lbl_descuentos.Location = new System.Drawing.Point(6, 31);
+            this.Lbl_descuentos.Name = "Lbl_descuentos";
+            this.Lbl_descuentos.Size = new System.Drawing.Size(82, 18);
+            this.Lbl_descuentos.TabIndex = 56;
+            this.Lbl_descuentos.Text = "Descuento";
+            // 
+            // Lbl_total
+            // 
+            this.Lbl_total.AutoSize = true;
+            this.Lbl_total.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_total.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_total.ForeColor = System.Drawing.Color.White;
+            this.Lbl_total.Location = new System.Drawing.Point(6, 49);
+            this.Lbl_total.Name = "Lbl_total";
+            this.Lbl_total.Size = new System.Drawing.Size(43, 18);
+            this.Lbl_total.TabIndex = 57;
+            this.Lbl_total.Text = "Total";
+            // 
+            // Lbl_subF
+            // 
+            this.Lbl_subF.AutoSize = true;
+            this.Lbl_subF.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_subF.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_subF.ForeColor = System.Drawing.Color.White;
+            this.Lbl_subF.Location = new System.Drawing.Point(105, 15);
+            this.Lbl_subF.Name = "Lbl_subF";
+            this.Lbl_subF.Size = new System.Drawing.Size(24, 18);
+            this.Lbl_subF.TabIndex = 58;
+            this.Lbl_subF.Text = "Q.";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.Transparent;
+            this.label18.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Location = new System.Drawing.Point(105, 33);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(24, 18);
+            this.label18.TabIndex = 59;
+            this.label18.Text = "Q.";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.Color.Transparent;
+            this.label19.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.White;
+            this.label19.Location = new System.Drawing.Point(105, 51);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(24, 18);
+            this.label19.TabIndex = 60;
+            this.label19.Text = "Q.";
+            // 
+            // Lbl_subFf
+            // 
+            this.Lbl_subFf.AutoSize = true;
+            this.Lbl_subFf.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_subFf.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_subFf.ForeColor = System.Drawing.Color.White;
+            this.Lbl_subFf.Location = new System.Drawing.Point(124, 15);
+            this.Lbl_subFf.Name = "Lbl_subFf";
+            this.Lbl_subFf.Size = new System.Drawing.Size(12, 18);
+            this.Lbl_subFf.TabIndex = 61;
+            this.Lbl_subFf.Text = ".";
+            // 
+            // Lbl_desc
+            // 
+            this.Lbl_desc.AutoSize = true;
+            this.Lbl_desc.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_desc.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_desc.ForeColor = System.Drawing.Color.White;
+            this.Lbl_desc.Location = new System.Drawing.Point(124, 33);
+            this.Lbl_desc.Name = "Lbl_desc";
+            this.Lbl_desc.Size = new System.Drawing.Size(12, 18);
+            this.Lbl_desc.TabIndex = 62;
+            this.Lbl_desc.Text = ".";
+            // 
+            // Lbl_totalFf
+            // 
+            this.Lbl_totalFf.AutoSize = true;
+            this.Lbl_totalFf.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_totalFf.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_totalFf.ForeColor = System.Drawing.Color.White;
+            this.Lbl_totalFf.Location = new System.Drawing.Point(124, 51);
+            this.Lbl_totalFf.Name = "Lbl_totalFf";
+            this.Lbl_totalFf.Size = new System.Drawing.Size(12, 18);
+            this.Lbl_totalFf.TabIndex = 62;
+            this.Lbl_totalFf.Text = ".";
             // 
             // Factura
             // 
@@ -615,7 +801,7 @@
             this.BackgroundImage = global::LaboratorioClinico.Properties.Resources.FONDOO;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(766, 489);
-            this.Controls.Add(this.label11);
+            this.Controls.Add(this.Lbl_noserie);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.Gpb_datosf);
             this.Controls.Add(this.Gpb_detallef);
@@ -632,6 +818,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Dgb_facturaf)).EndInit();
             this.Gpb_datosf.ResumeLayout(false);
             this.Gpb_datosf.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -659,19 +847,17 @@
         private System.Windows.Forms.Label Lbl_totalf;
         private System.Windows.Forms.DateTimePicker Dtp_fechaf;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label Lbl_noserie;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button Btn_imprimirf;
         private System.Windows.Forms.Label Lbl_imprimirf;
         private System.Windows.Forms.Label Lbl_cargarf;
         private System.Windows.Forms.Button Btn_guardar;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label Lbl_descuentto;
+        private System.Windows.Forms.Label Lbl_preciouf;
+        private System.Windows.Forms.Label Lbl_descripcionff;
         private System.Windows.Forms.Label Lbl_nombredf;
-        private System.Windows.Forms.TextBox Txt_totalff;
         private System.Windows.Forms.TextBox Txt_descuentof;
         private System.Windows.Forms.TextBox Txt_preciouf;
         private System.Windows.Forms.TextBox Txt_descripcion;
@@ -680,11 +866,25 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label Lbl_codigof;
         private System.Windows.Forms.TextBox Txt_codigof;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label Lbl_subF;
+        private System.Windows.Forms.Label Lbl_total;
+        private System.Windows.Forms.Label Lbl_descuentos;
+        private System.Windows.Forms.Label Lbl_subtotal;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label Lbl_totalFf;
+        private System.Windows.Forms.Label Lbl_desc;
+        private System.Windows.Forms.Label Lbl_subFf;
     }
 }

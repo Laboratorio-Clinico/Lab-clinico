@@ -1,4 +1,4 @@
-﻿using MySql.Data.MySqlClient;
+﻿using System.Data.Odbc;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -34,57 +34,63 @@ namespace LaboratorioClinico
         {
 
         }
-        public void proGuardarDatos(int iEmpresa,int iEspecialidad) {
+        public void proGuardarDatos(int iEmpresas,int iEspecialidades) {
 
             try
             {
-                MySqlCommand cm;
-                cm = new MySqlCommand("Pro_ingresoNuevoMedico", conexion.ObtenerConexion());
-                cm.CommandType = CommandType.StoredProcedure;
 
-                cm.Parameters.AddWithValue("@sNombre", this.Txt_nombre);
-                cm.Parameters.AddWithValue("@sApellido", this.Txt_apellido);
-                cm.Parameters.AddWithValue("@nTelefono", this.Txt_telefono);
-                cm.Parameters.AddWithValue("@sDireccion", this.Txt_direccion);
-                cm.Parameters.AddWithValue("@sCorreo", this.Txt_Correo);
-                cm.Parameters.AddWithValue("@sEspecialidad", iEspecialidad);
-                cm.Parameters.AddWithValue("@iColegiado", this.Txt_colegiado);
-                cm.Parameters.AddWithValue("@iEmpresa", iEmpresa);
-                cm.Parameters.AddWithValue("@dFechaDeNacimiento", this.Dtp_fechaNacimiento);
-                cm.ExecuteNonQuery();
-                MessageBox.Show("Datos agregados exitosamente");
+                OdbcCommand comando = new OdbcCommand("{CALL Pro_ingresoNuevoMedico(?,?,?,?,?,?,?,?,?)}", conexion.ObtenerConexion());
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("iColegiado", Txt_colegiado.Text);
+                comando.Parameters.AddWithValue("sNombre", Txt_nombre.Text);
+                comando.Parameters.AddWithValue("sApellido", Txt_apellido.Text);
+                comando.Parameters.AddWithValue("nTelefono", Txt_telefono.Text);
+                comando.Parameters.AddWithValue("sDireccion", Txt_direccion.Text);
+                comando.Parameters.AddWithValue("sCorreo", Txt_Correo.Text);
+                comando.Parameters.AddWithValue("iIdEspecialidad", iEspecialidades);
+                comando.Parameters.AddWithValue("iIdEmpresa", iEmpresas);
+                comando.Parameters.AddWithValue("dFechaDeNacimiento", Dtp_fechaNacimiento.Text);
+                comando.ExecuteNonQuery();
+                MessageBox.Show("Datos insertados correctamente");
+            }
+            catch (Exception error) { MessageBox.Show("Error"+error); }
+            finally
+            {
 
-                Txt_Correo.ResetText();
+                conexion.ObtenerConexion().Close();
+                Txt_colegiado.ResetText();
                 Txt_nombre.ResetText();
                 Txt_apellido.ResetText();
                 Txt_telefono.ResetText();
+                Txt_Correo.ResetText();
                 Txt_direccion.ResetText();
-                Cmb_especialidad.ResetText();
-                Txt_colegiado.ResetText();
-                Cmb_empresa.ResetText();
                 Dtp_fechaNacimiento.ResetText();
-            }
-            catch (Exception error) { MessageBox.Show("Error"); }
+            
         }
+    }
         public void proLlenarEmpresa()
         {
 
             try
+               
             {
-                Cmb_empresa.Text = "Seleccione una empresa";
                 Cmb_empresa.Items.Clear();
+                Cmb_empresa.Text = "Seleccione una empresa";
                 conexion.ObtenerConexion();
-                MySqlCommand comando = new MySqlCommand("Select iIdEmpresa,sEmpresa from Empresa", conexion.ObtenerConexion());
-                MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
+                OdbcCommand comando = new OdbcCommand("Select iIdEmpresa,sEmpresa from empresa", conexion.ObtenerConexion());
+                OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
                 DataTable tabla = new DataTable();
 
                 adaptador.Fill(tabla);
+                DataRow fila = tabla.NewRow();
+                fila["sEmpresa"] = "Seleccione una Empresa";
+                tabla.Rows.InsertAt(fila, 0);
 
                 Cmb_empresa.ValueMember = "iIdEmpresa";
                 Cmb_empresa.DisplayMember = "sEmpresa";
 
                 Cmb_empresa.DataSource = tabla;
-
+                
                 conexion.ObtenerConexion().Close();
 
             }
@@ -97,20 +103,24 @@ namespace LaboratorioClinico
 
             try
             {
-                Cmb_empresa.Text = "Seleccione la especialidad";
-                Cmb_empresa.Items.Clear();
+        
+                
                 conexion.ObtenerConexion();
-                MySqlCommand comando = new MySqlCommand("Select iIdEspecialidad,sEspecialidad from Especialidad", conexion.ObtenerConexion());
-                MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
+                OdbcCommand comando = new OdbcCommand("Select iIdEspecialidad,sEspecialidad from especialidad", conexion.ObtenerConexion());
+                OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
                 DataTable tabla = new DataTable();
 
                 adaptador.Fill(tabla);
 
-                Cmb_empresa.ValueMember = "iIdEspecialidad";
-                Cmb_empresa.DisplayMember = "sEspecialidad";
+                DataRow fila = tabla.NewRow();
+                fila["sEspecialidad"] = "Seleccione la especialidad";
+                tabla.Rows.InsertAt(fila, 0);
 
-                Cmb_empresa.DataSource = tabla;
+                Cmb_especialidad.ValueMember = "iIdEspecialidad";
+                Cmb_especialidad.DisplayMember = "sEspecialidad";
 
+                Cmb_especialidad.DataSource = tabla;
+                
                 conexion.ObtenerConexion().Close();
 
             }
@@ -122,17 +132,10 @@ namespace LaboratorioClinico
         {
 
 
-            try
-            {
-
-                int iEmpresa = Convert.ToInt32(Cmb_empresa.SelectedValue);
-                int iEspecialidad = Convert.ToInt32(Cmb_especialidad.SelectedValue);
-                proGuardarDatos(iEmpresa, iEspecialidad);
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show("Error", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+                int iEmpresas = Convert.ToInt32(Cmb_empresa.SelectedValue);
+                int iEspecialidades = Convert.ToInt32(Cmb_especialidad.SelectedValue);
+            
+                proGuardarDatos(iEmpresas, iEspecialidades);
 
 
 

@@ -145,6 +145,7 @@
             this.Cmb_sangrep.Name = "Cmb_sangrep";
             this.Cmb_sangrep.Size = new System.Drawing.Size(180, 25);
             this.Cmb_sangrep.TabIndex = 50;
+            this.Cmb_sangrep.SelectedIndexChanged += new System.EventHandler(this.Cmb_sangrep_SelectedIndexChanged);
             // 
             // Lbl_correop
             // 

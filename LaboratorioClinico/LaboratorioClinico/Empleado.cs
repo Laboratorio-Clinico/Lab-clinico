@@ -1,4 +1,4 @@
-﻿using MySql.Data.MySqlClient;
+﻿using System.Data.Odbc;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,54 +20,64 @@ namespace LaboratorioClinico
             proLlenareCargo();
         }
 
-        public void Pro_guardarDatos(int iCargo) {
-            try {
+        public void Pro_guardarDatos() {
 
-                MySqlCommand cm;
-                cm = new MySqlCommand("Pro_ingresoNuevoEmpleado", conexion.ObtenerConexion());
-                cm.CommandType = CommandType.StoredProcedure;
-                cm.Parameters.AddWithValue("@iIdEmpleado", this.Txt_DPIEmpleado.Text);
-                cm.Parameters.AddWithValue("@sNombre", this.Txt_nombre.Text);
-                cm.Parameters.AddWithValue("@sApellido", this.Txt_apellido.Text);
-                cm.Parameters.AddWithValue("@nTelefono", this.Txt_telefono.Text);
-                cm.Parameters.AddWithValue("@sDireccion", this.Txt_direccion.Text);
-                cm.Parameters.AddWithValue("@sCorreo", this.Txt_correo.Text);
-                cm.Parameters.AddWithValue("@iIdCargo", iCargo);
-                cm.Parameters.AddWithValue("@fSueldo", this.Txt_sueldo.Text);
-                cm.Parameters.AddWithValue("@dFechaDeNacimiento", this.Dtp_fechaNacimiento.Text);
-                cm.Parameters.AddWithValue("@iIdUsuario", this.Txt_DPIEmpleado.Text);
-                cm.ExecuteNonQuery();
+            try
+            {
+
+                int iCargo = Convert.ToInt32(Cmb_cargo.SelectedValue);
+      
+
+                OdbcCommand comando = new OdbcCommand("{CALL Pro_insertarEmpleado(?,?,?,?,?,?,?,?,?,?)}", conexion.ObtenerConexion());
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("iEmpleado", Txt_DPIEmpleado.Text);
+                comando.Parameters.AddWithValue("sNombre", Txt_nombre.Text);
+                comando.Parameters.AddWithValue("sApellido", Txt_apellido.Text);
+                comando.Parameters.AddWithValue("nTelefono", Txt_telefono.Text);
+                comando.Parameters.AddWithValue("sDireccion", Txt_direccion.Text);
+                comando.Parameters.AddWithValue("sCorreo", Txt_correo.Text);
+                comando.Parameters.AddWithValue("iCargo", iCargo);
+                comando.Parameters.AddWithValue("fSueldo", Txt_sueldo.Text);
+                comando.Parameters.AddWithValue("dFechaDeNacimiento", Dtp_fechaNacimiento.Text);
+                comando.Parameters.AddWithValue("iUsuario", Txt_DPIEmpleado.Text);
+                comando.ExecuteNonQuery();
                 MessageBox.Show("Datos insertados correctamente");
-                
-            } catch(MySqlException error) { MessageBox.Show(error.Message); }
 
-            finally {
 
+
+            }
+            catch (Exception error) { MessageBox.Show("Error" + error);
+               
             conexion.ObtenerConexion().Close(); }
-            Txt_DPIEmpleado.ResetText();
-            Txt_nombre.ResetText();
-            Txt_apellido.ResetText();
-            Txt_telefono.ResetText();
-            Txt_correo.ResetText();
-            Txt_direccion.ResetText();
-            Txt_sueldo.ResetText();
-            Cmb_cargo.ResetText();
-            Dtp_fechaNacimiento.ResetText();
-        }
+                  Txt_DPIEmpleado.ResetText();
+                  Txt_nombre.ResetText();
+                  Txt_apellido.ResetText();
+                  Txt_telefono.ResetText();
+                  Txt_correo.ResetText();
+                  Txt_direccion.ResetText();
+                  Txt_sueldo.ResetText();
+                  Cmb_cargo.ResetText();
+                  Dtp_fechaNacimiento.ResetText();
+            }
+
         public void proLlenareCargo()
         {
 
 
             try
             {
-                Cmb_cargo.Text = "Seleccione el cargo correspondiente";
-                Cmb_cargo.Items.Clear();
+                
+                
                 conexion.ObtenerConexion();
-                MySqlCommand comando = new MySqlCommand("Select iIdCargo,sDescripcion from Cargo", conexion.ObtenerConexion());
-                MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
+                OdbcCommand comando = new OdbcCommand("Select iIdCargo,sDescripcion from cargo", conexion.ObtenerConexion());
+                OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
                 DataTable tabla = new DataTable();
 
                 adaptador.Fill(tabla);
+
+                DataRow fila = tabla.NewRow();
+                fila["sDescripcion"] = "Seleccione el puesto";
+                tabla.Rows.InsertAt(fila, 0);
 
                 Cmb_cargo.ValueMember = "iIdCargo";
                 Cmb_cargo.DisplayMember = "sDescripcion";
@@ -77,18 +87,23 @@ namespace LaboratorioClinico
                 conexion.ObtenerConexion().Close();
 
             }
-            catch (MySqlException error) { MessageBox.Show(error.Message); }
+            catch (OdbcException error) { MessageBox.Show(error.Message); }
         }
 
 
         private void Btn_guardar_Click(object sender, EventArgs e)
         {
-            int iCargo = Convert.ToInt32(Cmb_cargo.SelectedValue);
-            Pro_guardarDatos(iCargo);
+           
+            Pro_guardarDatos();
 
         }
 
         private void Cmb_cargo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Dtp_fechaNacimiento_ValueChanged(object sender, EventArgs e)
         {
 
         }
