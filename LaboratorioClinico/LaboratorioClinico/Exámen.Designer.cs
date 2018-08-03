@@ -28,72 +28,69 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Gpb_examen = new System.Windows.Forms.GroupBox();
-            this.Lbl_precioHemogramaC = new System.Windows.Forms.Label();
-            this.Lbl_qHemogramaC = new System.Windows.Forms.Label();
-            this.Lbl_hemogramaC = new System.Windows.Forms.Label();
-            this.Pcb_hemogramaC = new System.Windows.Forms.PictureBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Gpb_examen.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Pcb_hemogramaC)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // Gpb_examen
             // 
             this.Gpb_examen.BackColor = System.Drawing.Color.Transparent;
             this.Gpb_examen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Gpb_examen.Controls.Add(this.Lbl_precioHemogramaC);
-            this.Gpb_examen.Controls.Add(this.Lbl_qHemogramaC);
-            this.Gpb_examen.Controls.Add(this.Lbl_hemogramaC);
-            this.Gpb_examen.Controls.Add(this.Pcb_hemogramaC);
-            this.Gpb_examen.Font = new System.Drawing.Font("Perpetua", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Gpb_examen.Controls.Add(this.dataGridView1);
+            this.Gpb_examen.Font = new System.Drawing.Font("Perpetua", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Gpb_examen.ForeColor = System.Drawing.Color.DarkKhaki;
-            this.Gpb_examen.Location = new System.Drawing.Point(21, 12);
+            this.Gpb_examen.Location = new System.Drawing.Point(26, 12);
             this.Gpb_examen.Name = "Gpb_examen";
-            this.Gpb_examen.Size = new System.Drawing.Size(732, 504);
+            this.Gpb_examen.Size = new System.Drawing.Size(731, 491);
             this.Gpb_examen.TabIndex = 12;
             this.Gpb_examen.TabStop = false;
             this.Gpb_examen.Text = "Información Exámenes";
             this.Gpb_examen.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // Lbl_precioHemogramaC
+            // dataGridView1
             // 
-            this.Lbl_precioHemogramaC.AutoSize = true;
-            this.Lbl_precioHemogramaC.ForeColor = System.Drawing.Color.Honeydew;
-            this.Lbl_precioHemogramaC.Location = new System.Drawing.Point(511, 174);
-            this.Lbl_precioHemogramaC.Name = "Lbl_precioHemogramaC";
-            this.Lbl_precioHemogramaC.Size = new System.Drawing.Size(62, 33);
-            this.Lbl_precioHemogramaC.TabIndex = 3;
-            this.Lbl_precioHemogramaC.Text = "0.00";
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3});
+            this.dataGridView1.Location = new System.Drawing.Point(42, 65);
+            this.dataGridView1.Name = "dataGridView1";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Perpetua", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightSeaGreen;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.Size = new System.Drawing.Size(392, 245);
+            this.dataGridView1.TabIndex = 7;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // Lbl_qHemogramaC
+            // Column1
             // 
-            this.Lbl_qHemogramaC.AutoSize = true;
-            this.Lbl_qHemogramaC.ForeColor = System.Drawing.Color.Honeydew;
-            this.Lbl_qHemogramaC.Location = new System.Drawing.Point(477, 174);
-            this.Lbl_qHemogramaC.Name = "Lbl_qHemogramaC";
-            this.Lbl_qHemogramaC.Size = new System.Drawing.Size(44, 33);
-            this.Lbl_qHemogramaC.TabIndex = 2;
-            this.Lbl_qHemogramaC.Text = "Q.";
+            this.Column1.HeaderText = "ID";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 50;
             // 
-            // Lbl_hemogramaC
+            // Column2
             // 
-            this.Lbl_hemogramaC.AutoSize = true;
-            this.Lbl_hemogramaC.ForeColor = System.Drawing.Color.Honeydew;
-            this.Lbl_hemogramaC.Location = new System.Drawing.Point(390, 128);
-            this.Lbl_hemogramaC.Name = "Lbl_hemogramaC";
-            this.Lbl_hemogramaC.Size = new System.Drawing.Size(295, 33);
-            this.Lbl_hemogramaC.TabIndex = 1;
-            this.Lbl_hemogramaC.Text = "Hemograma Completo";
+            this.Column2.HeaderText = "Nombre";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 200;
             // 
-            // Pcb_hemogramaC
+            // Column3
             // 
-            this.Pcb_hemogramaC.Image = global::LaboratorioClinico.Properties.Resources.hemograma;
-            this.Pcb_hemogramaC.Location = new System.Drawing.Point(35, 63);
-            this.Pcb_hemogramaC.Name = "Pcb_hemogramaC";
-            this.Pcb_hemogramaC.Size = new System.Drawing.Size(310, 217);
-            this.Pcb_hemogramaC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Pcb_hemogramaC.TabIndex = 0;
-            this.Pcb_hemogramaC.TabStop = false;
+            this.Column3.HeaderText = "Precio";
+            this.Column3.Name = "Column3";
             // 
             // Exámen
             // 
@@ -109,17 +106,16 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Exámen_Load);
             this.Gpb_examen.ResumeLayout(false);
-            this.Gpb_examen.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Pcb_hemogramaC)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.GroupBox Gpb_examen;
-        private System.Windows.Forms.Label Lbl_precioHemogramaC;
-        private System.Windows.Forms.Label Lbl_qHemogramaC;
-        private System.Windows.Forms.Label Lbl_hemogramaC;
-        private System.Windows.Forms.PictureBox Pcb_hemogramaC;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
     }
 }
