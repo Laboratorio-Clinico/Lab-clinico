@@ -24,10 +24,10 @@ namespace LaboratorioClinico
             try
             {
                 conexion.ObtenerConexion();
-                OdbcCommand comando = new OdbcCommand("Select fPrecio from cargo where sDescripcion ='"+ Lbl_hemogramaC.Text, conexion.ObtenerConexion());
-                OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
-                DataTable dato = new DataTable();
 
+                OdbcDataAdapter sda = new OdbcDataAdapter("Select fPrecio from examenes where sDescripcion = '"+ Convert.ToString(Lbl_hemogramaC.Text) + "'", conexion.ObtenerConexion());
+                DataTable dato = new DataTable();
+                sda.Fill(dato);
                 Lbl_precioHemogramaC.Text = dato.Rows[0][0].ToString();
 
                 conexion.ObtenerConexion().Close();

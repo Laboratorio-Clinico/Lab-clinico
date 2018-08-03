@@ -59,7 +59,7 @@
             // 
             this.Lbl_precioHemogramaC.AutoSize = true;
             this.Lbl_precioHemogramaC.ForeColor = System.Drawing.Color.Honeydew;
-            this.Lbl_precioHemogramaC.Location = new System.Drawing.Point(532, 172);
+            this.Lbl_precioHemogramaC.Location = new System.Drawing.Point(511, 174);
             this.Lbl_precioHemogramaC.Name = "Lbl_precioHemogramaC";
             this.Lbl_precioHemogramaC.Size = new System.Drawing.Size(62, 33);
             this.Lbl_precioHemogramaC.TabIndex = 3;
@@ -69,7 +69,7 @@
             // 
             this.Lbl_qHemogramaC.AutoSize = true;
             this.Lbl_qHemogramaC.ForeColor = System.Drawing.Color.Honeydew;
-            this.Lbl_qHemogramaC.Location = new System.Drawing.Point(482, 172);
+            this.Lbl_qHemogramaC.Location = new System.Drawing.Point(477, 174);
             this.Lbl_qHemogramaC.Name = "Lbl_qHemogramaC";
             this.Lbl_qHemogramaC.Size = new System.Drawing.Size(44, 33);
             this.Lbl_qHemogramaC.TabIndex = 2;
