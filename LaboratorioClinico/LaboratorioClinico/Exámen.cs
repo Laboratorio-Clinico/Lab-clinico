@@ -16,20 +16,21 @@ namespace LaboratorioClinico
         public Exámen()
         {
             InitializeComponent();
-            proCargarPrecios();
+            proCargaDatos();
         }
         
-        public void proCargarPrecios() //Consulta para que el precio que aparezca en el examen, sea el más reciente.
+        public void proCargaDatos() //Consulta para que el precio que aparezca en el examen, sea el más reciente.
         {
             try
             {
                 conexion.ObtenerConexion();
 
-                OdbcDataAdapter sda = new OdbcDataAdapter("Select fPrecio from examenes where sDescripcion = '"+ Convert.ToString(Lbl_hemogramaC.Text) + "'", conexion.ObtenerConexion());
+                OdbcCommand sda = new OdbcCommand("Select iIdExamen, sDescripcion, fPrecio from examenes", conexion.ObtenerConexion());
+                OdbcDataAdapter adaptador = new OdbcDataAdapter(sda);
                 DataTable dato = new DataTable();
-                sda.Fill(dato);
-                Lbl_precioHemogramaC.Text = dato.Rows[0][0].ToString();
+                adaptador.Fill(dato);
 
+                
                 conexion.ObtenerConexion().Close();
             }
             catch (Exception error) { MessageBox.Show(error.Message); }
