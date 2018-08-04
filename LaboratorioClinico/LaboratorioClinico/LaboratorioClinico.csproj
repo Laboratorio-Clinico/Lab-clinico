@@ -509,6 +509,15 @@
   <ItemGroup>
     <None Include="Resources\hemograma.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\examen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\945357-Laboratorio-de-Analisis-Clinicos-Dr-Striani-banner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\muestra.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

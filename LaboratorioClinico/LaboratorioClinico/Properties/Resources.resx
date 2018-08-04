@@ -121,6 +121,9 @@
   <data name="doctor1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\doctor1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="xagua-laboratorio.jpg.pagespeed.ic.EPJznFd7a2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\xagua-laboratorio.jpg.pagespeed.ic.EPJznFd7a2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="cubo-de-basura" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cubo-de-basura.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -141,6 +144,12 @@
   </data>
   <data name="fondo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fondo2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hemograma" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hemograma.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="945357-Laboratorio-de-Analisis-Clinicos-Dr-Striani-banner" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\945357-Laboratorio-de-Analisis-Clinicos-Dr-Striani-banner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="guardar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\guardar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,8 +175,8 @@
   <data name="bloqueado1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bloqueado1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="xagua-laboratorio.jpg.pagespeed.ic.EPJznFd7a2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\xagua-laboratorio.jpg.pagespeed.ic.EPJznFd7a2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="examen1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\examen.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="archivo (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\archivo (1)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -358,7 +367,7 @@
   <data name="busqueda" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\busqueda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="hemograma" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hemograma.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="muestra" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\muestra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
