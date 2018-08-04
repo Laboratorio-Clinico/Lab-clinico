@@ -15,7 +15,7 @@ namespace LaboratorioClinico
     public partial class Factura : Form
     {
 
-        public void proGuardarDatosDetalleFactura()
+    /*public void proGuardarDatosDetalleFactura()
         {
 
             try
@@ -23,7 +23,7 @@ namespace LaboratorioClinico
 
                 OdbcCommand comando = new OdbcCommand("{CALL InsertaDetalleFactura(?,?,?,?,?)}", conexion.ObtenerConexion());
                 comando.CommandType = CommandType.StoredProcedure;
-                comando.Parameters.AddWithValue("nIdFactura", Lbl_noserie.Text);
+                comando.Parameters.AddWithValue("nIdFactura", Txt_codigof.Text);
                 comando.Parameters.AddWithValue("iIdExamen", Txt_codigof.Text);
                 comando.Parameters.AddWithValue("iCantidad", Txt_cantidadf.Text);
                 comando.Parameters.AddWithValue("fPrecio", Txt_preciouf.Text);
@@ -40,7 +40,7 @@ namespace LaboratorioClinico
              
 
             }
-        }
+        }*/
         public Factura()
         {
             InitializeComponent();
@@ -115,8 +115,17 @@ namespace LaboratorioClinico
 
                     /*cmd.CommandText = "insert into detalledefactura values('" + Convert.ToInt32(Lbl_noserie.Text) + "','" + datos2.Rows[0][0] + "','" + Convert.ToInt32(Txt_cantidadf.Text) + "','" + datos2.Rows[0][2].ToString() + "','" + Convert.ToInt32(Txt_descuentof.Text) + "')";
                     cmd.ExecuteNonQuery();*/
+                    /*
+                    OdbcCommand comando = new OdbcCommand("{CALL InsertaDetalleFactura(?,?,?,?,?)}", conexion.ObtenerConexion());
+                    comando.CommandType = CommandType.StoredProcedure;
+                    comando.Parameters.AddWithValue("nIdFactura", Txt_codigof.Text);
+                    comando.Parameters.AddWithValue("iIdExamen", Txt_codigof.Text);
+                    comando.Parameters.AddWithValue("iCantidad", Txt_cantidadf.Text);
+                    comando.Parameters.AddWithValue("fPrecio", Txt_preciouf.Text);
+                    comando.Parameters.AddWithValue("fDescuento", Txt_descuentof.Text);
 
-                    proGuardarDatosDetalleFactura();
+                    comando.ExecuteNonQuery();
+                    MessageBox.Show("Datos insertados correctamente");*/
 
                     Txt_codigof.ResetText();
                     Txt_cantidadf.ResetText();
