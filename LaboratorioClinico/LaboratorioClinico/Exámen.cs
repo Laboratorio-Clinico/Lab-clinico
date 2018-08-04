@@ -19,18 +19,18 @@ namespace LaboratorioClinico
             proCargaDatos();
         }
         
-        public void proCargaDatos() //Consulta para que el precio que aparezca en el examen, sea el más reciente.
+        public void proCargaDatos() //Cargar toda la infomación almacenada de los exámenes a un DataGridView.
         {
             try
             {
                 conexion.ObtenerConexion();
+                OdbcCommand comando = new OdbcCommand("Select iIdExamen as ID, sDescripcion as Nombre, fPrecio as Precio from examenes", conexion.ObtenerConexion());
+                OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
+                DataTable tabla = new DataTable();
+                adaptador.Fill(tabla);
 
-                OdbcCommand sda = new OdbcCommand("Select iIdExamen, sDescripcion, fPrecio from examenes", conexion.ObtenerConexion());
-                OdbcDataAdapter adaptador = new OdbcDataAdapter(sda);
-                DataTable dato = new DataTable();
-                adaptador.Fill(dato);
-
-                
+                //Column1. = "iIdExamen";
+                Dgv_examen.DataSource = tabla;
                 conexion.ObtenerConexion().Close();
             }
             catch (Exception error) { MessageBox.Show(error.Message); }
