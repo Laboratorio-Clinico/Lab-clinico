@@ -75,13 +75,13 @@ namespace LaboratorioClinico
 
             try { 
             OdbcCommand cm;
-            cm = new OdbcCommand("ingresaUsuario", conexion.ObtenerConexion());
-            cm.CommandType = CommandType.StoredProcedure;
+            cm = new OdbcCommand("{CALL ingresaUsuario(?,?,?,?)}", conexion.ObtenerConexion());
+                cm.CommandType = CommandType.StoredProcedure;
 
             cm.Parameters.AddWithValue("@iIdPrivilegio", pPrivilegio);
-            cm.Parameters.AddWithValue("@nDPI", this.Txt_codigoDeEmpleado.Text);
-            cm.Parameters.AddWithValue("@sUsuario", this.Txt_usuario.Text);
-            cm.Parameters.AddWithValue("@sContrasena", EncripContra(this.Txt_password.Text));
+            cm.Parameters.AddWithValue("@nDPI", Txt_codigoDeEmpleado.Text);
+            cm.Parameters.AddWithValue("@sUsuario", Txt_usuario.Text);
+            cm.Parameters.AddWithValue("@sContrasena", EncripContra(Txt_password.Text));
 
 
             int query = cm.ExecuteNonQuery();
