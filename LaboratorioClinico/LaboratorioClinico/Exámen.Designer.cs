@@ -91,7 +91,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.Dgv_examen.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.Dgv_examen.Size = new System.Drawing.Size(398, 435);
+            this.Dgv_examen.Size = new System.Drawing.Size(404, 435);
             this.Dgv_examen.TabIndex = 10;
             // 
             // pictureBox1

@@ -443,6 +443,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "cotizar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.cotizar_Load);
             this.Gpb_cotizacion.ResumeLayout(false);
             this.Gpb_cotizacion.PerformLayout();
             this.Gpb_botones.ResumeLayout(false);
