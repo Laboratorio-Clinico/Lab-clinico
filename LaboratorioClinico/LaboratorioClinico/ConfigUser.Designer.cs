@@ -45,11 +45,23 @@
             this.Cmb_usuarioEliminar = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.Tbc_cuerpo = new System.Windows.Forms.TabControl();
+            this.Tbc_cambio = new System.Windows.Forms.TabPage();
+            this.Cmb_usuarioCambio = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Tbc_control.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.Tbc_eliminar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.Tbc_cuerpo.SuspendLayout();
+            this.Tbc_cambio.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -232,6 +244,7 @@
             // 
             this.Tbc_cuerpo.Controls.Add(this.Tbc_eliminar);
             this.Tbc_cuerpo.Controls.Add(this.Tbc_control);
+            this.Tbc_cuerpo.Controls.Add(this.Tbc_cambio);
             this.Tbc_cuerpo.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tbc_cuerpo.Location = new System.Drawing.Point(177, 88);
             this.Tbc_cuerpo.Name = "Tbc_cuerpo";
@@ -239,6 +252,108 @@
             this.Tbc_cuerpo.SelectedIndex = 0;
             this.Tbc_cuerpo.Size = new System.Drawing.Size(418, 364);
             this.Tbc_cuerpo.TabIndex = 1;
+            // 
+            // Tbc_cambio
+            // 
+            this.Tbc_cambio.Controls.Add(this.groupBox1);
+            this.Tbc_cambio.Controls.Add(this.Cmb_usuarioCambio);
+            this.Tbc_cambio.Controls.Add(this.label2);
+            this.Tbc_cambio.Location = new System.Drawing.Point(4, 31);
+            this.Tbc_cambio.Name = "Tbc_cambio";
+            this.Tbc_cambio.Padding = new System.Windows.Forms.Padding(3);
+            this.Tbc_cambio.Size = new System.Drawing.Size(410, 329);
+            this.Tbc_cambio.TabIndex = 3;
+            this.Tbc_cambio.Text = "Cambiar Contraseña";
+            this.Tbc_cambio.UseVisualStyleBackColor = true;
+            // 
+            // Cmb_usuarioCambio
+            // 
+            this.Cmb_usuarioCambio.FormattingEnabled = true;
+            this.Cmb_usuarioCambio.Location = new System.Drawing.Point(159, 51);
+            this.Cmb_usuarioCambio.Name = "Cmb_usuarioCambio";
+            this.Cmb_usuarioCambio.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Cmb_usuarioCambio.Size = new System.Drawing.Size(178, 30);
+            this.Cmb_usuarioCambio.TabIndex = 12;
+            this.Cmb_usuarioCambio.SelectedIndexChanged += new System.EventHandler(this.Cmb_usuarioCambio_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(60, 54);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 22);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Usuario";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(20, 43);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(59, 22);
+            this.label3.TabIndex = 14;
+            this.label3.Text = " Actual";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Enabled = false;
+            this.textBox1.Location = new System.Drawing.Point(115, 43);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.textBox1.Size = new System.Drawing.Size(172, 29);
+            this.textBox1.TabIndex = 13;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(20, 87);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(55, 22);
+            this.label9.TabIndex = 16;
+            this.label9.Text = "Nueva";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Enabled = false;
+            this.textBox2.Location = new System.Drawing.Point(115, 87);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.textBox2.Size = new System.Drawing.Size(172, 29);
+            this.textBox2.TabIndex = 15;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(20, 131);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(84, 22);
+            this.label10.TabIndex = 18;
+            this.label10.Text = "Confirmar";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Enabled = false;
+            this.textBox3.Location = new System.Drawing.Point(115, 131);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.textBox3.Size = new System.Drawing.Size(172, 29);
+            this.textBox3.TabIndex = 17;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Location = new System.Drawing.Point(50, 97);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.groupBox1.Size = new System.Drawing.Size(293, 186);
+            this.groupBox1.TabIndex = 19;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Contraseña";
             // 
             // ConfigUser
             // 
@@ -262,6 +377,10 @@
             this.Tbc_eliminar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.Tbc_cuerpo.ResumeLayout(false);
+            this.Tbc_cambio.ResumeLayout(false);
+            this.Tbc_cambio.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -286,5 +405,15 @@
         private System.Windows.Forms.ComboBox Cmb_usuarioEliminar;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TabControl Tbc_cuerpo;
+        private System.Windows.Forms.TabPage Tbc_cambio;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ComboBox Cmb_usuarioCambio;
+        private System.Windows.Forms.Label label2;
     }
 }

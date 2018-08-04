@@ -174,5 +174,23 @@ namespace LaboratorioClinico
             }
           
         }
+
+        private void Cmb_usuarioCambio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                OdbcDataAdapter sda = new OdbcDataAdapter("select sPrivilegio from privilegio where iIdPrivilegio = (select iIdPrivilegio from usuario where sUsuario = '" + Cmb_usuarioCambio.SelectedItem.ToString() + "')", conexion.ObtenerConexion());
+                OdbcCommand cmd = conexion.ObtenerConexion().CreateCommand();
+                DataTable datos = new DataTable();
+                sda.Fill(datos);
+
+                Txt_privilegio.ResetText();
+                Txt_privilegio.Text = datos.Rows[0][0].ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Seleccionar");
+            }
+        }
     }
 }

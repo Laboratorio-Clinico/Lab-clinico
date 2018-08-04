@@ -46,12 +46,14 @@
             this.Lbl_porcentajeDescuento = new System.Windows.Forms.Label();
             this.Txt_porcentajeDeDescuento = new System.Windows.Forms.TextBox();
             this.Gpb_botones = new System.Windows.Forms.GroupBox();
-            this.Lbl_buscar = new System.Windows.Forms.Label();
-            this.Btn_requisitos = new System.Windows.Forms.Button();
+            this.Btn_agregar = new System.Windows.Forms.Button();
             this.Lbl_imprimir = new System.Windows.Forms.Label();
+            this.Lbl_buscar = new System.Windows.Forms.Label();
             this.Btn_imprimir = new System.Windows.Forms.Button();
-            this.Btn_buscar = new System.Windows.Forms.Button();
+            this.Btn_requisitos = new System.Windows.Forms.Button();
             this.Lbl_requisitos = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Btn_buscar = new System.Windows.Forms.Button();
             this.Gpb_verDatos = new System.Windows.Forms.GroupBox();
             this.Lbl_total = new System.Windows.Forms.Label();
             this.Txt_Total = new System.Windows.Forms.TextBox();
@@ -101,7 +103,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(537, 186);
+            this.label1.Location = new System.Drawing.Point(542, 201);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(60, 18);
             this.label1.TabIndex = 55;
@@ -111,7 +113,7 @@
             // 
             this.Txt_Cantidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Txt_Cantidad.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_Cantidad.Location = new System.Drawing.Point(603, 178);
+            this.Txt_Cantidad.Location = new System.Drawing.Point(608, 193);
             this.Txt_Cantidad.Name = "Txt_Cantidad";
             this.Txt_Cantidad.Size = new System.Drawing.Size(49, 26);
             this.Txt_Cantidad.TabIndex = 54;
@@ -121,7 +123,7 @@
             this.Cmb_doctor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Cmb_doctor.Font = new System.Drawing.Font("Perpetua", 12F);
             this.Cmb_doctor.FormattingEnabled = true;
-            this.Cmb_doctor.Location = new System.Drawing.Point(434, 131);
+            this.Cmb_doctor.Location = new System.Drawing.Point(444, 152);
             this.Cmb_doctor.Name = "Cmb_doctor";
             this.Cmb_doctor.Size = new System.Drawing.Size(218, 26);
             this.Cmb_doctor.TabIndex = 53;
@@ -132,7 +134,7 @@
             this.Lbl_doctor.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_doctor.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_doctor.ForeColor = System.Drawing.Color.White;
-            this.Lbl_doctor.Location = new System.Drawing.Point(378, 137);
+            this.Lbl_doctor.Location = new System.Drawing.Point(388, 158);
             this.Lbl_doctor.Name = "Lbl_doctor";
             this.Lbl_doctor.Size = new System.Drawing.Size(50, 18);
             this.Lbl_doctor.TabIndex = 52;
@@ -143,7 +145,7 @@
             this.Cmb_examen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Cmb_examen.Font = new System.Drawing.Font("Perpetua", 12F);
             this.Cmb_examen.FormattingEnabled = true;
-            this.Cmb_examen.Location = new System.Drawing.Point(155, 136);
+            this.Cmb_examen.Location = new System.Drawing.Point(166, 152);
             this.Cmb_examen.Name = "Cmb_examen";
             this.Cmb_examen.Size = new System.Drawing.Size(211, 26);
             this.Cmb_examen.TabIndex = 51;
@@ -155,7 +157,7 @@
             this.Lbl_examen.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_examen.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_examen.ForeColor = System.Drawing.Color.White;
-            this.Lbl_examen.Location = new System.Drawing.Point(79, 139);
+            this.Lbl_examen.Location = new System.Drawing.Point(91, 155);
             this.Lbl_examen.Name = "Lbl_examen";
             this.Lbl_examen.Size = new System.Drawing.Size(55, 18);
             this.Lbl_examen.TabIndex = 50;
@@ -166,9 +168,9 @@
             this.Cmb_laboratorio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Cmb_laboratorio.Font = new System.Drawing.Font("Perpetua", 12F);
             this.Cmb_laboratorio.FormattingEnabled = true;
-            this.Cmb_laboratorio.Location = new System.Drawing.Point(228, 58);
+            this.Cmb_laboratorio.Location = new System.Drawing.Point(212, 67);
             this.Cmb_laboratorio.Name = "Cmb_laboratorio";
-            this.Cmb_laboratorio.Size = new System.Drawing.Size(424, 26);
+            this.Cmb_laboratorio.Size = new System.Drawing.Size(450, 26);
             this.Cmb_laboratorio.TabIndex = 47;
             this.Cmb_laboratorio.SelectedIndexChanged += new System.EventHandler(this.Cmb_laboratorio_SelectedIndexChanged);
             // 
@@ -178,7 +180,7 @@
             this.Lbl_laboratorio.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_laboratorio.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_laboratorio.ForeColor = System.Drawing.Color.White;
-            this.Lbl_laboratorio.Location = new System.Drawing.Point(57, 61);
+            this.Lbl_laboratorio.Location = new System.Drawing.Point(69, 70);
             this.Lbl_laboratorio.Name = "Lbl_laboratorio";
             this.Lbl_laboratorio.Size = new System.Drawing.Size(77, 18);
             this.Lbl_laboratorio.TabIndex = 37;
@@ -190,7 +192,7 @@
             this.Lbl_fecha.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_fecha.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_fecha.ForeColor = System.Drawing.Color.White;
-            this.Lbl_fecha.Location = new System.Drawing.Point(93, 100);
+            this.Lbl_fecha.Location = new System.Drawing.Point(105, 115);
             this.Lbl_fecha.Name = "Lbl_fecha";
             this.Lbl_fecha.Size = new System.Drawing.Size(41, 18);
             this.Lbl_fecha.TabIndex = 38;
@@ -201,7 +203,7 @@
             this.Cmb_tipoDeDescuento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Cmb_tipoDeDescuento.Font = new System.Drawing.Font("Perpetua", 12F);
             this.Cmb_tipoDeDescuento.FormattingEnabled = true;
-            this.Cmb_tipoDeDescuento.Location = new System.Drawing.Point(404, 94);
+            this.Cmb_tipoDeDescuento.Location = new System.Drawing.Point(414, 107);
             this.Cmb_tipoDeDescuento.Name = "Cmb_tipoDeDescuento";
             this.Cmb_tipoDeDescuento.Size = new System.Drawing.Size(248, 26);
             this.Cmb_tipoDeDescuento.TabIndex = 49;
@@ -213,7 +215,7 @@
             this.Lbl_tipoDeDescuento.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_tipoDeDescuento.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_tipoDeDescuento.ForeColor = System.Drawing.Color.White;
-            this.Lbl_tipoDeDescuento.Location = new System.Drawing.Point(274, 100);
+            this.Lbl_tipoDeDescuento.Location = new System.Drawing.Point(284, 113);
             this.Lbl_tipoDeDescuento.Name = "Lbl_tipoDeDescuento";
             this.Lbl_tipoDeDescuento.Size = new System.Drawing.Size(115, 18);
             this.Lbl_tipoDeDescuento.TabIndex = 48;
@@ -223,9 +225,10 @@
             // 
             this.Txt_noLaboratorio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Txt_noLaboratorio.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_noLaboratorio.Location = new System.Drawing.Point(159, 58);
+            this.Txt_noLaboratorio.Location = new System.Drawing.Point(165, 67);
             this.Txt_noLaboratorio.Name = "Txt_noLaboratorio";
-            this.Txt_noLaboratorio.Size = new System.Drawing.Size(49, 26);
+            this.Txt_noLaboratorio.ReadOnly = true;
+            this.Txt_noLaboratorio.Size = new System.Drawing.Size(41, 26);
             this.Txt_noLaboratorio.TabIndex = 40;
             // 
             // Dtp_fecha
@@ -233,7 +236,7 @@
             this.Dtp_fecha.CustomFormat = "yy-MM-dd";
             this.Dtp_fecha.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Dtp_fecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Dtp_fecha.Location = new System.Drawing.Point(159, 94);
+            this.Dtp_fecha.Location = new System.Drawing.Point(166, 112);
             this.Dtp_fecha.Name = "Dtp_fecha";
             this.Dtp_fecha.Size = new System.Drawing.Size(88, 26);
             this.Dtp_fecha.TabIndex = 41;
@@ -244,7 +247,7 @@
             this.Lbl_porcentajeDescuento.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_porcentajeDescuento.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_porcentajeDescuento.ForeColor = System.Drawing.Color.White;
-            this.Lbl_porcentajeDescuento.Location = new System.Drawing.Point(321, 186);
+            this.Lbl_porcentajeDescuento.Location = new System.Drawing.Point(326, 201);
             this.Lbl_porcentajeDescuento.Name = "Lbl_porcentajeDescuento";
             this.Lbl_porcentajeDescuento.Size = new System.Drawing.Size(155, 18);
             this.Lbl_porcentajeDescuento.TabIndex = 44;
@@ -254,7 +257,7 @@
             // 
             this.Txt_porcentajeDeDescuento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Txt_porcentajeDeDescuento.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_porcentajeDeDescuento.Location = new System.Drawing.Point(482, 178);
+            this.Txt_porcentajeDeDescuento.Location = new System.Drawing.Point(487, 193);
             this.Txt_porcentajeDeDescuento.Name = "Txt_porcentajeDeDescuento";
             this.Txt_porcentajeDeDescuento.Size = new System.Drawing.Size(49, 26);
             this.Txt_porcentajeDeDescuento.TabIndex = 43;
@@ -262,83 +265,107 @@
             // Gpb_botones
             // 
             this.Gpb_botones.BackColor = System.Drawing.Color.Transparent;
-            this.Gpb_botones.Controls.Add(this.Lbl_buscar);
-            this.Gpb_botones.Controls.Add(this.Btn_requisitos);
+            this.Gpb_botones.Controls.Add(this.Btn_agregar);
             this.Gpb_botones.Controls.Add(this.Lbl_imprimir);
+            this.Gpb_botones.Controls.Add(this.Lbl_buscar);
             this.Gpb_botones.Controls.Add(this.Btn_imprimir);
-            this.Gpb_botones.Controls.Add(this.Btn_buscar);
+            this.Gpb_botones.Controls.Add(this.Btn_requisitos);
             this.Gpb_botones.Controls.Add(this.Lbl_requisitos);
-            this.Gpb_botones.Location = new System.Drawing.Point(630, 210);
+            this.Gpb_botones.Controls.Add(this.label2);
+            this.Gpb_botones.Controls.Add(this.Btn_buscar);
+            this.Gpb_botones.Location = new System.Drawing.Point(563, 220);
             this.Gpb_botones.Name = "Gpb_botones";
-            this.Gpb_botones.Size = new System.Drawing.Size(105, 233);
+            this.Gpb_botones.Size = new System.Drawing.Size(173, 239);
             this.Gpb_botones.TabIndex = 36;
             this.Gpb_botones.TabStop = false;
             // 
-            // Lbl_buscar
+            // Btn_agregar
             // 
-            this.Lbl_buscar.AutoSize = true;
-            this.Lbl_buscar.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_buscar.ForeColor = System.Drawing.Color.PowderBlue;
-            this.Lbl_buscar.Location = new System.Drawing.Point(24, 71);
-            this.Lbl_buscar.Name = "Lbl_buscar";
-            this.Lbl_buscar.Size = new System.Drawing.Size(38, 15);
-            this.Lbl_buscar.TabIndex = 32;
-            this.Lbl_buscar.Text = "Buscar";
-            // 
-            // Btn_requisitos
-            // 
-            this.Btn_requisitos.BackgroundImage = global::LaboratorioClinico.Properties.Resources.requerimientos;
-            this.Btn_requisitos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Btn_requisitos.Location = new System.Drawing.Point(19, 89);
-            this.Btn_requisitos.Name = "Btn_requisitos";
-            this.Btn_requisitos.Size = new System.Drawing.Size(53, 44);
-            this.Btn_requisitos.TabIndex = 10;
-            this.Btn_requisitos.UseVisualStyleBackColor = true;
-            this.Btn_requisitos.Click += new System.EventHandler(this.Btn_requisitos_Click);
+            this.Btn_agregar.BackgroundImage = global::LaboratorioClinico.Properties.Resources.anadir;
+            this.Btn_agregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_agregar.Location = new System.Drawing.Point(102, 52);
+            this.Btn_agregar.Name = "Btn_agregar";
+            this.Btn_agregar.Size = new System.Drawing.Size(53, 44);
+            this.Btn_agregar.TabIndex = 35;
+            this.Btn_agregar.UseVisualStyleBackColor = true;
+            this.Btn_agregar.Click += new System.EventHandler(this.Btn_agregar_Click);
             // 
             // Lbl_imprimir
             // 
             this.Lbl_imprimir.AutoSize = true;
             this.Lbl_imprimir.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_imprimir.ForeColor = System.Drawing.Color.PowderBlue;
-            this.Lbl_imprimir.Location = new System.Drawing.Point(24, 207);
+            this.Lbl_imprimir.Location = new System.Drawing.Point(102, 196);
             this.Lbl_imprimir.Name = "Lbl_imprimir";
             this.Lbl_imprimir.Size = new System.Drawing.Size(48, 15);
             this.Lbl_imprimir.TabIndex = 32;
             this.Lbl_imprimir.Text = "Imprimir";
             // 
+            // Lbl_buscar
+            // 
+            this.Lbl_buscar.AutoSize = true;
+            this.Lbl_buscar.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_buscar.ForeColor = System.Drawing.Color.PowderBlue;
+            this.Lbl_buscar.Location = new System.Drawing.Point(32, 99);
+            this.Lbl_buscar.Name = "Lbl_buscar";
+            this.Lbl_buscar.Size = new System.Drawing.Size(38, 15);
+            this.Lbl_buscar.TabIndex = 32;
+            this.Lbl_buscar.Text = "Buscar";
+            // 
             // Btn_imprimir
             // 
             this.Btn_imprimir.BackgroundImage = global::LaboratorioClinico.Properties.Resources.impresora1;
             this.Btn_imprimir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Btn_imprimir.Location = new System.Drawing.Point(19, 160);
+            this.Btn_imprimir.Location = new System.Drawing.Point(102, 149);
             this.Btn_imprimir.Name = "Btn_imprimir";
             this.Btn_imprimir.Size = new System.Drawing.Size(53, 44);
             this.Btn_imprimir.TabIndex = 8;
             this.Btn_imprimir.UseVisualStyleBackColor = true;
             this.Btn_imprimir.Click += new System.EventHandler(this.Btn_imprimir_Click);
             // 
-            // Btn_buscar
+            // Btn_requisitos
             // 
-            this.Btn_buscar.BackgroundImage = global::LaboratorioClinico.Properties.Resources.file;
-            this.Btn_buscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Btn_buscar.Location = new System.Drawing.Point(19, 24);
-            this.Btn_buscar.Name = "Btn_buscar";
-            this.Btn_buscar.Size = new System.Drawing.Size(53, 44);
-            this.Btn_buscar.TabIndex = 11;
-            this.Btn_buscar.UseVisualStyleBackColor = true;
-            this.Btn_buscar.Click += new System.EventHandler(this.Btn_buscar_Click);
+            this.Btn_requisitos.BackgroundImage = global::LaboratorioClinico.Properties.Resources.requerimientos;
+            this.Btn_requisitos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_requisitos.Location = new System.Drawing.Point(27, 149);
+            this.Btn_requisitos.Name = "Btn_requisitos";
+            this.Btn_requisitos.Size = new System.Drawing.Size(53, 44);
+            this.Btn_requisitos.TabIndex = 10;
+            this.Btn_requisitos.UseVisualStyleBackColor = true;
+            this.Btn_requisitos.Click += new System.EventHandler(this.Btn_requisitos_Click);
             // 
             // Lbl_requisitos
             // 
             this.Lbl_requisitos.AutoSize = true;
             this.Lbl_requisitos.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_requisitos.ForeColor = System.Drawing.Color.PowderBlue;
-            this.Lbl_requisitos.Location = new System.Drawing.Point(16, 136);
+            this.Lbl_requisitos.Location = new System.Drawing.Point(24, 196);
             this.Lbl_requisitos.Name = "Lbl_requisitos";
             this.Lbl_requisitos.Size = new System.Drawing.Size(56, 15);
             this.Lbl_requisitos.TabIndex = 31;
             this.Lbl_requisitos.Text = "Requisitos";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.PowderBlue;
+            this.label2.Location = new System.Drawing.Point(107, 99);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(43, 15);
+            this.label2.TabIndex = 34;
+            this.label2.Text = "Agregar";
+            // 
+            // Btn_buscar
+            // 
+            this.Btn_buscar.BackgroundImage = global::LaboratorioClinico.Properties.Resources.file;
+            this.Btn_buscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_buscar.Location = new System.Drawing.Point(27, 52);
+            this.Btn_buscar.Name = "Btn_buscar";
+            this.Btn_buscar.Size = new System.Drawing.Size(53, 44);
+            this.Btn_buscar.TabIndex = 11;
+            this.Btn_buscar.UseVisualStyleBackColor = true;
+            this.Btn_buscar.Click += new System.EventHandler(this.Btn_buscar_Click);
             // 
             // Gpb_verDatos
             // 
@@ -346,9 +373,9 @@
             this.Gpb_verDatos.Controls.Add(this.Lbl_total);
             this.Gpb_verDatos.Controls.Add(this.Txt_Total);
             this.Gpb_verDatos.Controls.Add(this.Dgv_verDatos);
-            this.Gpb_verDatos.Location = new System.Drawing.Point(7, 210);
+            this.Gpb_verDatos.Location = new System.Drawing.Point(16, 220);
             this.Gpb_verDatos.Name = "Gpb_verDatos";
-            this.Gpb_verDatos.Size = new System.Drawing.Size(603, 233);
+            this.Gpb_verDatos.Size = new System.Drawing.Size(527, 239);
             this.Gpb_verDatos.TabIndex = 35;
             this.Gpb_verDatos.TabStop = false;
             // 
@@ -357,7 +384,7 @@
             this.Lbl_total.AutoSize = true;
             this.Lbl_total.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_total.ForeColor = System.Drawing.Color.White;
-            this.Lbl_total.Location = new System.Drawing.Point(444, 198);
+            this.Lbl_total.Location = new System.Drawing.Point(382, 190);
             this.Lbl_total.Name = "Lbl_total";
             this.Lbl_total.Size = new System.Drawing.Size(39, 18);
             this.Lbl_total.TabIndex = 31;
@@ -367,17 +394,19 @@
             // 
             this.Txt_Total.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Txt_Total.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_Total.Location = new System.Drawing.Point(489, 196);
+            this.Txt_Total.Location = new System.Drawing.Point(427, 188);
             this.Txt_Total.Name = "Txt_Total";
+            this.Txt_Total.ReadOnly = true;
             this.Txt_Total.Size = new System.Drawing.Size(74, 26);
             this.Txt_Total.TabIndex = 32;
+            this.Txt_Total.Text = "0";
             // 
             // Dgv_verDatos
             // 
             this.Dgv_verDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Dgv_verDatos.Location = new System.Drawing.Point(30, 34);
+            this.Dgv_verDatos.Location = new System.Drawing.Point(19, 34);
             this.Dgv_verDatos.Name = "Dgv_verDatos";
-            this.Dgv_verDatos.Size = new System.Drawing.Size(533, 150);
+            this.Dgv_verDatos.Size = new System.Drawing.Size(482, 148);
             this.Dgv_verDatos.TabIndex = 27;
             // 
             // label9
@@ -414,6 +443,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "cotizar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.cotizar_Load);
             this.Gpb_cotizacion.ResumeLayout(false);
             this.Gpb_cotizacion.PerformLayout();
             this.Gpb_botones.ResumeLayout(false);
@@ -457,5 +487,7 @@
         private System.Windows.Forms.TextBox Txt_Cantidad;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button Btn_agregar;
     }
 }
