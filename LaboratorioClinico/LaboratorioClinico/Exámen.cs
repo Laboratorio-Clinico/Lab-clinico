@@ -80,5 +80,10 @@ namespace LaboratorioClinico
         {
 
         }
+
+        private void Dgv_examen_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
