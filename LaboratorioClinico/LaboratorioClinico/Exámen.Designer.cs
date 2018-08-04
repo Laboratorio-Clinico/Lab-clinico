@@ -31,26 +31,28 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.button1 = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Exámen));
+            this.Btn_mantenimiento = new System.Windows.Forms.Button();
             this.Dgv_examen = new System.Windows.Forms.DataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.Pcb_lab = new System.Windows.Forms.PictureBox();
+            this.Lbl_examen = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_examen)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pcb_lab)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // Btn_mantenimiento
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.button1.Location = new System.Drawing.Point(519, 135);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(180, 52);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Ir a mantenimiento";
-            this.button1.UseVisualStyleBackColor = false;
+            this.Btn_mantenimiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Btn_mantenimiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_mantenimiento.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_mantenimiento.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.Btn_mantenimiento.Location = new System.Drawing.Point(519, 135);
+            this.Btn_mantenimiento.Name = "Btn_mantenimiento";
+            this.Btn_mantenimiento.Size = new System.Drawing.Size(180, 52);
+            this.Btn_mantenimiento.TabIndex = 12;
+            this.Btn_mantenimiento.Text = "Ir a mantenimiento";
+            this.Btn_mantenimiento.UseVisualStyleBackColor = false;
+            this.Btn_mantenimiento.Click += new System.EventHandler(this.button1_Click);
             // 
             // Dgv_examen
             // 
@@ -94,28 +96,28 @@
             this.Dgv_examen.Size = new System.Drawing.Size(398, 435);
             this.Dgv_examen.TabIndex = 10;
             // 
-            // pictureBox1
+            // Pcb_lab
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::LaboratorioClinico.Properties.Resources.loginI_;
-            this.pictureBox1.Location = new System.Drawing.Point(496, 206);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(232, 209);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
+            this.Pcb_lab.BackColor = System.Drawing.Color.Transparent;
+            this.Pcb_lab.Image = global::LaboratorioClinico.Properties.Resources.loginI_;
+            this.Pcb_lab.Location = new System.Drawing.Point(496, 206);
+            this.Pcb_lab.Name = "Pcb_lab";
+            this.Pcb_lab.Size = new System.Drawing.Size(232, 209);
+            this.Pcb_lab.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Pcb_lab.TabIndex = 11;
+            this.Pcb_lab.TabStop = false;
             // 
-            // label1
+            // Lbl_examen
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Perpetua", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkKhaki;
-            this.label1.Location = new System.Drawing.Point(319, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(150, 36);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Exámenes";
+            this.Lbl_examen.AutoSize = true;
+            this.Lbl_examen.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_examen.Font = new System.Drawing.Font("Perpetua", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_examen.ForeColor = System.Drawing.Color.DarkKhaki;
+            this.Lbl_examen.Location = new System.Drawing.Point(319, 22);
+            this.Lbl_examen.Name = "Lbl_examen";
+            this.Lbl_examen.Size = new System.Drawing.Size(150, 36);
+            this.Lbl_examen.TabIndex = 13;
+            this.Lbl_examen.Text = "Exámenes";
             // 
             // Exámen
             // 
@@ -124,17 +126,18 @@
             this.BackgroundImage = global::LaboratorioClinico.Properties.Resources.FONDOO;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(782, 528);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Lbl_examen);
+            this.Controls.Add(this.Btn_mantenimiento);
             this.Controls.Add(this.Dgv_examen);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.Pcb_lab);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Exámen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Exámen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_examen)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pcb_lab)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -142,9 +145,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Btn_mantenimiento;
         private System.Windows.Forms.DataGridView Dgv_examen;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox Pcb_lab;
+        private System.Windows.Forms.Label Lbl_examen;
     }
 }
