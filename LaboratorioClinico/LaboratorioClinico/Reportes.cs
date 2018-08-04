@@ -55,7 +55,7 @@ namespace LaboratorioClinico
 
         private void Btn_ganancias_Click(object sender, EventArgs e)
         {
-            AbrirReporte(new Ganancia());
+          //  AbrirReporte(new Ganancia());
         }
 
         private void AbrirReporte(object formReport)
@@ -88,7 +88,12 @@ namespace LaboratorioClinico
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            AbrirReporte(new RegClientes());
+           // AbrirReporte(new RegClientes());
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            AbrirReporte(new Re_RegCli());
         }
     }
 }

@@ -16,20 +16,21 @@ namespace LaboratorioClinico
         public Exámen()
         {
             InitializeComponent();
-            proCargarPrecios();
+            proCargaDatos();
         }
         
-        public void proCargarPrecios() //Consulta para que el precio que aparezca en el examen, sea el más reciente.
+        public void proCargaDatos() //Cargar toda la infomación almacenada de los exámenes a un DataGridView.
         {
             try
             {
                 conexion.ObtenerConexion();
+                OdbcCommand comando = new OdbcCommand("Select iIdExamen as ID, sDescripcion as Nombre, fPrecio as Precio from examenes", conexion.ObtenerConexion());
+                OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
+                DataTable tabla = new DataTable();
+                adaptador.Fill(tabla);
 
-                OdbcDataAdapter sda = new OdbcDataAdapter("Select fPrecio from examenes where sDescripcion = '"+ Convert.ToString(Lbl_hemogramaC.Text) + "'", conexion.ObtenerConexion());
-                DataTable dato = new DataTable();
-                sda.Fill(dato);
-                Lbl_precioHemogramaC.Text = dato.Rows[0][0].ToString();
-
+                //Column1. = "iIdExamen";
+                Dgv_examen.DataSource = tabla;
                 conexion.ObtenerConexion().Close();
             }
             catch (Exception error) { MessageBox.Show(error.Message); }
@@ -61,6 +62,21 @@ namespace LaboratorioClinico
         }
 
         private void Picb_paciente_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
+        {
+
+        }
+
+        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
