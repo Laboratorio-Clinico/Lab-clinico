@@ -21,7 +21,7 @@ namespace LaboratorioClinico
             InitializeComponent();
             proLlenareExamen();
             proLlenareDoctor();
-            proLlenareTipoDeDescuento();
+            proLlenarDescuento();
             proLlenarLaboratorio();
         }
 
@@ -39,6 +39,8 @@ namespace LaboratorioClinico
         {
 
         }
+
+ 
         public void proLlenareExamen()
         {
 
@@ -46,7 +48,7 @@ namespace LaboratorioClinico
             {
                 
                 conexion.ObtenerConexion();
-                OdbcCommand comando = new OdbcCommand("Select iIdExamen, sDescripcion from Examenes", conexion.ObtenerConexion());
+                OdbcCommand comando = new OdbcCommand("Select iIdExamen, sDescripcion from examenes", conexion.ObtenerConexion());
                 OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
                 DataTable tabla = new DataTable();
 
@@ -75,7 +77,7 @@ namespace LaboratorioClinico
             {
                
                 conexion.ObtenerConexion();
-                OdbcCommand comando = new OdbcCommand("Select nIdEmpleado, sApellido from Empleado where iIdCargo > 5010 && iIdCargo <5015", conexion.ObtenerConexion());
+                OdbcCommand comando = new OdbcCommand("Select nIdEmpleado, sApellido from empleado where iIdCargo > 5010 && iIdCargo <5015", conexion.ObtenerConexion());
                 OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
                 DataTable tabla = new DataTable();
 
@@ -101,14 +103,14 @@ namespace LaboratorioClinico
             {
            
                 conexion.ObtenerConexion();
-                OdbcCommand comando = new OdbcCommand("Select iIdLaboratorio, sUbicacion from Laboratorio", conexion.ObtenerConexion());
+                OdbcCommand comando = new OdbcCommand("Select iIdLaboratorio, sUbicacion from laboratorio", conexion.ObtenerConexion());
                 OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
                 DataTable tabla = new DataTable();
 
                 adaptador.Fill(tabla);
-                DataRow fila = tabla.NewRow();
+               /* DataRow fila = tabla.NewRow();
                 fila["sUbicacion"] = "Seleccione el laboratorio en el que se desea realizar el exámen";
-                tabla.Rows.InsertAt(fila, 0);
+                tabla.Rows.InsertAt(fila, 0);*/
 
                 Cmb_laboratorio.ValueMember = "iIdLaboratorio";
                 Cmb_laboratorio.DisplayMember = "sUbicacion";
@@ -120,26 +122,24 @@ namespace LaboratorioClinico
             }
             catch (OdbcException error) { MessageBox.Show(error.Message); }
         }
-        public void proLlenareTipoDeDescuento()
+        public void proLlenarDescuento()
         {
-
             try
             {
-                
+
                 conexion.ObtenerConexion();
-                OdbcCommand comando = new OdbcCommand("Select iIdTipoDescuento, sDescripcion from TipoDescuento", conexion.ObtenerConexion());
+                OdbcCommand comando = new OdbcCommand("Select idtiposdes, tipo from tiposdes", conexion.ObtenerConexion());
                 OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
                 DataTable tabla = new DataTable();
 
                 adaptador.Fill(tabla);
-                DataRow fila = tabla.NewRow();
-                fila["sDescripcion"] = "Seleccione el tipo de descuento";
+               /* DataRow fila = tabla.NewRow();
+                fila["tipo"] = "Seleccione el tipo de descuento";
                 tabla.Rows.InsertAt(fila, 0);
+                */
+                Cmb_tipoDeDescuento.ValueMember = "idtiposdes";
+               Cmb_tipoDeDescuento.DisplayMember = "tipo";
 
-                Cmb_tipoDeDescuento.ValueMember = "iIdTipoDescuento";
-                Cmb_tipoDeDescuento.DisplayMember = "sDescripcion";
-
-                Cmb_tipoDeDescuento.Refresh();
                 Cmb_tipoDeDescuento.DataSource = tabla;
 
                 conexion.ObtenerConexion().Close();
@@ -147,8 +147,11 @@ namespace LaboratorioClinico
             }
             catch (OdbcException error) { MessageBox.Show(error.Message); }
         }
-        public void proSeleccionDeDescuento(int iTipoDeDescuento)
+
+
+        public void proSeleccionDeDescuento()
         {
+            int iTipoDeDescuento = Convert.ToInt32(Cmb_tipoDeDescuento.SelectedValue);
             if (iTipoDeDescuento == 3001) { Txt_porcentajeDeDescuento.Text = "0.45"; }
             else if (iTipoDeDescuento == 3002) { Txt_porcentajeDeDescuento.Text = "0.35"; }
             else if (iTipoDeDescuento == 3003) { Txt_porcentajeDeDescuento.Text = "0.25"; }
@@ -184,19 +187,15 @@ namespace LaboratorioClinico
             catch (OdbcException error) { MessageBox.Show(error.Message); }
             finally { conexion.ObtenerConexion().Close(); }
 
-            Txt_Cantidad.ResetText();
-            Txt_noLaboratorio.ResetText();
-            Txt_Total.ResetText();
-            Txt_porcentajeDeDescuento.ResetText();
 
         }
 
         public void proBuscarCotizacion(int iIdExamenes)
         {
-    
+
             try
             {
-                OdbcCommand comando = new OdbcCommand("Pro_cotizacionesPrecio", conexion.ObtenerConexion());
+                OdbcCommand comando = new OdbcCommand("{CALL Pro_cotizacionesPrecio(?)}", conexion.ObtenerConexion());
                 comando.CommandType = CommandType.StoredProcedure;
                 comando.Parameters.AddWithValue("@iIdExamenes",iIdExamenes);
                 comando.ExecuteNonQuery();
@@ -207,9 +206,7 @@ namespace LaboratorioClinico
             }
             catch (OdbcException error) { MessageBox.Show(error.Message); }
             finally { conexion.ObtenerConexion().Close(); }
-
-
-
+         
         }
        public void proPrecioyTotal(int iIdExamenes)
         {
@@ -218,9 +215,10 @@ namespace LaboratorioClinico
             double doDescuento = 0;
             double doCantidad = 0;
             double doTotal = 0;
+            double doTotal2 = 0;
             try
             {
-                OdbcCommand comando = new OdbcCommand("Pro_cotizacionesPrecio", conexion.ObtenerConexion());
+                OdbcCommand comando = new OdbcCommand("{CALL Pro_cotizacionesPrecio(?)}", conexion.ObtenerConexion());
                 comando.CommandType = CommandType.StoredProcedure;
                 comando.Parameters.AddWithValue("@iIdExamenes", iIdExamenes);
                 comando.ExecuteNonQuery();
@@ -233,6 +231,8 @@ namespace LaboratorioClinico
                     doCantidad = Convert.ToDouble(Txt_Cantidad.Text);
                     doDescuento = Convert.ToDouble(Txt_porcentajeDeDescuento.Text);
                     doTotal = doPrecio * doCantidad * doDescuento;
+                    doTotal2 = Convert.ToInt32(Txt_Total.Text);
+                    doTotal2 = doTotal2 + doTotal;
                     Txt_Total.Text = Convert.ToString(doTotal);
                 }
             
@@ -273,26 +273,37 @@ namespace LaboratorioClinico
 
         private void Cmb_tipoDeDescuento_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (Cmb_tipoDeDescuento.SelectedValue.ToString() != null)
-            {
-                int iTipoDeDescuento = Convert.ToInt32(Cmb_tipoDeDescuento.SelectedValue);
-                proSeleccionDeDescuento(iTipoDeDescuento);
-
-            }
+           
+                proSeleccionDeDescuento();
+               
         }
 
         private void Cmb_laboratorio_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (Cmb_laboratorio.SelectedValue.ToString() != null)
-            {
-                int iLaboratorio = Convert.ToInt32(Cmb_laboratorio.SelectedValue);
-                Txt_noLaboratorio.Text = iLaboratorio.ToString();
-
-            }
+            try {
+                if (Cmb_laboratorio.SelectedValue.ToString() != null)
+                {
+                    int iLaboratorio = Convert.ToInt32(Cmb_laboratorio.SelectedValue);
+                    Txt_noLaboratorio.Text = iLaboratorio.ToString();
+                }
+            } catch(Exception error){ MessageBox.Show(error.Message); }
+      
         }
 
         private void Cmb_examen_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+        }
+
+   
+
+        private void Btn_agregar_Click(object sender, EventArgs e)
+        {
+
+            int iIdExamenes = Convert.ToInt32(Cmb_examen.SelectedValue);
+
+            proBuscarCotizacion(iIdExamenes);
+            proPrecioyTotal(iIdExamenes);
 
         }
     }
