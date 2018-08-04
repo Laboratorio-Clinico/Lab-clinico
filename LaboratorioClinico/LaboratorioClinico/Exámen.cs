@@ -78,7 +78,15 @@ namespace LaboratorioClinico
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Mantenimiento open = new Mantenimiento();
+            open.ShowDialog();
+            this.Show();
         }
 
         private void Dgv_examen_CellContentClick(object sender, DataGridViewCellEventArgs e)
