@@ -90,5 +90,10 @@ namespace LaboratorioClinico
         {
            // AbrirReporte(new RegClientes());
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            AbrirReporte(new Re_RegCli());
+        }
     }
 }
