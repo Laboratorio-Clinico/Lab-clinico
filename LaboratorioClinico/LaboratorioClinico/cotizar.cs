@@ -306,5 +306,10 @@ namespace LaboratorioClinico
             proPrecioyTotal(iIdExamenes);
 
         }
+
+        private void cotizar_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

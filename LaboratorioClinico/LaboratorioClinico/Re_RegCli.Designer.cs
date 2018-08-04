@@ -1,6 +1,6 @@
 ﻿namespace LaboratorioClinico
 {
-    partial class Ganancia
+    partial class Re_RegCli
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.Gan1 = new LaboratorioClinico.Gan();
+            this.RegClientes1 = new LaboratorioClinico.RegClientes();
             this.SuspendLayout();
             // 
             // crystalReportViewer1
@@ -40,25 +40,21 @@
             this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.ReportSource = this.Gan1;
-            this.crystalReportViewer1.Size = new System.Drawing.Size(928, 668);
+            this.crystalReportViewer1.ReportSource = this.RegClientes1;
+            this.crystalReportViewer1.Size = new System.Drawing.Size(532, 395);
             this.crystalReportViewer1.TabIndex = 0;
             this.crystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
-            // Gan1
-            // 
-            this.Gan1.InitReport += new System.EventHandler(this.Gan1_InitReport);
-            // 
-            // Ganancia
+            // Re_RegCli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(928, 668);
+            this.ClientSize = new System.Drawing.Size(532, 395);
             this.Controls.Add(this.crystalReportViewer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Ganancia";
-            this.Text = "Ganancia";
-            this.Load += new System.EventHandler(this.Ganancia_Load);
+            this.Name = "Re_RegCli";
+            this.Text = "Re_RegCli";
+            this.Load += new System.EventHandler(this.Re_RegCli_Load);
             this.ResumeLayout(false);
 
         }
@@ -66,6 +62,6 @@
         #endregion
 
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
-        private Gan Gan1;
+        private RegClientes RegClientes1;
     }
 }

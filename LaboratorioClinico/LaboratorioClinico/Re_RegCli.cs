@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace LaboratorioClinico
 {
-    public partial class Ganancia : Form
+    public partial class Re_RegCli : Form
     {
-        public Ganancia()
+        public Re_RegCli()
         {
             InitializeComponent();
         }
 
-        private void Ganancia_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Gan1_InitReport(object sender, EventArgs e)
+        private void Re_RegCli_Load(object sender, EventArgs e)
         {
 
         }
