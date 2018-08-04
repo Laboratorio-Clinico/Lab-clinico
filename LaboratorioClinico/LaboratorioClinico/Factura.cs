@@ -15,7 +15,7 @@ namespace LaboratorioClinico
     public partial class Factura : Form
     {
 
-    /*public void proGuardarDatosDetalleFactura()
+   |public void proGuardarDatosDetalleFactura()
         {
 
             try
@@ -23,11 +23,11 @@ namespace LaboratorioClinico
 
                 OdbcCommand comando = new OdbcCommand("{CALL InsertaDetalleFactura(?,?,?,?,?)}", conexion.ObtenerConexion());
                 comando.CommandType = CommandType.StoredProcedure;
-                comando.Parameters.AddWithValue("nIdFactura", Txt_codigof.Text);
-                comando.Parameters.AddWithValue("iIdExamen", Txt_codigof.Text);
-                comando.Parameters.AddWithValue("iCantidad", Txt_cantidadf.Text);
-                comando.Parameters.AddWithValue("fPrecio", Txt_preciouf.Text);
-                comando.Parameters.AddWithValue("fDescuento", Txt_descuentof.Text);
+                comando.Parameters.AddWithValue("@nIdFactura", Txt_codigof.Text);
+                comando.Parameters.AddWithValue("@iIdExamen", Txt_codigof.Text);
+                comando.Parameters.AddWithValue("@iCantidad", Txt_cantidadf.Text);
+                comando.Parameters.AddWithValue("@fPrecio", Txt_preciouf.Text);
+                comando.Parameters.AddWithValue("@fDescuento", Txt_descuentof.Text);
                 
                 comando.ExecuteNonQuery();
                 MessageBox.Show("Datos insertados correctamente");
@@ -40,7 +40,7 @@ namespace LaboratorioClinico
              
 
             }
-        }*/
+        }
         public Factura()
         {
             InitializeComponent();
@@ -118,11 +118,11 @@ namespace LaboratorioClinico
                     /*
                     OdbcCommand comando = new OdbcCommand("{CALL InsertaDetalleFactura(?,?,?,?,?)}", conexion.ObtenerConexion());
                     comando.CommandType = CommandType.StoredProcedure;
-                    comando.Parameters.AddWithValue("nIdFactura", Txt_codigof.Text);
-                    comando.Parameters.AddWithValue("iIdExamen", Txt_codigof.Text);
-                    comando.Parameters.AddWithValue("iCantidad", Txt_cantidadf.Text);
-                    comando.Parameters.AddWithValue("fPrecio", Txt_preciouf.Text);
-                    comando.Parameters.AddWithValue("fDescuento", Txt_descuentof.Text);
+                    comando.Parameters.AddWithValue("@nIdFactura", Txt_codigof.Text);
+                    comando.Parameters.AddWithValue("@iIdExamen", Txt_codigof.Text);
+                    comando.Parameters.AddWithValue("@iCantidad", Txt_cantidadf.Text);
+                    comando.Parameters.AddWithValue("@fPrecio", Txt_preciouf.Text);
+                    comando.Parameters.AddWithValue("@fDescuento", Txt_descuentof.Text);
 
                     comando.ExecuteNonQuery();
                     MessageBox.Show("Datos insertados correctamente");*/
