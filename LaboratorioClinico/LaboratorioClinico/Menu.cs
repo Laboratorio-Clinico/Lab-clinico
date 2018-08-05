@@ -278,12 +278,12 @@ namespace LaboratorioClinico
         {
 
         }
-
+        /*
         private void membresiasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
             new Membresias().ShowDialog();
             this.Show();
-        }
+        }*/
     }
 }

@@ -458,11 +458,11 @@
             // 
             // membresiasToolStripMenuItem
             // 
-            this.membresiasToolStripMenuItem.Name = "membresiasToolStripMenuItem";
+            /*this.membresiasToolStripMenuItem.Name = "membresiasToolStripMenuItem";
             this.membresiasToolStripMenuItem.Size = new System.Drawing.Size(202, 26);
             this.membresiasToolStripMenuItem.Text = "Membresias";
             this.membresiasToolStripMenuItem.Click += new System.EventHandler(this.membresiasToolStripMenuItem_Click);
-            // 
+            // */
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
