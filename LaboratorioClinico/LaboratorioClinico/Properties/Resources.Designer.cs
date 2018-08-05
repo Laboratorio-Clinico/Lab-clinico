@@ -223,16 +223,6 @@ namespace LaboratorioClinico.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bloquear1 {
-            get {
-                object obj = ResourceManager.GetObject("bloquear1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap blue_minimalistic_gaussian_b_pics_710306 {
             get {
                 object obj = ResourceManager.GetObject("blue-minimalistic-gaussian-b-pics-710306", resourceCulture);
