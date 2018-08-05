@@ -63,8 +63,8 @@ namespace LaboratorioClinico
             if (lbl_tipo.Text == "Usuario")
             {
                 Tm_admin.Enabled = false;
-               
-            }else if (lbl_tipo.Text == "UsuarioL")
+
+            } else if (lbl_tipo.Text == "UsuarioL")
             {
                 Tm_admin.Enabled = false;
                 Tm_Control.Enabled = false;
@@ -106,7 +106,7 @@ namespace LaboratorioClinico
             {
 
             }
-            
+
         }
 
         private void lbl_tipo_Click(object sender, EventArgs e)
@@ -116,11 +116,11 @@ namespace LaboratorioClinico
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            if (Pnl_menudespegable.Height==10)
+            if (Pnl_menudespegable.Height == 10)
             {
                 tm_menu.Enabled = true;
             }
-            else if(Pnl_menudespegable.Height == 90) 
+            else if (Pnl_menudespegable.Height == 90)
             {
                 tm_menu2.Enabled = true;
             }
@@ -129,14 +129,14 @@ namespace LaboratorioClinico
                 MessageBox.Show("Invalido");
             }
 
-      
+
 
         }
 
         private void label2_Click(object sender, EventArgs e)
         {
-       
-     
+
+
         }
 
         private void bitácoraToolStripMenuItem_Click(object sender, EventArgs e)
@@ -176,15 +176,15 @@ namespace LaboratorioClinico
 
         private void tm_menu_Tick(object sender, EventArgs e)
         {
-            if (Pnl_menudespegable.Height<90)  //Desocultar
+            if (Pnl_menudespegable.Height < 90)  //Desocultar
             {
                 Pnl_menudespegable.Height = Pnl_menudespegable.Height + 10;
             }
             else
             {
-                
+
                 tm_menu.Enabled = false;
-                
+
             }
         }
 
@@ -196,9 +196,9 @@ namespace LaboratorioClinico
             }
             else
             {
-                
+
                 tm_menu2.Enabled = false;
-               
+
             }
         }
 
@@ -237,7 +237,7 @@ namespace LaboratorioClinico
         private void nuevoEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Empleado  formaDeEmpleado = new Empleado();
+            Empleado formaDeEmpleado = new Empleado();
             formaDeEmpleado.ShowDialog();
             this.Show();
         }
@@ -277,6 +277,20 @@ namespace LaboratorioClinico
         private void pacienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+     /*   private void membresiasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Membresias().ShowDialog();
+            this.Show();
+        }
+        */
+        private void membresiasToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Membresias().ShowDialog();
+            this.Show();
         }
     }
 }

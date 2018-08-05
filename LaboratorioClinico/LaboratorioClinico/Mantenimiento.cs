@@ -317,7 +317,7 @@ namespace LaboratorioClinico
             {
                 Tbc_paciente.Visible = true;
                 Tbc_medicos.Visible = false;
-                //Tbc_examen.Visible = false;
+               // Tbc_examen.Visible = false;
                 Tbc_empleado.Visible = false;
                 Picb_fondo.Visible = false;
 
@@ -326,7 +326,7 @@ namespace LaboratorioClinico
             {
                 Tbc_paciente.Visible = false;
                 Tbc_medicos.Visible = true;
-                //Tbc_examen.Visible = false;
+               // Tbc_examen.Visible = false;
                 Tbc_empleado.Visible = false;
                 Picb_fondo.Visible = false;
 
@@ -739,8 +739,8 @@ namespace LaboratorioClinico
             }
             catch (Exception ex)
             {
-                //MessageBox.Show("No se pudo eliminar el registro.", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
-                MessageBox.Show("error:"+ex);
+                MessageBox.Show("No se pudo eliminar el registro.", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
+                //MessageBox.Show("error:"+ex);
             }
         }
     }

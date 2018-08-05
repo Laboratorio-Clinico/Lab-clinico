@@ -51,6 +51,7 @@
             this.Tm_Control = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoPacienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.membresiasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Tm_Factura = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
@@ -276,7 +277,8 @@
             // 
             this.Tm_Control.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nuevoPacienteToolStripMenuItem,
-            this.nuevoEmpleadoToolStripMenuItem});
+            this.nuevoEmpleadoToolStripMenuItem,
+            this.membresiasToolStripMenuItem});
             this.Tm_Control.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tm_Control.Name = "Tm_Control";
             this.Tm_Control.Size = new System.Drawing.Size(79, 28);
@@ -301,6 +303,15 @@
             this.nuevoEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(202, 26);
             this.nuevoEmpleadoToolStripMenuItem.Text = "Nuevo Empleado";
             this.nuevoEmpleadoToolStripMenuItem.Click += new System.EventHandler(this.nuevoEmpleadoToolStripMenuItem_Click);
+            // 
+            // membresiasToolStripMenuItem
+            // 
+            this.membresiasToolStripMenuItem.BackColor = System.Drawing.Color.PowderBlue;
+            this.membresiasToolStripMenuItem.Image = global::LaboratorioClinico.Properties.Resources.mem;
+            this.membresiasToolStripMenuItem.Name = "membresiasToolStripMenuItem";
+            this.membresiasToolStripMenuItem.Size = new System.Drawing.Size(202, 26);
+            this.membresiasToolStripMenuItem.Text = "Membresias";
+            this.membresiasToolStripMenuItem.Click += new System.EventHandler(this.membresiasToolStripMenuItem_Click_1);
             // 
             // Tm_Factura
             // 
@@ -524,5 +535,6 @@
         private System.Windows.Forms.ToolStripMenuItem nuevoEmpleadoToolStripMenuItem;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.ToolStripMenuItem membresiasToolStripMenuItem;
     }
 }
