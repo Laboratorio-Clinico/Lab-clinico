@@ -20,6 +20,8 @@ namespace LaboratorioClinico
             InitializeComponent();
             formPago();
         }
+
+        //Validación si efectivo o crédito
         public void formPago()
         {
             try
@@ -35,7 +37,6 @@ namespace LaboratorioClinico
 
                 Cmb_formaPago.ValueMember = "iIdPago";
                 Cmb_formaPago.DisplayMember = "forma";
-
                 Cmb_formaPago.DataSource = tabla;
 
                 conexion.ObtenerConexion().Close();
@@ -44,10 +45,10 @@ namespace LaboratorioClinico
             catch (OdbcException error) { MessageBox.Show(error.Message); }
         }
 
+        
         public void proGuardarEncabezado()
         {
-                try
-            {
+            try{
                 int iIdPago = Convert.ToInt32(Cmb_formaPago.SelectedValue);
                 
               
@@ -61,23 +62,15 @@ namespace LaboratorioClinico
 
                 comando.ExecuteNonQuery();
                 MessageBox.Show("Datos insertados correctamente");
-            }
-            catch (Exception error) { MessageBox.Show("Error" + error); }
-            finally
-            {
-
-                conexion.ObtenerConexion().Close();
-
-
-            }
+            }catch (Exception error) { MessageBox.Show("Error" + error); }
+                finally
+            { conexion.ObtenerConexion().Close();}
         }
 
         //Procedimiento que guardara el detalle de la factura
         public void proGuardarDatosDetalleFactura()
         {
-
-            try
-            {
+            try{
 
                 OdbcCommand comando = new OdbcCommand("{CALL InsertaDetalleFactura(?,?,?,?,?)}", conexion.ObtenerConexion());
                 comando.CommandType = CommandType.StoredProcedure;
@@ -91,13 +84,8 @@ namespace LaboratorioClinico
                 MessageBox.Show("Datos insertados correctamente");
             }
             catch (Exception error) { MessageBox.Show("Error" + error); }
-            finally
-            {
-
-                conexion.ObtenerConexion().Close();
-
-
-            }
+                finally
+            {    conexion.ObtenerConexion().Close();}
         }
         private void label5_Click(object sender, EventArgs e)
         {
@@ -106,10 +94,8 @@ namespace LaboratorioClinico
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
-
-        }
-
-        
+            
+        }       
 
         private void Lbl_cargarf_Click(object sender, EventArgs e)
         {
@@ -118,8 +104,9 @@ namespace LaboratorioClinico
 
         private void Txt_nitf_TextChanged(object sender, EventArgs e)
         {
-
         }
+
+
         int acumulado = 0, cont = 0;
         int acumulado1 = 0, descTotal=0;
         int subtotal=0; int descuento=0; int total=0;
@@ -171,11 +158,9 @@ namespace LaboratorioClinico
                     Txt_descuentof.ResetText();
 
                 }
-                else
-                {
+                else{
                     MessageBox.Show("No existe producto");
                 }
-
             }
             catch (Exception ex)
             {
@@ -185,28 +170,22 @@ namespace LaboratorioClinico
 
         private void button2_Click(object sender, EventArgs e)
         {
-            try
-            {
-              
+            try{              
                 OdbcDataAdapter sda = new OdbcDataAdapter("SELECT pa.sNombre, pa.sDireccion FROM paciente pa WHERE pa.sNit='" + Convert.ToString(Txt_nitf.Text) + "'", conexion.ObtenerConexion());
                 DataTable datos = new DataTable();
                 sda.Fill(datos);
 
                 Txt_nombref.Text = datos.Rows[0][0].ToString();
-                Txt_direccionf.Text = datos.Rows[0][1].ToString();
-                
-            }
-            catch (Exception ex)
-            {
+                Txt_direccionf.Text = datos.Rows[0][1].ToString();                
+
+            }catch (Exception ex){
                 MessageBox.Show("Intente de nuevo.", "Paciente no registrado.", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
             }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            try
-            {
-
+            try{
                 OdbcDataAdapter sda = new OdbcDataAdapter("SELECT ex.sDescripcion, ex.fPrecio FROM examenes ex WHERE ex.iIdExamen='" + Convert.ToString(Txt_codigof.Text) + "'", conexion.ObtenerConexion());
                 DataTable datos = new DataTable();
                 sda.Fill(datos);
@@ -214,21 +193,17 @@ namespace LaboratorioClinico
                 Txt_descripcion.Text = datos.Rows[0][0].ToString();
                 Txt_preciouf.Text = datos.Rows[0][1].ToString();
 
-            }
-            catch (Exception ex)
-            {
+            }catch (Exception ex){
                 MessageBox.Show("Intente de nuevo.", "Código no encontrado.", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Exclamation);
             }
         }
 
         private void Lbl_noserie_Click(object sender, EventArgs e)
         {
-
         }
 
         private void Gpb_datosf_Enter(object sender, EventArgs e)
         {
-
         }
 
         private void Btn_guardar_Click(object sender, EventArgs e)
@@ -236,23 +211,20 @@ namespace LaboratorioClinico
             int r = 0; int rec = 0;int f =0;int acumulado2;
             int iIdPago = Convert.ToInt32(Cmb_formaPago.SelectedValue);
 
-            if (iIdPago == 2)
-            {
+            if (iIdPago == 2){
                 r = ((acumulado1 * 5)/100);
                 f = 5;
-            }
-            else
-            {
-                if (iIdPago == 1)
-                {
+            }else{
+                if (iIdPago == 1){
                     r = 0;
                     f = 0;
                 }
             }
+
             rec = rec + r;//Recargo
             acumulado2 = acumulado1 + rec;//Total 
             Lbl_reC.Text = f.ToString();
-            Lbl_totalFf.Text = acumulado1.ToString();
+            Lbl_totalFf.Text = acumulado2.ToString();
             proGuardarEncabezado();
 
 
