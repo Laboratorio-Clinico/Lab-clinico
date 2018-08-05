@@ -93,11 +93,12 @@ namespace LaboratorioClinico
             this.Show();
         }
 
-        private void Btn_editar_Click(object sender, EventArgs e) //Copiar los datoa del DataGrid a los textbox para editar o eliminar
+        private void Btn_editar_Click(object sender, EventArgs e) //Copiar los datos del DataGrid a los textbox para editar
         {
             try
             {
                 Gpb_datosm.Enabled = true;
+                Txt_codigom.Enabled = false;
                 if(Dgv_examen.SelectedRows.Count > 0)
                 {
                     Txt_codigom.Text = Dgv_examen.CurrentRow.Cells[0].Value.ToString();
@@ -112,7 +113,6 @@ namespace LaboratorioClinico
             {
                 MessageBox.Show("Error: " + ex);
             }  
-            //MessageBox.Show("Seleccionar una fila para editar", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void Dgv_examen_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -120,7 +120,7 @@ namespace LaboratorioClinico
             
         }
 
-        private void Btn_eliminar_Click(object sender, EventArgs e)
+        private void Btn_eliminar_Click(object sender, EventArgs e) //Copiar los datos del DataGrid a los textbox para eliminar
         {
             Gpb_datose.Enabled = true;
             if (Dgv_examen.SelectedRows.Count > 0)
@@ -132,6 +132,58 @@ namespace LaboratorioClinico
             else
             {
                 MessageBox.Show("Seleccionar una fila para editar", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void Btn_confirmarm_Click(object sender, EventArgs e)//Editar examen.......................
+        {
+            try
+            {
+                conexion.ObtenerConexion();
+                OdbcCommand cmd = conexion.ObtenerConexion().CreateCommand();
+
+                cmd.CommandText = "update examenes set sDescripcion = '" + Txt_nombrem.Text + "' where iIdExamen = '" + Convert.ToInt32(Txt_codigom.Text) + "'";
+                cmd.ExecuteNonQuery();
+                cmd.CommandText = "update examenes set fPrecio = '" + Convert.ToUInt32(Txt_preciom.Text) + "' where iIdExamen = '" + Convert.ToInt32(Txt_codigom.Text) + "'";
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Examen Modificado Exitosamente.", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
+                //Limpiar y deshabilitar
+                Txt_codigom.Clear();
+                Txt_nombrem.Clear();
+                Txt_preciom.Clear();
+                Gpb_datosm.Enabled = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo modificar el registro.", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
+            }          
+        }
+
+        private void Btn_confirmare_Click(object sender, EventArgs e)//Eliminar información examen....................
+        {
+            try
+            {
+                conexion.ObtenerConexion();
+                OdbcCommand cmd = conexion.ObtenerConexion().CreateCommand();
+
+                //Eliminar los datos del examen de 2 tablas que guardan su información
+                cmd.CommandText = "delete from examenes where iIdExamen = '" + Convert.ToInt32(Txt_codigoe.Text) + "'";
+                cmd.ExecuteNonQuery();
+                cmd.CommandText = "delete from requisitosdeexamen where iIdExamen = '" + Convert.ToInt32(Txt_codigoe.Text) + "'";
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Examen Eliminado Exitosamente", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
+                Txt_codigoe.Clear();
+                Txt_nombree.Clear();
+                Txt_precioe.Clear();
+                Gpb_datose.Enabled = false;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("No se pudo eliminar el registro.", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
             }
         }
     }
