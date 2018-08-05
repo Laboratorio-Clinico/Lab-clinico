@@ -41,6 +41,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Gpb_detallef = new System.Windows.Forms.GroupBox();
+            this.Cmb_formaPago = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Lbl_totalFf = new System.Windows.Forms.Label();
             this.Lbl_desc = new System.Windows.Forms.Label();
@@ -71,6 +72,13 @@
             this.Lbl_imprimirf = new System.Windows.Forms.Label();
             this.Txt_cantidadf = new System.Windows.Forms.TextBox();
             this.Dgb_facturaf = new System.Windows.Forms.DataGridView();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Gpb_datosf = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
             this.Dtp_fechaf = new System.Windows.Forms.DateTimePicker();
@@ -84,17 +92,9 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.Lbl_serie = new System.Windows.Forms.Label();
             this.Lbl_noserie = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.Lbl_reC = new System.Windows.Forms.Label();
             this.Lbl_recaTotal = new System.Windows.Forms.Label();
             this.Lbl_recargo = new System.Windows.Forms.Label();
-            this.Cmb_formaPago = new System.Windows.Forms.ComboBox();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Gpb_laboratoriof.SuspendLayout();
             this.Gpb_detallef.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -224,13 +224,24 @@
             this.Gpb_detallef.TabStop = false;
             this.Gpb_detallef.Text = "Detalle factura";
             // 
+            // Cmb_formaPago
+            // 
+            this.Cmb_formaPago.FormattingEnabled = true;
+            this.Cmb_formaPago.Items.AddRange(new object[] {
+            "Efectivo",
+            "Credito"});
+            this.Cmb_formaPago.Location = new System.Drawing.Point(110, 214);
+            this.Cmb_formaPago.Name = "Cmb_formaPago";
+            this.Cmb_formaPago.Size = new System.Drawing.Size(138, 30);
+            this.Cmb_formaPago.TabIndex = 55;
+            // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.Lbl_totalFf);
+            this.groupBox1.Controls.Add(this.Lbl_reC);
             this.groupBox1.Controls.Add(this.Lbl_recaTotal);
-            this.groupBox1.Controls.Add(this.Lbl_desc);
             this.groupBox1.Controls.Add(this.Lbl_recargo);
+            this.groupBox1.Controls.Add(this.Lbl_totalFf);
+            this.groupBox1.Controls.Add(this.Lbl_desc);
             this.groupBox1.Controls.Add(this.Lbl_subFf);
             this.groupBox1.Controls.Add(this.label19);
             this.groupBox1.Controls.Add(this.label18);
@@ -262,7 +273,7 @@
             this.Lbl_desc.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_desc.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_desc.ForeColor = System.Drawing.Color.White;
-            this.Lbl_desc.Location = new System.Drawing.Point(124, 33);
+            this.Lbl_desc.Location = new System.Drawing.Point(124, 46);
             this.Lbl_desc.Name = "Lbl_desc";
             this.Lbl_desc.Size = new System.Drawing.Size(12, 18);
             this.Lbl_desc.TabIndex = 62;
@@ -298,7 +309,7 @@
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(105, 33);
+            this.label18.Location = new System.Drawing.Point(105, 46);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(24, 18);
             this.label18.TabIndex = 59;
@@ -334,7 +345,7 @@
             this.Lbl_descuentos.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_descuentos.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_descuentos.ForeColor = System.Drawing.Color.White;
-            this.Lbl_descuentos.Location = new System.Drawing.Point(6, 31);
+            this.Lbl_descuentos.Location = new System.Drawing.Point(6, 44);
             this.Lbl_descuentos.Name = "Lbl_descuentos";
             this.Lbl_descuentos.Size = new System.Drawing.Size(82, 18);
             this.Lbl_descuentos.TabIndex = 56;
@@ -591,7 +602,7 @@
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             dataGridViewCellStyle7.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.InfoText;
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.Info;
             dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.CadetBlue;
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.LightCyan;
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -603,6 +614,48 @@
             this.Dgb_facturaf.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.Dgb_facturaf.Size = new System.Drawing.Size(721, 130);
             this.Dgb_facturaf.TabIndex = 34;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Codigo";
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 65;
+            // 
+            // Column1
+            // 
+            this.Column1.FillWeight = 120F;
+            this.Column1.HeaderText = "Cantidad";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 75;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Descripción";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 190;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Precio Unitario";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 85;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Sub-Total";
+            this.Column7.Name = "Column7";
+            this.Column7.Width = 90;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Descuento";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 90;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Total";
+            this.Column5.Name = "Column5";
             // 
             // Gpb_datosf
             // 
@@ -756,17 +809,17 @@
             this.Lbl_noserie.TabIndex = 6;
             this.Lbl_noserie.Text = "0001";
             // 
-            // label6
+            // Lbl_reC
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(124, 49);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(12, 18);
-            this.label6.TabIndex = 65;
-            this.label6.Text = ".";
+            this.Lbl_reC.AutoSize = true;
+            this.Lbl_reC.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_reC.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_reC.ForeColor = System.Drawing.Color.White;
+            this.Lbl_reC.Location = new System.Drawing.Point(124, 28);
+            this.Lbl_reC.Name = "Lbl_reC";
+            this.Lbl_reC.Size = new System.Drawing.Size(12, 18);
+            this.Lbl_reC.TabIndex = 68;
+            this.Lbl_reC.Text = ".";
             // 
             // Lbl_recaTotal
             // 
@@ -774,10 +827,10 @@
             this.Lbl_recaTotal.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_recaTotal.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_recaTotal.ForeColor = System.Drawing.Color.White;
-            this.Lbl_recaTotal.Location = new System.Drawing.Point(105, 49);
+            this.Lbl_recaTotal.Location = new System.Drawing.Point(105, 28);
             this.Lbl_recaTotal.Name = "Lbl_recaTotal";
             this.Lbl_recaTotal.Size = new System.Drawing.Size(24, 18);
-            this.Lbl_recaTotal.TabIndex = 64;
+            this.Lbl_recaTotal.TabIndex = 67;
             this.Lbl_recaTotal.Text = "Q.";
             // 
             // Lbl_recargo
@@ -786,64 +839,11 @@
             this.Lbl_recargo.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_recargo.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_recargo.ForeColor = System.Drawing.Color.White;
-            this.Lbl_recargo.Location = new System.Drawing.Point(6, 47);
+            this.Lbl_recargo.Location = new System.Drawing.Point(6, 28);
             this.Lbl_recargo.Name = "Lbl_recargo";
             this.Lbl_recargo.Size = new System.Drawing.Size(65, 18);
-            this.Lbl_recargo.TabIndex = 63;
+            this.Lbl_recargo.TabIndex = 66;
             this.Lbl_recargo.Text = "Recargo";
-            // 
-            // Cmb_formaPago
-            // 
-            this.Cmb_formaPago.FormattingEnabled = true;
-            this.Cmb_formaPago.Items.AddRange(new object[] {
-            "Efectivo",
-            "Credito"});
-            this.Cmb_formaPago.Location = new System.Drawing.Point(110, 214);
-            this.Cmb_formaPago.Name = "Cmb_formaPago";
-            this.Cmb_formaPago.Size = new System.Drawing.Size(138, 30);
-            this.Cmb_formaPago.TabIndex = 55;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Total";
-            this.Column5.Name = "Column5";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Descuento";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 90;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Sub-Total";
-            this.Column7.Name = "Column7";
-            this.Column7.Width = 90;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Precio Unitario";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 85;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Descripción";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 190;
-            // 
-            // Column1
-            // 
-            this.Column1.FillWeight = 120F;
-            this.Column1.HeaderText = "Cantidad";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 75;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Codigo";
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 65;
             // 
             // Factura
             // 
@@ -930,9 +930,6 @@
         private System.Windows.Forms.Label Lbl_desc;
         private System.Windows.Forms.Label Lbl_subFf;
         private System.Windows.Forms.ComboBox Cmb_formaPago;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label Lbl_recaTotal;
-        private System.Windows.Forms.Label Lbl_recargo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -940,5 +937,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.Label Lbl_reC;
+        private System.Windows.Forms.Label Lbl_recaTotal;
+        private System.Windows.Forms.Label Lbl_recargo;
     }
 }
