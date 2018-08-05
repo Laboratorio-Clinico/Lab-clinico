@@ -93,13 +93,6 @@ namespace LaboratorioClinico
             this.Show();
         }
 
-        private void Dgv_examen_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            sCodigo = Dgv_examen.Rows[e.RowIndex].Cells["codigo"].Value.ToString();
-            sNombre = Dgv_examen.Rows[e.RowIndex].Cells["nombre"].Value.ToString();
-            sPrecio = Dgv_examen.Rows[e.RowIndex].Cells["precio"].Value.ToString();
-        }
-
         private void Btn_editar_Click(object sender, EventArgs e)
         {
             if(sCodigo == "")
@@ -111,6 +104,13 @@ namespace LaboratorioClinico
                 Txt_nombre.Text = sNombre;
                 Txt_precio.Text = sPrecio;
             }
+        }
+
+        private void Dgv_examen_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            sCodigo = Dgv_examen.Rows[e.RowIndex].Cells["codigo"].Value.ToString();
+            sNombre = Dgv_examen.Rows[e.RowIndex].Cells["nombre"].Value.ToString();
+            sPrecio = Dgv_examen.Rows[e.RowIndex].Cells["precio"].Value.ToString();
         }
     }
 }
