@@ -282,7 +282,7 @@ namespace LaboratorioClinico
         private void membresiasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new SolicitudDeMembresia().ShowDialog();
+            new Membresias().ShowDialog();
             this.Show();
         }
     }
