@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Requerimientos));
             this.Gpb_llenador = new System.Windows.Forms.GroupBox();
+            this.Dgb_requisitosr = new System.Windows.Forms.DataGridView();
             this.button2 = new System.Windows.Forms.Button();
-            this.Txt_nombrer = new System.Windows.Forms.TextBox();
             this.Lbl_nombrer = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.Lbl_buscarr = new System.Windows.Forms.Label();
@@ -41,12 +41,12 @@
             this.Lbl_fechar = new System.Windows.Forms.Label();
             this.Gpb_imprimirr = new System.Windows.Forms.GroupBox();
             this.Gpb_requisitos = new System.Windows.Forms.GroupBox();
-            this.Dgb_requisitosr = new System.Windows.Forms.DataGridView();
+            this.Cmb_examen = new System.Windows.Forms.ComboBox();
             this.Gpb_llenador.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgb_requisitosr)).BeginInit();
             this.Gpb_fechar.SuspendLayout();
             this.Gpb_imprimirr.SuspendLayout();
             this.Gpb_requisitos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Dgb_requisitosr)).BeginInit();
             this.SuspendLayout();
             // 
             // Gpb_llenador
@@ -60,6 +60,14 @@
             this.Gpb_llenador.TabIndex = 0;
             this.Gpb_llenador.TabStop = false;
             // 
+            // Dgb_requisitosr
+            // 
+            this.Dgb_requisitosr.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Dgb_requisitosr.Location = new System.Drawing.Point(6, 12);
+            this.Dgb_requisitosr.Name = "Dgb_requisitosr";
+            this.Dgb_requisitosr.Size = new System.Drawing.Size(524, 221);
+            this.Dgb_requisitosr.TabIndex = 0;
+            // 
             // button2
             // 
             this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
@@ -70,14 +78,6 @@
             this.button2.TabIndex = 4;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // Txt_nombrer
-            // 
-            this.Txt_nombrer.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_nombrer.Location = new System.Drawing.Point(208, 50);
-            this.Txt_nombrer.Name = "Txt_nombrer";
-            this.Txt_nombrer.Size = new System.Drawing.Size(267, 26);
-            this.Txt_nombrer.TabIndex = 1;
             // 
             // Lbl_nombrer
             // 
@@ -110,11 +110,11 @@
             this.Lbl_buscarr.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_buscarr.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_buscarr.ForeColor = System.Drawing.Color.White;
-            this.Lbl_buscarr.Location = new System.Drawing.Point(531, 92);
+            this.Lbl_buscarr.Location = new System.Drawing.Point(511, 80);
             this.Lbl_buscarr.Name = "Lbl_buscarr";
-            this.Lbl_buscarr.Size = new System.Drawing.Size(38, 15);
+            this.Lbl_buscarr.Size = new System.Drawing.Size(24, 15);
             this.Lbl_buscarr.TabIndex = 4;
-            this.Lbl_buscarr.Text = "Buscar";
+            this.Lbl_buscarr.Text = "Ver";
             // 
             // Lbl_imprimirr
             // 
@@ -179,8 +179,9 @@
             // Gpb_requisitos
             // 
             this.Gpb_requisitos.BackColor = System.Drawing.Color.Transparent;
+            this.Gpb_requisitos.Controls.Add(this.Cmb_examen);
             this.Gpb_requisitos.Controls.Add(this.Lbl_nombrer);
-            this.Gpb_requisitos.Controls.Add(this.Txt_nombrer);
+            this.Gpb_requisitos.Controls.Add(this.Lbl_buscarr);
             this.Gpb_requisitos.Font = new System.Drawing.Font("Perpetua", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Gpb_requisitos.ForeColor = System.Drawing.Color.DarkKhaki;
             this.Gpb_requisitos.Location = new System.Drawing.Point(31, 12);
@@ -190,13 +191,15 @@
             this.Gpb_requisitos.TabStop = false;
             this.Gpb_requisitos.Text = "Requisitos";
             // 
-            // Dgb_requisitosr
+            // Cmb_examen
             // 
-            this.Dgb_requisitosr.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Dgb_requisitosr.Location = new System.Drawing.Point(6, 12);
-            this.Dgb_requisitosr.Name = "Dgb_requisitosr";
-            this.Dgb_requisitosr.Size = new System.Drawing.Size(524, 221);
-            this.Dgb_requisitosr.TabIndex = 0;
+            this.Cmb_examen.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cmb_examen.FormattingEnabled = true;
+            this.Cmb_examen.Location = new System.Drawing.Point(208, 49);
+            this.Cmb_examen.Name = "Cmb_examen";
+            this.Cmb_examen.Size = new System.Drawing.Size(267, 26);
+            this.Cmb_examen.TabIndex = 3;
+            this.Cmb_examen.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // Requerimientos
             // 
@@ -207,7 +210,6 @@
             this.ClientSize = new System.Drawing.Size(766, 489);
             this.Controls.Add(this.Gpb_imprimirr);
             this.Controls.Add(this.Gpb_fechar);
-            this.Controls.Add(this.Lbl_buscarr);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Gpb_llenador);
             this.Controls.Add(this.Gpb_requisitos);
@@ -217,15 +219,14 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Requerimientos_Load);
             this.Gpb_llenador.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Dgb_requisitosr)).EndInit();
             this.Gpb_fechar.ResumeLayout(false);
             this.Gpb_fechar.PerformLayout();
             this.Gpb_imprimirr.ResumeLayout(false);
             this.Gpb_imprimirr.PerformLayout();
             this.Gpb_requisitos.ResumeLayout(false);
             this.Gpb_requisitos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Dgb_requisitosr)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -233,7 +234,6 @@
 
         private System.Windows.Forms.GroupBox Gpb_llenador;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox Txt_nombrer;
         private System.Windows.Forms.Label Lbl_nombrer;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox Gpb_fechar;
@@ -244,5 +244,6 @@
         private System.Windows.Forms.GroupBox Gpb_imprimirr;
         private System.Windows.Forms.GroupBox Gpb_requisitos;
         private System.Windows.Forms.DataGridView Dgb_requisitosr;
+        private System.Windows.Forms.ComboBox Cmb_examen;
     }
 }

@@ -299,6 +299,7 @@
             this.Txt_DPIEmpleado.Name = "Txt_DPIEmpleado";
             this.Txt_DPIEmpleado.Size = new System.Drawing.Size(197, 26);
             this.Txt_DPIEmpleado.TabIndex = 28;
+            this.Txt_DPIEmpleado.TextChanged += new System.EventHandler(this.Txt_DPIEmpleado_TextChanged);
             // 
             // Dtp_fechaNacimiento
             // 

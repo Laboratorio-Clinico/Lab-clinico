@@ -51,6 +51,7 @@
             this.button1.TabIndex = 12;
             this.button1.Text = "Ir a mantenimiento";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Dgv_examen
             // 
@@ -93,6 +94,7 @@
             this.Dgv_examen.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.Dgv_examen.Size = new System.Drawing.Size(404, 435);
             this.Dgv_examen.TabIndex = 10;
+            this.Dgv_examen.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_examen_CellContentClick);
             // 
             // pictureBox1
             // 

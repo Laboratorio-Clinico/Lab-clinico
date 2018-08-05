@@ -30,13 +30,25 @@ namespace LaboratorioClinico
 
         private void Requerimientos_Load(object sender, EventArgs e)
         {
+            //******************************Cargar los examenes***********************************************
+            OdbcCommand cmd2 = new OdbcCommand("Select sDescripcion from examenes", conexion.ObtenerConexion());
+            OdbcDataReader almacen2 = cmd2.ExecuteReader();
 
+
+            while (almacen2.Read())
+            {
+                Cmb_examen.Refresh();
+                Cmb_examen.Items.Add(almacen2.GetValue(0).ToString());
+
+            }
+            conexion.ObtenerConexion().Close();
+            almacen2.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
          
-            conexion.ObtenerConexion();
+           /* conexion.ObtenerConexion();
             DataTable dtDatos = new DataTable();
             OdbcDataAdapter sda = new OdbcDataAdapter("select *from examenes where sDescripcion='" + Convert.ToString(Txt_nombrer.Text) + "'", conexion.ObtenerConexion());
             sda.Fill(dtDatos);
@@ -50,7 +62,7 @@ namespace LaboratorioClinico
                 MessageBox.Show("No se encuentra el examen intente de nuevo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Txt_nombrer.ResetText();
 
-            }
+            }*/
            
           
            
@@ -60,6 +72,11 @@ namespace LaboratorioClinico
         private void button2_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
