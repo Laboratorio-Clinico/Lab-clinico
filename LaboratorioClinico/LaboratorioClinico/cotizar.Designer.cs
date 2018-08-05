@@ -365,7 +365,7 @@
             this.Btn_buscar.Size = new System.Drawing.Size(53, 44);
             this.Btn_buscar.TabIndex = 11;
             this.Btn_buscar.UseVisualStyleBackColor = true;
-            //this.Btn_buscar.Click += new System.EventHandler(this.Btn_buscar_Click);
+            this.Btn_buscar.Click += new System.EventHandler(this.Btn_buscar_Click);
             // 
             // Gpb_verDatos
             // 

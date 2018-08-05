@@ -259,8 +259,7 @@ namespace LaboratorioClinico
             proPrecioyTotal(iIdExamenes);
             
 
-
-        }*/
+*/
 
         private void Btn_requisitos_Click(object sender, EventArgs e)
         {
@@ -317,6 +316,11 @@ namespace LaboratorioClinico
         }
 
         private void cotizar_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Btn_buscar_Click(object sender, EventArgs e)
         {
 
         }

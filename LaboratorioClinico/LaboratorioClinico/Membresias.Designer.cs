@@ -44,16 +44,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.Btn_Beneficios = new System.Windows.Forms.Button();
             this.Lbl_beneficios = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Dgv_verBeneficios = new System.Windows.Forms.DataGridView();
             this.Gpb_datosEmpleado.SuspendLayout();
             this.Gpb_datosPersonales.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_verBeneficios)).BeginInit();
             this.SuspendLayout();
             // 
             // Gpb_datosEmpleado
             // 
             this.Gpb_datosEmpleado.BackColor = System.Drawing.Color.Transparent;
-            this.Gpb_datosEmpleado.Controls.Add(this.dataGridView1);
+            this.Gpb_datosEmpleado.Controls.Add(this.Dgv_verBeneficios);
             this.Gpb_datosEmpleado.Controls.Add(this.Lbl_buscar);
             this.Gpb_datosEmpleado.Controls.Add(this.Btn_buscar);
             this.Gpb_datosEmpleado.Controls.Add(this.label5);
@@ -246,13 +246,13 @@
             this.Lbl_beneficios.TabIndex = 39;
             this.Lbl_beneficios.Text = "Beneficios";
             // 
-            // dataGridView1
+            // Dgv_verBeneficios
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(26, 282);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(684, 152);
-            this.dataGridView1.TabIndex = 35;
+            this.Dgv_verBeneficios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Dgv_verBeneficios.Location = new System.Drawing.Point(26, 282);
+            this.Dgv_verBeneficios.Name = "Dgv_verBeneficios";
+            this.Dgv_verBeneficios.Size = new System.Drawing.Size(684, 152);
+            this.Dgv_verBeneficios.TabIndex = 35;
             // 
             // Membresias
             // 
@@ -268,7 +268,7 @@
             this.Gpb_datosEmpleado.PerformLayout();
             this.Gpb_datosPersonales.ResumeLayout(false);
             this.Gpb_datosPersonales.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_verBeneficios)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -289,7 +289,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Btn_agregar;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView Dgv_verBeneficios;
         private System.Windows.Forms.Button Btn_Beneficios;
         private System.Windows.Forms.Label Lbl_beneficios;
     }

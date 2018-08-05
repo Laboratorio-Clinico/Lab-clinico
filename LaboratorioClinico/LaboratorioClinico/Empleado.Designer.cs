@@ -53,16 +53,19 @@
             this.Txt_nombre = new System.Windows.Forms.TextBox();
             this.Lbl_apellido = new System.Windows.Forms.Label();
             this.Lbl_nombre = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Gpb_datosEmpleado.SuspendLayout();
             this.Gpb_contacto.SuspendLayout();
             this.Gpb_puesto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Picb_imagen)).BeginInit();
             this.Gpb_datosPersonales.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // Gpb_datosEmpleado
             // 
             this.Gpb_datosEmpleado.BackColor = System.Drawing.Color.Transparent;
+            this.Gpb_datosEmpleado.Controls.Add(this.dataGridView1);
             this.Gpb_datosEmpleado.Controls.Add(this.label4);
             this.Gpb_datosEmpleado.Controls.Add(this.Gpb_contacto);
             this.Gpb_datosEmpleado.Controls.Add(this.Gpb_puesto);
@@ -370,6 +373,14 @@
             this.Lbl_nombre.TabIndex = 10;
             this.Lbl_nombre.Text = "Nombre";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(708, 181);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(8, 8);
+            this.dataGridView1.TabIndex = 50;
+            // 
             // Empleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -391,6 +402,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Picb_imagen)).EndInit();
             this.Gpb_datosPersonales.ResumeLayout(false);
             this.Gpb_datosPersonales.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -422,5 +434,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox Txt_DPIEmpleado;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
