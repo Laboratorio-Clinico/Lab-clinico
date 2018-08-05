@@ -197,7 +197,6 @@ namespace LaboratorioClinico
                 OdbcCommand comando = new OdbcCommand("{CALL Pro_cotizacionesPrecio(?)}", conexion.ObtenerConexion());
                 comando.CommandType = CommandType.StoredProcedure;
                 comando.Parameters.AddWithValue("@iIdExamenes", iIdExamenes);
-                comando.ExecuteNonQuery();
                 DataTable tabla = new DataTable();
                 OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
                 adaptador.Fill(tabla);
@@ -228,7 +227,6 @@ namespace LaboratorioClinico
                 OdbcCommand comando = new OdbcCommand("{CALL Pro_cotizacionesPrecio(?)}", conexion.ObtenerConexion());
                 comando.CommandType = CommandType.StoredProcedure;
                 comando.Parameters.AddWithValue("@iIdExamenes", iIdExamenes);
-                comando.ExecuteNonQuery();
 
                 OdbcDataReader buscador = comando.ExecuteReader();
                 if (buscador.Read() == true)
@@ -321,8 +319,11 @@ namespace LaboratorioClinico
         }
 
         private void Btn_buscar_Click(object sender, EventArgs e)
-        {
 
+        {
+            int iIdExamenes = Convert.ToInt32(Cmb_examen.SelectedValue);
+            proBuscarCotizacion(iIdExamenes);
+            proPrecioyTotal(iIdExamenes);
         }
     }
 }

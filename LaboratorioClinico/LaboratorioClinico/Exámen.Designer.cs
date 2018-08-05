@@ -104,7 +104,7 @@
             this.Dgv_examen.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.Dgv_examen.Size = new System.Drawing.Size(372, 435);
             this.Dgv_examen.TabIndex = 10;
-            this.Dgv_examen.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_examen_CellClick);
+    //        this.Dgv_examen.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_examen_CellClick);
             // 
             // Lbl_examen
             // 
@@ -120,7 +120,7 @@
             // 
             // Btn_editar
             // 
-            this.Btn_editar.BackColor = System.Drawing.Color.Transparent;
+         /*   this.Btn_editar.BackColor = System.Drawing.Color.Transparent;
             this.Btn_editar.BackgroundImage = global::LaboratorioClinico.Properties.Resources.editar2;
             this.Btn_editar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Btn_editar.Location = new System.Drawing.Point(630, 68);
@@ -129,10 +129,10 @@
             this.Btn_editar.TabIndex = 96;
             this.Btn_editar.UseVisualStyleBackColor = false;
             this.Btn_editar.Click += new System.EventHandler(this.Btn_editar_Click);
-            // 
+            //*/ 
             // Btn_eliminar
             // 
-            this.Btn_eliminar.BackColor = System.Drawing.Color.Transparent;
+         /*   this.Btn_eliminar.BackColor = System.Drawing.Color.Transparent;
             this.Btn_eliminar.BackgroundImage = global::LaboratorioClinico.Properties.Resources.boton_x;
             this.Btn_eliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Btn_eliminar.Location = new System.Drawing.Point(691, 68);
@@ -141,7 +141,7 @@
             this.Btn_eliminar.TabIndex = 97;
             this.Btn_eliminar.UseVisualStyleBackColor = false;
             this.Btn_eliminar.Click += new System.EventHandler(this.Btn_eliminar_Click);
-            // 
+           */ // 
             // Txt_codigom
             // 
             this.Txt_codigom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
@@ -251,7 +251,7 @@
             // 
             // Btn_confirmarm
             // 
-            this.Btn_confirmarm.BackColor = System.Drawing.Color.Transparent;
+         /*   this.Btn_confirmarm.BackColor = System.Drawing.Color.Transparent;
             this.Btn_confirmarm.BackgroundImage = global::LaboratorioClinico.Properties.Resources.comprobado;
             this.Btn_confirmarm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Btn_confirmarm.Location = new System.Drawing.Point(235, 54);
@@ -260,7 +260,7 @@
             this.Btn_confirmarm.TabIndex = 105;
             this.Btn_confirmarm.UseVisualStyleBackColor = false;
             this.Btn_confirmarm.Click += new System.EventHandler(this.Btn_confirmarm_Click);
-            // 
+           */ // 
             // Lbl_confirmarm
             // 
             this.Lbl_confirmarm.AutoSize = true;
@@ -309,7 +309,7 @@
             // 
             // Btn_confirmare
             // 
-            this.Btn_confirmare.BackColor = System.Drawing.Color.Transparent;
+       /*     this.Btn_confirmare.BackColor = System.Drawing.Color.Transparent;
             this.Btn_confirmare.BackgroundImage = global::LaboratorioClinico.Properties.Resources.comprobado;
             this.Btn_confirmare.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Btn_confirmare.Location = new System.Drawing.Point(235, 54);
@@ -318,7 +318,7 @@
             this.Btn_confirmare.TabIndex = 105;
             this.Btn_confirmare.UseVisualStyleBackColor = false;
             this.Btn_confirmare.Click += new System.EventHandler(this.Btn_confirmare_Click);
-            // 
+         */   // 
             // Txt_precioe
             // 
             this.Txt_precioe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
