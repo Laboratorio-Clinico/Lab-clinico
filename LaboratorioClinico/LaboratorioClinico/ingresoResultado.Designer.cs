@@ -59,6 +59,8 @@
             this.Btn_guardarResultado = new System.Windows.Forms.Button();
             this.Btn_imprimirResultado = new System.Windows.Forms.Button();
             this.Btn_busc = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.Gpb_datosf.SuspendLayout();
             this.SuspendLayout();
@@ -102,6 +104,8 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.Btn_guardarResultado);
             this.groupBox1.Controls.Add(this.Lbl_ingresarr);
             this.groupBox1.Controls.Add(this.Btn_imprimirResultado);
@@ -414,6 +418,27 @@
             this.Btn_busc.UseVisualStyleBackColor = false;
             this.Btn_busc.Click += new System.EventHandler(this.Btn_busc_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(46, 211);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(51, 18);
+            this.label2.TabIndex = 109;
+            this.label2.Text = "Correo";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(190, 209);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(366, 20);
+            this.textBox1.TabIndex = 110;
+            // 
             // ingresoResultado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -472,5 +497,7 @@
         private System.Windows.Forms.Label Lbl_nitf;
         private System.Windows.Forms.Label Lbl_nombref;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label2;
     }
 }
