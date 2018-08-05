@@ -17,8 +17,32 @@ namespace LaboratorioClinico
         public ingresoResultado()
         {
             InitializeComponent();
+            tipoCorreo();
         }
+        public void tipoCorreo()
+        {
 
+         
+            try
+            {
+                Cmb_correo.Items.Clear();
+                Cmb_correo.Text = "Seleccione forma pago";
+                conexion.ObtenerConexion();
+                OdbcCommand comando = new OdbcCommand("Select iIdCorreo,sCorreo from correo", conexion.ObtenerConexion());
+                OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
+                DataTable tabla = new DataTable();
+
+                adaptador.Fill(tabla);
+
+                Cmb_correo.ValueMember = "iIdCorreo";
+                Cmb_correo.DisplayMember = "sCorreo";
+                Cmb_correo.DataSource = tabla;
+
+                conexion.ObtenerConexion().Close();
+
+            }
+            catch (OdbcException error) { MessageBox.Show(error.Message); }
+        }
         private void Btn_busc_Click(object sender, EventArgs e)
         {
             try
@@ -68,6 +92,30 @@ namespace LaboratorioClinico
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Btn_guardarResultado_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int iIdCorreo = Convert.ToInt32(Cmb_correo.SelectedValue);
+
+
+                OdbcCommand comando = new OdbcCommand("{CALL InsertaResultados(?,?,?,?,?)}", conexion.ObtenerConexion());
+                comando.CommandType = CommandType.StoredProcedure;
+
+                comando.Parameters.AddWithValue("@nIdPaciente", Txt_dpir.Text);
+                comando.Parameters.AddWithValue("@requisitos", Txt_resultadox.Text);
+                comando.Parameters.AddWithValue("@fechaEmision", Dtp_fechar.Text);
+                comando.Parameters.AddWithValue("@correo", Txt_Correor.Text);
+                comando.Parameters.AddWithValue("@sCorreo", iIdCorreo);
+
+                comando.ExecuteNonQuery();
+                MessageBox.Show("Resultados insertados correctamente");
+            }
+            catch (Exception error) { MessageBox.Show("Error" + error); }
+            finally
+            { conexion.ObtenerConexion().Close(); }
         }
     }
 }

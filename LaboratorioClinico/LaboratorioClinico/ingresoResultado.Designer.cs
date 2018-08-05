@@ -56,13 +56,13 @@
             this.Btn_editarResultado = new System.Windows.Forms.Button();
             this.Btn_busc = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Txt_Correor = new System.Windows.Forms.TextBox();
             this.Btn_BuscarExamen = new System.Windows.Forms.Button();
             this.Btn_guardarResultado = new System.Windows.Forms.Button();
             this.Lbl_ingresarr = new System.Windows.Forms.Label();
             this.Btn_imprimirResultado = new System.Windows.Forms.Button();
             this.Lbl_imprimirr = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.Cmb_correo = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -112,9 +112,9 @@
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.Cmb_correo);
             this.groupBox1.Controls.Add(this.Btn_BuscarExamen);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.Txt_Correor);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.Txt_resultadox);
             this.groupBox1.Controls.Add(this.Lbl_resultado);
@@ -393,14 +393,14 @@
             this.label2.TabIndex = 109;
             this.label2.Text = "Correo";
             // 
-            // textBox1
+            // Txt_Correor
             // 
-            this.textBox1.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(164, 98);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(257, 25);
-            this.textBox1.TabIndex = 110;
+            this.Txt_Correor.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_Correor.Location = new System.Drawing.Point(164, 98);
+            this.Txt_Correor.Multiline = true;
+            this.Txt_Correor.Name = "Txt_Correor";
+            this.Txt_Correor.Size = new System.Drawing.Size(257, 25);
+            this.Txt_Correor.TabIndex = 110;
             // 
             // Btn_BuscarExamen
             // 
@@ -425,6 +425,7 @@
             this.Btn_guardarResultado.Size = new System.Drawing.Size(53, 44);
             this.Btn_guardarResultado.TabIndex = 136;
             this.Btn_guardarResultado.UseVisualStyleBackColor = true;
+            this.Btn_guardarResultado.Click += new System.EventHandler(this.Btn_guardarResultado_Click);
             // 
             // Lbl_ingresarr
             // 
@@ -458,20 +459,19 @@
             this.Lbl_imprimirr.TabIndex = 135;
             this.Lbl_imprimirr.Text = "Imprimir";
             // 
-            // comboBox1
+            // Cmb_correo
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "",
+            this.Cmb_correo.FormattingEnabled = true;
+            this.Cmb_correo.Items.AddRange(new object[] {
             "gmail",
             "yahoo",
             "hotmail",
             "outlook"});
-            this.comboBox1.Location = new System.Drawing.Point(453, 94);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(134, 30);
-            this.comboBox1.TabIndex = 112;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.Cmb_correo.Location = new System.Drawing.Point(453, 94);
+            this.Cmb_correo.Name = "Cmb_correo";
+            this.Cmb_correo.Size = new System.Drawing.Size(134, 30);
+            this.Cmb_correo.TabIndex = 112;
+            this.Cmb_correo.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // groupBox2
             // 
@@ -569,7 +569,7 @@
         private System.Windows.Forms.Label Lbl_nitf;
         private System.Windows.Forms.Label Lbl_nombref;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Txt_Correor;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button Btn_BuscarExamen;
         private System.Windows.Forms.Button Btn_guardarResultado;
@@ -577,7 +577,7 @@
         private System.Windows.Forms.Button Btn_imprimirResultado;
         private System.Windows.Forms.Label Lbl_imprimirr;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox Cmb_correo;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
     }
