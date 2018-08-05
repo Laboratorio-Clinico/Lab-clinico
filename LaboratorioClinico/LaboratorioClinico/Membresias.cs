@@ -101,7 +101,7 @@ namespace LaboratorioClinico
 
         public void Pro_mostrarBeneficios()
         {
-        
+            
             try
             {
                 int iMembresias = Convert.ToInt32(Cmb_membresia.SelectedValue);
@@ -112,7 +112,9 @@ namespace LaboratorioClinico
                 DataTable tabla = new DataTable();
                 OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
                 adaptador.Fill(tabla);
-                Dgv_verBeneficios.DataSource = tabla;
+             /*   int fila = Dgv_verBeneficios.Rows.Add();
+                Dgv_verBeneficios.Rows[fila].Cells[1].Value = tabla;*/
+               Dgv_verBeneficios.DataSource = tabla;
             }
             catch (OdbcException error) { MessageBox.Show(error.Message); }
             finally
