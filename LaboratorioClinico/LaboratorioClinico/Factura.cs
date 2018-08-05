@@ -46,15 +46,14 @@ namespace LaboratorioClinico
 
         public void proGuardarEncabezado()
         {
-
-            try
+                try
             {
                 int iIdPago = Convert.ToInt32(Cmb_formaPago.SelectedValue);
                 
-
+              
                 OdbcCommand comando = new OdbcCommand("{CALL InsertaFactura(?,?,?,?,?)}", conexion.ObtenerConexion());
                 comando.CommandType = CommandType.StoredProcedure;
-                comando.Parameters.AddWithValue("@nIdFactura", Lbl_noserie.Text);
+                comando.Parameters.AddWithValue("@nIdFactura", Txt_serie.Text);
                 comando.Parameters.AddWithValue("@sSerieFactura", Lbl_serie.Text);
                 comando.Parameters.AddWithValue("@dFecha", Dtp_fechaf.Text);
                 comando.Parameters.AddWithValue("@sNit", Txt_nitf.Text);
@@ -110,10 +109,7 @@ namespace LaboratorioClinico
 
         }
 
-        private void Btn_guardar_Click(object sender, EventArgs e)
-        {
-            proGuardarEncabezado();
-        }
+        
 
         private void Lbl_cargarf_Click(object sender, EventArgs e)
         {
@@ -126,6 +122,7 @@ namespace LaboratorioClinico
         }
         int acumulado = 0, cont = 0;
         int acumulado1 = 0, descTotal=0;
+        int subtotal=0; int descuento=0; int total=0;
 
         //Factura Sindy Batz
         private void button1_Click(object sender, EventArgs e)
@@ -134,9 +131,8 @@ namespace LaboratorioClinico
             cont++;
             try
             {
-                int subtotal; int descuento; int total;
+               
                 int p, c, d; int a = 0;
-                int r = 0; int rec = 0;
                 int iIdPago = Convert.ToInt32(Cmb_formaPago.SelectedValue);
 
                 OdbcDataAdapter sda = new OdbcDataAdapter("select count(*) from examenes where iIdExamen= '" + Txt_codigof.Text + "'", conexion.ObtenerConexion());
@@ -154,31 +150,16 @@ namespace LaboratorioClinico
                 subtotal = c * p;
                 descuento = ((subtotal * d) / 100);
                 total = subtotal - descuento;
-                if (iIdPago == 2)
-                {
-                    r = ((subtotal * 5) / 100);
-                }else
-                {
-                    if (iIdPago == 1)
-                    {
-                        r = 0;
-                    } 
-                }
                 acumulado = acumulado + subtotal;//Subtotal
                 descTotal = descTotal + descuento;//Total descuento
-                rec = rec + r;//Recargo
-                acumulado1 = acumulado1 + total+r;//Total                
+                acumulado1 = acumulado1 + total;//Total                
                 a = a + cont;
-
-
-
-
+                
                 if (datos.Rows[0][0].ToString() == "1")
                 {
                     Dgb_facturaf.Rows.Add(datos2.Rows[0][0].ToString(), Txt_cantidadf.Text, Txt_descripcion.Text, datos2.Rows[0][2].ToString(), subtotal.ToString(), Txt_descuentof.Text, total.ToString());
                     Lbl_subFf.Text = acumulado.ToString();
-                    Lbl_desc.Text = descTotal.ToString();
-                    Lbl_reC.Text = rec.ToString();
+                    Lbl_desc.Text = descTotal.ToString();                
                     Lbl_totalFf.Text = acumulado1.ToString();
 
                     proGuardarDatosDetalleFactura();
@@ -238,6 +219,43 @@ namespace LaboratorioClinico
             {
                 MessageBox.Show("Intente de nuevo.", "Código no encontrado.", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Exclamation);
             }
+        }
+
+        private void Lbl_noserie_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Gpb_datosf_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Btn_guardar_Click(object sender, EventArgs e)
+        {
+            int r = 0; int rec = 0;int f =0;
+            int iIdPago = Convert.ToInt32(Cmb_formaPago.SelectedValue);
+
+            if (iIdPago == 2)
+            {
+                r = ((total * 5) / 100);
+                f = 5;
+            }
+            else
+            {
+                if (iIdPago == 1)
+                {
+                    r = 0;
+                    f = 0;
+                }
+            }
+            rec = rec + r;//Recargo
+            acumulado1 = acumulado1 + rec;//Total 
+            Lbl_reC.Text = f.ToString();
+            Lbl_totalFf.Text = acumulado1.ToString();
+            proGuardarEncabezado();
+
+
         }
 
         private void label12_Click(object sender, EventArgs e)

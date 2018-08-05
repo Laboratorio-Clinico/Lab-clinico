@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Factura));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Gpb_laboratoriof = new System.Windows.Forms.GroupBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -53,11 +53,11 @@
             this.Lbl_descuentos = new System.Windows.Forms.Label();
             this.Lbl_subtotal = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.Btn_BuscarExamen = new System.Windows.Forms.Button();
             this.Lbl_codigof = new System.Windows.Forms.Label();
             this.Txt_codigof = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Btn_agregar = new System.Windows.Forms.Button();
             this.Lbl_descuentto = new System.Windows.Forms.Label();
             this.Lbl_preciouf = new System.Windows.Forms.Label();
             this.Lbl_descripcionff = new System.Windows.Forms.Label();
@@ -91,10 +91,10 @@
             this.Lbl_nombref = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.Lbl_serie = new System.Windows.Forms.Label();
-            this.Lbl_noserie = new System.Windows.Forms.Label();
             this.Lbl_reC = new System.Windows.Forms.Label();
             this.Lbl_recaTotal = new System.Windows.Forms.Label();
             this.Lbl_recargo = new System.Windows.Forms.Label();
+            this.Txt_serie = new System.Windows.Forms.TextBox();
             this.Gpb_laboratoriof.SuspendLayout();
             this.Gpb_detallef.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -113,9 +113,9 @@
             this.Gpb_laboratoriof.Controls.Add(this.label1);
             this.Gpb_laboratoriof.Font = new System.Drawing.Font("Perpetua", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Gpb_laboratoriof.ForeColor = System.Drawing.Color.DarkKhaki;
-            this.Gpb_laboratoriof.Location = new System.Drawing.Point(12, 12);
+            this.Gpb_laboratoriof.Location = new System.Drawing.Point(12, 7);
             this.Gpb_laboratoriof.Name = "Gpb_laboratoriof";
-            this.Gpb_laboratoriof.Size = new System.Drawing.Size(742, 75);
+            this.Gpb_laboratoriof.Size = new System.Drawing.Size(742, 72);
             this.Gpb_laboratoriof.TabIndex = 0;
             this.Gpb_laboratoriof.TabStop = false;
             this.Gpb_laboratoriof.Text = "LABORATORIO CLINICO";
@@ -151,7 +151,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Silver;
-            this.label5.Location = new System.Drawing.Point(639, 53);
+            this.label5.Location = new System.Drawing.Point(639, 49);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(99, 18);
             this.label5.TabIndex = 4;
@@ -196,11 +196,11 @@
             this.Gpb_detallef.Controls.Add(this.Cmb_formaPago);
             this.Gpb_detallef.Controls.Add(this.groupBox1);
             this.Gpb_detallef.Controls.Add(this.label4);
-            this.Gpb_detallef.Controls.Add(this.button3);
+            this.Gpb_detallef.Controls.Add(this.Btn_BuscarExamen);
             this.Gpb_detallef.Controls.Add(this.Lbl_codigof);
             this.Gpb_detallef.Controls.Add(this.Txt_codigof);
             this.Gpb_detallef.Controls.Add(this.label12);
-            this.Gpb_detallef.Controls.Add(this.button1);
+            this.Gpb_detallef.Controls.Add(this.Btn_agregar);
             this.Gpb_detallef.Controls.Add(this.Lbl_descuentto);
             this.Gpb_detallef.Controls.Add(this.Lbl_preciouf);
             this.Gpb_detallef.Controls.Add(this.Lbl_descripcionff);
@@ -217,7 +217,7 @@
             this.Gpb_detallef.Controls.Add(this.Dgb_facturaf);
             this.Gpb_detallef.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Gpb_detallef.ForeColor = System.Drawing.SystemColors.Info;
-            this.Gpb_detallef.Location = new System.Drawing.Point(12, 186);
+            this.Gpb_detallef.Location = new System.Drawing.Point(11, 186);
             this.Gpb_detallef.Name = "Gpb_detallef";
             this.Gpb_detallef.Size = new System.Drawing.Size(742, 291);
             this.Gpb_detallef.TabIndex = 1;
@@ -249,9 +249,9 @@
             this.groupBox1.Controls.Add(this.Lbl_total);
             this.groupBox1.Controls.Add(this.Lbl_descuentos);
             this.groupBox1.Controls.Add(this.Lbl_subtotal);
-            this.groupBox1.Location = new System.Drawing.Point(402, 199);
+            this.groupBox1.Location = new System.Drawing.Point(321, 199);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(185, 86);
+            this.groupBox1.Size = new System.Drawing.Size(266, 86);
             this.groupBox1.TabIndex = 54;
             this.groupBox1.TabStop = false;
             // 
@@ -273,7 +273,7 @@
             this.Lbl_desc.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_desc.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_desc.ForeColor = System.Drawing.Color.White;
-            this.Lbl_desc.Location = new System.Drawing.Point(124, 46);
+            this.Lbl_desc.Location = new System.Drawing.Point(124, 31);
             this.Lbl_desc.Name = "Lbl_desc";
             this.Lbl_desc.Size = new System.Drawing.Size(12, 18);
             this.Lbl_desc.TabIndex = 62;
@@ -309,7 +309,7 @@
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(105, 46);
+            this.label18.Location = new System.Drawing.Point(105, 33);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(24, 18);
             this.label18.TabIndex = 59;
@@ -345,7 +345,7 @@
             this.Lbl_descuentos.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_descuentos.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_descuentos.ForeColor = System.Drawing.Color.White;
-            this.Lbl_descuentos.Location = new System.Drawing.Point(6, 44);
+            this.Lbl_descuentos.Location = new System.Drawing.Point(6, 31);
             this.Lbl_descuentos.Name = "Lbl_descuentos";
             this.Lbl_descuentos.Size = new System.Drawing.Size(82, 18);
             this.Lbl_descuentos.TabIndex = 56;
@@ -375,18 +375,18 @@
             this.label4.TabIndex = 53;
             this.label4.Text = "%";
             // 
-            // button3
+            // Btn_BuscarExamen
             // 
-            this.button3.BackColor = System.Drawing.Color.White;
-            this.button3.BackgroundImage = global::LaboratorioClinico.Properties.Resources.codigobarra;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.Location = new System.Drawing.Point(10, 27);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(41, 38);
-            this.button3.TabIndex = 52;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.Btn_BuscarExamen.BackColor = System.Drawing.Color.White;
+            this.Btn_BuscarExamen.BackgroundImage = global::LaboratorioClinico.Properties.Resources.codigobarra;
+            this.Btn_BuscarExamen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_BuscarExamen.Location = new System.Drawing.Point(10, 27);
+            this.Btn_BuscarExamen.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_BuscarExamen.Name = "Btn_BuscarExamen";
+            this.Btn_BuscarExamen.Size = new System.Drawing.Size(41, 38);
+            this.Btn_BuscarExamen.TabIndex = 52;
+            this.Btn_BuscarExamen.UseVisualStyleBackColor = false;
+            this.Btn_BuscarExamen.Click += new System.EventHandler(this.button3_Click);
             // 
             // Lbl_codigof
             // 
@@ -421,17 +421,17 @@
             this.label12.Text = "Agregar";
             this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
-            // button1
+            // Btn_agregar
             // 
-            this.button1.BackgroundImage = global::LaboratorioClinico.Properties.Resources.anadir;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(673, 12);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(53, 44);
-            this.button1.TabIndex = 47;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Btn_agregar.BackgroundImage = global::LaboratorioClinico.Properties.Resources.anadir;
+            this.Btn_agregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_agregar.Location = new System.Drawing.Point(673, 12);
+            this.Btn_agregar.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_agregar.Name = "Btn_agregar";
+            this.Btn_agregar.Size = new System.Drawing.Size(53, 44);
+            this.Btn_agregar.TabIndex = 47;
+            this.Btn_agregar.UseVisualStyleBackColor = true;
+            this.Btn_agregar.Click += new System.EventHandler(this.button1_Click);
             // 
             // Lbl_descuentto
             // 
@@ -577,19 +577,19 @@
             // Dgb_facturaf
             // 
             this.Dgb_facturaf.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            this.Dgb_facturaf.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.Dgb_facturaf.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.Dgb_facturaf.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Dgb_facturaf.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.DarkSlateGray;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.InfoText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.CadetBlue;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.LightCyan;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgb_facturaf.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkSlateGray;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.InfoText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.CadetBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.LightCyan;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgb_facturaf.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.Dgb_facturaf.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Dgb_facturaf.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column6,
@@ -599,19 +599,19 @@
             this.Column7,
             this.Column4,
             this.Column5});
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.CadetBlue;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.LightCyan;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Dgb_facturaf.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.CadetBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.LightCyan;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Dgb_facturaf.DefaultCellStyle = dataGridViewCellStyle3;
             this.Dgb_facturaf.GridColor = System.Drawing.Color.LightGray;
             this.Dgb_facturaf.Location = new System.Drawing.Point(9, 72);
             this.Dgb_facturaf.Name = "Dgb_facturaf";
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Teal;
-            this.Dgb_facturaf.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Teal;
+            this.Dgb_facturaf.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.Dgb_facturaf.Size = new System.Drawing.Size(721, 130);
             this.Dgb_facturaf.TabIndex = 34;
             // 
@@ -672,12 +672,13 @@
             this.Gpb_datosf.Controls.Add(this.textBox2);
             this.Gpb_datosf.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Gpb_datosf.ForeColor = System.Drawing.SystemColors.Info;
-            this.Gpb_datosf.Location = new System.Drawing.Point(12, 92);
+            this.Gpb_datosf.Location = new System.Drawing.Point(12, 94);
             this.Gpb_datosf.Name = "Gpb_datosf";
             this.Gpb_datosf.Size = new System.Drawing.Size(736, 95);
             this.Gpb_datosf.TabIndex = 2;
             this.Gpb_datosf.TabStop = false;
             this.Gpb_datosf.Text = "Datos Paciente";
+            this.Gpb_datosf.Enter += new System.EventHandler(this.Gpb_datosf_Enter);
             // 
             // button2
             // 
@@ -791,23 +792,11 @@
             this.Lbl_serie.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_serie.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_serie.ForeColor = System.Drawing.Color.Red;
-            this.Lbl_serie.Location = new System.Drawing.Point(627, 84);
+            this.Lbl_serie.Location = new System.Drawing.Point(562, 82);
             this.Lbl_serie.Name = "Lbl_serie";
             this.Lbl_serie.Size = new System.Drawing.Size(90, 22);
             this.Lbl_serie.TabIndex = 5;
             this.Lbl_serie.Text = "Serie \"A\"";
-            // 
-            // Lbl_noserie
-            // 
-            this.Lbl_noserie.AutoSize = true;
-            this.Lbl_noserie.BackColor = System.Drawing.Color.Transparent;
-            this.Lbl_noserie.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_noserie.ForeColor = System.Drawing.Color.Red;
-            this.Lbl_noserie.Location = new System.Drawing.Point(703, 83);
-            this.Lbl_noserie.Name = "Lbl_noserie";
-            this.Lbl_noserie.Size = new System.Drawing.Size(46, 22);
-            this.Lbl_noserie.TabIndex = 6;
-            this.Lbl_noserie.Text = "0001";
             // 
             // Lbl_reC
             // 
@@ -815,7 +804,7 @@
             this.Lbl_reC.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_reC.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_reC.ForeColor = System.Drawing.Color.White;
-            this.Lbl_reC.Location = new System.Drawing.Point(124, 28);
+            this.Lbl_reC.Location = new System.Drawing.Point(227, 46);
             this.Lbl_reC.Name = "Lbl_reC";
             this.Lbl_reC.Size = new System.Drawing.Size(12, 18);
             this.Lbl_reC.TabIndex = 68;
@@ -827,11 +816,11 @@
             this.Lbl_recaTotal.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_recaTotal.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_recaTotal.ForeColor = System.Drawing.Color.White;
-            this.Lbl_recaTotal.Location = new System.Drawing.Point(105, 28);
+            this.Lbl_recaTotal.Location = new System.Drawing.Point(243, 46);
             this.Lbl_recaTotal.Name = "Lbl_recaTotal";
-            this.Lbl_recaTotal.Size = new System.Drawing.Size(24, 18);
+            this.Lbl_recaTotal.Size = new System.Drawing.Size(21, 18);
             this.Lbl_recaTotal.TabIndex = 67;
-            this.Lbl_recaTotal.Text = "Q.";
+            this.Lbl_recaTotal.Text = "%";
             // 
             // Lbl_recargo
             // 
@@ -839,11 +828,20 @@
             this.Lbl_recargo.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_recargo.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_recargo.ForeColor = System.Drawing.Color.White;
-            this.Lbl_recargo.Location = new System.Drawing.Point(6, 28);
+            this.Lbl_recargo.Location = new System.Drawing.Point(159, 46);
             this.Lbl_recargo.Name = "Lbl_recargo";
             this.Lbl_recargo.Size = new System.Drawing.Size(65, 18);
             this.Lbl_recargo.TabIndex = 66;
             this.Lbl_recargo.Text = "Recargo";
+            // 
+            // Txt_serie
+            // 
+            this.Txt_serie.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_serie.Location = new System.Drawing.Point(649, 81);
+            this.Txt_serie.Multiline = true;
+            this.Txt_serie.Name = "Txt_serie";
+            this.Txt_serie.Size = new System.Drawing.Size(76, 20);
+            this.Txt_serie.TabIndex = 56;
             // 
             // Factura
             // 
@@ -852,7 +850,7 @@
             this.BackgroundImage = global::LaboratorioClinico.Properties.Resources.FONDOO;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(766, 489);
-            this.Controls.Add(this.Lbl_noserie);
+            this.Controls.Add(this.Txt_serie);
             this.Controls.Add(this.Lbl_serie);
             this.Controls.Add(this.Gpb_datosf);
             this.Controls.Add(this.Gpb_detallef);
@@ -897,7 +895,6 @@
         private System.Windows.Forms.Label Lbl_totalf;
         private System.Windows.Forms.DateTimePicker Dtp_fechaf;
         private System.Windows.Forms.Label Lbl_serie;
-        private System.Windows.Forms.Label Lbl_noserie;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button Btn_imprimirf;
@@ -912,11 +909,11 @@
         private System.Windows.Forms.TextBox Txt_preciouf;
         private System.Windows.Forms.TextBox Txt_descripcion;
         private System.Windows.Forms.TextBox Txt_cantidadf;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Btn_agregar;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label Lbl_codigof;
         private System.Windows.Forms.TextBox Txt_codigof;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button Btn_BuscarExamen;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -940,5 +937,6 @@
         private System.Windows.Forms.Label Lbl_reC;
         private System.Windows.Forms.Label Lbl_recaTotal;
         private System.Windows.Forms.Label Lbl_recargo;
+        private System.Windows.Forms.TextBox Txt_serie;
     }
 }
