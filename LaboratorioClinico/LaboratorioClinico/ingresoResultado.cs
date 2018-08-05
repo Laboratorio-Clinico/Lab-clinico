@@ -101,10 +101,11 @@ namespace LaboratorioClinico
                 int iIdCorreo = Convert.ToInt32(Cmb_correo.SelectedValue);
 
 
-                OdbcCommand comando = new OdbcCommand("{CALL InsertaResultados(?,?,?,?,?)}", conexion.ObtenerConexion());
+                OdbcCommand comando = new OdbcCommand("{CALL InsertaResultados(?,?,?,?,?,?)}", conexion.ObtenerConexion());
                 comando.CommandType = CommandType.StoredProcedure;
 
                 comando.Parameters.AddWithValue("@nIdPaciente", Txt_dpir.Text);
+                comando.Parameters.AddWithValue("@iIdExamen", Txt_codEx.Text);
                 comando.Parameters.AddWithValue("@requisitos", Txt_resultadox.Text);
                 comando.Parameters.AddWithValue("@fechaEmision", Dtp_fechar.Text);
                 comando.Parameters.AddWithValue("@correo", Txt_Correor.Text);
