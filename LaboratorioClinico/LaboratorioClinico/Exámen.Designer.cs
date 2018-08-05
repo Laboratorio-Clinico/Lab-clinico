@@ -36,17 +36,31 @@
             this.Lbl_examen = new System.Windows.Forms.Label();
             this.Btn_editar = new System.Windows.Forms.Button();
             this.Btn_eliminar = new System.Windows.Forms.Button();
-            this.Txt_codigo = new System.Windows.Forms.TextBox();
-            this.Lbl_codigo = new System.Windows.Forms.Label();
-            this.Lbl_nombre = new System.Windows.Forms.Label();
-            this.Lbl_precio = new System.Windows.Forms.Label();
-            this.Txt_nombre = new System.Windows.Forms.TextBox();
-            this.Lbl_quetzal = new System.Windows.Forms.Label();
-            this.Txt_precio = new System.Windows.Forms.TextBox();
-            this.Gpb_datos = new System.Windows.Forms.GroupBox();
-            this.Btn_confirmar = new System.Windows.Forms.Button();
+            this.Txt_codigom = new System.Windows.Forms.TextBox();
+            this.Lbl_codigom = new System.Windows.Forms.Label();
+            this.Lbl_nombrem = new System.Windows.Forms.Label();
+            this.Lbl_preciom = new System.Windows.Forms.Label();
+            this.Txt_nombrem = new System.Windows.Forms.TextBox();
+            this.Lbl_quetzalm = new System.Windows.Forms.Label();
+            this.Txt_preciom = new System.Windows.Forms.TextBox();
+            this.Gpb_datosm = new System.Windows.Forms.GroupBox();
+            this.Btn_confirmarm = new System.Windows.Forms.Button();
+            this.Lbl_confirmarm = new System.Windows.Forms.Label();
+            this.Gpb_datose = new System.Windows.Forms.GroupBox();
+            this.Lbl_confirmare = new System.Windows.Forms.Label();
+            this.Btn_confirmare = new System.Windows.Forms.Button();
+            this.Txt_precioe = new System.Windows.Forms.TextBox();
+            this.Txt_codigoe = new System.Windows.Forms.TextBox();
+            this.Lbl_quetzale = new System.Windows.Forms.Label();
+            this.Lbl_codigoe = new System.Windows.Forms.Label();
+            this.Txt_nombree = new System.Windows.Forms.TextBox();
+            this.Lbl_nombree = new System.Windows.Forms.Label();
+            this.Lbl_precioe = new System.Windows.Forms.Label();
+            this.Lbl_editar = new System.Windows.Forms.Label();
+            this.Lbl_eliminar = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_examen)).BeginInit();
-            this.Gpb_datos.SuspendLayout();
+            this.Gpb_datosm.SuspendLayout();
+            this.Gpb_datose.SuspendLayout();
             this.SuspendLayout();
             // 
             // Dgv_examen
@@ -109,7 +123,7 @@
             this.Btn_editar.BackColor = System.Drawing.Color.Transparent;
             this.Btn_editar.BackgroundImage = global::LaboratorioClinico.Properties.Resources.editar2;
             this.Btn_editar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Btn_editar.Location = new System.Drawing.Point(427, 68);
+            this.Btn_editar.Location = new System.Drawing.Point(630, 68);
             this.Btn_editar.Name = "Btn_editar";
             this.Btn_editar.Size = new System.Drawing.Size(53, 44);
             this.Btn_editar.TabIndex = 96;
@@ -121,126 +135,298 @@
             this.Btn_eliminar.BackColor = System.Drawing.Color.Transparent;
             this.Btn_eliminar.BackgroundImage = global::LaboratorioClinico.Properties.Resources.boton_x;
             this.Btn_eliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Btn_eliminar.Location = new System.Drawing.Point(486, 68);
+            this.Btn_eliminar.Location = new System.Drawing.Point(691, 68);
             this.Btn_eliminar.Name = "Btn_eliminar";
             this.Btn_eliminar.Size = new System.Drawing.Size(53, 44);
             this.Btn_eliminar.TabIndex = 97;
             this.Btn_eliminar.UseVisualStyleBackColor = false;
+            this.Btn_eliminar.Click += new System.EventHandler(this.Btn_eliminar_Click);
             // 
-            // Txt_codigo
+            // Txt_codigom
             // 
-            this.Txt_codigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.Txt_codigo.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_codigo.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.Txt_codigo.Location = new System.Drawing.Point(32, 49);
-            this.Txt_codigo.Margin = new System.Windows.Forms.Padding(4);
-            this.Txt_codigo.Name = "Txt_codigo";
-            this.Txt_codigo.Size = new System.Drawing.Size(127, 26);
-            this.Txt_codigo.TabIndex = 98;
+            this.Txt_codigom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_codigom.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_codigom.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.Txt_codigom.Location = new System.Drawing.Point(32, 49);
+            this.Txt_codigom.Margin = new System.Windows.Forms.Padding(4);
+            this.Txt_codigom.Name = "Txt_codigom";
+            this.Txt_codigom.Size = new System.Drawing.Size(96, 26);
+            this.Txt_codigom.TabIndex = 98;
             // 
-            // Lbl_codigo
+            // Lbl_codigom
             // 
-            this.Lbl_codigo.AutoSize = true;
-            this.Lbl_codigo.BackColor = System.Drawing.Color.Transparent;
-            this.Lbl_codigo.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_codigo.ForeColor = System.Drawing.Color.White;
-            this.Lbl_codigo.Location = new System.Drawing.Point(14, 33);
-            this.Lbl_codigo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Lbl_codigo.Name = "Lbl_codigo";
-            this.Lbl_codigo.Size = new System.Drawing.Size(100, 18);
-            this.Lbl_codigo.TabIndex = 99;
-            this.Lbl_codigo.Text = "Código exámen";
+            this.Lbl_codigom.AutoSize = true;
+            this.Lbl_codigom.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_codigom.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_codigom.ForeColor = System.Drawing.Color.White;
+            this.Lbl_codigom.Location = new System.Drawing.Point(14, 33);
+            this.Lbl_codigom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_codigom.Name = "Lbl_codigom";
+            this.Lbl_codigom.Size = new System.Drawing.Size(100, 18);
+            this.Lbl_codigom.TabIndex = 99;
+            this.Lbl_codigom.Text = "Código exámen";
             // 
-            // Lbl_nombre
+            // Lbl_nombrem
             // 
-            this.Lbl_nombre.AutoSize = true;
-            this.Lbl_nombre.BackColor = System.Drawing.Color.Transparent;
-            this.Lbl_nombre.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_nombre.ForeColor = System.Drawing.Color.White;
-            this.Lbl_nombre.Location = new System.Drawing.Point(17, 80);
-            this.Lbl_nombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Lbl_nombre.Name = "Lbl_nombre";
-            this.Lbl_nombre.Size = new System.Drawing.Size(58, 18);
-            this.Lbl_nombre.TabIndex = 100;
-            this.Lbl_nombre.Text = "Nombre";
+            this.Lbl_nombrem.AutoSize = true;
+            this.Lbl_nombrem.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_nombrem.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_nombrem.ForeColor = System.Drawing.Color.White;
+            this.Lbl_nombrem.Location = new System.Drawing.Point(17, 80);
+            this.Lbl_nombrem.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_nombrem.Name = "Lbl_nombrem";
+            this.Lbl_nombrem.Size = new System.Drawing.Size(58, 18);
+            this.Lbl_nombrem.TabIndex = 100;
+            this.Lbl_nombrem.Text = "Nombre";
             // 
-            // Lbl_precio
+            // Lbl_preciom
             // 
-            this.Lbl_precio.AutoSize = true;
-            this.Lbl_precio.BackColor = System.Drawing.Color.Transparent;
-            this.Lbl_precio.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_precio.ForeColor = System.Drawing.Color.White;
-            this.Lbl_precio.Location = new System.Drawing.Point(180, 33);
-            this.Lbl_precio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Lbl_precio.Name = "Lbl_precio";
-            this.Lbl_precio.Size = new System.Drawing.Size(46, 18);
-            this.Lbl_precio.TabIndex = 101;
-            this.Lbl_precio.Text = "Precio";
+            this.Lbl_preciom.AutoSize = true;
+            this.Lbl_preciom.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_preciom.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_preciom.ForeColor = System.Drawing.Color.White;
+            this.Lbl_preciom.Location = new System.Drawing.Point(148, 33);
+            this.Lbl_preciom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_preciom.Name = "Lbl_preciom";
+            this.Lbl_preciom.Size = new System.Drawing.Size(46, 18);
+            this.Lbl_preciom.TabIndex = 101;
+            this.Lbl_preciom.Text = "Precio";
             // 
-            // Txt_nombre
+            // Txt_nombrem
             // 
-            this.Txt_nombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.Txt_nombre.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_nombre.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.Txt_nombre.Location = new System.Drawing.Point(32, 96);
-            this.Txt_nombre.Margin = new System.Windows.Forms.Padding(4);
-            this.Txt_nombre.Name = "Txt_nombre";
-            this.Txt_nombre.Size = new System.Drawing.Size(253, 26);
-            this.Txt_nombre.TabIndex = 102;
+            this.Txt_nombrem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_nombrem.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_nombrem.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.Txt_nombrem.Location = new System.Drawing.Point(32, 96);
+            this.Txt_nombrem.Margin = new System.Windows.Forms.Padding(4);
+            this.Txt_nombrem.Name = "Txt_nombrem";
+            this.Txt_nombrem.Size = new System.Drawing.Size(185, 26);
+            this.Txt_nombrem.TabIndex = 102;
             // 
-            // Lbl_quetzal
+            // Lbl_quetzalm
             // 
-            this.Lbl_quetzal.AutoSize = true;
-            this.Lbl_quetzal.BackColor = System.Drawing.Color.Transparent;
-            this.Lbl_quetzal.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_quetzal.ForeColor = System.Drawing.Color.White;
-            this.Lbl_quetzal.Location = new System.Drawing.Point(167, 52);
-            this.Lbl_quetzal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Lbl_quetzal.Name = "Lbl_quetzal";
-            this.Lbl_quetzal.Size = new System.Drawing.Size(25, 18);
-            this.Lbl_quetzal.TabIndex = 103;
-            this.Lbl_quetzal.Text = "Q.";
+            this.Lbl_quetzalm.AutoSize = true;
+            this.Lbl_quetzalm.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_quetzalm.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_quetzalm.ForeColor = System.Drawing.Color.White;
+            this.Lbl_quetzalm.Location = new System.Drawing.Point(135, 52);
+            this.Lbl_quetzalm.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_quetzalm.Name = "Lbl_quetzalm";
+            this.Lbl_quetzalm.Size = new System.Drawing.Size(25, 18);
+            this.Lbl_quetzalm.TabIndex = 103;
+            this.Lbl_quetzalm.Text = "Q.";
             // 
-            // Txt_precio
+            // Txt_preciom
             // 
-            this.Txt_precio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.Txt_precio.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_precio.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.Txt_precio.Location = new System.Drawing.Point(192, 49);
-            this.Txt_precio.Margin = new System.Windows.Forms.Padding(4);
-            this.Txt_precio.Name = "Txt_precio";
-            this.Txt_precio.Size = new System.Drawing.Size(74, 26);
-            this.Txt_precio.TabIndex = 104;
+            this.Txt_preciom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_preciom.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_preciom.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.Txt_preciom.Location = new System.Drawing.Point(160, 49);
+            this.Txt_preciom.Margin = new System.Windows.Forms.Padding(4);
+            this.Txt_preciom.Name = "Txt_preciom";
+            this.Txt_preciom.Size = new System.Drawing.Size(57, 26);
+            this.Txt_preciom.TabIndex = 104;
             // 
-            // Gpb_datos
+            // Gpb_datosm
             // 
-            this.Gpb_datos.BackColor = System.Drawing.Color.Transparent;
-            this.Gpb_datos.Controls.Add(this.Txt_precio);
-            this.Gpb_datos.Controls.Add(this.Txt_codigo);
-            this.Gpb_datos.Controls.Add(this.Lbl_quetzal);
-            this.Gpb_datos.Controls.Add(this.Lbl_codigo);
-            this.Gpb_datos.Controls.Add(this.Txt_nombre);
-            this.Gpb_datos.Controls.Add(this.Lbl_nombre);
-            this.Gpb_datos.Controls.Add(this.Lbl_precio);
-            this.Gpb_datos.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Gpb_datos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.Gpb_datos.Location = new System.Drawing.Point(437, 194);
-            this.Gpb_datos.Name = "Gpb_datos";
-            this.Gpb_datos.Size = new System.Drawing.Size(304, 141);
-            this.Gpb_datos.TabIndex = 119;
-            this.Gpb_datos.TabStop = false;
-            this.Gpb_datos.Text = "Datos";
+            this.Gpb_datosm.BackColor = System.Drawing.Color.Transparent;
+            this.Gpb_datosm.Controls.Add(this.Btn_confirmarm);
+            this.Gpb_datosm.Controls.Add(this.Txt_preciom);
+            this.Gpb_datosm.Controls.Add(this.Txt_codigom);
+            this.Gpb_datosm.Controls.Add(this.Lbl_quetzalm);
+            this.Gpb_datosm.Controls.Add(this.Lbl_codigom);
+            this.Gpb_datosm.Controls.Add(this.Txt_nombrem);
+            this.Gpb_datosm.Controls.Add(this.Lbl_nombrem);
+            this.Gpb_datosm.Controls.Add(this.Lbl_preciom);
+            this.Gpb_datosm.Controls.Add(this.Lbl_confirmarm);
+            this.Gpb_datosm.Enabled = false;
+            this.Gpb_datosm.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Gpb_datosm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.Gpb_datosm.Location = new System.Drawing.Point(439, 151);
+            this.Gpb_datosm.Name = "Gpb_datosm";
+            this.Gpb_datosm.Size = new System.Drawing.Size(304, 141);
+            this.Gpb_datosm.TabIndex = 119;
+            this.Gpb_datosm.TabStop = false;
+            this.Gpb_datosm.Text = "Editar información examen";
             // 
-            // Btn_confirmar
+            // Btn_confirmarm
             // 
-            this.Btn_confirmar.BackColor = System.Drawing.Color.Transparent;
-            this.Btn_confirmar.BackgroundImage = global::LaboratorioClinico.Properties.Resources.comprobado;
-            this.Btn_confirmar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Btn_confirmar.Location = new System.Drawing.Point(688, 341);
-            this.Btn_confirmar.Name = "Btn_confirmar";
-            this.Btn_confirmar.Size = new System.Drawing.Size(53, 44);
-            this.Btn_confirmar.TabIndex = 105;
-            this.Btn_confirmar.UseVisualStyleBackColor = false;
+            this.Btn_confirmarm.BackColor = System.Drawing.Color.Transparent;
+            this.Btn_confirmarm.BackgroundImage = global::LaboratorioClinico.Properties.Resources.comprobado;
+            this.Btn_confirmarm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_confirmarm.Location = new System.Drawing.Point(235, 54);
+            this.Btn_confirmarm.Name = "Btn_confirmarm";
+            this.Btn_confirmarm.Size = new System.Drawing.Size(53, 44);
+            this.Btn_confirmarm.TabIndex = 105;
+            this.Btn_confirmarm.UseVisualStyleBackColor = false;
+            this.Btn_confirmarm.Click += new System.EventHandler(this.Btn_confirmarm_Click);
+            // 
+            // Lbl_confirmarm
+            // 
+            this.Lbl_confirmarm.AutoSize = true;
+            this.Lbl_confirmarm.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_confirmarm.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_confirmarm.ForeColor = System.Drawing.Color.PowderBlue;
+            this.Lbl_confirmarm.Location = new System.Drawing.Point(234, 95);
+            this.Lbl_confirmarm.Name = "Lbl_confirmarm";
+            this.Lbl_confirmarm.Size = new System.Drawing.Size(55, 15);
+            this.Lbl_confirmarm.TabIndex = 123;
+            this.Lbl_confirmarm.Text = "Confirmar";
+            // 
+            // Gpb_datose
+            // 
+            this.Gpb_datose.BackColor = System.Drawing.Color.Transparent;
+            this.Gpb_datose.Controls.Add(this.Lbl_confirmare);
+            this.Gpb_datose.Controls.Add(this.Btn_confirmare);
+            this.Gpb_datose.Controls.Add(this.Txt_precioe);
+            this.Gpb_datose.Controls.Add(this.Txt_codigoe);
+            this.Gpb_datose.Controls.Add(this.Lbl_quetzale);
+            this.Gpb_datose.Controls.Add(this.Lbl_codigoe);
+            this.Gpb_datose.Controls.Add(this.Txt_nombree);
+            this.Gpb_datose.Controls.Add(this.Lbl_nombree);
+            this.Gpb_datose.Controls.Add(this.Lbl_precioe);
+            this.Gpb_datose.Enabled = false;
+            this.Gpb_datose.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Gpb_datose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.Gpb_datose.Location = new System.Drawing.Point(439, 298);
+            this.Gpb_datose.Name = "Gpb_datose";
+            this.Gpb_datose.Size = new System.Drawing.Size(304, 141);
+            this.Gpb_datose.TabIndex = 120;
+            this.Gpb_datose.TabStop = false;
+            this.Gpb_datose.Text = "Eliminar examen";
+            // 
+            // Lbl_confirmare
+            // 
+            this.Lbl_confirmare.AutoSize = true;
+            this.Lbl_confirmare.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_confirmare.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_confirmare.ForeColor = System.Drawing.Color.PowderBlue;
+            this.Lbl_confirmare.Location = new System.Drawing.Point(234, 95);
+            this.Lbl_confirmare.Name = "Lbl_confirmare";
+            this.Lbl_confirmare.Size = new System.Drawing.Size(55, 15);
+            this.Lbl_confirmare.TabIndex = 124;
+            this.Lbl_confirmare.Text = "Confirmar";
+            // 
+            // Btn_confirmare
+            // 
+            this.Btn_confirmare.BackColor = System.Drawing.Color.Transparent;
+            this.Btn_confirmare.BackgroundImage = global::LaboratorioClinico.Properties.Resources.comprobado;
+            this.Btn_confirmare.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_confirmare.Location = new System.Drawing.Point(235, 54);
+            this.Btn_confirmare.Name = "Btn_confirmare";
+            this.Btn_confirmare.Size = new System.Drawing.Size(53, 44);
+            this.Btn_confirmare.TabIndex = 105;
+            this.Btn_confirmare.UseVisualStyleBackColor = false;
+            this.Btn_confirmare.Click += new System.EventHandler(this.Btn_confirmare_Click);
+            // 
+            // Txt_precioe
+            // 
+            this.Txt_precioe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_precioe.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_precioe.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.Txt_precioe.Location = new System.Drawing.Point(160, 49);
+            this.Txt_precioe.Margin = new System.Windows.Forms.Padding(4);
+            this.Txt_precioe.Name = "Txt_precioe";
+            this.Txt_precioe.Size = new System.Drawing.Size(57, 26);
+            this.Txt_precioe.TabIndex = 104;
+            // 
+            // Txt_codigoe
+            // 
+            this.Txt_codigoe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_codigoe.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_codigoe.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.Txt_codigoe.Location = new System.Drawing.Point(32, 49);
+            this.Txt_codigoe.Margin = new System.Windows.Forms.Padding(4);
+            this.Txt_codigoe.Name = "Txt_codigoe";
+            this.Txt_codigoe.Size = new System.Drawing.Size(96, 26);
+            this.Txt_codigoe.TabIndex = 98;
+            // 
+            // Lbl_quetzale
+            // 
+            this.Lbl_quetzale.AutoSize = true;
+            this.Lbl_quetzale.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_quetzale.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_quetzale.ForeColor = System.Drawing.Color.White;
+            this.Lbl_quetzale.Location = new System.Drawing.Point(135, 52);
+            this.Lbl_quetzale.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_quetzale.Name = "Lbl_quetzale";
+            this.Lbl_quetzale.Size = new System.Drawing.Size(25, 18);
+            this.Lbl_quetzale.TabIndex = 103;
+            this.Lbl_quetzale.Text = "Q.";
+            // 
+            // Lbl_codigoe
+            // 
+            this.Lbl_codigoe.AutoSize = true;
+            this.Lbl_codigoe.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_codigoe.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_codigoe.ForeColor = System.Drawing.Color.White;
+            this.Lbl_codigoe.Location = new System.Drawing.Point(14, 33);
+            this.Lbl_codigoe.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_codigoe.Name = "Lbl_codigoe";
+            this.Lbl_codigoe.Size = new System.Drawing.Size(100, 18);
+            this.Lbl_codigoe.TabIndex = 99;
+            this.Lbl_codigoe.Text = "Código examen";
+            // 
+            // Txt_nombree
+            // 
+            this.Txt_nombree.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_nombree.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_nombree.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.Txt_nombree.Location = new System.Drawing.Point(32, 96);
+            this.Txt_nombree.Margin = new System.Windows.Forms.Padding(4);
+            this.Txt_nombree.Name = "Txt_nombree";
+            this.Txt_nombree.Size = new System.Drawing.Size(185, 26);
+            this.Txt_nombree.TabIndex = 102;
+            // 
+            // Lbl_nombree
+            // 
+            this.Lbl_nombree.AutoSize = true;
+            this.Lbl_nombree.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_nombree.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_nombree.ForeColor = System.Drawing.Color.White;
+            this.Lbl_nombree.Location = new System.Drawing.Point(17, 80);
+            this.Lbl_nombree.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_nombree.Name = "Lbl_nombree";
+            this.Lbl_nombree.Size = new System.Drawing.Size(58, 18);
+            this.Lbl_nombree.TabIndex = 100;
+            this.Lbl_nombree.Text = "Nombre";
+            // 
+            // Lbl_precioe
+            // 
+            this.Lbl_precioe.AutoSize = true;
+            this.Lbl_precioe.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_precioe.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_precioe.ForeColor = System.Drawing.Color.White;
+            this.Lbl_precioe.Location = new System.Drawing.Point(148, 33);
+            this.Lbl_precioe.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_precioe.Name = "Lbl_precioe";
+            this.Lbl_precioe.Size = new System.Drawing.Size(46, 18);
+            this.Lbl_precioe.TabIndex = 101;
+            this.Lbl_precioe.Text = "Precio";
+            // 
+            // Lbl_editar
+            // 
+            this.Lbl_editar.AutoSize = true;
+            this.Lbl_editar.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_editar.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_editar.ForeColor = System.Drawing.Color.PowderBlue;
+            this.Lbl_editar.Location = new System.Drawing.Point(637, 109);
+            this.Lbl_editar.Name = "Lbl_editar";
+            this.Lbl_editar.Size = new System.Drawing.Size(36, 15);
+            this.Lbl_editar.TabIndex = 121;
+            this.Lbl_editar.Text = "Editar";
+            // 
+            // Lbl_eliminar
+            // 
+            this.Lbl_eliminar.AutoSize = true;
+            this.Lbl_eliminar.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_eliminar.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_eliminar.ForeColor = System.Drawing.Color.PowderBlue;
+            this.Lbl_eliminar.Location = new System.Drawing.Point(694, 109);
+            this.Lbl_eliminar.Name = "Lbl_eliminar";
+            this.Lbl_eliminar.Size = new System.Drawing.Size(47, 15);
+            this.Lbl_eliminar.TabIndex = 122;
+            this.Lbl_eliminar.Text = "Eliminar";
             // 
             // Exámen
             // 
@@ -249,12 +435,14 @@
             this.BackgroundImage = global::LaboratorioClinico.Properties.Resources.FONDOO;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(782, 528);
-            this.Controls.Add(this.Btn_confirmar);
+            this.Controls.Add(this.Gpb_datose);
             this.Controls.Add(this.Btn_eliminar);
             this.Controls.Add(this.Btn_editar);
             this.Controls.Add(this.Lbl_examen);
             this.Controls.Add(this.Dgv_examen);
-            this.Controls.Add(this.Gpb_datos);
+            this.Controls.Add(this.Gpb_datosm);
+            this.Controls.Add(this.Lbl_eliminar);
+            this.Controls.Add(this.Lbl_editar);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -262,8 +450,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Exámen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_examen)).EndInit();
-            this.Gpb_datos.ResumeLayout(false);
-            this.Gpb_datos.PerformLayout();
+            this.Gpb_datosm.ResumeLayout(false);
+            this.Gpb_datosm.PerformLayout();
+            this.Gpb_datose.ResumeLayout(false);
+            this.Gpb_datose.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -274,14 +464,27 @@
         private System.Windows.Forms.Label Lbl_examen;
         private System.Windows.Forms.Button Btn_editar;
         private System.Windows.Forms.Button Btn_eliminar;
-        private System.Windows.Forms.TextBox Txt_codigo;
-        private System.Windows.Forms.Label Lbl_codigo;
-        private System.Windows.Forms.Label Lbl_nombre;
-        private System.Windows.Forms.Label Lbl_precio;
-        private System.Windows.Forms.TextBox Txt_nombre;
-        private System.Windows.Forms.Label Lbl_quetzal;
-        private System.Windows.Forms.TextBox Txt_precio;
-        private System.Windows.Forms.GroupBox Gpb_datos;
-        private System.Windows.Forms.Button Btn_confirmar;
+        private System.Windows.Forms.TextBox Txt_codigom;
+        private System.Windows.Forms.Label Lbl_codigom;
+        private System.Windows.Forms.Label Lbl_nombrem;
+        private System.Windows.Forms.Label Lbl_preciom;
+        private System.Windows.Forms.TextBox Txt_nombrem;
+        private System.Windows.Forms.Label Lbl_quetzalm;
+        private System.Windows.Forms.TextBox Txt_preciom;
+        private System.Windows.Forms.GroupBox Gpb_datosm;
+        private System.Windows.Forms.Button Btn_confirmarm;
+        private System.Windows.Forms.GroupBox Gpb_datose;
+        private System.Windows.Forms.Button Btn_confirmare;
+        private System.Windows.Forms.TextBox Txt_precioe;
+        private System.Windows.Forms.TextBox Txt_codigoe;
+        private System.Windows.Forms.Label Lbl_quetzale;
+        private System.Windows.Forms.Label Lbl_codigoe;
+        private System.Windows.Forms.TextBox Txt_nombree;
+        private System.Windows.Forms.Label Lbl_nombree;
+        private System.Windows.Forms.Label Lbl_precioe;
+        private System.Windows.Forms.Label Lbl_editar;
+        private System.Windows.Forms.Label Lbl_eliminar;
+        private System.Windows.Forms.Label Lbl_confirmarm;
+        private System.Windows.Forms.Label Lbl_confirmare;
     }
 }

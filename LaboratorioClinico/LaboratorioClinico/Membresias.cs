@@ -134,11 +134,11 @@ namespace LaboratorioClinico
             finally
             {
                 conexion.ObtenerConexion().Close();
-            
+
+
+            }
 
         }
-
-
         private void Btn_buscar_Click(object sender, EventArgs e)
         {
             decimal nPaciente = Convert.ToDecimal(Txt_DPI.Text);

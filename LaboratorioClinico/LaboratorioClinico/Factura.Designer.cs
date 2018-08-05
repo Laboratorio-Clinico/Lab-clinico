@@ -43,6 +43,9 @@
             this.Gpb_detallef = new System.Windows.Forms.GroupBox();
             this.Cmb_formaPago = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Lbl_reC = new System.Windows.Forms.Label();
+            this.Lbl_recaTotal = new System.Windows.Forms.Label();
+            this.Lbl_recargo = new System.Windows.Forms.Label();
             this.Lbl_totalFf = new System.Windows.Forms.Label();
             this.Lbl_desc = new System.Windows.Forms.Label();
             this.Lbl_subFf = new System.Windows.Forms.Label();
@@ -91,10 +94,9 @@
             this.Lbl_nombref = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.Lbl_serie = new System.Windows.Forms.Label();
-            this.Lbl_reC = new System.Windows.Forms.Label();
-            this.Lbl_recaTotal = new System.Windows.Forms.Label();
-            this.Lbl_recargo = new System.Windows.Forms.Label();
             this.Txt_serie = new System.Windows.Forms.TextBox();
+            this.Lbl_credit = new System.Windows.Forms.Label();
+            this.Txt_credit = new System.Windows.Forms.TextBox();
             this.Gpb_laboratoriof.SuspendLayout();
             this.Gpb_detallef.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -193,6 +195,8 @@
             // Gpb_detallef
             // 
             this.Gpb_detallef.BackColor = System.Drawing.Color.Transparent;
+            this.Gpb_detallef.Controls.Add(this.Txt_credit);
+            this.Gpb_detallef.Controls.Add(this.Lbl_credit);
             this.Gpb_detallef.Controls.Add(this.Cmb_formaPago);
             this.Gpb_detallef.Controls.Add(this.groupBox1);
             this.Gpb_detallef.Controls.Add(this.label4);
@@ -230,9 +234,9 @@
             this.Cmb_formaPago.Items.AddRange(new object[] {
             "Efectivo",
             "Credito"});
-            this.Cmb_formaPago.Location = new System.Drawing.Point(110, 214);
+            this.Cmb_formaPago.Location = new System.Drawing.Point(158, 215);
             this.Cmb_formaPago.Name = "Cmb_formaPago";
-            this.Cmb_formaPago.Size = new System.Drawing.Size(138, 30);
+            this.Cmb_formaPago.Size = new System.Drawing.Size(157, 30);
             this.Cmb_formaPago.TabIndex = 55;
             // 
             // groupBox1
@@ -254,6 +258,42 @@
             this.groupBox1.Size = new System.Drawing.Size(266, 86);
             this.groupBox1.TabIndex = 54;
             this.groupBox1.TabStop = false;
+            // 
+            // Lbl_reC
+            // 
+            this.Lbl_reC.AutoSize = true;
+            this.Lbl_reC.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_reC.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_reC.ForeColor = System.Drawing.Color.White;
+            this.Lbl_reC.Location = new System.Drawing.Point(227, 46);
+            this.Lbl_reC.Name = "Lbl_reC";
+            this.Lbl_reC.Size = new System.Drawing.Size(12, 18);
+            this.Lbl_reC.TabIndex = 68;
+            this.Lbl_reC.Text = ".";
+            // 
+            // Lbl_recaTotal
+            // 
+            this.Lbl_recaTotal.AutoSize = true;
+            this.Lbl_recaTotal.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_recaTotal.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_recaTotal.ForeColor = System.Drawing.Color.White;
+            this.Lbl_recaTotal.Location = new System.Drawing.Point(243, 46);
+            this.Lbl_recaTotal.Name = "Lbl_recaTotal";
+            this.Lbl_recaTotal.Size = new System.Drawing.Size(21, 18);
+            this.Lbl_recaTotal.TabIndex = 67;
+            this.Lbl_recaTotal.Text = "%";
+            // 
+            // Lbl_recargo
+            // 
+            this.Lbl_recargo.AutoSize = true;
+            this.Lbl_recargo.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_recargo.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_recargo.ForeColor = System.Drawing.Color.White;
+            this.Lbl_recargo.Location = new System.Drawing.Point(159, 46);
+            this.Lbl_recargo.Name = "Lbl_recargo";
+            this.Lbl_recargo.Size = new System.Drawing.Size(65, 18);
+            this.Lbl_recargo.TabIndex = 66;
+            this.Lbl_recargo.Text = "Recargo";
             // 
             // Lbl_totalFf
             // 
@@ -577,7 +617,7 @@
             // Dgb_facturaf
             // 
             this.Dgb_facturaf.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.InfoText;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             this.Dgb_facturaf.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.Dgb_facturaf.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
@@ -602,7 +642,7 @@
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.InfoText;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.CadetBlue;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.LightCyan;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -798,42 +838,6 @@
             this.Lbl_serie.TabIndex = 5;
             this.Lbl_serie.Text = "Serie \"A\"";
             // 
-            // Lbl_reC
-            // 
-            this.Lbl_reC.AutoSize = true;
-            this.Lbl_reC.BackColor = System.Drawing.Color.Transparent;
-            this.Lbl_reC.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_reC.ForeColor = System.Drawing.Color.White;
-            this.Lbl_reC.Location = new System.Drawing.Point(227, 46);
-            this.Lbl_reC.Name = "Lbl_reC";
-            this.Lbl_reC.Size = new System.Drawing.Size(12, 18);
-            this.Lbl_reC.TabIndex = 68;
-            this.Lbl_reC.Text = ".";
-            // 
-            // Lbl_recaTotal
-            // 
-            this.Lbl_recaTotal.AutoSize = true;
-            this.Lbl_recaTotal.BackColor = System.Drawing.Color.Transparent;
-            this.Lbl_recaTotal.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_recaTotal.ForeColor = System.Drawing.Color.White;
-            this.Lbl_recaTotal.Location = new System.Drawing.Point(243, 46);
-            this.Lbl_recaTotal.Name = "Lbl_recaTotal";
-            this.Lbl_recaTotal.Size = new System.Drawing.Size(21, 18);
-            this.Lbl_recaTotal.TabIndex = 67;
-            this.Lbl_recaTotal.Text = "%";
-            // 
-            // Lbl_recargo
-            // 
-            this.Lbl_recargo.AutoSize = true;
-            this.Lbl_recargo.BackColor = System.Drawing.Color.Transparent;
-            this.Lbl_recargo.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_recargo.ForeColor = System.Drawing.Color.White;
-            this.Lbl_recargo.Location = new System.Drawing.Point(159, 46);
-            this.Lbl_recargo.Name = "Lbl_recargo";
-            this.Lbl_recargo.Size = new System.Drawing.Size(65, 18);
-            this.Lbl_recargo.TabIndex = 66;
-            this.Lbl_recargo.Text = "Recargo";
-            // 
             // Txt_serie
             // 
             this.Txt_serie.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -842,6 +846,27 @@
             this.Txt_serie.Name = "Txt_serie";
             this.Txt_serie.Size = new System.Drawing.Size(76, 20);
             this.Txt_serie.TabIndex = 56;
+            // 
+            // Lbl_credit
+            // 
+            this.Lbl_credit.AutoSize = true;
+            this.Lbl_credit.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_credit.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_credit.ForeColor = System.Drawing.Color.White;
+            this.Lbl_credit.Location = new System.Drawing.Point(17, 260);
+            this.Lbl_credit.Name = "Lbl_credit";
+            this.Lbl_credit.Size = new System.Drawing.Size(135, 18);
+            this.Lbl_credit.TabIndex = 56;
+            this.Lbl_credit.Text = "No Tarjeta crédito";
+            // 
+            // Txt_credit
+            // 
+            this.Txt_credit.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_credit.Location = new System.Drawing.Point(158, 259);
+            this.Txt_credit.Multiline = true;
+            this.Txt_credit.Name = "Txt_credit";
+            this.Txt_credit.Size = new System.Drawing.Size(157, 20);
+            this.Txt_credit.TabIndex = 52;
             // 
             // Factura
             // 
@@ -938,5 +963,7 @@
         private System.Windows.Forms.Label Lbl_recaTotal;
         private System.Windows.Forms.Label Lbl_recargo;
         private System.Windows.Forms.TextBox Txt_serie;
+        private System.Windows.Forms.TextBox Txt_credit;
+        private System.Windows.Forms.Label Lbl_credit;
     }
 }
