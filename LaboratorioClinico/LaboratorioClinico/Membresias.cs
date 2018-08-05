@@ -101,23 +101,7 @@ namespace LaboratorioClinico
 
         public void Pro_mostrarBeneficios()
         {
-            /*try
-            {
-                int iMembresias = Convert.ToInt32(Cmb_membresia.SelectedValue);
-
-                OdbcCommand comando = new OdbcCommand("{CALL Pro_verMembresia(?)}", conexion.ObtenerConexion());
-                comando.CommandType = CommandType.StoredProcedure;
-                comando.Parameters.AddWithValue("iMembresia", iMembresias);
-                comando.ExecuteNonQuery();
-                DataTable tabla = new DataTable();
-                OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
-                Dgv_verBeneficios.DataSource = tabla;
-            }
-            catch (OdbcException error) { MessageBox.Show(error.Message); }
-            finally
-            {
-                conexion.ObtenerConexion().Close();
-            }*/
+        
             try
             {
                 int iMembresias = Convert.ToInt32(Cmb_membresia.SelectedValue);
@@ -125,9 +109,9 @@ namespace LaboratorioClinico
                 OdbcCommand comando = new OdbcCommand("{CALL Pro_verMembresia(?)}", conexion.ObtenerConexion());
                 comando.CommandType = CommandType.StoredProcedure;
                 comando.Parameters.AddWithValue("iMembresia", iMembresias);
-                comando.ExecuteNonQuery();
                 DataTable tabla = new DataTable();
                 OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
+                adaptador.Fill(tabla);
                 Dgv_verBeneficios.DataSource = tabla;
             }
             catch (OdbcException error) { MessageBox.Show(error.Message); }
