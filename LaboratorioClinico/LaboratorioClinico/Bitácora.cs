@@ -20,14 +20,21 @@ namespace LaboratorioClinico
 
         private void Btn_verb_Click(object sender, EventArgs e)
         {
-            
-            conexion.ObtenerConexion();
-            DataTable dtDatos = new DataTable();
-            OdbcDataAdapter tablaData = new OdbcDataAdapter("select *from bitacora", conexion.ObtenerConexion());
-            tablaData.Fill(dtDatos);
-            Dgv_bitacora.DataSource = dtDatos;
-            conexion.ObtenerConexion().Close();
-            
+            /*
+            try
+            {
+                  conexion.ObtenerConexion();
+                DataTable dtDatos = new DataTable();
+                OdbcDataAdapter tablaData = new OdbcDataAdapter("select *from bitacora", conexion.ObtenerConexion());
+                tablaData.Fill(dtDatos);
+                Dgv_bitacora.DataSource = dtDatos;
+                conexion.ObtenerConexion().Close();
+        }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Intente de nuevo.", "Paciente no registrado.", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
+            }*/
+
 
         }
     }

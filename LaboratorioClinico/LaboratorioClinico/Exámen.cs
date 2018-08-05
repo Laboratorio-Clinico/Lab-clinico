@@ -88,5 +88,20 @@ namespace LaboratorioClinico
             open.ShowDialog();
             this.Show();
         }
+
+        private void Dgv_examen_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Dgv_examen_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

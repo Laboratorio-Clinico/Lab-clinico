@@ -107,6 +107,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
     <Compile Include="InicioReportes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InicioReportes.resx">
       <DependentUpon>InicioReportes.cs</DependentUpon>
@@ -519,13 +528,10 @@
     <None Include="Resources\muestra.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\usuario3.png" />
+    <None Include="Resources\bloquear1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\usuario %281%291.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\editar3.png" />
+    <None Include="Resources\comprobado.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\boton-x.png" />

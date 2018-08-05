@@ -75,51 +75,56 @@ namespace LaboratorioClinico
             try
             {
                 OdbcCommand cm;
-               // OdbcCommand cm = new OdbcCommand("{CALL InsertaPrueba (nIdPaciente,sNit,sNombre,sDireccion,sGenero,dFechaDeNacimiento,dFechaDeEmision,iIdTipoDeSangre,sAlergia,sRefiere,correo,telefono)}", conexion.ObtenerConexion());
-                cm = new OdbcCommand("InsertaPaciente", conexion.ObtenerConexion());
+                cm = new OdbcCommand("{CALL InsertaPaciente(?,?,?,?,?,?,?,?,?,?,?,?)}", conexion.ObtenerConexion());
                 cm.CommandType = CommandType.StoredProcedure;
 
                 int idPaciente = Convert.ToInt32(Cmb_sangrep.SelectedValue);
                 /// int idPaciente = int.Parse(Cmb_sangrep.ToString());
-                MessageBox.Show("idPaciente: " + Cmb_sangrep.SelectedValue);
+               // MessageBox.Show("idPaciente: " + Cmb_sangrep.SelectedValue);
 
                 OdbcParameter parametros = new OdbcParameter();
-              //  OdbcParameter parametros = cm.Parameters.Add("RETURN_VALUE", OdbcType.Int);
-              parametros.Direction = ParameterDirection.ReturnValue;
+                //  OdbcParameter parametros = cm.Parameters.Add("RETURN_VALUE", OdbcType.Int);
 
-                parametros = cm.Parameters.Add("@nIdPaciente", OdbcType.Numeric, 13);
-                parametros.Value = Txt_expedientep.Text;
-                parametros = cm.Parameters.Add("@sNit", OdbcType.VarChar, 9);
-                parametros.Value = Txt_nitp.Text;
-                parametros = cm.Parameters.Add("@sNombre", OdbcType.VarChar, 45);
-                parametros.Value = Txt_nombrep.Text;
-                parametros = cm.Parameters.Add("@sDireccion", OdbcType.VarChar, 45);
-                parametros.Value = Txt_direccionp.Text;
-                parametros = cm.Parameters.Add("@sGenero", OdbcType.VarChar, 1);
-                parametros.Value = Cmb_sexop.Text;
-                parametros = cm.Parameters.Add("@dFechaDeNacimiento", OdbcType.Date);
-                parametros.Value = Dtp_fechap.Text;
-                parametros = cm.Parameters.Add("@dFechaDeEmision", OdbcType.Date);
-                parametros.Value = Dtp_fecha2p.Text;
-                parametros = cm.Parameters.Add("@iIdTipoDeSangre", OdbcType.Int, 11);
-                parametros.Value = idPaciente;
-                parametros = cm.Parameters.Add("@sAlergia", OdbcType.VarChar, 2000);
-                parametros.Value = Txt_alergiasp.Text;
-                parametros = cm.Parameters.Add("@sRefiere", OdbcType.VarChar, 45);
-                parametros.Value = Txt_refierep.Text;
-                parametros = cm.Parameters.Add("@correo", OdbcType.VarChar, 50);
-                parametros.Value = Txt_correoP.Text;
-                parametros = cm.Parameters.Add("@telefono", OdbcType.Numeric, 8);
-                parametros.Value = Txt_telefonop.Text;
 
-               // parametros = cm.Parameters.Add("@OutputParm", OdbcType.VarChar, 28);
-                //parametros.Direction = ParameterDirection.Output;
+                cm.Parameters.AddWithValue("@nIdPaciente", Txt_expedientep.Text);
+                cm.Parameters.AddWithValue("@sNit", Txt_nitp.Text);
+                cm.Parameters.AddWithValue("@sNombre", Txt_nombrep.Text);
+                cm.Parameters.AddWithValue("@sDireccion", Txt_direccionp.Text);
 
+                cm.Parameters.AddWithValue("@sGenero", Cmb_sexop.Text);
+
+                cm.Parameters.AddWithValue("@dFechaDeNacimiento", Dtp_fechap.Text);
+
+                cm.Parameters.AddWithValue("@dFechaDeEmision", Dtp_fecha2p.Text);
+
+                cm.Parameters.AddWithValue("@iIdTipoDeSangre", idPaciente);
+
+                cm.Parameters.AddWithValue("@sAlergia", Txt_alergiasp.Text);
+
+                cm.Parameters.AddWithValue("@sRefiere", Txt_refierep.Text);
+
+                cm.Parameters.AddWithValue("@correo", Txt_correoP.Text);
+
+                cm.Parameters.AddWithValue("@telefono", Txt_telefonop.Text);
                 cm.ExecuteNonQuery();
+                MessageBox.Show("Paciente Ingresado Exitosamente", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                Txt_expedientep.Clear();
+                Txt_nitp.Clear();
+                Txt_nombrep.Clear();
+                Txt_direccionp.Clear();
+                Cmb_sexop.ResetText();
+                Dtp_fechap.ResetText();
+                Dtp_fecha2p.ResetText();
+                Cmb_sangrep.ResetText();
+                Txt_alergiasp.Clear();
+                Txt_refierep.Clear();
+                Txt_correoP.Clear();
+                Txt_telefonop.Clear();
             }
-            catch (Exception error) {
-                MessageBox.Show("Error: " + error); 
-             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo ingresar el registro.", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
+            }
 
 
         }
