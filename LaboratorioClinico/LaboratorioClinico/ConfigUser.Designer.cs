@@ -226,6 +226,7 @@
             this.Txt_privilegio.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Txt_privilegio.Size = new System.Drawing.Size(172, 29);
             this.Txt_privilegio.TabIndex = 11;
+            this.Txt_privilegio.TextChanged += new System.EventHandler(this.Txt_privilegio_TextChanged);
             // 
             // Cmb_usuarioEliminar
             // 
@@ -331,6 +332,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Gpb_contraseña
             // 

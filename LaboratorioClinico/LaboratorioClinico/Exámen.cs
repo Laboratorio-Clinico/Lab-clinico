@@ -94,6 +94,14 @@ namespace LaboratorioClinico
 
         }
 
+        private void Btn_confirmarm_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void Dgv_examen_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -104,7 +104,7 @@
             this.Dgv_examen.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.Dgv_examen.Size = new System.Drawing.Size(372, 435);
             this.Dgv_examen.TabIndex = 10;
-            this.Dgv_examen.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_examen_CellClick);
+            this.Dgv_examen.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_examen_CellContentClick_1);
             // 
             // Lbl_examen
             // 
@@ -128,7 +128,6 @@
             this.Btn_editar.Size = new System.Drawing.Size(53, 44);
             this.Btn_editar.TabIndex = 96;
             this.Btn_editar.UseVisualStyleBackColor = false;
-            this.Btn_editar.Click += new System.EventHandler(this.Btn_editar_Click);
             // 
             // Btn_eliminar
             // 
@@ -140,7 +139,6 @@
             this.Btn_eliminar.Size = new System.Drawing.Size(53, 44);
             this.Btn_eliminar.TabIndex = 97;
             this.Btn_eliminar.UseVisualStyleBackColor = false;
-            this.Btn_eliminar.Click += new System.EventHandler(this.Btn_eliminar_Click);
             // 
             // Txt_codigom
             // 
@@ -317,7 +315,6 @@
             this.Btn_confirmare.Size = new System.Drawing.Size(53, 44);
             this.Btn_confirmare.TabIndex = 105;
             this.Btn_confirmare.UseVisualStyleBackColor = false;
-            this.Btn_confirmare.Click += new System.EventHandler(this.Btn_confirmare_Click);
             // 
             // Txt_precioe
             // 

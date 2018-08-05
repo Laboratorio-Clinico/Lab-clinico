@@ -62,7 +62,14 @@
             // 
             // Dgb_requisitosr
             // 
-            this.Dgb_requisitosr.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Dgb_requisitosr.AllowUserToOrderColumns = true;
+            this.Dgb_requisitosr.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.Dgb_requisitosr.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.Dgb_requisitosr.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Dgb_requisitosr.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.Dgb_requisitosr.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.Dgb_requisitosr.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.Dgb_requisitosr.EnableHeadersVisualStyles = false;
             this.Dgb_requisitosr.Location = new System.Drawing.Point(6, 12);
             this.Dgb_requisitosr.Name = "Dgb_requisitosr";
             this.Dgb_requisitosr.Size = new System.Drawing.Size(524, 221);

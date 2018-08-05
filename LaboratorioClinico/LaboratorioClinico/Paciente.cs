@@ -46,7 +46,7 @@ namespace LaboratorioClinico
 
         public void llenarSangre()
         {
-
+            //Procedimiento que llena el COMBOBOX del tipo de Sangre
 
             try
             {
@@ -74,40 +74,30 @@ namespace LaboratorioClinico
 
             try
             {
+                //Procedimiento para ingresar datos del paciente
                 OdbcCommand cm;
                 cm = new OdbcCommand("{CALL InsertaPaciente(?,?,?,?,?,?,?,?,?,?,?,?)}", conexion.ObtenerConexion());
                 cm.CommandType = CommandType.StoredProcedure;
-
-                int idPaciente = Convert.ToInt32(Cmb_sangrep.SelectedValue);
-                /// int idPaciente = int.Parse(Cmb_sangrep.ToString());
-               // MessageBox.Show("idPaciente: " + Cmb_sangrep.SelectedValue);
-
                 OdbcParameter parametros = new OdbcParameter();
-                //  OdbcParameter parametros = cm.Parameters.Add("RETURN_VALUE", OdbcType.Int);
-
+                int idPaciente = Convert.ToInt32(Cmb_sangrep.SelectedValue);
 
                 cm.Parameters.AddWithValue("@nIdPaciente", Txt_expedientep.Text);
                 cm.Parameters.AddWithValue("@sNit", Txt_nitp.Text);
                 cm.Parameters.AddWithValue("@sNombre", Txt_nombrep.Text);
                 cm.Parameters.AddWithValue("@sDireccion", Txt_direccionp.Text);
-
                 cm.Parameters.AddWithValue("@sGenero", Cmb_sexop.Text);
-
                 cm.Parameters.AddWithValue("@dFechaDeNacimiento", Dtp_fechap.Text);
-
                 cm.Parameters.AddWithValue("@dFechaDeEmision", Dtp_fecha2p.Text);
-
                 cm.Parameters.AddWithValue("@iIdTipoDeSangre", idPaciente);
-
                 cm.Parameters.AddWithValue("@sAlergia", Txt_alergiasp.Text);
-
                 cm.Parameters.AddWithValue("@sRefiere", Txt_refierep.Text);
-
                 cm.Parameters.AddWithValue("@correo", Txt_correoP.Text);
-
                 cm.Parameters.AddWithValue("@telefono", Txt_telefonop.Text);
                 cm.ExecuteNonQuery();
+
                 MessageBox.Show("Paciente Ingresado Exitosamente", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
+                //Limpia todos los textbox y comboBox de la forma PACIENTE
                 Txt_expedientep.Clear();
                 Txt_nitp.Clear();
                 Txt_nombrep.Clear();
