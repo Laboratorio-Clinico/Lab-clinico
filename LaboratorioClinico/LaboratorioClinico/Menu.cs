@@ -213,7 +213,7 @@ namespace LaboratorioClinico
         private void resultadosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Resultados open = new Resultados();
+            ingresoResultado open = new ingresoResultado();
             open.ShowDialog();
             this.Show();
         }
