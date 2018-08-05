@@ -233,12 +233,12 @@ namespace LaboratorioClinico
 
         private void Btn_guardar_Click(object sender, EventArgs e)
         {
-            int r = 0; int rec = 0;int f =0;
+            int r = 0; int rec = 0;int f =0;int acumulado2;
             int iIdPago = Convert.ToInt32(Cmb_formaPago.SelectedValue);
 
             if (iIdPago == 2)
             {
-                r = ((total * 5) / 100);
+                r = ((acumulado1 * 5)/100);
                 f = 5;
             }
             else
@@ -250,7 +250,7 @@ namespace LaboratorioClinico
                 }
             }
             rec = rec + r;//Recargo
-            acumulado1 = acumulado1 + rec;//Total 
+            acumulado2 = acumulado1 + rec;//Total 
             Lbl_reC.Text = f.ToString();
             Lbl_totalFf.Text = acumulado1.ToString();
             proGuardarEncabezado();

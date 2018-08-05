@@ -248,7 +248,7 @@ namespace LaboratorioClinico
             finally { conexion.ObtenerConexion().Close(); }
         }
    
-        private void Btn_buscar_Click(object sender, EventArgs e)
+        /*private void Btn_buscar_Click(object sender, EventArgs e)
         {
            
             int iIdExamenes = Convert.ToInt32(Cmb_examen.SelectedValue);
@@ -260,7 +260,7 @@ namespace LaboratorioClinico
             
 
 
-        }
+        }*/
 
         private void Btn_requisitos_Click(object sender, EventArgs e)
         {
