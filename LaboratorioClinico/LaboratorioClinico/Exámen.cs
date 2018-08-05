@@ -18,7 +18,11 @@ namespace LaboratorioClinico
             InitializeComponent();
             proCargaDatos();
         }
-        
+
+        public static string sCodigo;
+        public static string sNombre;
+        public static string sPrecio;
+
         public void proCargaDatos() //Cargar toda la infomación almacenada de los exámenes a un DataGridView.
         {
             try
@@ -91,9 +95,22 @@ namespace LaboratorioClinico
 
         private void Dgv_examen_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            sCodigo = Dgv_examen.Rows[e.RowIndex].Cells["codigo"].Value.ToString();
+            sNombre = Dgv_examen.Rows[e.RowIndex].Cells["nombre"].Value.ToString();
+            sPrecio = Dgv_examen.Rows[e.RowIndex].Cells["precio"].Value.ToString();
         }
 
-   
+        private void Btn_editar_Click(object sender, EventArgs e)
+        {
+            if(sCodigo == "")
+            {
+                MessageBox.Show("Seleccionar una fila para editar", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }else
+            {
+                Txt_codigo.Text = sCodigo;
+                Txt_nombre.Text = sNombre;
+                Txt_precio.Text = sPrecio;
+            }
+        }
     }
 }
