@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Odbc;
+using System.Security.Cryptography;
 
 namespace LaboratorioClinico
 {
@@ -33,6 +34,8 @@ namespace LaboratorioClinico
                 Cmb_usuarioEliminar.Items.Add(almacen2.GetValue(0).ToString());
                 Cmb_usuario.Refresh();
                 Cmb_usuario.Items.Add(almacen2.GetValue(0).ToString());
+                Cmb_usuarioCambio.Refresh();
+                Cmb_usuarioCambio.Items.Add(almacen2.GetValue(0).ToString());
             }
             conexion.ObtenerConexion().Close();
             almacen2.Close();
@@ -177,20 +180,96 @@ namespace LaboratorioClinico
 
         private void Cmb_usuarioCambio_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+        }
+
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+    
+               
+
+            }
+
+        public static string EncripContra(string password)
+        {
+            SHA1 sha1 = new System.Security.Cryptography.SHA1CryptoServiceProvider();
+            byte[] input = (new UnicodeEncoding()).GetBytes(password); byte[] hash = sha1.ComputeHash(input);
+            return Convert.ToBase64String(hash);
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //Variables para poder realizar la consulta
+            string user = Cmb_usuarioCambio.Text;
+            string pass = EncripContra(Txt_actual.Text);
+
+
+            //Validar si el usuario y contraseña(actual) es correctos en la Base de Datos
             try
             {
-                OdbcDataAdapter sda = new OdbcDataAdapter("select sPrivilegio from privilegio where iIdPrivilegio = (select iIdPrivilegio from usuario where sUsuario = '" + Cmb_usuarioCambio.SelectedItem.ToString() + "')", conexion.ObtenerConexion());
+                OdbcDataAdapter sda = new OdbcDataAdapter("select count(*) from usuario where sUsuario='" + user + "'and sContrasena ='" + pass + "'", conexion.ObtenerConexion());
                 OdbcCommand cmd = conexion.ObtenerConexion().CreateCommand();
                 DataTable datos = new DataTable();
                 sda.Fill(datos);
 
-                Txt_privilegio.ResetText();
-                Txt_privilegio.Text = datos.Rows[0][0].ToString();
+                if (datos.Rows[0][0].ToString() == "1")
+                {
+                    Pbx_correcto.Visible=true;
+                    Txt_nueva.Enabled = true;
+                    MessageBox.Show("Usuario Correcto", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                    conexion.ObtenerConexion().Close();
+                }
+                else
+                {
+                    Pbx_incorrecto.Visible = true;
+                    MessageBox.Show("Usuario o Contrasena Incorrecta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Cmb_usuarioCambio.ResetText();
+                    Txt_actual.ResetText();
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error Seleccionar");
+                MessageBox.Show("Imposible conectar a la base de datos o tabla no existe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
+
+        }
+
+        private void Btn_guardar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                conexion.ObtenerConexion();
+                OdbcCommand cmd = conexion.ObtenerConexion().CreateCommand();
+
+                //Realizar update de la contraseña del Usuario
+                cmd.CommandText = "update usuario set sContrasena = '" + EncripContra(Txt_nueva.Text) + "' where sUsuario = '" + Convert.ToString(Cmb_usuarioCambio.Text) + "'";
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Contraseña Modificada", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo modificar la contraseña.", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
+            }
+
+            Cmb_usuarioCambio.ResetText();
+            Txt_actual.Clear();
+            Txt_nueva.Clear();
+            Pbx_correcto.Visible = false;
+            Pbx_incorrecto.Visible = false;
+        }
+
+        private void Cmb_usuarioCambio_Click(object sender, EventArgs e)
+        {
+            Gpb_contraseña.Enabled = true;
+            Txt_actual.Enabled = true;
+            Pbx_incorrecto.Visible = false;
+            Pbx_correcto.Visible = false;
+
         }
     }
 }

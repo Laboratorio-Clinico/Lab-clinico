@@ -107,5 +107,10 @@ namespace LaboratorioClinico
         {
 
         }
+
+        private void Txt_DPIEmpleado_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
