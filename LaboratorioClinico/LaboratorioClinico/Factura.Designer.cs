@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Factura));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Gpb_laboratoriof = new System.Windows.Forms.GroupBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -87,7 +87,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.Lbl_recaTotal = new System.Windows.Forms.Label();
             this.Lbl_recargo = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.Cmb_formaPago = new System.Windows.Forms.ComboBox();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -193,7 +193,7 @@
             // Gpb_detallef
             // 
             this.Gpb_detallef.BackColor = System.Drawing.Color.Transparent;
-            this.Gpb_detallef.Controls.Add(this.comboBox1);
+            this.Gpb_detallef.Controls.Add(this.Cmb_formaPago);
             this.Gpb_detallef.Controls.Add(this.groupBox1);
             this.Gpb_detallef.Controls.Add(this.label4);
             this.Gpb_detallef.Controls.Add(this.button3);
@@ -566,19 +566,19 @@
             // Dgb_facturaf
             // 
             this.Dgb_facturaf.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            this.Dgb_facturaf.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            this.Dgb_facturaf.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.Dgb_facturaf.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Dgb_facturaf.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkSlateGray;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.InfoText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.CadetBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.LightCyan;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgb_facturaf.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.DarkSlateGray;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.InfoText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.CadetBlue;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.LightCyan;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgb_facturaf.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.Dgb_facturaf.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Dgb_facturaf.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column6,
@@ -588,19 +588,19 @@
             this.Column7,
             this.Column4,
             this.Column5});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.InfoText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.CadetBlue;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.LightCyan;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Dgb_facturaf.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.InfoText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.CadetBlue;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.LightCyan;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Dgb_facturaf.DefaultCellStyle = dataGridViewCellStyle7;
             this.Dgb_facturaf.GridColor = System.Drawing.Color.LightGray;
             this.Dgb_facturaf.Location = new System.Drawing.Point(9, 72);
             this.Dgb_facturaf.Name = "Dgb_facturaf";
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Teal;
-            this.Dgb_facturaf.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Teal;
+            this.Dgb_facturaf.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.Dgb_facturaf.Size = new System.Drawing.Size(721, 130);
             this.Dgb_facturaf.TabIndex = 34;
             // 
@@ -792,16 +792,16 @@
             this.Lbl_recargo.TabIndex = 63;
             this.Lbl_recargo.Text = "Recargo";
             // 
-            // comboBox1
+            // Cmb_formaPago
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.Cmb_formaPago.FormattingEnabled = true;
+            this.Cmb_formaPago.Items.AddRange(new object[] {
             "Efectivo",
             "Credito"});
-            this.comboBox1.Location = new System.Drawing.Point(110, 214);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(138, 30);
-            this.comboBox1.TabIndex = 55;
+            this.Cmb_formaPago.Location = new System.Drawing.Point(110, 214);
+            this.Cmb_formaPago.Name = "Cmb_formaPago";
+            this.Cmb_formaPago.Size = new System.Drawing.Size(138, 30);
+            this.Cmb_formaPago.TabIndex = 55;
             // 
             // Column5
             // 
@@ -929,7 +929,7 @@
         private System.Windows.Forms.Label Lbl_totalFf;
         private System.Windows.Forms.Label Lbl_desc;
         private System.Windows.Forms.Label Lbl_subFf;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox Cmb_formaPago;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label Lbl_recaTotal;
         private System.Windows.Forms.Label Lbl_recargo;
