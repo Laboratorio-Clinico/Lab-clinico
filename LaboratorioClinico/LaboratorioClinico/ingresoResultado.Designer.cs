@@ -61,6 +61,7 @@
             this.Btn_busc = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Btn_BuscarExamen = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.Gpb_datosf.SuspendLayout();
             this.SuspendLayout();
@@ -104,6 +105,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.Btn_BuscarExamen);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.Btn_guardarResultado);
@@ -201,7 +203,7 @@
             this.Txt_codEx.Location = new System.Drawing.Point(190, 44);
             this.Txt_codEx.Multiline = true;
             this.Txt_codEx.Name = "Txt_codEx";
-            this.Txt_codEx.Size = new System.Drawing.Size(197, 20);
+            this.Txt_codEx.Size = new System.Drawing.Size(146, 20);
             this.Txt_codEx.TabIndex = 101;
             // 
             // Lbl_codigor
@@ -439,6 +441,18 @@
             this.textBox1.Size = new System.Drawing.Size(366, 20);
             this.textBox1.TabIndex = 110;
             // 
+            // Btn_BuscarExamen
+            // 
+            this.Btn_BuscarExamen.BackColor = System.Drawing.Color.White;
+            this.Btn_BuscarExamen.BackgroundImage = global::LaboratorioClinico.Properties.Resources.codigobarra;
+            this.Btn_BuscarExamen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_BuscarExamen.Location = new System.Drawing.Point(340, 29);
+            this.Btn_BuscarExamen.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_BuscarExamen.Name = "Btn_BuscarExamen";
+            this.Btn_BuscarExamen.Size = new System.Drawing.Size(41, 38);
+            this.Btn_BuscarExamen.TabIndex = 111;
+            this.Btn_BuscarExamen.UseVisualStyleBackColor = false;
+            // 
             // ingresoResultado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -499,5 +513,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button Btn_BuscarExamen;
     }
 }
