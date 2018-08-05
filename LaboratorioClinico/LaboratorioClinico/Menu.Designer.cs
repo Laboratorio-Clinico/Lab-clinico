@@ -204,7 +204,7 @@
             this.Tm_Enuevo.Image = global::LaboratorioClinico.Properties.Resources.anadir;
             this.Tm_Enuevo.Name = "Tm_Enuevo";
             this.Tm_Enuevo.Size = new System.Drawing.Size(192, 26);
-            this.Tm_Enuevo.Text = "Nuevo";
+            this.Tm_Enuevo.Text = "Información";
             this.Tm_Enuevo.Click += new System.EventHandler(this.ingresarToolStripMenuItem_Click);
             // 
             // Tm_cotizaciones
