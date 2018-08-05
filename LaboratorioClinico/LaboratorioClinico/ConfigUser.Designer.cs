@@ -324,7 +324,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::LaboratorioClinico.Properties.Resources.bloquear1;
+            this.pictureBox1.Image = global::LaboratorioClinico.Properties.Resources.bloqueado1;
             this.pictureBox1.Location = new System.Drawing.Point(158, 6);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(91, 86);
