@@ -151,6 +151,7 @@ namespace LaboratorioClinico
                 cmd.ExecuteNonQuery();
 
                 MessageBox.Show("Examen Modificado Exitosamente.", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                proCargaDatos();
 
                 //Limpiar y deshabilitar
                 Txt_codigom.Clear();
@@ -178,7 +179,9 @@ namespace LaboratorioClinico
                 cmd.ExecuteNonQuery();
 
                 MessageBox.Show("Examen Eliminado Exitosamente", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                proCargaDatos();
 
+                //Limpiar y deshabilitar
                 Txt_codigoe.Clear();
                 Txt_nombree.Clear();
                 Txt_precioe.Clear();

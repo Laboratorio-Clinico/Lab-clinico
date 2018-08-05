@@ -58,8 +58,6 @@
             this.Lbl_precioe = new System.Windows.Forms.Label();
             this.Lbl_editar = new System.Windows.Forms.Label();
             this.Lbl_eliminar = new System.Windows.Forms.Label();
-            this.Btn_refresh = new System.Windows.Forms.Button();
-            this.Lbl_refresh = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_examen)).BeginInit();
             this.Gpb_datosm.SuspendLayout();
             this.Gpb_datose.SuspendLayout();
@@ -430,30 +428,6 @@
             this.Lbl_eliminar.TabIndex = 122;
             this.Lbl_eliminar.Text = "Eliminar";
             // 
-            // Btn_refresh
-            // 
-            this.Btn_refresh.BackColor = System.Drawing.Color.Transparent;
-            this.Btn_refresh.BackgroundImage = global::LaboratorioClinico.Properties.Resources.intercambio;
-            this.Btn_refresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Btn_refresh.Location = new System.Drawing.Point(416, 68);
-            this.Btn_refresh.Name = "Btn_refresh";
-            this.Btn_refresh.Size = new System.Drawing.Size(53, 44);
-            this.Btn_refresh.TabIndex = 123;
-            this.Btn_refresh.UseVisualStyleBackColor = false;
-            this.Btn_refresh.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // Lbl_refresh
-            // 
-            this.Lbl_refresh.AutoSize = true;
-            this.Lbl_refresh.BackColor = System.Drawing.Color.Transparent;
-            this.Lbl_refresh.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_refresh.ForeColor = System.Drawing.Color.PowderBlue;
-            this.Lbl_refresh.Location = new System.Drawing.Point(420, 109);
-            this.Lbl_refresh.Name = "Lbl_refresh";
-            this.Lbl_refresh.Size = new System.Drawing.Size(42, 15);
-            this.Lbl_refresh.TabIndex = 124;
-            this.Lbl_refresh.Text = "Refresh";
-            // 
             // Exámen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -461,7 +435,6 @@
             this.BackgroundImage = global::LaboratorioClinico.Properties.Resources.FONDOO;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(782, 528);
-            this.Controls.Add(this.Btn_refresh);
             this.Controls.Add(this.Gpb_datose);
             this.Controls.Add(this.Btn_eliminar);
             this.Controls.Add(this.Btn_editar);
@@ -470,7 +443,6 @@
             this.Controls.Add(this.Gpb_datosm);
             this.Controls.Add(this.Lbl_eliminar);
             this.Controls.Add(this.Lbl_editar);
-            this.Controls.Add(this.Lbl_refresh);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -514,7 +486,5 @@
         private System.Windows.Forms.Label Lbl_eliminar;
         private System.Windows.Forms.Label Lbl_confirmarm;
         private System.Windows.Forms.Label Lbl_confirmare;
-        private System.Windows.Forms.Button Btn_refresh;
-        private System.Windows.Forms.Label Lbl_refresh;
     }
 }
