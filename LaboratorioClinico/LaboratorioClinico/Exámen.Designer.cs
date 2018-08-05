@@ -45,7 +45,9 @@
             this.Txt_preciom = new System.Windows.Forms.TextBox();
             this.Gpb_datosm = new System.Windows.Forms.GroupBox();
             this.Btn_confirmarm = new System.Windows.Forms.Button();
+            this.Lbl_confirmarm = new System.Windows.Forms.Label();
             this.Gpb_datose = new System.Windows.Forms.GroupBox();
+            this.Lbl_confirmare = new System.Windows.Forms.Label();
             this.Btn_confirmare = new System.Windows.Forms.Button();
             this.Txt_precioe = new System.Windows.Forms.TextBox();
             this.Txt_codigoe = new System.Windows.Forms.TextBox();
@@ -56,8 +58,8 @@
             this.Lbl_precioe = new System.Windows.Forms.Label();
             this.Lbl_editar = new System.Windows.Forms.Label();
             this.Lbl_eliminar = new System.Windows.Forms.Label();
-            this.Lbl_confirmarm = new System.Windows.Forms.Label();
-            this.Lbl_confirmare = new System.Windows.Forms.Label();
+            this.Btn_refresh = new System.Windows.Forms.Button();
+            this.Lbl_refresh = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_examen)).BeginInit();
             this.Gpb_datosm.SuspendLayout();
             this.Gpb_datose.SuspendLayout();
@@ -261,6 +263,18 @@
             this.Btn_confirmarm.UseVisualStyleBackColor = false;
             this.Btn_confirmarm.Click += new System.EventHandler(this.Btn_confirmarm_Click);
             // 
+            // Lbl_confirmarm
+            // 
+            this.Lbl_confirmarm.AutoSize = true;
+            this.Lbl_confirmarm.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_confirmarm.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_confirmarm.ForeColor = System.Drawing.Color.PowderBlue;
+            this.Lbl_confirmarm.Location = new System.Drawing.Point(234, 95);
+            this.Lbl_confirmarm.Name = "Lbl_confirmarm";
+            this.Lbl_confirmarm.Size = new System.Drawing.Size(55, 15);
+            this.Lbl_confirmarm.TabIndex = 123;
+            this.Lbl_confirmarm.Text = "Confirmar";
+            // 
             // Gpb_datose
             // 
             this.Gpb_datose.BackColor = System.Drawing.Color.Transparent;
@@ -282,6 +296,18 @@
             this.Gpb_datose.TabIndex = 120;
             this.Gpb_datose.TabStop = false;
             this.Gpb_datose.Text = "Eliminar examen";
+            // 
+            // Lbl_confirmare
+            // 
+            this.Lbl_confirmare.AutoSize = true;
+            this.Lbl_confirmare.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_confirmare.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_confirmare.ForeColor = System.Drawing.Color.PowderBlue;
+            this.Lbl_confirmare.Location = new System.Drawing.Point(234, 95);
+            this.Lbl_confirmare.Name = "Lbl_confirmare";
+            this.Lbl_confirmare.Size = new System.Drawing.Size(55, 15);
+            this.Lbl_confirmare.TabIndex = 124;
+            this.Lbl_confirmare.Text = "Confirmar";
             // 
             // Btn_confirmare
             // 
@@ -404,29 +430,29 @@
             this.Lbl_eliminar.TabIndex = 122;
             this.Lbl_eliminar.Text = "Eliminar";
             // 
-            // Lbl_confirmarm
+            // Btn_refresh
             // 
-            this.Lbl_confirmarm.AutoSize = true;
-            this.Lbl_confirmarm.BackColor = System.Drawing.Color.Transparent;
-            this.Lbl_confirmarm.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_confirmarm.ForeColor = System.Drawing.Color.PowderBlue;
-            this.Lbl_confirmarm.Location = new System.Drawing.Point(234, 95);
-            this.Lbl_confirmarm.Name = "Lbl_confirmarm";
-            this.Lbl_confirmarm.Size = new System.Drawing.Size(55, 15);
-            this.Lbl_confirmarm.TabIndex = 123;
-            this.Lbl_confirmarm.Text = "Confirmar";
+            this.Btn_refresh.BackColor = System.Drawing.Color.Transparent;
+            this.Btn_refresh.BackgroundImage = global::LaboratorioClinico.Properties.Resources.intercambio;
+            this.Btn_refresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_refresh.Location = new System.Drawing.Point(416, 68);
+            this.Btn_refresh.Name = "Btn_refresh";
+            this.Btn_refresh.Size = new System.Drawing.Size(53, 44);
+            this.Btn_refresh.TabIndex = 123;
+            this.Btn_refresh.UseVisualStyleBackColor = false;
+            this.Btn_refresh.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // Lbl_confirmare
+            // Lbl_refresh
             // 
-            this.Lbl_confirmare.AutoSize = true;
-            this.Lbl_confirmare.BackColor = System.Drawing.Color.Transparent;
-            this.Lbl_confirmare.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_confirmare.ForeColor = System.Drawing.Color.PowderBlue;
-            this.Lbl_confirmare.Location = new System.Drawing.Point(234, 95);
-            this.Lbl_confirmare.Name = "Lbl_confirmare";
-            this.Lbl_confirmare.Size = new System.Drawing.Size(55, 15);
-            this.Lbl_confirmare.TabIndex = 124;
-            this.Lbl_confirmare.Text = "Confirmar";
+            this.Lbl_refresh.AutoSize = true;
+            this.Lbl_refresh.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_refresh.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_refresh.ForeColor = System.Drawing.Color.PowderBlue;
+            this.Lbl_refresh.Location = new System.Drawing.Point(420, 109);
+            this.Lbl_refresh.Name = "Lbl_refresh";
+            this.Lbl_refresh.Size = new System.Drawing.Size(42, 15);
+            this.Lbl_refresh.TabIndex = 124;
+            this.Lbl_refresh.Text = "Refresh";
             // 
             // Exámen
             // 
@@ -435,6 +461,7 @@
             this.BackgroundImage = global::LaboratorioClinico.Properties.Resources.FONDOO;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(782, 528);
+            this.Controls.Add(this.Btn_refresh);
             this.Controls.Add(this.Gpb_datose);
             this.Controls.Add(this.Btn_eliminar);
             this.Controls.Add(this.Btn_editar);
@@ -443,6 +470,7 @@
             this.Controls.Add(this.Gpb_datosm);
             this.Controls.Add(this.Lbl_eliminar);
             this.Controls.Add(this.Lbl_editar);
+            this.Controls.Add(this.Lbl_refresh);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -486,5 +514,7 @@
         private System.Windows.Forms.Label Lbl_eliminar;
         private System.Windows.Forms.Label Lbl_confirmarm;
         private System.Windows.Forms.Label Lbl_confirmare;
+        private System.Windows.Forms.Button Btn_refresh;
+        private System.Windows.Forms.Label Lbl_refresh;
     }
 }

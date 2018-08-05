@@ -123,6 +123,9 @@ namespace LaboratorioClinico
         private void Btn_eliminar_Click(object sender, EventArgs e) //Copiar los datos del DataGrid a los textbox para eliminar
         {
             Gpb_datose.Enabled = true;
+            Txt_codigoe.Enabled = false;
+            Txt_nombree.Enabled = false;
+            Txt_precioe.Enabled = false;
             if (Dgv_examen.SelectedRows.Count > 0)
             {
                 Txt_codigoe.Text = Dgv_examen.CurrentRow.Cells[0].Value.ToString();
@@ -185,6 +188,11 @@ namespace LaboratorioClinico
             {
                 MessageBox.Show("No se pudo eliminar el registro.", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
             }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            proCargaDatos();
         }
     }
 }
