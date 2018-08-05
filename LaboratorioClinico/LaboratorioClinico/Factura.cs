@@ -54,10 +54,10 @@ namespace LaboratorioClinico
 
                 OdbcCommand comando = new OdbcCommand("{CALL InsertaFactura(?,?,?,?,?)}", conexion.ObtenerConexion());
                 comando.CommandType = CommandType.StoredProcedure;
-                comando.Parameters.AddWithValue("@nIdFactura", Txt_codigof.Text);
-                comando.Parameters.AddWithValue("@sSerieFactura", Txt_codigof.Text);
+                comando.Parameters.AddWithValue("@nIdFactura", Lbl_noserie.Text);
+                comando.Parameters.AddWithValue("@sSerieFactura", Lbl_serie.Text);
                 comando.Parameters.AddWithValue("@dFecha", Txt_cantidadf.Text);
-                comando.Parameters.AddWithValue("@sNit", Txt_preciouf.Text);
+                comando.Parameters.AddWithValue("@sNit", Txt_nitf.Text);
                 comando.Parameters.AddWithValue("@iFormaDePago", Txt_descuentof.Text);
 
                 comando.ExecuteNonQuery();

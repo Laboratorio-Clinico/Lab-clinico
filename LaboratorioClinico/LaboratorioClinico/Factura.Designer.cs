@@ -82,7 +82,7 @@
             this.Lbl_nitf = new System.Windows.Forms.Label();
             this.Lbl_nombref = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.Lbl_serie = new System.Windows.Forms.Label();
             this.Lbl_noserie = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.Lbl_recaTotal = new System.Windows.Forms.Label();
@@ -732,17 +732,17 @@
             this.textBox2.Size = new System.Drawing.Size(100, 29);
             this.textBox2.TabIndex = 0;
             // 
-            // label10
+            // Lbl_serie
             // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(627, 84);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(90, 22);
-            this.label10.TabIndex = 5;
-            this.label10.Text = "Serie \"A\"";
+            this.Lbl_serie.AutoSize = true;
+            this.Lbl_serie.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_serie.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_serie.ForeColor = System.Drawing.Color.Red;
+            this.Lbl_serie.Location = new System.Drawing.Point(627, 84);
+            this.Lbl_serie.Name = "Lbl_serie";
+            this.Lbl_serie.Size = new System.Drawing.Size(90, 22);
+            this.Lbl_serie.TabIndex = 5;
+            this.Lbl_serie.Text = "Serie \"A\"";
             // 
             // Lbl_noserie
             // 
@@ -853,7 +853,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(766, 489);
             this.Controls.Add(this.Lbl_noserie);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.Lbl_serie);
             this.Controls.Add(this.Gpb_datosf);
             this.Controls.Add(this.Gpb_detallef);
             this.Controls.Add(this.Gpb_laboratoriof);
@@ -896,7 +896,7 @@
         private System.Windows.Forms.DataGridView Dgb_facturaf;
         private System.Windows.Forms.Label Lbl_totalf;
         private System.Windows.Forms.DateTimePicker Dtp_fechaf;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label Lbl_serie;
         private System.Windows.Forms.Label Lbl_noserie;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
