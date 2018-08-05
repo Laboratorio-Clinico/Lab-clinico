@@ -38,12 +38,12 @@
             this.Lbl_buscar = new System.Windows.Forms.Label();
             this.Btn_buscar = new System.Windows.Forms.Button();
             this.Lbl_nit = new System.Windows.Forms.Label();
-            this.Cmb_cargo = new System.Windows.Forms.ComboBox();
+            this.Cmb_membresia = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Btn_agregar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.Btn_requisitos = new System.Windows.Forms.Button();
-            this.Lbl_requisitos = new System.Windows.Forms.Label();
+            this.Btn_Beneficios = new System.Windows.Forms.Button();
+            this.Lbl_beneficios = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Gpb_datosEmpleado.SuspendLayout();
             this.Gpb_datosPersonales.SuspendLayout();
@@ -70,11 +70,11 @@
             // 
             // Gpb_datosPersonales
             // 
-            this.Gpb_datosPersonales.Controls.Add(this.Btn_requisitos);
-            this.Gpb_datosPersonales.Controls.Add(this.Lbl_requisitos);
+            this.Gpb_datosPersonales.Controls.Add(this.Btn_Beneficios);
+            this.Gpb_datosPersonales.Controls.Add(this.Lbl_beneficios);
             this.Gpb_datosPersonales.Controls.Add(this.Btn_agregar);
             this.Gpb_datosPersonales.Controls.Add(this.label2);
-            this.Gpb_datosPersonales.Controls.Add(this.Cmb_cargo);
+            this.Gpb_datosPersonales.Controls.Add(this.Cmb_membresia);
             this.Gpb_datosPersonales.Controls.Add(this.label1);
             this.Gpb_datosPersonales.Controls.Add(this.Txt_nit);
             this.Gpb_datosPersonales.Controls.Add(this.Txt_nombre);
@@ -166,6 +166,7 @@
             this.Btn_buscar.Size = new System.Drawing.Size(53, 44);
             this.Btn_buscar.TabIndex = 33;
             this.Btn_buscar.UseVisualStyleBackColor = true;
+            this.Btn_buscar.Click += new System.EventHandler(this.Btn_buscar_Click);
             // 
             // Lbl_nit
             // 
@@ -179,15 +180,15 @@
             this.Lbl_nit.TabIndex = 14;
             this.Lbl_nit.Text = "Nit";
             // 
-            // Cmb_cargo
+            // Cmb_membresia
             // 
-            this.Cmb_cargo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.Cmb_cargo.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cmb_cargo.FormattingEnabled = true;
-            this.Cmb_cargo.Location = new System.Drawing.Point(428, 49);
-            this.Cmb_cargo.Name = "Cmb_cargo";
-            this.Cmb_cargo.Size = new System.Drawing.Size(197, 26);
-            this.Cmb_cargo.TabIndex = 22;
+            this.Cmb_membresia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Cmb_membresia.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cmb_membresia.FormattingEnabled = true;
+            this.Cmb_membresia.Location = new System.Drawing.Point(428, 49);
+            this.Cmb_membresia.Name = "Cmb_membresia";
+            this.Cmb_membresia.Size = new System.Drawing.Size(197, 26);
+            this.Cmb_membresia.TabIndex = 22;
             // 
             // label1
             // 
@@ -210,6 +211,7 @@
             this.Btn_agregar.Size = new System.Drawing.Size(53, 44);
             this.Btn_agregar.TabIndex = 37;
             this.Btn_agregar.UseVisualStyleBackColor = true;
+            this.Btn_agregar.Click += new System.EventHandler(this.Btn_agregar_Click);
             // 
             // label2
             // 
@@ -222,26 +224,27 @@
             this.label2.TabIndex = 36;
             this.label2.Text = "Agregar";
             // 
-            // Btn_requisitos
+            // Btn_Beneficios
             // 
-            this.Btn_requisitos.BackgroundImage = global::LaboratorioClinico.Properties.Resources.requerimientos;
-            this.Btn_requisitos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Btn_requisitos.Location = new System.Drawing.Point(464, 95);
-            this.Btn_requisitos.Name = "Btn_requisitos";
-            this.Btn_requisitos.Size = new System.Drawing.Size(53, 44);
-            this.Btn_requisitos.TabIndex = 38;
-            this.Btn_requisitos.UseVisualStyleBackColor = true;
+            this.Btn_Beneficios.BackgroundImage = global::LaboratorioClinico.Properties.Resources.requerimientos;
+            this.Btn_Beneficios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_Beneficios.Location = new System.Drawing.Point(464, 95);
+            this.Btn_Beneficios.Name = "Btn_Beneficios";
+            this.Btn_Beneficios.Size = new System.Drawing.Size(53, 44);
+            this.Btn_Beneficios.TabIndex = 38;
+            this.Btn_Beneficios.UseVisualStyleBackColor = true;
+            this.Btn_Beneficios.Click += new System.EventHandler(this.Btn_Beneficios_Click);
             // 
-            // Lbl_requisitos
+            // Lbl_beneficios
             // 
-            this.Lbl_requisitos.AutoSize = true;
-            this.Lbl_requisitos.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_requisitos.ForeColor = System.Drawing.Color.PowderBlue;
-            this.Lbl_requisitos.Location = new System.Drawing.Point(461, 142);
-            this.Lbl_requisitos.Name = "Lbl_requisitos";
-            this.Lbl_requisitos.Size = new System.Drawing.Size(56, 15);
-            this.Lbl_requisitos.TabIndex = 39;
-            this.Lbl_requisitos.Text = "Requisitos";
+            this.Lbl_beneficios.AutoSize = true;
+            this.Lbl_beneficios.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_beneficios.ForeColor = System.Drawing.Color.PowderBlue;
+            this.Lbl_beneficios.Location = new System.Drawing.Point(461, 142);
+            this.Lbl_beneficios.Name = "Lbl_beneficios";
+            this.Lbl_beneficios.Size = new System.Drawing.Size(54, 15);
+            this.Lbl_beneficios.TabIndex = 39;
+            this.Lbl_beneficios.Text = "Beneficios";
             // 
             // dataGridView1
             // 
@@ -282,12 +285,12 @@
         private System.Windows.Forms.Label Lbl_buscar;
         private System.Windows.Forms.Button Btn_buscar;
         private System.Windows.Forms.Label Lbl_nit;
-        private System.Windows.Forms.ComboBox Cmb_cargo;
+        private System.Windows.Forms.ComboBox Cmb_membresia;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Btn_agregar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button Btn_requisitos;
-        private System.Windows.Forms.Label Lbl_requisitos;
+        private System.Windows.Forms.Button Btn_Beneficios;
+        private System.Windows.Forms.Label Lbl_beneficios;
     }
 }

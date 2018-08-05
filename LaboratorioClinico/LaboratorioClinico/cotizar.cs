@@ -252,9 +252,9 @@ namespace LaboratorioClinico
         {
            
             int iIdExamenes = Convert.ToInt32(Cmb_examen.SelectedValue);
-            Dgv_verDatos.DataSource = Resources.BuscarExamen.buscar(iIdExamenes);   
+           /// Dgv_verDatos.DataSource = Resources.BuscarExamen.buscar(iIdExamenes);   
  
-        ///    proBuscarCotizacion(iIdExamenes);
+            proBuscarCotizacion(iIdExamenes);
            
             proPrecioyTotal(iIdExamenes);
             
@@ -311,7 +311,7 @@ namespace LaboratorioClinico
 
             int iIdExamenes = Convert.ToInt32(Cmb_examen.SelectedValue);
 
-           // proBuscarCotizacion(iIdExamenes);
+            proBuscarCotizacion(iIdExamenes);
             proPrecioyTotal(iIdExamenes);
 
         }
