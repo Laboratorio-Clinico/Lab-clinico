@@ -15,38 +15,91 @@ namespace LaboratorioClinico
     public partial class Factura : Form
     {
 
-        public void proGuardarDatos()
+        public Factura()
+        {
+            InitializeComponent();
+            formPago();
+        }
+        public void formPago()
+        {
+            try
+            {
+                Cmb_formaPago.Items.Clear();
+                Cmb_formaPago.Text = "Seleccione forma pago";
+                conexion.ObtenerConexion();
+                OdbcCommand comando = new OdbcCommand("Select iIdPago,forma from formaPago", conexion.ObtenerConexion());
+                OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
+                DataTable tabla = new DataTable();
+
+                adaptador.Fill(tabla);
+
+                Cmb_formaPago.ValueMember = "iIdPago";
+                Cmb_formaPago.DisplayMember = "forma";
+
+                Cmb_formaPago.DataSource = tabla;
+
+                conexion.ObtenerConexion().Close();
+
+            }
+            catch (OdbcException error) { MessageBox.Show(error.Message); }
+        }
+
+        public void proGuardarEncabezado()
         {
 
             try
             {
-                OdbcCommand cm;
-                cm = new OdbcCommand("InsertaDetalleFactura", conexion.ObtenerConexion());
-                cm.CommandType = CommandType.StoredProcedure;
+                int iIdPago = Convert.ToInt32(Cmb_formaPago.SelectedValue);
+                
 
-                cm.Parameters.AddWithValue("@nIdFactura", this.Lbl_noserie.Text);
-                cm.Parameters.AddWithValue("@iIdExamen", this.Txt_codigof.Text);
-                cm.Parameters.AddWithValue("@iCantidad", this.Txt_cantidadf.Text);
-                cm.Parameters.AddWithValue("@fPrecio", this.Txt_preciouf.Text);
-                cm.Parameters.AddWithValue("@fDescuento", this.Txt_descuentof.Text);
+                OdbcCommand comando = new OdbcCommand("{CALL InsertaFactura(?,?,?,?,?)}", conexion.ObtenerConexion());
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("@nIdFactura", Lbl_noserie.Text);
+                comando.Parameters.AddWithValue("@sSerieFactura", Lbl_serie.Text);
+                comando.Parameters.AddWithValue("@dFecha", Dtp_fechaf.Text);
+                comando.Parameters.AddWithValue("@sNit", Txt_nitf.Text);
+                comando.Parameters.AddWithValue("@iFormaDePago", iIdPago);
 
-                cm.ExecuteNonQuery();
-                MessageBox.Show("Datos agregados exitosamente");
+                comando.ExecuteNonQuery();
+                MessageBox.Show("Datos insertados correctamente");
             }
             catch (Exception error) { MessageBox.Show("Error" + error); }
             finally
             {
 
                 conexion.ObtenerConexion().Close();
-  
+
 
             }
         }
-        public Factura()
-        {
-            InitializeComponent();
-        }
 
+        //Procedimiento que guardara el detalle de la factura
+        public void proGuardarDatosDetalleFactura()
+        {
+
+            try
+            {
+
+                OdbcCommand comando = new OdbcCommand("{CALL InsertaDetalleFactura(?,?,?,?,?)}", conexion.ObtenerConexion());
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("@nIdFactura", Txt_codigof.Text);
+                comando.Parameters.AddWithValue("@iIdExamen", Txt_codigof.Text);
+                comando.Parameters.AddWithValue("@iCantidad", Txt_cantidadf.Text);
+                comando.Parameters.AddWithValue("@fPrecio", Txt_preciouf.Text);
+                comando.Parameters.AddWithValue("@fDescuento", Txt_descuentof.Text);
+
+                comando.ExecuteNonQuery();
+                MessageBox.Show("Datos insertados correctamente");
+            }
+            catch (Exception error) { MessageBox.Show("Error" + error); }
+            finally
+            {
+
+                conexion.ObtenerConexion().Close();
+
+
+            }
+        }
         private void label5_Click(object sender, EventArgs e)
         {
 
@@ -59,7 +112,7 @@ namespace LaboratorioClinico
 
         private void Btn_guardar_Click(object sender, EventArgs e)
         {
-
+            proGuardarEncabezado();
         }
 
         private void Lbl_cargarf_Click(object sender, EventArgs e)
@@ -83,8 +136,8 @@ namespace LaboratorioClinico
             {
                 int subtotal; int descuento; int total;
                 int p, c, d; int a = 0;
-
-        
+                int r = 0; int rec = 0;
+                int iIdPago = Convert.ToInt32(Cmb_formaPago.SelectedValue);
 
                 OdbcDataAdapter sda = new OdbcDataAdapter("select count(*) from examenes where iIdExamen= '" + Txt_codigof.Text + "'", conexion.ObtenerConexion());
                 DataTable datos = new DataTable();
@@ -94,7 +147,6 @@ namespace LaboratorioClinico
                 DataTable datos2 = new DataTable();
                 sda2.Fill(datos2);
 
-                
                 c = Convert.ToInt32(Txt_cantidadf.Text);
                 p = Convert.ToInt32(datos2.Rows[0][2].ToString());
                 d = Convert.ToInt32(Txt_descuentof.Text);
@@ -102,23 +154,35 @@ namespace LaboratorioClinico
                 subtotal = c * p;
                 descuento = ((subtotal * d) / 100);
                 total = subtotal - descuento;
+                if (iIdPago == 2)
+                {
+                    r = ((subtotal * 5) / 100);
+                }else
+                {
+                    if (iIdPago == 1)
+                    {
+                        r = 0;
+                    } 
+                }
                 acumulado = acumulado + subtotal;//Subtotal
                 descTotal = descTotal + descuento;//Total descuento
-                acumulado1 = acumulado1 + total;//Total                
+                rec = rec + r;//Recargo
+                acumulado1 = acumulado1 + total+r;//Total                
                 a = a + cont;
+
+
+
 
                 if (datos.Rows[0][0].ToString() == "1")
                 {
                     Dgb_facturaf.Rows.Add(datos2.Rows[0][0].ToString(), Txt_cantidadf.Text, Txt_descripcion.Text, datos2.Rows[0][2].ToString(), subtotal.ToString(), Txt_descuentof.Text, total.ToString());
                     Lbl_subFf.Text = acumulado.ToString();
                     Lbl_desc.Text = descTotal.ToString();
+                    Lbl_reC.Text = rec.ToString();
                     Lbl_totalFf.Text = acumulado1.ToString();
 
-                    /*cmd.CommandText = "insert into detalledefactura values('" + Convert.ToInt32(Lbl_noserie.Text) + "','" + datos2.Rows[0][0] + "','" + Convert.ToInt32(Txt_cantidadf.Text) + "','" + datos2.Rows[0][2].ToString() + "','" + Convert.ToInt32(Txt_descuentof.Text) + "')";
-                    cmd.ExecuteNonQuery();*/
-
-                    proGuardarDatos();
-
+                    proGuardarDatosDetalleFactura();
+                  
                     Txt_codigof.ResetText();
                     Txt_cantidadf.ResetText();
                     Txt_descripcion.ResetText();

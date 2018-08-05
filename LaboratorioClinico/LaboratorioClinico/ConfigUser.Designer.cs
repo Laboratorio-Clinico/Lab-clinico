@@ -45,11 +45,29 @@
             this.Cmb_usuarioEliminar = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.Tbc_cuerpo = new System.Windows.Forms.TabControl();
+            this.Tbc_cambio = new System.Windows.Forms.TabPage();
+            this.Pbx_incorrecto = new System.Windows.Forms.PictureBox();
+            this.Btn_verificar = new System.Windows.Forms.Button();
+            this.Pbx_correcto = new System.Windows.Forms.PictureBox();
+            this.Btn_guardar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Gpb_contraseña = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.Txt_actual = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.Txt_nueva = new System.Windows.Forms.TextBox();
+            this.Cmb_usuarioCambio = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.Tbc_control.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.Tbc_eliminar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.Tbc_cuerpo.SuspendLayout();
+            this.Tbc_cambio.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Pbx_incorrecto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pbx_correcto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.Gpb_contraseña.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -232,6 +250,7 @@
             // 
             this.Tbc_cuerpo.Controls.Add(this.Tbc_eliminar);
             this.Tbc_cuerpo.Controls.Add(this.Tbc_control);
+            this.Tbc_cuerpo.Controls.Add(this.Tbc_cambio);
             this.Tbc_cuerpo.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tbc_cuerpo.Location = new System.Drawing.Point(177, 88);
             this.Tbc_cuerpo.Name = "Tbc_cuerpo";
@@ -239,6 +258,153 @@
             this.Tbc_cuerpo.SelectedIndex = 0;
             this.Tbc_cuerpo.Size = new System.Drawing.Size(418, 364);
             this.Tbc_cuerpo.TabIndex = 1;
+            // 
+            // Tbc_cambio
+            // 
+            this.Tbc_cambio.Controls.Add(this.Pbx_incorrecto);
+            this.Tbc_cambio.Controls.Add(this.Btn_verificar);
+            this.Tbc_cambio.Controls.Add(this.Pbx_correcto);
+            this.Tbc_cambio.Controls.Add(this.Btn_guardar);
+            this.Tbc_cambio.Controls.Add(this.pictureBox1);
+            this.Tbc_cambio.Controls.Add(this.Gpb_contraseña);
+            this.Tbc_cambio.Controls.Add(this.Cmb_usuarioCambio);
+            this.Tbc_cambio.Controls.Add(this.label2);
+            this.Tbc_cambio.Location = new System.Drawing.Point(4, 31);
+            this.Tbc_cambio.Name = "Tbc_cambio";
+            this.Tbc_cambio.Padding = new System.Windows.Forms.Padding(3);
+            this.Tbc_cambio.Size = new System.Drawing.Size(410, 329);
+            this.Tbc_cambio.TabIndex = 3;
+            this.Tbc_cambio.Text = "Cambiar Contraseña";
+            this.Tbc_cambio.UseVisualStyleBackColor = true;
+            // 
+            // Pbx_incorrecto
+            // 
+            this.Pbx_incorrecto.Image = global::LaboratorioClinico.Properties.Resources.boton_x;
+            this.Pbx_incorrecto.Location = new System.Drawing.Point(348, 167);
+            this.Pbx_incorrecto.Name = "Pbx_incorrecto";
+            this.Pbx_incorrecto.Size = new System.Drawing.Size(39, 34);
+            this.Pbx_incorrecto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Pbx_incorrecto.TabIndex = 24;
+            this.Pbx_incorrecto.TabStop = false;
+            this.Pbx_incorrecto.Visible = false;
+            // 
+            // Btn_verificar
+            // 
+            this.Btn_verificar.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.Btn_verificar.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_verificar.Location = new System.Drawing.Point(335, 207);
+            this.Btn_verificar.Name = "Btn_verificar";
+            this.Btn_verificar.Size = new System.Drawing.Size(62, 27);
+            this.Btn_verificar.TabIndex = 23;
+            this.Btn_verificar.Text = "Verificar";
+            this.Btn_verificar.UseVisualStyleBackColor = false;
+            this.Btn_verificar.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // Pbx_correcto
+            // 
+            this.Pbx_correcto.Image = global::LaboratorioClinico.Properties.Resources.comprobado;
+            this.Pbx_correcto.Location = new System.Drawing.Point(348, 168);
+            this.Pbx_correcto.Name = "Pbx_correcto";
+            this.Pbx_correcto.Size = new System.Drawing.Size(35, 33);
+            this.Pbx_correcto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Pbx_correcto.TabIndex = 22;
+            this.Pbx_correcto.TabStop = false;
+            this.Pbx_correcto.Visible = false;
+            // 
+            // Btn_guardar
+            // 
+            this.Btn_guardar.BackgroundImage = global::LaboratorioClinico.Properties.Resources.guardar1;
+            this.Btn_guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_guardar.Location = new System.Drawing.Point(344, 265);
+            this.Btn_guardar.Name = "Btn_guardar";
+            this.Btn_guardar.Size = new System.Drawing.Size(53, 44);
+            this.Btn_guardar.TabIndex = 21;
+            this.Btn_guardar.UseVisualStyleBackColor = true;
+            this.Btn_guardar.Click += new System.EventHandler(this.Btn_guardar_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::LaboratorioClinico.Properties.Resources.bloquear1;
+            this.pictureBox1.Location = new System.Drawing.Point(158, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(91, 86);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 20;
+            this.pictureBox1.TabStop = false;
+            // 
+            // Gpb_contraseña
+            // 
+            this.Gpb_contraseña.Controls.Add(this.label3);
+            this.Gpb_contraseña.Controls.Add(this.Txt_actual);
+            this.Gpb_contraseña.Controls.Add(this.label9);
+            this.Gpb_contraseña.Controls.Add(this.Txt_nueva);
+            this.Gpb_contraseña.Enabled = false;
+            this.Gpb_contraseña.Location = new System.Drawing.Point(36, 158);
+            this.Gpb_contraseña.Name = "Gpb_contraseña";
+            this.Gpb_contraseña.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Gpb_contraseña.Size = new System.Drawing.Size(293, 141);
+            this.Gpb_contraseña.TabIndex = 19;
+            this.Gpb_contraseña.TabStop = false;
+            this.Gpb_contraseña.Text = "Contraseña";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(20, 43);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(59, 22);
+            this.label3.TabIndex = 14;
+            this.label3.Text = " Actual";
+            // 
+            // Txt_actual
+            // 
+            this.Txt_actual.Enabled = false;
+            this.Txt_actual.Location = new System.Drawing.Point(115, 43);
+            this.Txt_actual.Name = "Txt_actual";
+            this.Txt_actual.PasswordChar = '*';
+            this.Txt_actual.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Txt_actual.Size = new System.Drawing.Size(172, 29);
+            this.Txt_actual.TabIndex = 13;
+            this.Txt_actual.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(20, 87);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(55, 22);
+            this.label9.TabIndex = 16;
+            this.label9.Text = "Nueva";
+            // 
+            // Txt_nueva
+            // 
+            this.Txt_nueva.Enabled = false;
+            this.Txt_nueva.Location = new System.Drawing.Point(115, 87);
+            this.Txt_nueva.Name = "Txt_nueva";
+            this.Txt_nueva.PasswordChar = '*';
+            this.Txt_nueva.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Txt_nueva.Size = new System.Drawing.Size(172, 29);
+            this.Txt_nueva.TabIndex = 15;
+            // 
+            // Cmb_usuarioCambio
+            // 
+            this.Cmb_usuarioCambio.FormattingEnabled = true;
+            this.Cmb_usuarioCambio.Location = new System.Drawing.Point(145, 112);
+            this.Cmb_usuarioCambio.Name = "Cmb_usuarioCambio";
+            this.Cmb_usuarioCambio.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Cmb_usuarioCambio.Size = new System.Drawing.Size(178, 30);
+            this.Cmb_usuarioCambio.TabIndex = 12;
+            this.Cmb_usuarioCambio.SelectedIndexChanged += new System.EventHandler(this.Cmb_usuarioCambio_SelectedIndexChanged);
+            this.Cmb_usuarioCambio.Click += new System.EventHandler(this.Cmb_usuarioCambio_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(46, 115);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 22);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Usuario";
             // 
             // ConfigUser
             // 
@@ -262,6 +428,13 @@
             this.Tbc_eliminar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.Tbc_cuerpo.ResumeLayout(false);
+            this.Tbc_cambio.ResumeLayout(false);
+            this.Tbc_cambio.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Pbx_incorrecto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pbx_correcto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Gpb_contraseña.ResumeLayout(false);
+            this.Gpb_contraseña.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -286,5 +459,18 @@
         private System.Windows.Forms.ComboBox Cmb_usuarioEliminar;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TabControl Tbc_cuerpo;
+        private System.Windows.Forms.TabPage Tbc_cambio;
+        private System.Windows.Forms.GroupBox Gpb_contraseña;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox Txt_actual;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox Txt_nueva;
+        private System.Windows.Forms.ComboBox Cmb_usuarioCambio;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button Btn_guardar;
+        private System.Windows.Forms.PictureBox Pbx_correcto;
+        private System.Windows.Forms.PictureBox Pbx_incorrecto;
+        private System.Windows.Forms.Button Btn_verificar;
     }
 }
