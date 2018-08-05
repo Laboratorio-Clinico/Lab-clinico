@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace LaboratorioClinico
 {
-    public partial class Form2 : Form
+    public partial class ingresoResultado : Form
     {
-        public Form2()
+        public ingresoResultado()
         {
             InitializeComponent();
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
