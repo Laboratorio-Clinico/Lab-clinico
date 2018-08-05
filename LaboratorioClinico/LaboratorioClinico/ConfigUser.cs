@@ -260,8 +260,12 @@ namespace LaboratorioClinico
             Cmb_usuarioCambio.ResetText();
             Txt_actual.Clear();
             Txt_nueva.Clear();
+
+            //Habilitar y Visualizar
             Pbx_correcto.Visible = false;
             Pbx_incorrecto.Visible = false;
+            Gpb_contraseña.Enabled = false;
+            Txt_nueva.Enabled = false;
         }
 
         private void Cmb_usuarioCambio_Click(object sender, EventArgs e)
