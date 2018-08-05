@@ -32,27 +32,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Exámen));
-            this.Btn_mantenimiento = new System.Windows.Forms.Button();
             this.Dgv_examen = new System.Windows.Forms.DataGridView();
             this.Pcb_lab = new System.Windows.Forms.PictureBox();
             this.Lbl_examen = new System.Windows.Forms.Label();
+            this.Btn_editar = new System.Windows.Forms.Button();
+            this.Btn_eliminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_examen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pcb_lab)).BeginInit();
             this.SuspendLayout();
-            // 
-            // Btn_mantenimiento
-            // 
-            this.Btn_mantenimiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.Btn_mantenimiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_mantenimiento.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_mantenimiento.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.Btn_mantenimiento.Location = new System.Drawing.Point(519, 135);
-            this.Btn_mantenimiento.Name = "Btn_mantenimiento";
-            this.Btn_mantenimiento.Size = new System.Drawing.Size(180, 52);
-            this.Btn_mantenimiento.TabIndex = 12;
-            this.Btn_mantenimiento.Text = "Ir a mantenimiento";
-            this.Btn_mantenimiento.UseVisualStyleBackColor = false;
-            this.Btn_mantenimiento.Click += new System.EventHandler(this.button1_Click);
             // 
             // Dgv_examen
             // 
@@ -75,7 +62,7 @@
             this.Dgv_examen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.DarkSlateGray;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.CadetBlue;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.LightCyan;
@@ -119,6 +106,28 @@
             this.Lbl_examen.TabIndex = 13;
             this.Lbl_examen.Text = "Exámenes";
             // 
+            // Btn_editar
+            // 
+            this.Btn_editar.BackColor = System.Drawing.Color.Transparent;
+            this.Btn_editar.BackgroundImage = global::LaboratorioClinico.Properties.Resources.editar2;
+            this.Btn_editar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_editar.Location = new System.Drawing.Point(469, 68);
+            this.Btn_editar.Name = "Btn_editar";
+            this.Btn_editar.Size = new System.Drawing.Size(53, 44);
+            this.Btn_editar.TabIndex = 96;
+            this.Btn_editar.UseVisualStyleBackColor = false;
+            // 
+            // Btn_eliminar
+            // 
+            this.Btn_eliminar.BackColor = System.Drawing.Color.Transparent;
+            this.Btn_eliminar.BackgroundImage = global::LaboratorioClinico.Properties.Resources.boton_x;
+            this.Btn_eliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_eliminar.Location = new System.Drawing.Point(538, 68);
+            this.Btn_eliminar.Name = "Btn_eliminar";
+            this.Btn_eliminar.Size = new System.Drawing.Size(53, 44);
+            this.Btn_eliminar.TabIndex = 97;
+            this.Btn_eliminar.UseVisualStyleBackColor = false;
+            // 
             // Exámen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -126,8 +135,9 @@
             this.BackgroundImage = global::LaboratorioClinico.Properties.Resources.FONDOO;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(782, 528);
+            this.Controls.Add(this.Btn_eliminar);
+            this.Controls.Add(this.Btn_editar);
             this.Controls.Add(this.Lbl_examen);
-            this.Controls.Add(this.Btn_mantenimiento);
             this.Controls.Add(this.Dgv_examen);
             this.Controls.Add(this.Pcb_lab);
             this.DoubleBuffered = true;
@@ -144,10 +154,10 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button Btn_mantenimiento;
         private System.Windows.Forms.DataGridView Dgv_examen;
         private System.Windows.Forms.PictureBox Pcb_lab;
         private System.Windows.Forms.Label Lbl_examen;
+        private System.Windows.Forms.Button Btn_editar;
+        private System.Windows.Forms.Button Btn_eliminar;
     }
 }
