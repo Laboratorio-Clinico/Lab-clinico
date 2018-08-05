@@ -46,7 +46,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.Lbl_examenRealizado = new System.Windows.Forms.Label();
             this.Gpb_datosf = new System.Windows.Forms.GroupBox();
-            this.Txt_edadr = new System.Windows.Forms.TextBox();
             this.Txt_direccionr = new System.Windows.Forms.TextBox();
             this.Lbl_fechaf = new System.Windows.Forms.Label();
             this.Txt_dpir = new System.Windows.Forms.TextBox();
@@ -60,6 +59,9 @@
             this.Btn_guardarResultado = new System.Windows.Forms.Button();
             this.Btn_imprimirResultado = new System.Windows.Forms.Button();
             this.Btn_busc = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Btn_BuscarExamen = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.Gpb_datosf.SuspendLayout();
             this.SuspendLayout();
@@ -103,6 +105,9 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.Btn_BuscarExamen);
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.Btn_guardarResultado);
             this.groupBox1.Controls.Add(this.Lbl_ingresarr);
             this.groupBox1.Controls.Add(this.Btn_imprimirResultado);
@@ -110,9 +115,9 @@
             this.groupBox1.Controls.Add(this.Txt_resultadox);
             this.groupBox1.Controls.Add(this.Lbl_resultado);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.Dtp_fechar);
             this.groupBox1.Controls.Add(this.Txt_codEx);
             this.groupBox1.Controls.Add(this.Lbl_codigor);
+            this.groupBox1.Controls.Add(this.Dtp_fechar);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.Txt_nombrex);
             this.groupBox1.Controls.Add(this.label4);
@@ -175,7 +180,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(424, 46);
+            this.label1.Location = new System.Drawing.Point(405, 46);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(105, 18);
@@ -187,9 +192,9 @@
             this.Dtp_fechar.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Dtp_fechar.CustomFormat = "dd-MM-yy";
             this.Dtp_fechar.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Dtp_fechar.Location = new System.Drawing.Point(536, 35);
+            this.Dtp_fechar.Location = new System.Drawing.Point(517, 35);
             this.Dtp_fechar.Name = "Dtp_fechar";
-            this.Dtp_fechar.Size = new System.Drawing.Size(125, 29);
+            this.Dtp_fechar.Size = new System.Drawing.Size(144, 29);
             this.Dtp_fechar.TabIndex = 22;
             // 
             // Txt_codEx
@@ -198,7 +203,7 @@
             this.Txt_codEx.Location = new System.Drawing.Point(190, 44);
             this.Txt_codEx.Multiline = true;
             this.Txt_codEx.Name = "Txt_codEx";
-            this.Txt_codEx.Size = new System.Drawing.Size(197, 20);
+            this.Txt_codEx.Size = new System.Drawing.Size(146, 20);
             this.Txt_codEx.TabIndex = 101;
             // 
             // Lbl_codigor
@@ -260,7 +265,6 @@
             // Gpb_datosf
             // 
             this.Gpb_datosf.BackColor = System.Drawing.Color.Transparent;
-            this.Gpb_datosf.Controls.Add(this.Txt_edadr);
             this.Gpb_datosf.Controls.Add(this.Btn_busc);
             this.Gpb_datosf.Controls.Add(this.Txt_direccionr);
             this.Gpb_datosf.Controls.Add(this.Lbl_fechaf);
@@ -279,22 +283,13 @@
             this.Gpb_datosf.TabStop = false;
             this.Gpb_datosf.Text = "Datos Paciente";
             // 
-            // Txt_edadr
-            // 
-            this.Txt_edadr.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_edadr.Location = new System.Drawing.Point(586, 24);
-            this.Txt_edadr.Multiline = true;
-            this.Txt_edadr.Name = "Txt_edadr";
-            this.Txt_edadr.Size = new System.Drawing.Size(115, 20);
-            this.Txt_edadr.TabIndex = 52;
-            // 
             // Txt_direccionr
             // 
             this.Txt_direccionr.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_direccionr.Location = new System.Drawing.Point(382, 62);
             this.Txt_direccionr.Multiline = true;
             this.Txt_direccionr.Name = "Txt_direccionr";
-            this.Txt_direccionr.Size = new System.Drawing.Size(319, 20);
+            this.Txt_direccionr.Size = new System.Drawing.Size(338, 20);
             this.Txt_direccionr.TabIndex = 11;
             // 
             // Lbl_fechaf
@@ -305,9 +300,8 @@
             this.Lbl_fechaf.ForeColor = System.Drawing.Color.White;
             this.Lbl_fechaf.Location = new System.Drawing.Point(539, 24);
             this.Lbl_fechaf.Name = "Lbl_fechaf";
-            this.Lbl_fechaf.Size = new System.Drawing.Size(41, 18);
+            this.Lbl_fechaf.Size = new System.Drawing.Size(0, 18);
             this.Lbl_fechaf.TabIndex = 10;
-            this.Lbl_fechaf.Text = "Edad";
             // 
             // Txt_dpir
             // 
@@ -322,11 +316,11 @@
             // 
             this.Lbl_direccionf.AutoSize = true;
             this.Lbl_direccionf.BackColor = System.Drawing.Color.Transparent;
-            this.Lbl_direccionf.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_direccionf.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_direccionf.ForeColor = System.Drawing.Color.White;
             this.Lbl_direccionf.Location = new System.Drawing.Point(298, 62);
             this.Lbl_direccionf.Name = "Lbl_direccionf";
-            this.Lbl_direccionf.Size = new System.Drawing.Size(78, 18);
+            this.Lbl_direccionf.Size = new System.Drawing.Size(66, 18);
             this.Lbl_direccionf.TabIndex = 7;
             this.Lbl_direccionf.Text = "Dirección";
             // 
@@ -336,18 +330,18 @@
             this.Txt_nombrer.Location = new System.Drawing.Point(124, 24);
             this.Txt_nombrer.Multiline = true;
             this.Txt_nombrer.Name = "Txt_nombrer";
-            this.Txt_nombrer.Size = new System.Drawing.Size(379, 20);
+            this.Txt_nombrer.Size = new System.Drawing.Size(336, 20);
             this.Txt_nombrer.TabIndex = 4;
             // 
             // Lbl_nitf
             // 
             this.Lbl_nitf.AutoSize = true;
             this.Lbl_nitf.BackColor = System.Drawing.Color.Transparent;
-            this.Lbl_nitf.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_nitf.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_nitf.ForeColor = System.Drawing.Color.White;
             this.Lbl_nitf.Location = new System.Drawing.Point(29, 64);
             this.Lbl_nitf.Name = "Lbl_nitf";
-            this.Lbl_nitf.Size = new System.Drawing.Size(35, 18);
+            this.Lbl_nitf.Size = new System.Drawing.Size(31, 18);
             this.Lbl_nitf.TabIndex = 6;
             this.Lbl_nitf.Text = "DPI";
             // 
@@ -355,11 +349,11 @@
             // 
             this.Lbl_nombref.AutoSize = true;
             this.Lbl_nombref.BackColor = System.Drawing.Color.Transparent;
-            this.Lbl_nombref.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_nombref.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_nombref.ForeColor = System.Drawing.Color.White;
             this.Lbl_nombref.Location = new System.Drawing.Point(29, 24);
             this.Lbl_nombref.Name = "Lbl_nombref";
-            this.Lbl_nombref.Size = new System.Drawing.Size(64, 18);
+            this.Lbl_nombref.Size = new System.Drawing.Size(58, 18);
             this.Lbl_nombref.TabIndex = 5;
             this.Lbl_nombref.Text = "Nombre";
             // 
@@ -424,6 +418,40 @@
             this.Btn_busc.Size = new System.Drawing.Size(41, 38);
             this.Btn_busc.TabIndex = 51;
             this.Btn_busc.UseVisualStyleBackColor = false;
+            this.Btn_busc.Click += new System.EventHandler(this.Btn_busc_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(46, 211);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(51, 18);
+            this.label2.TabIndex = 109;
+            this.label2.Text = "Correo";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(190, 209);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(366, 20);
+            this.textBox1.TabIndex = 110;
+            // 
+            // Btn_BuscarExamen
+            // 
+            this.Btn_BuscarExamen.BackColor = System.Drawing.Color.White;
+            this.Btn_BuscarExamen.BackgroundImage = global::LaboratorioClinico.Properties.Resources.codigobarra;
+            this.Btn_BuscarExamen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_BuscarExamen.Location = new System.Drawing.Point(340, 29);
+            this.Btn_BuscarExamen.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_BuscarExamen.Name = "Btn_BuscarExamen";
+            this.Btn_BuscarExamen.Size = new System.Drawing.Size(41, 38);
+            this.Btn_BuscarExamen.TabIndex = 111;
+            this.Btn_BuscarExamen.UseVisualStyleBackColor = false;
             // 
             // ingresoResultado
             // 
@@ -474,7 +502,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label Lbl_examenRealizado;
         private System.Windows.Forms.GroupBox Gpb_datosf;
-        private System.Windows.Forms.TextBox Txt_edadr;
         private System.Windows.Forms.Button Btn_busc;
         private System.Windows.Forms.TextBox Txt_direccionr;
         private System.Windows.Forms.Label Lbl_fechaf;
@@ -484,5 +511,8 @@
         private System.Windows.Forms.Label Lbl_nitf;
         private System.Windows.Forms.Label Lbl_nombref;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button Btn_BuscarExamen;
     }
 }
