@@ -201,7 +201,7 @@
             this.Tm_Enuevo.BackColor = System.Drawing.Color.PowderBlue;
             this.Tm_Enuevo.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tm_Enuevo.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.Tm_Enuevo.Image = global::LaboratorioClinico.Properties.Resources.anadir;
+            this.Tm_Enuevo.Image = global::LaboratorioClinico.Properties.Resources.info;
             this.Tm_Enuevo.Name = "Tm_Enuevo";
             this.Tm_Enuevo.Size = new System.Drawing.Size(192, 26);
             this.Tm_Enuevo.Text = "Información";
