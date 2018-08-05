@@ -112,11 +112,8 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Gan.rpt</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Ganancia.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Ganancia.cs" />
     <Compile Include="Ganancia.Designer.cs">
       <DependentUpon>Ganancia.cs</DependentUpon>
     </Compile>
@@ -162,10 +159,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RegCli.rpt</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="RegClientes.cs">
-      <SubType>Form</SubType>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="RegClientes.Designer.cs">
       <DependentUpon>RegClientes.cs</DependentUpon>

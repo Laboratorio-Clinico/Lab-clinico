@@ -18,10 +18,11 @@ namespace LaboratorioClinico
             InitializeComponent();
         }
 
-        public void Pro_llenarDatos(Decimal nPaciente) {
+        public void Pro_llenarDatos(Decimal nPaciente)
+        {
             try
             {
-                OdbcCommand comando = new OdbcCommand(string.Format("Select *from paciente where nidpaciente='{0}'",nPaciente),conexion.ObtenerConexion());   
+                OdbcCommand comando = new OdbcCommand(string.Format("Select *from paciente where nidpaciente='{0}'", nPaciente), conexion.ObtenerConexion());
                 comando.ExecuteNonQuery();
 
                 OdbcDataReader buscador = comando.ExecuteReader();
@@ -41,10 +42,11 @@ namespace LaboratorioClinico
             }
             catch (OdbcException error) { MessageBox.Show(error.Message); }
             finally { conexion.ObtenerConexion().Close(); }
-        
-    }
 
-        public void Pro_llenarMembresias() {
+        }
+
+        public void Pro_llenarMembresias()
+        {
             try
             {
 
@@ -71,7 +73,8 @@ namespace LaboratorioClinico
             catch (OdbcException error) { MessageBox.Show(error.Message); }
         }
 
-        public void Pro_agregarMembresia() {
+        public void Pro_agregarMembresia()
+        {
 
             try
             {
@@ -94,7 +97,8 @@ namespace LaboratorioClinico
             Txt_nombre.Text = "";
             Txt_nit.Text = "";
         }
-        public void Pro_mostrarBeneficios() {
+        public void Pro_mostrarBeneficios()
+        {
 
         }
 
@@ -108,7 +112,7 @@ namespace LaboratorioClinico
         private void Btn_agregar_Click(object sender, EventArgs e)
         {
             Pro_agregarMembresia();
-   
+
         }
 
         private void Btn_beneficios_Click(object sender, EventArgs e)
