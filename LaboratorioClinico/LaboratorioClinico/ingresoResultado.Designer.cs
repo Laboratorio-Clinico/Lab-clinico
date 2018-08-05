@@ -108,8 +108,10 @@
             this.groupBox1.Controls.Add(this.Lbl_imprimirr);
             this.groupBox1.Controls.Add(this.Txt_resultadox);
             this.groupBox1.Controls.Add(this.Lbl_resultado);
+            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.Txt_codEx);
             this.groupBox1.Controls.Add(this.Lbl_codigor);
+            this.groupBox1.Controls.Add(this.Dtp_fechar);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.Txt_nombrex);
             this.groupBox1.Controls.Add(this.label4);
@@ -172,7 +174,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(464, 27);
+            this.label1.Location = new System.Drawing.Point(405, 46);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(105, 18);
@@ -184,7 +186,7 @@
             this.Dtp_fechar.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Dtp_fechar.CustomFormat = "dd-MM-yy";
             this.Dtp_fechar.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Dtp_fechar.Location = new System.Drawing.Point(576, 16);
+            this.Dtp_fechar.Location = new System.Drawing.Point(517, 35);
             this.Dtp_fechar.Name = "Dtp_fechar";
             this.Dtp_fechar.Size = new System.Drawing.Size(144, 29);
             this.Dtp_fechar.TabIndex = 22;
@@ -263,9 +265,7 @@
             this.Gpb_datosf.Controls.Add(this.Txt_dpir);
             this.Gpb_datosf.Controls.Add(this.Lbl_direccionf);
             this.Gpb_datosf.Controls.Add(this.Txt_nombrer);
-            this.Gpb_datosf.Controls.Add(this.label1);
             this.Gpb_datosf.Controls.Add(this.Lbl_nitf);
-            this.Gpb_datosf.Controls.Add(this.Dtp_fechar);
             this.Gpb_datosf.Controls.Add(this.Lbl_nombref);
             this.Gpb_datosf.Controls.Add(this.textBox2);
             this.Gpb_datosf.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

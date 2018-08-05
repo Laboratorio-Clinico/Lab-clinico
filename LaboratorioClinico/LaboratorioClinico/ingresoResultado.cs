@@ -23,13 +23,13 @@ namespace LaboratorioClinico
         {
             try
             {
-                OdbcDataAdapter sda = new OdbcDataAdapter("SELECT pa.sNombre, pa.sDireccion,pa.dFechaDeEmision FROM paciente pa WHERE pa.sNit='" + Convert.ToString(Txt_dpir.Text) + "'", conexion.ObtenerConexion());
+                OdbcDataAdapter sda = new OdbcDataAdapter("SELECT pa.sNombre, pa.sDireccion FROM paciente pa WHERE pa.sNit='" + Convert.ToString(Txt_dpir.Text) + "'", conexion.ObtenerConexion());
                 DataTable datos = new DataTable();
                 sda.Fill(datos);
 
                 Txt_nombrer.Text = datos.Rows[0][0].ToString();
                 Txt_direccionr.Text = datos.Rows[0][1].ToString();
-                Dtp_fechar.Text= datos.Rows[0][1].ToString();
+             
 
             }
             catch (Exception ex)
