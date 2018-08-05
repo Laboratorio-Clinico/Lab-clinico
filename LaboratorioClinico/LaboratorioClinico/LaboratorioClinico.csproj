@@ -182,11 +182,19 @@
     <Compile Include="Requerimientos.Designer.cs">
       <DependentUpon>Requerimientos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Resources\BuscarExamen.cs" />
+    <Compile Include="Resources\Examen.cs" />
     <Compile Include="Resultados.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Resultados.Designer.cs">
       <DependentUpon>Resultados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SolicitudDeMembresia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SolicitudDeMembresia.Designer.cs">
+      <DependentUpon>SolicitudDeMembresia.cs</DependentUpon>
     </Compile>
     <Compile Include="Usuario.cs">
       <SubType>Form</SubType>
@@ -268,6 +276,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Resultados.resx">
       <DependentUpon>Resultados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SolicitudDeMembresia.resx">
+      <DependentUpon>SolicitudDeMembresia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Usuario.resx">
       <DependentUpon>Usuario.cs</DependentUpon>

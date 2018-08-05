@@ -67,6 +67,7 @@
             this.tm_menu = new System.Windows.Forms.Timer(this.components);
             this.tm_menu2 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.membresiasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -276,7 +277,8 @@
             // 
             this.Tm_Control.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nuevoPacienteToolStripMenuItem,
-            this.nuevoEmpleadoToolStripMenuItem});
+            this.nuevoEmpleadoToolStripMenuItem,
+            this.membresiasToolStripMenuItem});
             this.Tm_Control.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tm_Control.Name = "Tm_Control";
             this.Tm_Control.Size = new System.Drawing.Size(79, 28);
@@ -454,6 +456,13 @@
             this.tm_menu2.Interval = 10;
             this.tm_menu2.Tick += new System.EventHandler(this.tm_menu2_Tick);
             // 
+            // membresiasToolStripMenuItem
+            // 
+            this.membresiasToolStripMenuItem.Name = "membresiasToolStripMenuItem";
+            this.membresiasToolStripMenuItem.Size = new System.Drawing.Size(202, 26);
+            this.membresiasToolStripMenuItem.Text = "Membresias";
+            this.membresiasToolStripMenuItem.Click += new System.EventHandler(this.membresiasToolStripMenuItem_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -524,5 +533,6 @@
         private System.Windows.Forms.ToolStripMenuItem nuevoEmpleadoToolStripMenuItem;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.ToolStripMenuItem membresiasToolStripMenuItem;
     }
 }
