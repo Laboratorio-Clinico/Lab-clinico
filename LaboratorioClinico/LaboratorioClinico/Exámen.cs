@@ -93,24 +93,46 @@ namespace LaboratorioClinico
             this.Show();
         }
 
-        private void Btn_editar_Click(object sender, EventArgs e)
+        private void Btn_editar_Click(object sender, EventArgs e) //Copiar los datoa del DataGrid a los textbox para editar o eliminar
         {
-            if(sCodigo == "")
+            try
             {
-                MessageBox.Show("Seleccionar una fila para editar", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }else
-            {
-                Txt_codigo.Text = sCodigo;
-                Txt_nombre.Text = sNombre;
-                Txt_precio.Text = sPrecio;
+                Gpb_datosm.Enabled = true;
+                if(Dgv_examen.SelectedRows.Count > 0)
+                {
+                    Txt_codigom.Text = Dgv_examen.CurrentRow.Cells[0].Value.ToString();
+                    Txt_nombrem.Text = Dgv_examen.CurrentRow.Cells[1].Value.ToString();
+                    Txt_preciom.Text = Dgv_examen.CurrentRow.Cells[2].Value.ToString();
+                }else
+                {
+                    MessageBox.Show("Seleccionar una fila para editar", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex);
+            }  
+            //MessageBox.Show("Seleccionar una fila para editar", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void Dgv_examen_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            sCodigo = Dgv_examen.Rows[e.RowIndex].Cells["codigo"].Value.ToString();
-            sNombre = Dgv_examen.Rows[e.RowIndex].Cells["nombre"].Value.ToString();
-            sPrecio = Dgv_examen.Rows[e.RowIndex].Cells["precio"].Value.ToString();
+            
+        }
+
+        private void Btn_eliminar_Click(object sender, EventArgs e)
+        {
+            Gpb_datose.Enabled = true;
+            if (Dgv_examen.SelectedRows.Count > 0)
+            {
+                Txt_codigoe.Text = Dgv_examen.CurrentRow.Cells[0].Value.ToString();
+                Txt_nombree.Text = Dgv_examen.CurrentRow.Cells[1].Value.ToString();
+                Txt_precioe.Text = Dgv_examen.CurrentRow.Cells[2].Value.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Seleccionar una fila para editar", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }
