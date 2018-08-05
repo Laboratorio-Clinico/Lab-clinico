@@ -138,7 +138,7 @@ namespace LaboratorioClinico
                 tabla.Rows.InsertAt(fila, 0);
                 */
                 Cmb_tipoDeDescuento.ValueMember = "idtiposdes";
-               Cmb_tipoDeDescuento.DisplayMember = "tipo";
+                Cmb_tipoDeDescuento.DisplayMember = "tipo";
 
                 Cmb_tipoDeDescuento.DataSource = tabla;
 
@@ -189,7 +189,6 @@ namespace LaboratorioClinico
 
 
         }
-
         public void proBuscarCotizacion(int iIdExamenes)
         {
 
@@ -197,7 +196,7 @@ namespace LaboratorioClinico
             {
                 OdbcCommand comando = new OdbcCommand("{CALL Pro_cotizacionesPrecio(?)}", conexion.ObtenerConexion());
                 comando.CommandType = CommandType.StoredProcedure;
-                comando.Parameters.AddWithValue("@iIdExamenes",iIdExamenes);
+                comando.Parameters.AddWithValue("@iIdExamenes", iIdExamenes);
                 comando.ExecuteNonQuery();
                 DataTable tabla = new DataTable();
                 OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
@@ -205,9 +204,17 @@ namespace LaboratorioClinico
                 Dgv_verDatos.DataSource = tabla;
             }
             catch (OdbcException error) { MessageBox.Show(error.Message); }
-            finally { conexion.ObtenerConexion().Close(); }
-         
+            finally
+            {
+                conexion.ObtenerConexion().Close();
+            }
         }
+
+       
+
+              
+       
+
        public void proPrecioyTotal(int iIdExamenes)
         {
 
@@ -244,9 +251,11 @@ namespace LaboratorioClinico
         private void Btn_buscar_Click(object sender, EventArgs e)
         {
            
-            int iIdExamenes = Convert.ToInt32(Cmb_examen.SelectedValue);           
+            int iIdExamenes = Convert.ToInt32(Cmb_examen.SelectedValue);
+            Dgv_verDatos.DataSource = Resources.BuscarExamen.buscar(iIdExamenes);   
  
-            proBuscarCotizacion(iIdExamenes);
+        ///    proBuscarCotizacion(iIdExamenes);
+           
             proPrecioyTotal(iIdExamenes);
             
 
@@ -302,7 +311,7 @@ namespace LaboratorioClinico
 
             int iIdExamenes = Convert.ToInt32(Cmb_examen.SelectedValue);
 
-            proBuscarCotizacion(iIdExamenes);
+           // proBuscarCotizacion(iIdExamenes);
             proPrecioyTotal(iIdExamenes);
 
         }
