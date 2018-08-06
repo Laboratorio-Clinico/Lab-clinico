@@ -2836,7 +2836,7 @@
             this.Cmb_nuevaMembm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Cmb_nuevaMembm.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cmb_nuevaMembm.FormattingEnabled = true;
-            this.Cmb_nuevaMembm.Location = new System.Drawing.Point(207, 102);
+            this.Cmb_nuevaMembm.Location = new System.Drawing.Point(228, 102);
             this.Cmb_nuevaMembm.Name = "Cmb_nuevaMembm";
             this.Cmb_nuevaMembm.Size = new System.Drawing.Size(197, 26);
             this.Cmb_nuevaMembm.TabIndex = 141;
@@ -2846,7 +2846,7 @@
             this.Lbl_nuevaMembm.AutoSize = true;
             this.Lbl_nuevaMembm.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_nuevaMembm.ForeColor = System.Drawing.Color.Black;
-            this.Lbl_nuevaMembm.Location = new System.Drawing.Point(194, 86);
+            this.Lbl_nuevaMembm.Location = new System.Drawing.Point(215, 86);
             this.Lbl_nuevaMembm.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_nuevaMembm.Name = "Lbl_nuevaMembm";
             this.Lbl_nuevaMembm.Size = new System.Drawing.Size(129, 18);
@@ -2861,7 +2861,7 @@
             this.Txt_actualMembm.Location = new System.Drawing.Point(48, 103);
             this.Txt_actualMembm.Margin = new System.Windows.Forms.Padding(4);
             this.Txt_actualMembm.Name = "Txt_actualMembm";
-            this.Txt_actualMembm.Size = new System.Drawing.Size(136, 26);
+            this.Txt_actualMembm.Size = new System.Drawing.Size(161, 26);
             this.Txt_actualMembm.TabIndex = 143;
             // 
             // Mantenimiento
