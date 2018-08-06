@@ -45,11 +45,10 @@
             this.Lbl_nit = new System.Windows.Forms.Label();
             this.Lbl_nombre = new System.Windows.Forms.Label();
             this.Txt_DPI = new System.Windows.Forms.TextBox();
-<<<<<<< HEAD
+
             this.button1 = new System.Windows.Forms.Button();
-=======
+
             this.Dgv_verBeneficios = new System.Windows.Forms.DataGridView();
->>>>>>> parent of 6c82770... propiedades membresía
             this.Gpb_datosEmpleado.SuspendLayout();
             this.Gpb_datosPersonales.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_verBeneficios)).BeginInit();
@@ -252,7 +251,7 @@
             this.Txt_DPI.Size = new System.Drawing.Size(197, 26);
             this.Txt_DPI.TabIndex = 28;
             // 
-<<<<<<< HEAD
+
             // button1
             // 
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
@@ -262,7 +261,7 @@
             this.button1.Size = new System.Drawing.Size(53, 44);
             this.button1.TabIndex = 16;
             this.button1.UseVisualStyleBackColor = true;
-=======
+
             // Dgv_verBeneficios
             // 
             this.Dgv_verBeneficios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -270,7 +269,7 @@
             this.Dgv_verBeneficios.Name = "Dgv_verBeneficios";
             this.Dgv_verBeneficios.Size = new System.Drawing.Size(684, 171);
             this.Dgv_verBeneficios.TabIndex = 35;
->>>>>>> parent of 6c82770... propiedades membresía
+
             // 
             // Membresias
             // 
