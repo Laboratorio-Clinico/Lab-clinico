@@ -743,5 +743,36 @@ namespace LaboratorioClinico
                 //MessageBox.Show("error:"+ex);
             }
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Gpb_datosMembm.Visible = true;
+                OdbcDataAdapter sda = new OdbcDataAdapter("'" + Convert.ToInt32(Txt_dpiMembm.Text) + "'", conexion.ObtenerConexion());
+                DataTable datos = new DataTable();
+                sda.Fill(datos);
+
+                Txt_nombreMembm.Text = datos.Rows[0][0].ToString();
+                Txt_nitMembm.Text = datos.Rows[0][0].ToString();
+                Txt_actualMembm.Text = datos.Rows[0][0].ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Intente de nuevo.", "Error en la búsqueda.", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
+                //MessageBox.Show("error:"+ex);
+
+            }
+        }
+
+        private void Txt_dpiMembm_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
