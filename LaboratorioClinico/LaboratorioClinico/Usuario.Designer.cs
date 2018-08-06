@@ -28,27 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Usuario));
             this.Gpb_nuevoUsuario = new System.Windows.Forms.GroupBox();
-            this.Btn_guardar = new System.Windows.Forms.Button();
-            this.Lbl_privilegio = new System.Windows.Forms.Label();
+            this.Btn = new System.Windows.Forms.Button();
+            this.Pnl_usuario = new System.Windows.Forms.Panel();
             this.Cmb_privelegio = new System.Windows.Forms.ComboBox();
-            this.Txt_password = new System.Windows.Forms.TextBox();
+            this.Btn_guardar = new System.Windows.Forms.Button();
+            this.Lbl_usuario = new System.Windows.Forms.Label();
+            this.Lbl_privilegio = new System.Windows.Forms.Label();
+            this.Lbl_contrasena = new System.Windows.Forms.Label();
             this.Txt_usuario = new System.Windows.Forms.TextBox();
+            this.Txt_password = new System.Windows.Forms.TextBox();
             this.Txt_codigoDeEmpleado = new System.Windows.Forms.TextBox();
             this.Lbl_codigoDeEmpleado = new System.Windows.Forms.Label();
-            this.Lbl_contrasena = new System.Windows.Forms.Label();
-            this.Lbl_usuario = new System.Windows.Forms.Label();
             this.Picb_Imagen = new System.Windows.Forms.PictureBox();
-            this.Pnl_usuario = new System.Windows.Forms.Panel();
-            this.Btn = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.Gpb_nuevoUsuario.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Picb_Imagen)).BeginInit();
             this.Pnl_usuario.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Picb_Imagen)).BeginInit();
             this.SuspendLayout();
             // 
             // Gpb_nuevoUsuario
             // 
             this.Gpb_nuevoUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.Gpb_nuevoUsuario.Controls.Add(this.button1);
             this.Gpb_nuevoUsuario.Controls.Add(this.Btn);
             this.Gpb_nuevoUsuario.Controls.Add(this.Pnl_usuario);
             this.Gpb_nuevoUsuario.Controls.Add(this.Txt_codigoDeEmpleado);
@@ -64,29 +67,34 @@
             this.Gpb_nuevoUsuario.Text = "Nuevo Usuario";
             this.Gpb_nuevoUsuario.Enter += new System.EventHandler(this.Gpb_nuevoUsuario_Enter);
             // 
-            // Btn_guardar
+            // Btn
             // 
-            this.Btn_guardar.BackgroundImage = global::LaboratorioClinico.Properties.Resources.guardar;
-            this.Btn_guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Btn_guardar.Location = new System.Drawing.Point(299, 150);
-            this.Btn_guardar.Margin = new System.Windows.Forms.Padding(4);
-            this.Btn_guardar.Name = "Btn_guardar";
-            this.Btn_guardar.Size = new System.Drawing.Size(53, 44);
-            this.Btn_guardar.TabIndex = 37;
-            this.Btn_guardar.UseVisualStyleBackColor = true;
-            this.Btn_guardar.Click += new System.EventHandler(this.Btn_guardar_Click);
+            this.Btn.BackColor = System.Drawing.Color.Transparent;
+            this.Btn.BackgroundImage = global::LaboratorioClinico.Properties.Resources.file;
+            this.Btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Btn.Location = new System.Drawing.Point(628, 90);
+            this.Btn.Name = "Btn";
+            this.Btn.Size = new System.Drawing.Size(53, 44);
+            this.Btn.TabIndex = 111;
+            this.Btn.UseVisualStyleBackColor = false;
+            this.Btn.Click += new System.EventHandler(this.Btn_Click);
             // 
-            // Lbl_privilegio
+            // Pnl_usuario
             // 
-            this.Lbl_privilegio.AutoSize = true;
-            this.Lbl_privilegio.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_privilegio.ForeColor = System.Drawing.Color.White;
-            this.Lbl_privilegio.Location = new System.Drawing.Point(76, 114);
-            this.Lbl_privilegio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Lbl_privilegio.Name = "Lbl_privilegio";
-            this.Lbl_privilegio.Size = new System.Drawing.Size(66, 18);
-            this.Lbl_privilegio.TabIndex = 36;
-            this.Lbl_privilegio.Text = "Privilegio";
+            this.Pnl_usuario.Controls.Add(this.Cmb_privelegio);
+            this.Pnl_usuario.Controls.Add(this.Btn_guardar);
+            this.Pnl_usuario.Controls.Add(this.Lbl_usuario);
+            this.Pnl_usuario.Controls.Add(this.Lbl_privilegio);
+            this.Pnl_usuario.Controls.Add(this.Lbl_contrasena);
+            this.Pnl_usuario.Controls.Add(this.Txt_usuario);
+            this.Pnl_usuario.Controls.Add(this.Txt_password);
+            this.Pnl_usuario.Location = new System.Drawing.Point(263, 140);
+            this.Pnl_usuario.Name = "Pnl_usuario";
+            this.Pnl_usuario.Size = new System.Drawing.Size(384, 213);
+            this.Pnl_usuario.TabIndex = 38;
+            this.Pnl_usuario.Visible = false;
             // 
             // Cmb_privelegio
             // 
@@ -103,15 +111,53 @@
             this.Cmb_privelegio.Size = new System.Drawing.Size(185, 26);
             this.Cmb_privelegio.TabIndex = 35;
             // 
-            // Txt_password
+            // Btn_guardar
             // 
-            this.Txt_password.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.Txt_password.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_password.Location = new System.Drawing.Point(167, 63);
-            this.Txt_password.Margin = new System.Windows.Forms.Padding(4);
-            this.Txt_password.Name = "Txt_password";
-            this.Txt_password.Size = new System.Drawing.Size(185, 26);
-            this.Txt_password.TabIndex = 33;
+            this.Btn_guardar.BackgroundImage = global::LaboratorioClinico.Properties.Resources.guardar;
+            this.Btn_guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_guardar.Location = new System.Drawing.Point(299, 150);
+            this.Btn_guardar.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_guardar.Name = "Btn_guardar";
+            this.Btn_guardar.Size = new System.Drawing.Size(53, 44);
+            this.Btn_guardar.TabIndex = 37;
+            this.Btn_guardar.UseVisualStyleBackColor = true;
+            this.Btn_guardar.Click += new System.EventHandler(this.Btn_guardar_Click);
+            // 
+            // Lbl_usuario
+            // 
+            this.Lbl_usuario.AutoSize = true;
+            this.Lbl_usuario.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_usuario.ForeColor = System.Drawing.Color.White;
+            this.Lbl_usuario.Location = new System.Drawing.Point(76, 26);
+            this.Lbl_usuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_usuario.Name = "Lbl_usuario";
+            this.Lbl_usuario.Size = new System.Drawing.Size(54, 18);
+            this.Lbl_usuario.TabIndex = 27;
+            this.Lbl_usuario.Text = "Usuario";
+            // 
+            // Lbl_privilegio
+            // 
+            this.Lbl_privilegio.AutoSize = true;
+            this.Lbl_privilegio.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_privilegio.ForeColor = System.Drawing.Color.White;
+            this.Lbl_privilegio.Location = new System.Drawing.Point(76, 114);
+            this.Lbl_privilegio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_privilegio.Name = "Lbl_privilegio";
+            this.Lbl_privilegio.Size = new System.Drawing.Size(66, 18);
+            this.Lbl_privilegio.TabIndex = 36;
+            this.Lbl_privilegio.Text = "Privilegio";
+            // 
+            // Lbl_contrasena
+            // 
+            this.Lbl_contrasena.AutoSize = true;
+            this.Lbl_contrasena.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_contrasena.ForeColor = System.Drawing.Color.White;
+            this.Lbl_contrasena.Location = new System.Drawing.Point(76, 70);
+            this.Lbl_contrasena.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_contrasena.Name = "Lbl_contrasena";
+            this.Lbl_contrasena.Size = new System.Drawing.Size(74, 18);
+            this.Lbl_contrasena.TabIndex = 28;
+            this.Lbl_contrasena.Text = "Contraseña";
             // 
             // Txt_usuario
             // 
@@ -122,6 +168,16 @@
             this.Txt_usuario.Name = "Txt_usuario";
             this.Txt_usuario.Size = new System.Drawing.Size(185, 26);
             this.Txt_usuario.TabIndex = 32;
+            // 
+            // Txt_password
+            // 
+            this.Txt_password.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_password.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_password.Location = new System.Drawing.Point(167, 63);
+            this.Txt_password.Margin = new System.Windows.Forms.Padding(4);
+            this.Txt_password.Name = "Txt_password";
+            this.Txt_password.Size = new System.Drawing.Size(185, 26);
+            this.Txt_password.TabIndex = 33;
             // 
             // Txt_codigoDeEmpleado
             // 
@@ -146,30 +202,6 @@
             this.Lbl_codigoDeEmpleado.TabIndex = 29;
             this.Lbl_codigoDeEmpleado.Text = "DPI Empleado";
             // 
-            // Lbl_contrasena
-            // 
-            this.Lbl_contrasena.AutoSize = true;
-            this.Lbl_contrasena.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_contrasena.ForeColor = System.Drawing.Color.White;
-            this.Lbl_contrasena.Location = new System.Drawing.Point(76, 70);
-            this.Lbl_contrasena.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Lbl_contrasena.Name = "Lbl_contrasena";
-            this.Lbl_contrasena.Size = new System.Drawing.Size(74, 18);
-            this.Lbl_contrasena.TabIndex = 28;
-            this.Lbl_contrasena.Text = "Contraseña";
-            // 
-            // Lbl_usuario
-            // 
-            this.Lbl_usuario.AutoSize = true;
-            this.Lbl_usuario.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_usuario.ForeColor = System.Drawing.Color.White;
-            this.Lbl_usuario.Location = new System.Drawing.Point(76, 26);
-            this.Lbl_usuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Lbl_usuario.Name = "Lbl_usuario";
-            this.Lbl_usuario.Size = new System.Drawing.Size(54, 18);
-            this.Lbl_usuario.TabIndex = 27;
-            this.Lbl_usuario.Text = "Usuario";
-            // 
             // Picb_Imagen
             // 
             this.Picb_Imagen.Image = global::LaboratorioClinico.Properties.Resources.imagen_monografico_que_deberias_saber_cuentas_de_usuario;
@@ -180,34 +212,15 @@
             this.Picb_Imagen.TabIndex = 25;
             this.Picb_Imagen.TabStop = false;
             // 
-            // Pnl_usuario
+            // button1
             // 
-            this.Pnl_usuario.Controls.Add(this.Cmb_privelegio);
-            this.Pnl_usuario.Controls.Add(this.Btn_guardar);
-            this.Pnl_usuario.Controls.Add(this.Lbl_usuario);
-            this.Pnl_usuario.Controls.Add(this.Lbl_privilegio);
-            this.Pnl_usuario.Controls.Add(this.Lbl_contrasena);
-            this.Pnl_usuario.Controls.Add(this.Txt_usuario);
-            this.Pnl_usuario.Controls.Add(this.Txt_password);
-            this.Pnl_usuario.Location = new System.Drawing.Point(263, 140);
-            this.Pnl_usuario.Name = "Pnl_usuario";
-            this.Pnl_usuario.Size = new System.Drawing.Size(384, 213);
-            this.Pnl_usuario.TabIndex = 38;
-            this.Pnl_usuario.Visible = false;
-            // 
-            // Btn
-            // 
-            this.Btn.BackColor = System.Drawing.Color.Transparent;
-            this.Btn.BackgroundImage = global::LaboratorioClinico.Properties.Resources.file;
-            this.Btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Btn.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Btn.Location = new System.Drawing.Point(628, 90);
-            this.Btn.Name = "Btn";
-            this.Btn.Size = new System.Drawing.Size(53, 44);
-            this.Btn.TabIndex = 111;
-            this.Btn.UseVisualStyleBackColor = false;
-            this.Btn.Click += new System.EventHandler(this.Btn_Click);
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(6, 391);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(53, 44);
+            this.button1.TabIndex = 16;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // Usuario
             // 
@@ -227,9 +240,9 @@
             this.Load += new System.EventHandler(this.Usuario_Load);
             this.Gpb_nuevoUsuario.ResumeLayout(false);
             this.Gpb_nuevoUsuario.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Picb_Imagen)).EndInit();
             this.Pnl_usuario.ResumeLayout(false);
             this.Pnl_usuario.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Picb_Imagen)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -249,5 +262,6 @@
         private System.Windows.Forms.PictureBox Picb_Imagen;
         private System.Windows.Forms.Panel Pnl_usuario;
         private System.Windows.Forms.Button Btn;
+        private System.Windows.Forms.Button button1;
     }
 }

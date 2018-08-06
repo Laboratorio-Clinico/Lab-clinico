@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Membresias));
             this.Gpb_datosEmpleado = new System.Windows.Forms.GroupBox();
+            this.Dgv_verBeneficios = new System.Windows.Forms.DataGridView();
             this.Lbl_buscar = new System.Windows.Forms.Label();
             this.Btn_buscar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -44,15 +46,16 @@
             this.Lbl_nit = new System.Windows.Forms.Label();
             this.Lbl_nombre = new System.Windows.Forms.Label();
             this.Txt_DPI = new System.Windows.Forms.TextBox();
-            this.Dgv_verBeneficios = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             this.Gpb_datosEmpleado.SuspendLayout();
-            this.Gpb_datosPersonales.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_verBeneficios)).BeginInit();
+            this.Gpb_datosPersonales.SuspendLayout();
             this.SuspendLayout();
             // 
             // Gpb_datosEmpleado
             // 
             this.Gpb_datosEmpleado.BackColor = System.Drawing.Color.Transparent;
+            this.Gpb_datosEmpleado.Controls.Add(this.button1);
             this.Gpb_datosEmpleado.Controls.Add(this.Dgv_verBeneficios);
             this.Gpb_datosEmpleado.Controls.Add(this.Lbl_buscar);
             this.Gpb_datosEmpleado.Controls.Add(this.Btn_buscar);
@@ -67,6 +70,14 @@
             this.Gpb_datosEmpleado.TabIndex = 1;
             this.Gpb_datosEmpleado.TabStop = false;
             this.Gpb_datosEmpleado.Text = "Solicitud de membresía";
+            // 
+            // Dgv_verBeneficios
+            // 
+            this.Dgv_verBeneficios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Dgv_verBeneficios.Location = new System.Drawing.Point(26, 269);
+            this.Dgv_verBeneficios.Name = "Dgv_verBeneficios";
+            this.Dgv_verBeneficios.Size = new System.Drawing.Size(684, 171);
+            this.Dgv_verBeneficios.TabIndex = 35;
             // 
             // Lbl_buscar
             // 
@@ -246,13 +257,15 @@
             this.Txt_DPI.Size = new System.Drawing.Size(197, 26);
             this.Txt_DPI.TabIndex = 28;
             // 
-            // Dgv_verBeneficios
+            // button1
             // 
-            this.Dgv_verBeneficios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Dgv_verBeneficios.Location = new System.Drawing.Point(26, 269);
-            this.Dgv_verBeneficios.Name = "Dgv_verBeneficios";
-            this.Dgv_verBeneficios.Size = new System.Drawing.Size(684, 171);
-            this.Dgv_verBeneficios.TabIndex = 35;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(677, 23);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(53, 44);
+            this.button1.TabIndex = 16;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // Membresias
             // 
@@ -266,9 +279,9 @@
             this.Name = "Membresias";
             this.Gpb_datosEmpleado.ResumeLayout(false);
             this.Gpb_datosEmpleado.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_verBeneficios)).EndInit();
             this.Gpb_datosPersonales.ResumeLayout(false);
             this.Gpb_datosPersonales.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Dgv_verBeneficios)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -292,5 +305,6 @@
         private System.Windows.Forms.Button Btn_Beneficios;
         private System.Windows.Forms.Label Lbl_beneficios;
         private System.Windows.Forms.DataGridView Dgv_verBeneficios;
+        private System.Windows.Forms.Button button1;
     }
 }

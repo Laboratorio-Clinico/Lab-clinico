@@ -33,19 +33,25 @@
             this.Lbl_editar = new System.Windows.Forms.Label();
             this.Lbl_ingreseResultados = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Btn_BuscarExamen = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Btn_guardarResultado = new System.Windows.Forms.Button();
             this.Lbl_ingresarr = new System.Windows.Forms.Label();
+            this.Btn_imprimirResultado = new System.Windows.Forms.Button();
             this.Lbl_imprimirr = new System.Windows.Forms.Label();
             this.Txt_resultadox = new System.Windows.Forms.TextBox();
             this.Lbl_resultado = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.Dtp_fechar = new System.Windows.Forms.DateTimePicker();
             this.Txt_codEx = new System.Windows.Forms.TextBox();
             this.Lbl_codigor = new System.Windows.Forms.Label();
+            this.Dtp_fechar = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.Txt_nombrex = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.Lbl_examenRealizado = new System.Windows.Forms.Label();
             this.Gpb_datosf = new System.Windows.Forms.GroupBox();
+            this.Btn_busc = new System.Windows.Forms.Button();
             this.Txt_direccionr = new System.Windows.Forms.TextBox();
             this.Lbl_fechaf = new System.Windows.Forms.Label();
             this.Txt_dpir = new System.Windows.Forms.TextBox();
@@ -56,12 +62,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.Btn_eliminarResultado = new System.Windows.Forms.Button();
             this.Btn_editarResultado = new System.Windows.Forms.Button();
-            this.Btn_guardarResultado = new System.Windows.Forms.Button();
-            this.Btn_imprimirResultado = new System.Windows.Forms.Button();
-            this.Btn_busc = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.Btn_BuscarExamen = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.Gpb_datosf.SuspendLayout();
             this.SuspendLayout();
@@ -105,6 +106,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.Btn_BuscarExamen);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label2);
@@ -131,6 +133,50 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Evaluación";
             // 
+            // Btn_BuscarExamen
+            // 
+            this.Btn_BuscarExamen.BackColor = System.Drawing.Color.White;
+            this.Btn_BuscarExamen.BackgroundImage = global::LaboratorioClinico.Properties.Resources.codigobarra;
+            this.Btn_BuscarExamen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_BuscarExamen.Location = new System.Drawing.Point(340, 29);
+            this.Btn_BuscarExamen.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_BuscarExamen.Name = "Btn_BuscarExamen";
+            this.Btn_BuscarExamen.Size = new System.Drawing.Size(41, 38);
+            this.Btn_BuscarExamen.TabIndex = 111;
+            this.Btn_BuscarExamen.UseVisualStyleBackColor = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(190, 209);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(366, 20);
+            this.textBox1.TabIndex = 110;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(46, 211);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(51, 18);
+            this.label2.TabIndex = 109;
+            this.label2.Text = "Correo";
+            // 
+            // Btn_guardarResultado
+            // 
+            this.Btn_guardarResultado.BackgroundImage = global::LaboratorioClinico.Properties.Resources.guardar;
+            this.Btn_guardarResultado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_guardarResultado.Location = new System.Drawing.Point(586, 220);
+            this.Btn_guardarResultado.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_guardarResultado.Name = "Btn_guardarResultado";
+            this.Btn_guardarResultado.Size = new System.Drawing.Size(53, 44);
+            this.Btn_guardarResultado.TabIndex = 107;
+            this.Btn_guardarResultado.UseVisualStyleBackColor = true;
+            // 
             // Lbl_ingresarr
             // 
             this.Lbl_ingresarr.AutoSize = true;
@@ -141,6 +187,16 @@
             this.Lbl_ingresarr.Size = new System.Drawing.Size(43, 15);
             this.Lbl_ingresarr.TabIndex = 108;
             this.Lbl_ingresarr.Text = "Ingresar";
+            // 
+            // Btn_imprimirResultado
+            // 
+            this.Btn_imprimirResultado.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Btn_imprimirResultado.BackgroundImage")));
+            this.Btn_imprimirResultado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_imprimirResultado.Location = new System.Drawing.Point(646, 220);
+            this.Btn_imprimirResultado.Name = "Btn_imprimirResultado";
+            this.Btn_imprimirResultado.Size = new System.Drawing.Size(53, 44);
+            this.Btn_imprimirResultado.TabIndex = 105;
+            this.Btn_imprimirResultado.UseVisualStyleBackColor = true;
             // 
             // Lbl_imprimirr
             // 
@@ -187,16 +243,6 @@
             this.label1.TabIndex = 102;
             this.label1.Text = "Emisión exámen";
             // 
-            // Dtp_fechar
-            // 
-            this.Dtp_fechar.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.Dtp_fechar.CustomFormat = "dd-MM-yy";
-            this.Dtp_fechar.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Dtp_fechar.Location = new System.Drawing.Point(517, 35);
-            this.Dtp_fechar.Name = "Dtp_fechar";
-            this.Dtp_fechar.Size = new System.Drawing.Size(144, 29);
-            this.Dtp_fechar.TabIndex = 22;
-            // 
             // Txt_codEx
             // 
             this.Txt_codEx.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -218,6 +264,16 @@
             this.Lbl_codigor.Size = new System.Drawing.Size(100, 18);
             this.Lbl_codigor.TabIndex = 100;
             this.Lbl_codigor.Text = "Código exámen";
+            // 
+            // Dtp_fechar
+            // 
+            this.Dtp_fechar.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Dtp_fechar.CustomFormat = "dd-MM-yy";
+            this.Dtp_fechar.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.Dtp_fechar.Location = new System.Drawing.Point(517, 35);
+            this.Dtp_fechar.Name = "Dtp_fechar";
+            this.Dtp_fechar.Size = new System.Drawing.Size(144, 29);
+            this.Dtp_fechar.TabIndex = 22;
             // 
             // label3
             // 
@@ -282,6 +338,19 @@
             this.Gpb_datosf.TabIndex = 127;
             this.Gpb_datosf.TabStop = false;
             this.Gpb_datosf.Text = "Datos Paciente";
+            // 
+            // Btn_busc
+            // 
+            this.Btn_busc.BackColor = System.Drawing.Color.White;
+            this.Btn_busc.BackgroundImage = global::LaboratorioClinico.Properties.Resources.lupa;
+            this.Btn_busc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_busc.Location = new System.Drawing.Point(250, 51);
+            this.Btn_busc.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_busc.Name = "Btn_busc";
+            this.Btn_busc.Size = new System.Drawing.Size(41, 38);
+            this.Btn_busc.TabIndex = 51;
+            this.Btn_busc.UseVisualStyleBackColor = false;
+            this.Btn_busc.Click += new System.EventHandler(this.Btn_busc_Click);
             // 
             // Txt_direccionr
             // 
@@ -386,72 +455,15 @@
             this.Btn_editarResultado.TabIndex = 130;
             this.Btn_editarResultado.UseVisualStyleBackColor = false;
             // 
-            // Btn_guardarResultado
+            // button1
             // 
-            this.Btn_guardarResultado.BackgroundImage = global::LaboratorioClinico.Properties.Resources.guardar;
-            this.Btn_guardarResultado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Btn_guardarResultado.Location = new System.Drawing.Point(586, 220);
-            this.Btn_guardarResultado.Margin = new System.Windows.Forms.Padding(4);
-            this.Btn_guardarResultado.Name = "Btn_guardarResultado";
-            this.Btn_guardarResultado.Size = new System.Drawing.Size(53, 44);
-            this.Btn_guardarResultado.TabIndex = 107;
-            this.Btn_guardarResultado.UseVisualStyleBackColor = true;
-            // 
-            // Btn_imprimirResultado
-            // 
-            this.Btn_imprimirResultado.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Btn_imprimirResultado.BackgroundImage")));
-            this.Btn_imprimirResultado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Btn_imprimirResultado.Location = new System.Drawing.Point(646, 220);
-            this.Btn_imprimirResultado.Name = "Btn_imprimirResultado";
-            this.Btn_imprimirResultado.Size = new System.Drawing.Size(53, 44);
-            this.Btn_imprimirResultado.TabIndex = 105;
-            this.Btn_imprimirResultado.UseVisualStyleBackColor = true;
-            // 
-            // Btn_busc
-            // 
-            this.Btn_busc.BackColor = System.Drawing.Color.White;
-            this.Btn_busc.BackgroundImage = global::LaboratorioClinico.Properties.Resources.lupa;
-            this.Btn_busc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Btn_busc.Location = new System.Drawing.Point(250, 51);
-            this.Btn_busc.Margin = new System.Windows.Forms.Padding(4);
-            this.Btn_busc.Name = "Btn_busc";
-            this.Btn_busc.Size = new System.Drawing.Size(41, 38);
-            this.Btn_busc.TabIndex = 51;
-            this.Btn_busc.UseVisualStyleBackColor = false;
-            this.Btn_busc.Click += new System.EventHandler(this.Btn_busc_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(46, 211);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 18);
-            this.label2.TabIndex = 109;
-            this.label2.Text = "Correo";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(190, 209);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(366, 20);
-            this.textBox1.TabIndex = 110;
-            // 
-            // Btn_BuscarExamen
-            // 
-            this.Btn_BuscarExamen.BackColor = System.Drawing.Color.White;
-            this.Btn_BuscarExamen.BackgroundImage = global::LaboratorioClinico.Properties.Resources.codigobarra;
-            this.Btn_BuscarExamen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Btn_BuscarExamen.Location = new System.Drawing.Point(340, 29);
-            this.Btn_BuscarExamen.Margin = new System.Windows.Forms.Padding(4);
-            this.Btn_BuscarExamen.Name = "Btn_BuscarExamen";
-            this.Btn_BuscarExamen.Size = new System.Drawing.Size(41, 38);
-            this.Btn_BuscarExamen.TabIndex = 111;
-            this.Btn_BuscarExamen.UseVisualStyleBackColor = false;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(6, 240);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(53, 44);
+            this.button1.TabIndex = 134;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // ingresoResultado
             // 
@@ -514,5 +526,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button Btn_BuscarExamen;
+        private System.Windows.Forms.Button button1;
     }
 }
