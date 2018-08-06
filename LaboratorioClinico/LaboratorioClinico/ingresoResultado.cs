@@ -22,11 +22,11 @@ namespace LaboratorioClinico
         public void tipoCorreo()
         {
 
-         
+         /*
             try
             {
-                Cmb_correo.Items.Clear();
-                Cmb_correo.Text = "Seleccione forma pago";
+                textbox.Items.Clear();
+                textbox.Text = "Seleccione forma pago";
                 conexion.ObtenerConexion();
                 OdbcCommand comando = new OdbcCommand("Select iIdCorreo,sCorreo from correo", conexion.ObtenerConexion());
                 OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
@@ -34,14 +34,14 @@ namespace LaboratorioClinico
 
                 adaptador.Fill(tabla);
 
-                Cmb_correo.ValueMember = "iIdCorreo";
-                Cmb_correo.DisplayMember = "sCorreo";
-                Cmb_correo.DataSource = tabla;
+                textbox.ValueMember = "iIdCorreo";
+                textbox.DisplayMember = "sCorreo";
+                textbox.DataSource = tabla;
 
                 conexion.ObtenerConexion().Close();
 
             }
-            catch (OdbcException error) { MessageBox.Show(error.Message); }
+            catch (OdbcException error) { MessageBox.Show(error.Message); }*/
         }
         private void Btn_busc_Click(object sender, EventArgs e)
         {
@@ -95,10 +95,10 @@ namespace LaboratorioClinico
         }
 
         private void Btn_guardarResultado_Click(object sender, EventArgs e)
-        {
+        { /*
             try
             {
-                int iIdCorreo = Convert.ToInt32(Cmb_correo.SelectedValue);
+                int iIdCorreo = Convert.ToInt32(textbox.SelectedValue);
 
 
                 OdbcCommand comando = new OdbcCommand("{CALL InsertaResultados(?,?,?,?,?,?)}", conexion.ObtenerConexion());
@@ -116,7 +116,7 @@ namespace LaboratorioClinico
             }
             catch (Exception error) { MessageBox.Show("Error" + error); }
             finally
-            { conexion.ObtenerConexion().Close(); }
+            { conexion.ObtenerConexion().Close(); }*/
         }
 
         private void Btn_imprimirResultado_Click(object sender, EventArgs e)
@@ -150,6 +150,11 @@ namespace LaboratorioClinico
             {
                 MessageBox.Show("No se pudo modificar el registro.", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
             }*/
+        }
+
+        private void textbox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

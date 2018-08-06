@@ -33,8 +33,9 @@
             this.Lbl_editar = new System.Windows.Forms.Label();
             this.Lbl_ingreseResultados = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.Btn_BuscarExamen = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textbox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.Btn_guardarResultado = new System.Windows.Forms.Button();
             this.Lbl_ingresarr = new System.Windows.Forms.Label();
@@ -62,7 +63,6 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.Btn_eliminarResultado = new System.Windows.Forms.Button();
             this.Btn_editarResultado = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.Gpb_datosf.SuspendLayout();
             this.SuspendLayout();
@@ -108,7 +108,7 @@
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.Btn_BuscarExamen);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.textbox);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.Btn_guardarResultado);
             this.groupBox1.Controls.Add(this.Lbl_ingresarr);
@@ -133,6 +133,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Evaluación";
             // 
+            // button1
+            // 
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(6, 240);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(53, 44);
+            this.button1.TabIndex = 134;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Btn_BuscarExamen
             // 
             this.Btn_BuscarExamen.BackColor = System.Drawing.Color.White;
@@ -145,14 +155,15 @@
             this.Btn_BuscarExamen.TabIndex = 111;
             this.Btn_BuscarExamen.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // textbox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(190, 209);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(366, 20);
-            this.textBox1.TabIndex = 110;
+            this.textbox.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textbox.Location = new System.Drawing.Point(190, 209);
+            this.textbox.Multiline = true;
+            this.textbox.Name = "textbox";
+            this.textbox.Size = new System.Drawing.Size(366, 20);
+            this.textbox.TabIndex = 110;
+            this.textbox.TextChanged += new System.EventHandler(this.textbox_TextChanged);
             // 
             // label2
             // 
@@ -455,16 +466,6 @@
             this.Btn_editarResultado.TabIndex = 130;
             this.Btn_editarResultado.UseVisualStyleBackColor = false;
             // 
-            // button1
-            // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(6, 240);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(53, 44);
-            this.button1.TabIndex = 134;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // ingresoResultado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -523,7 +524,7 @@
         private System.Windows.Forms.Label Lbl_nitf;
         private System.Windows.Forms.Label Lbl_nombref;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textbox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button Btn_BuscarExamen;
         private System.Windows.Forms.Button button1;
