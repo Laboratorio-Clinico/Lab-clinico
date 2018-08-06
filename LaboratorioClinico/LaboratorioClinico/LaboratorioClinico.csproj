@@ -71,6 +71,12 @@
     <Compile Include="ConfigUser.Designer.cs">
       <DependentUpon>ConfigUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Constancia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Constancia.Designer.cs">
+      <DependentUpon>Constancia.cs</DependentUpon>
+    </Compile>
     <Compile Include="cotizar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +204,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConfigUser.resx">
       <DependentUpon>ConfigUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Constancia.resx">
+      <DependentUpon>Constancia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="cotizar.resx">
       <DependentUpon>cotizar.cs</DependentUpon>

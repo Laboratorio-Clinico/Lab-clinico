@@ -290,7 +290,7 @@
             this.Gpb_datosf.Controls.Add(this.textBox2);
             this.Gpb_datosf.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Gpb_datosf.ForeColor = System.Drawing.SystemColors.Info;
-            this.Gpb_datosf.Location = new System.Drawing.Point(15, 69);
+            this.Gpb_datosf.Location = new System.Drawing.Point(15, 62);
             this.Gpb_datosf.Name = "Gpb_datosf";
             this.Gpb_datosf.Size = new System.Drawing.Size(736, 95);
             this.Gpb_datosf.TabIndex = 127;
@@ -473,6 +473,7 @@
             this.Controls.Add(this.Gpb_datosf);
             this.Controls.Add(this.groupBox2);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "ingresoResultado";
             this.Text = "ingresoResultado";
             this.groupBox1.ResumeLayout(false);
