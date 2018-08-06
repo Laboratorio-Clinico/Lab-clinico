@@ -61,6 +61,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.button1 = new System.Windows.Forms.Button();
             this.Gpb_cotizacion.SuspendLayout();
             this.Gpb_botones.SuspendLayout();
             this.Gpb_verDatos.SuspendLayout();
@@ -70,6 +71,7 @@
             // Gpb_cotizacion
             // 
             this.Gpb_cotizacion.BackColor = System.Drawing.Color.Transparent;
+            this.Gpb_cotizacion.Controls.Add(this.button1);
             this.Gpb_cotizacion.Controls.Add(this.label1);
             this.Gpb_cotizacion.Controls.Add(this.Txt_Cantidad);
             this.Gpb_cotizacion.Controls.Add(this.Cmb_doctor);
@@ -430,6 +432,16 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
+            // button1
+            // 
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(683, 19);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(53, 44);
+            this.button1.TabIndex = 35;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // cotizar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -489,5 +501,6 @@
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button Btn_agregar;
+        private System.Windows.Forms.Button button1;
     }
 }

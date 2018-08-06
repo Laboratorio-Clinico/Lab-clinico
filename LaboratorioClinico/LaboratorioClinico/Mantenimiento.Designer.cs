@@ -32,6 +32,27 @@
             this.Lbl_tabla = new System.Windows.Forms.Label();
             this.Cmb_tabla = new System.Windows.Forms.ComboBox();
             this.Gpb_mantenimiento = new System.Windows.Forms.GroupBox();
+            this.Tbc_mem = new System.Windows.Forms.TabControl();
+            this.tabPage9 = new System.Windows.Forms.TabPage();
+            this.Lbl_editarMembm = new System.Windows.Forms.Label();
+            this.Btn_buscarMembm = new System.Windows.Forms.Button();
+            this.Txt_dpiMembm = new System.Windows.Forms.TextBox();
+            this.Lbl_dpiMembm = new System.Windows.Forms.Label();
+            this.Btn_editarMembm = new System.Windows.Forms.Button();
+            this.Gpb_datosMembm = new System.Windows.Forms.GroupBox();
+            this.tabPage10 = new System.Windows.Forms.TabPage();
+            this.label19 = new System.Windows.Forms.Label();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.Cmb_membresia = new System.Windows.Forms.ComboBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.button8 = new System.Windows.Forms.Button();
+            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.button9 = new System.Windows.Forms.Button();
             this.Tbc_empleado = new System.Windows.Forms.TabControl();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.Lbl_editarEmpm = new System.Windows.Forms.Label();
@@ -140,31 +161,6 @@
             this.Btn_eliminarm = new System.Windows.Forms.Button();
             this.Picb_fondo = new System.Windows.Forms.PictureBox();
             this.Tbc_paciente = new System.Windows.Forms.TabControl();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.Btn_eliminarp = new System.Windows.Forms.Button();
-            this.Txt_expedientep = new System.Windows.Forms.TextBox();
-            this.Btn_buscar = new System.Windows.Forms.Button();
-            this.Lbl_expedientep = new System.Windows.Forms.Label();
-            this.Lbl_eliminarp = new System.Windows.Forms.Label();
-            this.Pnl_eliminarP = new System.Windows.Forms.Panel();
-            this.Cmb_tipoSangrep = new System.Windows.Forms.ComboBox();
-            this.Txt_nombrep = new System.Windows.Forms.TextBox();
-            this.Txt_alergiasp = new System.Windows.Forms.TextBox();
-            this.Lbl_nombrep = new System.Windows.Forms.Label();
-            this.Txt_correoP = new System.Windows.Forms.TextBox();
-            this.Cmb_sexop = new System.Windows.Forms.ComboBox();
-            this.Lbl_correop = new System.Windows.Forms.Label();
-            this.Txt_refierep = new System.Windows.Forms.TextBox();
-            this.Lbl_alergiasp = new System.Windows.Forms.Label();
-            this.Txt_direccionp = new System.Windows.Forms.TextBox();
-            this.Lbl_tipoSangrep = new System.Windows.Forms.Label();
-            this.Txt_nitp = new System.Windows.Forms.TextBox();
-            this.Txt_telefonop = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.Lbl_telefonop = new System.Windows.Forms.Label();
-            this.Lbl_nitp = new System.Windows.Forms.Label();
-            this.Lbl_direccionp = new System.Windows.Forms.Label();
-            this.Lbl_refierep = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.Btn_editarp = new System.Windows.Forms.Button();
             this.Txt_expe = new System.Windows.Forms.TextBox();
@@ -194,7 +190,60 @@
             this.Lbl_tipoSangre = new System.Windows.Forms.Label();
             this.Cmb_tipoSangre = new System.Windows.Forms.ComboBox();
             this.Lbl_editarSangrep = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.Btn_eliminarp = new System.Windows.Forms.Button();
+            this.Txt_expedientep = new System.Windows.Forms.TextBox();
+            this.Btn_buscar = new System.Windows.Forms.Button();
+            this.Lbl_expedientep = new System.Windows.Forms.Label();
+            this.Lbl_eliminarp = new System.Windows.Forms.Label();
+            this.Pnl_eliminarP = new System.Windows.Forms.Panel();
+            this.Cmb_tipoSangrep = new System.Windows.Forms.ComboBox();
+            this.Txt_nombrep = new System.Windows.Forms.TextBox();
+            this.Txt_alergiasp = new System.Windows.Forms.TextBox();
+            this.Lbl_nombrep = new System.Windows.Forms.Label();
+            this.Txt_correoP = new System.Windows.Forms.TextBox();
+            this.Cmb_sexop = new System.Windows.Forms.ComboBox();
+            this.Lbl_correop = new System.Windows.Forms.Label();
+            this.Txt_refierep = new System.Windows.Forms.TextBox();
+            this.Lbl_alergiasp = new System.Windows.Forms.Label();
+            this.Txt_direccionp = new System.Windows.Forms.TextBox();
+            this.Lbl_tipoSangrep = new System.Windows.Forms.Label();
+            this.Txt_nitp = new System.Windows.Forms.TextBox();
+            this.Txt_telefonop = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.Lbl_telefonop = new System.Windows.Forms.Label();
+            this.Lbl_nitp = new System.Windows.Forms.Label();
+            this.Lbl_direccionp = new System.Windows.Forms.Label();
+            this.Lbl_refierep = new System.Windows.Forms.Label();
+            this.Tbc_membresia = new System.Windows.Forms.TabControl();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.label16 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
+            this.Txt_nitMembm = new System.Windows.Forms.TextBox();
+            this.Lbl_nitMembm = new System.Windows.Forms.Label();
+            this.Txt_nombreMembm = new System.Windows.Forms.TextBox();
+            this.Lbl_nombreMembm = new System.Windows.Forms.Label();
+            this.Lbl_actualMembm = new System.Windows.Forms.Label();
+            this.Cmb_nuevaMembm = new System.Windows.Forms.ComboBox();
+            this.Lbl_nuevaMembm = new System.Windows.Forms.Label();
+            this.Txt_actualMembm = new System.Windows.Forms.TextBox();
             this.Gpb_mantenimiento.SuspendLayout();
+            this.Tbc_mem.SuspendLayout();
+            this.tabPage9.SuspendLayout();
+            this.Gpb_datosMembm.SuspendLayout();
+            this.tabPage10.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             this.Tbc_empleado.SuspendLayout();
             this.tabPage7.SuspendLayout();
             this.Gpb_datosEmpm.SuspendLayout();
@@ -210,11 +259,14 @@
             this.Gpb_datosEliminar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Picb_fondo)).BeginInit();
             this.Tbc_paciente.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.Pnl_eliminarP.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.Pnl_modificarP.SuspendLayout();
             this.Gpb_sangrep.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.Pnl_eliminarP.SuspendLayout();
+            this.Tbc_membresia.SuspendLayout();
+            this.tabPage5.SuspendLayout();
+            this.tabPage6.SuspendLayout();
             this.SuspendLayout();
             // 
             // Lbl_tabla
@@ -238,7 +290,8 @@
             this.Cmb_tabla.Items.AddRange(new object[] {
             "Paciente",
             "Médico Asociado",
-            "Empleado"});
+            "Empleado",
+            "Membresia"});
             this.Cmb_tabla.Location = new System.Drawing.Point(454, 35);
             this.Cmb_tabla.Margin = new System.Windows.Forms.Padding(4);
             this.Cmb_tabla.Name = "Cmb_tabla";
@@ -252,6 +305,7 @@
             this.Gpb_mantenimiento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Gpb_mantenimiento.Controls.Add(this.Lbl_tabla);
             this.Gpb_mantenimiento.Controls.Add(this.Cmb_tabla);
+            this.Gpb_mantenimiento.Controls.Add(this.Tbc_mem);
             this.Gpb_mantenimiento.Controls.Add(this.Tbc_empleado);
             this.Gpb_mantenimiento.Controls.Add(this.Tbc_medicos);
             this.Gpb_mantenimiento.Controls.Add(this.Picb_fondo);
@@ -266,12 +320,283 @@
             this.Gpb_mantenimiento.Text = "Mantenimiento";
             this.Gpb_mantenimiento.Enter += new System.EventHandler(this.Gpb_mantenimiento_Enter);
             // 
+            // Tbc_mem
+            // 
+            this.Tbc_mem.Controls.Add(this.tabPage9);
+            this.Tbc_mem.Controls.Add(this.tabPage10);
+            this.Tbc_mem.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tbc_mem.Location = new System.Drawing.Point(16, 88);
+            this.Tbc_mem.Margin = new System.Windows.Forms.Padding(4);
+            this.Tbc_mem.Name = "Tbc_mem";
+            this.Tbc_mem.SelectedIndex = 0;
+            this.Tbc_mem.Size = new System.Drawing.Size(708, 363);
+            this.Tbc_mem.TabIndex = 6;
+            this.Tbc_mem.Visible = false;
+            // 
+            // tabPage9
+            // 
+            this.tabPage9.Controls.Add(this.Lbl_editarMembm);
+            this.tabPage9.Controls.Add(this.Btn_buscarMembm);
+            this.tabPage9.Controls.Add(this.Txt_dpiMembm);
+            this.tabPage9.Controls.Add(this.Lbl_dpiMembm);
+            this.tabPage9.Controls.Add(this.Btn_editarMembm);
+            this.tabPage9.Controls.Add(this.Gpb_datosMembm);
+            this.tabPage9.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPage9.Location = new System.Drawing.Point(4, 31);
+            this.tabPage9.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage9.Name = "tabPage9";
+            this.tabPage9.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage9.Size = new System.Drawing.Size(700, 328);
+            this.tabPage9.TabIndex = 0;
+            this.tabPage9.Text = "Modificar";
+            this.tabPage9.UseVisualStyleBackColor = true;
+            // 
+            // Lbl_editarMembm
+            // 
+            this.Lbl_editarMembm.AutoSize = true;
+            this.Lbl_editarMembm.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_editarMembm.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.Lbl_editarMembm.Location = new System.Drawing.Point(553, 62);
+            this.Lbl_editarMembm.Name = "Lbl_editarMembm";
+            this.Lbl_editarMembm.Size = new System.Drawing.Size(131, 17);
+            this.Lbl_editarMembm.TabIndex = 131;
+            this.Lbl_editarMembm.Text = "Cambiar de membresía";
+            // 
+            // Btn_buscarMembm
+            // 
+            this.Btn_buscarMembm.BackColor = System.Drawing.Color.Transparent;
+            this.Btn_buscarMembm.BackgroundImage = global::LaboratorioClinico.Properties.Resources.file;
+            this.Btn_buscarMembm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_buscarMembm.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_buscarMembm.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Btn_buscarMembm.Location = new System.Drawing.Point(200, 16);
+            this.Btn_buscarMembm.Name = "Btn_buscarMembm";
+            this.Btn_buscarMembm.Size = new System.Drawing.Size(53, 44);
+            this.Btn_buscarMembm.TabIndex = 126;
+            this.Btn_buscarMembm.UseVisualStyleBackColor = false;
+            this.Btn_buscarMembm.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // Txt_dpiMembm
+            // 
+            this.Txt_dpiMembm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_dpiMembm.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_dpiMembm.ForeColor = System.Drawing.Color.Black;
+            this.Txt_dpiMembm.Location = new System.Drawing.Point(64, 26);
+            this.Txt_dpiMembm.Margin = new System.Windows.Forms.Padding(4);
+            this.Txt_dpiMembm.Name = "Txt_dpiMembm";
+            this.Txt_dpiMembm.Size = new System.Drawing.Size(127, 26);
+            this.Txt_dpiMembm.TabIndex = 28;
+            this.Txt_dpiMembm.TextChanged += new System.EventHandler(this.Txt_dpiMembm_TextChanged);
+            // 
+            // Lbl_dpiMembm
+            // 
+            this.Lbl_dpiMembm.AutoSize = true;
+            this.Lbl_dpiMembm.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_dpiMembm.ForeColor = System.Drawing.Color.Black;
+            this.Lbl_dpiMembm.Location = new System.Drawing.Point(28, 29);
+            this.Lbl_dpiMembm.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_dpiMembm.Name = "Lbl_dpiMembm";
+            this.Lbl_dpiMembm.Size = new System.Drawing.Size(31, 18);
+            this.Lbl_dpiMembm.TabIndex = 29;
+            this.Lbl_dpiMembm.Text = "DPI";
+            // 
+            // Btn_editarMembm
+            // 
+            this.Btn_editarMembm.BackgroundImage = global::LaboratorioClinico.Properties.Resources.tarjeta_de_credito;
+            this.Btn_editarMembm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_editarMembm.Location = new System.Drawing.Point(591, 19);
+            this.Btn_editarMembm.Name = "Btn_editarMembm";
+            this.Btn_editarMembm.Size = new System.Drawing.Size(53, 44);
+            this.Btn_editarMembm.TabIndex = 95;
+            this.Btn_editarMembm.UseVisualStyleBackColor = true;
+            this.Btn_editarMembm.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // Gpb_datosMembm
+            // 
+            this.Gpb_datosMembm.Controls.Add(this.Txt_actualMembm);
+            this.Gpb_datosMembm.Controls.Add(this.Cmb_nuevaMembm);
+            this.Gpb_datosMembm.Controls.Add(this.Lbl_nuevaMembm);
+            this.Gpb_datosMembm.Controls.Add(this.Txt_nitMembm);
+            this.Gpb_datosMembm.Controls.Add(this.Lbl_nitMembm);
+            this.Gpb_datosMembm.Controls.Add(this.Txt_nombreMembm);
+            this.Gpb_datosMembm.Controls.Add(this.Lbl_nombreMembm);
+            this.Gpb_datosMembm.Controls.Add(this.Lbl_actualMembm);
+            this.Gpb_datosMembm.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Gpb_datosMembm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.Gpb_datosMembm.Location = new System.Drawing.Point(30, 73);
+            this.Gpb_datosMembm.Name = "Gpb_datosMembm";
+            this.Gpb_datosMembm.Size = new System.Drawing.Size(651, 239);
+            this.Gpb_datosMembm.TabIndex = 118;
+            this.Gpb_datosMembm.TabStop = false;
+            this.Gpb_datosMembm.Text = "Datos Personales";
+            this.Gpb_datosMembm.Visible = false;
+            // 
+            // tabPage10
+            // 
+            this.tabPage10.Controls.Add(this.label19);
+            this.tabPage10.Controls.Add(this.groupBox6);
+            this.tabPage10.Controls.Add(this.button8);
+            this.tabPage10.Controls.Add(this.textBox18);
+            this.tabPage10.Controls.Add(this.label29);
+            this.tabPage10.Controls.Add(this.button9);
+            this.tabPage10.Location = new System.Drawing.Point(4, 31);
+            this.tabPage10.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage10.Name = "tabPage10";
+            this.tabPage10.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage10.Size = new System.Drawing.Size(700, 328);
+            this.tabPage10.TabIndex = 1;
+            this.tabPage10.Text = "Eliminar";
+            this.tabPage10.UseVisualStyleBackColor = true;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label19.Location = new System.Drawing.Point(561, 62);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(117, 17);
+            this.label19.TabIndex = 133;
+            this.label19.Text = "Cancelar membresía";
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.Cmb_membresia);
+            this.groupBox6.Controls.Add(this.textBox4);
+            this.groupBox6.Controls.Add(this.label9);
+            this.groupBox6.Controls.Add(this.textBox3);
+            this.groupBox6.Controls.Add(this.label8);
+            this.groupBox6.Controls.Add(this.label10);
+            this.groupBox6.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.groupBox6.Location = new System.Drawing.Point(30, 73);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(651, 235);
+            this.groupBox6.TabIndex = 134;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Datos Personales";
+            this.groupBox6.Visible = false;
+            // 
+            // Cmb_membresia
+            // 
+            this.Cmb_membresia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Cmb_membresia.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cmb_membresia.FormattingEnabled = true;
+            this.Cmb_membresia.Location = new System.Drawing.Point(48, 102);
+            this.Cmb_membresia.Name = "Cmb_membresia";
+            this.Cmb_membresia.Size = new System.Drawing.Size(197, 26);
+            this.Cmb_membresia.TabIndex = 133;
+            // 
+            // textBox4
+            // 
+            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.textBox4.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.ForeColor = System.Drawing.Color.Black;
+            this.textBox4.Location = new System.Drawing.Point(361, 54);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(136, 26);
+            this.textBox4.TabIndex = 131;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(347, 36);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(32, 18);
+            this.label9.TabIndex = 132;
+            this.label9.Text = "NIT";
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.textBox3.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.ForeColor = System.Drawing.Color.Black;
+            this.textBox3.Location = new System.Drawing.Point(48, 54);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(291, 26);
+            this.textBox3.TabIndex = 129;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(35, 37);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(58, 18);
+            this.label8.TabIndex = 130;
+            this.label8.Text = "Nombre";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(35, 86);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(74, 18);
+            this.label10.TabIndex = 134;
+            this.label10.Text = "Membresía";
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.Transparent;
+            this.button8.BackgroundImage = global::LaboratorioClinico.Properties.Resources.file;
+            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button8.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button8.Location = new System.Drawing.Point(200, 16);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(53, 44);
+            this.button8.TabIndex = 132;
+            this.button8.UseVisualStyleBackColor = false;
+            // 
+            // textBox18
+            // 
+            this.textBox18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.textBox18.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox18.ForeColor = System.Drawing.Color.Black;
+            this.textBox18.Location = new System.Drawing.Point(64, 26);
+            this.textBox18.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox18.Name = "textBox18";
+            this.textBox18.Size = new System.Drawing.Size(127, 26);
+            this.textBox18.TabIndex = 127;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.ForeColor = System.Drawing.Color.Black;
+            this.label29.Location = new System.Drawing.Point(28, 29);
+            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(31, 18);
+            this.label29.TabIndex = 128;
+            this.label29.Text = "DPI";
+            // 
+            // button9
+            // 
+            this.button9.BackgroundImage = global::LaboratorioClinico.Properties.Resources.tarjeta_de_credito__1_;
+            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button9.Location = new System.Drawing.Point(591, 19);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(53, 44);
+            this.button9.TabIndex = 129;
+            this.button9.UseVisualStyleBackColor = true;
+            // 
             // Tbc_empleado
             // 
             this.Tbc_empleado.Controls.Add(this.tabPage7);
             this.Tbc_empleado.Controls.Add(this.tabPage8);
             this.Tbc_empleado.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tbc_empleado.Location = new System.Drawing.Point(17, 89);
+            this.Tbc_empleado.Location = new System.Drawing.Point(17, 87);
             this.Tbc_empleado.Margin = new System.Windows.Forms.Padding(4);
             this.Tbc_empleado.Name = "Tbc_empleado";
             this.Tbc_empleado.SelectedIndex = 0;
@@ -1629,297 +1954,6 @@
             this.Tbc_paciente.TabIndex = 0;
             this.Tbc_paciente.Visible = false;
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.Btn_eliminarp);
-            this.tabPage2.Controls.Add(this.Txt_expedientep);
-            this.tabPage2.Controls.Add(this.Btn_buscar);
-            this.tabPage2.Controls.Add(this.Lbl_expedientep);
-            this.tabPage2.Controls.Add(this.Lbl_eliminarp);
-            this.tabPage2.Controls.Add(this.Pnl_eliminarP);
-            this.tabPage2.Location = new System.Drawing.Point(4, 31);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage2.Size = new System.Drawing.Size(700, 319);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Eliminar";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // Btn_eliminarp
-            // 
-            this.Btn_eliminarp.BackgroundImage = global::LaboratorioClinico.Properties.Resources.usuario__1_;
-            this.Btn_eliminarp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Btn_eliminarp.Location = new System.Drawing.Point(608, 25);
-            this.Btn_eliminarp.Name = "Btn_eliminarp";
-            this.Btn_eliminarp.Size = new System.Drawing.Size(53, 44);
-            this.Btn_eliminarp.TabIndex = 72;
-            this.Btn_eliminarp.UseVisualStyleBackColor = true;
-            this.Btn_eliminarp.Click += new System.EventHandler(this.Btn_eliminarp_Click);
-            // 
-            // Txt_expedientep
-            // 
-            this.Txt_expedientep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.Txt_expedientep.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_expedientep.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Txt_expedientep.Location = new System.Drawing.Point(97, 23);
-            this.Txt_expedientep.Name = "Txt_expedientep";
-            this.Txt_expedientep.Size = new System.Drawing.Size(82, 25);
-            this.Txt_expedientep.TabIndex = 78;
-            // 
-            // Btn_buscar
-            // 
-            this.Btn_buscar.BackColor = System.Drawing.Color.Transparent;
-            this.Btn_buscar.BackgroundImage = global::LaboratorioClinico.Properties.Resources.file;
-            this.Btn_buscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Btn_buscar.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_buscar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Btn_buscar.Location = new System.Drawing.Point(194, 12);
-            this.Btn_buscar.Name = "Btn_buscar";
-            this.Btn_buscar.Size = new System.Drawing.Size(53, 44);
-            this.Btn_buscar.TabIndex = 87;
-            this.Btn_buscar.UseVisualStyleBackColor = false;
-            this.Btn_buscar.Click += new System.EventHandler(this.Btn_buscar_Click);
-            // 
-            // Lbl_expedientep
-            // 
-            this.Lbl_expedientep.AutoSize = true;
-            this.Lbl_expedientep.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_expedientep.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Lbl_expedientep.Location = new System.Drawing.Point(12, 25);
-            this.Lbl_expedientep.Name = "Lbl_expedientep";
-            this.Lbl_expedientep.Size = new System.Drawing.Size(79, 18);
-            this.Lbl_expedientep.TabIndex = 80;
-            this.Lbl_expedientep.Text = "Expediente:";
-            // 
-            // Lbl_eliminarp
-            // 
-            this.Lbl_eliminarp.AutoSize = true;
-            this.Lbl_eliminarp.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_eliminarp.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.Lbl_eliminarp.Location = new System.Drawing.Point(586, 68);
-            this.Lbl_eliminarp.Name = "Lbl_eliminarp";
-            this.Lbl_eliminarp.Size = new System.Drawing.Size(102, 17);
-            this.Lbl_eliminarp.TabIndex = 94;
-            this.Lbl_eliminarp.Text = "Eliminar Paciente";
-            // 
-            // Pnl_eliminarP
-            // 
-            this.Pnl_eliminarP.Controls.Add(this.Cmb_tipoSangrep);
-            this.Pnl_eliminarP.Controls.Add(this.Txt_nombrep);
-            this.Pnl_eliminarP.Controls.Add(this.Txt_alergiasp);
-            this.Pnl_eliminarP.Controls.Add(this.Lbl_nombrep);
-            this.Pnl_eliminarP.Controls.Add(this.Txt_correoP);
-            this.Pnl_eliminarP.Controls.Add(this.Cmb_sexop);
-            this.Pnl_eliminarP.Controls.Add(this.Lbl_correop);
-            this.Pnl_eliminarP.Controls.Add(this.Txt_refierep);
-            this.Pnl_eliminarP.Controls.Add(this.Lbl_alergiasp);
-            this.Pnl_eliminarP.Controls.Add(this.Txt_direccionp);
-            this.Pnl_eliminarP.Controls.Add(this.Lbl_tipoSangrep);
-            this.Pnl_eliminarP.Controls.Add(this.Txt_nitp);
-            this.Pnl_eliminarP.Controls.Add(this.Txt_telefonop);
-            this.Pnl_eliminarP.Controls.Add(this.label3);
-            this.Pnl_eliminarP.Controls.Add(this.Lbl_telefonop);
-            this.Pnl_eliminarP.Controls.Add(this.Lbl_nitp);
-            this.Pnl_eliminarP.Controls.Add(this.Lbl_direccionp);
-            this.Pnl_eliminarP.Controls.Add(this.Lbl_refierep);
-            this.Pnl_eliminarP.Location = new System.Drawing.Point(97, 60);
-            this.Pnl_eliminarP.Name = "Pnl_eliminarP";
-            this.Pnl_eliminarP.Size = new System.Drawing.Size(519, 253);
-            this.Pnl_eliminarP.TabIndex = 95;
-            this.Pnl_eliminarP.Visible = false;
-            // 
-            // Cmb_tipoSangrep
-            // 
-            this.Cmb_tipoSangrep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.Cmb_tipoSangrep.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cmb_tipoSangrep.FormattingEnabled = true;
-            this.Cmb_tipoSangrep.Location = new System.Drawing.Point(310, 69);
-            this.Cmb_tipoSangrep.Name = "Cmb_tipoSangrep";
-            this.Cmb_tipoSangrep.Size = new System.Drawing.Size(180, 25);
-            this.Cmb_tipoSangrep.TabIndex = 94;
-            // 
-            // Txt_nombrep
-            // 
-            this.Txt_nombrep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.Txt_nombrep.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_nombrep.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Txt_nombrep.Location = new System.Drawing.Point(19, 26);
-            this.Txt_nombrep.Name = "Txt_nombrep";
-            this.Txt_nombrep.Size = new System.Drawing.Size(271, 25);
-            this.Txt_nombrep.TabIndex = 73;
-            // 
-            // Txt_alergiasp
-            // 
-            this.Txt_alergiasp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.Txt_alergiasp.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_alergiasp.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Txt_alergiasp.Location = new System.Drawing.Point(19, 198);
-            this.Txt_alergiasp.Multiline = true;
-            this.Txt_alergiasp.Name = "Txt_alergiasp";
-            this.Txt_alergiasp.Size = new System.Drawing.Size(470, 51);
-            this.Txt_alergiasp.TabIndex = 88;
-            // 
-            // Lbl_nombrep
-            // 
-            this.Lbl_nombrep.AutoSize = true;
-            this.Lbl_nombrep.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_nombrep.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Lbl_nombrep.Location = new System.Drawing.Point(16, 11);
-            this.Lbl_nombrep.Name = "Lbl_nombrep";
-            this.Lbl_nombrep.Size = new System.Drawing.Size(138, 18);
-            this.Lbl_nombrep.TabIndex = 81;
-            this.Lbl_nombrep.Text = "Nombre del paciente:";
-            // 
-            // Txt_correoP
-            // 
-            this.Txt_correoP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.Txt_correoP.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_correoP.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Txt_correoP.Location = new System.Drawing.Point(19, 155);
-            this.Txt_correoP.Name = "Txt_correoP";
-            this.Txt_correoP.Size = new System.Drawing.Size(470, 25);
-            this.Txt_correoP.TabIndex = 92;
-            // 
-            // Cmb_sexop
-            // 
-            this.Cmb_sexop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.Cmb_sexop.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cmb_sexop.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Cmb_sexop.FormattingEnabled = true;
-            this.Cmb_sexop.Location = new System.Drawing.Point(309, 26);
-            this.Cmb_sexop.Name = "Cmb_sexop";
-            this.Cmb_sexop.Size = new System.Drawing.Size(57, 25);
-            this.Cmb_sexop.TabIndex = 79;
-            // 
-            // Lbl_correop
-            // 
-            this.Lbl_correop.AutoSize = true;
-            this.Lbl_correop.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_correop.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Lbl_correop.Location = new System.Drawing.Point(19, 140);
-            this.Lbl_correop.Name = "Lbl_correop";
-            this.Lbl_correop.Size = new System.Drawing.Size(56, 18);
-            this.Lbl_correop.TabIndex = 93;
-            this.Lbl_correop.Text = "Correo:";
-            // 
-            // Txt_refierep
-            // 
-            this.Txt_refierep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.Txt_refierep.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_refierep.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Txt_refierep.Location = new System.Drawing.Point(309, 112);
-            this.Txt_refierep.Name = "Txt_refierep";
-            this.Txt_refierep.Size = new System.Drawing.Size(180, 25);
-            this.Txt_refierep.TabIndex = 77;
-            // 
-            // Lbl_alergiasp
-            // 
-            this.Lbl_alergiasp.AutoSize = true;
-            this.Lbl_alergiasp.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_alergiasp.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Lbl_alergiasp.Location = new System.Drawing.Point(19, 183);
-            this.Lbl_alergiasp.Name = "Lbl_alergiasp";
-            this.Lbl_alergiasp.Size = new System.Drawing.Size(57, 18);
-            this.Lbl_alergiasp.TabIndex = 89;
-            this.Lbl_alergiasp.Text = "Alergías";
-            // 
-            // Txt_direccionp
-            // 
-            this.Txt_direccionp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.Txt_direccionp.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_direccionp.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Txt_direccionp.Location = new System.Drawing.Point(19, 112);
-            this.Txt_direccionp.Name = "Txt_direccionp";
-            this.Txt_direccionp.Size = new System.Drawing.Size(271, 25);
-            this.Txt_direccionp.TabIndex = 76;
-            // 
-            // Lbl_tipoSangrep
-            // 
-            this.Lbl_tipoSangrep.AutoSize = true;
-            this.Lbl_tipoSangrep.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_tipoSangrep.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Lbl_tipoSangrep.Location = new System.Drawing.Point(307, 54);
-            this.Lbl_tipoSangrep.Name = "Lbl_tipoSangrep";
-            this.Lbl_tipoSangrep.Size = new System.Drawing.Size(84, 18);
-            this.Lbl_tipoSangrep.TabIndex = 91;
-            this.Lbl_tipoSangrep.Text = "Tipo Sangre:";
-            // 
-            // Txt_nitp
-            // 
-            this.Txt_nitp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.Txt_nitp.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_nitp.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Txt_nitp.Location = new System.Drawing.Point(161, 69);
-            this.Txt_nitp.Name = "Txt_nitp";
-            this.Txt_nitp.Size = new System.Drawing.Size(129, 25);
-            this.Txt_nitp.TabIndex = 75;
-            // 
-            // Txt_telefonop
-            // 
-            this.Txt_telefonop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.Txt_telefonop.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_telefonop.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Txt_telefonop.Location = new System.Drawing.Point(19, 69);
-            this.Txt_telefonop.Name = "Txt_telefonop";
-            this.Txt_telefonop.Size = new System.Drawing.Size(123, 25);
-            this.Txt_telefonop.TabIndex = 74;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label3.Location = new System.Drawing.Point(306, 11);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 18);
-            this.label3.TabIndex = 82;
-            this.label3.Text = "Sexo:";
-            // 
-            // Lbl_telefonop
-            // 
-            this.Lbl_telefonop.AutoSize = true;
-            this.Lbl_telefonop.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_telefonop.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Lbl_telefonop.Location = new System.Drawing.Point(19, 54);
-            this.Lbl_telefonop.Name = "Lbl_telefonop";
-            this.Lbl_telefonop.Size = new System.Drawing.Size(65, 18);
-            this.Lbl_telefonop.TabIndex = 83;
-            this.Lbl_telefonop.Text = "Teléfono:";
-            // 
-            // Lbl_nitp
-            // 
-            this.Lbl_nitp.AutoSize = true;
-            this.Lbl_nitp.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_nitp.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Lbl_nitp.Location = new System.Drawing.Point(160, 54);
-            this.Lbl_nitp.Name = "Lbl_nitp";
-            this.Lbl_nitp.Size = new System.Drawing.Size(47, 18);
-            this.Lbl_nitp.TabIndex = 84;
-            this.Lbl_nitp.Text = "N.I.T:";
-            // 
-            // Lbl_direccionp
-            // 
-            this.Lbl_direccionp.AutoSize = true;
-            this.Lbl_direccionp.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_direccionp.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Lbl_direccionp.Location = new System.Drawing.Point(19, 97);
-            this.Lbl_direccionp.Name = "Lbl_direccionp";
-            this.Lbl_direccionp.Size = new System.Drawing.Size(71, 18);
-            this.Lbl_direccionp.TabIndex = 85;
-            this.Lbl_direccionp.Text = "Dirección:";
-            // 
-            // Lbl_refierep
-            // 
-            this.Lbl_refierep.AutoSize = true;
-            this.Lbl_refierep.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_refierep.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Lbl_refierep.Location = new System.Drawing.Point(307, 97);
-            this.Lbl_refierep.Name = "Lbl_refierep";
-            this.Lbl_refierep.Size = new System.Drawing.Size(95, 18);
-            this.Lbl_refierep.TabIndex = 86;
-            this.Lbl_refierep.Text = "Quién refiere:";
-            // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.Btn_editarp);
@@ -2262,6 +2296,574 @@
             this.Lbl_editarSangrep.Text = "Editar:";
             this.Lbl_editarSangrep.Visible = false;
             // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.Btn_eliminarp);
+            this.tabPage2.Controls.Add(this.Txt_expedientep);
+            this.tabPage2.Controls.Add(this.Btn_buscar);
+            this.tabPage2.Controls.Add(this.Lbl_expedientep);
+            this.tabPage2.Controls.Add(this.Lbl_eliminarp);
+            this.tabPage2.Controls.Add(this.Pnl_eliminarP);
+            this.tabPage2.Location = new System.Drawing.Point(4, 31);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage2.Size = new System.Drawing.Size(700, 319);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Eliminar";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // Btn_eliminarp
+            // 
+            this.Btn_eliminarp.BackgroundImage = global::LaboratorioClinico.Properties.Resources.usuario__1_;
+            this.Btn_eliminarp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_eliminarp.Location = new System.Drawing.Point(608, 25);
+            this.Btn_eliminarp.Name = "Btn_eliminarp";
+            this.Btn_eliminarp.Size = new System.Drawing.Size(53, 44);
+            this.Btn_eliminarp.TabIndex = 72;
+            this.Btn_eliminarp.UseVisualStyleBackColor = true;
+            this.Btn_eliminarp.Click += new System.EventHandler(this.Btn_eliminarp_Click);
+            // 
+            // Txt_expedientep
+            // 
+            this.Txt_expedientep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_expedientep.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_expedientep.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Txt_expedientep.Location = new System.Drawing.Point(97, 23);
+            this.Txt_expedientep.Name = "Txt_expedientep";
+            this.Txt_expedientep.Size = new System.Drawing.Size(82, 25);
+            this.Txt_expedientep.TabIndex = 78;
+            // 
+            // Btn_buscar
+            // 
+            this.Btn_buscar.BackColor = System.Drawing.Color.Transparent;
+            this.Btn_buscar.BackgroundImage = global::LaboratorioClinico.Properties.Resources.file;
+            this.Btn_buscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_buscar.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_buscar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Btn_buscar.Location = new System.Drawing.Point(194, 12);
+            this.Btn_buscar.Name = "Btn_buscar";
+            this.Btn_buscar.Size = new System.Drawing.Size(53, 44);
+            this.Btn_buscar.TabIndex = 87;
+            this.Btn_buscar.UseVisualStyleBackColor = false;
+            this.Btn_buscar.Click += new System.EventHandler(this.Btn_buscar_Click);
+            // 
+            // Lbl_expedientep
+            // 
+            this.Lbl_expedientep.AutoSize = true;
+            this.Lbl_expedientep.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_expedientep.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Lbl_expedientep.Location = new System.Drawing.Point(12, 25);
+            this.Lbl_expedientep.Name = "Lbl_expedientep";
+            this.Lbl_expedientep.Size = new System.Drawing.Size(79, 18);
+            this.Lbl_expedientep.TabIndex = 80;
+            this.Lbl_expedientep.Text = "Expediente:";
+            // 
+            // Lbl_eliminarp
+            // 
+            this.Lbl_eliminarp.AutoSize = true;
+            this.Lbl_eliminarp.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_eliminarp.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.Lbl_eliminarp.Location = new System.Drawing.Point(586, 68);
+            this.Lbl_eliminarp.Name = "Lbl_eliminarp";
+            this.Lbl_eliminarp.Size = new System.Drawing.Size(102, 17);
+            this.Lbl_eliminarp.TabIndex = 94;
+            this.Lbl_eliminarp.Text = "Eliminar Paciente";
+            // 
+            // Pnl_eliminarP
+            // 
+            this.Pnl_eliminarP.Controls.Add(this.Cmb_tipoSangrep);
+            this.Pnl_eliminarP.Controls.Add(this.Txt_nombrep);
+            this.Pnl_eliminarP.Controls.Add(this.Txt_alergiasp);
+            this.Pnl_eliminarP.Controls.Add(this.Lbl_nombrep);
+            this.Pnl_eliminarP.Controls.Add(this.Txt_correoP);
+            this.Pnl_eliminarP.Controls.Add(this.Cmb_sexop);
+            this.Pnl_eliminarP.Controls.Add(this.Lbl_correop);
+            this.Pnl_eliminarP.Controls.Add(this.Txt_refierep);
+            this.Pnl_eliminarP.Controls.Add(this.Lbl_alergiasp);
+            this.Pnl_eliminarP.Controls.Add(this.Txt_direccionp);
+            this.Pnl_eliminarP.Controls.Add(this.Lbl_tipoSangrep);
+            this.Pnl_eliminarP.Controls.Add(this.Txt_nitp);
+            this.Pnl_eliminarP.Controls.Add(this.Txt_telefonop);
+            this.Pnl_eliminarP.Controls.Add(this.label3);
+            this.Pnl_eliminarP.Controls.Add(this.Lbl_telefonop);
+            this.Pnl_eliminarP.Controls.Add(this.Lbl_nitp);
+            this.Pnl_eliminarP.Controls.Add(this.Lbl_direccionp);
+            this.Pnl_eliminarP.Controls.Add(this.Lbl_refierep);
+            this.Pnl_eliminarP.Location = new System.Drawing.Point(97, 60);
+            this.Pnl_eliminarP.Name = "Pnl_eliminarP";
+            this.Pnl_eliminarP.Size = new System.Drawing.Size(519, 253);
+            this.Pnl_eliminarP.TabIndex = 95;
+            this.Pnl_eliminarP.Visible = false;
+            // 
+            // Cmb_tipoSangrep
+            // 
+            this.Cmb_tipoSangrep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Cmb_tipoSangrep.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cmb_tipoSangrep.FormattingEnabled = true;
+            this.Cmb_tipoSangrep.Location = new System.Drawing.Point(310, 69);
+            this.Cmb_tipoSangrep.Name = "Cmb_tipoSangrep";
+            this.Cmb_tipoSangrep.Size = new System.Drawing.Size(180, 25);
+            this.Cmb_tipoSangrep.TabIndex = 94;
+            // 
+            // Txt_nombrep
+            // 
+            this.Txt_nombrep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_nombrep.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_nombrep.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Txt_nombrep.Location = new System.Drawing.Point(19, 26);
+            this.Txt_nombrep.Name = "Txt_nombrep";
+            this.Txt_nombrep.Size = new System.Drawing.Size(271, 25);
+            this.Txt_nombrep.TabIndex = 73;
+            // 
+            // Txt_alergiasp
+            // 
+            this.Txt_alergiasp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_alergiasp.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_alergiasp.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Txt_alergiasp.Location = new System.Drawing.Point(19, 198);
+            this.Txt_alergiasp.Multiline = true;
+            this.Txt_alergiasp.Name = "Txt_alergiasp";
+            this.Txt_alergiasp.Size = new System.Drawing.Size(470, 51);
+            this.Txt_alergiasp.TabIndex = 88;
+            // 
+            // Lbl_nombrep
+            // 
+            this.Lbl_nombrep.AutoSize = true;
+            this.Lbl_nombrep.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_nombrep.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Lbl_nombrep.Location = new System.Drawing.Point(16, 11);
+            this.Lbl_nombrep.Name = "Lbl_nombrep";
+            this.Lbl_nombrep.Size = new System.Drawing.Size(138, 18);
+            this.Lbl_nombrep.TabIndex = 81;
+            this.Lbl_nombrep.Text = "Nombre del paciente:";
+            // 
+            // Txt_correoP
+            // 
+            this.Txt_correoP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_correoP.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_correoP.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Txt_correoP.Location = new System.Drawing.Point(19, 155);
+            this.Txt_correoP.Name = "Txt_correoP";
+            this.Txt_correoP.Size = new System.Drawing.Size(470, 25);
+            this.Txt_correoP.TabIndex = 92;
+            // 
+            // Cmb_sexop
+            // 
+            this.Cmb_sexop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Cmb_sexop.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cmb_sexop.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Cmb_sexop.FormattingEnabled = true;
+            this.Cmb_sexop.Location = new System.Drawing.Point(309, 26);
+            this.Cmb_sexop.Name = "Cmb_sexop";
+            this.Cmb_sexop.Size = new System.Drawing.Size(57, 25);
+            this.Cmb_sexop.TabIndex = 79;
+            // 
+            // Lbl_correop
+            // 
+            this.Lbl_correop.AutoSize = true;
+            this.Lbl_correop.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_correop.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Lbl_correop.Location = new System.Drawing.Point(19, 140);
+            this.Lbl_correop.Name = "Lbl_correop";
+            this.Lbl_correop.Size = new System.Drawing.Size(56, 18);
+            this.Lbl_correop.TabIndex = 93;
+            this.Lbl_correop.Text = "Correo:";
+            // 
+            // Txt_refierep
+            // 
+            this.Txt_refierep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_refierep.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_refierep.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Txt_refierep.Location = new System.Drawing.Point(309, 112);
+            this.Txt_refierep.Name = "Txt_refierep";
+            this.Txt_refierep.Size = new System.Drawing.Size(180, 25);
+            this.Txt_refierep.TabIndex = 77;
+            // 
+            // Lbl_alergiasp
+            // 
+            this.Lbl_alergiasp.AutoSize = true;
+            this.Lbl_alergiasp.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_alergiasp.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Lbl_alergiasp.Location = new System.Drawing.Point(19, 183);
+            this.Lbl_alergiasp.Name = "Lbl_alergiasp";
+            this.Lbl_alergiasp.Size = new System.Drawing.Size(57, 18);
+            this.Lbl_alergiasp.TabIndex = 89;
+            this.Lbl_alergiasp.Text = "Alergías";
+            // 
+            // Txt_direccionp
+            // 
+            this.Txt_direccionp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_direccionp.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_direccionp.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Txt_direccionp.Location = new System.Drawing.Point(19, 112);
+            this.Txt_direccionp.Name = "Txt_direccionp";
+            this.Txt_direccionp.Size = new System.Drawing.Size(271, 25);
+            this.Txt_direccionp.TabIndex = 76;
+            // 
+            // Lbl_tipoSangrep
+            // 
+            this.Lbl_tipoSangrep.AutoSize = true;
+            this.Lbl_tipoSangrep.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_tipoSangrep.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Lbl_tipoSangrep.Location = new System.Drawing.Point(307, 54);
+            this.Lbl_tipoSangrep.Name = "Lbl_tipoSangrep";
+            this.Lbl_tipoSangrep.Size = new System.Drawing.Size(84, 18);
+            this.Lbl_tipoSangrep.TabIndex = 91;
+            this.Lbl_tipoSangrep.Text = "Tipo Sangre:";
+            // 
+            // Txt_nitp
+            // 
+            this.Txt_nitp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_nitp.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_nitp.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Txt_nitp.Location = new System.Drawing.Point(161, 69);
+            this.Txt_nitp.Name = "Txt_nitp";
+            this.Txt_nitp.Size = new System.Drawing.Size(129, 25);
+            this.Txt_nitp.TabIndex = 75;
+            // 
+            // Txt_telefonop
+            // 
+            this.Txt_telefonop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_telefonop.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_telefonop.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Txt_telefonop.Location = new System.Drawing.Point(19, 69);
+            this.Txt_telefonop.Name = "Txt_telefonop";
+            this.Txt_telefonop.Size = new System.Drawing.Size(123, 25);
+            this.Txt_telefonop.TabIndex = 74;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label3.Location = new System.Drawing.Point(306, 11);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(41, 18);
+            this.label3.TabIndex = 82;
+            this.label3.Text = "Sexo:";
+            // 
+            // Lbl_telefonop
+            // 
+            this.Lbl_telefonop.AutoSize = true;
+            this.Lbl_telefonop.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_telefonop.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Lbl_telefonop.Location = new System.Drawing.Point(19, 54);
+            this.Lbl_telefonop.Name = "Lbl_telefonop";
+            this.Lbl_telefonop.Size = new System.Drawing.Size(65, 18);
+            this.Lbl_telefonop.TabIndex = 83;
+            this.Lbl_telefonop.Text = "Teléfono:";
+            // 
+            // Lbl_nitp
+            // 
+            this.Lbl_nitp.AutoSize = true;
+            this.Lbl_nitp.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_nitp.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Lbl_nitp.Location = new System.Drawing.Point(160, 54);
+            this.Lbl_nitp.Name = "Lbl_nitp";
+            this.Lbl_nitp.Size = new System.Drawing.Size(47, 18);
+            this.Lbl_nitp.TabIndex = 84;
+            this.Lbl_nitp.Text = "N.I.T:";
+            // 
+            // Lbl_direccionp
+            // 
+            this.Lbl_direccionp.AutoSize = true;
+            this.Lbl_direccionp.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_direccionp.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Lbl_direccionp.Location = new System.Drawing.Point(19, 97);
+            this.Lbl_direccionp.Name = "Lbl_direccionp";
+            this.Lbl_direccionp.Size = new System.Drawing.Size(71, 18);
+            this.Lbl_direccionp.TabIndex = 85;
+            this.Lbl_direccionp.Text = "Dirección:";
+            // 
+            // Lbl_refierep
+            // 
+            this.Lbl_refierep.AutoSize = true;
+            this.Lbl_refierep.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_refierep.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Lbl_refierep.Location = new System.Drawing.Point(307, 97);
+            this.Lbl_refierep.Name = "Lbl_refierep";
+            this.Lbl_refierep.Size = new System.Drawing.Size(95, 18);
+            this.Lbl_refierep.TabIndex = 86;
+            this.Lbl_refierep.Text = "Quién refiere:";
+            // 
+            // Tbc_membresia
+            // 
+            this.Tbc_membresia.Controls.Add(this.tabPage5);
+            this.Tbc_membresia.Controls.Add(this.tabPage6);
+            this.Tbc_membresia.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tbc_membresia.Location = new System.Drawing.Point(26, 98);
+            this.Tbc_membresia.Margin = new System.Windows.Forms.Padding(4);
+            this.Tbc_membresia.Name = "Tbc_membresia";
+            this.Tbc_membresia.SelectedIndex = 0;
+            this.Tbc_membresia.Size = new System.Drawing.Size(708, 363);
+            this.Tbc_membresia.TabIndex = 5;
+            this.Tbc_membresia.Visible = false;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.label1);
+            this.tabPage5.Controls.Add(this.button1);
+            this.tabPage5.Controls.Add(this.textBox1);
+            this.tabPage5.Controls.Add(this.label2);
+            this.tabPage5.Controls.Add(this.button2);
+            this.tabPage5.Controls.Add(this.groupBox2);
+            this.tabPage5.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPage5.Location = new System.Drawing.Point(4, 31);
+            this.tabPage5.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage5.Size = new System.Drawing.Size(700, 328);
+            this.tabPage5.TabIndex = 0;
+            this.tabPage5.Text = "Modificar";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label1.Location = new System.Drawing.Point(569, 62);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(98, 17);
+            this.label1.TabIndex = 131;
+            this.label1.Text = "Editar Empleado";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = global::LaboratorioClinico.Properties.Resources.file;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.Location = new System.Drawing.Point(200, 16);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(53, 44);
+            this.button1.TabIndex = 126;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.textBox1.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.Color.Black;
+            this.textBox1.Location = new System.Drawing.Point(64, 26);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(127, 26);
+            this.textBox1.TabIndex = 28;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(28, 29);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(31, 18);
+            this.label2.TabIndex = 29;
+            this.label2.Text = "DPI";
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImage = global::LaboratorioClinico.Properties.Resources.usuario3;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.Location = new System.Drawing.Point(591, 19);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(53, 44);
+            this.button2.TabIndex = 95;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.groupBox2.Location = new System.Drawing.Point(30, 73);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(651, 239);
+            this.groupBox2.TabIndex = 118;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Datos Personales";
+            this.groupBox2.Visible = false;
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Controls.Add(this.label16);
+            this.tabPage6.Controls.Add(this.groupBox4);
+            this.tabPage6.Controls.Add(this.button4);
+            this.tabPage6.Controls.Add(this.textBox16);
+            this.tabPage6.Controls.Add(this.label25);
+            this.tabPage6.Controls.Add(this.button5);
+            this.tabPage6.Location = new System.Drawing.Point(4, 31);
+            this.tabPage6.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage6.Size = new System.Drawing.Size(700, 328);
+            this.tabPage6.TabIndex = 1;
+            this.tabPage6.Text = "Eliminar";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label16.Location = new System.Drawing.Point(561, 62);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(112, 17);
+            this.label16.TabIndex = 133;
+            this.label16.Text = "Eliminar Empleado";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.groupBox4.Location = new System.Drawing.Point(30, 73);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(651, 235);
+            this.groupBox4.TabIndex = 134;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Datos Personales";
+            this.groupBox4.Visible = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.BackgroundImage = global::LaboratorioClinico.Properties.Resources.file;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button4.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button4.Location = new System.Drawing.Point(200, 16);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(53, 44);
+            this.button4.TabIndex = 132;
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // textBox16
+            // 
+            this.textBox16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.textBox16.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox16.ForeColor = System.Drawing.Color.Black;
+            this.textBox16.Location = new System.Drawing.Point(64, 26);
+            this.textBox16.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox16.Name = "textBox16";
+            this.textBox16.Size = new System.Drawing.Size(127, 26);
+            this.textBox16.TabIndex = 127;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.Color.Black;
+            this.label25.Location = new System.Drawing.Point(28, 29);
+            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(31, 18);
+            this.label25.TabIndex = 128;
+            this.label25.Text = "DPI";
+            // 
+            // button5
+            // 
+            this.button5.BackgroundImage = global::LaboratorioClinico.Properties.Resources.usuario__1_1;
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button5.Location = new System.Drawing.Point(591, 19);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(53, 44);
+            this.button5.TabIndex = 129;
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // Txt_nitMembm
+            // 
+            this.Txt_nitMembm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_nitMembm.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_nitMembm.ForeColor = System.Drawing.Color.Black;
+            this.Txt_nitMembm.Location = new System.Drawing.Point(361, 54);
+            this.Txt_nitMembm.Margin = new System.Windows.Forms.Padding(4);
+            this.Txt_nitMembm.Name = "Txt_nitMembm";
+            this.Txt_nitMembm.Size = new System.Drawing.Size(136, 26);
+            this.Txt_nitMembm.TabIndex = 137;
+            // 
+            // Lbl_nitMembm
+            // 
+            this.Lbl_nitMembm.AutoSize = true;
+            this.Lbl_nitMembm.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_nitMembm.ForeColor = System.Drawing.Color.Black;
+            this.Lbl_nitMembm.Location = new System.Drawing.Point(347, 36);
+            this.Lbl_nitMembm.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_nitMembm.Name = "Lbl_nitMembm";
+            this.Lbl_nitMembm.Size = new System.Drawing.Size(32, 18);
+            this.Lbl_nitMembm.TabIndex = 138;
+            this.Lbl_nitMembm.Text = "NIT";
+            // 
+            // Txt_nombreMembm
+            // 
+            this.Txt_nombreMembm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_nombreMembm.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_nombreMembm.ForeColor = System.Drawing.Color.Black;
+            this.Txt_nombreMembm.Location = new System.Drawing.Point(48, 54);
+            this.Txt_nombreMembm.Margin = new System.Windows.Forms.Padding(4);
+            this.Txt_nombreMembm.Name = "Txt_nombreMembm";
+            this.Txt_nombreMembm.Size = new System.Drawing.Size(291, 26);
+            this.Txt_nombreMembm.TabIndex = 135;
+            // 
+            // Lbl_nombreMembm
+            // 
+            this.Lbl_nombreMembm.AutoSize = true;
+            this.Lbl_nombreMembm.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_nombreMembm.ForeColor = System.Drawing.Color.Black;
+            this.Lbl_nombreMembm.Location = new System.Drawing.Point(35, 37);
+            this.Lbl_nombreMembm.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_nombreMembm.Name = "Lbl_nombreMembm";
+            this.Lbl_nombreMembm.Size = new System.Drawing.Size(58, 18);
+            this.Lbl_nombreMembm.TabIndex = 136;
+            this.Lbl_nombreMembm.Text = "Nombre";
+            // 
+            // Lbl_actualMembm
+            // 
+            this.Lbl_actualMembm.AutoSize = true;
+            this.Lbl_actualMembm.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_actualMembm.ForeColor = System.Drawing.Color.Black;
+            this.Lbl_actualMembm.Location = new System.Drawing.Point(35, 86);
+            this.Lbl_actualMembm.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_actualMembm.Name = "Lbl_actualMembm";
+            this.Lbl_actualMembm.Size = new System.Drawing.Size(116, 18);
+            this.Lbl_actualMembm.TabIndex = 140;
+            this.Lbl_actualMembm.Text = "Membresía Actual";
+            // 
+            // Cmb_nuevaMembm
+            // 
+            this.Cmb_nuevaMembm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Cmb_nuevaMembm.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cmb_nuevaMembm.FormattingEnabled = true;
+            this.Cmb_nuevaMembm.Location = new System.Drawing.Point(228, 102);
+            this.Cmb_nuevaMembm.Name = "Cmb_nuevaMembm";
+            this.Cmb_nuevaMembm.Size = new System.Drawing.Size(197, 26);
+            this.Cmb_nuevaMembm.TabIndex = 141;
+            // 
+            // Lbl_nuevaMembm
+            // 
+            this.Lbl_nuevaMembm.AutoSize = true;
+            this.Lbl_nuevaMembm.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_nuevaMembm.ForeColor = System.Drawing.Color.Black;
+            this.Lbl_nuevaMembm.Location = new System.Drawing.Point(215, 86);
+            this.Lbl_nuevaMembm.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_nuevaMembm.Name = "Lbl_nuevaMembm";
+            this.Lbl_nuevaMembm.Size = new System.Drawing.Size(129, 18);
+            this.Lbl_nuevaMembm.TabIndex = 142;
+            this.Lbl_nuevaMembm.Text = "Cambiar membresía";
+            // 
+            // Txt_actualMembm
+            // 
+            this.Txt_actualMembm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_actualMembm.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_actualMembm.ForeColor = System.Drawing.Color.Black;
+            this.Txt_actualMembm.Location = new System.Drawing.Point(48, 103);
+            this.Txt_actualMembm.Margin = new System.Windows.Forms.Padding(4);
+            this.Txt_actualMembm.Name = "Txt_actualMembm";
+            this.Txt_actualMembm.Size = new System.Drawing.Size(161, 26);
+            this.Txt_actualMembm.TabIndex = 143;
+            // 
             // Mantenimiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -2270,6 +2872,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(766, 489);
             this.Controls.Add(this.Gpb_mantenimiento);
+            this.Controls.Add(this.Tbc_membresia);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -2280,6 +2883,15 @@
             this.Load += new System.EventHandler(this.Mantenimiento_Load);
             this.Gpb_mantenimiento.ResumeLayout(false);
             this.Gpb_mantenimiento.PerformLayout();
+            this.Tbc_mem.ResumeLayout(false);
+            this.tabPage9.ResumeLayout(false);
+            this.tabPage9.PerformLayout();
+            this.Gpb_datosMembm.ResumeLayout(false);
+            this.Gpb_datosMembm.PerformLayout();
+            this.tabPage10.ResumeLayout(false);
+            this.tabPage10.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
             this.Tbc_empleado.ResumeLayout(false);
             this.tabPage7.ResumeLayout(false);
             this.tabPage7.PerformLayout();
@@ -2306,16 +2918,21 @@
             this.Gpb_datosEliminar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Picb_fondo)).EndInit();
             this.Tbc_paciente.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            this.Pnl_eliminarP.ResumeLayout(false);
-            this.Pnl_eliminarP.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.Pnl_modificarP.ResumeLayout(false);
             this.Pnl_modificarP.PerformLayout();
             this.Gpb_sangrep.ResumeLayout(false);
             this.Gpb_sangrep.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            this.Pnl_eliminarP.ResumeLayout(false);
+            this.Pnl_eliminarP.PerformLayout();
+            this.Tbc_membresia.ResumeLayout(false);
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
+            this.tabPage6.ResumeLayout(false);
+            this.tabPage6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2486,5 +3103,49 @@
         private System.Windows.Forms.Button Btn_edCargoEmpm;
         private System.Windows.Forms.TextBox Txt_direEmpm;
         private System.Windows.Forms.Label Lbl_direEmpm;
+        private System.Windows.Forms.TabControl Tbc_membresia;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TabControl Tbc_mem;
+        private System.Windows.Forms.TabPage tabPage9;
+        private System.Windows.Forms.Label Lbl_editarMembm;
+        private System.Windows.Forms.Button Btn_buscarMembm;
+        private System.Windows.Forms.TextBox Txt_dpiMembm;
+        private System.Windows.Forms.Label Lbl_dpiMembm;
+        private System.Windows.Forms.Button Btn_editarMembm;
+        private System.Windows.Forms.GroupBox Gpb_datosMembm;
+        private System.Windows.Forms.TabPage tabPage10;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox Cmb_membresia;
+        private System.Windows.Forms.TextBox Txt_actualMembm;
+        private System.Windows.Forms.ComboBox Cmb_nuevaMembm;
+        private System.Windows.Forms.Label Lbl_nuevaMembm;
+        private System.Windows.Forms.TextBox Txt_nitMembm;
+        private System.Windows.Forms.Label Lbl_nitMembm;
+        private System.Windows.Forms.TextBox Txt_nombreMembm;
+        private System.Windows.Forms.Label Lbl_nombreMembm;
+        private System.Windows.Forms.Label Lbl_actualMembm;
     }
 }

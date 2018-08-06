@@ -10,14 +10,24 @@ using System.Windows.Forms;
 
 namespace LaboratorioClinico
 {
-    public partial class Form2 : Form
+    public partial class Constancia : Form
     {
-        public Form2()
+        public Constancia()
         {
             InitializeComponent();
         }
 
-        private void label6_Click(object sender, EventArgs e)
+        private void Lbl_direccionf_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Lbl_nombref_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Lbl_imprimirr_Click(object sender, EventArgs e)
         {
 
         }

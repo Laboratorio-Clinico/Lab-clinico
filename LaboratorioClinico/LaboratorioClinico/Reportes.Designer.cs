@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reportes));
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Pnl_enca = new System.Windows.Forms.Panel();
             this.Pnl_Menu = new System.Windows.Forms.Panel();
@@ -47,11 +48,13 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Lbl_inicio = new System.Windows.Forms.Label();
             this.Pnl_Contenedor = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.Pnl_enca.SuspendLayout();
             this.Pnl_Menu.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.Pnl_Contenedor.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -331,11 +334,22 @@
             // Pnl_Contenedor
             // 
             this.Pnl_Contenedor.BackColor = System.Drawing.Color.Transparent;
+            this.Pnl_Contenedor.Controls.Add(this.button2);
             this.Pnl_Contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Pnl_Contenedor.Location = new System.Drawing.Point(200, 34);
             this.Pnl_Contenedor.Name = "Pnl_Contenedor";
             this.Pnl_Contenedor.Size = new System.Drawing.Size(859, 700);
             this.Pnl_Contenedor.TabIndex = 18;
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.Location = new System.Drawing.Point(702, 669);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(32, 28);
+            this.button2.TabIndex = 19;
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // Reportes
             // 
@@ -359,6 +373,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Pnl_Contenedor.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -384,5 +399,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel Pnl_Contenedor;
         private System.Windows.Forms.Label Lbl_inicio;
+        private System.Windows.Forms.Button button2;
     }
 }

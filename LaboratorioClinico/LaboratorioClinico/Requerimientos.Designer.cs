@@ -42,6 +42,7 @@
             this.Gpb_imprimirr = new System.Windows.Forms.GroupBox();
             this.Gpb_requisitos = new System.Windows.Forms.GroupBox();
             this.Cmb_examen = new System.Windows.Forms.ComboBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.Gpb_llenador.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgb_requisitosr)).BeginInit();
             this.Gpb_fechar.SuspendLayout();
@@ -62,7 +63,14 @@
             // 
             // Dgb_requisitosr
             // 
-            this.Dgb_requisitosr.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Dgb_requisitosr.AllowUserToOrderColumns = true;
+            this.Dgb_requisitosr.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.Dgb_requisitosr.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.Dgb_requisitosr.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Dgb_requisitosr.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.Dgb_requisitosr.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.Dgb_requisitosr.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.Dgb_requisitosr.EnableHeadersVisualStyles = false;
             this.Dgb_requisitosr.Location = new System.Drawing.Point(6, 12);
             this.Dgb_requisitosr.Name = "Dgb_requisitosr";
             this.Dgb_requisitosr.Size = new System.Drawing.Size(524, 221);
@@ -179,6 +187,7 @@
             // Gpb_requisitos
             // 
             this.Gpb_requisitos.BackColor = System.Drawing.Color.Transparent;
+            this.Gpb_requisitos.Controls.Add(this.button3);
             this.Gpb_requisitos.Controls.Add(this.Cmb_examen);
             this.Gpb_requisitos.Controls.Add(this.Lbl_nombrer);
             this.Gpb_requisitos.Controls.Add(this.Lbl_buscarr);
@@ -200,6 +209,16 @@
             this.Cmb_examen.Size = new System.Drawing.Size(267, 26);
             this.Cmb_examen.TabIndex = 3;
             this.Cmb_examen.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // button3
+            // 
+            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.Location = new System.Drawing.Point(664, 415);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(53, 44);
+            this.button3.TabIndex = 25;
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // Requerimientos
             // 
@@ -245,5 +264,6 @@
         private System.Windows.Forms.GroupBox Gpb_requisitos;
         private System.Windows.Forms.DataGridView Dgb_requisitosr;
         private System.Windows.Forms.ComboBox Cmb_examen;
+        private System.Windows.Forms.Button button3;
     }
 }

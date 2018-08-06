@@ -256,19 +256,35 @@ namespace LaboratorioClinico
                 MessageBox.Show("No se pudo modificar la contraseña.", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
             }
 
+            //Limpiar los TEXTBOX y COMBOBOX 
             Cmb_usuarioCambio.ResetText();
             Txt_actual.Clear();
             Txt_nueva.Clear();
+
+            //Habilitar y Visualizar
             Pbx_correcto.Visible = false;
             Pbx_incorrecto.Visible = false;
+            Gpb_contraseña.Enabled = false;
+            Txt_nueva.Enabled = false;
         }
 
         private void Cmb_usuarioCambio_Click(object sender, EventArgs e)
         {
+            //Habilitar y Visualizar 
             Gpb_contraseña.Enabled = true;
             Txt_actual.Enabled = true;
             Pbx_incorrecto.Visible = false;
             Pbx_correcto.Visible = false;
+
+        }
+
+        private void Txt_privilegio_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
 
         }
     }

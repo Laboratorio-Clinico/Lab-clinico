@@ -58,6 +58,7 @@
             this.Lbl_precioe = new System.Windows.Forms.Label();
             this.Lbl_editar = new System.Windows.Forms.Label();
             this.Lbl_eliminar = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_examen)).BeginInit();
             this.Gpb_datosm.SuspendLayout();
             this.Gpb_datose.SuspendLayout();
@@ -104,7 +105,7 @@
             this.Dgv_examen.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.Dgv_examen.Size = new System.Drawing.Size(372, 435);
             this.Dgv_examen.TabIndex = 10;
-    //        this.Dgv_examen.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_examen_CellClick);
+            this.Dgv_examen.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_examen_CellContentClick_1);
             // 
             // Lbl_examen
             // 
@@ -120,7 +121,7 @@
             // 
             // Btn_editar
             // 
-         /*   this.Btn_editar.BackColor = System.Drawing.Color.Transparent;
+            this.Btn_editar.BackColor = System.Drawing.Color.Transparent;
             this.Btn_editar.BackgroundImage = global::LaboratorioClinico.Properties.Resources.editar2;
             this.Btn_editar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Btn_editar.Location = new System.Drawing.Point(630, 68);
@@ -129,10 +130,10 @@
             this.Btn_editar.TabIndex = 96;
             this.Btn_editar.UseVisualStyleBackColor = false;
             this.Btn_editar.Click += new System.EventHandler(this.Btn_editar_Click);
-            //*/ 
+            // 
             // Btn_eliminar
             // 
-         /*   this.Btn_eliminar.BackColor = System.Drawing.Color.Transparent;
+            this.Btn_eliminar.BackColor = System.Drawing.Color.Transparent;
             this.Btn_eliminar.BackgroundImage = global::LaboratorioClinico.Properties.Resources.boton_x;
             this.Btn_eliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Btn_eliminar.Location = new System.Drawing.Point(691, 68);
@@ -141,7 +142,7 @@
             this.Btn_eliminar.TabIndex = 97;
             this.Btn_eliminar.UseVisualStyleBackColor = false;
             this.Btn_eliminar.Click += new System.EventHandler(this.Btn_eliminar_Click);
-           */ // 
+            // 
             // Txt_codigom
             // 
             this.Txt_codigom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
@@ -251,7 +252,7 @@
             // 
             // Btn_confirmarm
             // 
-         /*   this.Btn_confirmarm.BackColor = System.Drawing.Color.Transparent;
+            this.Btn_confirmarm.BackColor = System.Drawing.Color.Transparent;
             this.Btn_confirmarm.BackgroundImage = global::LaboratorioClinico.Properties.Resources.comprobado;
             this.Btn_confirmarm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Btn_confirmarm.Location = new System.Drawing.Point(235, 54);
@@ -260,7 +261,7 @@
             this.Btn_confirmarm.TabIndex = 105;
             this.Btn_confirmarm.UseVisualStyleBackColor = false;
             this.Btn_confirmarm.Click += new System.EventHandler(this.Btn_confirmarm_Click);
-           */ // 
+            // 
             // Lbl_confirmarm
             // 
             this.Lbl_confirmarm.AutoSize = true;
@@ -309,7 +310,7 @@
             // 
             // Btn_confirmare
             // 
-       /*     this.Btn_confirmare.BackColor = System.Drawing.Color.Transparent;
+            this.Btn_confirmare.BackColor = System.Drawing.Color.Transparent;
             this.Btn_confirmare.BackgroundImage = global::LaboratorioClinico.Properties.Resources.comprobado;
             this.Btn_confirmare.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Btn_confirmare.Location = new System.Drawing.Point(235, 54);
@@ -318,7 +319,7 @@
             this.Btn_confirmare.TabIndex = 105;
             this.Btn_confirmare.UseVisualStyleBackColor = false;
             this.Btn_confirmare.Click += new System.EventHandler(this.Btn_confirmare_Click);
-         */   // 
+            // 
             // Txt_precioe
             // 
             this.Txt_precioe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
@@ -428,6 +429,16 @@
             this.Lbl_eliminar.TabIndex = 122;
             this.Lbl_eliminar.Text = "Eliminar";
             // 
+            // button1
+            // 
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(717, 472);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(53, 44);
+            this.button1.TabIndex = 123;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Exámen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -435,6 +446,7 @@
             this.BackgroundImage = global::LaboratorioClinico.Properties.Resources.FONDOO;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(782, 528);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.Gpb_datose);
             this.Controls.Add(this.Btn_eliminar);
             this.Controls.Add(this.Btn_editar);
@@ -486,5 +498,6 @@
         private System.Windows.Forms.Label Lbl_eliminar;
         private System.Windows.Forms.Label Lbl_confirmarm;
         private System.Windows.Forms.Label Lbl_confirmare;
+        private System.Windows.Forms.Button button1;
     }
 }
