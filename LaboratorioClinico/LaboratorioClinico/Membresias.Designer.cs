@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Membresias));
             this.Gpb_datosEmpleado = new System.Windows.Forms.GroupBox();
             this.Dgv_verBeneficios = new System.Windows.Forms.DataGridView();
             this.Lbl_buscar = new System.Windows.Forms.Label();
@@ -45,6 +46,7 @@
             this.Lbl_nit = new System.Windows.Forms.Label();
             this.Lbl_nombre = new System.Windows.Forms.Label();
             this.Txt_DPI = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.Gpb_datosEmpleado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_verBeneficios)).BeginInit();
             this.Gpb_datosPersonales.SuspendLayout();
@@ -53,6 +55,7 @@
             // Gpb_datosEmpleado
             // 
             this.Gpb_datosEmpleado.BackColor = System.Drawing.Color.Transparent;
+            this.Gpb_datosEmpleado.Controls.Add(this.button1);
             this.Gpb_datosEmpleado.Controls.Add(this.Dgv_verBeneficios);
             this.Gpb_datosEmpleado.Controls.Add(this.Lbl_buscar);
             this.Gpb_datosEmpleado.Controls.Add(this.Btn_buscar);
@@ -254,6 +257,16 @@
             this.Txt_DPI.Size = new System.Drawing.Size(197, 26);
             this.Txt_DPI.TabIndex = 28;
             // 
+            // button1
+            // 
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(677, 23);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(53, 44);
+            this.button1.TabIndex = 16;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Membresias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -263,9 +276,7 @@
             this.ClientSize = new System.Drawing.Size(766, 489);
             this.Controls.Add(this.Gpb_datosEmpleado);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Membresias";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Gpb_datosEmpleado.ResumeLayout(false);
             this.Gpb_datosEmpleado.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_verBeneficios)).EndInit();
@@ -294,5 +305,6 @@
         private System.Windows.Forms.Button Btn_Beneficios;
         private System.Windows.Forms.Label Lbl_beneficios;
         private System.Windows.Forms.DataGridView Dgv_verBeneficios;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Factura));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Factura));
             this.Gpb_laboratoriof = new System.Windows.Forms.GroupBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -41,6 +41,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Gpb_detallef = new System.Windows.Forms.GroupBox();
+            this.Txt_credit = new System.Windows.Forms.TextBox();
+            this.Lbl_credit = new System.Windows.Forms.Label();
             this.Cmb_formaPago = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Lbl_reC = new System.Windows.Forms.Label();
@@ -95,8 +97,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.Lbl_serie = new System.Windows.Forms.Label();
             this.Txt_serie = new System.Windows.Forms.TextBox();
-            this.Lbl_credit = new System.Windows.Forms.Label();
-            this.Txt_credit = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.Gpb_laboratoriof.SuspendLayout();
             this.Gpb_detallef.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -195,6 +196,7 @@
             // Gpb_detallef
             // 
             this.Gpb_detallef.BackColor = System.Drawing.Color.Transparent;
+            this.Gpb_detallef.Controls.Add(this.button1);
             this.Gpb_detallef.Controls.Add(this.Txt_credit);
             this.Gpb_detallef.Controls.Add(this.Lbl_credit);
             this.Gpb_detallef.Controls.Add(this.Cmb_formaPago);
@@ -227,6 +229,27 @@
             this.Gpb_detallef.TabIndex = 1;
             this.Gpb_detallef.TabStop = false;
             this.Gpb_detallef.Text = "Detalle factura";
+            // 
+            // Txt_credit
+            // 
+            this.Txt_credit.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_credit.Location = new System.Drawing.Point(158, 259);
+            this.Txt_credit.Multiline = true;
+            this.Txt_credit.Name = "Txt_credit";
+            this.Txt_credit.Size = new System.Drawing.Size(157, 20);
+            this.Txt_credit.TabIndex = 52;
+            // 
+            // Lbl_credit
+            // 
+            this.Lbl_credit.AutoSize = true;
+            this.Lbl_credit.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_credit.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_credit.ForeColor = System.Drawing.Color.White;
+            this.Lbl_credit.Location = new System.Drawing.Point(17, 260);
+            this.Lbl_credit.Name = "Lbl_credit";
+            this.Lbl_credit.Size = new System.Drawing.Size(135, 18);
+            this.Lbl_credit.TabIndex = 56;
+            this.Lbl_credit.Text = "No Tarjeta crédito";
             // 
             // Cmb_formaPago
             // 
@@ -642,7 +665,7 @@
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.InfoText;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Info;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.CadetBlue;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.LightCyan;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -847,26 +870,15 @@
             this.Txt_serie.Size = new System.Drawing.Size(76, 20);
             this.Txt_serie.TabIndex = 56;
             // 
-            // Lbl_credit
+            // button1
             // 
-            this.Lbl_credit.AutoSize = true;
-            this.Lbl_credit.BackColor = System.Drawing.Color.Transparent;
-            this.Lbl_credit.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_credit.ForeColor = System.Drawing.Color.White;
-            this.Lbl_credit.Location = new System.Drawing.Point(17, 260);
-            this.Lbl_credit.Name = "Lbl_credit";
-            this.Lbl_credit.Size = new System.Drawing.Size(135, 18);
-            this.Lbl_credit.TabIndex = 56;
-            this.Lbl_credit.Text = "No Tarjeta crédito";
-            // 
-            // Txt_credit
-            // 
-            this.Txt_credit.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_credit.Location = new System.Drawing.Point(158, 259);
-            this.Txt_credit.Multiline = true;
-            this.Txt_credit.Name = "Txt_credit";
-            this.Txt_credit.Size = new System.Drawing.Size(157, 20);
-            this.Txt_credit.TabIndex = 52;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(588, 257);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(31, 30);
+            this.button1.TabIndex = 57;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // Factura
             // 
@@ -965,5 +977,6 @@
         private System.Windows.Forms.TextBox Txt_serie;
         private System.Windows.Forms.TextBox Txt_credit;
         private System.Windows.Forms.Label Lbl_credit;
+        private System.Windows.Forms.Button button1;
     }
 }
