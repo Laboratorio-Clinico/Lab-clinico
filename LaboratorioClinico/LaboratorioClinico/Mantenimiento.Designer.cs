@@ -32,6 +32,27 @@
             this.Lbl_tabla = new System.Windows.Forms.Label();
             this.Cmb_tabla = new System.Windows.Forms.ComboBox();
             this.Gpb_mantenimiento = new System.Windows.Forms.GroupBox();
+            this.Tbc_mem = new System.Windows.Forms.TabControl();
+            this.tabPage9 = new System.Windows.Forms.TabPage();
+            this.Lbl_editarMembm = new System.Windows.Forms.Label();
+            this.Btn_buscarMembm = new System.Windows.Forms.Button();
+            this.Txt_dpiMembm = new System.Windows.Forms.TextBox();
+            this.Lbl_dpiMembm = new System.Windows.Forms.Label();
+            this.Btn_editarMembm = new System.Windows.Forms.Button();
+            this.Gpb_datosMembm = new System.Windows.Forms.GroupBox();
+            this.tabPage10 = new System.Windows.Forms.TabPage();
+            this.label19 = new System.Windows.Forms.Label();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.Cmb_membresia = new System.Windows.Forms.ComboBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.button8 = new System.Windows.Forms.Button();
+            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.button9 = new System.Windows.Forms.Button();
             this.Tbc_empleado = new System.Windows.Forms.TabControl();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.Lbl_editarEmpm = new System.Windows.Forms.Label();
@@ -209,7 +230,20 @@
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
+            this.Txt_nitMembm = new System.Windows.Forms.TextBox();
+            this.Lbl_nitMembm = new System.Windows.Forms.Label();
+            this.Txt_nombreMembm = new System.Windows.Forms.TextBox();
+            this.Lbl_nombreMembm = new System.Windows.Forms.Label();
+            this.Lbl_actualMembm = new System.Windows.Forms.Label();
+            this.Cmb_nuevaMembm = new System.Windows.Forms.ComboBox();
+            this.Lbl_nuevaMembm = new System.Windows.Forms.Label();
+            this.Txt_actualMembm = new System.Windows.Forms.TextBox();
             this.Gpb_mantenimiento.SuspendLayout();
+            this.Tbc_mem.SuspendLayout();
+            this.tabPage9.SuspendLayout();
+            this.Gpb_datosMembm.SuspendLayout();
+            this.tabPage10.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             this.Tbc_empleado.SuspendLayout();
             this.tabPage7.SuspendLayout();
             this.Gpb_datosEmpm.SuspendLayout();
@@ -271,6 +305,7 @@
             this.Gpb_mantenimiento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Gpb_mantenimiento.Controls.Add(this.Lbl_tabla);
             this.Gpb_mantenimiento.Controls.Add(this.Cmb_tabla);
+            this.Gpb_mantenimiento.Controls.Add(this.Tbc_mem);
             this.Gpb_mantenimiento.Controls.Add(this.Tbc_empleado);
             this.Gpb_mantenimiento.Controls.Add(this.Tbc_medicos);
             this.Gpb_mantenimiento.Controls.Add(this.Picb_fondo);
@@ -285,12 +320,283 @@
             this.Gpb_mantenimiento.Text = "Mantenimiento";
             this.Gpb_mantenimiento.Enter += new System.EventHandler(this.Gpb_mantenimiento_Enter);
             // 
+            // Tbc_mem
+            // 
+            this.Tbc_mem.Controls.Add(this.tabPage9);
+            this.Tbc_mem.Controls.Add(this.tabPage10);
+            this.Tbc_mem.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tbc_mem.Location = new System.Drawing.Point(16, 88);
+            this.Tbc_mem.Margin = new System.Windows.Forms.Padding(4);
+            this.Tbc_mem.Name = "Tbc_mem";
+            this.Tbc_mem.SelectedIndex = 0;
+            this.Tbc_mem.Size = new System.Drawing.Size(708, 363);
+            this.Tbc_mem.TabIndex = 6;
+            this.Tbc_mem.Visible = false;
+            // 
+            // tabPage9
+            // 
+            this.tabPage9.Controls.Add(this.Lbl_editarMembm);
+            this.tabPage9.Controls.Add(this.Btn_buscarMembm);
+            this.tabPage9.Controls.Add(this.Txt_dpiMembm);
+            this.tabPage9.Controls.Add(this.Lbl_dpiMembm);
+            this.tabPage9.Controls.Add(this.Btn_editarMembm);
+            this.tabPage9.Controls.Add(this.Gpb_datosMembm);
+            this.tabPage9.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPage9.Location = new System.Drawing.Point(4, 31);
+            this.tabPage9.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage9.Name = "tabPage9";
+            this.tabPage9.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage9.Size = new System.Drawing.Size(700, 328);
+            this.tabPage9.TabIndex = 0;
+            this.tabPage9.Text = "Modificar";
+            this.tabPage9.UseVisualStyleBackColor = true;
+            // 
+            // Lbl_editarMembm
+            // 
+            this.Lbl_editarMembm.AutoSize = true;
+            this.Lbl_editarMembm.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_editarMembm.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.Lbl_editarMembm.Location = new System.Drawing.Point(553, 62);
+            this.Lbl_editarMembm.Name = "Lbl_editarMembm";
+            this.Lbl_editarMembm.Size = new System.Drawing.Size(131, 17);
+            this.Lbl_editarMembm.TabIndex = 131;
+            this.Lbl_editarMembm.Text = "Cambiar de membresía";
+            // 
+            // Btn_buscarMembm
+            // 
+            this.Btn_buscarMembm.BackColor = System.Drawing.Color.Transparent;
+            this.Btn_buscarMembm.BackgroundImage = global::LaboratorioClinico.Properties.Resources.file;
+            this.Btn_buscarMembm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_buscarMembm.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_buscarMembm.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Btn_buscarMembm.Location = new System.Drawing.Point(200, 16);
+            this.Btn_buscarMembm.Name = "Btn_buscarMembm";
+            this.Btn_buscarMembm.Size = new System.Drawing.Size(53, 44);
+            this.Btn_buscarMembm.TabIndex = 126;
+            this.Btn_buscarMembm.UseVisualStyleBackColor = false;
+            this.Btn_buscarMembm.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // Txt_dpiMembm
+            // 
+            this.Txt_dpiMembm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_dpiMembm.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_dpiMembm.ForeColor = System.Drawing.Color.Black;
+            this.Txt_dpiMembm.Location = new System.Drawing.Point(64, 26);
+            this.Txt_dpiMembm.Margin = new System.Windows.Forms.Padding(4);
+            this.Txt_dpiMembm.Name = "Txt_dpiMembm";
+            this.Txt_dpiMembm.Size = new System.Drawing.Size(127, 26);
+            this.Txt_dpiMembm.TabIndex = 28;
+            this.Txt_dpiMembm.TextChanged += new System.EventHandler(this.Txt_dpiMembm_TextChanged);
+            // 
+            // Lbl_dpiMembm
+            // 
+            this.Lbl_dpiMembm.AutoSize = true;
+            this.Lbl_dpiMembm.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_dpiMembm.ForeColor = System.Drawing.Color.Black;
+            this.Lbl_dpiMembm.Location = new System.Drawing.Point(28, 29);
+            this.Lbl_dpiMembm.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_dpiMembm.Name = "Lbl_dpiMembm";
+            this.Lbl_dpiMembm.Size = new System.Drawing.Size(31, 18);
+            this.Lbl_dpiMembm.TabIndex = 29;
+            this.Lbl_dpiMembm.Text = "DPI";
+            // 
+            // Btn_editarMembm
+            // 
+            this.Btn_editarMembm.BackgroundImage = global::LaboratorioClinico.Properties.Resources.tarjeta_de_credito;
+            this.Btn_editarMembm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_editarMembm.Location = new System.Drawing.Point(591, 19);
+            this.Btn_editarMembm.Name = "Btn_editarMembm";
+            this.Btn_editarMembm.Size = new System.Drawing.Size(53, 44);
+            this.Btn_editarMembm.TabIndex = 95;
+            this.Btn_editarMembm.UseVisualStyleBackColor = true;
+            this.Btn_editarMembm.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // Gpb_datosMembm
+            // 
+            this.Gpb_datosMembm.Controls.Add(this.Txt_actualMembm);
+            this.Gpb_datosMembm.Controls.Add(this.Cmb_nuevaMembm);
+            this.Gpb_datosMembm.Controls.Add(this.Lbl_nuevaMembm);
+            this.Gpb_datosMembm.Controls.Add(this.Txt_nitMembm);
+            this.Gpb_datosMembm.Controls.Add(this.Lbl_nitMembm);
+            this.Gpb_datosMembm.Controls.Add(this.Txt_nombreMembm);
+            this.Gpb_datosMembm.Controls.Add(this.Lbl_nombreMembm);
+            this.Gpb_datosMembm.Controls.Add(this.Lbl_actualMembm);
+            this.Gpb_datosMembm.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Gpb_datosMembm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.Gpb_datosMembm.Location = new System.Drawing.Point(30, 73);
+            this.Gpb_datosMembm.Name = "Gpb_datosMembm";
+            this.Gpb_datosMembm.Size = new System.Drawing.Size(651, 239);
+            this.Gpb_datosMembm.TabIndex = 118;
+            this.Gpb_datosMembm.TabStop = false;
+            this.Gpb_datosMembm.Text = "Datos Personales";
+            this.Gpb_datosMembm.Visible = false;
+            // 
+            // tabPage10
+            // 
+            this.tabPage10.Controls.Add(this.label19);
+            this.tabPage10.Controls.Add(this.groupBox6);
+            this.tabPage10.Controls.Add(this.button8);
+            this.tabPage10.Controls.Add(this.textBox18);
+            this.tabPage10.Controls.Add(this.label29);
+            this.tabPage10.Controls.Add(this.button9);
+            this.tabPage10.Location = new System.Drawing.Point(4, 31);
+            this.tabPage10.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage10.Name = "tabPage10";
+            this.tabPage10.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage10.Size = new System.Drawing.Size(700, 328);
+            this.tabPage10.TabIndex = 1;
+            this.tabPage10.Text = "Eliminar";
+            this.tabPage10.UseVisualStyleBackColor = true;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label19.Location = new System.Drawing.Point(561, 62);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(117, 17);
+            this.label19.TabIndex = 133;
+            this.label19.Text = "Cancelar membresía";
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.Cmb_membresia);
+            this.groupBox6.Controls.Add(this.textBox4);
+            this.groupBox6.Controls.Add(this.label9);
+            this.groupBox6.Controls.Add(this.textBox3);
+            this.groupBox6.Controls.Add(this.label8);
+            this.groupBox6.Controls.Add(this.label10);
+            this.groupBox6.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.groupBox6.Location = new System.Drawing.Point(30, 73);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(651, 235);
+            this.groupBox6.TabIndex = 134;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Datos Personales";
+            this.groupBox6.Visible = false;
+            // 
+            // Cmb_membresia
+            // 
+            this.Cmb_membresia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Cmb_membresia.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cmb_membresia.FormattingEnabled = true;
+            this.Cmb_membresia.Location = new System.Drawing.Point(48, 102);
+            this.Cmb_membresia.Name = "Cmb_membresia";
+            this.Cmb_membresia.Size = new System.Drawing.Size(197, 26);
+            this.Cmb_membresia.TabIndex = 133;
+            // 
+            // textBox4
+            // 
+            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.textBox4.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.ForeColor = System.Drawing.Color.Black;
+            this.textBox4.Location = new System.Drawing.Point(361, 54);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(136, 26);
+            this.textBox4.TabIndex = 131;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(347, 36);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(32, 18);
+            this.label9.TabIndex = 132;
+            this.label9.Text = "NIT";
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.textBox3.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.ForeColor = System.Drawing.Color.Black;
+            this.textBox3.Location = new System.Drawing.Point(48, 54);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(291, 26);
+            this.textBox3.TabIndex = 129;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(35, 37);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(58, 18);
+            this.label8.TabIndex = 130;
+            this.label8.Text = "Nombre";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(35, 86);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(74, 18);
+            this.label10.TabIndex = 134;
+            this.label10.Text = "Membresía";
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.Transparent;
+            this.button8.BackgroundImage = global::LaboratorioClinico.Properties.Resources.file;
+            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button8.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button8.Location = new System.Drawing.Point(200, 16);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(53, 44);
+            this.button8.TabIndex = 132;
+            this.button8.UseVisualStyleBackColor = false;
+            // 
+            // textBox18
+            // 
+            this.textBox18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.textBox18.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox18.ForeColor = System.Drawing.Color.Black;
+            this.textBox18.Location = new System.Drawing.Point(64, 26);
+            this.textBox18.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox18.Name = "textBox18";
+            this.textBox18.Size = new System.Drawing.Size(127, 26);
+            this.textBox18.TabIndex = 127;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.ForeColor = System.Drawing.Color.Black;
+            this.label29.Location = new System.Drawing.Point(28, 29);
+            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(31, 18);
+            this.label29.TabIndex = 128;
+            this.label29.Text = "DPI";
+            // 
+            // button9
+            // 
+            this.button9.BackgroundImage = global::LaboratorioClinico.Properties.Resources.tarjeta_de_credito__1_;
+            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button9.Location = new System.Drawing.Point(591, 19);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(53, 44);
+            this.button9.TabIndex = 129;
+            this.button9.UseVisualStyleBackColor = true;
+            // 
             // Tbc_empleado
             // 
             this.Tbc_empleado.Controls.Add(this.tabPage7);
             this.Tbc_empleado.Controls.Add(this.tabPage8);
             this.Tbc_empleado.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tbc_empleado.Location = new System.Drawing.Point(17, 89);
+            this.Tbc_empleado.Location = new System.Drawing.Point(17, 87);
             this.Tbc_empleado.Margin = new System.Windows.Forms.Padding(4);
             this.Tbc_empleado.Name = "Tbc_empleado";
             this.Tbc_empleado.SelectedIndex = 0;
@@ -2467,6 +2773,97 @@
             this.button5.TabIndex = 129;
             this.button5.UseVisualStyleBackColor = true;
             // 
+            // Txt_nitMembm
+            // 
+            this.Txt_nitMembm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_nitMembm.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_nitMembm.ForeColor = System.Drawing.Color.Black;
+            this.Txt_nitMembm.Location = new System.Drawing.Point(361, 54);
+            this.Txt_nitMembm.Margin = new System.Windows.Forms.Padding(4);
+            this.Txt_nitMembm.Name = "Txt_nitMembm";
+            this.Txt_nitMembm.Size = new System.Drawing.Size(136, 26);
+            this.Txt_nitMembm.TabIndex = 137;
+            // 
+            // Lbl_nitMembm
+            // 
+            this.Lbl_nitMembm.AutoSize = true;
+            this.Lbl_nitMembm.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_nitMembm.ForeColor = System.Drawing.Color.Black;
+            this.Lbl_nitMembm.Location = new System.Drawing.Point(347, 36);
+            this.Lbl_nitMembm.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_nitMembm.Name = "Lbl_nitMembm";
+            this.Lbl_nitMembm.Size = new System.Drawing.Size(32, 18);
+            this.Lbl_nitMembm.TabIndex = 138;
+            this.Lbl_nitMembm.Text = "NIT";
+            // 
+            // Txt_nombreMembm
+            // 
+            this.Txt_nombreMembm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_nombreMembm.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_nombreMembm.ForeColor = System.Drawing.Color.Black;
+            this.Txt_nombreMembm.Location = new System.Drawing.Point(48, 54);
+            this.Txt_nombreMembm.Margin = new System.Windows.Forms.Padding(4);
+            this.Txt_nombreMembm.Name = "Txt_nombreMembm";
+            this.Txt_nombreMembm.Size = new System.Drawing.Size(291, 26);
+            this.Txt_nombreMembm.TabIndex = 135;
+            // 
+            // Lbl_nombreMembm
+            // 
+            this.Lbl_nombreMembm.AutoSize = true;
+            this.Lbl_nombreMembm.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_nombreMembm.ForeColor = System.Drawing.Color.Black;
+            this.Lbl_nombreMembm.Location = new System.Drawing.Point(35, 37);
+            this.Lbl_nombreMembm.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_nombreMembm.Name = "Lbl_nombreMembm";
+            this.Lbl_nombreMembm.Size = new System.Drawing.Size(58, 18);
+            this.Lbl_nombreMembm.TabIndex = 136;
+            this.Lbl_nombreMembm.Text = "Nombre";
+            // 
+            // Lbl_actualMembm
+            // 
+            this.Lbl_actualMembm.AutoSize = true;
+            this.Lbl_actualMembm.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_actualMembm.ForeColor = System.Drawing.Color.Black;
+            this.Lbl_actualMembm.Location = new System.Drawing.Point(35, 86);
+            this.Lbl_actualMembm.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_actualMembm.Name = "Lbl_actualMembm";
+            this.Lbl_actualMembm.Size = new System.Drawing.Size(116, 18);
+            this.Lbl_actualMembm.TabIndex = 140;
+            this.Lbl_actualMembm.Text = "Membresía Actual";
+            // 
+            // Cmb_nuevaMembm
+            // 
+            this.Cmb_nuevaMembm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Cmb_nuevaMembm.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cmb_nuevaMembm.FormattingEnabled = true;
+            this.Cmb_nuevaMembm.Location = new System.Drawing.Point(228, 102);
+            this.Cmb_nuevaMembm.Name = "Cmb_nuevaMembm";
+            this.Cmb_nuevaMembm.Size = new System.Drawing.Size(197, 26);
+            this.Cmb_nuevaMembm.TabIndex = 141;
+            // 
+            // Lbl_nuevaMembm
+            // 
+            this.Lbl_nuevaMembm.AutoSize = true;
+            this.Lbl_nuevaMembm.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_nuevaMembm.ForeColor = System.Drawing.Color.Black;
+            this.Lbl_nuevaMembm.Location = new System.Drawing.Point(215, 86);
+            this.Lbl_nuevaMembm.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lbl_nuevaMembm.Name = "Lbl_nuevaMembm";
+            this.Lbl_nuevaMembm.Size = new System.Drawing.Size(129, 18);
+            this.Lbl_nuevaMembm.TabIndex = 142;
+            this.Lbl_nuevaMembm.Text = "Cambiar membresía";
+            // 
+            // Txt_actualMembm
+            // 
+            this.Txt_actualMembm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_actualMembm.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_actualMembm.ForeColor = System.Drawing.Color.Black;
+            this.Txt_actualMembm.Location = new System.Drawing.Point(48, 103);
+            this.Txt_actualMembm.Margin = new System.Windows.Forms.Padding(4);
+            this.Txt_actualMembm.Name = "Txt_actualMembm";
+            this.Txt_actualMembm.Size = new System.Drawing.Size(161, 26);
+            this.Txt_actualMembm.TabIndex = 143;
+            // 
             // Mantenimiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -2486,6 +2883,15 @@
             this.Load += new System.EventHandler(this.Mantenimiento_Load);
             this.Gpb_mantenimiento.ResumeLayout(false);
             this.Gpb_mantenimiento.PerformLayout();
+            this.Tbc_mem.ResumeLayout(false);
+            this.tabPage9.ResumeLayout(false);
+            this.tabPage9.PerformLayout();
+            this.Gpb_datosMembm.ResumeLayout(false);
+            this.Gpb_datosMembm.PerformLayout();
+            this.tabPage10.ResumeLayout(false);
+            this.tabPage10.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
             this.Tbc_empleado.ResumeLayout(false);
             this.tabPage7.ResumeLayout(false);
             this.tabPage7.PerformLayout();
@@ -2712,5 +3118,34 @@
         private System.Windows.Forms.TextBox textBox16;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TabControl Tbc_mem;
+        private System.Windows.Forms.TabPage tabPage9;
+        private System.Windows.Forms.Label Lbl_editarMembm;
+        private System.Windows.Forms.Button Btn_buscarMembm;
+        private System.Windows.Forms.TextBox Txt_dpiMembm;
+        private System.Windows.Forms.Label Lbl_dpiMembm;
+        private System.Windows.Forms.Button Btn_editarMembm;
+        private System.Windows.Forms.GroupBox Gpb_datosMembm;
+        private System.Windows.Forms.TabPage tabPage10;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox Cmb_membresia;
+        private System.Windows.Forms.TextBox Txt_actualMembm;
+        private System.Windows.Forms.ComboBox Cmb_nuevaMembm;
+        private System.Windows.Forms.Label Lbl_nuevaMembm;
+        private System.Windows.Forms.TextBox Txt_nitMembm;
+        private System.Windows.Forms.Label Lbl_nitMembm;
+        private System.Windows.Forms.TextBox Txt_nombreMembm;
+        private System.Windows.Forms.Label Lbl_nombreMembm;
+        private System.Windows.Forms.Label Lbl_actualMembm;
     }
 }

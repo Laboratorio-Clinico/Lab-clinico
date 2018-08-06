@@ -575,6 +575,12 @@
   <ItemGroup>
     <None Include="Resources\fecha-de-cita-medica-recordatorio-en-pagina-diaria-de-calendario-de-simbolo-de-interfaz-con-cruz-de-primeros-auxilios.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tarjeta-de-credito.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tarjeta-de-credito %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

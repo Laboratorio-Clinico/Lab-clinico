@@ -142,5 +142,10 @@ namespace LaboratorioClinico
         {
             Pro_mostrarBeneficios();
         }
+
+        private void Membresias_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
