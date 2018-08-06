@@ -64,12 +64,24 @@
     <Compile Include="Bitácora.Designer.cs">
       <DependentUpon>Bitácora.cs</DependentUpon>
     </Compile>
+    <Compile Include="Citas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Citas.Designer.cs">
+      <DependentUpon>Citas.cs</DependentUpon>
+    </Compile>
     <Compile Include="conexion.cs" />
     <Compile Include="ConfigUser.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ConfigUser.Designer.cs">
       <DependentUpon>ConfigUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Constancia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Constancia.Designer.cs">
+      <DependentUpon>Constancia.cs</DependentUpon>
     </Compile>
     <Compile Include="cotizar.cs">
       <SubType>Form</SubType>
@@ -196,8 +208,14 @@
     <EmbeddedResource Include="Bitácora.resx">
       <DependentUpon>Bitácora.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Citas.resx">
+      <DependentUpon>Citas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConfigUser.resx">
       <DependentUpon>ConfigUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Constancia.resx">
+      <DependentUpon>Constancia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="cotizar.resx">
       <DependentUpon>cotizar.cs</DependentUpon>
@@ -550,6 +568,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\mem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

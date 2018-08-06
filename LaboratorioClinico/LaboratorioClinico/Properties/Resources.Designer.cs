@@ -633,9 +633,9 @@ namespace LaboratorioClinico.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap intercambio {
+        internal static System.Drawing.Bitmap info {
             get {
-                object obj = ResourceManager.GetObject("intercambio", resourceCulture);
+                object obj = ResourceManager.GetObject("info", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
