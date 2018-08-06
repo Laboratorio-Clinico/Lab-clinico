@@ -292,5 +292,12 @@ namespace LaboratorioClinico
             new Membresias().ShowDialog();
             this.Show();
         }
+
+        private void citasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Citas().ShowDialog();
+            this.Show();
+        }
     }
 }
