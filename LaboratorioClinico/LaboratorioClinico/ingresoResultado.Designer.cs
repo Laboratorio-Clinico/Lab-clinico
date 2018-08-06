@@ -29,21 +29,25 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ingresoResultado));
-            this.Lbl_eliminar = new System.Windows.Forms.Label();
-            this.Lbl_editar = new System.Windows.Forms.Label();
             this.Lbl_ingreseResultados = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.Cmb_correo = new System.Windows.Forms.ComboBox();
+            this.Btn_BuscarExamen = new System.Windows.Forms.Button();
+            this.Txt_Correor = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.Txt_resultadox = new System.Windows.Forms.TextBox();
             this.Lbl_resultado = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.Dtp_fechar = new System.Windows.Forms.DateTimePicker();
             this.Txt_codEx = new System.Windows.Forms.TextBox();
             this.Lbl_codigor = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.Txt_nombrex = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.Lbl_examenRealizado = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Dtp_fechar = new System.Windows.Forms.DateTimePicker();
             this.Gpb_datosf = new System.Windows.Forms.GroupBox();
+            this.Btn_busc = new System.Windows.Forms.Button();
             this.Txt_direccionr = new System.Windows.Forms.TextBox();
             this.Lbl_fechaf = new System.Windows.Forms.Label();
             this.Txt_dpir = new System.Windows.Forms.TextBox();
@@ -52,49 +56,17 @@
             this.Lbl_nitf = new System.Windows.Forms.Label();
             this.Lbl_nombref = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.Btn_eliminarResultado = new System.Windows.Forms.Button();
-            this.Btn_editarResultado = new System.Windows.Forms.Button();
-            this.Btn_busc = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.Btn_BuscarExamen = new System.Windows.Forms.Button();
             this.Btn_guardarResultado = new System.Windows.Forms.Button();
             this.Lbl_ingresarr = new System.Windows.Forms.Label();
             this.Btn_imprimirResultado = new System.Windows.Forms.Button();
             this.Lbl_imprimirr = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.Gpb_datosf.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // Lbl_eliminar
-            // 
-            this.Lbl_eliminar.AutoSize = true;
-            this.Lbl_eliminar.BackColor = System.Drawing.Color.Transparent;
-            this.Lbl_eliminar.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_eliminar.ForeColor = System.Drawing.Color.PowderBlue;
-            this.Lbl_eliminar.Location = new System.Drawing.Point(685, 57);
-            this.Lbl_eliminar.Name = "Lbl_eliminar";
-            this.Lbl_eliminar.Size = new System.Drawing.Size(47, 15);
-            this.Lbl_eliminar.TabIndex = 133;
-            this.Lbl_eliminar.Text = "Eliminar";
-            // 
-            // Lbl_editar
-            // 
-            this.Lbl_editar.AutoSize = true;
-            this.Lbl_editar.BackColor = System.Drawing.Color.Transparent;
-            this.Lbl_editar.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_editar.ForeColor = System.Drawing.Color.PowderBlue;
-            this.Lbl_editar.Location = new System.Drawing.Point(628, 57);
-            this.Lbl_editar.Name = "Lbl_editar";
-            this.Lbl_editar.Size = new System.Drawing.Size(36, 15);
-            this.Lbl_editar.TabIndex = 132;
-            this.Lbl_editar.Text = "Editar";
             // 
             // Lbl_ingreseResultados
             // 
@@ -112,9 +84,9 @@
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.Cmb_correo);
             this.groupBox1.Controls.Add(this.Btn_BuscarExamen);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.Txt_Correor);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.Txt_resultadox);
             this.groupBox1.Controls.Add(this.Lbl_resultado);
@@ -132,6 +104,66 @@
             this.groupBox1.TabIndex = 129;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Evaluación";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(427, 100);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(23, 18);
+            this.label5.TabIndex = 52;
+            this.label5.Text = "@";
+            // 
+            // Cmb_correo
+            // 
+            this.Cmb_correo.FormattingEnabled = true;
+            this.Cmb_correo.Items.AddRange(new object[] {
+            "gmail",
+            "yahoo",
+            "hotmail",
+            "outlook"});
+            this.Cmb_correo.Location = new System.Drawing.Point(453, 94);
+            this.Cmb_correo.Name = "Cmb_correo";
+            this.Cmb_correo.Size = new System.Drawing.Size(134, 30);
+            this.Cmb_correo.TabIndex = 112;
+            this.Cmb_correo.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // Btn_BuscarExamen
+            // 
+            this.Btn_BuscarExamen.BackColor = System.Drawing.Color.White;
+            this.Btn_BuscarExamen.BackgroundImage = global::LaboratorioClinico.Properties.Resources.codigobarra;
+            this.Btn_BuscarExamen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_BuscarExamen.Location = new System.Drawing.Point(546, 26);
+            this.Btn_BuscarExamen.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_BuscarExamen.Name = "Btn_BuscarExamen";
+            this.Btn_BuscarExamen.Size = new System.Drawing.Size(41, 38);
+            this.Btn_BuscarExamen.TabIndex = 111;
+            this.Btn_BuscarExamen.UseVisualStyleBackColor = false;
+            this.Btn_BuscarExamen.Click += new System.EventHandler(this.Btn_BuscarExamen_Click);
+            // 
+            // Txt_Correor
+            // 
+            this.Txt_Correor.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_Correor.Location = new System.Drawing.Point(164, 98);
+            this.Txt_Correor.Multiline = true;
+            this.Txt_Correor.Name = "Txt_Correor";
+            this.Txt_Correor.Size = new System.Drawing.Size(257, 25);
+            this.Txt_Correor.TabIndex = 110;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(20, 100);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(51, 18);
+            this.label2.TabIndex = 109;
+            this.label2.Text = "Correo";
             // 
             // Txt_resultadox
             // 
@@ -153,31 +185,6 @@
             this.Lbl_resultado.Size = new System.Drawing.Size(66, 18);
             this.Lbl_resultado.TabIndex = 103;
             this.Lbl_resultado.Text = "Resultado";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(23, 19);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 18);
-            this.label1.TabIndex = 102;
-            this.label1.Text = "Emisión exámen";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // Dtp_fechar
-            // 
-            this.Dtp_fechar.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.Dtp_fechar.CustomFormat = "dd-MM-yy";
-            this.Dtp_fechar.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Dtp_fechar.Location = new System.Drawing.Point(167, 19);
-            this.Dtp_fechar.Name = "Dtp_fechar";
-            this.Dtp_fechar.Size = new System.Drawing.Size(144, 20);
-            this.Dtp_fechar.TabIndex = 22;
-            this.Dtp_fechar.ValueChanged += new System.EventHandler(this.Dtp_fechar_ValueChanged);
             // 
             // Txt_codEx
             // 
@@ -244,6 +251,31 @@
             this.Lbl_examenRealizado.TabIndex = 5;
             this.Lbl_examenRealizado.Text = "Examen realizado";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(23, 19);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(105, 18);
+            this.label1.TabIndex = 102;
+            this.label1.Text = "Emisión exámen";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // Dtp_fechar
+            // 
+            this.Dtp_fechar.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Dtp_fechar.CustomFormat = "dd-MM-yy";
+            this.Dtp_fechar.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.Dtp_fechar.Location = new System.Drawing.Point(167, 19);
+            this.Dtp_fechar.Name = "Dtp_fechar";
+            this.Dtp_fechar.Size = new System.Drawing.Size(144, 20);
+            this.Dtp_fechar.TabIndex = 22;
+            this.Dtp_fechar.ValueChanged += new System.EventHandler(this.Dtp_fechar_ValueChanged);
+            // 
             // Gpb_datosf
             // 
             this.Gpb_datosf.BackColor = System.Drawing.Color.Transparent;
@@ -264,6 +296,19 @@
             this.Gpb_datosf.TabIndex = 127;
             this.Gpb_datosf.TabStop = false;
             this.Gpb_datosf.Text = "Datos Paciente";
+            // 
+            // Btn_busc
+            // 
+            this.Btn_busc.BackColor = System.Drawing.Color.White;
+            this.Btn_busc.BackgroundImage = global::LaboratorioClinico.Properties.Resources.lupa;
+            this.Btn_busc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_busc.Location = new System.Drawing.Point(250, 51);
+            this.Btn_busc.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_busc.Name = "Btn_busc";
+            this.Btn_busc.Size = new System.Drawing.Size(41, 38);
+            this.Btn_busc.TabIndex = 51;
+            this.Btn_busc.UseVisualStyleBackColor = false;
+            this.Btn_busc.Click += new System.EventHandler(this.Btn_busc_Click);
             // 
             // Txt_direccionr
             // 
@@ -346,75 +391,6 @@
             this.textBox2.Size = new System.Drawing.Size(100, 29);
             this.textBox2.TabIndex = 0;
             // 
-            // Btn_eliminarResultado
-            // 
-            this.Btn_eliminarResultado.BackColor = System.Drawing.Color.Transparent;
-            this.Btn_eliminarResultado.BackgroundImage = global::LaboratorioClinico.Properties.Resources.boton_x;
-            this.Btn_eliminarResultado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Btn_eliminarResultado.Location = new System.Drawing.Point(682, 16);
-            this.Btn_eliminarResultado.Name = "Btn_eliminarResultado";
-            this.Btn_eliminarResultado.Size = new System.Drawing.Size(53, 44);
-            this.Btn_eliminarResultado.TabIndex = 131;
-            this.Btn_eliminarResultado.UseVisualStyleBackColor = false;
-            // 
-            // Btn_editarResultado
-            // 
-            this.Btn_editarResultado.BackColor = System.Drawing.Color.Transparent;
-            this.Btn_editarResultado.BackgroundImage = global::LaboratorioClinico.Properties.Resources.editar2;
-            this.Btn_editarResultado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Btn_editarResultado.Location = new System.Drawing.Point(621, 16);
-            this.Btn_editarResultado.Name = "Btn_editarResultado";
-            this.Btn_editarResultado.Size = new System.Drawing.Size(53, 44);
-            this.Btn_editarResultado.TabIndex = 130;
-            this.Btn_editarResultado.UseVisualStyleBackColor = false;
-            // 
-            // Btn_busc
-            // 
-            this.Btn_busc.BackColor = System.Drawing.Color.White;
-            this.Btn_busc.BackgroundImage = global::LaboratorioClinico.Properties.Resources.lupa;
-            this.Btn_busc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Btn_busc.Location = new System.Drawing.Point(250, 51);
-            this.Btn_busc.Margin = new System.Windows.Forms.Padding(4);
-            this.Btn_busc.Name = "Btn_busc";
-            this.Btn_busc.Size = new System.Drawing.Size(41, 38);
-            this.Btn_busc.TabIndex = 51;
-            this.Btn_busc.UseVisualStyleBackColor = false;
-            this.Btn_busc.Click += new System.EventHandler(this.Btn_busc_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(20, 100);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 18);
-            this.label2.TabIndex = 109;
-            this.label2.Text = "Correo";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(164, 98);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(257, 25);
-            this.textBox1.TabIndex = 110;
-            // 
-            // Btn_BuscarExamen
-            // 
-            this.Btn_BuscarExamen.BackColor = System.Drawing.Color.White;
-            this.Btn_BuscarExamen.BackgroundImage = global::LaboratorioClinico.Properties.Resources.codigobarra;
-            this.Btn_BuscarExamen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Btn_BuscarExamen.Location = new System.Drawing.Point(546, 26);
-            this.Btn_BuscarExamen.Margin = new System.Windows.Forms.Padding(4);
-            this.Btn_BuscarExamen.Name = "Btn_BuscarExamen";
-            this.Btn_BuscarExamen.Size = new System.Drawing.Size(41, 38);
-            this.Btn_BuscarExamen.TabIndex = 111;
-            this.Btn_BuscarExamen.UseVisualStyleBackColor = false;
-            this.Btn_BuscarExamen.Click += new System.EventHandler(this.Btn_BuscarExamen_Click);
-            // 
             // Btn_guardarResultado
             // 
             this.Btn_guardarResultado.BackgroundImage = global::LaboratorioClinico.Properties.Resources.guardar;
@@ -425,6 +401,7 @@
             this.Btn_guardarResultado.Size = new System.Drawing.Size(53, 44);
             this.Btn_guardarResultado.TabIndex = 136;
             this.Btn_guardarResultado.UseVisualStyleBackColor = true;
+            this.Btn_guardarResultado.Click += new System.EventHandler(this.Btn_guardarResultado_Click);
             // 
             // Lbl_ingresarr
             // 
@@ -446,6 +423,7 @@
             this.Btn_imprimirResultado.Size = new System.Drawing.Size(53, 44);
             this.Btn_imprimirResultado.TabIndex = 134;
             this.Btn_imprimirResultado.UseVisualStyleBackColor = true;
+            this.Btn_imprimirResultado.Click += new System.EventHandler(this.Btn_imprimirResultado_Click);
             // 
             // Lbl_imprimirr
             // 
@@ -457,21 +435,6 @@
             this.Lbl_imprimirr.Size = new System.Drawing.Size(48, 15);
             this.Lbl_imprimirr.TabIndex = 135;
             this.Lbl_imprimirr.Text = "Imprimir";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "",
-            "gmail",
-            "yahoo",
-            "hotmail",
-            "outlook"});
-            this.comboBox1.Location = new System.Drawing.Point(453, 94);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(134, 30);
-            this.comboBox1.TabIndex = 112;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // groupBox2
             // 
@@ -497,18 +460,6 @@
             this.groupBox3.TabIndex = 139;
             this.groupBox3.TabStop = false;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(427, 100);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(23, 18);
-            this.label5.TabIndex = 52;
-            this.label5.Text = "@";
-            // 
             // ingresoResultado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -517,10 +468,6 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(766, 489);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.Btn_eliminarResultado);
-            this.Controls.Add(this.Btn_editarResultado);
-            this.Controls.Add(this.Lbl_eliminar);
-            this.Controls.Add(this.Lbl_editar);
             this.Controls.Add(this.Lbl_ingreseResultados);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.Gpb_datosf);
@@ -542,11 +489,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button Btn_eliminarResultado;
-        private System.Windows.Forms.Button Btn_editarResultado;
-        private System.Windows.Forms.Label Lbl_eliminar;
-        private System.Windows.Forms.Label Lbl_editar;
         private System.Windows.Forms.Label Lbl_ingreseResultados;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox Txt_resultadox;
@@ -569,7 +511,7 @@
         private System.Windows.Forms.Label Lbl_nitf;
         private System.Windows.Forms.Label Lbl_nombref;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Txt_Correor;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button Btn_BuscarExamen;
         private System.Windows.Forms.Button Btn_guardarResultado;
@@ -577,7 +519,7 @@
         private System.Windows.Forms.Button Btn_imprimirResultado;
         private System.Windows.Forms.Label Lbl_imprimirr;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox Cmb_correo;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
     }

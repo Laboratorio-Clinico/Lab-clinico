@@ -17,8 +17,32 @@ namespace LaboratorioClinico
         public ingresoResultado()
         {
             InitializeComponent();
+            tipoCorreo();
         }
+        public void tipoCorreo()
+        {
 
+         
+            try
+            {
+                Cmb_correo.Items.Clear();
+                Cmb_correo.Text = "Seleccione forma pago";
+                conexion.ObtenerConexion();
+                OdbcCommand comando = new OdbcCommand("Select iIdCorreo,sCorreo from correo", conexion.ObtenerConexion());
+                OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
+                DataTable tabla = new DataTable();
+
+                adaptador.Fill(tabla);
+
+                Cmb_correo.ValueMember = "iIdCorreo";
+                Cmb_correo.DisplayMember = "sCorreo";
+                Cmb_correo.DataSource = tabla;
+
+                conexion.ObtenerConexion().Close();
+
+            }
+            catch (OdbcException error) { MessageBox.Show(error.Message); }
+        }
         private void Btn_busc_Click(object sender, EventArgs e)
         {
             try
@@ -68,6 +92,64 @@ namespace LaboratorioClinico
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Btn_guardarResultado_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int iIdCorreo = Convert.ToInt32(Cmb_correo.SelectedValue);
+
+
+                OdbcCommand comando = new OdbcCommand("{CALL InsertaResultados(?,?,?,?,?,?)}", conexion.ObtenerConexion());
+                comando.CommandType = CommandType.StoredProcedure;
+
+                comando.Parameters.AddWithValue("@nIdPaciente", Txt_dpir.Text);
+                comando.Parameters.AddWithValue("@iIdExamen", Txt_codEx.Text);
+                comando.Parameters.AddWithValue("@requisitos", Txt_resultadox.Text);
+                comando.Parameters.AddWithValue("@fechaEmision", Dtp_fechar.Text);
+                comando.Parameters.AddWithValue("@correo", Txt_Correor.Text);
+                comando.Parameters.AddWithValue("@sCorreo", iIdCorreo);
+
+                comando.ExecuteNonQuery();
+                MessageBox.Show("Resultados insertados correctamente");
+            }
+            catch (Exception error) { MessageBox.Show("Error" + error); }
+            finally
+            { conexion.ObtenerConexion().Close(); }
+        }
+
+        private void Btn_imprimirResultado_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Btn_editarResultado_Click(object sender, EventArgs e)
+        {
+            /*
+            try
+            {
+                conexion.ObtenerConexion();
+                OdbcCommand cmd = conexion.ObtenerConexion().CreateCommand();
+
+                cmd.CommandText = "update examenes set sDescripcion = '" + Txt_nombrem.Text + "' where iIdExamen = '" + Convert.ToInt32(Txt_codigom.Text) + "'";
+                cmd.ExecuteNonQuery();
+                cmd.CommandText = "update examenes set fPrecio = '" + Convert.ToUInt32(Txt_preciom.Text) + "' where iIdExamen = '" + Convert.ToInt32(Txt_codigom.Text) + "'";
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Examen Modificado Exitosamente.", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                proCargaDatos();
+
+                //Limpiar y deshabilitar
+                Txt_codigom.Clear();
+                Txt_nombrem.Clear();
+                Txt_preciom.Clear();
+                Gpb_datosm.Enabled = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo modificar el registro.", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
+            }*/
         }
     }
 }
