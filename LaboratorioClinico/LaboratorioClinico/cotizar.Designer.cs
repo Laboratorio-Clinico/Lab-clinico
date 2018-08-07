@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(cotizar));
             this.Gpb_cotizacion = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.Txt_Cantidad = new System.Windows.Forms.TextBox();
             this.Cmb_doctor = new System.Windows.Forms.ComboBox();
@@ -61,7 +62,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
-            this.button1 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.Txt_noCotizacion = new System.Windows.Forms.TextBox();
             this.Gpb_cotizacion.SuspendLayout();
             this.Gpb_botones.SuspendLayout();
             this.Gpb_verDatos.SuspendLayout();
@@ -71,6 +73,8 @@
             // Gpb_cotizacion
             // 
             this.Gpb_cotizacion.BackColor = System.Drawing.Color.Transparent;
+            this.Gpb_cotizacion.Controls.Add(this.label3);
+            this.Gpb_cotizacion.Controls.Add(this.Txt_noCotizacion);
             this.Gpb_cotizacion.Controls.Add(this.button1);
             this.Gpb_cotizacion.Controls.Add(this.label1);
             this.Gpb_cotizacion.Controls.Add(this.Txt_Cantidad);
@@ -98,6 +102,16 @@
             this.Gpb_cotizacion.TabIndex = 34;
             this.Gpb_cotizacion.TabStop = false;
             this.Gpb_cotizacion.Text = "Cotización";
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(683, 19);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(53, 44);
+            this.button1.TabIndex = 35;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -159,7 +173,7 @@
             this.Lbl_examen.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_examen.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_examen.ForeColor = System.Drawing.Color.White;
-            this.Lbl_examen.Location = new System.Drawing.Point(91, 155);
+            this.Lbl_examen.Location = new System.Drawing.Point(105, 155);
             this.Lbl_examen.Name = "Lbl_examen";
             this.Lbl_examen.Size = new System.Drawing.Size(55, 18);
             this.Lbl_examen.TabIndex = 50;
@@ -170,9 +184,9 @@
             this.Cmb_laboratorio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Cmb_laboratorio.Font = new System.Drawing.Font("Perpetua", 12F);
             this.Cmb_laboratorio.FormattingEnabled = true;
-            this.Cmb_laboratorio.Location = new System.Drawing.Point(212, 67);
+            this.Cmb_laboratorio.Location = new System.Drawing.Point(358, 67);
             this.Cmb_laboratorio.Name = "Cmb_laboratorio";
-            this.Cmb_laboratorio.Size = new System.Drawing.Size(450, 26);
+            this.Cmb_laboratorio.Size = new System.Drawing.Size(304, 26);
             this.Cmb_laboratorio.TabIndex = 47;
             this.Cmb_laboratorio.SelectedIndexChanged += new System.EventHandler(this.Cmb_laboratorio_SelectedIndexChanged);
             // 
@@ -182,7 +196,7 @@
             this.Lbl_laboratorio.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_laboratorio.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_laboratorio.ForeColor = System.Drawing.Color.White;
-            this.Lbl_laboratorio.Location = new System.Drawing.Point(69, 70);
+            this.Lbl_laboratorio.Location = new System.Drawing.Point(215, 70);
             this.Lbl_laboratorio.Name = "Lbl_laboratorio";
             this.Lbl_laboratorio.Size = new System.Drawing.Size(77, 18);
             this.Lbl_laboratorio.TabIndex = 37;
@@ -194,7 +208,7 @@
             this.Lbl_fecha.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_fecha.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_fecha.ForeColor = System.Drawing.Color.White;
-            this.Lbl_fecha.Location = new System.Drawing.Point(105, 115);
+            this.Lbl_fecha.Location = new System.Drawing.Point(119, 115);
             this.Lbl_fecha.Name = "Lbl_fecha";
             this.Lbl_fecha.Size = new System.Drawing.Size(41, 18);
             this.Lbl_fecha.TabIndex = 38;
@@ -227,7 +241,7 @@
             // 
             this.Txt_noLaboratorio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Txt_noLaboratorio.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_noLaboratorio.Location = new System.Drawing.Point(165, 67);
+            this.Txt_noLaboratorio.Location = new System.Drawing.Point(311, 67);
             this.Txt_noLaboratorio.Name = "Txt_noLaboratorio";
             this.Txt_noLaboratorio.ReadOnly = true;
             this.Txt_noLaboratorio.Size = new System.Drawing.Size(41, 26);
@@ -261,6 +275,7 @@
             this.Txt_porcentajeDeDescuento.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_porcentajeDeDescuento.Location = new System.Drawing.Point(487, 193);
             this.Txt_porcentajeDeDescuento.Name = "Txt_porcentajeDeDescuento";
+            this.Txt_porcentajeDeDescuento.ReadOnly = true;
             this.Txt_porcentajeDeDescuento.Size = new System.Drawing.Size(49, 26);
             this.Txt_porcentajeDeDescuento.TabIndex = 43;
             // 
@@ -405,6 +420,8 @@
             // 
             // Dgv_verDatos
             // 
+            this.Dgv_verDatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.Dgv_verDatos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.Dgv_verDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Dgv_verDatos.Location = new System.Drawing.Point(19, 34);
             this.Dgv_verDatos.Name = "Dgv_verDatos";
@@ -432,15 +449,27 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
-            // button1
+            // label3
             // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(683, 19);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(53, 44);
-            this.button1.TabIndex = 35;
-            this.button1.UseVisualStyleBackColor = true;
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(65, 70);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(97, 18);
+            this.label3.TabIndex = 58;
+            this.label3.Text = "No. Cotización";
+            // 
+            // Txt_noCotizacion
+            // 
+            this.Txt_noCotizacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_noCotizacion.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_noCotizacion.Location = new System.Drawing.Point(168, 67);
+            this.Txt_noCotizacion.Name = "Txt_noCotizacion";
+            this.Txt_noCotizacion.ReadOnly = true;
+            this.Txt_noCotizacion.Size = new System.Drawing.Size(41, 26);
+            this.Txt_noCotizacion.TabIndex = 59;
             // 
             // cotizar
             // 
@@ -502,5 +531,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button Btn_agregar;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox Txt_noCotizacion;
     }
 }

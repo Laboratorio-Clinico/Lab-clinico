@@ -23,7 +23,10 @@ namespace LaboratorioClinico
             proLlenareDoctor();
             proLlenarDescuento();
             proLlenarLaboratorio();
+            proNumeroCotizacion();
         }
+
+        int contador = 0;
 
         private void label5_Click(object sender, EventArgs e)
         {
@@ -40,13 +43,26 @@ namespace LaboratorioClinico
 
         }
 
- 
-        public void proLlenareExamen()
+        public void proNumeroCotizacion()
         {
 
+            /*Este procedimiento crea la llave primaria que se guardará con la cotización, para hacerlo, cuenta los datos que estan
+             insertados en la tabla de cotizacion.*/
+
+            OdbcDataAdapter adaptador = new OdbcDataAdapter("select count(*) from cotizacion", conexion.ObtenerConexion());
+            DataTable contador = new DataTable();
+            adaptador.Fill(contador);
+
+            Txt_noCotizacion.Text = contador.Rows[0][0].ToString();
+
+
+        }
+        public void proLlenareExamen()
+        {
+            /*Este procedimiento carga al comboBox las opciones de exámen que existen en la base de datos.*/
             try
             {
-                
+
                 conexion.ObtenerConexion();
                 OdbcCommand comando = new OdbcCommand("Select iIdExamen, sDescripcion from examenes", conexion.ObtenerConexion());
                 OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
@@ -72,10 +88,11 @@ namespace LaboratorioClinico
         public void proLlenareDoctor()
         {
 
+            /*Este procedimiento carga al comboBox las opciones de los diferentes doctores que existen en la base de datos.*/
 
             try
             {
-               
+
                 conexion.ObtenerConexion();
                 OdbcCommand comando = new OdbcCommand("Select nIdEmpleado, sApellido from empleado where iIdCargo > 5010 && iIdCargo <5015", conexion.ObtenerConexion());
                 OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
@@ -99,18 +116,18 @@ namespace LaboratorioClinico
         }
         public void proLlenarLaboratorio()
         {
+
+            /*Este procedimiento carga al comboBox las diferentes ubicaciones del laboratorio que existen en la base de datos.*/
             try
             {
-           
+
                 conexion.ObtenerConexion();
                 OdbcCommand comando = new OdbcCommand("Select iIdLaboratorio, sUbicacion from laboratorio", conexion.ObtenerConexion());
                 OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
                 DataTable tabla = new DataTable();
 
                 adaptador.Fill(tabla);
-               /* DataRow fila = tabla.NewRow();
-                fila["sUbicacion"] = "Seleccione el laboratorio en el que se desea realizar el exámen";
-                tabla.Rows.InsertAt(fila, 0);*/
+
 
                 Cmb_laboratorio.ValueMember = "iIdLaboratorio";
                 Cmb_laboratorio.DisplayMember = "sUbicacion";
@@ -124,6 +141,7 @@ namespace LaboratorioClinico
         }
         public void proLlenarDescuento()
         {
+            /*Este procedimiento carga al comboBox los diferentes tipos de descuentos que existen en la base de datos.*/
             try
             {
 
@@ -133,10 +151,7 @@ namespace LaboratorioClinico
                 DataTable tabla = new DataTable();
 
                 adaptador.Fill(tabla);
-               /* DataRow fila = tabla.NewRow();
-                fila["tipo"] = "Seleccione el tipo de descuento";
-                tabla.Rows.InsertAt(fila, 0);
-                */
+
                 Cmb_tipoDeDescuento.ValueMember = "idtiposdes";
                 Cmb_tipoDeDescuento.DisplayMember = "tipo";
 
@@ -151,6 +166,7 @@ namespace LaboratorioClinico
 
         public void proSeleccionDeDescuento()
         {
+            /*Este procedimiento selecciona la cantidad de descuento que incluye el tipo de descuento seleccionado*/
             int iTipoDeDescuento = Convert.ToInt32(Cmb_tipoDeDescuento.SelectedValue);
             if (iTipoDeDescuento == 3001) { Txt_porcentajeDeDescuento.Text = "0.45"; }
             else if (iTipoDeDescuento == 3002) { Txt_porcentajeDeDescuento.Text = "0.35"; }
@@ -160,35 +176,7 @@ namespace LaboratorioClinico
 
         }
 
-        public void proGuardarCotizacion(int iIdExamenes, int iIdEmpleado, int iIdLaboratorio, int iIdTipoDescuento)
-        {
 
-            double doTotalExamenes = Convert.ToDouble(Txt_Total);
-            double doDescuento = Convert.ToDouble(Txt_porcentajeDeDescuento);
-            double doCantidad = Convert.ToDouble(Txt_Cantidad);
-            double doPrecio = (doTotalExamenes / doDescuento) / doCantidad;
-            try
-            {
-
-                OdbcCommand comando;
-                comando = new OdbcCommand("Pro_agregarCotizacion", conexion.ObtenerConexion());
-                comando.CommandType = CommandType.StoredProcedure;
-
-                comando.Parameters.AddWithValue("@iAIdLaboratorio", iIdLaboratorio);
-                comando.Parameters.AddWithValue("@dAFecha", this.Dtp_fecha.Value);
-                comando.Parameters.AddWithValue("@iAIdTipoDeDescuento", iIdTipoDescuento);
-                comando.Parameters.AddWithValue("@iAIdexamen", iIdExamenes);
-                comando.Parameters.AddWithValue("@iACantidad", doCantidad);
-                comando.Parameters.AddWithValue("@iAfPrecio", doPrecio);
-                comando.Parameters.AddWithValue("@iAfDescuento", doDescuento);
-                comando.Parameters.AddWithValue("@iAidEmpleado", iIdEmpleado);
-
-            }
-            catch (OdbcException error) { MessageBox.Show(error.Message); }
-            finally { conexion.ObtenerConexion().Close(); }
-
-
-        }
         public void proBuscarCotizacion(int iIdExamenes)
         {
 
@@ -209,12 +197,12 @@ namespace LaboratorioClinico
             }
         }
 
-       
 
-              
-       
 
-       public void proPrecioyTotal(int iIdExamenes)
+
+
+
+        public void proPrecioyTotal(int iIdExamenes)
         {
 
             double doPrecio = 0;
@@ -231,7 +219,7 @@ namespace LaboratorioClinico
                 OdbcDataReader buscador = comando.ExecuteReader();
                 if (buscador.Read() == true)
                 {
-                    
+
                     doPrecio = Convert.ToDouble(buscador["fPrecio"]);
                     doCantidad = Convert.ToDouble(Txt_Cantidad.Text);
                     doDescuento = Convert.ToDouble(Txt_porcentajeDeDescuento.Text);
@@ -240,24 +228,12 @@ namespace LaboratorioClinico
                     doTotal2 = doTotal2 + doTotal;
                     Txt_Total.Text = Convert.ToString(doTotal);
                 }
-            
+
             }
             catch (OdbcException error) { MessageBox.Show(error.Message); }
             finally { conexion.ObtenerConexion().Close(); }
         }
-   
-        /*private void Btn_buscar_Click(object sender, EventArgs e)
-        {
-           
-            int iIdExamenes = Convert.ToInt32(Cmb_examen.SelectedValue);
-           /// Dgv_verDatos.DataSource = Resources.BuscarExamen.buscar(iIdExamenes);   
- 
-            proBuscarCotizacion(iIdExamenes);
-           
-            proPrecioyTotal(iIdExamenes);
-            
 
-*/
 
         private void Btn_requisitos_Click(object sender, EventArgs e)
         {
@@ -273,27 +249,30 @@ namespace LaboratorioClinico
             int iEmpleado = Convert.ToInt32(Cmb_doctor.SelectedValue);
             int iTipoDescuento = Convert.ToInt32(Cmb_tipoDeDescuento.SelectedValue);
             int iLaboratorio = Convert.ToInt32(Cmb_laboratorio.SelectedValue);
-            proGuardarCotizacion(iExamenes, iEmpleado, iLaboratorio, iTipoDescuento);
-            
+
         }
 
         private void Cmb_tipoDeDescuento_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
-                proSeleccionDeDescuento();
-               
+            /*Al seleccionar el tipo de descuento, llamamos al procedimiento que nos cargará el tipo de descuento que tendremos.*/
+            proSeleccionDeDescuento();
+
         }
 
         private void Cmb_laboratorio_SelectedIndexChanged(object sender, EventArgs e)
         {
-            try {
+            /*Al seleccionar la ubicación del laboratorio, se carga en el textBox  Txt_noLaboratorio el número de laboratorio
+             al que esa sucursal pertenece */
+            try
+            {
                 if (Cmb_laboratorio.SelectedValue.ToString() != null)
                 {
                     int iLaboratorio = Convert.ToInt32(Cmb_laboratorio.SelectedValue);
                     Txt_noLaboratorio.Text = iLaboratorio.ToString();
                 }
-            } catch(Exception error){ MessageBox.Show(error.Message); }
-      
+            }
+            catch (Exception error) { MessageBox.Show(error.Message); }
+
         }
 
         private void Cmb_examen_SelectedIndexChanged(object sender, EventArgs e)
@@ -301,7 +280,7 @@ namespace LaboratorioClinico
 
         }
 
-   
+
 
         private void Btn_agregar_Click(object sender, EventArgs e)
         {
@@ -321,9 +300,18 @@ namespace LaboratorioClinico
         private void Btn_buscar_Click(object sender, EventArgs e)
 
         {
+            contador++;
             int iIdExamenes = Convert.ToInt32(Cmb_examen.SelectedValue);
             proBuscarCotizacion(iIdExamenes);
             proPrecioyTotal(iIdExamenes);
+            /*if (contador > 1) {
+                proGuardarDetallesCotizacion();
+            }
+            else {
+                proGuardarCotizacion();
+                proGuardarDetallesCotizacion();
+            } */
+
         }
     }
 }

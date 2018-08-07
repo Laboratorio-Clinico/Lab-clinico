@@ -21,6 +21,7 @@ namespace LaboratorioClinico
 
         public void Pro_llenarDatos(Decimal nPaciente)
         {
+            /*En este procedimiento se cargan los datos del paciente en los diferentes campos que muestra la forma*/
             try
             {
                 OdbcCommand comando = new OdbcCommand(string.Format("Select *from paciente where nidpaciente='{0}'", nPaciente), conexion.ObtenerConexion());
@@ -48,6 +49,7 @@ namespace LaboratorioClinico
 
         public void Pro_llenarMembresias()
         {
+            /*En este procedimiento se guardan los diferentes tipos de membresias dentro de un comboBox*/
             try
             {
 
@@ -76,6 +78,8 @@ namespace LaboratorioClinico
 
         public void Pro_agregarMembresia()
         {
+            /*En este procedimiento se guarda la nueva membresia que el paciente seleccione del comboBox, además de que guardará los créditos de
+              beneficio que el obtener la membresia conlleva*/
 
             try
             {
@@ -101,7 +105,7 @@ namespace LaboratorioClinico
 
         public void Pro_mostrarBeneficios()
         {
-            
+            /*En este procedimiento se muestra al usuario los diferentes beneficios que la membresia seleccionada por el comboBox.*/
             try
             {
                 int iMembresias = Convert.ToInt32(Cmb_membresia.SelectedValue);
@@ -112,9 +116,7 @@ namespace LaboratorioClinico
                 DataTable tabla = new DataTable();
                 OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
                 adaptador.Fill(tabla);
-             /*   int fila = Dgv_verBeneficios.Rows.Add();
-                Dgv_verBeneficios.Rows[fila].Cells[1].Value = tabla;*/
-               Dgv_verBeneficios.DataSource = tabla;
+                Dgv_verBeneficios.DataSource = tabla;
             }
             catch (OdbcException error) { MessageBox.Show(error.Message); }
             finally
@@ -127,6 +129,10 @@ namespace LaboratorioClinico
         }
         private void Btn_buscar_Click(object sender, EventArgs e)
         {
+            /*Este botón obtiene el Dpi del paciente y lo convierte en un decimal, luego lo envia al procedimiento que se encarga de 
+             cargar los datos que la base de datos que tiene el paciente, ademas de cargar el comboBox que me permitirá seleccionar
+             la membresía.*/
+
             decimal nPaciente = Convert.ToDecimal(Txt_DPI.Text);
             Pro_llenarDatos(nPaciente);
             Pro_llenarMembresias();
@@ -135,11 +141,13 @@ namespace LaboratorioClinico
 
         private void Btn_agregar_Click(object sender, EventArgs e)
         {
+            /*Este botón se encarga de llamar al procedimiento que guardará la nueva membresia del paciente*/
             Pro_agregarMembresia();
         }
 
         private void Btn_Beneficios_Click(object sender, EventArgs e)
         {
+            /*Este botón se encarga de llamar al procedimiento que muestra los diferentes tipos de beneficios de membresias*/
             Pro_mostrarBeneficios();
         }
 

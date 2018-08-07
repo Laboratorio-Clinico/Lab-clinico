@@ -83,6 +83,8 @@
             // 
             // Dgv_verBeneficios
             // 
+            this.Dgv_verBeneficios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.Dgv_verBeneficios.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.Dgv_verBeneficios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Dgv_verBeneficios.Location = new System.Drawing.Point(26, 269);
             this.Dgv_verBeneficios.Name = "Dgv_verBeneficios";
