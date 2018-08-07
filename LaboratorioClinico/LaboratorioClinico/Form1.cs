@@ -74,7 +74,7 @@ namespace LaboratorioClinico
                     // MessageBox.Show("Usuario Correcto", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
-                    //Datos para Bitacora @SB
+                    //Datos para Bitacora @SB--------------------------------------------------------------------------------------------------------------
                     DateTime fechaInicio = DateTime.Now;
 
                     IPHostEntry host;
@@ -106,14 +106,14 @@ namespace LaboratorioClinico
                         comando.Parameters.AddWithValue("@dfechaEntrada",fechaInicio);
                         comando.Parameters.AddWithValue("@dfechaSalida", fechaInicio);
                         comando.Parameters.AddWithValue("@sComputadora",localIP );
-
                         comando.ExecuteNonQuery();
                        
-                    }
-                    catch (Exception error) { MessageBox.Show("Error" + error); }
-                   
+                    }catch (Exception error) { MessageBox.Show("Error" + error); }
                     { conexion.ObtenerConexion().Close(); }
 
+
+
+                    //-------------------------------------------------------------------------------------------------------------------------------
 
 
 
