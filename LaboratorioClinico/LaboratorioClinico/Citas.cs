@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Odbc;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,31 @@ namespace LaboratorioClinico
         {
             InitializeComponent();
         }
+        int id;
+        private void obtenerId()
+        {
+            try
+            {
+                OdbcCommand comando = new OdbcCommand("Select count(*) from citas", conexion.ObtenerConexion());
+                OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
+                DataTable tabla = new DataTable();
+                adaptador.Fill(tabla);
+
+                id = Convert.ToInt32(tabla.Rows[0][0]);
+
+                //MessageBox.Show("Mostrando: " + tabla.Rows[0][0].ToString());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se encontro count");
+            }
+        }
+
+        private void prollenarExamen()
+        {
+
+        }
+
 
         private void Citas_Load(object sender, EventArgs e)
         {
@@ -39,9 +65,41 @@ namespace LaboratorioClinico
             this.Show();
         }
 
-        private void Btn_buscar_Click(object sender, EventArgs e)
+        private void Btn_buscar_Click(object sender, EventArgs e)//BUSCAR SI EXISTE CLIENTE, SI NO... INGRESARLO.
         {
+            try
+            {
+                OdbcDataAdapter sda = new OdbcDataAdapter("SELECT sNombre, sNit, sDireccion FROM paciente WHERE nIdPaciente ='" + Convert.ToInt32(Txt_dpi.Text) + "'", conexion.ObtenerConexion());
+                DataTable datos = new DataTable();
+                sda.Fill(datos);
 
+                if (datos.Rows.Count > 0)
+                {
+                    Txt_nombrep.Text = datos.Rows[0][0].ToString();
+                    Txt_nitp.Text = datos.Rows[0][1].ToString();
+                    Txt_direp.Text = datos.Rows[0][2].ToString();
+
+                    //cargar el # de cita actual
+                    Lbl_numeroCita.Text = Convert.ToString(id + 1);
+                }
+                else
+                {
+                    this.Hide();
+                    new Paciente().ShowDialog();
+                    this.Show();
+                }
+            }
+            catch(Exception ex)
+            {
+
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Exámen().ShowDialog();
+            this.Show();
         }
     }
 }
