@@ -11,7 +11,8 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Net;
+using System.Net.NetworkInformation;
 namespace LaboratorioClinico
 {
     public partial class Form1 : Form
@@ -70,12 +71,44 @@ namespace LaboratorioClinico
 
                 if (datos.Rows[0][0].ToString() == "1")
                 {
-                   // MessageBox.Show("Usuario Correcto", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // MessageBox.Show("Usuario Correcto", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                    //Datos para Bitacora @SB
+                    DateTime fechaInicio = DateTime.Now;
+
+                    IPHostEntry host;
+                    string localIP = "";
+                    host = Dns.GetHostEntry(Dns.GetHostName());
+                    foreach ( IPAddress ip in host.AddressList)
+                    {
+                        if (ip.AddressFamily.ToString() == "InterNetwork")
+                        {
+                            localIP = ip.ToString();
+                        }
+                    }
+
+
+                    try
+                    {
+                        OdbcCommand comando = new OdbcCommand("{CALL pd_InsertaBitacora(?,?,?)}", conexion.ObtenerConexion());
+                        comando.CommandType = CommandType.StoredProcedure;
+
+                        comando.Parameters.AddWithValue("@sUsuario",user);
+                        comando.Parameters.AddWithValue("@dfechaEntrada",fechaInicio);
+                        comando.Parameters.AddWithValue("@sComputadora",localIP );
+
+                        comando.ExecuteNonQuery();
+                       
+                    }
+                    catch (Exception error) { MessageBox.Show("Error" + error); }
+                   
+                    { conexion.ObtenerConexion().Close(); }
+
+
 
 
                     conexion.ObtenerConexion().Close();
-
-
                     try
                     {
                         //--------------------------Saber privilegio--------------------------------
