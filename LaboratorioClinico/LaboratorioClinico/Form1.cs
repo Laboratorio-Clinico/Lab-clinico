@@ -99,10 +99,10 @@ namespace LaboratorioClinico
                         comando.Parameters.AddWithValue("@sComputadora",localIP );
 
                         comando.ExecuteNonQuery();
-                        MessageBox.Show("Resultados insertados correctamente");
+                       
                     }
                     catch (Exception error) { MessageBox.Show("Error" + error); }
-                    finally
+                   
                     { conexion.ObtenerConexion().Close(); }
 
 
