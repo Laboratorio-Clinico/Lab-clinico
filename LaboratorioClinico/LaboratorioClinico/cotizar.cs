@@ -43,7 +43,8 @@ namespace LaboratorioClinico
 
         }
 
-        public void proNumeroCotizacion() {
+        public void proNumeroCotizacion()
+        {
 
             /*Este procedimiento crea la llave primaria que se guardará con la cotización, para hacerlo, cuenta los datos que estan
              insertados en la tabla de cotizacion.*/
@@ -61,7 +62,7 @@ namespace LaboratorioClinico
             /*Este procedimiento carga al comboBox las opciones de exámen que existen en la base de datos.*/
             try
             {
-                
+
                 conexion.ObtenerConexion();
                 OdbcCommand comando = new OdbcCommand("Select iIdExamen, sDescripcion from examenes", conexion.ObtenerConexion());
                 OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
@@ -91,7 +92,7 @@ namespace LaboratorioClinico
 
             try
             {
-               
+
                 conexion.ObtenerConexion();
                 OdbcCommand comando = new OdbcCommand("Select nIdEmpleado, sApellido from empleado where iIdCargo > 5010 && iIdCargo <5015", conexion.ObtenerConexion());
                 OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
@@ -119,14 +120,14 @@ namespace LaboratorioClinico
             /*Este procedimiento carga al comboBox las diferentes ubicaciones del laboratorio que existen en la base de datos.*/
             try
             {
-           
+
                 conexion.ObtenerConexion();
                 OdbcCommand comando = new OdbcCommand("Select iIdLaboratorio, sUbicacion from laboratorio", conexion.ObtenerConexion());
                 OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
                 DataTable tabla = new DataTable();
 
                 adaptador.Fill(tabla);
-  
+
 
                 Cmb_laboratorio.ValueMember = "iIdLaboratorio";
                 Cmb_laboratorio.DisplayMember = "sUbicacion";
@@ -175,7 +176,7 @@ namespace LaboratorioClinico
 
         }
 
-  
+
         public void proBuscarCotizacion(int iIdExamenes)
         {
 
@@ -196,12 +197,12 @@ namespace LaboratorioClinico
             }
         }
 
-       
 
-              
-       
 
-       public void proPrecioyTotal(int iIdExamenes)
+
+
+
+        public void proPrecioyTotal(int iIdExamenes)
         {
 
             double doPrecio = 0;
@@ -218,7 +219,7 @@ namespace LaboratorioClinico
                 OdbcDataReader buscador = comando.ExecuteReader();
                 if (buscador.Read() == true)
                 {
-                    
+
                     doPrecio = Convert.ToDouble(buscador["fPrecio"]);
                     doCantidad = Convert.ToDouble(Txt_Cantidad.Text);
                     doDescuento = Convert.ToDouble(Txt_porcentajeDeDescuento.Text);
@@ -227,7 +228,7 @@ namespace LaboratorioClinico
                     doTotal2 = doTotal2 + doTotal;
                     Txt_Total.Text = Convert.ToString(doTotal);
                 }
-            
+
             }
             catch (OdbcException error) { MessageBox.Show(error.Message); }
             finally { conexion.ObtenerConexion().Close(); }
@@ -248,14 +249,14 @@ namespace LaboratorioClinico
             int iEmpleado = Convert.ToInt32(Cmb_doctor.SelectedValue);
             int iTipoDescuento = Convert.ToInt32(Cmb_tipoDeDescuento.SelectedValue);
             int iLaboratorio = Convert.ToInt32(Cmb_laboratorio.SelectedValue);
-            
+
         }
 
         private void Cmb_tipoDeDescuento_SelectedIndexChanged(object sender, EventArgs e)
         {
-           /*Al seleccionar el tipo de descuento, llamamos al procedimiento que nos cargará el tipo de descuento que tendremos.*/
-                proSeleccionDeDescuento();
-               
+            /*Al seleccionar el tipo de descuento, llamamos al procedimiento que nos cargará el tipo de descuento que tendremos.*/
+            proSeleccionDeDescuento();
+
         }
 
         private void Cmb_laboratorio_SelectedIndexChanged(object sender, EventArgs e)
@@ -269,8 +270,9 @@ namespace LaboratorioClinico
                     int iLaboratorio = Convert.ToInt32(Cmb_laboratorio.SelectedValue);
                     Txt_noLaboratorio.Text = iLaboratorio.ToString();
                 }
-            } catch(Exception error){ MessageBox.Show(error.Message); }
-      
+            }
+            catch (Exception error) { MessageBox.Show(error.Message); }
+
         }
 
         private void Cmb_examen_SelectedIndexChanged(object sender, EventArgs e)
@@ -278,7 +280,7 @@ namespace LaboratorioClinico
 
         }
 
-   
+
 
         private void Btn_agregar_Click(object sender, EventArgs e)
         {

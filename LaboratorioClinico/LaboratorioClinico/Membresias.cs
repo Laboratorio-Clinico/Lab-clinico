@@ -116,7 +116,7 @@ namespace LaboratorioClinico
                 DataTable tabla = new DataTable();
                 OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
                 adaptador.Fill(tabla);
-               Dgv_verBeneficios.DataSource = tabla;
+                Dgv_verBeneficios.DataSource = tabla;
             }
             catch (OdbcException error) { MessageBox.Show(error.Message); }
             finally

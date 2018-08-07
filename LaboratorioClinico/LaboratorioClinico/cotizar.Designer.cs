@@ -455,21 +455,21 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(63, 70);
+            this.label3.Location = new System.Drawing.Point(65, 70);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(97, 18);
-            this.label3.TabIndex = 56;
+            this.label3.TabIndex = 58;
             this.label3.Text = "No. Cotización";
             // 
             // Txt_noCotizacion
             // 
             this.Txt_noCotizacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Txt_noCotizacion.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_noCotizacion.Location = new System.Drawing.Point(166, 67);
+            this.Txt_noCotizacion.Location = new System.Drawing.Point(168, 67);
             this.Txt_noCotizacion.Name = "Txt_noCotizacion";
             this.Txt_noCotizacion.ReadOnly = true;
             this.Txt_noCotizacion.Size = new System.Drawing.Size(41, 26);
-            this.Txt_noCotizacion.TabIndex = 57;
+            this.Txt_noCotizacion.TabIndex = 59;
             // 
             // cotizar
             // 
