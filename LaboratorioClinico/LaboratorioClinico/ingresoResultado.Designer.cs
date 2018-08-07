@@ -448,7 +448,6 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "ingresoResultado";
-            this.Text = "ingresoResultado";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.Gpb_datosf.ResumeLayout(false);
