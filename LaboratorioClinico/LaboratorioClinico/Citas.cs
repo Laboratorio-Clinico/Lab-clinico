@@ -91,10 +91,10 @@ namespace LaboratorioClinico
                 Dgv_examen.Rows.Add(datos.Rows[0][0].ToString(), datos.Rows[0][1].ToString(), datos.Rows[0][2].ToString());
 
                 //Crea la muestra
-                /*
+                
                 this.Hide();
-                new CrearCodigo(Convert.ToInt32(Cmb_examenes.SelectedItem.ToString()), Convert.ToInt32(Txt_dpi.Text)).ShowDialog();
-                this.Show();*/
+                new CrearCodigo(Convert.ToInt32(Cmb_examenes.SelectedValue), Convert.ToInt32(Txt_dpi.Text)).ShowDialog();
+                this.Show();
             }
             catch (Exception ex)
             {
