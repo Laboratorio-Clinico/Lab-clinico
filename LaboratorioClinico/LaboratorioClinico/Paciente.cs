@@ -159,5 +159,15 @@ namespace LaboratorioClinico
         {
 
         }
+
+        private void Gpb_datosp_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Gpb_guardarp_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

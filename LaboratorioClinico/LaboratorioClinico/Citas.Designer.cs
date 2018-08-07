@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Lbl_titulo = new System.Windows.Forms.Label();
             this.Gpb_datosm = new System.Windows.Forms.GroupBox();
             this.Lbl_nombrep = new System.Windows.Forms.Label();
@@ -60,8 +60,6 @@
             this.Lbl_precio = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.Gpb_datosm.SuspendLayout();
             this.Gpb_detalleCita.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_examen)).BeginInit();
@@ -157,6 +155,7 @@
             this.Btn_buscar.Size = new System.Drawing.Size(53, 44);
             this.Btn_buscar.TabIndex = 106;
             this.Btn_buscar.UseVisualStyleBackColor = false;
+            this.Btn_buscar.Click += new System.EventHandler(this.Btn_buscar_Click);
             // 
             // Lbl_direp
             // 
@@ -207,8 +206,6 @@
             // Gpb_detalleCita
             // 
             this.Gpb_detalleCita.BackColor = System.Drawing.Color.Transparent;
-            this.Gpb_detalleCita.Controls.Add(this.label3);
-            this.Gpb_detalleCita.Controls.Add(this.button2);
             this.Gpb_detalleCita.Controls.Add(this.label2);
             this.Gpb_detalleCita.Controls.Add(this.button1);
             this.Gpb_detalleCita.Controls.Add(this.Lbl_precio);
@@ -226,7 +223,6 @@
             this.Gpb_detalleCita.Controls.Add(this.Txt_hora);
             this.Gpb_detalleCita.Controls.Add(this.Lbl_hora);
             this.Gpb_detalleCita.Controls.Add(this.Lbl_fecha);
-            this.Gpb_detalleCita.Enabled = false;
             this.Gpb_detalleCita.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Gpb_detalleCita.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.Gpb_detalleCita.Location = new System.Drawing.Point(23, 260);
@@ -235,6 +231,7 @@
             this.Gpb_detalleCita.TabIndex = 121;
             this.Gpb_detalleCita.TabStop = false;
             this.Gpb_detalleCita.Text = "Detalle de Cita";
+            this.Gpb_detalleCita.Enter += new System.EventHandler(this.Gpb_detalleCita_Enter);
             // 
             // Lbl_fecha
             // 
@@ -339,36 +336,36 @@
             this.Dgv_examen.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Dgv_examen.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.Dgv_examen.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkSlateGray;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.CadetBlue;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.LightCyan;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgv_examen.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.DarkSlateGray;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.CadetBlue;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.LightCyan;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_examen.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
             this.Dgv_examen.ColumnHeadersHeight = 27;
             this.Dgv_examen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.CadetBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.LightCyan;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Dgv_examen.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.CadetBlue;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.LightCyan;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Dgv_examen.DefaultCellStyle = dataGridViewCellStyle17;
             this.Dgv_examen.EnableHeadersVisualStyles = false;
             this.Dgv_examen.Location = new System.Drawing.Point(174, 205);
             this.Dgv_examen.Name = "Dgv_examen";
             this.Dgv_examen.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.CadetBlue;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgv_examen.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.CadetBlue;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_examen.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
             this.Dgv_examen.Size = new System.Drawing.Size(386, 104);
             this.Dgv_examen.TabIndex = 126;
             this.Dgv_examen.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_examen_CellContentClick);
@@ -383,6 +380,7 @@
             this.Btn_agregar.Size = new System.Drawing.Size(53, 44);
             this.Btn_agregar.TabIndex = 127;
             this.Btn_agregar.UseVisualStyleBackColor = true;
+            this.Btn_agregar.Click += new System.EventHandler(this.Btn_agregar_Click);
             // 
             // label1
             // 
@@ -468,29 +466,6 @@
             this.label2.TabIndex = 134;
             this.label2.Text = "Ver Exámenes";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(573, 240);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 22);
-            this.label3.TabIndex = 136;
-            this.label3.Text = "Crear muestra";
-            // 
-            // button2
-            // 
-            this.button2.BackgroundImage = global::LaboratorioClinico.Properties.Resources.anadir;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Location = new System.Drawing.Point(577, 265);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(53, 44);
-            this.button2.TabIndex = 135;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // Citas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -546,7 +521,5 @@
         private System.Windows.Forms.TextBox Txt_Precio;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button2;
     }
 }
