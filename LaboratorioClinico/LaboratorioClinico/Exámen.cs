@@ -101,8 +101,8 @@ namespace LaboratorioClinico
                 conexion.ObtenerConexion();
                 OdbcCommand cmd = conexion.ObtenerConexion().CreateCommand();
 
-                cmd.CommandText = "update examenes set sDescripcion = '" + Txt_nombrem.Text + "' where iIdExamen = '" + Convert.ToInt32(Txt_codigom.Text) + "'";
-                cmd.ExecuteNonQuery();
+                //cmd.CommandText = "update examenes set sDescripcion = '" + Txt_nombrem.Text + "' where iIdExamen = '" + Convert.ToInt32(Txt_codigom.Text) + "'";
+                //cmd.ExecuteNonQuery();
                 cmd.CommandText = "update examenes set fPrecio = '" + Convert.ToUInt32(Txt_preciom.Text) + "' where iIdExamen = '" + Convert.ToInt32(Txt_codigom.Text) + "'";
                 cmd.ExecuteNonQuery();
 
@@ -132,6 +132,7 @@ namespace LaboratorioClinico
             {
                 Gpb_datosm.Enabled = true;
                 Txt_codigom.Enabled = false;
+                Txt_nombrem.Enabled = false;
                 if (Dgv_examen.SelectedRows.Count > 0)
                 {
                     Txt_codigom.Text = Dgv_examen.CurrentRow.Cells[0].Value.ToString();
