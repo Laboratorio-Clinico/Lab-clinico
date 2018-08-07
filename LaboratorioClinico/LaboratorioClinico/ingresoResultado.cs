@@ -19,10 +19,10 @@ namespace LaboratorioClinico
             InitializeComponent();
             tipoCorreo();
         }
-        public void tipoCorreo()
-        {
 
-         
+        //Correos
+        public void tipoCorreo()
+        {         
             try
             {
 
@@ -44,6 +44,8 @@ namespace LaboratorioClinico
             }
             catch (OdbcException error) { MessageBox.Show(error.Message); }
         }
+
+        //Carga la informacion donde el nit sea igual 
         private void Btn_busc_Click(object sender, EventArgs e)
         {
             try
@@ -63,6 +65,7 @@ namespace LaboratorioClinico
             }
         }
 
+        //Carga la información donde el nit sea igual al ingresado
         private void Btn_BuscarExamen_Click(object sender, EventArgs e)
         {
             try
@@ -95,6 +98,7 @@ namespace LaboratorioClinico
 
         }
 
+        //Guarda los datos de los resultados ingresados
         private void Btn_guardarResultado_Click(object sender, EventArgs e)
         {
             try
@@ -127,30 +131,7 @@ namespace LaboratorioClinico
 
         private void Btn_editarResultado_Click(object sender, EventArgs e)
         {
-            /*
-            try
-            {
-                conexion.ObtenerConexion();
-                OdbcCommand cmd = conexion.ObtenerConexion().CreateCommand();
-
-                cmd.CommandText = "update examenes set sDescripcion = '" + Txt_nombrem.Text + "' where iIdExamen = '" + Convert.ToInt32(Txt_codigom.Text) + "'";
-                cmd.ExecuteNonQuery();
-                cmd.CommandText = "update examenes set fPrecio = '" + Convert.ToUInt32(Txt_preciom.Text) + "' where iIdExamen = '" + Convert.ToInt32(Txt_codigom.Text) + "'";
-                cmd.ExecuteNonQuery();
-
-                MessageBox.Show("Examen Modificado Exitosamente.", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                proCargaDatos();
-
-                //Limpiar y deshabilitar
-                Txt_codigom.Clear();
-                Txt_nombrem.Clear();
-                Txt_preciom.Clear();
-                Gpb_datosm.Enabled = false;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("No se pudo modificar el registro.", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
-            }*/
+           
         }
     }
 }
