@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(cotizar));
             this.Gpb_cotizacion = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.Txt_noCotizacion = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.Txt_Cantidad = new System.Windows.Forms.TextBox();
@@ -62,8 +64,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
-            this.label3 = new System.Windows.Forms.Label();
-            this.Txt_noCotizacion = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.Txt_precioE = new System.Windows.Forms.TextBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -105,6 +107,28 @@
             this.Gpb_cotizacion.TabIndex = 34;
             this.Gpb_cotizacion.TabStop = false;
             this.Gpb_cotizacion.Text = "Cotización";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(65, 70);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(97, 18);
+            this.label3.TabIndex = 58;
+            this.label3.Text = "No. Cotización";
+            // 
+            // Txt_noCotizacion
+            // 
+            this.Txt_noCotizacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_noCotizacion.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_noCotizacion.Location = new System.Drawing.Point(168, 67);
+            this.Txt_noCotizacion.Name = "Txt_noCotizacion";
+            this.Txt_noCotizacion.ReadOnly = true;
+            this.Txt_noCotizacion.Size = new System.Drawing.Size(41, 26);
+            this.Txt_noCotizacion.TabIndex = 59;
             // 
             // button1
             // 
@@ -293,9 +317,9 @@
             this.Gpb_botones.Controls.Add(this.Lbl_requisitos);
             this.Gpb_botones.Controls.Add(this.label2);
             this.Gpb_botones.Controls.Add(this.Btn_buscar);
-            this.Gpb_botones.Location = new System.Drawing.Point(563, 220);
+            this.Gpb_botones.Location = new System.Drawing.Point(571, 233);
             this.Gpb_botones.Name = "Gpb_botones";
-            this.Gpb_botones.Size = new System.Drawing.Size(173, 239);
+            this.Gpb_botones.Size = new System.Drawing.Size(165, 216);
             this.Gpb_botones.TabIndex = 36;
             this.Gpb_botones.TabStop = false;
             // 
@@ -303,7 +327,7 @@
             // 
             this.Btn_agregar.BackgroundImage = global::LaboratorioClinico.Properties.Resources.anadir;
             this.Btn_agregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Btn_agregar.Location = new System.Drawing.Point(102, 52);
+            this.Btn_agregar.Location = new System.Drawing.Point(92, 40);
             this.Btn_agregar.Name = "Btn_agregar";
             this.Btn_agregar.Size = new System.Drawing.Size(53, 44);
             this.Btn_agregar.TabIndex = 35;
@@ -315,7 +339,7 @@
             this.Lbl_imprimir.AutoSize = true;
             this.Lbl_imprimir.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_imprimir.ForeColor = System.Drawing.Color.PowderBlue;
-            this.Lbl_imprimir.Location = new System.Drawing.Point(102, 196);
+            this.Lbl_imprimir.Location = new System.Drawing.Point(92, 184);
             this.Lbl_imprimir.Name = "Lbl_imprimir";
             this.Lbl_imprimir.Size = new System.Drawing.Size(48, 15);
             this.Lbl_imprimir.TabIndex = 32;
@@ -326,7 +350,7 @@
             this.Lbl_buscar.AutoSize = true;
             this.Lbl_buscar.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_buscar.ForeColor = System.Drawing.Color.PowderBlue;
-            this.Lbl_buscar.Location = new System.Drawing.Point(32, 99);
+            this.Lbl_buscar.Location = new System.Drawing.Point(22, 87);
             this.Lbl_buscar.Name = "Lbl_buscar";
             this.Lbl_buscar.Size = new System.Drawing.Size(38, 15);
             this.Lbl_buscar.TabIndex = 32;
@@ -336,7 +360,7 @@
             // 
             this.Btn_imprimir.BackgroundImage = global::LaboratorioClinico.Properties.Resources.impresora1;
             this.Btn_imprimir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Btn_imprimir.Location = new System.Drawing.Point(102, 149);
+            this.Btn_imprimir.Location = new System.Drawing.Point(92, 137);
             this.Btn_imprimir.Name = "Btn_imprimir";
             this.Btn_imprimir.Size = new System.Drawing.Size(53, 44);
             this.Btn_imprimir.TabIndex = 8;
@@ -347,7 +371,7 @@
             // 
             this.Btn_requisitos.BackgroundImage = global::LaboratorioClinico.Properties.Resources.requerimientos;
             this.Btn_requisitos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Btn_requisitos.Location = new System.Drawing.Point(27, 149);
+            this.Btn_requisitos.Location = new System.Drawing.Point(17, 137);
             this.Btn_requisitos.Name = "Btn_requisitos";
             this.Btn_requisitos.Size = new System.Drawing.Size(53, 44);
             this.Btn_requisitos.TabIndex = 10;
@@ -359,7 +383,7 @@
             this.Lbl_requisitos.AutoSize = true;
             this.Lbl_requisitos.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_requisitos.ForeColor = System.Drawing.Color.PowderBlue;
-            this.Lbl_requisitos.Location = new System.Drawing.Point(24, 196);
+            this.Lbl_requisitos.Location = new System.Drawing.Point(14, 184);
             this.Lbl_requisitos.Name = "Lbl_requisitos";
             this.Lbl_requisitos.Size = new System.Drawing.Size(56, 15);
             this.Lbl_requisitos.TabIndex = 31;
@@ -370,17 +394,17 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.PowderBlue;
-            this.label2.Location = new System.Drawing.Point(107, 99);
+            this.label2.Location = new System.Drawing.Point(97, 87);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 15);
+            this.label2.Size = new System.Drawing.Size(37, 15);
             this.label2.TabIndex = 34;
-            this.label2.Text = "Agregar";
+            this.label2.Text = "Nueva";
             // 
             // Btn_buscar
             // 
             this.Btn_buscar.BackgroundImage = global::LaboratorioClinico.Properties.Resources.file;
             this.Btn_buscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Btn_buscar.Location = new System.Drawing.Point(27, 52);
+            this.Btn_buscar.Location = new System.Drawing.Point(17, 40);
             this.Btn_buscar.Name = "Btn_buscar";
             this.Btn_buscar.Size = new System.Drawing.Size(53, 44);
             this.Btn_buscar.TabIndex = 11;
@@ -390,12 +414,14 @@
             // Gpb_verDatos
             // 
             this.Gpb_verDatos.BackColor = System.Drawing.Color.Transparent;
+            this.Gpb_verDatos.Controls.Add(this.label4);
+            this.Gpb_verDatos.Controls.Add(this.Txt_precioE);
             this.Gpb_verDatos.Controls.Add(this.Lbl_total);
             this.Gpb_verDatos.Controls.Add(this.Txt_Total);
             this.Gpb_verDatos.Controls.Add(this.Dgv_verDatos);
-            this.Gpb_verDatos.Location = new System.Drawing.Point(16, 220);
+            this.Gpb_verDatos.Location = new System.Drawing.Point(15, 233);
             this.Gpb_verDatos.Name = "Gpb_verDatos";
-            this.Gpb_verDatos.Size = new System.Drawing.Size(527, 239);
+            this.Gpb_verDatos.Size = new System.Drawing.Size(540, 216);
             this.Gpb_verDatos.TabIndex = 35;
             this.Gpb_verDatos.TabStop = false;
             // 
@@ -404,17 +430,17 @@
             this.Lbl_total.AutoSize = true;
             this.Lbl_total.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_total.ForeColor = System.Drawing.Color.White;
-            this.Lbl_total.Location = new System.Drawing.Point(382, 190);
+            this.Lbl_total.Location = new System.Drawing.Point(340, 180);
             this.Lbl_total.Name = "Lbl_total";
-            this.Lbl_total.Size = new System.Drawing.Size(39, 18);
+            this.Lbl_total.Size = new System.Drawing.Size(101, 18);
             this.Lbl_total.TabIndex = 31;
-            this.Lbl_total.Text = "Total";
+            this.Lbl_total.Text = "Total cotización";
             // 
             // Txt_Total
             // 
             this.Txt_Total.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Txt_Total.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_Total.Location = new System.Drawing.Point(427, 188);
+            this.Txt_Total.Location = new System.Drawing.Point(447, 175);
             this.Txt_Total.Name = "Txt_Total";
             this.Txt_Total.ReadOnly = true;
             this.Txt_Total.Size = new System.Drawing.Size(74, 26);
@@ -430,9 +456,9 @@
             this.Column1,
             this.Column2,
             this.Column3});
-            this.Dgv_verDatos.Location = new System.Drawing.Point(16, 34);
+            this.Dgv_verDatos.Location = new System.Drawing.Point(17, 34);
             this.Dgv_verDatos.Name = "Dgv_verDatos";
-            this.Dgv_verDatos.Size = new System.Drawing.Size(485, 132);
+            this.Dgv_verDatos.Size = new System.Drawing.Size(504, 136);
             this.Dgv_verDatos.TabIndex = 27;
             // 
             // label9
@@ -456,27 +482,27 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
-            // label3
+            // label4
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(65, 70);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 18);
-            this.label3.TabIndex = 58;
-            this.label3.Text = "No. Cotización";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(50, 180);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(182, 18);
+            this.label4.TabIndex = 33;
+            this.label4.Text = "Precio exámen con descuento";
             // 
-            // Txt_noCotizacion
+            // Txt_precioE
             // 
-            this.Txt_noCotizacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.Txt_noCotizacion.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_noCotizacion.Location = new System.Drawing.Point(168, 67);
-            this.Txt_noCotizacion.Name = "Txt_noCotizacion";
-            this.Txt_noCotizacion.ReadOnly = true;
-            this.Txt_noCotizacion.Size = new System.Drawing.Size(41, 26);
-            this.Txt_noCotizacion.TabIndex = 59;
+            this.Txt_precioE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_precioE.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_precioE.Location = new System.Drawing.Point(238, 175);
+            this.Txt_precioE.Name = "Txt_precioE";
+            this.Txt_precioE.ReadOnly = true;
+            this.Txt_precioE.Size = new System.Drawing.Size(74, 26);
+            this.Txt_precioE.TabIndex = 34;
+            this.Txt_precioE.Text = "0";
             // 
             // Column1
             // 
@@ -553,11 +579,13 @@
         private System.Windows.Forms.TextBox Txt_Cantidad;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button Btn_agregar;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox Txt_noCotizacion;
+        private System.Windows.Forms.Button Btn_agregar;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox Txt_precioE;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
