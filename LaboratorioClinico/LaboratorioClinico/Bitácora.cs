@@ -18,23 +18,27 @@ namespace LaboratorioClinico
             InitializeComponent();
         }
 
+       
         private void Btn_verb_Click(object sender, EventArgs e)
         {
-            /*
             try
             {
-                  conexion.ObtenerConexion();
-                DataTable dtDatos = new DataTable();
-                OdbcDataAdapter tablaData = new OdbcDataAdapter("select *from bitacora", conexion.ObtenerConexion());
-                tablaData.Fill(dtDatos);
-                Dgv_bitacora.DataSource = dtDatos;
-                conexion.ObtenerConexion().Close();
-        }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Intente de nuevo.", "Paciente no registrado.", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
-            }*/
+                conexion.ObtenerConexion();
+                OdbcCommand comando = new OdbcCommand("Select nIdBitacora as ID, sUsuario as Usuario, dfechaEntrada as Entrada, dfechaSalida as Salida, sComputadora as IP from bitacora", conexion.ObtenerConexion());
+                OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
+                DataTable tabla = new DataTable();
+                adaptador.Fill(tabla);
 
+                //Column1. = "iIdExamen";
+                Dgv_bitacora.DataSource = tabla;
+                conexion.ObtenerConexion().Close();
+            }
+            catch (Exception error) { MessageBox.Show(error.Message); }
+
+        }
+
+        private void Dgv_bitacora_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }
