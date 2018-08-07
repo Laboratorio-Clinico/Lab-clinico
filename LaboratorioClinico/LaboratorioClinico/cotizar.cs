@@ -184,11 +184,12 @@ namespace LaboratorioClinico
             {
                 OdbcCommand comando = new OdbcCommand("{CALL Pro_cotizacionesPrecio(?)}", conexion.ObtenerConexion());
                 comando.CommandType = CommandType.StoredProcedure;
-                comando.Parameters.AddWithValue("@iIdExamenes", iIdExamenes);
+                comando.Parameters.AddWithValue("iIdExamenes", iIdExamenes);
                 DataTable tabla = new DataTable();
                 OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
                 adaptador.Fill(tabla);
-                Dgv_verDatos.DataSource = tabla;
+                Dgv_verDatos.Rows.Add(iIdExamenes.ToString(), tabla.Rows[0][0].ToString(), tabla.Rows[0][1].ToString());
+            
             }
             catch (OdbcException error) { MessageBox.Show(error.Message); }
             finally
@@ -196,10 +197,6 @@ namespace LaboratorioClinico
                 conexion.ObtenerConexion().Close();
             }
         }
-
-
-
-
 
 
         public void proPrecioyTotal(int iIdExamenes)
