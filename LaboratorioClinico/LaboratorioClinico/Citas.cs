@@ -81,6 +81,7 @@ namespace LaboratorioClinico
 
         private void Btn_agregar_Click(object sender, EventArgs e)
         {
+            //Agregar al data grid los examenes que quiere el paciente 
             try
             {
                 OdbcDataAdapter sda = new OdbcDataAdapter("SELECT iIdExamen, sDescripcion, fPrecio from examenes where iIdExamen = '" + Convert.ToInt32(Cmb_examenes.SelectedValue) + "'", conexion.ObtenerConexion());
@@ -89,6 +90,7 @@ namespace LaboratorioClinico
                 
                 Dgv_examen.Rows.Add(datos.Rows[0][0].ToString(), datos.Rows[0][1].ToString(), datos.Rows[0][2].ToString());
 
+                //Crea la muestra
                 /*
                 this.Hide();
                 new CrearCodigo(Convert.ToInt32(Cmb_examenes.SelectedItem.ToString()), Convert.ToInt32(Txt_dpi.Text)).ShowDialog();
