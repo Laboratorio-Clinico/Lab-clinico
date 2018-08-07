@@ -28,13 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Txt_codigo = new System.Windows.Forms.TextBox();
             this.Dgv_data = new System.Windows.Forms.DataGridView();
             this.Lbl_error = new System.Windows.Forms.Label();
-            this.Lbl_error2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_data)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,12 +79,12 @@
             this.Dgv_data.Location = new System.Drawing.Point(34, 160);
             this.Dgv_data.Name = "Dgv_data";
             this.Dgv_data.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Cyan;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.RoyalBlue;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            this.Dgv_data.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Cyan;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.RoyalBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.Dgv_data.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.Dgv_data.Size = new System.Drawing.Size(538, 208);
             this.Dgv_data.TabIndex = 7;
             this.Dgv_data.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_data_CellContentClick);
@@ -102,18 +101,6 @@
             this.Lbl_error.Text = "No existe código";
             this.Lbl_error.Visible = false;
             // 
-            // Lbl_error2
-            // 
-            this.Lbl_error2.AutoSize = true;
-            this.Lbl_error2.BackColor = System.Drawing.Color.LightBlue;
-            this.Lbl_error2.Font = new System.Drawing.Font("Perpetua", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_error2.Location = new System.Drawing.Point(162, 246);
-            this.Lbl_error2.Name = "Lbl_error2";
-            this.Lbl_error2.Size = new System.Drawing.Size(279, 31);
-            this.Lbl_error2.TabIndex = 9;
-            this.Lbl_error2.Text = "Escriba o escanee un código";
-            this.Lbl_error2.Visible = false;
-            // 
             // LeerCode
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -121,17 +108,17 @@
             this.BackgroundImage = global::LaboratorioClinico.Properties.Resources.FONDOO;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(602, 419);
-            this.Controls.Add(this.Lbl_error2);
             this.Controls.Add(this.Lbl_error);
-            this.Controls.Add(this.Dgv_data);
             this.Controls.Add(this.Txt_codigo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.Dgv_data);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "LeerCode";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LeerCode";
+            this.Load += new System.EventHandler(this.LeerCode_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_data)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -145,6 +132,5 @@
         private System.Windows.Forms.TextBox Txt_codigo;
         private System.Windows.Forms.DataGridView Dgv_data;
         private System.Windows.Forms.Label Lbl_error;
-        private System.Windows.Forms.Label Lbl_error2;
     }
 }
