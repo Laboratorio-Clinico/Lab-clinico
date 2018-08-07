@@ -103,9 +103,6 @@ namespace LaboratorioClinico
 
                 adaptador.Fill(tabla);
 
-                DataRow fila = tabla.NewRow();
-                fila["sApellido"] = "Seleccione el doctor";
-                tabla.Rows.InsertAt(fila, 0);
 
                 Cmb_doctor.ValueMember = "iIdEmpleado";
                 Cmb_doctor.DisplayMember = "sApellido";
@@ -265,9 +262,10 @@ namespace LaboratorioClinico
                 double total = Convert.ToDouble(Txt_precioE.Text);
                 double fDescuentos = Convert.ToDouble(Txt_porcentajeDeDescuento.Text);
                 double fCostos = total / fDescuentos;
-                int iExamenes = Convert.ToInt32(Cmb_examen.SelectedValue);
+                int iIdExamenes = Convert.ToInt32(Cmb_examen.SelectedValue);
                 int iEmpleados = Convert.ToInt32(Cmb_doctor.SelectedValue);
-                int iCantidades = Convert.ToInt32(Txt_Cantidad.Text);
+
+                int iCantidades = Convert.ToInt32(Txt_Cantidad.Text.ToString);
 
 
                 OdbcCommand comando = new OdbcCommand("{CALL Pro_ingresoDetallesCotizacion(?,?,?,?,?,?)}", conexion.ObtenerConexion());
@@ -275,7 +273,7 @@ namespace LaboratorioClinico
                 comando.Parameters.AddWithValue("iCotizacion", iCotizaciones);
                 comando.Parameters.AddWithValue("fCosto", fCostos);
                 comando.Parameters.AddWithValue("fDescuento", fDescuentos);
-                comando.Parameters.AddWithValue("iExamen", iExamenes);
+                comando.Parameters.AddWithValue("iExamen", iIdExamenes);
                 comando.Parameters.AddWithValue("iEmpleado", iEmpleados);
                 comando.Parameters.AddWithValue("iCantidad", iCantidades);
                 comando.ExecuteNonQuery();
@@ -345,8 +343,9 @@ namespace LaboratorioClinico
             
            contador++;
              double doCantidad = Convert.ToDouble(Txt_Cantidad.Text);
-             int iIdExamenes = Convert.ToInt32(Cmb_examen.SelectedValue);
-             proBuscarCotizacion(iIdExamenes);
+            int iIdExamenes = Convert.ToInt32(Cmb_examen.SelectedValue);
+           
+            proBuscarCotizacion(iIdExamenes);
              proPrecioyTotal(iIdExamenes);
             proGuardarDetallesCotizacion();
 
