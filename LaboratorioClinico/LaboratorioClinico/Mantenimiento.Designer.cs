@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mantenimiento));
             this.Lbl_tabla = new System.Windows.Forms.Label();
             this.Cmb_tabla = new System.Windows.Forms.ComboBox();
@@ -238,6 +239,7 @@
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.Gpb_mantenimiento.SuspendLayout();
             this.Tbc_mem.SuspendLayout();
             this.tabPage9.SuspendLayout();
@@ -267,6 +269,7 @@
             this.Tbc_membresia.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.tabPage6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // Lbl_tabla
@@ -305,11 +308,11 @@
             this.Gpb_mantenimiento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Gpb_mantenimiento.Controls.Add(this.Lbl_tabla);
             this.Gpb_mantenimiento.Controls.Add(this.Cmb_tabla);
+            this.Gpb_mantenimiento.Controls.Add(this.Tbc_paciente);
             this.Gpb_mantenimiento.Controls.Add(this.Tbc_mem);
             this.Gpb_mantenimiento.Controls.Add(this.Tbc_empleado);
             this.Gpb_mantenimiento.Controls.Add(this.Tbc_medicos);
             this.Gpb_mantenimiento.Controls.Add(this.Picb_fondo);
-            this.Gpb_mantenimiento.Controls.Add(this.Tbc_paciente);
             this.Gpb_mantenimiento.Font = new System.Drawing.Font("Perpetua", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Gpb_mantenimiento.ForeColor = System.Drawing.Color.DarkKhaki;
             this.Gpb_mantenimiento.Location = new System.Drawing.Point(9, 12);
@@ -1372,7 +1375,7 @@
             this.Txt_colegiadoM.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Txt_colegiadoM.Location = new System.Drawing.Point(120, 29);
             this.Txt_colegiadoM.Name = "Txt_colegiadoM";
-            this.Txt_colegiadoM.Size = new System.Drawing.Size(108, 25);
+            this.Txt_colegiadoM.Size = new System.Drawing.Size(127, 25);
             this.Txt_colegiadoM.TabIndex = 119;
             // 
             // Btn_buscarm
@@ -1382,7 +1385,7 @@
             this.Btn_buscarm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Btn_buscarm.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_buscarm.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Btn_buscarm.Location = new System.Drawing.Point(241, 18);
+            this.Btn_buscarm.Location = new System.Drawing.Point(260, 17);
             this.Btn_buscarm.Name = "Btn_buscarm";
             this.Btn_buscarm.Size = new System.Drawing.Size(53, 44);
             this.Btn_buscarm.TabIndex = 121;
@@ -1758,7 +1761,7 @@
             this.Txt_colegiadoE.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Txt_colegiadoE.Location = new System.Drawing.Point(120, 29);
             this.Txt_colegiadoE.Name = "Txt_colegiadoE";
-            this.Txt_colegiadoE.Size = new System.Drawing.Size(108, 25);
+            this.Txt_colegiadoE.Size = new System.Drawing.Size(127, 25);
             this.Txt_colegiadoE.TabIndex = 123;
             // 
             // Btn_buscarE
@@ -1768,7 +1771,7 @@
             this.Btn_buscarE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Btn_buscarE.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_buscarE.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Btn_buscarE.Location = new System.Drawing.Point(241, 18);
+            this.Btn_buscarE.Location = new System.Drawing.Point(260, 17);
             this.Btn_buscarE.Name = "Btn_buscarE";
             this.Btn_buscarE.Size = new System.Drawing.Size(53, 44);
             this.Btn_buscarE.TabIndex = 125;
@@ -2084,7 +2087,7 @@
             this.Txt_expe.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Txt_expe.Location = new System.Drawing.Point(97, 23);
             this.Txt_expe.Name = "Txt_expe";
-            this.Txt_expe.Size = new System.Drawing.Size(82, 25);
+            this.Txt_expe.Size = new System.Drawing.Size(127, 25);
             this.Txt_expe.TabIndex = 101;
             // 
             // Btn
@@ -2094,7 +2097,7 @@
             this.Btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Btn.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Btn.Location = new System.Drawing.Point(194, 12);
+            this.Btn.Location = new System.Drawing.Point(237, 10);
             this.Btn.Name = "Btn";
             this.Btn.Size = new System.Drawing.Size(53, 44);
             this.Btn.TabIndex = 110;
@@ -2426,7 +2429,7 @@
             this.Txt_expedientep.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Txt_expedientep.Location = new System.Drawing.Point(97, 23);
             this.Txt_expedientep.Name = "Txt_expedientep";
-            this.Txt_expedientep.Size = new System.Drawing.Size(82, 25);
+            this.Txt_expedientep.Size = new System.Drawing.Size(127, 25);
             this.Txt_expedientep.TabIndex = 78;
             // 
             // Btn_buscar
@@ -2436,7 +2439,7 @@
             this.Btn_buscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Btn_buscar.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_buscar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Btn_buscar.Location = new System.Drawing.Point(194, 12);
+            this.Btn_buscar.Location = new System.Drawing.Point(237, 10);
             this.Btn_buscar.Name = "Btn_buscar";
             this.Btn_buscar.Size = new System.Drawing.Size(53, 44);
             this.Btn_buscar.TabIndex = 87;
@@ -2868,6 +2871,10 @@
             this.button5.TabIndex = 129;
             this.button5.UseVisualStyleBackColor = true;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Mantenimiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -2937,6 +2944,7 @@
             this.tabPage5.PerformLayout();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3151,5 +3159,6 @@
         private System.Windows.Forms.Label Lbl_nombreMembm;
         private System.Windows.Forms.Label Lbl_actualMembm;
         private System.Windows.Forms.TextBox Txt_membreMembe;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
