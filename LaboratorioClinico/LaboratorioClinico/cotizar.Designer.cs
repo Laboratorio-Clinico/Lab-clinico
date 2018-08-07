@@ -64,6 +64,9 @@
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.label3 = new System.Windows.Forms.Label();
             this.Txt_noCotizacion = new System.Windows.Forms.TextBox();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Gpb_cotizacion.SuspendLayout();
             this.Gpb_botones.SuspendLayout();
             this.Gpb_verDatos.SuspendLayout();
@@ -423,9 +426,13 @@
             this.Dgv_verDatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.Dgv_verDatos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.Dgv_verDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Dgv_verDatos.Location = new System.Drawing.Point(19, 34);
+            this.Dgv_verDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3});
+            this.Dgv_verDatos.Location = new System.Drawing.Point(16, 34);
             this.Dgv_verDatos.Name = "Dgv_verDatos";
-            this.Dgv_verDatos.Size = new System.Drawing.Size(482, 148);
+            this.Dgv_verDatos.Size = new System.Drawing.Size(485, 132);
             this.Dgv_verDatos.TabIndex = 27;
             // 
             // label9
@@ -470,6 +477,24 @@
             this.Txt_noCotizacion.ReadOnly = true;
             this.Txt_noCotizacion.Size = new System.Drawing.Size(41, 26);
             this.Txt_noCotizacion.TabIndex = 59;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Codigo";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 111;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Examen";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 117;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Precio";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 102;
             // 
             // cotizar
             // 
@@ -533,5 +558,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox Txt_noCotizacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
     }
 }
