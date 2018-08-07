@@ -311,6 +311,7 @@
             this.Txt_expedientep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Txt_expedientep.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_expedientep.Location = new System.Drawing.Point(18, 74);
+            this.Txt_expedientep.MaxLength = 5;
             this.Txt_expedientep.Name = "Txt_expedientep";
             this.Txt_expedientep.Size = new System.Drawing.Size(82, 25);
             this.Txt_expedientep.TabIndex = 30;

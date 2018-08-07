@@ -48,7 +48,11 @@ namespace LaboratorioClinico
                 DataTable tabla = new DataTable();
                 
                 adaptador.Fill(tabla);
-                
+
+                DataRow fila = tabla.NewRow();
+                fila["sDescripcion"] = "Seleccione el examen";
+                tabla.Rows.InsertAt(fila, 0);
+
                 Cmb_examenes.ValueMember = "iIdExamen";
                 Cmb_examenes.DisplayMember = "sDescripcion";
 

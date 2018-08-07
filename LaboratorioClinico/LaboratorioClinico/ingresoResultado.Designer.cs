@@ -299,6 +299,7 @@
             this.Btn_busc.BackColor = System.Drawing.Color.White;
             this.Btn_busc.BackgroundImage = global::LaboratorioClinico.Properties.Resources.lupa;
             this.Btn_busc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_busc.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_busc.Location = new System.Drawing.Point(250, 51);
             this.Btn_busc.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_busc.Name = "Btn_busc";
