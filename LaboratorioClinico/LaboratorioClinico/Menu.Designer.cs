@@ -103,7 +103,7 @@
             // 
             // Tm_admin
             // 
-            this.Tm_admin.BackColor = System.Drawing.Color.Teal;
+            this.Tm_admin.BackColor = System.Drawing.Color.DarkCyan;
             this.Tm_admin.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.segurToolStripMenuItem,
             this.mantenimientoToolStripMenuItem,

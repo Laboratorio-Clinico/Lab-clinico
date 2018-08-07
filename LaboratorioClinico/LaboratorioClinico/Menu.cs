@@ -86,7 +86,7 @@ namespace LaboratorioClinico
         private void leerCódigoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            LeerCodigo open = new LeerCodigo();
+            LeerCode open = new LeerCode();
             open.ShowDialog();
             this.Show();
         }
