@@ -26,5 +26,22 @@ namespace LaboratorioClinico
         {
 
         }
+
+        private void Gpb_detalleCita_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Btn_agregar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new CrearCodigo(Convert.ToInt32(Cmb_examenes.SelectedItem.ToString()), Convert.ToInt32(Txt_dpi.Text)).ShowDialog();
+            this.Show();
+        }
+
+        private void Btn_buscar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

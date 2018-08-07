@@ -90,6 +90,7 @@
             this.Gpb_guardarp.Size = new System.Drawing.Size(95, 82);
             this.Gpb_guardarp.TabIndex = 2;
             this.Gpb_guardarp.TabStop = false;
+            this.Gpb_guardarp.Enter += new System.EventHandler(this.Gpb_guardarp_Enter);
             // 
             // label10
             // 
@@ -136,6 +137,7 @@
             this.Gpb_datosp.TabIndex = 2;
             this.Gpb_datosp.TabStop = false;
             this.Gpb_datosp.Text = "Datos Paciente";
+            this.Gpb_datosp.Enter += new System.EventHandler(this.Gpb_datosp_Enter);
             // 
             // Cmb_sangrep
             // 

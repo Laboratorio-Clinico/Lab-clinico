@@ -235,13 +235,15 @@ namespace LaboratorioClinico
         }
 
         public void proGuardarCotizacion() {
+
+            // Este procedimiento guarda las cotizaciones realizadas, dentro de la base de datos
             try
             {
                 int iCotizaciones = Convert.ToInt32(Txt_noCotizacion.Text);
                 int iLaboratorios = Convert.ToInt32(Cmb_laboratorio.SelectedValue);
                 int iTipoDescuento = Convert.ToInt32(Cmb_tipoDeDescuento.SelectedValue);
 
-                OdbcCommand comando = new OdbcCommand("{CALL Pro_Pro_ingresoCotizacio(?,?,?,?)}", conexion.ObtenerConexion());
+                OdbcCommand comando = new OdbcCommand("{CALL Pro_ingresoCotizacio(?,?,?,?)}", conexion.ObtenerConexion());
                 comando.CommandType = CommandType.StoredProcedure;
                 comando.Parameters.AddWithValue("iCotizacion", iCotizaciones);
                 comando.Parameters.AddWithValue("iLaboratorio", iLaboratorios);
@@ -255,20 +257,30 @@ namespace LaboratorioClinico
         }
         public void proGuardarDetallesCotizacion()
         {
+            //Este procedimiento se encarga de guardar cada detalle de cotización
             try
             {
+  
                 int iCotizaciones = Convert.ToInt32(Txt_noCotizacion.Text);
-                int iLaboratorios = Convert.ToInt32(Cmb_laboratorio.SelectedValue);
-                int iTipoDescuento = Convert.ToInt32(Cmb_tipoDeDescuento.SelectedValue);
+                double total = Convert.ToDouble(Txt_precioE.Text);
+                double fDescuentos = Convert.ToDouble(Txt_porcentajeDeDescuento.Text);
+                double fCostos = total / fDescuentos;
+                int iExamenes = Convert.ToInt32(Cmb_examen.SelectedValue);
+                int iEmpleados = Convert.ToInt32(Cmb_doctor.SelectedValue);
+                int iCantidades = Convert.ToInt32(Txt_Cantidad.Text);
 
-                OdbcCommand comando = new OdbcCommand("{CALL Pro_Pro_ingresoCotizacio(?,?,?,?)}", conexion.ObtenerConexion());
+
+                OdbcCommand comando = new OdbcCommand("{CALL Pro_ingresoDetallesCotizacion(?,?,?,?,?,?)}", conexion.ObtenerConexion());
                 comando.CommandType = CommandType.StoredProcedure;
                 comando.Parameters.AddWithValue("iCotizacion", iCotizaciones);
-                comando.Parameters.AddWithValue("iLaboratorio", iLaboratorios);
-                comando.Parameters.AddWithValue("dFecha", Dtp_fecha.Text);
-                comando.Parameters.AddWithValue("iDescuento", iTipoDescuento);
+                comando.Parameters.AddWithValue("fCosto", fCostos);
+                comando.Parameters.AddWithValue("fDescuento", fDescuentos);
+                comando.Parameters.AddWithValue("iExamen", iExamenes);
+                comando.Parameters.AddWithValue("iEmpleado", iEmpleados);
+                comando.Parameters.AddWithValue("iCantidad", iCantidades);
                 comando.ExecuteNonQuery();
-                MessageBox.Show("Cotizacion agregada");
+                MessageBox.Show("Detalle agregado");
+                Txt_Cantidad.Text = "";
             }
             catch (Exception error) { MessageBox.Show(error.Message); }
         }
@@ -330,22 +342,24 @@ namespace LaboratorioClinico
         private void Btn_buscar_Click(object sender, EventArgs e)
 
         {
-            contador++;
-            double doCantidad = Convert.ToDouble(Txt_Cantidad.Text);
-            int iIdExamenes = Convert.ToInt32(Cmb_examen.SelectedValue);
-            proBuscarCotizacion(iIdExamenes);
-            proPrecioyTotal(iIdExamenes);
-            Txt_Cantidad.Text = "";
-            if (contador > 1)
-            {
-                proGuardarDetallesCotizacion();
-            }
-            else
-            {
-                proGuardarCotizacion();
-                proGuardarDetallesCotizacion();
-            }
+            
+           contador++;
+             double doCantidad = Convert.ToDouble(Txt_Cantidad.Text);
+             int iIdExamenes = Convert.ToInt32(Cmb_examen.SelectedValue);
+             proBuscarCotizacion(iIdExamenes);
+             proPrecioyTotal(iIdExamenes);
+            proGuardarDetallesCotizacion();
 
+            /*  if (contador > 1)
+              {
+                  proGuardarDetallesCotizacion();
+              }
+              else
+              {
+                  proGuardarCotizacion();
+                  proGuardarDetallesCotizacion();
+              }*/
+           
         }
 
         private void Btn_agregar_Click(object sender, EventArgs e)

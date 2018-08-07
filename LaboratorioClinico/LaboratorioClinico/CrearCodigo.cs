@@ -8,25 +8,72 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MessagingToolkit.Barcode;
+using System.Data.Odbc;
 
 namespace LaboratorioClinico
 {
     public partial class CrearCodigo : Form
     {
-        public CrearCodigo()
+        public CrearCodigo(int codigo, int dpi)
         {
             InitializeComponent();
+            llenarMuestra(codigo, dpi);
+            obtenerId();
+            Txt_texto.Text = id+Convert.ToString(codigo);
         }
 
+      
         BarcodeEncoder Crear;
         BarcodeDecoder Escaner;
         SaveFileDialog Guardar;
-      //  OpenFileDialog OD;
+        int id;
+        //  OpenFileDialog OD;
 
         public object Generar { get; private set; }
 
         private void CrearCodigo_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void llenarMuestra(int examen, int dpi)
+        {
+            try
+            {
+                conexion.ObtenerConexion();
+                OdbcCommand cmd = conexion.ObtenerConexion().CreateCommand();
+                cmd.CommandText = "insert into muestra values(null,'" + examen + "','" + dpi + "')";
+                cmd.ExecuteNonQuery();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("No se pudo insertar datos: "+ ex);
+            }
+           
+        }
+
+        private void obtenerId()
+        {
+            
+            try
+            {
+               
+                OdbcCommand comando = new OdbcCommand("Select count(*) from muestra", conexion.ObtenerConexion());
+                OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
+                DataTable tabla = new DataTable();
+                adaptador.Fill(tabla);
+
+                id = Convert.ToInt32(tabla.Rows[0][0]);
+
+                MessageBox.Show("Mostrando: " + tabla.Rows[0][0].ToString());
+                
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("No se encontro count");
+            }
+            
 
         }
 
@@ -56,6 +103,7 @@ namespace LaboratorioClinico
                     Crear.CustomLabel = Txt_texto.Text;
                     if (Txt_texto.Text != "")
                         Pic_img.Image = new Bitmap(Crear.Encode(BarcodeFormat.Code39, Txt_texto.Text));
+
                 }else
                 {
                     Er_validar.SetError(Txt_texto, "Solo números se acepta");

@@ -46,9 +46,10 @@
             // 
             // Txt_texto
             // 
+            this.Txt_texto.Font = new System.Drawing.Font("Perpetua", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_texto.Location = new System.Drawing.Point(130, 330);
             this.Txt_texto.Name = "Txt_texto";
-            this.Txt_texto.Size = new System.Drawing.Size(320, 20);
+            this.Txt_texto.Size = new System.Drawing.Size(122, 38);
             this.Txt_texto.TabIndex = 0;
             this.Txt_texto.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.Txt_texto.Validating += new System.ComponentModel.CancelEventHandler(this.Txt_texto_Validating);

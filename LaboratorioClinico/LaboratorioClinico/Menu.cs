@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Odbc;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -77,10 +78,12 @@ namespace LaboratorioClinico
 
         private void crearCódigoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            CrearCodigo open = new CrearCodigo();
-            open.ShowDialog();
-            this.Show();
+            /* this.Hide();
+             CrearCodigo open = new CrearCodigo();
+             open.ShowDialog();
+             this.Show();*/
+
+
         }
 
         private void leerCódigoToolStripMenuItem_Click(object sender, EventArgs e)
