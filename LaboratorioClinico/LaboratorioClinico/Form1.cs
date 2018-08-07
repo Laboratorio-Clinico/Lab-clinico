@@ -91,11 +91,20 @@ namespace LaboratorioClinico
 
                     try
                     {
-                        OdbcCommand comando = new OdbcCommand("{CALL pd_InsertaBitacora(?,?,?)}", conexion.ObtenerConexion());
+                        OdbcCommand comando = new OdbcCommand("{CALL pd_InsertaBitacora(?,?,?,?,?)}", conexion.ObtenerConexion());
                         comando.CommandType = CommandType.StoredProcedure;
 
+                        OdbcDataAdapter sda2 = new OdbcDataAdapter("select bi.nIdBitacora from bitacora bi ", conexion.ObtenerConexion());
+                        DataTable datos2 = new DataTable();
+                        sda2.Fill(datos2);
+
+                        int p;
+                        p = Convert.ToInt32(datos2.Rows[0][0].ToString());
+
+                        comando.Parameters.AddWithValue("@nIdBitacora", p);
                         comando.Parameters.AddWithValue("@sUsuario",user);
                         comando.Parameters.AddWithValue("@dfechaEntrada",fechaInicio);
+                        comando.Parameters.AddWithValue("@dfechaSalida", fechaInicio);
                         comando.Parameters.AddWithValue("@sComputadora",localIP );
 
                         comando.ExecuteNonQuery();
