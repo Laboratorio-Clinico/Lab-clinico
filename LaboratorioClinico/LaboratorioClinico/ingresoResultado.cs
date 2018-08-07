@@ -25,6 +25,7 @@ namespace LaboratorioClinico
          
             try
             {
+
                 Cmb_correo.Items.Clear();
                 Cmb_correo.Text = "Seleccione forma pago";
                 conexion.ObtenerConexion();
