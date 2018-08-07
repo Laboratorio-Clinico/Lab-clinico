@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ingresoResultado));
             this.Lbl_ingreseResultados = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -58,8 +57,6 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.Btn_guardarResultado = new System.Windows.Forms.Button();
             this.Lbl_ingresarr = new System.Windows.Forms.Label();
-            this.Btn_imprimirResultado = new System.Windows.Forms.Button();
-            this.Lbl_imprimirr = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
@@ -414,34 +411,10 @@
             this.Lbl_ingresarr.TabIndex = 137;
             this.Lbl_ingresarr.Text = "Ingresar";
             // 
-            // Btn_imprimirResultado
-            // 
-            this.Btn_imprimirResultado.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Btn_imprimirResultado.BackgroundImage")));
-            this.Btn_imprimirResultado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Btn_imprimirResultado.Location = new System.Drawing.Point(36, 138);
-            this.Btn_imprimirResultado.Name = "Btn_imprimirResultado";
-            this.Btn_imprimirResultado.Size = new System.Drawing.Size(53, 44);
-            this.Btn_imprimirResultado.TabIndex = 134;
-            this.Btn_imprimirResultado.UseVisualStyleBackColor = true;
-            this.Btn_imprimirResultado.Click += new System.EventHandler(this.Btn_imprimirResultado_Click);
-            // 
-            // Lbl_imprimirr
-            // 
-            this.Lbl_imprimirr.AutoSize = true;
-            this.Lbl_imprimirr.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_imprimirr.ForeColor = System.Drawing.Color.White;
-            this.Lbl_imprimirr.Location = new System.Drawing.Point(41, 187);
-            this.Lbl_imprimirr.Name = "Lbl_imprimirr";
-            this.Lbl_imprimirr.Size = new System.Drawing.Size(48, 15);
-            this.Lbl_imprimirr.TabIndex = 135;
-            this.Lbl_imprimirr.Text = "Imprimir";
-            // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.Controls.Add(this.Btn_guardarResultado);
-            this.groupBox2.Controls.Add(this.Btn_imprimirResultado);
-            this.groupBox2.Controls.Add(this.Lbl_imprimirr);
             this.groupBox2.Controls.Add(this.Lbl_ingresarr);
             this.groupBox2.Location = new System.Drawing.Point(631, 168);
             this.groupBox2.Name = "groupBox2";
@@ -517,8 +490,6 @@
         private System.Windows.Forms.Button Btn_BuscarExamen;
         private System.Windows.Forms.Button Btn_guardarResultado;
         private System.Windows.Forms.Label Lbl_ingresarr;
-        private System.Windows.Forms.Button Btn_imprimirResultado;
-        private System.Windows.Forms.Label Lbl_imprimirr;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox Cmb_correo;
         private System.Windows.Forms.GroupBox groupBox2;
