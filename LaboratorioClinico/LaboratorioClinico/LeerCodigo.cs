@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Odbc;
 
 namespace LaboratorioClinico
 {
@@ -36,6 +37,50 @@ namespace LaboratorioClinico
         private void Txt_codigo_KeyDown(object sender, KeyEventArgs e)
         {
             
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Txt_codigo_TextChanged(object sender, EventArgs e)
+        {
+            string comando;
+            try
+            {
+                comando = "select iIdExamen as ID, sDescripcion as Descripcion, fPrecio as Precio from examenes where iIdExamen = '" + Convert.ToInt32(Txt_codigo.Text) + "'";
+                OdbcDataAdapter con = new OdbcDataAdapter(comando, conexion.ObtenerConexion());
+                DataTable datos = new DataTable();
+                con.Fill(datos);
+               
+                if (datos.Rows.Count > 0)
+                {
+                    Dgv_resultados.DataSource = datos;
+                    Dgv_resultados.Refresh();
+                }
+                else
+                {
+                    Dgv_resultados.Columns.Clear();
+                    Dgv_resultados.Columns.Add("error", " ");
+                    Dgv_resultados.Rows.Add("No existe la muestra");
+                }
+
+                conexion.ObtenerConexion().Close();
+            }
+            catch (Exception ex)
+            {
+                Dgv_resultados.Columns.Clear();
+                Dgv_resultados.Columns.Add("error", " ");
+                Dgv_resultados.Rows.Add("No existe la muestra");
+            }
+           
+            
+        }
+
+        private void Dgv_resultados_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

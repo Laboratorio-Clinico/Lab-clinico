@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigUser));
             this.label1 = new System.Windows.Forms.Label();
             this.Tbc_control = new System.Windows.Forms.TabPage();
             this.Cmb_privi = new System.Windows.Forms.ComboBox();
@@ -58,6 +59,9 @@
             this.Txt_nueva = new System.Windows.Forms.TextBox();
             this.Cmb_usuarioCambio = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.Tbc_control.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.Tbc_eliminar.SuspendLayout();
@@ -84,6 +88,7 @@
             // 
             // Tbc_control
             // 
+            this.Tbc_control.Controls.Add(this.button2);
             this.Tbc_control.Controls.Add(this.Cmb_privi);
             this.Tbc_control.Controls.Add(this.Btn_cambiar);
             this.Tbc_control.Controls.Add(this.pictureBox3);
@@ -173,6 +178,7 @@
             // 
             // Tbc_eliminar
             // 
+            this.Tbc_eliminar.Controls.Add(this.button1);
             this.Tbc_eliminar.Controls.Add(this.pictureBox2);
             this.Tbc_eliminar.Controls.Add(this.Btn_eliminar);
             this.Tbc_eliminar.Controls.Add(this.label5);
@@ -262,6 +268,7 @@
             // 
             // Tbc_cambio
             // 
+            this.Tbc_cambio.Controls.Add(this.button3);
             this.Tbc_cambio.Controls.Add(this.Pbx_incorrecto);
             this.Tbc_cambio.Controls.Add(this.Btn_verificar);
             this.Tbc_cambio.Controls.Add(this.Pbx_correcto);
@@ -408,6 +415,36 @@
             this.label2.TabIndex = 11;
             this.label2.Text = "Usuario";
             // 
+            // button1
+            // 
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(25, 264);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(53, 44);
+            this.button1.TabIndex = 15;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.Location = new System.Drawing.Point(25, 264);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(53, 44);
+            this.button2.TabIndex = 18;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.Location = new System.Drawing.Point(3, 6);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(53, 44);
+            this.button3.TabIndex = 25;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
             // ConfigUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -474,5 +511,8 @@
         private System.Windows.Forms.PictureBox Pbx_correcto;
         private System.Windows.Forms.PictureBox Pbx_incorrecto;
         private System.Windows.Forms.Button Btn_verificar;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button3;
     }
 }

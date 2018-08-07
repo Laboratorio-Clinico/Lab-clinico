@@ -86,7 +86,7 @@ namespace LaboratorioClinico
         private void leerCódigoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            LeerCodigo open = new LeerCodigo();
+            LeerCode open = new LeerCode();
             open.ShowDialog();
             this.Show();
         }
@@ -290,6 +290,13 @@ namespace LaboratorioClinico
         {
             this.Hide();
             new Membresias().ShowDialog();
+            this.Show();
+        }
+
+        private void citasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Citas().ShowDialog();
             this.Show();
         }
     }

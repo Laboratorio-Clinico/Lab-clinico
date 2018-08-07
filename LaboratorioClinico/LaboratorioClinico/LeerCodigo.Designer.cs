@@ -28,12 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LeerCodigo));
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Dgv_resultados = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.Txt_codigo = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.button2 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_resultados)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -48,14 +52,33 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Código";
             // 
-            // dataGridView1
+            // Dgv_resultados
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.LightBlue;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(34, 160);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(538, 208);
-            this.dataGridView1.TabIndex = 2;
+            this.Dgv_resultados.BackgroundColor = System.Drawing.Color.LightBlue;
+            this.Dgv_resultados.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Dgv_resultados.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_resultados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.Dgv_resultados.ColumnHeadersHeight = 22;
+            this.Dgv_resultados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.Dgv_resultados.EnableHeadersVisualStyles = false;
+            this.Dgv_resultados.Location = new System.Drawing.Point(34, 160);
+            this.Dgv_resultados.Name = "Dgv_resultados";
+            this.Dgv_resultados.RowHeadersVisible = false;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Navy;
+            this.Dgv_resultados.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.Dgv_resultados.Size = new System.Drawing.Size(538, 208);
+            this.Dgv_resultados.TabIndex = 2;
+            this.Dgv_resultados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_resultados_CellContentClick);
             // 
             // label2
             // 
@@ -79,6 +102,7 @@
             this.button1.Size = new System.Drawing.Size(53, 44);
             this.button1.TabIndex = 4;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Txt_codigo
             // 
@@ -87,8 +111,19 @@
             this.Txt_codigo.Name = "Txt_codigo";
             this.Txt_codigo.Size = new System.Drawing.Size(218, 20);
             this.Txt_codigo.TabIndex = 5;
+            this.Txt_codigo.TextChanged += new System.EventHandler(this.Txt_codigo_TextChanged);
             this.Txt_codigo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Txt_codigo_KeyDown);
             this.Txt_codigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_codigo_KeyPress);
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.Location = new System.Drawing.Point(555, 12);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(35, 28);
+            this.button2.TabIndex = 16;
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // LeerCodigo
             // 
@@ -98,18 +133,18 @@
             this.BackgroundImage = global::LaboratorioClinico.Properties.Resources.FONDOO;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(602, 419);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.Txt_codigo);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.Dgv_resultados);
             this.Controls.Add(this.label1);
-            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "LeerCodigo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.TransparencyKey = System.Drawing.Color.White;
+            this.TransparencyKey = System.Drawing.Color.Black;
             this.Load += new System.EventHandler(this.LeerCodigo_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_resultados)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -118,9 +153,10 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView Dgv_resultados;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox Txt_codigo;
+        private System.Windows.Forms.Button button2;
     }
 }

@@ -131,6 +131,12 @@
     <Compile Include="InicioReportes.Designer.cs">
       <DependentUpon>InicioReportes.cs</DependentUpon>
     </Compile>
+    <Compile Include="LeerCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeerCode.Designer.cs">
+      <DependentUpon>LeerCode.cs</DependentUpon>
+    </Compile>
     <Compile Include="LeerCodigo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -240,6 +246,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InicioReportes.resx">
       <DependentUpon>InicioReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeerCode.resx">
+      <DependentUpon>LeerCode.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LeerCodigo.resx">
       <DependentUpon>LeerCodigo.cs</DependentUpon>
@@ -571,6 +580,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fecha-de-cita-medica-recordatorio-en-pagina-diaria-de-calendario-de-simbolo-de-interfaz-con-cruz-de-primeros-auxilios.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tarjeta-de-credito.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tarjeta-de-credito %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

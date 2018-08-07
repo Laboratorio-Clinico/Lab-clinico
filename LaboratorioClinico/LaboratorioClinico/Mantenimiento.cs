@@ -24,6 +24,7 @@ namespace LaboratorioClinico
             Tbc_medicos.Visible = false;
             //Tbc_examen.Visible = false;
             Tbc_empleado.Visible = false;
+            Tbc_mem.Visible = false;
             Picb_fondo.Visible = true;
         }
 
@@ -103,6 +104,26 @@ namespace LaboratorioClinico
                 conexion.ObtenerConexion().Close();
             }
             catch (Exception error) { MessageBox.Show(error.Message); }
+        }
+
+        public void prollenarMembresia()
+        {
+            try
+            {
+                conexion.ObtenerConexion();
+                OdbcCommand comando = new OdbcCommand("Select iNoMembresia,sDescripcion from membresia", conexion.ObtenerConexion());
+                OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
+                DataTable tabla = new DataTable();
+           
+                adaptador.Fill(tabla);
+                Cmb_nuevaMembm.ValueMember = "iNoMembresia";
+                Cmb_nuevaMembm.DisplayMember = "sDescripcion";
+                Cmb_nuevaMembm.DataSource = tabla;
+
+                conexion.ObtenerConexion().Close();
+
+            }
+            catch (OdbcException error) { MessageBox.Show(error.Message); }
         }
 
         private void Gpb_mantenimiento_Enter(object sender, EventArgs e)
@@ -319,6 +340,7 @@ namespace LaboratorioClinico
                 Tbc_medicos.Visible = false;
                // Tbc_examen.Visible = false;
                 Tbc_empleado.Visible = false;
+                Tbc_mem.Visible = false;
                 Picb_fondo.Visible = false;
 
             }
@@ -328,6 +350,7 @@ namespace LaboratorioClinico
                 Tbc_medicos.Visible = true;
                // Tbc_examen.Visible = false;
                 Tbc_empleado.Visible = false;
+                Tbc_mem.Visible = false;
                 Picb_fondo.Visible = false;
 
             }
@@ -337,6 +360,7 @@ namespace LaboratorioClinico
                 Tbc_medicos.Visible = false;
                 //Tbc_examen.Visible = true;
                 Tbc_empleado.Visible = false;
+                Tbc_mem.Visible = false;
                 Picb_fondo.Visible = false;
             }
             else if (Cmb_tabla.SelectedItem.ToString() == "Empleado")
@@ -345,6 +369,16 @@ namespace LaboratorioClinico
                 Tbc_medicos.Visible = false;
                 //Tbc_examen.Visible = false;
                 Tbc_empleado.Visible = true;
+                Tbc_mem.Visible = false;
+                Picb_fondo.Visible = false;
+            }
+            else if (Cmb_tabla.SelectedItem.ToString() == "Membresia")
+            {
+                Tbc_paciente.Visible = false;
+                Tbc_medicos.Visible = false;
+                //Tbc_examen.Visible = false;
+                Tbc_empleado.Visible = false;
+                Tbc_mem.Visible = true;
                 Picb_fondo.Visible = false;
             }
         }
@@ -736,6 +770,125 @@ namespace LaboratorioClinico
                 Txt_cargoEmpe.Enabled = true;
                 Txt_sueldoEmpe.Enabled = true;
                 Dtp_fechaEmpe.Enabled = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo eliminar el registro.", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
+                //MessageBox.Show("error:"+ex);
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                conexion.ObtenerConexion();
+                OdbcCommand cmd = conexion.ObtenerConexion().CreateCommand();
+
+                cmd.CommandText = "update membresiadepaciente set iNoMembresia = '" + Convert.ToInt32(Cmb_nuevaMembm.SelectedValue) + "' where nNoExpediente = '" + Convert.ToInt32(Txt_dpiMembm.Text) + "'";
+                cmd.ExecuteNonQuery();
+        
+
+                MessageBox.Show("Membresia Modificada Exitosamente.", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
+                //Limpiar la información previamente cargada para volver a buscar otro medico
+                Txt_dpiMembm.Clear();
+                Txt_nombreMembm.Clear();
+                Txt_actualMembm.Clear();
+                Gpb_datosMembm.Visible = false;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo modificar el registro.", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)//Buscar paciente con membresía para modificarla
+        {
+            try
+            {
+                Gpb_datosMembm.Visible = true;
+                OdbcDataAdapter sda = new OdbcDataAdapter("SELECT pa.sNombre, pa.sNit, me.sDescripcion FROM paciente pa, membresia me, membresiadepaciente mp WHERE pa.nIdPaciente = mp.nNoExpediente AND me.iNoMembresia = mp.iNoMembresia AND pa.nIdPaciente ='" + Convert.ToInt32(Txt_dpiMembm.Text) + "'", conexion.ObtenerConexion());
+                DataTable datos = new DataTable();
+                sda.Fill(datos);
+
+                Txt_nombreMembm.Text = datos.Rows[0][0].ToString();
+                Txt_nitMembm.Text = datos.Rows[0][1].ToString();
+                Txt_actualMembm.Text = datos.Rows[0][2].ToString();
+
+                Txt_actualMembm.Enabled = false;
+                prollenarMembresia();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Intente de nuevo.", "Error en la búsqueda.", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
+                //MessageBox.Show("error:"+ex);
+
+            }
+        }
+
+        private void Txt_dpiMembm_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button8_Click(object sender, EventArgs e) //Buscar empleado con membresia para cancelarla.............................
+        {
+            try
+            {
+                Gpb_datosMembe.Visible = true;
+                OdbcDataAdapter sda = new OdbcDataAdapter("SELECT pa.sNombre, pa.sNit, me.sDescripcion FROM paciente pa, membresia me, membresiadepaciente mp WHERE pa.nIdPaciente = mp.nNoExpediente AND me.iNoMembresia = mp.iNoMembresia AND pa.nIdPaciente ='" + Convert.ToInt32(Txt_dpiMembe.Text) + "'", conexion.ObtenerConexion());
+                DataTable datos = new DataTable();
+                sda.Fill(datos);
+
+                Txt_nombreMembe.Text = datos.Rows[0][0].ToString();
+                Txt_nitMembe.Text = datos.Rows[0][1].ToString();
+                Txt_membreMembe.Text = datos.Rows[0][2].ToString();
+            
+                //Deshabilitar los textbox donde se cargó la información
+                Txt_nombreMembe.Enabled = false;
+                Txt_nitMembe.Enabled = false;
+                Txt_membreMembe.Enabled = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Intente de nuevo.", "Error en la búsqueda.", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
+                //MessageBox.Show("error:" + ex);
+
+            }
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Btn_cancelMembe_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                conexion.ObtenerConexion();
+                OdbcCommand cmd = conexion.ObtenerConexion().CreateCommand();
+
+                //Eliminar los datos del empleado de 3 tablas que guardan su información
+                cmd.CommandText = "delete from membresiadepaciente where nNoExpediente = '" + Convert.ToInt32(Txt_dpiMembe.Text) + "'";
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Membresía Eliminada Exitosamente", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                Gpb_datosMembe.Visible = false;
+
+                //Limpiar todos los textbox / combobox
+                Txt_dpiMembe.Clear();
+                Txt_nombreMembe.Clear();
+                Txt_nitMembe.Clear();
+                Txt_membreMembe.Clear();
+
+                //Volver a habilitar todos los textbox / combobox
+                Txt_nombreMembe.Enabled = true;
+                Txt_nitMembe.Enabled = true;
+                Txt_membreMembe.Enabled = true;
+                
             }
             catch (Exception ex)
             {

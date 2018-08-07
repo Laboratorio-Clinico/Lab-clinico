@@ -453,6 +453,17 @@ namespace LaboratorioClinico.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fecha_de_cita_medica_recordatorio_en_pagina_diaria_de_calendario_de_simbolo_de_interfaz_con_cruz_de_primeros_auxilios {
+            get {
+                object obj = ResourceManager.GetObject("fecha-de-cita-medica-recordatorio-en-pagina-diaria-de-calendario-de-simbolo-de-in" +
+                        "terfaz-con-cruz-de-primeros-auxilios", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap file {
             get {
                 object obj = ResourceManager.GetObject("file", resourceCulture);
@@ -866,6 +877,26 @@ namespace LaboratorioClinico.Properties {
         internal static System.Drawing.Bitmap servicio_al_cliente {
             get {
                 object obj = ResourceManager.GetObject("servicio-al-cliente", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tarjeta_de_credito {
+            get {
+                object obj = ResourceManager.GetObject("tarjeta-de-credito", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tarjeta_de_credito__1_ {
+            get {
+                object obj = ResourceManager.GetObject("tarjeta-de-credito (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
