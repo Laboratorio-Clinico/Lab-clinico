@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Citas));
             this.Lbl_titulo = new System.Windows.Forms.Label();
             this.Gpb_datosm = new System.Windows.Forms.GroupBox();
             this.Txt_direp = new System.Windows.Forms.TextBox();
@@ -66,12 +67,14 @@
             this.Gpb_fechayhora = new System.Windows.Forms.GroupBox();
             this.Gpb_cita = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Pnl_datosp = new System.Windows.Forms.Panel();
             this.Gpb_datosm.SuspendLayout();
             this.Gpb_detalleCita.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_examen)).BeginInit();
             this.Gpb_fechayhora.SuspendLayout();
             this.Gpb_cita.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.Pnl_datosp.SuspendLayout();
             this.SuspendLayout();
             // 
             // Lbl_titulo
@@ -89,15 +92,10 @@
             // Gpb_datosm
             // 
             this.Gpb_datosm.BackColor = System.Drawing.Color.Transparent;
-            this.Gpb_datosm.Controls.Add(this.Txt_direp);
             this.Gpb_datosm.Controls.Add(this.Btn_buscar);
-            this.Gpb_datosm.Controls.Add(this.Txt_nombrep);
             this.Gpb_datosm.Controls.Add(this.Txt_dpi);
             this.Gpb_datosm.Controls.Add(this.Lbl_dpi);
-            this.Gpb_datosm.Controls.Add(this.Lbl_nombrep);
-            this.Gpb_datosm.Controls.Add(this.Lbl_direp);
-            this.Gpb_datosm.Controls.Add(this.Txt_nitp);
-            this.Gpb_datosm.Controls.Add(this.Lbl_nitp);
+            this.Gpb_datosm.Controls.Add(this.Pnl_datosp);
             this.Gpb_datosm.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Gpb_datosm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.Gpb_datosm.Location = new System.Drawing.Point(23, 58);
@@ -112,7 +110,7 @@
             this.Txt_direp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Txt_direp.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_direp.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.Txt_direp.Location = new System.Drawing.Point(137, 134);
+            this.Txt_direp.Location = new System.Drawing.Point(32, 89);
             this.Txt_direp.Margin = new System.Windows.Forms.Padding(4);
             this.Txt_direp.Name = "Txt_direp";
             this.Txt_direp.Size = new System.Drawing.Size(377, 26);
@@ -136,7 +134,7 @@
             this.Txt_nombrep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Txt_nombrep.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_nombrep.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.Txt_nombrep.Location = new System.Drawing.Point(135, 88);
+            this.Txt_nombrep.Location = new System.Drawing.Point(30, 43);
             this.Txt_nombrep.Margin = new System.Windows.Forms.Padding(4);
             this.Txt_nombrep.Name = "Txt_nombrep";
             this.Txt_nombrep.Size = new System.Drawing.Size(250, 26);
@@ -171,7 +169,7 @@
             this.Lbl_nombrep.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_nombrep.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_nombrep.ForeColor = System.Drawing.Color.White;
-            this.Lbl_nombrep.Location = new System.Drawing.Point(114, 68);
+            this.Lbl_nombrep.Location = new System.Drawing.Point(9, 23);
             this.Lbl_nombrep.Name = "Lbl_nombrep";
             this.Lbl_nombrep.Size = new System.Drawing.Size(70, 22);
             this.Lbl_nombrep.TabIndex = 1;
@@ -183,7 +181,7 @@
             this.Lbl_direp.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_direp.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_direp.ForeColor = System.Drawing.Color.White;
-            this.Lbl_direp.Location = new System.Drawing.Point(114, 116);
+            this.Lbl_direp.Location = new System.Drawing.Point(9, 71);
             this.Lbl_direp.Name = "Lbl_direp";
             this.Lbl_direp.Size = new System.Drawing.Size(78, 22);
             this.Lbl_direp.TabIndex = 107;
@@ -194,7 +192,7 @@
             this.Txt_nitp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Txt_nitp.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_nitp.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.Txt_nitp.Location = new System.Drawing.Point(393, 88);
+            this.Txt_nitp.Location = new System.Drawing.Point(288, 43);
             this.Txt_nitp.Margin = new System.Windows.Forms.Padding(4);
             this.Txt_nitp.Name = "Txt_nitp";
             this.Txt_nitp.Size = new System.Drawing.Size(121, 26);
@@ -206,7 +204,7 @@
             this.Lbl_nitp.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_nitp.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_nitp.ForeColor = System.Drawing.Color.White;
-            this.Lbl_nitp.Location = new System.Drawing.Point(380, 68);
+            this.Lbl_nitp.Location = new System.Drawing.Point(275, 23);
             this.Lbl_nitp.Name = "Lbl_nitp";
             this.Lbl_nitp.Size = new System.Drawing.Size(33, 22);
             this.Lbl_nitp.TabIndex = 109;
@@ -220,6 +218,8 @@
             this.Gpb_detalleCita.Controls.Add(this.Gpb_fechayhora);
             this.Gpb_detalleCita.Controls.Add(this.Btn_guardar);
             this.Gpb_detalleCita.Controls.Add(this.Lbl_guardar);
+            this.Gpb_detalleCita.Enabled = false;
+            this.Gpb_detalleCita.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Gpb_detalleCita.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Gpb_detalleCita.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.Gpb_detalleCita.Location = new System.Drawing.Point(23, 237);
@@ -246,11 +246,12 @@
             // 
             this.Btn_guardar.BackgroundImage = global::LaboratorioClinico.Properties.Resources.guardar;
             this.Btn_guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Btn_guardar.Location = new System.Drawing.Point(645, 216);
+            this.Btn_guardar.Location = new System.Drawing.Point(635, 216);
             this.Btn_guardar.Name = "Btn_guardar";
             this.Btn_guardar.Size = new System.Drawing.Size(53, 44);
             this.Btn_guardar.TabIndex = 135;
             this.Btn_guardar.UseVisualStyleBackColor = true;
+            this.Btn_guardar.Click += new System.EventHandler(this.Btn_guardar_Click);
             // 
             // Lbl_info
             // 
@@ -292,6 +293,7 @@
             // 
             this.Cmb_examenes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Cmb_examenes.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cmb_examenes.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.Cmb_examenes.FormattingEnabled = true;
             this.Cmb_examenes.Items.AddRange(new object[] {
             "No Confirmado",
@@ -323,40 +325,40 @@
             this.Dgv_examen.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Dgv_examen.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.Dgv_examen.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.DarkSlateGray;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.CadetBlue;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.LightCyan;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgv_examen.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkSlateGray;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.CadetBlue;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.LightCyan;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_examen.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.Dgv_examen.ColumnHeadersHeight = 27;
             this.Dgv_examen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.Dgv_examen.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.CadetBlue;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.LightCyan;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Dgv_examen.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.CadetBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.LightCyan;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Dgv_examen.DefaultCellStyle = dataGridViewCellStyle2;
             this.Dgv_examen.EnableHeadersVisualStyles = false;
             this.Dgv_examen.Location = new System.Drawing.Point(154, 97);
             this.Dgv_examen.Name = "Dgv_examen";
             this.Dgv_examen.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.CadetBlue;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgv_examen.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.CadetBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_examen.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.Dgv_examen.Size = new System.Drawing.Size(386, 104);
             this.Dgv_examen.TabIndex = 126;
             this.Dgv_examen.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_examen_CellContentClick);
@@ -395,6 +397,7 @@
             // 
             this.Cmb_estado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Cmb_estado.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cmb_estado.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.Cmb_estado.FormattingEnabled = true;
             this.Cmb_estado.Items.AddRange(new object[] {
             "No Confirmado",
@@ -479,7 +482,7 @@
             this.Lbl_guardar.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_guardar.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_guardar.ForeColor = System.Drawing.Color.PowderBlue;
-            this.Lbl_guardar.Location = new System.Drawing.Point(646, 259);
+            this.Lbl_guardar.Location = new System.Drawing.Point(636, 259);
             this.Lbl_guardar.Name = "Lbl_guardar";
             this.Lbl_guardar.Size = new System.Drawing.Size(52, 15);
             this.Lbl_guardar.TabIndex = 136;
@@ -525,6 +528,20 @@
             this.groupBox1.TabIndex = 140;
             this.groupBox1.TabStop = false;
             // 
+            // Pnl_datosp
+            // 
+            this.Pnl_datosp.Controls.Add(this.Txt_direp);
+            this.Pnl_datosp.Controls.Add(this.Txt_nombrep);
+            this.Pnl_datosp.Controls.Add(this.Txt_nitp);
+            this.Pnl_datosp.Controls.Add(this.Lbl_direp);
+            this.Pnl_datosp.Controls.Add(this.Lbl_nombrep);
+            this.Pnl_datosp.Controls.Add(this.Lbl_nitp);
+            this.Pnl_datosp.Enabled = false;
+            this.Pnl_datosp.Location = new System.Drawing.Point(138, 43);
+            this.Pnl_datosp.Name = "Pnl_datosp";
+            this.Pnl_datosp.Size = new System.Drawing.Size(427, 130);
+            this.Pnl_datosp.TabIndex = 111;
+            // 
             // Citas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -536,7 +553,9 @@
             this.Controls.Add(this.Gpb_datosm);
             this.Controls.Add(this.Lbl_titulo);
             this.DoubleBuffered = true;
+            this.Enabled = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Citas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Citas_Load);
@@ -551,6 +570,8 @@
             this.Gpb_cita.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.Pnl_datosp.ResumeLayout(false);
+            this.Pnl_datosp.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -592,5 +613,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox Gpb_cita;
         private System.Windows.Forms.GroupBox Gpb_fechayhora;
+        private System.Windows.Forms.Panel Pnl_datosp;
     }
 }

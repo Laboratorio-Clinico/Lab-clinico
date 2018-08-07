@@ -64,8 +64,6 @@ namespace LaboratorioClinico
                 adaptador.Fill(tabla);
 
                 id = Convert.ToInt32(tabla.Rows[0][0]);
-
-                MessageBox.Show("Mostrando: " + tabla.Rows[0][0].ToString());
                 
 
             }

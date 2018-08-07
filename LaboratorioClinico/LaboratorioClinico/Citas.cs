@@ -29,7 +29,6 @@ namespace LaboratorioClinico
                 adaptador.Fill(tabla);
 
                 id = Convert.ToInt32(tabla.Rows[0][0]);
-
                 //MessageBox.Show("Mostrando: " + tabla.Rows[0][0].ToString());
             }
             catch (Exception ex)
@@ -83,19 +82,22 @@ namespace LaboratorioClinico
 
         }
 
-        private void Btn_agregar_Click(object sender, EventArgs e)
+        private void Btn_agregar_Click(object sender, EventArgs e) //Agregar al data grid los examenes que quiere el paciente 
         {
-            //Agregar al data grid los examenes que quiere el paciente 
             try
             {
                 OdbcDataAdapter sda = new OdbcDataAdapter("SELECT iIdExamen, sDescripcion, fPrecio from examenes where iIdExamen = '" + Convert.ToInt32(Cmb_examenes.SelectedValue) + "'", conexion.ObtenerConexion());
                 DataTable datos = new DataTable();
                 sda.Fill(datos);
-                
                 Dgv_examen.Rows.Add(datos.Rows[0][0].ToString(), datos.Rows[0][1].ToString(), datos.Rows[0][2].ToString());
 
+                //Guardar detalle de citas
+                conexion.ObtenerConexion();
+                OdbcCommand cmd = conexion.ObtenerConexion().CreateCommand();
+                cmd.CommandText = "insert into detalledecitas values('"+ Convert.ToInt32(Lbl_numeroCita.Text) +"','"+Convert.ToInt32(datos.Rows[0][0])+"')";
+                cmd.ExecuteNonQuery();
+
                 //Crea la muestra
-                
                 this.Hide();
                 new CrearCodigo(Convert.ToInt32(Cmb_examenes.SelectedValue), Convert.ToInt32(Txt_dpi.Text)).ShowDialog();
                 this.Show();
@@ -121,9 +123,8 @@ namespace LaboratorioClinico
                     Txt_nombrep.Text = datos.Rows[0][0].ToString();
                     Txt_nitp.Text = datos.Rows[0][1].ToString();
                     Txt_direp.Text = datos.Rows[0][2].ToString();
-
-                    //cargar el # de cita actual
-                    Lbl_numeroCita.Text = Convert.ToString(id + 1);
+                    Pnl_datosp.Enabled = true;
+                    Gpb_detalleCita.Enabled = true;
                 }
                 else
                 {
@@ -131,10 +132,13 @@ namespace LaboratorioClinico
                     new Paciente().ShowDialog();
                     this.Show();
                 }
+                //cargar el # de cita actual
+                obtenerId();
+                Lbl_numeroCita.Text = Convert.ToString(id + 1);
             }
             catch(Exception ex)
             {
-
+                MessageBox.Show("Error al buscar paciente..");
             }
         }
 
@@ -143,6 +147,41 @@ namespace LaboratorioClinico
             this.Hide();
             new Exámen().ShowDialog();
             this.Show();
+        }
+
+        private void Btn_guardar_Click(object sender, EventArgs e)
+        {
+            int iStatus = 0;
+            try
+            {
+                //Procedimiento para ingresar encabezado de la cita
+                OdbcCommand cm;
+                cm = new OdbcCommand("{CALL Pro_ingresaCita(?,?,?,?)}", conexion.ObtenerConexion());
+                cm.CommandType = CommandType.StoredProcedure;
+                OdbcParameter parametros = new OdbcParameter();
+
+                
+                if (Cmb_estado.SelectedItem.ToString() == "No Confirmado")
+                {
+                    iStatus = 0;
+                }
+                else if (Cmb_estado.SelectedItem.ToString() == "Confirmado")
+                {
+                    iStatus = 1;
+                }
+
+                cm.Parameters.AddWithValue("dpi", Convert.ToInt32(Txt_dpi.Text));
+                cm.Parameters.AddWithValue("fec", Dtp_fecha.Text);
+                cm.Parameters.AddWithValue("hor", Txt_hora.Text);
+                cm.Parameters.AddWithValue("est", iStatus.ToString());
+                cm.ExecuteNonQuery();
+
+                MessageBox.Show("Cita Guardada Exitosamente", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ingresar cita", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

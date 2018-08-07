@@ -28,6 +28,11 @@ namespace LaboratorioClinico
             Picb_fondo.Visible = true;
         }
 
+        public void proValidarCampos()
+        {
+
+        }
+
         public void prollenarSangre() //LLENAR EL COMBOBOX DE TIPO DE SANGRE EN "PACIENTE", POR MEDIO DE UNA CONSULTA
         {
             try
