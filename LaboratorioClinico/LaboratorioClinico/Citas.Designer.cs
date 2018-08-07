@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Lbl_titulo = new System.Windows.Forms.Label();
             this.Gpb_datosm = new System.Windows.Forms.GroupBox();
             this.Txt_direp = new System.Windows.Forms.TextBox();
@@ -45,7 +45,7 @@
             this.Gpb_detalleCita = new System.Windows.Forms.GroupBox();
             this.Lbl_agregar = new System.Windows.Forms.Label();
             this.Btn_guardar = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.Lbl_info = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.Lbl_examen = new System.Windows.Forms.Label();
             this.Cmb_examenes = new System.Windows.Forms.ComboBox();
@@ -63,9 +63,15 @@
             this.Lbl_hora = new System.Windows.Forms.Label();
             this.Lbl_fecha = new System.Windows.Forms.Label();
             this.Lbl_guardar = new System.Windows.Forms.Label();
+            this.Gpb_fechayhora = new System.Windows.Forms.GroupBox();
+            this.Gpb_cita = new System.Windows.Forms.GroupBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Gpb_datosm.SuspendLayout();
             this.Gpb_detalleCita.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_examen)).BeginInit();
+            this.Gpb_fechayhora.SuspendLayout();
+            this.Gpb_cita.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Lbl_titulo
@@ -96,7 +102,7 @@
             this.Gpb_datosm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.Gpb_datosm.Location = new System.Drawing.Point(23, 58);
             this.Gpb_datosm.Name = "Gpb_datosm";
-            this.Gpb_datosm.Size = new System.Drawing.Size(732, 196);
+            this.Gpb_datosm.Size = new System.Drawing.Size(732, 173);
             this.Gpb_datosm.TabIndex = 120;
             this.Gpb_datosm.TabStop = false;
             this.Gpb_datosm.Text = "Datos paciente";
@@ -106,7 +112,7 @@
             this.Txt_direp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Txt_direp.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_direp.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.Txt_direp.Location = new System.Drawing.Point(137, 142);
+            this.Txt_direp.Location = new System.Drawing.Point(137, 134);
             this.Txt_direp.Margin = new System.Windows.Forms.Padding(4);
             this.Txt_direp.Name = "Txt_direp";
             this.Txt_direp.Size = new System.Drawing.Size(377, 26);
@@ -130,7 +136,7 @@
             this.Txt_nombrep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Txt_nombrep.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_nombrep.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.Txt_nombrep.Location = new System.Drawing.Point(135, 96);
+            this.Txt_nombrep.Location = new System.Drawing.Point(135, 88);
             this.Txt_nombrep.Margin = new System.Windows.Forms.Padding(4);
             this.Txt_nombrep.Name = "Txt_nombrep";
             this.Txt_nombrep.Size = new System.Drawing.Size(250, 26);
@@ -153,7 +159,7 @@
             this.Lbl_dpi.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_dpi.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_dpi.ForeColor = System.Drawing.Color.White;
-            this.Lbl_dpi.Location = new System.Drawing.Point(22, 35);
+            this.Lbl_dpi.Location = new System.Drawing.Point(36, 35);
             this.Lbl_dpi.Name = "Lbl_dpi";
             this.Lbl_dpi.Size = new System.Drawing.Size(38, 22);
             this.Lbl_dpi.TabIndex = 2;
@@ -165,7 +171,7 @@
             this.Lbl_nombrep.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_nombrep.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_nombrep.ForeColor = System.Drawing.Color.White;
-            this.Lbl_nombrep.Location = new System.Drawing.Point(114, 76);
+            this.Lbl_nombrep.Location = new System.Drawing.Point(114, 68);
             this.Lbl_nombrep.Name = "Lbl_nombrep";
             this.Lbl_nombrep.Size = new System.Drawing.Size(70, 22);
             this.Lbl_nombrep.TabIndex = 1;
@@ -177,7 +183,7 @@
             this.Lbl_direp.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_direp.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_direp.ForeColor = System.Drawing.Color.White;
-            this.Lbl_direp.Location = new System.Drawing.Point(114, 124);
+            this.Lbl_direp.Location = new System.Drawing.Point(114, 116);
             this.Lbl_direp.Name = "Lbl_direp";
             this.Lbl_direp.Size = new System.Drawing.Size(78, 22);
             this.Lbl_direp.TabIndex = 107;
@@ -188,7 +194,7 @@
             this.Txt_nitp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Txt_nitp.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_nitp.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.Txt_nitp.Location = new System.Drawing.Point(393, 96);
+            this.Txt_nitp.Location = new System.Drawing.Point(393, 88);
             this.Txt_nitp.Margin = new System.Windows.Forms.Padding(4);
             this.Txt_nitp.Name = "Txt_nitp";
             this.Txt_nitp.Size = new System.Drawing.Size(121, 26);
@@ -200,7 +206,7 @@
             this.Lbl_nitp.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_nitp.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_nitp.ForeColor = System.Drawing.Color.White;
-            this.Lbl_nitp.Location = new System.Drawing.Point(380, 76);
+            this.Lbl_nitp.Location = new System.Drawing.Point(380, 68);
             this.Lbl_nitp.Name = "Lbl_nitp";
             this.Lbl_nitp.Size = new System.Drawing.Size(33, 22);
             this.Lbl_nitp.TabIndex = 109;
@@ -209,31 +215,19 @@
             // Gpb_detalleCita
             // 
             this.Gpb_detalleCita.BackColor = System.Drawing.Color.Transparent;
-            this.Gpb_detalleCita.Controls.Add(this.Lbl_agregar);
+            this.Gpb_detalleCita.Controls.Add(this.groupBox1);
+            this.Gpb_detalleCita.Controls.Add(this.Gpb_cita);
+            this.Gpb_detalleCita.Controls.Add(this.Gpb_fechayhora);
             this.Gpb_detalleCita.Controls.Add(this.Btn_guardar);
-            this.Gpb_detalleCita.Controls.Add(this.label2);
-            this.Gpb_detalleCita.Controls.Add(this.button1);
-            this.Gpb_detalleCita.Controls.Add(this.Lbl_examen);
-            this.Gpb_detalleCita.Controls.Add(this.Cmb_examenes);
-            this.Gpb_detalleCita.Controls.Add(this.Btn_agregar);
-            this.Gpb_detalleCita.Controls.Add(this.Dgv_examen);
-            this.Gpb_detalleCita.Controls.Add(this.Lbl_numeroCita);
-            this.Gpb_detalleCita.Controls.Add(this.Cmb_estado);
-            this.Gpb_detalleCita.Controls.Add(this.Txt_numero);
-            this.Gpb_detalleCita.Controls.Add(this.Txt_estado);
-            this.Gpb_detalleCita.Controls.Add(this.Dtp_fecha);
-            this.Gpb_detalleCita.Controls.Add(this.Txt_hora);
-            this.Gpb_detalleCita.Controls.Add(this.Lbl_hora);
-            this.Gpb_detalleCita.Controls.Add(this.Lbl_fecha);
             this.Gpb_detalleCita.Controls.Add(this.Lbl_guardar);
             this.Gpb_detalleCita.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Gpb_detalleCita.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.Gpb_detalleCita.Location = new System.Drawing.Point(23, 260);
+            this.Gpb_detalleCita.Location = new System.Drawing.Point(23, 237);
             this.Gpb_detalleCita.Name = "Gpb_detalleCita";
-            this.Gpb_detalleCita.Size = new System.Drawing.Size(732, 352);
+            this.Gpb_detalleCita.Size = new System.Drawing.Size(732, 375);
             this.Gpb_detalleCita.TabIndex = 121;
             this.Gpb_detalleCita.TabStop = false;
-            this.Gpb_detalleCita.Text = "Detalle de Cita";
+            this.Gpb_detalleCita.Text = "Detalle";
             this.Gpb_detalleCita.Enter += new System.EventHandler(this.Gpb_detalleCita_Enter);
             // 
             // Lbl_agregar
@@ -242,7 +236,7 @@
             this.Lbl_agregar.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_agregar.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_agregar.ForeColor = System.Drawing.Color.PowderBlue;
-            this.Lbl_agregar.Location = new System.Drawing.Point(504, 137);
+            this.Lbl_agregar.Location = new System.Drawing.Point(279, 21);
             this.Lbl_agregar.Name = "Lbl_agregar";
             this.Lbl_agregar.Size = new System.Drawing.Size(52, 15);
             this.Lbl_agregar.TabIndex = 137;
@@ -252,30 +246,30 @@
             // 
             this.Btn_guardar.BackgroundImage = global::LaboratorioClinico.Properties.Resources.guardar;
             this.Btn_guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Btn_guardar.Location = new System.Drawing.Point(662, 288);
+            this.Btn_guardar.Location = new System.Drawing.Point(645, 216);
             this.Btn_guardar.Name = "Btn_guardar";
             this.Btn_guardar.Size = new System.Drawing.Size(53, 44);
             this.Btn_guardar.TabIndex = 135;
             this.Btn_guardar.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // Lbl_info
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(59, 248);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 18);
-            this.label2.TabIndex = 134;
-            this.label2.Text = "Ver Exámenes";
+            this.Lbl_info.AutoSize = true;
+            this.Lbl_info.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_info.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_info.ForeColor = System.Drawing.Color.White;
+            this.Lbl_info.Location = new System.Drawing.Point(16, 193);
+            this.Lbl_info.Name = "Lbl_info";
+            this.Lbl_info.Size = new System.Drawing.Size(93, 18);
+            this.Lbl_info.TabIndex = 134;
+            this.Lbl_info.Text = "Info Exámenes";
             // 
             // button1
             // 
             this.button1.BackgroundImage = global::LaboratorioClinico.Properties.Resources.info;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Location = new System.Drawing.Point(85, 213);
+            this.button1.Location = new System.Drawing.Point(42, 158);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(35, 32);
             this.button1.TabIndex = 133;
@@ -288,7 +282,7 @@
             this.Lbl_examen.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_examen.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_examen.ForeColor = System.Drawing.Color.White;
-            this.Lbl_examen.Location = new System.Drawing.Point(21, 155);
+            this.Lbl_examen.Location = new System.Drawing.Point(26, 47);
             this.Lbl_examen.Name = "Lbl_examen";
             this.Lbl_examen.Size = new System.Drawing.Size(67, 22);
             this.Lbl_examen.TabIndex = 130;
@@ -302,18 +296,18 @@
             this.Cmb_examenes.Items.AddRange(new object[] {
             "No Confirmado",
             "Confirmado"});
-            this.Cmb_examenes.Location = new System.Drawing.Point(98, 156);
+            this.Cmb_examenes.Location = new System.Drawing.Point(96, 48);
             this.Cmb_examenes.Name = "Cmb_examenes";
             this.Cmb_examenes.Size = new System.Drawing.Size(168, 25);
             this.Cmb_examenes.TabIndex = 129;
-            this.Cmb_examenes.Text = "Seleccione el Examen";
+            this.Cmb_examenes.Text = "Seleccione una opción";
             // 
             // Btn_agregar
             // 
             this.Btn_agregar.BackgroundImage = global::LaboratorioClinico.Properties.Resources.anadir;
             this.Btn_agregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Btn_agregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Btn_agregar.Location = new System.Drawing.Point(507, 155);
+            this.Btn_agregar.Location = new System.Drawing.Point(280, 36);
             this.Btn_agregar.Name = "Btn_agregar";
             this.Btn_agregar.Size = new System.Drawing.Size(53, 44);
             this.Btn_agregar.TabIndex = 127;
@@ -329,40 +323,40 @@
             this.Dgv_examen.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Dgv_examen.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.Dgv_examen.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.DarkSlateGray;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.CadetBlue;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.LightCyan;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgv_examen.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkSlateGray;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.CadetBlue;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.LightCyan;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_examen.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.Dgv_examen.ColumnHeadersHeight = 27;
             this.Dgv_examen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.Dgv_examen.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.CadetBlue;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.LightCyan;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Dgv_examen.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.CadetBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.LightCyan;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Dgv_examen.DefaultCellStyle = dataGridViewCellStyle2;
             this.Dgv_examen.EnableHeadersVisualStyles = false;
-            this.Dgv_examen.Location = new System.Drawing.Point(174, 205);
+            this.Dgv_examen.Location = new System.Drawing.Point(154, 97);
             this.Dgv_examen.Name = "Dgv_examen";
             this.Dgv_examen.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.CadetBlue;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgv_examen.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.CadetBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_examen.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.Dgv_examen.Size = new System.Drawing.Size(386, 104);
             this.Dgv_examen.TabIndex = 126;
             this.Dgv_examen.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_examen_CellContentClick);
@@ -390,8 +384,8 @@
             this.Lbl_numeroCita.AutoSize = true;
             this.Lbl_numeroCita.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_numeroCita.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_numeroCita.ForeColor = System.Drawing.Color.DarkKhaki;
-            this.Lbl_numeroCita.Location = new System.Drawing.Point(670, 15);
+            this.Lbl_numeroCita.ForeColor = System.Drawing.Color.Red;
+            this.Lbl_numeroCita.Location = new System.Drawing.Point(160, 21);
             this.Lbl_numeroCita.Name = "Lbl_numeroCita";
             this.Lbl_numeroCita.Size = new System.Drawing.Size(23, 22);
             this.Lbl_numeroCita.TabIndex = 112;
@@ -405,7 +399,7 @@
             this.Cmb_estado.Items.AddRange(new object[] {
             "No Confirmado",
             "Confirmado"});
-            this.Cmb_estado.Location = new System.Drawing.Point(542, 59);
+            this.Cmb_estado.Location = new System.Drawing.Point(120, 55);
             this.Cmb_estado.Name = "Cmb_estado";
             this.Cmb_estado.Size = new System.Drawing.Size(113, 25);
             this.Cmb_estado.TabIndex = 125;
@@ -414,11 +408,11 @@
             // 
             this.Txt_numero.AutoSize = true;
             this.Txt_numero.BackColor = System.Drawing.Color.Transparent;
-            this.Txt_numero.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_numero.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_numero.ForeColor = System.Drawing.Color.White;
-            this.Txt_numero.Location = new System.Drawing.Point(536, 15);
+            this.Txt_numero.Location = new System.Drawing.Point(10, 21);
             this.Txt_numero.Name = "Txt_numero";
-            this.Txt_numero.Size = new System.Drawing.Size(119, 22);
+            this.Txt_numero.Size = new System.Drawing.Size(135, 22);
             this.Txt_numero.TabIndex = 111;
             this.Txt_numero.Text = "Número de cita";
             // 
@@ -428,7 +422,7 @@
             this.Txt_estado.BackColor = System.Drawing.Color.Transparent;
             this.Txt_estado.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_estado.ForeColor = System.Drawing.Color.White;
-            this.Txt_estado.Location = new System.Drawing.Point(479, 62);
+            this.Txt_estado.Location = new System.Drawing.Point(57, 54);
             this.Txt_estado.Name = "Txt_estado";
             this.Txt_estado.Size = new System.Drawing.Size(57, 22);
             this.Txt_estado.TabIndex = 124;
@@ -439,9 +433,9 @@
             this.Dtp_fecha.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Dtp_fecha.CustomFormat = "yyyy-MM-dd";
             this.Dtp_fecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Dtp_fecha.Location = new System.Drawing.Point(174, 43);
+            this.Dtp_fecha.Location = new System.Drawing.Point(263, 21);
             this.Dtp_fecha.Name = "Dtp_fecha";
-            this.Dtp_fecha.Size = new System.Drawing.Size(114, 29);
+            this.Dtp_fecha.Size = new System.Drawing.Size(114, 26);
             this.Dtp_fecha.TabIndex = 123;
             // 
             // Txt_hora
@@ -449,7 +443,7 @@
             this.Txt_hora.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Txt_hora.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_hora.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.Txt_hora.Location = new System.Drawing.Point(174, 86);
+            this.Txt_hora.Location = new System.Drawing.Point(263, 58);
             this.Txt_hora.Margin = new System.Windows.Forms.Padding(4);
             this.Txt_hora.Name = "Txt_hora";
             this.Txt_hora.Size = new System.Drawing.Size(58, 26);
@@ -461,11 +455,11 @@
             this.Lbl_hora.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_hora.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_hora.ForeColor = System.Drawing.Color.White;
-            this.Lbl_hora.Location = new System.Drawing.Point(22, 86);
+            this.Lbl_hora.Location = new System.Drawing.Point(38, 59);
             this.Lbl_hora.Name = "Lbl_hora";
-            this.Lbl_hora.Size = new System.Drawing.Size(134, 22);
+            this.Lbl_hora.Size = new System.Drawing.Size(222, 22);
             this.Lbl_hora.TabIndex = 122;
-            this.Lbl_hora.Text = "Hora programada";
+            this.Lbl_hora.Text = "Hora programada para la cita: ";
             // 
             // Lbl_fecha
             // 
@@ -473,11 +467,11 @@
             this.Lbl_fecha.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_fecha.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_fecha.ForeColor = System.Drawing.Color.White;
-            this.Lbl_fecha.Location = new System.Drawing.Point(58, 43);
+            this.Lbl_fecha.Location = new System.Drawing.Point(38, 21);
             this.Lbl_fecha.Name = "Lbl_fecha";
-            this.Lbl_fecha.Size = new System.Drawing.Size(98, 22);
+            this.Lbl_fecha.Size = new System.Drawing.Size(225, 22);
             this.Lbl_fecha.TabIndex = 111;
-            this.Lbl_fecha.Text = "Fecha de cita";
+            this.Lbl_fecha.Text = "Fecha programada para la cita: ";
             // 
             // Lbl_guardar
             // 
@@ -485,11 +479,51 @@
             this.Lbl_guardar.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_guardar.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_guardar.ForeColor = System.Drawing.Color.PowderBlue;
-            this.Lbl_guardar.Location = new System.Drawing.Point(663, 331);
+            this.Lbl_guardar.Location = new System.Drawing.Point(646, 259);
             this.Lbl_guardar.Name = "Lbl_guardar";
             this.Lbl_guardar.Size = new System.Drawing.Size(52, 15);
             this.Lbl_guardar.TabIndex = 136;
             this.Lbl_guardar.Text = "Guardar";
+            // 
+            // Gpb_fechayhora
+            // 
+            this.Gpb_fechayhora.Controls.Add(this.Txt_hora);
+            this.Gpb_fechayhora.Controls.Add(this.Dtp_fecha);
+            this.Gpb_fechayhora.Controls.Add(this.Lbl_fecha);
+            this.Gpb_fechayhora.Controls.Add(this.Lbl_hora);
+            this.Gpb_fechayhora.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Gpb_fechayhora.Location = new System.Drawing.Point(39, 21);
+            this.Gpb_fechayhora.Name = "Gpb_fechayhora";
+            this.Gpb_fechayhora.Size = new System.Drawing.Size(411, 100);
+            this.Gpb_fechayhora.TabIndex = 138;
+            this.Gpb_fechayhora.TabStop = false;
+            // 
+            // Gpb_cita
+            // 
+            this.Gpb_cita.Controls.Add(this.Cmb_estado);
+            this.Gpb_cita.Controls.Add(this.Txt_estado);
+            this.Gpb_cita.Controls.Add(this.Txt_numero);
+            this.Gpb_cita.Controls.Add(this.Lbl_numeroCita);
+            this.Gpb_cita.Location = new System.Drawing.Point(465, 21);
+            this.Gpb_cita.Name = "Gpb_cita";
+            this.Gpb_cita.Size = new System.Drawing.Size(254, 100);
+            this.Gpb_cita.TabIndex = 139;
+            this.Gpb_cita.TabStop = false;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.Dgv_examen);
+            this.groupBox1.Controls.Add(this.Btn_agregar);
+            this.groupBox1.Controls.Add(this.Cmb_examenes);
+            this.groupBox1.Controls.Add(this.Lbl_agregar);
+            this.groupBox1.Controls.Add(this.Lbl_info);
+            this.groupBox1.Controls.Add(this.Lbl_examen);
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Location = new System.Drawing.Point(39, 130);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(558, 225);
+            this.groupBox1.TabIndex = 140;
+            this.groupBox1.TabStop = false;
             // 
             // Citas
             // 
@@ -511,6 +545,12 @@
             this.Gpb_detalleCita.ResumeLayout(false);
             this.Gpb_detalleCita.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_examen)).EndInit();
+            this.Gpb_fechayhora.ResumeLayout(false);
+            this.Gpb_fechayhora.PerformLayout();
+            this.Gpb_cita.ResumeLayout(false);
+            this.Gpb_cita.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -541,7 +581,7 @@
         private System.Windows.Forms.Label Lbl_examen;
         private System.Windows.Forms.ComboBox Cmb_examenes;
         private System.Windows.Forms.Button Btn_agregar;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label Lbl_info;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button Btn_guardar;
         private System.Windows.Forms.Label Lbl_agregar;
@@ -549,5 +589,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox Gpb_cita;
+        private System.Windows.Forms.GroupBox Gpb_fechayhora;
     }
 }
