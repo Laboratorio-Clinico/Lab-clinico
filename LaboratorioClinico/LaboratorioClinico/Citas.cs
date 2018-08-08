@@ -114,7 +114,7 @@ namespace LaboratorioClinico
         {
             try
             {
-                OdbcDataAdapter sda = new OdbcDataAdapter("SELECT sNombre, sNit, sDireccion FROM paciente WHERE nIdPaciente ='" + Convert.ToInt32(Txt_dpi.Text) + "'", conexion.ObtenerConexion());
+                OdbcDataAdapter sda = new OdbcDataAdapter("SELECT sNombre, sNit, sDireccion FROM paciente WHERE nIdPaciente ='" + Convert.ToInt64(Txt_dpi.Text) + "'", conexion.ObtenerConexion());
                 DataTable datos = new DataTable();
                 sda.Fill(datos);
 
