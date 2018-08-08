@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Requerimientos));
             this.Gpb_llenador = new System.Windows.Forms.GroupBox();
-            this.Dgb_requisitosr = new System.Windows.Forms.DataGridView();
             this.button2 = new System.Windows.Forms.Button();
             this.Lbl_nombrer = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -41,10 +40,10 @@
             this.Lbl_fechar = new System.Windows.Forms.Label();
             this.Gpb_imprimirr = new System.Windows.Forms.GroupBox();
             this.Gpb_requisitos = new System.Windows.Forms.GroupBox();
-            this.Cmb_examen = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.Cmb_examen = new System.Windows.Forms.ComboBox();
+            this.Txt_requerimientos = new System.Windows.Forms.TextBox();
             this.Gpb_llenador.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Dgb_requisitosr)).BeginInit();
             this.Gpb_fechar.SuspendLayout();
             this.Gpb_imprimirr.SuspendLayout();
             this.Gpb_requisitos.SuspendLayout();
@@ -53,28 +52,13 @@
             // Gpb_llenador
             // 
             this.Gpb_llenador.BackColor = System.Drawing.Color.Transparent;
-            this.Gpb_llenador.Controls.Add(this.Dgb_requisitosr);
+            this.Gpb_llenador.Controls.Add(this.Txt_requerimientos);
             this.Gpb_llenador.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Gpb_llenador.Location = new System.Drawing.Point(94, 124);
             this.Gpb_llenador.Name = "Gpb_llenador";
             this.Gpb_llenador.Size = new System.Drawing.Size(542, 239);
             this.Gpb_llenador.TabIndex = 0;
             this.Gpb_llenador.TabStop = false;
-            // 
-            // Dgb_requisitosr
-            // 
-            this.Dgb_requisitosr.AllowUserToOrderColumns = true;
-            this.Dgb_requisitosr.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.Dgb_requisitosr.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.Dgb_requisitosr.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.Dgb_requisitosr.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.Dgb_requisitosr.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.Dgb_requisitosr.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.Dgb_requisitosr.EnableHeadersVisualStyles = false;
-            this.Dgb_requisitosr.Location = new System.Drawing.Point(6, 12);
-            this.Dgb_requisitosr.Name = "Dgb_requisitosr";
-            this.Dgb_requisitosr.Size = new System.Drawing.Size(524, 221);
-            this.Dgb_requisitosr.TabIndex = 0;
             // 
             // button2
             // 
@@ -199,6 +183,17 @@
             this.Gpb_requisitos.TabIndex = 24;
             this.Gpb_requisitos.TabStop = false;
             this.Gpb_requisitos.Text = "Requisitos";
+            this.Gpb_requisitos.Enter += new System.EventHandler(this.Gpb_requisitos_Enter);
+            // 
+            // button3
+            // 
+            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.Location = new System.Drawing.Point(664, 415);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(53, 44);
+            this.button3.TabIndex = 25;
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // Cmb_examen
             // 
@@ -210,15 +205,14 @@
             this.Cmb_examen.TabIndex = 3;
             this.Cmb_examen.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // button3
+            // Txt_requerimientos
             // 
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.Location = new System.Drawing.Point(664, 415);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(53, 44);
-            this.button3.TabIndex = 25;
-            this.button3.UseVisualStyleBackColor = true;
+            this.Txt_requerimientos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Txt_requerimientos.Location = new System.Drawing.Point(3, 22);
+            this.Txt_requerimientos.Multiline = true;
+            this.Txt_requerimientos.Name = "Txt_requerimientos";
+            this.Txt_requerimientos.Size = new System.Drawing.Size(536, 214);
+            this.Txt_requerimientos.TabIndex = 1;
             // 
             // Requerimientos
             // 
@@ -238,7 +232,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Requerimientos_Load);
             this.Gpb_llenador.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Dgb_requisitosr)).EndInit();
+            this.Gpb_llenador.PerformLayout();
             this.Gpb_fechar.ResumeLayout(false);
             this.Gpb_fechar.PerformLayout();
             this.Gpb_imprimirr.ResumeLayout(false);
@@ -262,8 +256,8 @@
         private System.Windows.Forms.DateTimePicker Dtp_fechar;
         private System.Windows.Forms.GroupBox Gpb_imprimirr;
         private System.Windows.Forms.GroupBox Gpb_requisitos;
-        private System.Windows.Forms.DataGridView Dgb_requisitosr;
         private System.Windows.Forms.ComboBox Cmb_examen;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox Txt_requerimientos;
     }
 }

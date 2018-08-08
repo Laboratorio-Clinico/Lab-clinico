@@ -103,6 +103,31 @@ namespace LaboratorioClinico
         {
             if ((MessageBox.Show("¿Quieres cerrar sesión?", "Cerrando sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question)) == DialogResult.Yes)
             {
+                //Registra Salida Bitacora @SBatz
+
+                OdbcDataAdapter sda2 = new OdbcDataAdapter("select bi.nIdBitacora from bitacora bi ", conexion.ObtenerConexion());
+                DataTable datos2 = new DataTable();
+                sda2.Fill(datos2);
+
+                int p;
+                p = datos2.Rows.Count;
+                DateTime fechaSalida = DateTime.Now;
+                try
+                {
+                    OdbcCommand comando = new OdbcCommand("{CALL pd_ModificarBitacora(?,?)}", conexion.ObtenerConexion());
+                    comando.CommandType = CommandType.StoredProcedure;           
+
+                    comando.Parameters.AddWithValue("@nIdBitacora", p);                    
+                    comando.Parameters.AddWithValue("@dfechaSalida", fechaSalida);
+                    comando.ExecuteNonQuery();
+                }
+                catch (Exception error) {
+                    MessageBox.Show("Error" + error);
+                }
+
+                { conexion.ObtenerConexion().Close(); }
+
+
                 this.Close();
             }
             else
@@ -138,7 +163,14 @@ namespace LaboratorioClinico
 
         private void label2_Click(object sender, EventArgs e)
         {
+            if ((MessageBox.Show("¿Quieres cerrar sesión?", "Cerrando sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question)) == DialogResult.Yes)
+            {
+                this.Close();
+            }
+            else
+            {
 
+            }
 
         }
 

@@ -88,7 +88,8 @@ namespace LaboratorioClinico
             DataTable dtDatos = new DataTable();
             adaptador.Fill(dtDatos);
                           
-                    Dgb_requisitosr.DataSource = dtDatos;
+                   
+                Txt_requerimientos.Text = dtDatos.Rows[0][0].ToString();
                 
             }catch (Exception ex){
 
@@ -108,6 +109,16 @@ namespace LaboratorioClinico
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Gpb_requisitos_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Dgb_requisitosr_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

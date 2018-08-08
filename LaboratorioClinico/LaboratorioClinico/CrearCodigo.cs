@@ -16,10 +16,10 @@ namespace LaboratorioClinico
     {
         public CrearCodigo(int codigo, int dpi)
         {
-            InitializeComponent();
-            llenarMuestra(codigo, dpi);
+            InitializeComponent();       
             obtenerId();
             Txt_texto.Text = id+Convert.ToString(codigo);
+            llenarMuestra(codigo, dpi);
         }
 
       
@@ -42,7 +42,7 @@ namespace LaboratorioClinico
             {
                 conexion.ObtenerConexion();
                 OdbcCommand cmd = conexion.ObtenerConexion().CreateCommand();
-                cmd.CommandText = "insert into muestra values(null,'" + examen + "','" + dpi + "')";
+                cmd.CommandText = "insert into muestra values(null,'" + examen + "','" + dpi + "','"+Convert.ToInt32(Txt_texto.Text)+"')";
                 cmd.ExecuteNonQuery();
             }
             catch(Exception ex)
@@ -64,8 +64,6 @@ namespace LaboratorioClinico
                 adaptador.Fill(tabla);
 
                 id = Convert.ToInt32(tabla.Rows[0][0]);
-
-                MessageBox.Show("Mostrando: " + tabla.Rows[0][0].ToString());
                 
 
             }
