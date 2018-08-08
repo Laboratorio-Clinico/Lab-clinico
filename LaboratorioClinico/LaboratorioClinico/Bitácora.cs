@@ -18,7 +18,7 @@ namespace LaboratorioClinico
             InitializeComponent();
         }
 
-       
+       //@Sindy Batz
         private void Btn_verb_Click(object sender, EventArgs e)
         {
             try
