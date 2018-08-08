@@ -49,7 +49,7 @@ namespace LaboratorioClinico
         public void proGuardarEncabezado()
         {
             try{
-                int iIdPago = Convert.ToInt32(Cmb_formaPago.SelectedValue);
+                int iIdPago = Convert.ToInt64(Cmb_formaPago.SelectedValue);
                 
               
                 OdbcCommand comando = new OdbcCommand("{CALL InsertaFactura(?,?,?,?,?)}", conexion.ObtenerConexion());
@@ -120,7 +120,7 @@ namespace LaboratorioClinico
             {
                
                 int p, c, d; int a = 0;
-                int iIdPago = Convert.ToInt32(Cmb_formaPago.SelectedValue);
+                int iIdPago = Convert.ToInt64(Cmb_formaPago.SelectedValue);
 
                 OdbcDataAdapter sda = new OdbcDataAdapter("select count(*) from examenes where iIdExamen= '" + Txt_codigof.Text + "'", conexion.ObtenerConexion());
                 DataTable datos = new DataTable();
@@ -130,9 +130,9 @@ namespace LaboratorioClinico
                 DataTable datos2 = new DataTable();
                 sda2.Fill(datos2);
 
-                c = Convert.ToInt32(Txt_cantidadf.Text);
-                p = Convert.ToInt32(datos2.Rows[0][2].ToString());
-                d = Convert.ToInt32(Txt_descuentof.Text);
+                c = Convert.ToInt64(Txt_cantidadf.Text);
+                p = Convert.ToInt64(datos2.Rows[0][2].ToString());
+                d = Convert.ToInt64(Txt_descuentof.Text);
 
                 subtotal = c * p;
                 descuento = ((subtotal * d) / 100);
@@ -209,7 +209,7 @@ namespace LaboratorioClinico
         private void Btn_guardar_Click(object sender, EventArgs e)
         {
             int r = 0; int rec = 0;int f =0;int acumulado2;
-            int iIdPago = Convert.ToInt32(Cmb_formaPago.SelectedValue);
+            int iIdPago = Convert.ToInt64(Cmb_formaPago.SelectedValue);
 
             if (iIdPago == 2){
                 r = ((acumulado1 * 5)/100);
