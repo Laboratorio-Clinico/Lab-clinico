@@ -19,6 +19,8 @@ namespace LaboratorioClinico
         {
             InitializeComponent();
             formPago();
+            obtenerId();
+            Lbl_numSerie.Text = Convert.ToString(id+1);
         }
 
         //Validación si efectivo o crédito
@@ -35,6 +37,8 @@ namespace LaboratorioClinico
 
                 adaptador.Fill(tabla);
 
+
+
                 Cmb_formaPago.ValueMember = "iIdPago";
                 Cmb_formaPago.DisplayMember = "forma";
                 Cmb_formaPago.DataSource = tabla;
@@ -44,8 +48,25 @@ namespace LaboratorioClinico
             }
             catch (OdbcException error) { MessageBox.Show(error.Message); }
         }
+        int id;
+        private void obtenerId()
+        {
+            try
+            {
+                OdbcCommand comando = new OdbcCommand("Select count(*) from factura", conexion.ObtenerConexion());
+                OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
+                DataTable tabla = new DataTable();
+                adaptador.Fill(tabla);
 
-        
+                id = Convert.ToInt32(tabla.Rows[0][0]);
+                //MessageBox.Show("Mostrando: " + tabla.Rows[0][0].ToString());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se encontro count");
+            }
+        }
+
         public void proGuardarEncabezado()
         {
             try{
@@ -54,7 +75,7 @@ namespace LaboratorioClinico
               
                 OdbcCommand comando = new OdbcCommand("{CALL InsertaFactura(?,?,?,?,?)}", conexion.ObtenerConexion());
                 comando.CommandType = CommandType.StoredProcedure;
-                comando.Parameters.AddWithValue("@nIdFactura", Txt_serie.Text);
+                comando.Parameters.AddWithValue("@nIdFactura", Convert.ToInt32(Lbl_numSerie.Text));
                 comando.Parameters.AddWithValue("@sSerieFactura", Lbl_serie.Text);
                 comando.Parameters.AddWithValue("@dFecha", Dtp_fechaf.Text);
                 comando.Parameters.AddWithValue("@sNit", Txt_nitf.Text);
@@ -204,6 +225,19 @@ namespace LaboratorioClinico
 
         private void Gpb_datosf_Enter(object sender, EventArgs e)
         {
+        }
+
+        private void Cmb_formaPago_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(Convert.ToInt32(Cmb_formaPago.SelectedValue) == 2)
+            {
+                Txt_credit.Visible = true;
+                Lbl_credit.Visible = true;
+            }else if(Convert.ToInt32(Cmb_formaPago.SelectedValue) == 1)
+            {
+                Txt_credit.Visible = false;
+                Lbl_credit.Visible = false;
+            }
         }
 
         private void Btn_guardar_Click(object sender, EventArgs e)
