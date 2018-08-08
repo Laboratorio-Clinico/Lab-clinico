@@ -265,7 +265,7 @@ namespace LaboratorioClinico
                 int iIdExamenes = Convert.ToInt32(Cmb_examen.SelectedValue);
                 int iEmpleados = Convert.ToInt32(Cmb_doctor.SelectedValue);
 
-               // int iCantidades = Convert.ToInt32(Txt_Cantidad.Text.ToString);
+                int iCantidades = Convert.ToInt32(Txt_Cantidad.Text);
 
 
                 OdbcCommand comando = new OdbcCommand("{CALL Pro_ingresoDetallesCotizacion(?,?,?,?,?,?)}", conexion.ObtenerConexion());
@@ -275,7 +275,7 @@ namespace LaboratorioClinico
                 comando.Parameters.AddWithValue("fDescuento", fDescuentos);
                 comando.Parameters.AddWithValue("iExamen", iIdExamenes);
                 comando.Parameters.AddWithValue("iEmpleado", iEmpleados);
-                //comando.Parameters.AddWithValue("iCantidad", iCantidades);
+                comando.Parameters.AddWithValue("iCantidad", iCantidades);
                 comando.ExecuteNonQuery();
                 MessageBox.Show("Detalle agregado");
                 Txt_Cantidad.Text = "";

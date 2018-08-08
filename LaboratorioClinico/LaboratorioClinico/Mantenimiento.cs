@@ -208,23 +208,32 @@ namespace LaboratorioClinico
         {
             try
             {
-                Pnl_modificarP.Visible = true;
-                OdbcDataAdapter sda = new OdbcDataAdapter("SELECT pa.sNombre, te.iTelefono  , pa.sNit, sa.iIdTipoDeSangre, pa.sDireccion, co.sCorreo, pa.sAlergia, pa.sRefiere, pa.sGenero FROM paciente pa, telefono te, correo co, tipodesangre sa WHERE pa.nIdPaciente = te.nIdPaciente AND pa.nIdPaciente = co.nIdPaciente AND pa.iIdTipoDeSangre = sa.iIdTipoDeSangre AND pa.nIdPaciente='" + Convert.ToInt32(Txt_expe.Text) + "'", conexion.ObtenerConexion());
-                DataTable datos = new DataTable();
-                sda.Fill(datos);
 
-                //Llenar todos los campos con los datos del paciente encontrado................................
-                Txt_nombre.Text = datos.Rows[0][0].ToString();
-                Txt_telefono.Text = datos.Rows[0][1].ToString();
-                Txt_nit.Text = datos.Rows[0][2].ToString();
-                Txt_tipoSangre.Text = datos.Rows[0][3].ToString();
-                Txt_direccion.Text = datos.Rows[0][4].ToString();
-                Txt_correo.Text = datos.Rows[0][5].ToString(); ;
-                Txt_alergias.Text = datos.Rows[0][6].ToString();
-                Txt_refiere.Text = datos.Rows[0][7].ToString();
-                Cmb_sexo.Text = datos.Rows[0][8].ToString();
+                if (Txt_expe.MaxLength == 13)
+                {
+                    Erp_error.SetError(Txt_expe, "");
 
-                //Txt_tipoSangre.Enabled = false;
+                    Pnl_modificarP.Visible = true;
+                    OdbcDataAdapter sda = new OdbcDataAdapter("SELECT pa.sNombre, te.iTelefono  , pa.sNit, sa.iIdTipoDeSangre, pa.sDireccion, co.sCorreo, pa.sAlergia, pa.sRefiere, pa.sGenero FROM paciente pa, telefono te, correo co, tipodesangre sa WHERE pa.nIdPaciente = te.nIdPaciente AND pa.nIdPaciente = co.nIdPaciente AND pa.iIdTipoDeSangre = sa.iIdTipoDeSangre AND pa.nIdPaciente='" + Convert.ToInt32(Txt_expe.Text) + "'", conexion.ObtenerConexion());
+                    DataTable datos = new DataTable();
+                    sda.Fill(datos);
+
+                    //Llenar todos los campos con los datos del paciente encontrado................................
+                    Txt_nombre.Text = datos.Rows[0][0].ToString();
+                    Txt_telefono.Text = datos.Rows[0][1].ToString();
+                    Txt_nit.Text = datos.Rows[0][2].ToString();
+                    Txt_tipoSangre.Text = datos.Rows[0][3].ToString();
+                    Txt_direccion.Text = datos.Rows[0][4].ToString();
+                    Txt_correo.Text = datos.Rows[0][5].ToString(); ;
+                    Txt_alergias.Text = datos.Rows[0][6].ToString();
+                    Txt_refiere.Text = datos.Rows[0][7].ToString();
+                    Cmb_sexo.Text = datos.Rows[0][8].ToString();
+
+                    //Txt_tipoSangre.Enabled = false;
+                }else
+                {
+                    Erp_error.SetError(Txt_expe, "Deben ingresarse 13 dígitos.");
+                }
             }
             catch(Exception ex)
             {
@@ -899,6 +908,17 @@ namespace LaboratorioClinico
             {
                 MessageBox.Show("No se pudo eliminar el registro.", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
                 //MessageBox.Show("error:"+ex);
+            }
+        }
+
+        private void Txt_expe_Validating(object sender, CancelEventArgs e)
+        {
+            if(Txt_expe.TextLength != 8)
+            {
+                Erp_error.SetError(Txt_expe, "El DPI debe contener 13 dígitos.");
+            }else
+            {
+                Erp_error.SetError(Txt_expe, "");
             }
         }
     }
