@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Requerimientos));
             this.Gpb_llenador = new System.Windows.Forms.GroupBox();
+            this.Txt_requerimientos = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.Lbl_nombrer = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -42,7 +43,6 @@
             this.Gpb_requisitos = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
             this.Cmb_examen = new System.Windows.Forms.ComboBox();
-            this.Txt_requerimientos = new System.Windows.Forms.TextBox();
             this.Gpb_llenador.SuspendLayout();
             this.Gpb_fechar.SuspendLayout();
             this.Gpb_imprimirr.SuspendLayout();
@@ -59,6 +59,15 @@
             this.Gpb_llenador.Size = new System.Drawing.Size(542, 239);
             this.Gpb_llenador.TabIndex = 0;
             this.Gpb_llenador.TabStop = false;
+            // 
+            // Txt_requerimientos
+            // 
+            this.Txt_requerimientos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Txt_requerimientos.Location = new System.Drawing.Point(3, 22);
+            this.Txt_requerimientos.Multiline = true;
+            this.Txt_requerimientos.Name = "Txt_requerimientos";
+            this.Txt_requerimientos.Size = new System.Drawing.Size(536, 214);
+            this.Txt_requerimientos.TabIndex = 1;
             // 
             // button2
             // 
@@ -204,15 +213,7 @@
             this.Cmb_examen.Size = new System.Drawing.Size(267, 26);
             this.Cmb_examen.TabIndex = 3;
             this.Cmb_examen.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // Txt_requerimientos
-            // 
-            this.Txt_requerimientos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Txt_requerimientos.Location = new System.Drawing.Point(3, 22);
-            this.Txt_requerimientos.Multiline = true;
-            this.Txt_requerimientos.Name = "Txt_requerimientos";
-            this.Txt_requerimientos.Size = new System.Drawing.Size(536, 214);
-            this.Txt_requerimientos.TabIndex = 1;
+            this.Cmb_examen.Click += new System.EventHandler(this.Cmb_examen_Click);
             // 
             // Requerimientos
             // 
