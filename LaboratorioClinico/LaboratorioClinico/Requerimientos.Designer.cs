@@ -54,6 +54,7 @@
             // 
             this.Txt_requerimientos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Txt_requerimientos.Enabled = false;
+            this.Txt_requerimientos.Font = new System.Drawing.Font("Perpetua", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_requerimientos.Location = new System.Drawing.Point(3, 22);
             this.Txt_requerimientos.Multiline = true;
             this.Txt_requerimientos.Name = "Txt_requerimientos";
