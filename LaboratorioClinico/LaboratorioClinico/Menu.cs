@@ -334,5 +334,12 @@ namespace LaboratorioClinico
             new Citas().ShowDialog();
             this.Show();
         }
+
+        private void constanciasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Constancia().ShowDialog();
+            this.Show();
+        }
     }
 }

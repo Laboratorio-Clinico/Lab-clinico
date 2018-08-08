@@ -71,6 +71,12 @@
     <Compile Include="Citas.Designer.cs">
       <DependentUpon>Citas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Comprobacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comprobacion.Designer.cs">
+      <DependentUpon>Comprobacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="conexion.cs" />
     <Compile Include="ConfigUser.cs">
       <SubType>Form</SubType>
@@ -229,6 +235,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Citas.resx">
       <DependentUpon>Citas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comprobacion.resx">
+      <DependentUpon>Comprobacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConfigUser.resx">
       <DependentUpon>ConfigUser.cs</DependentUpon>
@@ -609,6 +618,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\tarjeta-de-credito %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\536353.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancelar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\confirmar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\confirm.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

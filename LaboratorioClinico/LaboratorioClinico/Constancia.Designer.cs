@@ -99,6 +99,7 @@
             // 
             this.Txt_dpir.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_dpir.Location = new System.Drawing.Point(294, 94);
+            this.Txt_dpir.MaxLength = 13;
             this.Txt_dpir.Multiline = true;
             this.Txt_dpir.Name = "Txt_dpir";
             this.Txt_dpir.Size = new System.Drawing.Size(161, 20);
@@ -368,7 +369,6 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Constancia";
-            this.Text = "Constancia";
             this.Gpb_datosf.ResumeLayout(false);
             this.Gpb_datosf.PerformLayout();
             this.groupBox1.ResumeLayout(false);

@@ -63,6 +63,16 @@ namespace LaboratorioClinico.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _536353 {
+            get {
+                object obj = ResourceManager.GetObject("536353", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _945357_Laboratorio_de_Analisis_Clinicos_Dr_Striani_banner {
             get {
                 object obj = ResourceManager.GetObject("945357-Laboratorio-de-Analisis-Clinicos-Dr-Striani-banner", resourceCulture);
@@ -283,6 +293,16 @@ namespace LaboratorioClinico.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cancelar1 {
+            get {
+                object obj = ResourceManager.GetObject("cancelar1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap codigo_de_seguridad {
             get {
                 object obj = ResourceManager.GetObject("codigo-de-seguridad", resourceCulture);
@@ -326,6 +346,26 @@ namespace LaboratorioClinico.Properties {
         internal static System.Drawing.Bitmap configuracion_de_usuario {
             get {
                 object obj = ResourceManager.GetObject("configuracion-de-usuario", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap confirm {
+            get {
+                object obj = ResourceManager.GetObject("confirm", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap confirmar {
+            get {
+                object obj = ResourceManager.GetObject("confirmar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

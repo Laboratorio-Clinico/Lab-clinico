@@ -37,6 +37,7 @@
             this.Btn_buscar = new System.Windows.Forms.Button();
             this.Txt_dpi = new System.Windows.Forms.TextBox();
             this.Lbl_dpi = new System.Windows.Forms.Label();
+            this.Pnl_datosp = new System.Windows.Forms.Panel();
             this.Txt_direp = new System.Windows.Forms.TextBox();
             this.Txt_nombrep = new System.Windows.Forms.TextBox();
             this.Txt_nitp = new System.Windows.Forms.TextBox();
@@ -67,14 +68,13 @@
             this.Lbl_hora = new System.Windows.Forms.Label();
             this.Btn_guardar = new System.Windows.Forms.Button();
             this.Lbl_guardar = new System.Windows.Forms.Label();
-            this.Pnl_datosp = new System.Windows.Forms.Panel();
             this.Gpb_datosm.SuspendLayout();
+            this.Pnl_datosp.SuspendLayout();
             this.Gpb_detalleCita.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_examen)).BeginInit();
             this.Gpb_cita.SuspendLayout();
             this.Gpb_fechayhora.SuspendLayout();
-            this.Pnl_datosp.SuspendLayout();
             this.SuspendLayout();
             // 
             // Lbl_titulo
@@ -140,6 +140,20 @@
             this.Lbl_dpi.Size = new System.Drawing.Size(38, 22);
             this.Lbl_dpi.TabIndex = 2;
             this.Lbl_dpi.Text = "DPI";
+            // 
+            // Pnl_datosp
+            // 
+            this.Pnl_datosp.Controls.Add(this.Txt_direp);
+            this.Pnl_datosp.Controls.Add(this.Txt_nombrep);
+            this.Pnl_datosp.Controls.Add(this.Txt_nitp);
+            this.Pnl_datosp.Controls.Add(this.Lbl_direp);
+            this.Pnl_datosp.Controls.Add(this.Lbl_nombrep);
+            this.Pnl_datosp.Controls.Add(this.Lbl_nitp);
+            this.Pnl_datosp.Enabled = false;
+            this.Pnl_datosp.Location = new System.Drawing.Point(138, 43);
+            this.Pnl_datosp.Name = "Pnl_datosp";
+            this.Pnl_datosp.Size = new System.Drawing.Size(427, 130);
+            this.Pnl_datosp.TabIndex = 111;
             // 
             // Txt_direp
             // 
@@ -528,20 +542,6 @@
             this.Lbl_guardar.TabIndex = 136;
             this.Lbl_guardar.Text = "Guardar";
             // 
-            // Pnl_datosp
-            // 
-            this.Pnl_datosp.Controls.Add(this.Txt_direp);
-            this.Pnl_datosp.Controls.Add(this.Txt_nombrep);
-            this.Pnl_datosp.Controls.Add(this.Txt_nitp);
-            this.Pnl_datosp.Controls.Add(this.Lbl_direp);
-            this.Pnl_datosp.Controls.Add(this.Lbl_nombrep);
-            this.Pnl_datosp.Controls.Add(this.Lbl_nitp);
-            this.Pnl_datosp.Enabled = false;
-            this.Pnl_datosp.Location = new System.Drawing.Point(138, 43);
-            this.Pnl_datosp.Name = "Pnl_datosp";
-            this.Pnl_datosp.Size = new System.Drawing.Size(427, 130);
-            this.Pnl_datosp.TabIndex = 111;
-            // 
             // Citas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -560,6 +560,8 @@
             this.Load += new System.EventHandler(this.Citas_Load);
             this.Gpb_datosm.ResumeLayout(false);
             this.Gpb_datosm.PerformLayout();
+            this.Pnl_datosp.ResumeLayout(false);
+            this.Pnl_datosp.PerformLayout();
             this.Gpb_detalleCita.ResumeLayout(false);
             this.Gpb_detalleCita.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -569,8 +571,6 @@
             this.Gpb_cita.PerformLayout();
             this.Gpb_fechayhora.ResumeLayout(false);
             this.Gpb_fechayhora.PerformLayout();
-            this.Pnl_datosp.ResumeLayout(false);
-            this.Pnl_datosp.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

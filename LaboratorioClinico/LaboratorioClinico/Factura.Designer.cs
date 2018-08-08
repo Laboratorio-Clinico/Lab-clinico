@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Factura));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Gpb_laboratoriof = new System.Windows.Forms.GroupBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -652,19 +652,19 @@
             // Dgb_facturaf
             // 
             this.Dgb_facturaf.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.InfoText;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.White;
-            this.Dgb_facturaf.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.InfoText;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.Dgb_facturaf.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.Dgb_facturaf.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Dgb_facturaf.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.DarkSlateGray;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.InfoText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.CadetBlue;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.LightCyan;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgb_facturaf.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkSlateGray;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.InfoText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.CadetBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.LightCyan;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgb_facturaf.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.Dgb_facturaf.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Dgb_facturaf.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column6,
@@ -674,19 +674,19 @@
             this.Column7,
             this.Column4,
             this.Column5});
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.CadetBlue;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.LightCyan;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Dgb_facturaf.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.CadetBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.LightCyan;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Dgb_facturaf.DefaultCellStyle = dataGridViewCellStyle3;
             this.Dgb_facturaf.GridColor = System.Drawing.Color.LightGray;
             this.Dgb_facturaf.Location = new System.Drawing.Point(9, 72);
             this.Dgb_facturaf.Name = "Dgb_facturaf";
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.Teal;
-            this.Dgb_facturaf.RowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Teal;
+            this.Dgb_facturaf.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.Dgb_facturaf.Size = new System.Drawing.Size(721, 130);
             this.Dgb_facturaf.TabIndex = 34;
             // 
@@ -902,7 +902,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Factura";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Factura";
             this.Gpb_laboratoriof.ResumeLayout(false);
             this.Gpb_laboratoriof.PerformLayout();
             this.Gpb_detallef.ResumeLayout(false);
