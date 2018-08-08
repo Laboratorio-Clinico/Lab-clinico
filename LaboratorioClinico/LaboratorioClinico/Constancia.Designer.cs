@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.Lbl_ingreseResultados = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Btn_busc = new System.Windows.Forms.Button();
@@ -59,10 +60,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.Erp_errorC = new System.Windows.Forms.ErrorProvider(this.components);
             this.Gpb_datosf.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Erp_errorC)).BeginInit();
             this.SuspendLayout();
             // 
             // Lbl_ingreseResultados
@@ -107,6 +110,7 @@
             this.Txt_dpir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Txt_dpir.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_dpir.Location = new System.Drawing.Point(294, 94);
+            this.Txt_dpir.MaxLength = 13;
             this.Txt_dpir.Multiline = true;
             this.Txt_dpir.Name = "Txt_dpir";
             this.Txt_dpir.Size = new System.Drawing.Size(161, 20);
@@ -436,6 +440,10 @@
             this.textBox3.Size = new System.Drawing.Size(100, 29);
             this.textBox3.TabIndex = 0;
             // 
+            // Erp_errorC
+            // 
+            this.Erp_errorC.ContainerControl = this;
+            // 
             // Constancia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -463,6 +471,7 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Erp_errorC)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -501,5 +510,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.ErrorProvider Erp_errorC;
     }
 }
