@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ingresoResultado));
             this.Lbl_ingreseResultados = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -59,6 +60,7 @@
             this.Lbl_ingresarr = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.Gpb_datosf.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -435,6 +437,19 @@
             this.groupBox3.TabIndex = 139;
             this.groupBox3.TabStop = false;
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.button2.ForeColor = System.Drawing.Color.Transparent;
+            this.button2.Location = new System.Drawing.Point(740, 2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(25, 23);
+            this.button2.TabIndex = 140;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
             // ingresoResultado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -442,6 +457,7 @@
             this.BackgroundImage = global::LaboratorioClinico.Properties.Resources.FONDOO;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(766, 489);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.Lbl_ingreseResultados);
             this.Controls.Add(this.groupBox1);
@@ -495,5 +511,6 @@
         private System.Windows.Forms.ComboBox Cmb_correo;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button button2;
     }
 }

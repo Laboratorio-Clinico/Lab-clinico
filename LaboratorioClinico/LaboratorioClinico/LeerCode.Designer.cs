@@ -30,11 +30,13 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LeerCode));
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Txt_codigo = new System.Windows.Forms.TextBox();
             this.Dgv_data = new System.Windows.Forms.DataGridView();
             this.Lbl_error = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_data)).BeginInit();
             this.SuspendLayout();
             // 
@@ -115,6 +117,19 @@
             this.Lbl_error.Text = "No existe código";
             this.Lbl_error.Visible = false;
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.button2.ForeColor = System.Drawing.Color.Transparent;
+            this.button2.Location = new System.Drawing.Point(576, 1);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(25, 23);
+            this.button2.TabIndex = 123;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
             // LeerCode
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -122,6 +137,7 @@
             this.BackgroundImage = global::LaboratorioClinico.Properties.Resources.FONDOO;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(602, 419);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.Lbl_error);
             this.Controls.Add(this.Txt_codigo);
             this.Controls.Add(this.label1);
@@ -146,5 +162,6 @@
         private System.Windows.Forms.TextBox Txt_codigo;
         private System.Windows.Forms.DataGridView Dgv_data;
         private System.Windows.Forms.Label Lbl_error;
+        private System.Windows.Forms.Button button2;
     }
 }

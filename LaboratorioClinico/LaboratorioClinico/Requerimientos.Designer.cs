@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Requerimientos));
             this.Gpb_llenador = new System.Windows.Forms.GroupBox();
+            this.Txt_requerimientos = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.Lbl_nombrer = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -40,9 +41,8 @@
             this.Lbl_fechar = new System.Windows.Forms.Label();
             this.Gpb_imprimirr = new System.Windows.Forms.GroupBox();
             this.Gpb_requisitos = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.Cmb_examen = new System.Windows.Forms.ComboBox();
-            this.Txt_requerimientos = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.Gpb_llenador.SuspendLayout();
             this.Gpb_fechar.SuspendLayout();
             this.Gpb_imprimirr.SuspendLayout();
@@ -59,6 +59,15 @@
             this.Gpb_llenador.Size = new System.Drawing.Size(542, 239);
             this.Gpb_llenador.TabIndex = 0;
             this.Gpb_llenador.TabStop = false;
+            // 
+            // Txt_requerimientos
+            // 
+            this.Txt_requerimientos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Txt_requerimientos.Location = new System.Drawing.Point(3, 22);
+            this.Txt_requerimientos.Multiline = true;
+            this.Txt_requerimientos.Name = "Txt_requerimientos";
+            this.Txt_requerimientos.Size = new System.Drawing.Size(536, 214);
+            this.Txt_requerimientos.TabIndex = 1;
             // 
             // button2
             // 
@@ -171,7 +180,6 @@
             // Gpb_requisitos
             // 
             this.Gpb_requisitos.BackColor = System.Drawing.Color.Transparent;
-            this.Gpb_requisitos.Controls.Add(this.button3);
             this.Gpb_requisitos.Controls.Add(this.Cmb_examen);
             this.Gpb_requisitos.Controls.Add(this.Lbl_nombrer);
             this.Gpb_requisitos.Controls.Add(this.Lbl_buscarr);
@@ -185,16 +193,6 @@
             this.Gpb_requisitos.Text = "Requisitos";
             this.Gpb_requisitos.Enter += new System.EventHandler(this.Gpb_requisitos_Enter);
             // 
-            // button3
-            // 
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.Location = new System.Drawing.Point(664, 415);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(53, 44);
-            this.button3.TabIndex = 25;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
             // Cmb_examen
             // 
             this.Cmb_examen.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -205,14 +203,18 @@
             this.Cmb_examen.TabIndex = 3;
             this.Cmb_examen.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // Txt_requerimientos
+            // button3
             // 
-            this.Txt_requerimientos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Txt_requerimientos.Location = new System.Drawing.Point(3, 22);
-            this.Txt_requerimientos.Multiline = true;
-            this.Txt_requerimientos.Name = "Txt_requerimientos";
-            this.Txt_requerimientos.Size = new System.Drawing.Size(536, 214);
-            this.Txt_requerimientos.TabIndex = 1;
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.button3.ForeColor = System.Drawing.Color.Transparent;
+            this.button3.Location = new System.Drawing.Point(759, 1);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(25, 23);
+            this.button3.TabIndex = 123;
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // Requerimientos
             // 
@@ -220,7 +222,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::LaboratorioClinico.Properties.Resources.FONDOO;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(766, 489);
+            this.ClientSize = new System.Drawing.Size(785, 489);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.Gpb_imprimirr);
             this.Controls.Add(this.Gpb_fechar);
             this.Controls.Add(this.button1);
@@ -257,7 +260,7 @@
         private System.Windows.Forms.GroupBox Gpb_imprimirr;
         private System.Windows.Forms.GroupBox Gpb_requisitos;
         private System.Windows.Forms.ComboBox Cmb_examen;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox Txt_requerimientos;
+        private System.Windows.Forms.Button button3;
     }
 }

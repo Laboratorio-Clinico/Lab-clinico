@@ -42,7 +42,7 @@
             this.Txt_codigoDeEmpleado = new System.Windows.Forms.TextBox();
             this.Lbl_codigoDeEmpleado = new System.Windows.Forms.Label();
             this.Picb_Imagen = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.Gpb_nuevoUsuario.SuspendLayout();
             this.Pnl_usuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Picb_Imagen)).BeginInit();
@@ -51,7 +51,6 @@
             // Gpb_nuevoUsuario
             // 
             this.Gpb_nuevoUsuario.BackColor = System.Drawing.Color.Transparent;
-            this.Gpb_nuevoUsuario.Controls.Add(this.button1);
             this.Gpb_nuevoUsuario.Controls.Add(this.Btn);
             this.Gpb_nuevoUsuario.Controls.Add(this.Pnl_usuario);
             this.Gpb_nuevoUsuario.Controls.Add(this.Txt_codigoDeEmpleado);
@@ -212,15 +211,18 @@
             this.Picb_Imagen.TabIndex = 25;
             this.Picb_Imagen.TabStop = false;
             // 
-            // button1
+            // button2
             // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(6, 391);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(53, 44);
-            this.button1.TabIndex = 16;
-            this.button1.UseVisualStyleBackColor = true;
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.button2.ForeColor = System.Drawing.Color.Transparent;
+            this.button2.Location = new System.Drawing.Point(740, 2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(25, 23);
+            this.button2.TabIndex = 123;
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // Usuario
             // 
@@ -229,6 +231,7 @@
             this.BackgroundImage = global::LaboratorioClinico.Properties.Resources.FONDOO;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(766, 489);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.Gpb_nuevoUsuario);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -262,6 +265,6 @@
         private System.Windows.Forms.PictureBox Picb_Imagen;
         private System.Windows.Forms.Panel Pnl_usuario;
         private System.Windows.Forms.Button Btn;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
