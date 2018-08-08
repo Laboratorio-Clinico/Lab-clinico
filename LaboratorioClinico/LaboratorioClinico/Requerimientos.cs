@@ -32,19 +32,7 @@ namespace LaboratorioClinico
 
         private void Requerimientos_Load(object sender, EventArgs e)
         {
-            //******************************Cargar los examenes***********************************************
-           /* OdbcCommand cmd2 = new OdbcCommand("Select sDescripcion from examenes", conexion.ObtenerConexion());
-            OdbcDataReader almacen2 = cmd2.ExecuteReader();
-
-
-            while (almacen2.Read())
-            {
-                Cmb_examen.Refresh();
-                Cmb_examen.Items.Add(almacen2.GetValue(0).ToString());
-
-            }
-            conexion.ObtenerConexion().Close();
-            almacen2.Close();*/
+ 
         }
 
         public void llenarExamen()
