@@ -53,6 +53,7 @@
             // Txt_requerimientos
             // 
             this.Txt_requerimientos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Txt_requerimientos.Enabled = false;
             this.Txt_requerimientos.Location = new System.Drawing.Point(3, 22);
             this.Txt_requerimientos.Multiline = true;
             this.Txt_requerimientos.Name = "Txt_requerimientos";
@@ -123,6 +124,7 @@
             this.Cmb_examen.Size = new System.Drawing.Size(267, 26);
             this.Cmb_examen.TabIndex = 3;
             this.Cmb_examen.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.Cmb_examen.Click += new System.EventHandler(this.Cmb_examen_Click);
             // 
             // Requerimientos
             // 

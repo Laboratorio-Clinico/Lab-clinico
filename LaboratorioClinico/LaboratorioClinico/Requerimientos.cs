@@ -122,5 +122,10 @@ namespace LaboratorioClinico
         {
 
         }
+
+        private void Cmb_examen_Click(object sender, EventArgs e)
+        {
+            Txt_requerimientos.Clear();
+        }
     }
 }
