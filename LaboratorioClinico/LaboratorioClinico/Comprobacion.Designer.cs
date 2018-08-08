@@ -35,10 +35,12 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Btn_cancelar = new System.Windows.Forms.Button();
+            this.Btn_confirmar = new System.Windows.Forms.Button();
             this.Dgv_verBeneficios = new System.Windows.Forms.DataGridView();
             this.Gpb_datosPersonales = new System.Windows.Forms.GroupBox();
+            this.Txt_noCita = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.Txt_nit = new System.Windows.Forms.TextBox();
             this.Txt_nombre = new System.Windows.Forms.TextBox();
             this.Lbl_nit = new System.Windows.Forms.Label();
@@ -46,8 +48,6 @@
             this.Btn_buscar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.Txt_DPI = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.Txt_noCita = new System.Windows.Forms.TextBox();
             this.Gpb_buscarCita.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_verBeneficios)).BeginInit();
@@ -112,8 +112,8 @@
             // 
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.Btn_cancelar);
+            this.groupBox1.Controls.Add(this.Btn_confirmar);
             this.groupBox1.Location = new System.Drawing.Point(590, 224);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(105, 200);
@@ -142,25 +142,27 @@
             this.label2.TabIndex = 40;
             this.label2.Text = "Confirmar";
             // 
-            // button2
+            // Btn_cancelar
             // 
-            this.button2.BackgroundImage = global::LaboratorioClinico.Properties.Resources.cancelar1;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Location = new System.Drawing.Point(26, 117);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(53, 44);
-            this.button2.TabIndex = 41;
-            this.button2.UseVisualStyleBackColor = true;
+            this.Btn_cancelar.BackgroundImage = global::LaboratorioClinico.Properties.Resources.cancelar1;
+            this.Btn_cancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_cancelar.Location = new System.Drawing.Point(26, 117);
+            this.Btn_cancelar.Name = "Btn_cancelar";
+            this.Btn_cancelar.Size = new System.Drawing.Size(53, 44);
+            this.Btn_cancelar.TabIndex = 41;
+            this.Btn_cancelar.UseVisualStyleBackColor = true;
+            this.Btn_cancelar.Click += new System.EventHandler(this.Btn_cancelar_Click_1);
             // 
-            // button1
+            // Btn_confirmar
             // 
-            this.button1.BackgroundImage = global::LaboratorioClinico.Properties.Resources.confirm;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(26, 34);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(53, 44);
-            this.button1.TabIndex = 40;
-            this.button1.UseVisualStyleBackColor = true;
+            this.Btn_confirmar.BackgroundImage = global::LaboratorioClinico.Properties.Resources.confirm;
+            this.Btn_confirmar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Btn_confirmar.Location = new System.Drawing.Point(26, 34);
+            this.Btn_confirmar.Name = "Btn_confirmar";
+            this.Btn_confirmar.Size = new System.Drawing.Size(53, 44);
+            this.Btn_confirmar.TabIndex = 40;
+            this.Btn_confirmar.UseVisualStyleBackColor = true;
+            this.Btn_confirmar.Click += new System.EventHandler(this.Btn_confirmar_Click_1);
             // 
             // Dgv_verBeneficios
             // 
@@ -188,6 +190,29 @@
             this.Gpb_datosPersonales.TabIndex = 37;
             this.Gpb_datosPersonales.TabStop = false;
             this.Gpb_datosPersonales.Text = "Datos Personales";
+            // 
+            // Txt_noCita
+            // 
+            this.Txt_noCita.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_noCita.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_noCita.ForeColor = System.Drawing.Color.Black;
+            this.Txt_noCita.Location = new System.Drawing.Point(593, 43);
+            this.Txt_noCita.Margin = new System.Windows.Forms.Padding(4);
+            this.Txt_noCita.Name = "Txt_noCita";
+            this.Txt_noCita.Size = new System.Drawing.Size(66, 26);
+            this.Txt_noCita.TabIndex = 45;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(530, 46);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(60, 18);
+            this.label4.TabIndex = 46;
+            this.label4.Text = "No. Cita";
             // 
             // Txt_nit
             // 
@@ -269,29 +294,6 @@
             this.Txt_DPI.Size = new System.Drawing.Size(197, 26);
             this.Txt_DPI.TabIndex = 34;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(530, 46);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 18);
-            this.label4.TabIndex = 46;
-            this.label4.Text = "No. Cita";
-            // 
-            // Txt_noCita
-            // 
-            this.Txt_noCita.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.Txt_noCita.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_noCita.ForeColor = System.Drawing.Color.Black;
-            this.Txt_noCita.Location = new System.Drawing.Point(593, 43);
-            this.Txt_noCita.Margin = new System.Windows.Forms.Padding(4);
-            this.Txt_noCita.Name = "Txt_noCita";
-            this.Txt_noCita.Size = new System.Drawing.Size(66, 26);
-            this.Txt_noCita.TabIndex = 45;
-            // 
             // Comprobacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -326,8 +328,8 @@
         private System.Windows.Forms.Label Lbl_nit;
         private System.Windows.Forms.Label Lbl_nombre;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Btn_cancelar;
+        private System.Windows.Forms.Button Btn_confirmar;
         private System.Windows.Forms.DataGridView Dgv_verBeneficios;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
