@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Médicos));
             this.Lbl_nombre = new System.Windows.Forms.Label();
             this.Lbl_telefono = new System.Windows.Forms.Label();
             this.Lbl_direccion = new System.Windows.Forms.Label();
@@ -54,7 +53,6 @@
             this.Dtp_fechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.Lbl_fechaDeNacimiento = new System.Windows.Forms.Label();
             this.Btn_guardar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.Gpb_medicos.SuspendLayout();
             this.Gpb_profesion.SuspendLayout();
             this.Gpb_datosPersonales.SuspendLayout();
@@ -296,7 +294,6 @@
             // Gpb_nacimiento
             // 
             this.Gpb_nacimiento.BackColor = System.Drawing.Color.Transparent;
-            this.Gpb_nacimiento.Controls.Add(this.button1);
             this.Gpb_nacimiento.Controls.Add(this.label10);
             this.Gpb_nacimiento.Controls.Add(this.Picb_imagenDoctor);
             this.Gpb_nacimiento.Controls.Add(this.Dtp_fechaNacimiento);
@@ -363,16 +360,6 @@
             this.Btn_guardar.UseVisualStyleBackColor = true;
             this.Btn_guardar.Click += new System.EventHandler(this.Btn_guardar_Click);
             // 
-            // button1
-            // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(6, 416);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(53, 44);
-            this.button1.TabIndex = 18;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // Médicos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -428,6 +415,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox Cmb_empresa;
         private System.Windows.Forms.ComboBox Cmb_especialidad;
-        private System.Windows.Forms.Button button1;
     }
 }
