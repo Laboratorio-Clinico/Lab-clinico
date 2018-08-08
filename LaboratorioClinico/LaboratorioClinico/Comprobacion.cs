@@ -41,6 +41,7 @@ namespace LaboratorioClinico
 
         public void Pro_buscarCita(decimal nPaciente)
         {
+            /*Procedimiento que envia la fecha de la cita, y el id del paciente para mostrar los datos de la cita*/
             try
             {
 
@@ -64,7 +65,7 @@ namespace LaboratorioClinico
         }
 
         public void Pro_noCita(decimal nPaciente) {
-
+            /*Se carga en el textBox de idcitas el no de la cita.*/
             try
             {
 
@@ -90,7 +91,7 @@ namespace LaboratorioClinico
         }
 
         public void Pro_confirmarCita() {
-
+            /*Procedimiento que manda la actualización de asistencia a la base de datos*/
             try
             {
              
@@ -101,11 +102,15 @@ namespace LaboratorioClinico
                 MessageBox.Show("Asistencia Confirmada");
             }
             catch (Exception error) { MessageBox.Show(error.Message); }
+            Txt_DPI.Text = "";
+            Txt_nit.Text = "";
+            Txt_noCita.Text = "";
+            Txt_nombre.Text = "";
         }
 
         public void Pro_cancelarCita()
         {
-
+            /*Procedimiento que manda la actualización de asistencia a la base de datos*/
             try
             {
 
@@ -116,6 +121,10 @@ namespace LaboratorioClinico
                 MessageBox.Show("Cancelación confirmada");
             }
             catch (Exception error) { MessageBox.Show(error.Message); }
+            Txt_DPI.Text = "";
+            Txt_nit.Text = "";
+            Txt_noCita.Text = "";
+            Txt_nombre.Text = "";
         }
 
         private void Btn_buscar_Click(object sender, EventArgs e)
@@ -139,12 +148,22 @@ namespace LaboratorioClinico
 
         private void Btn_cancelar_Click(object sender, EventArgs e)
         {
-            Pro_cancelarCita();
+            
         }
 
         private void Btn_confirmar_Click(object sender, EventArgs e)
         {
+           
+        }
+
+        private void Btn_cancelar_Click_1(object sender, EventArgs e)
+        {
+            Pro_cancelarCita();
+        }
+
+        private void Btn_confirmar_Click_1(object sender, EventArgs e)
+        {
             Pro_confirmarCita();
-        } 
+        }
     }
 }

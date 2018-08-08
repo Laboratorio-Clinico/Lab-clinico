@@ -35,41 +35,41 @@ namespace LaboratorioClinico
 
         private void Btn_busc_Click(object sender, EventArgs e)
         {
-            int num;
-            if (int.TryParse(Txt_dpir.Text, out num))
+            try
             {
-                Er_validar.SetError(Txt_dpir, "");
-            }
-            else
-            {
-                Er_validar.SetError(Txt_dpir, "Solo números se acepta");
-            }
+                OdbcDataAdapter sda = new OdbcDataAdapter("SELECT sNombre, sNit, sDireccion FROM paciente WHERE nIdPaciente ='" + Convert.ToInt64(Txt_dpir.Text) + "'", conexion.ObtenerConexion());
+                DataTable datos = new DataTable();
+                sda.Fill(datos);
 
-            if (Txt_dpir.TextLength == 13)
-            {
-                Erp_errorC.SetError(Txt_dpir, "");
-                try
-                {
-                    OdbcDataAdapter sda = new OdbcDataAdapter("SELECT sNombre, sNit, sDireccion FROM paciente WHERE nIdPaciente ='" + Convert.ToInt32(Txt_dpir.Text) + "'", conexion.ObtenerConexion());
-                    DataTable datos = new DataTable();
-                    sda.Fill(datos);
 
-                    Txt_nombrer.Text = datos.Rows[0][0].ToString();
-                    Txt_direccionr.Text = datos.Rows[0][1].ToString();
-                    Txt_nitc.Text = datos.Rows[0][2].ToString();
+                Txt_nombrer.Text = datos.Rows[0][0].ToString();
+                Txt_direccionr.Text = datos.Rows[0][1].ToString();
+                Txt_nitc.Text = datos.Rows[0][2].ToString();
 
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al buscar paciente..");
-                }
+                OdbcDataAdapter sda2 = new OdbcDataAdapter("SELECT iIdCitas, dFecha FROM citas WHERE nNoExpediente ='" + Convert.ToInt64(Txt_dpir.Text) + "'", conexion.ObtenerConexion());
+                DataTable datos2 = new DataTable();
+                sda2.Fill(datos2);
+
+                Txt_cita.Text = datos2.Rows[0][0].ToString();
+                Txt_fechae.Text = datos2.Rows[0][1].ToString();
+
+
+
             }
-            else
+            catch (Exception ex)
             {
-                Erp_errorC.SetError(Txt_dpir, "Deben Ingresarse 13 dígitos");
+                MessageBox.Show("Error al buscar paciente..");
             }
-       
-        
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
+
+        private void Txt_fechae_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
