@@ -45,12 +45,12 @@
             this.Txt_fechae = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Txt_codEx = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.Lbl_codigor = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.Txt_nombrex = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.Lbl_examenRealizado = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -147,6 +147,7 @@
             // Txt_nitc
             // 
             this.Txt_nitc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_nitc.Enabled = false;
             this.Txt_nitc.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_nitc.Location = new System.Drawing.Point(504, 63);
             this.Txt_nitc.Multiline = true;
@@ -169,6 +170,7 @@
             // Txt_direccionr
             // 
             this.Txt_direccionr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_direccionr.Enabled = false;
             this.Txt_direccionr.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_direccionr.Location = new System.Drawing.Point(237, 63);
             this.Txt_direccionr.Multiline = true;
@@ -203,6 +205,7 @@
             // Txt_nombrer
             // 
             this.Txt_nombrer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_nombrer.Enabled = false;
             this.Txt_nombrer.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_nombrer.Location = new System.Drawing.Point(239, 27);
             this.Txt_nombrer.Multiline = true;
@@ -233,6 +236,7 @@
             // Txt_fechae
             // 
             this.Txt_fechae.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_fechae.Enabled = false;
             this.Txt_fechae.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_fechae.Location = new System.Drawing.Point(43, 37);
             this.Txt_fechae.Multiline = true;
@@ -262,26 +266,13 @@
             // Txt_codEx
             // 
             this.Txt_codEx.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_codEx.Enabled = false;
             this.Txt_codEx.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_codEx.Location = new System.Drawing.Point(239, 40);
             this.Txt_codEx.Multiline = true;
             this.Txt_codEx.Name = "Txt_codEx";
             this.Txt_codEx.Size = new System.Drawing.Size(423, 20);
             this.Txt_codEx.TabIndex = 101;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(40, 16);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(105, 18);
-            this.label5.TabIndex = 102;
-            this.label5.Text = "Emisión exámen";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // Lbl_codigor
             // 
@@ -310,6 +301,7 @@
             // Txt_nombrex
             // 
             this.Txt_nombrex.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_nombrex.Enabled = false;
             this.Txt_nombrex.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_nombrex.Location = new System.Drawing.Point(239, 67);
             this.Txt_nombrex.Multiline = true;
@@ -339,6 +331,20 @@
             this.Lbl_examenRealizado.Size = new System.Drawing.Size(112, 18);
             this.Lbl_examenRealizado.TabIndex = 5;
             this.Lbl_examenRealizado.Text = "Examen realizado";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(40, 16);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(105, 18);
+            this.label5.TabIndex = 102;
+            this.label5.Text = "Emisión exámen";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // groupBox2
             // 
@@ -391,6 +397,7 @@
             // Txt_cita
             // 
             this.Txt_cita.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_cita.Enabled = false;
             this.Txt_cita.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_cita.Location = new System.Drawing.Point(43, 37);
             this.Txt_cita.Multiline = true;

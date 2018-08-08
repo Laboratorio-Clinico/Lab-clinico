@@ -48,6 +48,8 @@ namespace LaboratorioClinico
                 Txt_fechae.Text = datos.Rows[0][4].ToString();
                 Txt_codEx.Text = datos.Rows[0][5].ToString();
 
+
+
             }
             catch (Exception ex)
             {
