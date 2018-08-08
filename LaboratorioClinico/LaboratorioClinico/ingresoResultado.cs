@@ -48,22 +48,14 @@ namespace LaboratorioClinico
         //Carga la informacion donde el nit sea igual 
         private void Btn_busc_Click(object sender, EventArgs e)
         {
-            int num;
-            if (int.TryParse(Txt_dpir.Text, out num))
-            {
-                Er_validar.SetError(Txt_dpir, "");
-            }
-            else
-            {
-                Er_validar.SetError(Txt_dpir, "Solo números se acepta");
-            }
+
 
             if (Txt_dpir.TextLength == 13)
             {
                 Erp_errorR.SetError(Txt_dpir, "");
                 try
                 {
-                    OdbcDataAdapter sda = new OdbcDataAdapter("SELECT pa.sNombre, pa.sDireccion FROM paciente pa WHERE pa.nIdPaciente='" + Convert.ToString(Txt_dpir.Text) + "'", conexion.ObtenerConexion());
+                    OdbcDataAdapter sda = new OdbcDataAdapter("SELECT pa.sNombre, pa.sDireccion FROM paciente pa WHERE pa.nIdPaciente='" + Convert.ToInt64(Txt_dpir.Text) + "'", conexion.ObtenerConexion());
                     DataTable datos = new DataTable();
                     sda.Fill(datos);
 
@@ -85,15 +77,6 @@ namespace LaboratorioClinico
         //Carga la información donde el nit sea igual al ingresado
         private void Btn_BuscarExamen_Click(object sender, EventArgs e)
         {
-            int num;
-            if (int.TryParse(Txt_codEx.Text, out num))
-            {
-                Er_validar.SetError(Txt_codEx, "");
-            }
-            else
-            {
-                Er_validar.SetError(Txt_codEx, "Solo números se acepta");
-            }
 
 
 
