@@ -77,7 +77,7 @@ namespace LaboratorioClinico
                 Dtp_fechaNacimiento.ResetText();
             }else
             {
-                Erp_errorE.SetError(Txt_DPIEmpleado,"Deben ingresarse 13 dígitos")
+                Erp_errorE.SetError(Txt_DPIEmpleado, "Deben ingresarse 13 dígitos");
             }
             }
 

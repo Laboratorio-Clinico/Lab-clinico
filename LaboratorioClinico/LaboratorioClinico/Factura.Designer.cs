@@ -41,7 +41,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Gpb_detallef = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.Txt_credit = new System.Windows.Forms.TextBox();
             this.Lbl_credit = new System.Windows.Forms.Label();
             this.Cmb_formaPago = new System.Windows.Forms.ComboBox();
@@ -196,7 +195,6 @@
             // Gpb_detallef
             // 
             this.Gpb_detallef.BackColor = System.Drawing.Color.Transparent;
-            this.Gpb_detallef.Controls.Add(this.button1);
             this.Gpb_detallef.Controls.Add(this.Txt_credit);
             this.Gpb_detallef.Controls.Add(this.Lbl_credit);
             this.Gpb_detallef.Controls.Add(this.Cmb_formaPago);
@@ -230,18 +228,9 @@
             this.Gpb_detallef.TabStop = false;
             this.Gpb_detallef.Text = "Detalle factura";
             // 
-            // button1
-            // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(588, 257);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(31, 30);
-            this.button1.TabIndex = 57;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // Txt_credit
             // 
+            this.Txt_credit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Txt_credit.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_credit.Location = new System.Drawing.Point(158, 259);
             this.Txt_credit.Multiline = true;
@@ -263,6 +252,7 @@
             // 
             // Cmb_formaPago
             // 
+            this.Cmb_formaPago.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Cmb_formaPago.FormattingEnabled = true;
             this.Cmb_formaPago.Items.AddRange(new object[] {
             "Seleccione tipo de pago",
@@ -477,6 +467,7 @@
             // 
             // Txt_codigof
             // 
+            this.Txt_codigof.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Txt_codigof.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_codigof.Location = new System.Drawing.Point(58, 41);
             this.Txt_codigof.Multiline = true;
@@ -570,6 +561,7 @@
             // 
             // Txt_descuentof
             // 
+            this.Txt_descuentof.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Txt_descuentof.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_descuentof.Location = new System.Drawing.Point(556, 41);
             this.Txt_descuentof.Multiline = true;
@@ -579,6 +571,7 @@
             // 
             // Txt_preciouf
             // 
+            this.Txt_preciouf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Txt_preciouf.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_preciouf.Location = new System.Drawing.Point(426, 41);
             this.Txt_preciouf.Multiline = true;
@@ -612,6 +605,7 @@
             // 
             // Txt_descripcion
             // 
+            this.Txt_descripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Txt_descripcion.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_descripcion.Location = new System.Drawing.Point(224, 41);
             this.Txt_descripcion.Multiline = true;
@@ -642,6 +636,7 @@
             // 
             // Txt_cantidadf
             // 
+            this.Txt_cantidadf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Txt_cantidadf.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_cantidadf.Location = new System.Drawing.Point(143, 41);
             this.Txt_cantidadf.Multiline = true;
@@ -780,6 +775,7 @@
             // 
             // Txt_direccionf
             // 
+            this.Txt_direccionf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Txt_direccionf.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_direccionf.Location = new System.Drawing.Point(382, 62);
             this.Txt_direccionf.Multiline = true;
@@ -801,6 +797,7 @@
             // 
             // Txt_nitf
             // 
+            this.Txt_nitf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Txt_nitf.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_nitf.Location = new System.Drawing.Point(124, 62);
             this.Txt_nitf.Multiline = true;
@@ -824,6 +821,7 @@
             // 
             // Txt_nombref
             // 
+            this.Txt_nombref.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Txt_nombref.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_nombref.Location = new System.Drawing.Point(124, 24);
             this.Txt_nombref.Multiline = true;
@@ -981,7 +979,6 @@
         private System.Windows.Forms.Label Lbl_recargo;
         private System.Windows.Forms.TextBox Txt_credit;
         private System.Windows.Forms.Label Lbl_credit;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label Lbl_numSerie;
     }
 }
