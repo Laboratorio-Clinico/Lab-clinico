@@ -22,42 +22,63 @@ namespace LaboratorioClinico
 
         public void Pro_guardarDatos() {
 
-            try
+            int num;
+            if (int.TryParse(Txt_DPIEmpleado.Text, out num))
             {
-
-                int iCargo = Convert.ToInt32(Cmb_cargo.SelectedValue);
-      
-
-                OdbcCommand comando = new OdbcCommand("{CALL Pro_insertarEmpleado(?,?,?,?,?,?,?,?,?,?)}", conexion.ObtenerConexion());
-                comando.CommandType = CommandType.StoredProcedure;
-                comando.Parameters.AddWithValue("iEmpleado", Txt_DPIEmpleado.Text);
-                comando.Parameters.AddWithValue("sNombre", Txt_nombre.Text);
-                comando.Parameters.AddWithValue("sApellido", Txt_apellido.Text);
-                comando.Parameters.AddWithValue("nTelefono", Txt_telefono.Text);
-                comando.Parameters.AddWithValue("sDireccion", Txt_direccion.Text);
-                comando.Parameters.AddWithValue("sCorreo", Txt_correo.Text);
-                comando.Parameters.AddWithValue("iCargo", iCargo);
-                comando.Parameters.AddWithValue("fSueldo", Txt_sueldo.Text);
-                comando.Parameters.AddWithValue("dFechaDeNacimiento", Dtp_fechaNacimiento.Text);
-                comando.Parameters.AddWithValue("iUsuario", Txt_DPIEmpleado.Text);
-                comando.ExecuteNonQuery();
-                MessageBox.Show("Datos insertados correctamente");
-
-
-
+                Er_validar.SetError(Txt_DPIEmpleado, "");
             }
-            catch (Exception error) { MessageBox.Show("Error" + error);
-               
-            conexion.ObtenerConexion().Close(); }
-                  Txt_DPIEmpleado.ResetText();
-                  Txt_nombre.ResetText();
-                  Txt_apellido.ResetText();
-                  Txt_telefono.ResetText();
-                  Txt_correo.ResetText();
-                  Txt_direccion.ResetText();
-                  Txt_sueldo.ResetText();
-                  Cmb_cargo.ResetText();
-                  Dtp_fechaNacimiento.ResetText();
+            else
+            {
+                Er_validar.SetError(Txt_DPIEmpleado, "Solo números se acepta");
+            }
+
+
+            if (Txt_DPIEmpleado.TextLength == 13)
+            {
+                Erp_errorE.SetError(Txt_DPIEmpleado, "");
+                try
+                {
+
+                    int iCargo = Convert.ToInt32(Cmb_cargo.SelectedValue);
+
+
+                    OdbcCommand comando = new OdbcCommand("{CALL Pro_insertarEmpleado(?,?,?,?,?,?,?,?,?,?)}", conexion.ObtenerConexion());
+                    comando.CommandType = CommandType.StoredProcedure;
+                    comando.Parameters.AddWithValue("iEmpleado", Txt_DPIEmpleado.Text);
+                    comando.Parameters.AddWithValue("sNombre", Txt_nombre.Text);
+                    comando.Parameters.AddWithValue("sApellido", Txt_apellido.Text);
+                    comando.Parameters.AddWithValue("nTelefono", Txt_telefono.Text);
+                    comando.Parameters.AddWithValue("sDireccion", Txt_direccion.Text);
+                    comando.Parameters.AddWithValue("sCorreo", Txt_correo.Text);
+                    comando.Parameters.AddWithValue("iCargo", iCargo);
+                    comando.Parameters.AddWithValue("fSueldo", Txt_sueldo.Text);
+                    comando.Parameters.AddWithValue("dFechaDeNacimiento", Dtp_fechaNacimiento.Text);
+                    comando.Parameters.AddWithValue("iUsuario", Txt_DPIEmpleado.Text);
+                    comando.ExecuteNonQuery();
+                    MessageBox.Show("Datos insertados correctamente");
+
+
+
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show("Error" + error);
+
+                    conexion.ObtenerConexion().Close();
+                }
+                Txt_DPIEmpleado.ResetText();
+                Txt_nombre.ResetText();
+                Txt_apellido.ResetText();
+                Txt_telefono.ResetText();
+                Txt_correo.ResetText();
+                Txt_direccion.ResetText();
+                Txt_sueldo.ResetText();
+                Cmb_cargo.ResetText();
+                Dtp_fechaNacimiento.ResetText();
+            }else
+            {
+                Erp_errorE.SetError(Txt_DPIEmpleado,"Deben ingresarse 13 dígitos")
+            }
             }
 
         public void proLlenareCargo()

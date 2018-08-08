@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.Gpb_nuevoUsuario = new System.Windows.Forms.GroupBox();
             this.Btn = new System.Windows.Forms.Button();
             this.Pnl_usuario = new System.Windows.Forms.Panel();
@@ -42,9 +43,13 @@
             this.Lbl_codigoDeEmpleado = new System.Windows.Forms.Label();
             this.Picb_Imagen = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.Erp_errorU = new System.Windows.Forms.ErrorProvider(this.components);
+            this.Er_validar = new System.Windows.Forms.ErrorProvider(this.components);
             this.Gpb_nuevoUsuario.SuspendLayout();
             this.Pnl_usuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Picb_Imagen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Erp_errorU)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Er_validar)).BeginInit();
             this.SuspendLayout();
             // 
             // Gpb_nuevoUsuario
@@ -224,6 +229,14 @@
             this.button2.TabIndex = 123;
             this.button2.UseVisualStyleBackColor = false;
             // 
+            // Erp_errorU
+            // 
+            this.Erp_errorU.ContainerControl = this;
+            // 
+            // Er_validar
+            // 
+            this.Er_validar.ContainerControl = this;
+            // 
             // Usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -246,6 +259,8 @@
             this.Pnl_usuario.ResumeLayout(false);
             this.Pnl_usuario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Picb_Imagen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Erp_errorU)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Er_validar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -266,5 +281,7 @@
         private System.Windows.Forms.Panel Pnl_usuario;
         private System.Windows.Forms.Button Btn;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ErrorProvider Erp_errorU;
+        private System.Windows.Forms.ErrorProvider Er_validar;
     }
 }

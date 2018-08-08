@@ -112,33 +112,42 @@ namespace LaboratorioClinico
 
         private void Btn_buscar_Click(object sender, EventArgs e)//BUSCAR SI EXISTE CLIENTE, SI NO... INGRESARLO.
         {
-            try
+            if (Txt_dpi.TextLength == 13)
             {
-                OdbcDataAdapter sda = new OdbcDataAdapter("SELECT sNombre, sNit, sDireccion FROM paciente WHERE nIdPaciente ='" + Convert.ToInt32(Txt_dpi.Text) + "'", conexion.ObtenerConexion());
-                DataTable datos = new DataTable();
-                sda.Fill(datos);
+                Erp_error.SetError(Txt_dpi, "");
+                try
+                {
+                    OdbcDataAdapter sda = new OdbcDataAdapter("SELECT sNombre, sNit, sDireccion FROM paciente WHERE nIdPaciente ='" + Convert.ToInt32(Txt_dpi.Text) + "'", conexion.ObtenerConexion());
+                    DataTable datos = new DataTable();
+                    sda.Fill(datos);
 
-                if (datos.Rows.Count > 0)
-                {
-                    Txt_nombrep.Text = datos.Rows[0][0].ToString();
-                    Txt_nitp.Text = datos.Rows[0][1].ToString();
-                    Txt_direp.Text = datos.Rows[0][2].ToString();
-                    Pnl_datosp.Enabled = true;
-                    Gpb_detalleCita.Enabled = true;
+                    if (datos.Rows.Count > 0)
+                    {
+                        Txt_nombrep.Text = datos.Rows[0][0].ToString();
+                        Txt_nitp.Text = datos.Rows[0][1].ToString();
+                        Txt_direp.Text = datos.Rows[0][2].ToString();
+                        Pnl_datosp.Enabled = true;
+                        Gpb_detalleCita.Enabled = true;
+                    }
+                    else
+                    {
+                        this.Hide();
+                        new Paciente().ShowDialog();
+                        this.Show();
+                    }
+                    //cargar el # de cita actual
+                    obtenerId();
+                    Lbl_numeroCita.Text = Convert.ToString(id + 1);
                 }
-                else
+                catch (Exception ex)
                 {
-                    this.Hide();
-                    new Paciente().ShowDialog();
-                    this.Show();
+                    MessageBox.Show("Error al buscar paciente..");
                 }
-                //cargar el # de cita actual
-                obtenerId();
-                Lbl_numeroCita.Text = Convert.ToString(id + 1);
             }
-            catch(Exception ex)
+            else
             {
-                MessageBox.Show("Error al buscar paciente..");
+                Erp_error.SetError(Txt_dpi, "Deben ingresarse 13 dígitos.");
+                MessageBox.Show("Error");
             }
         }
 

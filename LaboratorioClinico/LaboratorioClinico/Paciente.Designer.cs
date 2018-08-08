@@ -62,11 +62,13 @@
             this.Gpb_fechap = new System.Windows.Forms.GroupBox();
             this.Er_validar = new System.Windows.Forms.ErrorProvider(this.components);
             this.button1 = new System.Windows.Forms.Button();
+            this.Erp_errorP = new System.Windows.Forms.ErrorProvider(this.components);
             this.Gpb_guardarp.SuspendLayout();
             this.Gpb_datosp.SuspendLayout();
             this.Gpb_fechanp.SuspendLayout();
             this.Gpb_fechap.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Er_validar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Erp_errorP)).BeginInit();
             this.SuspendLayout();
             // 
             // Btn_guardarp
@@ -144,7 +146,7 @@
             this.Cmb_sangrep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Cmb_sangrep.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cmb_sangrep.FormattingEnabled = true;
-            this.Cmb_sangrep.Location = new System.Drawing.Point(410, 117);
+            this.Cmb_sangrep.Location = new System.Drawing.Point(430, 118);
             this.Cmb_sangrep.Name = "Cmb_sangrep";
             this.Cmb_sangrep.Size = new System.Drawing.Size(180, 25);
             this.Cmb_sangrep.TabIndex = 50;
@@ -155,7 +157,7 @@
             this.Lbl_correop.AutoSize = true;
             this.Lbl_correop.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_correop.ForeColor = System.Drawing.Color.White;
-            this.Lbl_correop.Location = new System.Drawing.Point(120, 199);
+            this.Lbl_correop.Location = new System.Drawing.Point(137, 199);
             this.Lbl_correop.Name = "Lbl_correop";
             this.Lbl_correop.Size = new System.Drawing.Size(56, 18);
             this.Lbl_correop.TabIndex = 48;
@@ -165,7 +167,7 @@
             // 
             this.Txt_correoP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Txt_correoP.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_correoP.Location = new System.Drawing.Point(120, 221);
+            this.Txt_correoP.Location = new System.Drawing.Point(140, 218);
             this.Txt_correoP.Name = "Txt_correoP";
             this.Txt_correoP.Size = new System.Drawing.Size(470, 25);
             this.Txt_correoP.TabIndex = 47;
@@ -175,7 +177,7 @@
             this.Lbl_tipoSangrep.AutoSize = true;
             this.Lbl_tipoSangrep.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_tipoSangrep.ForeColor = System.Drawing.Color.White;
-            this.Lbl_tipoSangrep.Location = new System.Drawing.Point(407, 96);
+            this.Lbl_tipoSangrep.Location = new System.Drawing.Point(427, 97);
             this.Lbl_tipoSangrep.Name = "Lbl_tipoSangrep";
             this.Lbl_tipoSangrep.Size = new System.Drawing.Size(79, 18);
             this.Lbl_tipoSangrep.TabIndex = 46;
@@ -186,7 +188,7 @@
             this.Lbl_alergiasp.AutoSize = true;
             this.Lbl_alergiasp.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_alergiasp.ForeColor = System.Drawing.Color.White;
-            this.Lbl_alergiasp.Location = new System.Drawing.Point(120, 250);
+            this.Lbl_alergiasp.Location = new System.Drawing.Point(140, 247);
             this.Lbl_alergiasp.Name = "Lbl_alergiasp";
             this.Lbl_alergiasp.Size = new System.Drawing.Size(57, 18);
             this.Lbl_alergiasp.TabIndex = 44;
@@ -196,7 +198,7 @@
             // 
             this.Txt_alergiasp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Txt_alergiasp.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_alergiasp.Location = new System.Drawing.Point(120, 271);
+            this.Txt_alergiasp.Location = new System.Drawing.Point(140, 268);
             this.Txt_alergiasp.Multiline = true;
             this.Txt_alergiasp.Name = "Txt_alergiasp";
             this.Txt_alergiasp.Size = new System.Drawing.Size(470, 51);
@@ -221,7 +223,7 @@
             this.Lbl_refierep.AutoSize = true;
             this.Lbl_refierep.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_refierep.ForeColor = System.Drawing.Color.White;
-            this.Lbl_refierep.Location = new System.Drawing.Point(407, 148);
+            this.Lbl_refierep.Location = new System.Drawing.Point(427, 149);
             this.Lbl_refierep.Name = "Lbl_refierep";
             this.Lbl_refierep.Size = new System.Drawing.Size(95, 18);
             this.Lbl_refierep.TabIndex = 40;
@@ -232,7 +234,7 @@
             this.Lbl_direccionp.AutoSize = true;
             this.Lbl_direccionp.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_direccionp.ForeColor = System.Drawing.Color.White;
-            this.Lbl_direccionp.Location = new System.Drawing.Point(120, 148);
+            this.Lbl_direccionp.Location = new System.Drawing.Point(140, 149);
             this.Lbl_direccionp.Name = "Lbl_direccionp";
             this.Lbl_direccionp.Size = new System.Drawing.Size(71, 18);
             this.Lbl_direccionp.TabIndex = 37;
@@ -243,7 +245,7 @@
             this.Lbl_nitp.AutoSize = true;
             this.Lbl_nitp.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_nitp.ForeColor = System.Drawing.Color.White;
-            this.Lbl_nitp.Location = new System.Drawing.Point(259, 96);
+            this.Lbl_nitp.Location = new System.Drawing.Point(279, 97);
             this.Lbl_nitp.Name = "Lbl_nitp";
             this.Lbl_nitp.Size = new System.Drawing.Size(47, 18);
             this.Lbl_nitp.TabIndex = 36;
@@ -254,7 +256,7 @@
             this.Lbl_telefonop.AutoSize = true;
             this.Lbl_telefonop.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_telefonop.ForeColor = System.Drawing.Color.White;
-            this.Lbl_telefonop.Location = new System.Drawing.Point(120, 96);
+            this.Lbl_telefonop.Location = new System.Drawing.Point(140, 97);
             this.Lbl_telefonop.Name = "Lbl_telefonop";
             this.Lbl_telefonop.Size = new System.Drawing.Size(65, 18);
             this.Lbl_telefonop.TabIndex = 35;
@@ -265,7 +267,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(407, 48);
+            this.label3.Location = new System.Drawing.Point(427, 48);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 18);
             this.label3.TabIndex = 34;
@@ -276,7 +278,7 @@
             this.Lbl_nombrep.AutoSize = true;
             this.Lbl_nombrep.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_nombrep.ForeColor = System.Drawing.Color.White;
-            this.Lbl_nombrep.Location = new System.Drawing.Point(117, 48);
+            this.Lbl_nombrep.Location = new System.Drawing.Point(137, 49);
             this.Lbl_nombrep.Name = "Lbl_nombrep";
             this.Lbl_nombrep.Size = new System.Drawing.Size(138, 18);
             this.Lbl_nombrep.TabIndex = 33;
@@ -287,7 +289,7 @@
             this.Lbl_expedientep.AutoSize = true;
             this.Lbl_expedientep.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_expedientep.ForeColor = System.Drawing.Color.White;
-            this.Lbl_expedientep.Location = new System.Drawing.Point(15, 53);
+            this.Lbl_expedientep.Location = new System.Drawing.Point(6, 47);
             this.Lbl_expedientep.Name = "Lbl_expedientep";
             this.Lbl_expedientep.Size = new System.Drawing.Size(36, 18);
             this.Lbl_expedientep.TabIndex = 32;
@@ -301,7 +303,7 @@
             this.Cmb_sexop.Items.AddRange(new object[] {
             "M",
             "F"});
-            this.Cmb_sexop.Location = new System.Drawing.Point(410, 68);
+            this.Cmb_sexop.Location = new System.Drawing.Point(430, 68);
             this.Cmb_sexop.Name = "Cmb_sexop";
             this.Cmb_sexop.Size = new System.Drawing.Size(57, 25);
             this.Cmb_sexop.TabIndex = 31;
@@ -310,17 +312,17 @@
             // 
             this.Txt_expedientep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Txt_expedientep.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_expedientep.Location = new System.Drawing.Point(18, 74);
+            this.Txt_expedientep.Location = new System.Drawing.Point(6, 68);
             this.Txt_expedientep.MaxLength = 13;
             this.Txt_expedientep.Name = "Txt_expedientep";
-            this.Txt_expedientep.Size = new System.Drawing.Size(82, 25);
+            this.Txt_expedientep.Size = new System.Drawing.Size(115, 25);
             this.Txt_expedientep.TabIndex = 30;
             // 
             // Txt_refierep
             // 
             this.Txt_refierep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Txt_refierep.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_refierep.Location = new System.Drawing.Point(410, 170);
+            this.Txt_refierep.Location = new System.Drawing.Point(430, 171);
             this.Txt_refierep.Name = "Txt_refierep";
             this.Txt_refierep.Size = new System.Drawing.Size(180, 25);
             this.Txt_refierep.TabIndex = 28;
@@ -329,7 +331,7 @@
             // 
             this.Txt_direccionp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Txt_direccionp.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_direccionp.Location = new System.Drawing.Point(120, 170);
+            this.Txt_direccionp.Location = new System.Drawing.Point(140, 171);
             this.Txt_direccionp.Name = "Txt_direccionp";
             this.Txt_direccionp.Size = new System.Drawing.Size(271, 25);
             this.Txt_direccionp.TabIndex = 27;
@@ -338,7 +340,7 @@
             // 
             this.Txt_nitp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Txt_nitp.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_nitp.Location = new System.Drawing.Point(262, 118);
+            this.Txt_nitp.Location = new System.Drawing.Point(282, 119);
             this.Txt_nitp.Name = "Txt_nitp";
             this.Txt_nitp.Size = new System.Drawing.Size(129, 25);
             this.Txt_nitp.TabIndex = 26;
@@ -347,7 +349,7 @@
             // 
             this.Txt_telefonop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Txt_telefonop.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_telefonop.Location = new System.Drawing.Point(120, 118);
+            this.Txt_telefonop.Location = new System.Drawing.Point(140, 119);
             this.Txt_telefonop.Name = "Txt_telefonop";
             this.Txt_telefonop.Size = new System.Drawing.Size(123, 25);
             this.Txt_telefonop.TabIndex = 25;
@@ -356,7 +358,7 @@
             // 
             this.Txt_nombrep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Txt_nombrep.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_nombrep.Location = new System.Drawing.Point(120, 68);
+            this.Txt_nombrep.Location = new System.Drawing.Point(140, 69);
             this.Txt_nombrep.Name = "Txt_nombrep";
             this.Txt_nombrep.Size = new System.Drawing.Size(271, 25);
             this.Txt_nombrep.TabIndex = 24;
@@ -366,7 +368,7 @@
             this.Gpb_fechanp.Controls.Add(this.Dtp_fechap);
             this.Gpb_fechanp.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Gpb_fechanp.ForeColor = System.Drawing.Color.White;
-            this.Gpb_fechanp.Location = new System.Drawing.Point(500, 28);
+            this.Gpb_fechanp.Location = new System.Drawing.Point(508, 27);
             this.Gpb_fechanp.Name = "Gpb_fechanp";
             this.Gpb_fechanp.Size = new System.Drawing.Size(168, 66);
             this.Gpb_fechanp.TabIndex = 23;
@@ -431,6 +433,10 @@
             this.button1.TabIndex = 16;
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // Erp_errorP
+            // 
+            this.Erp_errorP.ContainerControl = this;
+            // 
             // Paciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -456,6 +462,7 @@
             this.Gpb_fechap.ResumeLayout(false);
             this.Gpb_fechap.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Er_validar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Erp_errorP)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -493,5 +500,6 @@
         private System.Windows.Forms.ErrorProvider Er_validar;
         private System.Windows.Forms.ComboBox Cmb_sangrep;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ErrorProvider Erp_errorP;
     }
 }
