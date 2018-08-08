@@ -22,7 +22,7 @@ namespace LaboratorioClinico
             obtenerId();
             Lbl_numSerie.Text = Convert.ToString(id+1);
         }
-
+        //@Sindy Batz
         //Validación si efectivo o crédito
         public void formPago()
         {
@@ -87,7 +87,7 @@ namespace LaboratorioClinico
                 finally
             { conexion.ObtenerConexion().Close();}
         }
-
+        //@Sindy Batz
         //Procedimiento que guardara el detalle de la factura
         public void proGuardarDatosDetalleFactura()
         {
@@ -239,7 +239,7 @@ namespace LaboratorioClinico
                 Lbl_credit.Visible = false;
             }
         }
-
+        //@Sindy Batz
         private void Btn_guardar_Click(object sender, EventArgs e)
         {
             int r = 0; int rec = 0;int f =0;int acumulado2;
