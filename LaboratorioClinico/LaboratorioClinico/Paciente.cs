@@ -59,6 +59,10 @@ namespace LaboratorioClinico
 
                 adaptador.Fill(tabla);
 
+                DataRow fila = tabla.NewRow();
+                fila["sGrupoSanguineo"] = "Seleccione tipo de sangre";
+                tabla.Rows.InsertAt(fila, 0);
+
                 Cmb_sangrep.ValueMember = "iIdTipoDeSangre";
                 Cmb_sangrep.DisplayMember = "sGrupoSanguineo";
 
