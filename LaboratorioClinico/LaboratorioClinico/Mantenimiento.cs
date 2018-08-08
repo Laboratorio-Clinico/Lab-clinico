@@ -166,7 +166,7 @@ namespace LaboratorioClinico
             try
             {
                 Pnl_eliminarP.Visible = true;
-                OdbcDataAdapter sda = new OdbcDataAdapter("SELECT pa.sNombre, te.iTelefono  , pa.sNit, sa.iIdTipoDeSangre, pa.sDireccion, co.sCorreo, pa.sAlergia, pa.sRefiere, pa.sGenero FROM paciente pa, telefono te, correo co, tipodesangre sa WHERE pa.nIdPaciente = te.nIdPaciente AND pa.nIdPaciente = co.nIdPaciente AND pa.iIdTipoDeSangre = sa.iIdTipoDeSangre AND pa.nIdPaciente='" + Convert.ToInt32(Txt_expedientep.Text) + "'", conexion.ObtenerConexion());
+                OdbcDataAdapter sda = new OdbcDataAdapter("SELECT pa.sNombre, te.iTelefono  , pa.sNit, sa.iIdTipoDeSangre, pa.sDireccion, co.sCorreo, pa.sAlergia, pa.sRefiere, pa.sGenero FROM paciente pa, telefono te, correo co, tipodesangre sa WHERE pa.nIdPaciente = te.nIdPaciente AND pa.nIdPaciente = co.nIdPaciente AND pa.iIdTipoDeSangre = sa.iIdTipoDeSangre AND pa.nIdPaciente='" + Convert.ToInt64(Txt_expedientep.Text) + "'", conexion.ObtenerConexion());
                 DataTable datos = new DataTable();
                 sda.Fill(datos);
 
@@ -208,23 +208,32 @@ namespace LaboratorioClinico
         {
             try
             {
-                Pnl_modificarP.Visible = true;
-                OdbcDataAdapter sda = new OdbcDataAdapter("SELECT pa.sNombre, te.iTelefono  , pa.sNit, sa.iIdTipoDeSangre, pa.sDireccion, co.sCorreo, pa.sAlergia, pa.sRefiere, pa.sGenero FROM paciente pa, telefono te, correo co, tipodesangre sa WHERE pa.nIdPaciente = te.nIdPaciente AND pa.nIdPaciente = co.nIdPaciente AND pa.iIdTipoDeSangre = sa.iIdTipoDeSangre AND pa.nIdPaciente='" + Convert.ToInt32(Txt_expe.Text) + "'", conexion.ObtenerConexion());
-                DataTable datos = new DataTable();
-                sda.Fill(datos);
 
-                //Llenar todos los campos con los datos del paciente encontrado................................
-                Txt_nombre.Text = datos.Rows[0][0].ToString();
-                Txt_telefono.Text = datos.Rows[0][1].ToString();
-                Txt_nit.Text = datos.Rows[0][2].ToString();
-                Txt_tipoSangre.Text = datos.Rows[0][3].ToString();
-                Txt_direccion.Text = datos.Rows[0][4].ToString();
-                Txt_correo.Text = datos.Rows[0][5].ToString(); ;
-                Txt_alergias.Text = datos.Rows[0][6].ToString();
-                Txt_refiere.Text = datos.Rows[0][7].ToString();
-                Cmb_sexo.Text = datos.Rows[0][8].ToString();
+                if (Txt_expe.MaxLength == 13)
+                {
+                    Erp_error.SetError(Txt_expe, "");
 
-                //Txt_tipoSangre.Enabled = false;
+                    Pnl_modificarP.Visible = true;
+                    OdbcDataAdapter sda = new OdbcDataAdapter("SELECT pa.sNombre, te.iTelefono  , pa.sNit, sa.iIdTipoDeSangre, pa.sDireccion, co.sCorreo, pa.sAlergia, pa.sRefiere, pa.sGenero FROM paciente pa, telefono te, correo co, tipodesangre sa WHERE pa.nIdPaciente = te.nIdPaciente AND pa.nIdPaciente = co.nIdPaciente AND pa.iIdTipoDeSangre = sa.iIdTipoDeSangre AND pa.nIdPaciente='" + Convert.ToInt64(Txt_expe.Text) + "'", conexion.ObtenerConexion());
+                    DataTable datos = new DataTable();
+                    sda.Fill(datos);
+
+                    //Llenar todos los campos con los datos del paciente encontrado................................
+                    Txt_nombre.Text = datos.Rows[0][0].ToString();
+                    Txt_telefono.Text = datos.Rows[0][1].ToString();
+                    Txt_nit.Text = datos.Rows[0][2].ToString();
+                    Txt_tipoSangre.Text = datos.Rows[0][3].ToString();
+                    Txt_direccion.Text = datos.Rows[0][4].ToString();
+                    Txt_correo.Text = datos.Rows[0][5].ToString(); ;
+                    Txt_alergias.Text = datos.Rows[0][6].ToString();
+                    Txt_refiere.Text = datos.Rows[0][7].ToString();
+                    Cmb_sexo.Text = datos.Rows[0][8].ToString();
+
+                    //Txt_tipoSangre.Enabled = false;
+                }else
+                {
+                    Erp_error.SetError(Txt_expe, "Deben ingresarse 13 dígitos.");
+                }
             }
             catch(Exception ex)
             {
@@ -240,23 +249,23 @@ namespace LaboratorioClinico
                 OdbcCommand cmd = conexion.ObtenerConexion().CreateCommand();
 
                 //Realizar updates de cada dato del paciente por si se llegó a modificar alguno.
-                cmd.CommandText = "update paciente set sNombre = '" + Txt_nombre.Text + "' where nIdPaciente = '" + Convert.ToInt32(Txt_expe.Text) + "'";
+                cmd.CommandText = "update paciente set sNombre = '" + Txt_nombre.Text + "' where nIdPaciente = '" + Convert.ToInt64(Txt_expe.Text) + "'";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "update telefono set iTelefono = '" + Txt_telefono.Text + "' where nIdPaciente = '" + Convert.ToInt32(Txt_expe.Text) + "'";
+                cmd.CommandText = "update telefono set iTelefono = '" + Txt_telefono.Text + "' where nIdPaciente = '" + Convert.ToInt64(Txt_expe.Text) + "'";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "update paciente set sNit = '" + Txt_nit.Text + "' where nIdPaciente = '" + Convert.ToInt32(Txt_expe.Text) + "'";
+                cmd.CommandText = "update paciente set sNit = '" + Txt_nit.Text + "' where nIdPaciente = '" + Convert.ToInt64(Txt_expe.Text) + "'";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "update paciente set iIdTipoDeSangre = '" + Txt_tipoSangre.Text + "' where nIdPaciente = '" + Convert.ToInt32(Txt_expe.Text) + "'";
+                cmd.CommandText = "update paciente set iIdTipoDeSangre = '" + Txt_tipoSangre.Text + "' where nIdPaciente = '" + Convert.ToInt64(Txt_expe.Text) + "'";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "update paciente set sDireccion = '" + Txt_direccion.Text + "' where nIdPaciente = '" + Convert.ToInt32(Txt_expe.Text) + "'";
+                cmd.CommandText = "update paciente set sDireccion = '" + Txt_direccion.Text + "' where nIdPaciente = '" + Convert.ToInt64(Txt_expe.Text) + "'";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "update correo set sCorreo = '" + Txt_correo.Text + "' where nIdPaciente = '" + Convert.ToInt32(Txt_expe.Text) + "'";
+                cmd.CommandText = "update correo set sCorreo = '" + Txt_correo.Text + "' where nIdPaciente = '" + Convert.ToInt64(Txt_expe.Text) + "'";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "update paciente set sAlergia = '" + Txt_alergias.Text + "' where nIdPaciente = '" + Convert.ToInt32(Txt_expe.Text) + "'";
+                cmd.CommandText = "update paciente set sAlergia = '" + Txt_alergias.Text + "' where nIdPaciente = '" + Convert.ToInt64(Txt_expe.Text) + "'";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "update paciente set sRefiere = '" + Txt_refiere.Text + "' where nIdPaciente = '" + Convert.ToInt32(Txt_expe.Text) + "'";
+                cmd.CommandText = "update paciente set sRefiere = '" + Txt_refiere.Text + "' where nIdPaciente = '" + Convert.ToInt64(Txt_expe.Text) + "'";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "update paciente set sGenero = '" + Cmb_sexo.Text + "' where nIdPaciente = '" + Convert.ToInt32(Txt_expe.Text) + "'";
+                cmd.CommandText = "update paciente set sGenero = '" + Cmb_sexo.Text + "' where nIdPaciente = '" + Convert.ToInt64(Txt_expe.Text) + "'";
                 cmd.ExecuteNonQuery();
 
                 MessageBox.Show("Paciente Modificado Exitosamente.", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
@@ -291,13 +300,13 @@ namespace LaboratorioClinico
                 OdbcCommand cmd = conexion.ObtenerConexion().CreateCommand();
 
                 //Eliminar los datos del paciente de 4 tablas que guardan su información
-                cmd.CommandText = "delete from paciente where nIdPaciente = '" + Convert.ToInt32(Txt_expedientep.Text) + "'";
+                cmd.CommandText = "delete from paciente where nIdPaciente = '" + Convert.ToInt64(Txt_expedientep.Text) + "'";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "delete from telefono where nIdPaciente = '" + Convert.ToInt32(Txt_expedientep.Text) + "'";
+                cmd.CommandText = "delete from telefono where nIdPaciente = '" + Convert.ToInt64(Txt_expedientep.Text) + "'";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "delete from correo where nIdPaciente = '" + Convert.ToInt32(Txt_expedientep.Text) + "'";
+                cmd.CommandText = "delete from correo where nIdPaciente = '" + Convert.ToInt64(Txt_expedientep.Text) + "'";
                 cmd.ExecuteNonQuery();
-                //cmd.CommandText = "delete from tipodesangre where iIdTipoDeSangre = '" + Convert.ToInt32(Txt_expedientep.Text) + "'";
+                //cmd.CommandText = "delete from tipodesangre where iIdTipoDeSangre = '" + Convert.ToInt64(Txt_expedientep.Text) + "'";
                 //cmd.ExecuteNonQuery();
                 
 
@@ -397,7 +406,7 @@ namespace LaboratorioClinico
             try
             {
                 Gpb_datos.Visible = true;
-                OdbcDataAdapter sda = new OdbcDataAdapter("SELECT me.sNombre, me.sApellido, te.itelefono, me.sDireccion, co.sCorreo, es.sEspecialidad, em.sEmpresa, me.dFechaDeNacimiento FROM medicosasociados me, telefono te, correo co, especialidad es, empresa em  WHERE me.nNoColegiado = te.nIdPaciente AND me.nNoColegiado = co.nIdPaciente AND me.iIdEspecialidad = es.iIdEspecialidad AND me.iIdEmpresa = em.iIdEmpresa AND me.nNoColegiado = '" + Convert.ToInt32(Txt_colegiadoM.Text) + "'", conexion.ObtenerConexion());
+                OdbcDataAdapter sda = new OdbcDataAdapter("SELECT me.sNombre, me.sApellido, te.itelefono, me.sDireccion, co.sCorreo, es.sEspecialidad, em.sEmpresa, me.dFechaDeNacimiento FROM medicosasociados me, telefono te, correo co, especialidad es, empresa em  WHERE me.nNoColegiado = te.nIdPaciente AND me.nNoColegiado = co.nIdPaciente AND me.iIdEspecialidad = es.iIdEspecialidad AND me.iIdEmpresa = em.iIdEmpresa AND me.nNoColegiado = '" + Convert.ToInt64(Txt_colegiadoM.Text) + "'", conexion.ObtenerConexion());
                 DataTable datos = new DataTable();
                 sda.Fill(datos);
 
@@ -432,21 +441,21 @@ namespace LaboratorioClinico
                 conexion.ObtenerConexion();
                 OdbcCommand cmd = conexion.ObtenerConexion().CreateCommand();
 
-                cmd.CommandText = "update medicosasociados set sNombre = '" + Txt_nombreMedicoM.Text + "' where nNoColegiado = '" + Convert.ToInt32(Txt_colegiadoM.Text) + "'";
+                cmd.CommandText = "update medicosasociados set sNombre = '" + Txt_nombreMedicoM.Text + "' where nNoColegiado = '" + Convert.ToInt64(Txt_colegiadoM.Text) + "'";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "update medicosasociados set sApellido = '" + Txt_apellidoMedicoM.Text + "' where nNoColegiado = '" + Convert.ToInt32(Txt_colegiadoM.Text) + "'";
+                cmd.CommandText = "update medicosasociados set sApellido = '" + Txt_apellidoMedicoM.Text + "' where nNoColegiado = '" + Convert.ToInt64(Txt_colegiadoM.Text) + "'";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "update telefono set iTelefono = '" + Txt_telefonoMedicoM.Text + "' where nIdPaciente = '" + Convert.ToInt32(Txt_colegiadoM.Text) + "'";
+                cmd.CommandText = "update telefono set iTelefono = '" + Txt_telefonoMedicoM.Text + "' where nIdPaciente = '" + Convert.ToInt64(Txt_colegiadoM.Text) + "'";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "update medicosasociados set sDireccion = '" + Txt_direMedicoM.Text + "' where nNoColegiado = '" + Convert.ToInt32(Txt_colegiadoM.Text) + "'";
+                cmd.CommandText = "update medicosasociados set sDireccion = '" + Txt_direMedicoM.Text + "' where nNoColegiado = '" + Convert.ToInt64(Txt_colegiadoM.Text) + "'";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "update correo set sCorreo = '" + Txt_correoMedicoM.Text + "' where nIdPaciente = '" + Convert.ToInt32(Txt_colegiadoM.Text) + "'";
+                cmd.CommandText = "update correo set sCorreo = '" + Txt_correoMedicoM.Text + "' where nIdPaciente = '" + Convert.ToInt64(Txt_colegiadoM.Text) + "'";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "update medicosasociados set iIdEspecialidad = '" + Convert.ToInt32(Cmb_especialidadMedicoM.SelectedValue) + "' where nNoColegiado = '" + Convert.ToInt32(Txt_colegiadoM.Text) + "'";
+                cmd.CommandText = "update medicosasociados set iIdEspecialidad = '" + Convert.ToInt64(Cmb_especialidadMedicoM.SelectedValue) + "' where nNoColegiado = '" + Convert.ToInt64(Txt_colegiadoM.Text) + "'";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "update medicosasociados set iIdEmpresa = '" + Convert.ToInt32(Cmb_empresaMedicoM.SelectedValue) + "' where nNoColegiado = '" + Convert.ToInt32(Txt_colegiadoM.Text) + "'";
+                cmd.CommandText = "update medicosasociados set iIdEmpresa = '" + Convert.ToInt64(Cmb_empresaMedicoM.SelectedValue) + "' where nNoColegiado = '" + Convert.ToInt64(Txt_colegiadoM.Text) + "'";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "update medicosasociados set dFechaDeNacimiento = '" + Dtp_nacimiento.Text + "' where nNoColegiado = '" + Convert.ToInt32(Txt_colegiadoM.Text) + "'";
+                cmd.CommandText = "update medicosasociados set dFechaDeNacimiento = '" + Dtp_nacimiento.Text + "' where nNoColegiado = '" + Convert.ToInt64(Txt_colegiadoM.Text) + "'";
                 cmd.ExecuteNonQuery();
 
                 MessageBox.Show("Médico Modificado Exitosamente.", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
@@ -492,11 +501,11 @@ namespace LaboratorioClinico
                 OdbcCommand cmd = conexion.ObtenerConexion().CreateCommand();
 
                 //Eliminar los datos del medico de 3 tablas que guardan su información
-                cmd.CommandText = "delete from medicosasociados where nNoColegiado = '" + Convert.ToInt32(Txt_colegiadoE.Text) + "'";
+                cmd.CommandText = "delete from medicosasociados where nNoColegiado = '" + Convert.ToInt64(Txt_colegiadoE.Text) + "'";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "delete from telefono where nIdPaciente = '" + Convert.ToInt32(Txt_colegiadoE.Text) + "'";
+                cmd.CommandText = "delete from telefono where nIdPaciente = '" + Convert.ToInt64(Txt_colegiadoE.Text) + "'";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "delete from correo where nIdPaciente = '" + Convert.ToInt32(Txt_colegiadoE.Text) + "'";
+                cmd.CommandText = "delete from correo where nIdPaciente = '" + Convert.ToInt64(Txt_colegiadoE.Text) + "'";
                 cmd.ExecuteNonQuery();
 
                 MessageBox.Show("Médico Eliminado Exitosamente", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
@@ -534,7 +543,7 @@ namespace LaboratorioClinico
             try
             {
                 Gpb_datosEliminar.Visible = true;
-                OdbcDataAdapter sda = new OdbcDataAdapter("SELECT me.sNombre, me.sApellido, te.itelefono, me.sDireccion, co.sCorreo, es.sEspecialidad, em.sEmpresa, me.dFechaDeNacimiento FROM medicosasociados me, telefono te, correo co, especialidad es, empresa em  WHERE me.nNoColegiado = te.nIdPaciente AND me.nNoColegiado = co.nIdPaciente AND me.iIdEspecialidad = es.iIdEspecialidad AND me.iIdEmpresa = em.iIdEmpresa AND me.nNoColegiado ='" + Convert.ToInt32(Txt_colegiadoE.Text) + "'", conexion.ObtenerConexion());
+                OdbcDataAdapter sda = new OdbcDataAdapter("SELECT me.sNombre, me.sApellido, te.itelefono, me.sDireccion, co.sCorreo, es.sEspecialidad, em.sEmpresa, me.dFechaDeNacimiento FROM medicosasociados me, telefono te, correo co, especialidad es, empresa em  WHERE me.nNoColegiado = te.nIdPaciente AND me.nNoColegiado = co.nIdPaciente AND me.iIdEspecialidad = es.iIdEspecialidad AND me.iIdEmpresa = em.iIdEmpresa AND me.nNoColegiado ='" + Convert.ToInt64(Txt_colegiadoE.Text) + "'", conexion.ObtenerConexion());
                 DataTable datos = new DataTable();
                 sda.Fill(datos);
 
@@ -613,7 +622,7 @@ namespace LaboratorioClinico
             try
             {
                 Gpb_datosEmpe.Visible = true;
-                OdbcDataAdapter sda = new OdbcDataAdapter("SELECT em.sNombre, em.sApellido, em.sDireccion, te.itelefono, co.sCorreo, em.fSueldo, ca.sDescripcion, em.dFechaDeNacimiento FROM empleado em, telefono te, correo co, cargo ca WHERE em.nIdEmpleado = te.nIdPaciente AND em.nIdEmpleado = co.nIdPaciente AND em.iIdCargo = ca.iIdCargo AND em.nIdEmpleado ='" + Convert.ToInt32(Txt_dpiEmpe.Text) + "'", conexion.ObtenerConexion());
+                OdbcDataAdapter sda = new OdbcDataAdapter("SELECT em.sNombre, em.sApellido, em.sDireccion, te.itelefono, co.sCorreo, em.fSueldo, ca.sDescripcion, em.dFechaDeNacimiento FROM empleado em, telefono te, correo co, cargo ca WHERE em.nIdEmpleado = te.nIdPaciente AND em.nIdEmpleado = co.nIdPaciente AND em.iIdCargo = ca.iIdCargo AND em.nIdEmpleado ='" + Convert.ToInt64(Txt_dpiEmpe.Text) + "'", conexion.ObtenerConexion());
                 DataTable datos = new DataTable();
                 sda.Fill(datos);
 
@@ -650,7 +659,7 @@ namespace LaboratorioClinico
             try
             {
                 Gpb_datosEmpm.Visible = true;
-                OdbcDataAdapter sda = new OdbcDataAdapter("SELECT em.sNombre, em.sApellido, em.sDireccion, te.itelefono, co.sCorreo, em.fSueldo, ca.sDescripcion, em.dFechaDeNacimiento FROM empleado em, telefono te, correo co, cargo ca WHERE em.nIdEmpleado = te.nIdPaciente AND em.nIdEmpleado = co.nIdPaciente AND em.iIdCargo = ca.iIdCargo AND em.nIdEmpleado ='" + Convert.ToInt32(Txt_dpiEmpm.Text) + "'", conexion.ObtenerConexion());
+                OdbcDataAdapter sda = new OdbcDataAdapter("SELECT em.sNombre, em.sApellido, em.sDireccion, te.itelefono, co.sCorreo, em.fSueldo, ca.sDescripcion, em.dFechaDeNacimiento FROM empleado em, telefono te, correo co, cargo ca WHERE em.nIdEmpleado = te.nIdPaciente AND em.nIdEmpleado = co.nIdPaciente AND em.iIdCargo = ca.iIdCargo AND em.nIdEmpleado ='" + Convert.ToInt64(Txt_dpiEmpm.Text) + "'", conexion.ObtenerConexion());
                 DataTable datos = new DataTable();
                 sda.Fill(datos);
 
@@ -695,21 +704,21 @@ namespace LaboratorioClinico
                 conexion.ObtenerConexion();
                 OdbcCommand cmd = conexion.ObtenerConexion().CreateCommand();
 
-                cmd.CommandText = "update empleado set sNombre = '" + Txt_nombreEmpm.Text + "' where nIdEmpleado = '" + Convert.ToInt32(Txt_dpiEmpm.Text) + "'";
+                cmd.CommandText = "update empleado set sNombre = '" + Txt_nombreEmpm.Text + "' where nIdEmpleado = '" + Convert.ToInt64(Txt_dpiEmpm.Text) + "'";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "update empleado set sApellido = '" + Txt_apellidoEmpm.Text + "' where nIdEmpleado = '" + Convert.ToInt32(Txt_dpiEmpm.Text) + "'";
+                cmd.CommandText = "update empleado set sApellido = '" + Txt_apellidoEmpm.Text + "' where nIdEmpleado = '" + Convert.ToInt64(Txt_dpiEmpm.Text) + "'";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "update empleado set sDireccion = '" + Txt_direEmpm.Text + "' where nIdEmpleado = '" + Convert.ToInt32(Txt_dpiEmpm.Text) + "'";
+                cmd.CommandText = "update empleado set sDireccion = '" + Txt_direEmpm.Text + "' where nIdEmpleado = '" + Convert.ToInt64(Txt_dpiEmpm.Text) + "'";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "update telefono set iTelefono = '" + Txt_telEmpm.Text + "' where nIdPaciente = '" + Convert.ToInt32(Txt_dpiEmpm.Text) + "'";
+                cmd.CommandText = "update telefono set iTelefono = '" + Txt_telEmpm.Text + "' where nIdPaciente = '" + Convert.ToInt64(Txt_dpiEmpm.Text) + "'";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "update correo set sCorreo = '" + Txt_correoEmpm.Text + "' where nIdPaciente = '" + Convert.ToInt32(Txt_dpiEmpm.Text) + "'";
+                cmd.CommandText = "update correo set sCorreo = '" + Txt_correoEmpm.Text + "' where nIdPaciente = '" + Convert.ToInt64(Txt_dpiEmpm.Text) + "'";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "update empleado set fSueldo = '" + Txt_sueldoEmpm.Text + "' where nIdEmpleado = '" + Convert.ToInt32(Txt_dpiEmpm.Text) + "'";
+                cmd.CommandText = "update empleado set fSueldo = '" + Txt_sueldoEmpm.Text + "' where nIdEmpleado = '" + Convert.ToInt64(Txt_dpiEmpm.Text) + "'";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "update empleado set iIdCargo = '" + Convert.ToInt32(Cmb_cargoEmpm.SelectedValue) + "' where nIdEmpleado = '" + Convert.ToInt32(Txt_dpiEmpm.Text) + "'";
+                cmd.CommandText = "update empleado set iIdCargo = '" + Convert.ToInt64(Cmb_cargoEmpm.SelectedValue) + "' where nIdEmpleado = '" + Convert.ToInt64(Txt_dpiEmpm.Text) + "'";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "update empleado set dFechaDeNacimiento = '" + Dtp_fechaEmpm.Text + "' where nIdEmpleado = '" + Convert.ToInt32(Txt_dpiEmpm.Text) + "'";
+                cmd.CommandText = "update empleado set dFechaDeNacimiento = '" + Dtp_fechaEmpm.Text + "' where nIdEmpleado = '" + Convert.ToInt64(Txt_dpiEmpm.Text) + "'";
                 cmd.ExecuteNonQuery();
 
                 MessageBox.Show("Médico Modificado Exitosamente.", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
@@ -746,11 +755,11 @@ namespace LaboratorioClinico
                 OdbcCommand cmd = conexion.ObtenerConexion().CreateCommand();
 
                 //Eliminar los datos del empleado de 3 tablas que guardan su información
-                cmd.CommandText = "delete from empleado where nIdEmpleado = '" + Convert.ToInt32(Txt_dpiEmpe.Text) + "'";
+                cmd.CommandText = "delete from empleado where nIdEmpleado = '" + Convert.ToInt64(Txt_dpiEmpe.Text) + "'";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "delete from telefono where nIdPaciente = '" + Convert.ToInt32(Txt_dpiEmpe.Text) + "'";
+                cmd.CommandText = "delete from telefono where nIdPaciente = '" + Convert.ToInt64(Txt_dpiEmpe.Text) + "'";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "delete from correo where nIdPaciente = '" + Convert.ToInt32(Txt_dpiEmpe.Text) + "'";
+                cmd.CommandText = "delete from correo where nIdPaciente = '" + Convert.ToInt64(Txt_dpiEmpe.Text) + "'";
                 cmd.ExecuteNonQuery();
 
                 MessageBox.Show("Empleado Eliminado Exitosamente", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
@@ -790,7 +799,7 @@ namespace LaboratorioClinico
                 conexion.ObtenerConexion();
                 OdbcCommand cmd = conexion.ObtenerConexion().CreateCommand();
 
-                cmd.CommandText = "update membresiadepaciente set iNoMembresia = '" + Convert.ToInt32(Cmb_nuevaMembm.SelectedValue) + "' where nNoExpediente = '" + Convert.ToInt32(Txt_dpiMembm.Text) + "'";
+                cmd.CommandText = "update membresiadepaciente set iNoMembresia = '" + Convert.ToInt64(Cmb_nuevaMembm.SelectedValue) + "' where nNoExpediente = '" + Convert.ToInt64(Txt_dpiMembm.Text) + "'";
                 cmd.ExecuteNonQuery();
         
 
@@ -814,7 +823,7 @@ namespace LaboratorioClinico
             try
             {
                 Gpb_datosMembm.Visible = true;
-                OdbcDataAdapter sda = new OdbcDataAdapter("SELECT pa.sNombre, pa.sNit, me.sDescripcion FROM paciente pa, membresia me, membresiadepaciente mp WHERE pa.nIdPaciente = mp.nNoExpediente AND me.iNoMembresia = mp.iNoMembresia AND pa.nIdPaciente ='" + Convert.ToInt32(Txt_dpiMembm.Text) + "'", conexion.ObtenerConexion());
+                OdbcDataAdapter sda = new OdbcDataAdapter("SELECT pa.sNombre, pa.sNit, me.sDescripcion FROM paciente pa, membresia me, membresiadepaciente mp WHERE pa.nIdPaciente = mp.nNoExpediente AND me.iNoMembresia = mp.iNoMembresia AND pa.nIdPaciente ='" + Convert.ToInt64(Txt_dpiMembm.Text) + "'", conexion.ObtenerConexion());
                 DataTable datos = new DataTable();
                 sda.Fill(datos);
 
@@ -843,7 +852,7 @@ namespace LaboratorioClinico
             try
             {
                 Gpb_datosMembe.Visible = true;
-                OdbcDataAdapter sda = new OdbcDataAdapter("SELECT pa.sNombre, pa.sNit, me.sDescripcion FROM paciente pa, membresia me, membresiadepaciente mp WHERE pa.nIdPaciente = mp.nNoExpediente AND me.iNoMembresia = mp.iNoMembresia AND pa.nIdPaciente ='" + Convert.ToInt32(Txt_dpiMembe.Text) + "'", conexion.ObtenerConexion());
+                OdbcDataAdapter sda = new OdbcDataAdapter("SELECT pa.sNombre, pa.sNit, me.sDescripcion FROM paciente pa, membresia me, membresiadepaciente mp WHERE pa.nIdPaciente = mp.nNoExpediente AND me.iNoMembresia = mp.iNoMembresia AND pa.nIdPaciente ='" + Convert.ToInt64(Txt_dpiMembe.Text) + "'", conexion.ObtenerConexion());
                 DataTable datos = new DataTable();
                 sda.Fill(datos);
 
@@ -877,7 +886,7 @@ namespace LaboratorioClinico
                 OdbcCommand cmd = conexion.ObtenerConexion().CreateCommand();
 
                 //Eliminar los datos del empleado de 3 tablas que guardan su información
-                cmd.CommandText = "delete from membresiadepaciente where nNoExpediente = '" + Convert.ToInt32(Txt_dpiMembe.Text) + "'";
+                cmd.CommandText = "delete from membresiadepaciente where nNoExpediente = '" + Convert.ToInt64(Txt_dpiMembe.Text) + "'";
                 cmd.ExecuteNonQuery();
 
                 MessageBox.Show("Membresía Eliminada Exitosamente", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
@@ -899,6 +908,17 @@ namespace LaboratorioClinico
             {
                 MessageBox.Show("No se pudo eliminar el registro.", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
                 //MessageBox.Show("error:"+ex);
+            }
+        }
+
+        private void Txt_expe_Validating(object sender, CancelEventArgs e)
+        {
+            if(Txt_expe.TextLength != 8)
+            {
+                Erp_error.SetError(Txt_expe, "El DPI debe contener 13 dígitos.");
+            }else
+            {
+                Erp_error.SetError(Txt_expe, "");
             }
         }
     }

@@ -80,7 +80,7 @@ namespace LaboratorioClinico
             //Buscar y Mostrar los requisitos del examen que es seleccionado
             try
             {
-                int idExamen = Convert.ToInt32(Cmb_examen.SelectedValue);
+                int idExamen = Convert.ToInt64(Cmb_examen.SelectedValue);
            
             conexion.ObtenerConexion();
             OdbcCommand sda = new OdbcCommand("select sDescripcion as Requisitos from requisitos where iIdRequisitos='" + idExamen + "'", conexion.ObtenerConexion());

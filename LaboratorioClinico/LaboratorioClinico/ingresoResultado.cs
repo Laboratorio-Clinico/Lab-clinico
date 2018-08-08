@@ -103,7 +103,7 @@ namespace LaboratorioClinico
         {
             try
             {
-                int iIdCorreo = Convert.ToInt32(Cmb_correo.SelectedValue);
+                int iIdCorreo = Convert.ToInt64(Cmb_correo.SelectedValue);
 
 
                 OdbcCommand comando = new OdbcCommand("{CALL InsertaResultados(?,?,?,?,?,?)}", conexion.ObtenerConexion());
