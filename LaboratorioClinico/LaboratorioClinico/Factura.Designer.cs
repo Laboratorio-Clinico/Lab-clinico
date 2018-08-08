@@ -572,6 +572,7 @@
             // Txt_preciouf
             // 
             this.Txt_preciouf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_preciouf.Enabled = false;
             this.Txt_preciouf.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_preciouf.Location = new System.Drawing.Point(426, 41);
             this.Txt_preciouf.Multiline = true;
@@ -606,6 +607,7 @@
             // Txt_descripcion
             // 
             this.Txt_descripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_descripcion.Enabled = false;
             this.Txt_descripcion.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_descripcion.Location = new System.Drawing.Point(224, 41);
             this.Txt_descripcion.Multiline = true;
@@ -776,6 +778,7 @@
             // Txt_direccionf
             // 
             this.Txt_direccionf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_direccionf.Enabled = false;
             this.Txt_direccionf.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_direccionf.Location = new System.Drawing.Point(382, 62);
             this.Txt_direccionf.Multiline = true;
@@ -822,6 +825,7 @@
             // Txt_nombref
             // 
             this.Txt_nombref.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_nombref.Enabled = false;
             this.Txt_nombref.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_nombref.Location = new System.Drawing.Point(124, 24);
             this.Txt_nombref.Multiline = true;
