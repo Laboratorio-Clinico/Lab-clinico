@@ -166,7 +166,7 @@ namespace LaboratorioClinico
             try
             {
                 Pnl_eliminarP.Visible = true;
-                OdbcDataAdapter sda = new OdbcDataAdapter("SELECT pa.sNombre, te.iTelefono  , pa.sNit, sa.iIdTipoDeSangre, pa.sDireccion, co.sCorreo, pa.sAlergia, pa.sRefiere, pa.sGenero FROM paciente pa, telefono te, correo co, tipodesangre sa WHERE pa.nIdPaciente = te.nIdPaciente AND pa.nIdPaciente = co.nIdPaciente AND pa.iIdTipoDeSangre = sa.iIdTipoDeSangre AND pa.nIdPaciente='" + Convert.ToInt64(Txt_expedientep.Text) + "'", conexion.ObtenerConexion());
+                OdbcDataAdapter sda = new OdbcDataAdapter("SELECT pa.sNombre, te.iTelefono  , pa.sNit, sa.sGrupoSanguineo, pa.sDireccion, co.sCorreo, pa.sAlergia, pa.sRefiere, pa.sGenero FROM paciente pa, telefono te, correo co, tipodesangre sa WHERE pa.nIdPaciente = te.nIdPaciente AND pa.nIdPaciente = co.nIdPaciente AND pa.iIdTipoDeSangre = sa.iIdTipoDeSangre AND pa.nIdPaciente='" + Convert.ToInt64(Txt_expedientep.Text) + "'", conexion.ObtenerConexion());
                 DataTable datos = new DataTable();
                 sda.Fill(datos);
 
@@ -214,7 +214,7 @@ namespace LaboratorioClinico
                     Erp_error.SetError(Txt_expe, "");
 
                     Pnl_modificarP.Visible = true;
-                    OdbcDataAdapter sda = new OdbcDataAdapter("SELECT pa.sNombre, te.iTelefono  , pa.sNit, sa.iIdTipoDeSangre, pa.sDireccion, co.sCorreo, pa.sAlergia, pa.sRefiere, pa.sGenero FROM paciente pa, telefono te, correo co, tipodesangre sa WHERE pa.nIdPaciente = te.nIdPaciente AND pa.nIdPaciente = co.nIdPaciente AND pa.iIdTipoDeSangre = sa.iIdTipoDeSangre AND pa.nIdPaciente='" + Convert.ToInt64(Txt_expe.Text) + "'", conexion.ObtenerConexion());
+                    OdbcDataAdapter sda = new OdbcDataAdapter("SELECT pa.sNombre, te.iTelefono  , pa.sNit, sa.sGrupoSanguineo, pa.sDireccion, co.sCorreo, pa.sAlergia, pa.sRefiere, pa.sGenero FROM paciente pa, telefono te, correo co, tipodesangre sa WHERE pa.nIdPaciente = te.nIdPaciente AND pa.nIdPaciente = co.nIdPaciente AND pa.iIdTipoDeSangre = sa.iIdTipoDeSangre AND pa.nIdPaciente='" + Convert.ToInt64(Txt_expe.Text) + "'", conexion.ObtenerConexion());
                     DataTable datos = new DataTable();
                     sda.Fill(datos);
 
@@ -920,6 +920,11 @@ namespace LaboratorioClinico
             {
                 Erp_error.SetError(Txt_expe, "");
             }
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
