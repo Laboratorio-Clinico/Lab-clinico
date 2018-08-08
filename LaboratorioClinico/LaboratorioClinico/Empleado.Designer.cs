@@ -29,10 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Empleado));
             this.Gpb_datosEmpleado = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.Gpb_contacto = new System.Windows.Forms.GroupBox();
             this.Txt_telefono = new System.Windows.Forms.TextBox();
@@ -60,7 +57,6 @@
             this.Erp_errorE = new System.Windows.Forms.ErrorProvider(this.components);
             this.Er_validar = new System.Windows.Forms.ErrorProvider(this.components);
             this.Gpb_datosEmpleado.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.Gpb_contacto.SuspendLayout();
             this.Gpb_puesto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Picb_imagen)).BeginInit();
@@ -72,8 +68,6 @@
             // Gpb_datosEmpleado
             // 
             this.Gpb_datosEmpleado.BackColor = System.Drawing.Color.Transparent;
-            this.Gpb_datosEmpleado.Controls.Add(this.button1);
-            this.Gpb_datosEmpleado.Controls.Add(this.dataGridView1);
             this.Gpb_datosEmpleado.Controls.Add(this.label4);
             this.Gpb_datosEmpleado.Controls.Add(this.Gpb_contacto);
             this.Gpb_datosEmpleado.Controls.Add(this.Gpb_puesto);
@@ -89,30 +83,12 @@
             this.Gpb_datosEmpleado.TabStop = false;
             this.Gpb_datosEmpleado.Text = "Datos de Empleados";
             // 
-            // button1
-            // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(670, 405);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(53, 44);
-            this.button1.TabIndex = 16;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(708, 181);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(8, 8);
-            this.dataGridView1.TabIndex = 50;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(519, 431);
+            this.label4.Location = new System.Drawing.Point(540, 413);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(46, 15);
             this.label4.TabIndex = 49;
@@ -269,7 +245,7 @@
             // 
             this.Btn_guardar.BackgroundImage = global::LaboratorioClinico.Properties.Resources.guardar;
             this.Btn_guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Btn_guardar.Location = new System.Drawing.Point(512, 383);
+            this.Btn_guardar.Location = new System.Drawing.Point(533, 365);
             this.Btn_guardar.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_guardar.Name = "Btn_guardar";
             this.Btn_guardar.Size = new System.Drawing.Size(53, 44);
@@ -422,7 +398,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Gpb_datosEmpleado.ResumeLayout(false);
             this.Gpb_datosEmpleado.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.Gpb_contacto.ResumeLayout(false);
             this.Gpb_contacto.PerformLayout();
             this.Gpb_puesto.ResumeLayout(false);
@@ -463,8 +438,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox Txt_DPIEmpleado;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ErrorProvider Erp_errorE;
         private System.Windows.Forms.ErrorProvider Er_validar;
     }
