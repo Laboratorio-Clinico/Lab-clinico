@@ -35,7 +35,7 @@
             this.Txt_dpir = new System.Windows.Forms.TextBox();
             this.Lbl_nitf = new System.Windows.Forms.Label();
             this.Gpb_datosf = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Txt_fechae = new System.Windows.Forms.TextBox();
             this.Txt_direccionr = new System.Windows.Forms.TextBox();
             this.Lbl_fechaf = new System.Windows.Forms.Label();
             this.Lbl_direccionf = new System.Windows.Forms.Label();
@@ -43,8 +43,6 @@
             this.Lbl_nombref = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.Txt_resultadox = new System.Windows.Forms.TextBox();
-            this.Lbl_resultado = new System.Windows.Forms.Label();
             this.Txt_codEx = new System.Windows.Forms.TextBox();
             this.Lbl_codigor = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -53,11 +51,11 @@
             this.Lbl_examenRealizado = new System.Windows.Forms.Label();
             this.Btn_imprimirResultado = new System.Windows.Forms.Button();
             this.Lbl_imprimirr = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.Lbl_nitc = new System.Windows.Forms.Label();
+            this.Txt_nitc = new System.Windows.Forms.TextBox();
             this.Gpb_datosf.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // Lbl_ingreseResultados
@@ -78,7 +76,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(400, 111);
+            this.label1.Location = new System.Drawing.Point(415, 134);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 18);
@@ -89,7 +87,7 @@
             this.Btn_busc.BackColor = System.Drawing.Color.White;
             this.Btn_busc.BackgroundImage = global::LaboratorioClinico.Properties.Resources.lupa;
             this.Btn_busc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Btn_busc.Location = new System.Drawing.Point(448, 60);
+            this.Btn_busc.Location = new System.Drawing.Point(463, 83);
             this.Btn_busc.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_busc.Name = "Btn_busc";
             this.Btn_busc.Size = new System.Drawing.Size(41, 38);
@@ -100,7 +98,7 @@
             // Txt_dpir
             // 
             this.Txt_dpir.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_dpir.Location = new System.Drawing.Point(279, 71);
+            this.Txt_dpir.Location = new System.Drawing.Point(294, 94);
             this.Txt_dpir.Multiline = true;
             this.Txt_dpir.Name = "Txt_dpir";
             this.Txt_dpir.Size = new System.Drawing.Size(161, 20);
@@ -112,7 +110,7 @@
             this.Lbl_nitf.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_nitf.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_nitf.ForeColor = System.Drawing.Color.White;
-            this.Lbl_nitf.Location = new System.Drawing.Point(227, 73);
+            this.Lbl_nitf.Location = new System.Drawing.Point(242, 96);
             this.Lbl_nitf.Name = "Lbl_nitf";
             this.Lbl_nitf.Size = new System.Drawing.Size(31, 18);
             this.Lbl_nitf.TabIndex = 132;
@@ -121,6 +119,8 @@
             // Gpb_datosf
             // 
             this.Gpb_datosf.BackColor = System.Drawing.Color.Transparent;
+            this.Gpb_datosf.Controls.Add(this.Txt_nitc);
+            this.Gpb_datosf.Controls.Add(this.Lbl_nitc);
             this.Gpb_datosf.Controls.Add(this.Txt_direccionr);
             this.Gpb_datosf.Controls.Add(this.Lbl_fechaf);
             this.Gpb_datosf.Controls.Add(this.Lbl_direccionf);
@@ -129,21 +129,21 @@
             this.Gpb_datosf.Controls.Add(this.textBox2);
             this.Gpb_datosf.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Gpb_datosf.ForeColor = System.Drawing.SystemColors.Info;
-            this.Gpb_datosf.Location = new System.Drawing.Point(12, 105);
+            this.Gpb_datosf.Location = new System.Drawing.Point(12, 150);
             this.Gpb_datosf.Name = "Gpb_datosf";
             this.Gpb_datosf.Size = new System.Drawing.Size(736, 95);
             this.Gpb_datosf.TabIndex = 135;
             this.Gpb_datosf.TabStop = false;
             this.Gpb_datosf.Text = "Datos Paciente";
             // 
-            // textBox1
+            // Txt_fechae
             // 
-            this.textBox1.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(239, 17);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(253, 20);
-            this.textBox1.TabIndex = 13;
+            this.Txt_fechae.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_fechae.Location = new System.Drawing.Point(239, 101);
+            this.Txt_fechae.Multiline = true;
+            this.Txt_fechae.Name = "Txt_fechae";
+            this.Txt_fechae.Size = new System.Drawing.Size(253, 20);
+            this.Txt_fechae.TabIndex = 13;
             // 
             // Txt_direccionr
             // 
@@ -151,7 +151,7 @@
             this.Txt_direccionr.Location = new System.Drawing.Point(237, 63);
             this.Txt_direccionr.Multiline = true;
             this.Txt_direccionr.Name = "Txt_direccionr";
-            this.Txt_direccionr.Size = new System.Drawing.Size(425, 20);
+            this.Txt_direccionr.Size = new System.Drawing.Size(227, 20);
             this.Txt_direccionr.TabIndex = 11;
             // 
             // Lbl_fechaf
@@ -210,9 +210,9 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.Txt_resultadox);
-            this.groupBox1.Controls.Add(this.Lbl_resultado);
+            this.groupBox1.Controls.Add(this.Txt_fechae);
             this.groupBox1.Controls.Add(this.Txt_codEx);
+            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.Lbl_codigor);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.Txt_nombrex);
@@ -220,33 +220,12 @@
             this.groupBox1.Controls.Add(this.Lbl_examenRealizado);
             this.groupBox1.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.groupBox1.Location = new System.Drawing.Point(12, 206);
+            this.groupBox1.Location = new System.Drawing.Point(12, 251);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(736, 160);
             this.groupBox1.TabIndex = 136;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Examenes Realizados";
-            // 
-            // Txt_resultadox
-            // 
-            this.Txt_resultadox.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_resultadox.Location = new System.Drawing.Point(239, 101);
-            this.Txt_resultadox.Multiline = true;
-            this.Txt_resultadox.Name = "Txt_resultadox";
-            this.Txt_resultadox.Size = new System.Drawing.Size(423, 43);
-            this.Txt_resultadox.TabIndex = 104;
-            // 
-            // Lbl_resultado
-            // 
-            this.Lbl_resultado.AutoSize = true;
-            this.Lbl_resultado.BackColor = System.Drawing.Color.Transparent;
-            this.Lbl_resultado.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_resultado.ForeColor = System.Drawing.Color.White;
-            this.Lbl_resultado.Location = new System.Drawing.Point(95, 101);
-            this.Lbl_resultado.Name = "Lbl_resultado";
-            this.Lbl_resultado.Size = new System.Drawing.Size(66, 18);
-            this.Lbl_resultado.TabIndex = 103;
-            this.Lbl_resultado.Text = "Resultado";
             // 
             // Txt_codEx
             // 
@@ -336,29 +315,39 @@
             this.Lbl_imprimirr.Text = "Imprimir";
             this.Lbl_imprimirr.Click += new System.EventHandler(this.Lbl_imprimirr_Click);
             // 
-            // groupBox3
-            // 
-            this.groupBox3.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox3.Controls.Add(this.textBox1);
-            this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Location = new System.Drawing.Point(12, 372);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(742, 54);
-            this.groupBox3.TabIndex = 140;
-            this.groupBox3.TabStop = false;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(96, 19);
+            this.label5.Location = new System.Drawing.Point(95, 106);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(105, 18);
             this.label5.TabIndex = 102;
             this.label5.Text = "Emisión exámen";
+            // 
+            // Lbl_nitc
+            // 
+            this.Lbl_nitc.AutoSize = true;
+            this.Lbl_nitc.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_nitc.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_nitc.ForeColor = System.Drawing.Color.White;
+            this.Lbl_nitc.Location = new System.Drawing.Point(470, 65);
+            this.Lbl_nitc.Name = "Lbl_nitc";
+            this.Lbl_nitc.Size = new System.Drawing.Size(28, 18);
+            this.Lbl_nitc.TabIndex = 12;
+            this.Lbl_nitc.Text = "Nit";
+            // 
+            // Txt_nitc
+            // 
+            this.Txt_nitc.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_nitc.Location = new System.Drawing.Point(504, 63);
+            this.Txt_nitc.Multiline = true;
+            this.Txt_nitc.Name = "Txt_nitc";
+            this.Txt_nitc.Size = new System.Drawing.Size(158, 20);
+            this.Txt_nitc.TabIndex = 103;
             // 
             // Constancia
             // 
@@ -367,7 +356,6 @@
             this.BackgroundImage = global::LaboratorioClinico.Properties.Resources.FONDOO;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(766, 489);
-            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.Btn_imprimirResultado);
             this.Controls.Add(this.Lbl_imprimirr);
             this.Controls.Add(this.groupBox1);
@@ -385,8 +373,6 @@
             this.Gpb_datosf.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -407,8 +393,6 @@
         private System.Windows.Forms.Label Lbl_nombref;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox Txt_resultadox;
-        private System.Windows.Forms.Label Lbl_resultado;
         private System.Windows.Forms.TextBox Txt_codEx;
         private System.Windows.Forms.Label Lbl_codigor;
         private System.Windows.Forms.Label label3;
@@ -417,8 +401,9 @@
         private System.Windows.Forms.Label Lbl_examenRealizado;
         private System.Windows.Forms.Button Btn_imprimirResultado;
         private System.Windows.Forms.Label Lbl_imprimirr;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox Txt_fechae;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label Lbl_nitc;
+        private System.Windows.Forms.TextBox Txt_nitc;
     }
 }
