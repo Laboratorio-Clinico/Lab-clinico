@@ -44,10 +44,12 @@
             this.Picb_Imagen = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.Erp_errorU = new System.Windows.Forms.ErrorProvider(this.components);
+            this.Er_validar = new System.Windows.Forms.ErrorProvider(this.components);
             this.Gpb_nuevoUsuario.SuspendLayout();
             this.Pnl_usuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Picb_Imagen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Erp_errorU)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Er_validar)).BeginInit();
             this.SuspendLayout();
             // 
             // Gpb_nuevoUsuario
@@ -231,6 +233,10 @@
             // 
             this.Erp_errorU.ContainerControl = this;
             // 
+            // Er_validar
+            // 
+            this.Er_validar.ContainerControl = this;
+            // 
             // Usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -254,6 +260,7 @@
             this.Pnl_usuario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Picb_Imagen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Erp_errorU)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Er_validar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -275,5 +282,6 @@
         private System.Windows.Forms.Button Btn;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ErrorProvider Erp_errorU;
+        private System.Windows.Forms.ErrorProvider Er_validar;
     }
 }

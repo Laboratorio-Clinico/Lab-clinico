@@ -315,7 +315,7 @@
             this.Txt_expedientep.Location = new System.Drawing.Point(6, 68);
             this.Txt_expedientep.MaxLength = 13;
             this.Txt_expedientep.Name = "Txt_expedientep";
-            this.Txt_expedientep.Size = new System.Drawing.Size(128, 25);
+            this.Txt_expedientep.Size = new System.Drawing.Size(115, 25);
             this.Txt_expedientep.TabIndex = 30;
             // 
             // Txt_refierep
