@@ -27,9 +27,9 @@ namespace LaboratorioClinico
             {
 
                 Cmb_correo.Items.Clear();
-                Cmb_correo.Text = "Seleccione forma pago";
+                Cmb_correo.Text = "Seleccione Correo";
                 conexion.ObtenerConexion();
-                OdbcCommand comando = new OdbcCommand("Select iIdCorreo,sCorreo from correo", conexion.ObtenerConexion());
+                OdbcCommand comando = new OdbcCommand("Select iIdCorreo,sCorreo from tipoCorreo", conexion.ObtenerConexion());
                 OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
                 DataTable tabla = new DataTable();
 
