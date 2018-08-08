@@ -42,7 +42,7 @@
             this.Gpb_imprimirr = new System.Windows.Forms.GroupBox();
             this.Gpb_requisitos = new System.Windows.Forms.GroupBox();
             this.Cmb_examen = new System.Windows.Forms.ComboBox();
-            this.Txt_requerimientos = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.Gpb_llenador.SuspendLayout();
             this.Gpb_fechar.SuspendLayout();
             this.Gpb_imprimirr.SuspendLayout();
@@ -203,14 +203,18 @@
             this.Cmb_examen.TabIndex = 3;
             this.Cmb_examen.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // Txt_requerimientos
+            // button3
             // 
-            this.Txt_requerimientos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Txt_requerimientos.Location = new System.Drawing.Point(3, 22);
-            this.Txt_requerimientos.Multiline = true;
-            this.Txt_requerimientos.Name = "Txt_requerimientos";
-            this.Txt_requerimientos.Size = new System.Drawing.Size(536, 214);
-            this.Txt_requerimientos.TabIndex = 1;
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.button3.ForeColor = System.Drawing.Color.Transparent;
+            this.button3.Location = new System.Drawing.Point(759, 1);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(25, 23);
+            this.button3.TabIndex = 123;
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // Requerimientos
             // 
