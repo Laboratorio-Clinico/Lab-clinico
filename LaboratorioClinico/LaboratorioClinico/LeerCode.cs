@@ -34,7 +34,7 @@ namespace LaboratorioClinico
             try
             {
                
-                comando = "select iIdExamen as ID, sDescripcion as Descripcion, fPrecio as Precio from examenes where iIdExamen = '" + Convert.ToInt32(Txt_codigo.Text) + "'";
+                comando = "select pa.nIdPaciente as ID, pa.sNombre as Nombre, ex.sDescripcion as Examen from paciente pa, examenes ex, muestra mu where  mu.nNoExpediente = pa.nIdPaciente and ex.iIdExamen = mu.iIdExamen and mu.inumeroEtiqueta ='" + Convert.ToInt32(Txt_codigo.Text) + "'";
                 OdbcDataAdapter con = new OdbcDataAdapter(comando, conexion.ObtenerConexion());
                 DataTable datos = new DataTable();
                 con.Fill(datos);

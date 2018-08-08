@@ -14,7 +14,7 @@ namespace LaboratorioClinico
 {
     public partial class CrearCodigo : Form
     {
-        public CrearCodigo(int codigo, int dpi)
+        public CrearCodigo(int codigo, long dpi)
         {
             InitializeComponent();       
             obtenerId();
@@ -36,13 +36,13 @@ namespace LaboratorioClinico
 
         }
 
-        private void llenarMuestra(int examen, int dpi)
+        private void llenarMuestra(int examen, long dpi)
         {
             try
             {
                 conexion.ObtenerConexion();
                 OdbcCommand cmd = conexion.ObtenerConexion().CreateCommand();
-                cmd.CommandText = "insert into muestra values(null,'" + examen + "','" + dpi + "','"+Convert.ToInt32(Txt_texto.Text)+"')";
+                cmd.CommandText = "insert into muestra values(null,'" + examen + "','" + dpi + "','"+Convert.ToInt64(Txt_texto.Text)+"')";
                 cmd.ExecuteNonQuery();
             }
             catch(Exception ex)

@@ -99,7 +99,7 @@ namespace LaboratorioClinico
 
                 //Crea la muestra
                 this.Hide();
-                new CrearCodigo(Convert.ToInt32(Cmb_examenes.SelectedValue), Convert.ToInt32(Txt_dpi.Text)).ShowDialog();
+                new CrearCodigo(Convert.ToInt32(Cmb_examenes.SelectedValue), Convert.ToInt64(Txt_dpi.Text)).ShowDialog();
                 this.Show();
             }
             catch (Exception ex)
@@ -178,7 +178,7 @@ namespace LaboratorioClinico
                     iStatus = 1;
                 }
 
-                cm.Parameters.AddWithValue("dpi", Convert.ToInt32(Txt_dpi.Text));
+                cm.Parameters.AddWithValue("dpi", Convert.ToInt64(Txt_dpi.Text));
                 cm.Parameters.AddWithValue("fec", Dtp_fecha.Text);
                 cm.Parameters.AddWithValue("hor", Txt_hora.Text);
                 cm.Parameters.AddWithValue("est", iStatus.ToString());
