@@ -35,21 +35,41 @@ namespace LaboratorioClinico
 
         private void Btn_busc_Click(object sender, EventArgs e)
         {
-            try
+            int num;
+            if (int.TryParse(Txt_dpir.Text, out num))
             {
-                OdbcDataAdapter sda = new OdbcDataAdapter("SELECT sNombre, sNit, sDireccion FROM paciente WHERE nIdPaciente ='" + Convert.ToInt32(Txt_dpir.Text) + "'", conexion.ObtenerConexion());
-                DataTable datos = new DataTable();
-                sda.Fill(datos);
-
-                Txt_nombrer.Text = datos.Rows[0][0].ToString();
-                Txt_direccionr.Text = datos.Rows[0][1].ToString();
-                Txt_nitc.Text = datos.Rows[0][2].ToString();
-
+                Er_validar.SetError(Txt_dpir, "");
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Error al buscar paciente..");
+                Er_validar.SetError(Txt_dpir, "Solo números se acepta");
             }
+
+            if (Txt_dpir.TextLength == 13)
+            {
+                Erp_errorC.SetError(Txt_dpir, "");
+                try
+                {
+                    OdbcDataAdapter sda = new OdbcDataAdapter("SELECT sNombre, sNit, sDireccion FROM paciente WHERE nIdPaciente ='" + Convert.ToInt32(Txt_dpir.Text) + "'", conexion.ObtenerConexion());
+                    DataTable datos = new DataTable();
+                    sda.Fill(datos);
+
+                    Txt_nombrer.Text = datos.Rows[0][0].ToString();
+                    Txt_direccionr.Text = datos.Rows[0][1].ToString();
+                    Txt_nitc.Text = datos.Rows[0][2].ToString();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al buscar paciente..");
+                }
+            }
+            else
+            {
+                Erp_errorC.SetError(Txt_dpir, "Deben Ingresarse 13 dígitos");
+            }
+       
+        
         }
         }
 }

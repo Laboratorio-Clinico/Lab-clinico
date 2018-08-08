@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.Lbl_ingreseResultados = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Btn_busc = new System.Windows.Forms.Button();
@@ -51,8 +52,12 @@
             this.Txt_nombrex = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.Lbl_examenRealizado = new System.Windows.Forms.Label();
+            this.Erp_errorC = new System.Windows.Forms.ErrorProvider(this.components);
+            this.Er_validar = new System.Windows.Forms.ErrorProvider(this.components);
             this.Gpb_datosf.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Erp_errorC)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Er_validar)).BeginInit();
             this.SuspendLayout();
             // 
             // Lbl_ingreseResultados
@@ -330,6 +335,14 @@
             this.Lbl_examenRealizado.TabIndex = 5;
             this.Lbl_examenRealizado.Text = "Examen realizado";
             // 
+            // Erp_errorC
+            // 
+            this.Erp_errorC.ContainerControl = this;
+            // 
+            // Er_validar
+            // 
+            this.Er_validar.ContainerControl = this;
+            // 
             // Constancia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -351,6 +364,8 @@
             this.Gpb_datosf.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Erp_errorC)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Er_validar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -381,5 +396,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label Lbl_nitc;
         private System.Windows.Forms.TextBox Txt_nitc;
+        private System.Windows.Forms.ErrorProvider Erp_errorC;
+        private System.Windows.Forms.ErrorProvider Er_validar;
     }
 }
