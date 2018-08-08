@@ -124,16 +124,6 @@ namespace LaboratorioClinico
 
         private void Btn_Click(object sender, EventArgs e)
         {
-            //Valida que solo se ingresen numeros en el TextBox de DPI
-            int num;
-            if (int.TryParse(Txt_codigoDeEmpleado.Text, out num))
-            {
-                Er_validar.SetError(Txt_codigoDeEmpleado, "");
-            }
-            else
-            {
-                Er_validar.SetError(Txt_codigoDeEmpleado, "Solo números se acepta");
-            }
 
             //Busca en la BD el DPI del empleado
             string dpiE = Txt_codigoDeEmpleado.Text;
