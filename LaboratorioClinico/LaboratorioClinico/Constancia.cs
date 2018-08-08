@@ -31,5 +31,10 @@ namespace LaboratorioClinico
         {
 
         }
+
+        private void Btn_busc_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

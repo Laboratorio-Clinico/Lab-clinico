@@ -35,6 +35,7 @@
             this.Txt_dpir = new System.Windows.Forms.TextBox();
             this.Lbl_nitf = new System.Windows.Forms.Label();
             this.Gpb_datosf = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.Txt_direccionr = new System.Windows.Forms.TextBox();
             this.Lbl_fechaf = new System.Windows.Forms.Label();
             this.Lbl_direccionf = new System.Windows.Forms.Label();
@@ -52,10 +53,7 @@
             this.Lbl_examenRealizado = new System.Windows.Forms.Label();
             this.Btn_imprimirResultado = new System.Windows.Forms.Button();
             this.Lbl_imprimirr = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.Dtp_fechar = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.Gpb_datosf.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -97,6 +95,7 @@
             this.Btn_busc.Size = new System.Drawing.Size(41, 38);
             this.Btn_busc.TabIndex = 134;
             this.Btn_busc.UseVisualStyleBackColor = false;
+            this.Btn_busc.Click += new System.EventHandler(this.Btn_busc_Click);
             // 
             // Txt_dpir
             // 
@@ -122,8 +121,6 @@
             // Gpb_datosf
             // 
             this.Gpb_datosf.BackColor = System.Drawing.Color.Transparent;
-            this.Gpb_datosf.Controls.Add(this.textBox1);
-            this.Gpb_datosf.Controls.Add(this.label2);
             this.Gpb_datosf.Controls.Add(this.Txt_direccionr);
             this.Gpb_datosf.Controls.Add(this.Lbl_fechaf);
             this.Gpb_datosf.Controls.Add(this.Lbl_direccionf);
@@ -139,13 +136,22 @@
             this.Gpb_datosf.TabStop = false;
             this.Gpb_datosf.Text = "Datos Paciente";
             // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(239, 17);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(253, 20);
+            this.textBox1.TabIndex = 13;
+            // 
             // Txt_direccionr
             // 
             this.Txt_direccionr.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_direccionr.Location = new System.Drawing.Point(237, 63);
             this.Txt_direccionr.Multiline = true;
             this.Txt_direccionr.Name = "Txt_direccionr";
-            this.Txt_direccionr.Size = new System.Drawing.Size(255, 20);
+            this.Txt_direccionr.Size = new System.Drawing.Size(425, 20);
             this.Txt_direccionr.TabIndex = 11;
             // 
             // Lbl_fechaf
@@ -330,47 +336,16 @@
             this.Lbl_imprimirr.Text = "Imprimir";
             this.Lbl_imprimirr.Click += new System.EventHandler(this.Lbl_imprimirr_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(498, 65);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 18);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Telefono";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(564, 63);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(98, 20);
-            this.textBox1.TabIndex = 13;
-            // 
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox3.Controls.Add(this.Dtp_fechar);
+            this.groupBox3.Controls.Add(this.textBox1);
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Location = new System.Drawing.Point(12, 372);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(742, 54);
             this.groupBox3.TabIndex = 140;
             this.groupBox3.TabStop = false;
-            // 
-            // Dtp_fechar
-            // 
-            this.Dtp_fechar.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.Dtp_fechar.CustomFormat = "dd-MM-yy";
-            this.Dtp_fechar.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Dtp_fechar.Location = new System.Drawing.Point(240, 19);
-            this.Dtp_fechar.Name = "Dtp_fechar";
-            this.Dtp_fechar.Size = new System.Drawing.Size(144, 20);
-            this.Dtp_fechar.TabIndex = 22;
             // 
             // label5
             // 
@@ -443,9 +418,7 @@
         private System.Windows.Forms.Button Btn_imprimirResultado;
         private System.Windows.Forms.Label Lbl_imprimirr;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.DateTimePicker Dtp_fechar;
         private System.Windows.Forms.Label label5;
     }
 }
