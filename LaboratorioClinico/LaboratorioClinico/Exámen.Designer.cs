@@ -58,7 +58,6 @@
             this.Lbl_precioe = new System.Windows.Forms.Label();
             this.Lbl_editar = new System.Windows.Forms.Label();
             this.Lbl_eliminar = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_examen)).BeginInit();
             this.Gpb_datosm.SuspendLayout();
             this.Gpb_datose.SuspendLayout();
@@ -429,16 +428,6 @@
             this.Lbl_eliminar.TabIndex = 122;
             this.Lbl_eliminar.Text = "Eliminar";
             // 
-            // button1
-            // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(717, 472);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(53, 44);
-            this.button1.TabIndex = 123;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // Exámen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -446,7 +435,6 @@
             this.BackgroundImage = global::LaboratorioClinico.Properties.Resources.FONDOO;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(782, 528);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.Gpb_datose);
             this.Controls.Add(this.Btn_eliminar);
             this.Controls.Add(this.Btn_editar);
@@ -498,6 +486,5 @@
         private System.Windows.Forms.Label Lbl_eliminar;
         private System.Windows.Forms.Label Lbl_confirmarm;
         private System.Windows.Forms.Label Lbl_confirmare;
-        private System.Windows.Forms.Button button1;
     }
 }

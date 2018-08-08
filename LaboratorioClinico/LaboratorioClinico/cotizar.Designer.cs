@@ -32,7 +32,6 @@
             this.Gpb_cotizacion = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.Txt_noCotizacion = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.Txt_Cantidad = new System.Windows.Forms.TextBox();
             this.Cmb_doctor = new System.Windows.Forms.ComboBox();
@@ -58,17 +57,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.Btn_buscar = new System.Windows.Forms.Button();
             this.Gpb_verDatos = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.Txt_precioE = new System.Windows.Forms.TextBox();
             this.Lbl_total = new System.Windows.Forms.Label();
             this.Txt_Total = new System.Windows.Forms.TextBox();
             this.Dgv_verDatos = new System.Windows.Forms.DataGridView();
-            this.label9 = new System.Windows.Forms.Label();
-            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
-            this.label4 = new System.Windows.Forms.Label();
-            this.Txt_precioE = new System.Windows.Forms.TextBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label9 = new System.Windows.Forms.Label();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.Gpb_cotizacion.SuspendLayout();
             this.Gpb_botones.SuspendLayout();
             this.Gpb_verDatos.SuspendLayout();
@@ -80,7 +79,6 @@
             this.Gpb_cotizacion.BackColor = System.Drawing.Color.Transparent;
             this.Gpb_cotizacion.Controls.Add(this.label3);
             this.Gpb_cotizacion.Controls.Add(this.Txt_noCotizacion);
-            this.Gpb_cotizacion.Controls.Add(this.button1);
             this.Gpb_cotizacion.Controls.Add(this.label1);
             this.Gpb_cotizacion.Controls.Add(this.Txt_Cantidad);
             this.Gpb_cotizacion.Controls.Add(this.Cmb_doctor);
@@ -129,16 +127,6 @@
             this.Txt_noCotizacion.ReadOnly = true;
             this.Txt_noCotizacion.Size = new System.Drawing.Size(41, 26);
             this.Txt_noCotizacion.TabIndex = 59;
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(683, 19);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(53, 44);
-            this.button1.TabIndex = 35;
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -425,6 +413,28 @@
             this.Gpb_verDatos.TabIndex = 35;
             this.Gpb_verDatos.TabStop = false;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(50, 180);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(182, 18);
+            this.label4.TabIndex = 33;
+            this.label4.Text = "Precio exámen con descuento";
+            // 
+            // Txt_precioE
+            // 
+            this.Txt_precioE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_precioE.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_precioE.Location = new System.Drawing.Point(238, 175);
+            this.Txt_precioE.Name = "Txt_precioE";
+            this.Txt_precioE.ReadOnly = true;
+            this.Txt_precioE.Size = new System.Drawing.Size(74, 26);
+            this.Txt_precioE.TabIndex = 34;
+            this.Txt_precioE.Text = "0";
+            // 
             // Lbl_total
             // 
             this.Lbl_total.AutoSize = true;
@@ -461,6 +471,24 @@
             this.Dgv_verDatos.Size = new System.Drawing.Size(504, 136);
             this.Dgv_verDatos.TabIndex = 27;
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Codigo";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 111;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Examen";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 117;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Precio";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 102;
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -481,46 +509,6 @@
             this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(50, 180);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(182, 18);
-            this.label4.TabIndex = 33;
-            this.label4.Text = "Precio exámen con descuento";
-            // 
-            // Txt_precioE
-            // 
-            this.Txt_precioE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            this.Txt_precioE.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_precioE.Location = new System.Drawing.Point(238, 175);
-            this.Txt_precioE.Name = "Txt_precioE";
-            this.Txt_precioE.ReadOnly = true;
-            this.Txt_precioE.Size = new System.Drawing.Size(74, 26);
-            this.Txt_precioE.TabIndex = 34;
-            this.Txt_precioE.Text = "0";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Codigo";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 111;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Examen";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 117;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Precio";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 102;
             // 
             // cotizar
             // 
@@ -579,7 +567,6 @@
         private System.Windows.Forms.TextBox Txt_Cantidad;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox Txt_noCotizacion;
         private System.Windows.Forms.Button Btn_agregar;
