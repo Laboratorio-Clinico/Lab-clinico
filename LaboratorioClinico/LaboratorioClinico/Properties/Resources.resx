@@ -121,9 +121,6 @@
   <data name="fecha-de-cita-medica-recordatorio-en-pagina-diaria-de-calendario-de-simbolo-de-interfaz-con-cruz-de-primeros-auxilios" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fecha-de-cita-medica-recordatorio-en-pagina-diaria-de-calendario-de-simbolo-de-interfaz-con-cruz-de-primeros-auxilios.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="xagua-laboratorio.jpg.pagespeed.ic.EPJznFd7a2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\xagua-laboratorio.jpg.pagespeed.ic.EPJznFd7a2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="cubo-de-basura" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cubo-de-basura.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -181,11 +178,14 @@
   <data name="bloqueado1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bloqueado1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="examen1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\examen.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="xagua-laboratorio.jpg.pagespeed.ic.EPJznFd7a2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\xagua-laboratorio.jpg.pagespeed.ic.EPJznFd7a2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="boton-x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\boton-x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="examen1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\examen.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="archivo (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\archivo (1)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -210,6 +210,9 @@
   </data>
   <data name="salina" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\salina.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="536353" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\536353.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="periodico" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\periodico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -295,6 +298,9 @@
   <data name="file" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\file.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="confirmar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\confirmar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="codigo-de-seguridad" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\codigo-de-seguridad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -316,6 +322,9 @@
   <data name="requerimientos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\requerimientos1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="cancelar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cancelar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8-encuentra-hombre-usuario-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-encuentra-hombre-usuario-481.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -333,6 +342,9 @@
   </data>
   <data name="correo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\correo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tarjeta-de-credito (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tarjeta-de-credito (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="uh" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\uh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -397,7 +409,7 @@
   <data name="cruz-de-cerrado" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cruz-de-cerrado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tarjeta-de-credito (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tarjeta-de-credito (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="confirm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\confirm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
