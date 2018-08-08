@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Usuario));
             this.Gpb_nuevoUsuario = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            //this.button1 = new System.Windows.Forms.Button();
             this.Btn = new System.Windows.Forms.Button();
             this.Pnl_usuario = new System.Windows.Forms.Panel();
             this.Cmb_privelegio = new System.Windows.Forms.ComboBox();
@@ -69,13 +69,13 @@
             // 
             // button1
             // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+           /* this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Location = new System.Drawing.Point(6, 391);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(53, 44);
             this.button1.TabIndex = 16;
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = true;*/
             // 
             // Btn
             // 
