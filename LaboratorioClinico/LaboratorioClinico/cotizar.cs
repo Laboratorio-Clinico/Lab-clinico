@@ -265,7 +265,7 @@ namespace LaboratorioClinico
                 int iIdExamenes = Convert.ToInt32(Cmb_examen.SelectedValue);
                 int iEmpleados = Convert.ToInt32(Cmb_doctor.SelectedValue);
 
-                int iCantidades = Convert.ToInt32(Txt_Cantidad.Text.ToString);
+                int iCantidades = Convert.ToInt32(Txt_Cantidad.Text);
 
 
                 OdbcCommand comando = new OdbcCommand("{CALL Pro_ingresoDetallesCotizacion(?,?,?,?,?,?)}", conexion.ObtenerConexion());
