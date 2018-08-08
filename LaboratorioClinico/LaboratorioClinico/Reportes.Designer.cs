@@ -48,13 +48,11 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Lbl_inicio = new System.Windows.Forms.Label();
             this.Pnl_Contenedor = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.Pnl_enca.SuspendLayout();
             this.Pnl_Menu.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.Pnl_Contenedor.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -103,6 +101,7 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.Enabled = false;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -119,6 +118,7 @@
             // 
             this.button11.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button11.Enabled = false;
             this.button11.FlatAppearance.BorderSize = 0;
             this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -135,6 +135,7 @@
             // 
             this.button10.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button10.Enabled = false;
             this.button10.FlatAppearance.BorderSize = 0;
             this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -151,6 +152,7 @@
             // 
             this.button9.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button9.Enabled = false;
             this.button9.FlatAppearance.BorderSize = 0;
             this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -167,6 +169,7 @@
             // 
             this.button8.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button8.Enabled = false;
             this.button8.FlatAppearance.BorderSize = 0;
             this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -183,6 +186,7 @@
             // 
             this.button7.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button7.Enabled = false;
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -199,6 +203,7 @@
             // 
             this.button6.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button6.Enabled = false;
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -215,6 +220,7 @@
             // 
             this.button5.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button5.Enabled = false;
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -231,6 +237,7 @@
             // 
             this.button4.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button4.Enabled = false;
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -283,6 +290,7 @@
             this.Btn_ganancias.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Btn_ganancias.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Btn_ganancias.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Btn_ganancias.Enabled = false;
             this.Btn_ganancias.FlatAppearance.BorderSize = 0;
             this.Btn_ganancias.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
             this.Btn_ganancias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -334,22 +342,11 @@
             // Pnl_Contenedor
             // 
             this.Pnl_Contenedor.BackColor = System.Drawing.Color.Transparent;
-            this.Pnl_Contenedor.Controls.Add(this.button2);
             this.Pnl_Contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Pnl_Contenedor.Location = new System.Drawing.Point(200, 34);
             this.Pnl_Contenedor.Name = "Pnl_Contenedor";
             this.Pnl_Contenedor.Size = new System.Drawing.Size(859, 700);
             this.Pnl_Contenedor.TabIndex = 18;
-            // 
-            // button2
-            // 
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Location = new System.Drawing.Point(702, 669);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(32, 28);
-            this.button2.TabIndex = 19;
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // Reportes
             // 
@@ -374,7 +371,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.Pnl_Contenedor.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -400,6 +396,5 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel Pnl_Contenedor;
         private System.Windows.Forms.Label Lbl_inicio;
-        private System.Windows.Forms.Button button2;
     }
 }

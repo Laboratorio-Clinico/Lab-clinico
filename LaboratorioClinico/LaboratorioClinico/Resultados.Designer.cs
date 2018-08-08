@@ -37,7 +37,6 @@
             this.Lbl_correo = new System.Windows.Forms.Label();
             this.Btn_buscar = new System.Windows.Forms.Button();
             this.Btn_enviar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_resultados)).BeginInit();
             this.Gpb_resultado.SuspendLayout();
             this.SuspendLayout();
@@ -84,7 +83,6 @@
             // 
             this.Gpb_resultado.BackgroundImage = global::LaboratorioClinico.Properties.Resources.FONDOO;
             this.Gpb_resultado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Gpb_resultado.Controls.Add(this.button1);
             this.Gpb_resultado.Controls.Add(this.Lbl_correo);
             this.Gpb_resultado.Controls.Add(this.Btn_buscar);
             this.Gpb_resultado.Controls.Add(this.Dgv_resultados);
@@ -132,16 +130,6 @@
             this.Btn_enviar.TabIndex = 5;
             this.Btn_enviar.UseVisualStyleBackColor = true;
             // 
-            // button1
-            // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(6, 349);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(53, 44);
-            this.button1.TabIndex = 17;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // Resultados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -176,6 +164,5 @@
         private System.Windows.Forms.TextBox Txtx_expe;
         private System.Windows.Forms.GroupBox Gpb_resultado;
         private System.Windows.Forms.Label Lbl_correo;
-        private System.Windows.Forms.Button button1;
     }
 }
