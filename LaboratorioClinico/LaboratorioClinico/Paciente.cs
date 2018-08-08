@@ -71,51 +71,66 @@ namespace LaboratorioClinico
         }
         private void Btn_guardarp_Click(object sender, EventArgs e)
         {
-
-            try
+            int num;
+            if (int.TryParse(Txt_expedientep.Text, out num))
             {
-                //Procedimiento para ingresar datos del paciente
-                OdbcCommand cm;
-                cm = new OdbcCommand("{CALL InsertaPaciente(?,?,?,?,?,?,?,?,?,?,?,?)}", conexion.ObtenerConexion());
-                cm.CommandType = CommandType.StoredProcedure;
-                OdbcParameter parametros = new OdbcParameter();
-                int idPaciente = Convert.ToInt32(Cmb_sangrep.SelectedValue);
-
-                cm.Parameters.AddWithValue("@nIdPaciente", Txt_expedientep.Text);
-                cm.Parameters.AddWithValue("@sNit", Txt_nitp.Text);
-                cm.Parameters.AddWithValue("@sNombre", Txt_nombrep.Text);
-                cm.Parameters.AddWithValue("@sDireccion", Txt_direccionp.Text);
-                cm.Parameters.AddWithValue("@sGenero", Cmb_sexop.Text);
-                cm.Parameters.AddWithValue("@dFechaDeNacimiento", Dtp_fechap.Text);
-                cm.Parameters.AddWithValue("@dFechaDeEmision", Dtp_fecha2p.Text);
-                cm.Parameters.AddWithValue("@iIdTipoDeSangre", idPaciente);
-                cm.Parameters.AddWithValue("@sAlergia", Txt_alergiasp.Text);
-                cm.Parameters.AddWithValue("@sRefiere", Txt_refierep.Text);
-                cm.Parameters.AddWithValue("@correo", Txt_correoP.Text);
-                cm.Parameters.AddWithValue("@telefono", Txt_telefonop.Text);
-                cm.ExecuteNonQuery();
-
-                MessageBox.Show("Paciente Ingresado Exitosamente", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-
-                //Limpia todos los textbox y comboBox de la forma PACIENTE
-                Txt_expedientep.Clear();
-                Txt_nitp.Clear();
-                Txt_nombrep.Clear();
-                Txt_direccionp.Clear();
-                Cmb_sexop.ResetText();
-                Dtp_fechap.ResetText();
-                Dtp_fecha2p.ResetText();
-                Cmb_sangrep.ResetText();
-                Txt_alergiasp.Clear();
-                Txt_refierep.Clear();
-                Txt_correoP.Clear();
-                Txt_telefonop.Clear();
+                Er_validar.SetError(Txt_expedientep, "");
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("No se pudo ingresar el registro.", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
+                Er_validar.SetError(Txt_expedientep, "Solo números se acepta");
             }
 
+            if (Txt_expedientep.TextLength == 13)
+            {
+                Erp_errorP.SetError(Txt_expedientep, "");
+                try
+                {
+                    //Procedimiento para ingresar datos del paciente
+                    OdbcCommand cm;
+                    cm = new OdbcCommand("{CALL InsertaPaciente(?,?,?,?,?,?,?,?,?,?,?,?)}", conexion.ObtenerConexion());
+                    cm.CommandType = CommandType.StoredProcedure;
+                    OdbcParameter parametros = new OdbcParameter();
+                    int idPaciente = Convert.ToInt32(Cmb_sangrep.SelectedValue);
+
+                    cm.Parameters.AddWithValue("@nIdPaciente", Txt_expedientep.Text);
+                    cm.Parameters.AddWithValue("@sNit", Txt_nitp.Text);
+                    cm.Parameters.AddWithValue("@sNombre", Txt_nombrep.Text);
+                    cm.Parameters.AddWithValue("@sDireccion", Txt_direccionp.Text);
+                    cm.Parameters.AddWithValue("@sGenero", Cmb_sexop.Text);
+                    cm.Parameters.AddWithValue("@dFechaDeNacimiento", Dtp_fechap.Text);
+                    cm.Parameters.AddWithValue("@dFechaDeEmision", Dtp_fecha2p.Text);
+                    cm.Parameters.AddWithValue("@iIdTipoDeSangre", idPaciente);
+                    cm.Parameters.AddWithValue("@sAlergia", Txt_alergiasp.Text);
+                    cm.Parameters.AddWithValue("@sRefiere", Txt_refierep.Text);
+                    cm.Parameters.AddWithValue("@correo", Txt_correoP.Text);
+                    cm.Parameters.AddWithValue("@telefono", Txt_telefonop.Text);
+                    cm.ExecuteNonQuery();
+
+                    MessageBox.Show("Paciente Ingresado Exitosamente", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
+                    //Limpia todos los textbox y comboBox de la forma PACIENTE
+                    Txt_expedientep.Clear();
+                    Txt_nitp.Clear();
+                    Txt_nombrep.Clear();
+                    Txt_direccionp.Clear();
+                    Cmb_sexop.ResetText();
+                    Dtp_fechap.ResetText();
+                    Dtp_fecha2p.ResetText();
+                    Cmb_sangrep.ResetText();
+                    Txt_alergiasp.Clear();
+                    Txt_refierep.Clear();
+                    Txt_correoP.Clear();
+                    Txt_telefonop.Clear();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("No se pudo ingresar el registro.", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
+                }
+            }else
+            {
+                Erp_errorP.SetError(Txt_expedientep, "Deben Ingresarse 13 dígitos");
+            }
 
         }
         private bool Validar()

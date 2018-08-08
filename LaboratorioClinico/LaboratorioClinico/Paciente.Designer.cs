@@ -62,11 +62,13 @@
             this.Gpb_fechap = new System.Windows.Forms.GroupBox();
             this.Er_validar = new System.Windows.Forms.ErrorProvider(this.components);
             this.button1 = new System.Windows.Forms.Button();
+            this.Erp_errorP = new System.Windows.Forms.ErrorProvider(this.components);
             this.Gpb_guardarp.SuspendLayout();
             this.Gpb_datosp.SuspendLayout();
             this.Gpb_fechanp.SuspendLayout();
             this.Gpb_fechap.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Er_validar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Erp_errorP)).BeginInit();
             this.SuspendLayout();
             // 
             // Btn_guardarp
@@ -431,6 +433,10 @@
             this.button1.TabIndex = 16;
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // Erp_errorP
+            // 
+            this.Erp_errorP.ContainerControl = this;
+            // 
             // Paciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -456,6 +462,7 @@
             this.Gpb_fechap.ResumeLayout(false);
             this.Gpb_fechap.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Er_validar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Erp_errorP)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -493,5 +500,6 @@
         private System.Windows.Forms.ErrorProvider Er_validar;
         private System.Windows.Forms.ComboBox Cmb_sangrep;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ErrorProvider Erp_errorP;
     }
 }

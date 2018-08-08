@@ -69,45 +69,52 @@ namespace LaboratorioClinico
             }
             if (String.Compare(Cmb_privelegio.SelectedItem.ToString(), "Usuario") == 0)
             {
-                pPrivilegio =3;
+                pPrivilegio = 3;
 
             }
 
-            try { 
-            OdbcCommand cm;
-            cm = new OdbcCommand("{CALL ingresaUsuario(?,?,?,?)}", conexion.ObtenerConexion());
-                cm.CommandType = CommandType.StoredProcedure;
+            if (Txt_codigoDeEmpleado.TextLength == 13) {
+                Erp_errorU.SetError(Txt_codigoDeEmpleado, "");
+                try
+                {
+                    OdbcCommand cm;
+                    cm = new OdbcCommand("{CALL ingresaUsuario(?,?,?,?)}", conexion.ObtenerConexion());
+                    cm.CommandType = CommandType.StoredProcedure;
 
-            cm.Parameters.AddWithValue("@iIdPrivilegio", pPrivilegio);
-            cm.Parameters.AddWithValue("@nDPI", Txt_codigoDeEmpleado.Text);
-            cm.Parameters.AddWithValue("@sUsuario", Txt_usuario.Text);
-            cm.Parameters.AddWithValue("@sContrasena", EncripContra(Txt_password.Text));
+                    cm.Parameters.AddWithValue("@iIdPrivilegio", pPrivilegio);
+                    cm.Parameters.AddWithValue("@nDPI", Txt_codigoDeEmpleado.Text);
+                    cm.Parameters.AddWithValue("@sUsuario", Txt_usuario.Text);
+                    cm.Parameters.AddWithValue("@sContrasena", EncripContra(Txt_password.Text));
 
 
-            int query = cm.ExecuteNonQuery();
+                    int query = cm.ExecuteNonQuery();
 
-            if (query == 1)
-            {
-                MessageBox.Show("Usuario ingresado correctamente", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (query == 1)
+                    {
+                        MessageBox.Show("Usuario ingresado correctamente", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se pudo ingresar", "Incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+
+                    Txt_codigoDeEmpleado.ResetText();
+                    Txt_usuario.ResetText();
+                    Txt_password.ResetText();
+                    Cmb_privelegio.ResetText();
+
+                    Pnl_usuario.Visible = false;
+
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show("No se pudo ingresar", "Incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+        }else{
+                Erp_errorU.SetError(Txt_codigoDeEmpleado, "Deben Ingresarse 13 dígitos");
+
             }
-            else
-            {
-                MessageBox.Show("No se pudo ingresar", "Incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-
-            Txt_codigoDeEmpleado.ResetText();
-            Txt_usuario.ResetText();
-            Txt_password.ResetText();
-            Cmb_privelegio.ResetText();
-
-                Txt_usuario.Visible = false;
-                Txt_password.Visible = false;
-                Cmb_privelegio.Visible = false;
-        }catch (Exception ex){
-
-                MessageBox.Show("No se pudo ingresar", "Incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-
 }
 
         private void Gpb_nuevoUsuario_Enter(object sender, EventArgs e)
