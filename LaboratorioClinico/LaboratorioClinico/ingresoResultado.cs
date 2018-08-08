@@ -48,38 +48,73 @@ namespace LaboratorioClinico
         //Carga la informacion donde el nit sea igual 
         private void Btn_busc_Click(object sender, EventArgs e)
         {
-            try
+            int num;
+            if (int.TryParse(Txt_dpir.Text, out num))
             {
-                OdbcDataAdapter sda = new OdbcDataAdapter("SELECT pa.sNombre, pa.sDireccion FROM paciente pa WHERE pa.nIdPaciente='" + Convert.ToString(Txt_dpir.Text) + "'", conexion.ObtenerConexion());
-                DataTable datos = new DataTable();
-                sda.Fill(datos);
-
-                Txt_nombrer.Text = datos.Rows[0][0].ToString();
-                Txt_direccionr.Text = datos.Rows[0][1].ToString();
-             
-
+                Er_validar.SetError(Txt_dpir, "");
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Intente de nuevo.", "Paciente no registrado.", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
+                Er_validar.SetError(Txt_dpir, "Solo números se acepta");
+            }
+
+            if (Txt_dpir.TextLength == 13)
+            {
+                Erp_errorR.SetError(Txt_dpir, "");
+                try
+                {
+                    OdbcDataAdapter sda = new OdbcDataAdapter("SELECT pa.sNombre, pa.sDireccion FROM paciente pa WHERE pa.nIdPaciente='" + Convert.ToString(Txt_dpir.Text) + "'", conexion.ObtenerConexion());
+                    DataTable datos = new DataTable();
+                    sda.Fill(datos);
+
+                    Txt_nombrer.Text = datos.Rows[0][0].ToString();
+                    Txt_direccionr.Text = datos.Rows[0][1].ToString();
+
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Intente de nuevo.", "Paciente no registrado.", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
+                }
+            }else
+            {
+                Erp_errorR.SetError(Txt_dpir, "Deben Ingresarse 13 dígitos");
             }
         }
 
         //Carga la información donde el nit sea igual al ingresado
         private void Btn_BuscarExamen_Click(object sender, EventArgs e)
         {
-            try
+            int num;
+            if (int.TryParse(Txt_codEx.Text, out num))
             {
-                OdbcDataAdapter sda = new OdbcDataAdapter("SELECT ex.sDescripcion FROM examenes ex WHERE ex.iIdExamen='" + Convert.ToString(Txt_codEx.Text) + "'", conexion.ObtenerConexion());
-                DataTable datos = new DataTable();
-                sda.Fill(datos);
-
-                Txt_nombrex.Text = datos.Rows[0][0].ToString();
-                
+                Er_validar.SetError(Txt_codEx, "");
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Intente de nuevo.", "Código no encontrado.", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Exclamation);
+                Er_validar.SetError(Txt_codEx, "Solo números se acepta");
+            }
+
+            if (Txt_codEx.TextLength == 2)
+            {
+
+                try
+                {
+                    OdbcDataAdapter sda = new OdbcDataAdapter("SELECT ex.sDescripcion FROM examenes ex WHERE ex.iIdExamen='" + Convert.ToString(Txt_codEx.Text) + "'", conexion.ObtenerConexion());
+                    DataTable datos = new DataTable();
+                    sda.Fill(datos);
+
+                    Txt_nombrex.Text = datos.Rows[0][0].ToString();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Intente de nuevo.", "Código no encontrado.", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Exclamation);
+                }
+            }else
+            {
+                Erp_errorR.SetError(Txt_codEx, "Deben Ingresarse 13 dígitos");
+
             }
         }
 

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.Lbl_ingreseResultados = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -59,10 +60,14 @@
             this.Lbl_ingresarr = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.Erp_errorR = new System.Windows.Forms.ErrorProvider(this.components);
+            this.Er_validar = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             this.Gpb_datosf.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Erp_errorR)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Er_validar)).BeginInit();
             this.SuspendLayout();
             // 
             // Lbl_ingreseResultados
@@ -187,6 +192,7 @@
             // 
             this.Txt_codEx.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_codEx.Location = new System.Drawing.Point(164, 44);
+            this.Txt_codEx.MaxLength = 2;
             this.Txt_codEx.Multiline = true;
             this.Txt_codEx.Name = "Txt_codEx";
             this.Txt_codEx.Size = new System.Drawing.Size(375, 20);
@@ -334,6 +340,7 @@
             // 
             this.Txt_dpir.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_dpir.Location = new System.Drawing.Point(124, 62);
+            this.Txt_dpir.MaxLength = 13;
             this.Txt_dpir.Multiline = true;
             this.Txt_dpir.Name = "Txt_dpir";
             this.Txt_dpir.Size = new System.Drawing.Size(124, 20);
@@ -438,6 +445,14 @@
             this.groupBox3.TabIndex = 139;
             this.groupBox3.TabStop = false;
             // 
+            // Erp_errorR
+            // 
+            this.Erp_errorR.ContainerControl = this;
+            // 
+            // Er_validar
+            // 
+            this.Er_validar.ContainerControl = this;
+            // 
             // ingresoResultado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -461,6 +476,8 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Erp_errorR)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Er_validar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -498,5 +515,7 @@
         private System.Windows.Forms.ComboBox Cmb_correo;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.ErrorProvider Erp_errorR;
+        private System.Windows.Forms.ErrorProvider Er_validar;
     }
 }
