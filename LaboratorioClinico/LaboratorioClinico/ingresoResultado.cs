@@ -101,6 +101,7 @@ namespace LaboratorioClinico
         //Guarda los datos de los resultados ingresados
         private void Btn_guardarResultado_Click(object sender, EventArgs e)
         {
+         
             try
             {
                 int iIdCorreo = Convert.ToInt32(Cmb_correo.SelectedValue);
