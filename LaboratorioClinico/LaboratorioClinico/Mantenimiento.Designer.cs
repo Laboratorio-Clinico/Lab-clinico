@@ -240,6 +240,7 @@
             this.label25 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.Erp_error = new System.Windows.Forms.ErrorProvider(this.components);
+            this.button3 = new System.Windows.Forms.Button();
             this.Gpb_mantenimiento.SuspendLayout();
             this.Tbc_paciente.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -2877,13 +2878,27 @@
             // 
             this.Erp_error.ContainerControl = this;
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.button3.ForeColor = System.Drawing.Color.Transparent;
+            this.button3.Location = new System.Drawing.Point(751, 2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(25, 23);
+            this.button3.TabIndex = 123;
+            this.button3.UseVisualStyleBackColor = false;
+            // 
             // Mantenimiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::LaboratorioClinico.Properties.Resources.FONDOO;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(766, 489);
+            this.ClientSize = new System.Drawing.Size(777, 497);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.Gpb_mantenimiento);
             this.Controls.Add(this.Tbc_membresia);
             this.DoubleBuffered = true;
@@ -3162,5 +3177,6 @@
         private System.Windows.Forms.Label Lbl_actualMembm;
         private System.Windows.Forms.TextBox Txt_membreMembe;
         private System.Windows.Forms.ErrorProvider Erp_error;
+        private System.Windows.Forms.Button button3;
     }
 }

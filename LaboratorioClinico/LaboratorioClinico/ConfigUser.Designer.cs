@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigUser));
             this.label1 = new System.Windows.Forms.Label();
             this.Tbc_control = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
             this.Cmb_privi = new System.Windows.Forms.ComboBox();
             this.Btn_cambiar = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -47,6 +48,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.Tbc_cuerpo = new System.Windows.Forms.TabControl();
             this.Tbc_cambio = new System.Windows.Forms.TabPage();
+            this.button3 = new System.Windows.Forms.Button();
             this.Pbx_incorrecto = new System.Windows.Forms.PictureBox();
             this.Btn_verificar = new System.Windows.Forms.Button();
             this.Pbx_correcto = new System.Windows.Forms.PictureBox();
@@ -60,8 +62,6 @@
             this.Cmb_usuarioCambio = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.Tbc_control.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.Tbc_eliminar.SuspendLayout();
@@ -104,6 +104,16 @@
             this.Tbc_control.Text = "Privilegios";
             this.Tbc_control.UseVisualStyleBackColor = true;
             this.Tbc_control.Click += new System.EventHandler(this.Tbc_control_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.Location = new System.Drawing.Point(25, 264);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(53, 44);
+            this.button2.TabIndex = 18;
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // Cmb_privi
             // 
@@ -178,7 +188,6 @@
             // 
             // Tbc_eliminar
             // 
-            this.Tbc_eliminar.Controls.Add(this.button1);
             this.Tbc_eliminar.Controls.Add(this.pictureBox2);
             this.Tbc_eliminar.Controls.Add(this.Btn_eliminar);
             this.Tbc_eliminar.Controls.Add(this.label5);
@@ -284,6 +293,16 @@
             this.Tbc_cambio.TabIndex = 3;
             this.Tbc_cambio.Text = "Cambiar Contraseña";
             this.Tbc_cambio.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.Location = new System.Drawing.Point(3, 6);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(53, 44);
+            this.button3.TabIndex = 25;
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // Pbx_incorrecto
             // 
@@ -417,33 +436,16 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(25, 264);
+            this.button1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.button1.ForeColor = System.Drawing.Color.Transparent;
+            this.button1.Location = new System.Drawing.Point(739, 1);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(53, 44);
-            this.button1.TabIndex = 15;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Location = new System.Drawing.Point(25, 264);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(53, 44);
-            this.button2.TabIndex = 18;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.Location = new System.Drawing.Point(3, 6);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(53, 44);
-            this.button3.TabIndex = 25;
-            this.button3.UseVisualStyleBackColor = true;
+            this.button1.Size = new System.Drawing.Size(25, 23);
+            this.button1.TabIndex = 123;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // ConfigUser
             // 
@@ -452,6 +454,7 @@
             this.BackgroundImage = global::LaboratorioClinico.Properties.Resources.FONDOO;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(766, 489);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.Tbc_cuerpo);
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
@@ -512,7 +515,7 @@
         private System.Windows.Forms.PictureBox Pbx_incorrecto;
         private System.Windows.Forms.Button Btn_verificar;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button1;
     }
 }
