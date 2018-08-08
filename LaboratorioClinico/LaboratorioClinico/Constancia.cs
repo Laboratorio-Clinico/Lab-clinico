@@ -37,18 +37,18 @@ namespace LaboratorioClinico
         {
             try
             {
-                OdbcDataAdapter sda = new OdbcDataAdapter("SELECT pa.sNombre, pa.sDireccion,pa sNit FROM paciente pa WHERE nIdPaciente ='" + Convert.ToInt32(Txt_dpir.Text) + "'", conexion.ObtenerConexion());
+                OdbcDataAdapter sda = new OdbcDataAdapter("SELECT sNombre, sNit, sDireccion FROM paciente WHERE nIdPaciente ='" + Convert.ToInt32(Txt_dpir.Text) + "'", conexion.ObtenerConexion());
                 DataTable datos = new DataTable();
                 sda.Fill(datos);
 
                 Txt_nombrer.Text = datos.Rows[0][0].ToString();
                 Txt_direccionr.Text = datos.Rows[0][1].ToString();
-                Txt_nitc.Text = datos.Rows[0][3].ToString();
+                Txt_nitc.Text = datos.Rows[0][2].ToString();
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Intente de nuevo.", "Paciente no encontrado.", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Error al buscar paciente..");
             }
         }
         }
