@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Médicos));
             this.Lbl_nombre = new System.Windows.Forms.Label();
             this.Lbl_telefono = new System.Windows.Forms.Label();
             this.Lbl_direccion = new System.Windows.Forms.Label();
@@ -54,7 +53,6 @@
             this.Dtp_fechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.Lbl_fechaDeNacimiento = new System.Windows.Forms.Label();
             this.Btn_guardar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.Gpb_medicos.SuspendLayout();
             this.Gpb_profesion.SuspendLayout();
             this.Gpb_datosPersonales.SuspendLayout();
@@ -296,7 +294,6 @@
             // Gpb_nacimiento
             // 
             this.Gpb_nacimiento.BackColor = System.Drawing.Color.Transparent;
-            this.Gpb_nacimiento.Controls.Add(this.button1);
             this.Gpb_nacimiento.Controls.Add(this.label10);
             this.Gpb_nacimiento.Controls.Add(this.Picb_imagenDoctor);
             this.Gpb_nacimiento.Controls.Add(this.Dtp_fechaNacimiento);
@@ -314,7 +311,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Perpetua", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(289, 445);
+            this.label10.Location = new System.Drawing.Point(164, 446);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(52, 15);
             this.label10.TabIndex = 44;
@@ -324,9 +321,9 @@
             // 
             this.Picb_imagenDoctor.BackColor = System.Drawing.Color.Transparent;
             this.Picb_imagenDoctor.Image = global::LaboratorioClinico.Properties.Resources.logo;
-            this.Picb_imagenDoctor.Location = new System.Drawing.Point(24, 38);
+            this.Picb_imagenDoctor.Location = new System.Drawing.Point(41, 37);
             this.Picb_imagenDoctor.Name = "Picb_imagenDoctor";
-            this.Picb_imagenDoctor.Size = new System.Drawing.Size(296, 297);
+            this.Picb_imagenDoctor.Size = new System.Drawing.Size(284, 278);
             this.Picb_imagenDoctor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Picb_imagenDoctor.TabIndex = 26;
             this.Picb_imagenDoctor.TabStop = false;
@@ -335,7 +332,7 @@
             // 
             this.Dtp_fechaNacimiento.CustomFormat = "yyyy-MM-dd";
             this.Dtp_fechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Dtp_fechaNacimiento.Location = new System.Drawing.Point(203, 350);
+            this.Dtp_fechaNacimiento.Location = new System.Drawing.Point(194, 337);
             this.Dtp_fechaNacimiento.Name = "Dtp_fechaNacimiento";
             this.Dtp_fechaNacimiento.Size = new System.Drawing.Size(105, 26);
             this.Dtp_fechaNacimiento.TabIndex = 25;
@@ -344,7 +341,7 @@
             // 
             this.Lbl_fechaDeNacimiento.AutoSize = true;
             this.Lbl_fechaDeNacimiento.ForeColor = System.Drawing.Color.White;
-            this.Lbl_fechaDeNacimiento.Location = new System.Drawing.Point(68, 356);
+            this.Lbl_fechaDeNacimiento.Location = new System.Drawing.Point(59, 343);
             this.Lbl_fechaDeNacimiento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_fechaDeNacimiento.Name = "Lbl_fechaDeNacimiento";
             this.Lbl_fechaDeNacimiento.Size = new System.Drawing.Size(128, 18);
@@ -355,23 +352,13 @@
             // 
             this.Btn_guardar.BackgroundImage = global::LaboratorioClinico.Properties.Resources.guardar;
             this.Btn_guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Btn_guardar.Location = new System.Drawing.Point(285, 401);
+            this.Btn_guardar.Location = new System.Drawing.Point(163, 398);
             this.Btn_guardar.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_guardar.Name = "Btn_guardar";
             this.Btn_guardar.Size = new System.Drawing.Size(53, 44);
             this.Btn_guardar.TabIndex = 24;
             this.Btn_guardar.UseVisualStyleBackColor = true;
             this.Btn_guardar.Click += new System.EventHandler(this.Btn_guardar_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(6, 416);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(53, 44);
-            this.button1.TabIndex = 18;
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // Médicos
             // 
@@ -428,6 +415,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox Cmb_empresa;
         private System.Windows.Forms.ComboBox Cmb_especialidad;
-        private System.Windows.Forms.Button button1;
     }
 }
