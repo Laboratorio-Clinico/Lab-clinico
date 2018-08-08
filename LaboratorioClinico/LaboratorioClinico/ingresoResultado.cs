@@ -95,8 +95,7 @@ namespace LaboratorioClinico
                 Er_validar.SetError(Txt_codEx, "Solo números se acepta");
             }
 
-            if (Txt_codEx.TextLength == 2)
-            {
+
 
                 try
                 {
@@ -111,11 +110,7 @@ namespace LaboratorioClinico
                 {
                     MessageBox.Show("Intente de nuevo.", "Código no encontrado.", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Exclamation);
                 }
-            }else
-            {
-                Erp_errorR.SetError(Txt_codEx, "Deben Ingresarse 13 dígitos");
-
-            }
+  
         }
 
         private void label1_Click(object sender, EventArgs e)
