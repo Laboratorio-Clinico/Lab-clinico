@@ -99,6 +99,10 @@ namespace LaboratorioClinico
             Txt_usuario.ResetText();
             Txt_password.ResetText();
             Cmb_privelegio.ResetText();
+
+                Txt_usuario.Visible = false;
+                Txt_password.Visible = false;
+                Cmb_privelegio.Visible = false;
         }catch (Exception ex){
 
                 MessageBox.Show("No se pudo ingresar", "Incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Information);

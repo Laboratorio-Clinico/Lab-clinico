@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Usuario));
             this.Gpb_nuevoUsuario = new System.Windows.Forms.GroupBox();
-            //this.button1 = new System.Windows.Forms.Button();
             this.Btn = new System.Windows.Forms.Button();
             this.Pnl_usuario = new System.Windows.Forms.Panel();
             this.Cmb_privelegio = new System.Windows.Forms.ComboBox();
@@ -66,16 +64,6 @@
             this.Gpb_nuevoUsuario.TabStop = false;
             this.Gpb_nuevoUsuario.Text = "Nuevo Usuario";
             this.Gpb_nuevoUsuario.Enter += new System.EventHandler(this.Gpb_nuevoUsuario_Enter);
-            // 
-            // button1
-            // 
-           /* this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(6, 391);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(53, 44);
-            this.button1.TabIndex = 16;
-            this.button1.UseVisualStyleBackColor = true;*/
             // 
             // Btn
             // 
@@ -186,6 +174,7 @@
             this.Txt_password.Location = new System.Drawing.Point(167, 63);
             this.Txt_password.Margin = new System.Windows.Forms.Padding(4);
             this.Txt_password.Name = "Txt_password";
+            this.Txt_password.PasswordChar = '*';
             this.Txt_password.Size = new System.Drawing.Size(185, 26);
             this.Txt_password.TabIndex = 33;
             // 
@@ -226,7 +215,6 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.button2.ForeColor = System.Drawing.Color.Transparent;
