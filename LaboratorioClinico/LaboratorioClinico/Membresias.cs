@@ -83,7 +83,7 @@ namespace LaboratorioClinico
 
             try
             {
-                int iMembresias = Convert.ToInt64(Cmb_membresia.SelectedValue);
+                int iMembresias = Convert.ToInt32(Cmb_membresia.SelectedValue);
                 OdbcCommand comando = new OdbcCommand("{CALL Pro_ingresoMembresias(?,?)}", conexion.ObtenerConexion());
                 comando.CommandType = CommandType.StoredProcedure;
                 comando.Parameters.AddWithValue("nPaciente", Txt_DPI.Text);
@@ -108,7 +108,7 @@ namespace LaboratorioClinico
             /*En este procedimiento se muestra al usuario los diferentes beneficios que la membresia seleccionada por el comboBox.*/
             try
             {
-                int iMembresias = Convert.ToInt64(Cmb_membresia.SelectedValue);
+                int iMembresias = Convert.ToInt32(Cmb_membresia.SelectedValue);
 
                 OdbcCommand comando = new OdbcCommand("{CALL Pro_verMembresia(?)}", conexion.ObtenerConexion());
                 comando.CommandType = CommandType.StoredProcedure;

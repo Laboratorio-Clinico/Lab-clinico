@@ -63,7 +63,7 @@ namespace LaboratorioClinico
                 DataTable tabla = new DataTable();
                 adaptador.Fill(tabla);
 
-                id = Convert.ToInt64(tabla.Rows[0][0]);
+                id = Convert.ToInt32(tabla.Rows[0][0]);
                 
 
             }

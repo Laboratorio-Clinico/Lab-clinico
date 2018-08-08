@@ -28,7 +28,7 @@ namespace LaboratorioClinico
                 DataTable tabla = new DataTable();
                 adaptador.Fill(tabla);
 
-                id = Convert.ToInt64(tabla.Rows[0][0]);
+                id = Convert.ToInt32(tabla.Rows[0][0]);
                 //MessageBox.Show("Mostrando: " + tabla.Rows[0][0].ToString());
             }
             catch (Exception ex)
@@ -86,7 +86,7 @@ namespace LaboratorioClinico
         {
             try
             {
-                OdbcDataAdapter sda = new OdbcDataAdapter("SELECT iIdExamen, sDescripcion, fPrecio from examenes where iIdExamen = '" + Convert.ToInt64(Cmb_examenes.SelectedValue) + "'", conexion.ObtenerConexion());
+                OdbcDataAdapter sda = new OdbcDataAdapter("SELECT iIdExamen, sDescripcion, fPrecio from examenes where iIdExamen = '" + Convert.ToInt32(Cmb_examenes.SelectedValue) + "'", conexion.ObtenerConexion());
                 DataTable datos = new DataTable();
                 sda.Fill(datos);
                 Dgv_examen.Rows.Add(datos.Rows[0][0].ToString(), datos.Rows[0][1].ToString(), datos.Rows[0][2].ToString());
@@ -94,12 +94,12 @@ namespace LaboratorioClinico
                 //Guardar detalle de citas
                 conexion.ObtenerConexion();
                 OdbcCommand cmd = conexion.ObtenerConexion().CreateCommand();
-                cmd.CommandText = "insert into detalledecitas values('"+ Convert.ToInt64(Lbl_numeroCita.Text) +"','"+Convert.ToInt64(datos.Rows[0][0])+"')";
+                cmd.CommandText = "insert into detalledecitas values('"+ Convert.ToInt32(Lbl_numeroCita.Text) +"','"+Convert.ToInt32(datos.Rows[0][0])+"')";
                 cmd.ExecuteNonQuery();
 
                 //Crea la muestra
                 this.Hide();
-                new CrearCodigo(Convert.ToInt64(Cmb_examenes.SelectedValue), Convert.ToInt64(Txt_dpi.Text)).ShowDialog();
+                new CrearCodigo(Convert.ToInt32(Cmb_examenes.SelectedValue), Convert.ToInt32(Txt_dpi.Text)).ShowDialog();
                 this.Show();
             }
             catch (Exception ex)
@@ -114,7 +114,7 @@ namespace LaboratorioClinico
         {
             try
             {
-                OdbcDataAdapter sda = new OdbcDataAdapter("SELECT sNombre, sNit, sDireccion FROM paciente WHERE nIdPaciente ='" + Convert.ToInt64(Txt_dpi.Text) + "'", conexion.ObtenerConexion());
+                OdbcDataAdapter sda = new OdbcDataAdapter("SELECT sNombre, sNit, sDireccion FROM paciente WHERE nIdPaciente ='" + Convert.ToInt32(Txt_dpi.Text) + "'", conexion.ObtenerConexion());
                 DataTable datos = new DataTable();
                 sda.Fill(datos);
 
@@ -170,7 +170,7 @@ namespace LaboratorioClinico
                     iStatus = 1;
                 }
 
-                cm.Parameters.AddWithValue("dpi", Convert.ToInt64(Txt_dpi.Text));
+                cm.Parameters.AddWithValue("dpi", Convert.ToInt32(Txt_dpi.Text));
                 cm.Parameters.AddWithValue("fec", Dtp_fecha.Text);
                 cm.Parameters.AddWithValue("hor", Txt_hora.Text);
                 cm.Parameters.AddWithValue("est", iStatus.ToString());

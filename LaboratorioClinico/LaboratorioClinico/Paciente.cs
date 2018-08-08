@@ -79,7 +79,7 @@ namespace LaboratorioClinico
                 cm = new OdbcCommand("{CALL InsertaPaciente(?,?,?,?,?,?,?,?,?,?,?,?)}", conexion.ObtenerConexion());
                 cm.CommandType = CommandType.StoredProcedure;
                 OdbcParameter parametros = new OdbcParameter();
-                int idPaciente = Convert.ToInt64(Cmb_sangrep.SelectedValue);
+                int idPaciente = Convert.ToInt32(Cmb_sangrep.SelectedValue);
 
                 cm.Parameters.AddWithValue("@nIdPaciente", Txt_expedientep.Text);
                 cm.Parameters.AddWithValue("@sNit", Txt_nitp.Text);

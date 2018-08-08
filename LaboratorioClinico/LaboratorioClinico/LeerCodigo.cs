@@ -49,7 +49,7 @@ namespace LaboratorioClinico
             string comando;
             try
             {
-                comando = "select iIdExamen as ID, sDescripcion as Descripcion, fPrecio as Precio from examenes where iIdExamen = '" + Convert.ToInt64(Txt_codigo.Text) + "'";
+                comando = "select iIdExamen as ID, sDescripcion as Descripcion, fPrecio as Precio from examenes where iIdExamen = '" + Convert.ToInt32(Txt_codigo.Text) + "'";
                 OdbcDataAdapter con = new OdbcDataAdapter(comando, conexion.ObtenerConexion());
                 DataTable datos = new DataTable();
                 con.Fill(datos);
