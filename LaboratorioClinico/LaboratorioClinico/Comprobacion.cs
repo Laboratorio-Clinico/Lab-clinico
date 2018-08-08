@@ -127,6 +127,7 @@ namespace LaboratorioClinico
             decimal nPaciente = Convert.ToDecimal(Txt_DPI.Text);
             Pro_llenarDatosPaciente(nPaciente);
             Pro_noCita(nPaciente);
+            Pro_buscarCita(nPaciente);
         }
 
   
@@ -138,12 +139,12 @@ namespace LaboratorioClinico
 
         private void Btn_cancelar_Click(object sender, EventArgs e)
         {
-
+            Pro_cancelarCita();
         }
 
         private void Btn_confirmar_Click(object sender, EventArgs e)
         {
-
+            Pro_confirmarCita();
         } 
     }
 }

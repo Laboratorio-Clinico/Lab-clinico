@@ -341,5 +341,13 @@ namespace LaboratorioClinico
             new Constancia().ShowDialog();
             this.Show();
         }
+
+        private void comprobaciónDeCitasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            this.Hide();
+            new Comprobacion().ShowDialog();
+            this.Show();
+        }
     }
 }
