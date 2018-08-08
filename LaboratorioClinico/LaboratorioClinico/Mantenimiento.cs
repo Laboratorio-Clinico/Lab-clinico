@@ -163,40 +163,47 @@ namespace LaboratorioClinico
 
         private void Btn_buscar_Click(object sender, EventArgs e)  //Buscar paciente para poder eliminarlo.......................
         {
-            try
+            if (Txt_expedientep.TextLength == 13)
             {
-                Pnl_eliminarP.Visible = true;
-                OdbcDataAdapter sda = new OdbcDataAdapter("SELECT pa.sNombre, te.iTelefono  , pa.sNit, sa.sGrupoSanguineo, pa.sDireccion, co.sCorreo, pa.sAlergia, pa.sRefiere, pa.sGenero FROM paciente pa, telefono te, correo co, tipodesangre sa WHERE pa.nIdPaciente = te.nIdPaciente AND pa.nIdPaciente = co.nIdPaciente AND pa.iIdTipoDeSangre = sa.iIdTipoDeSangre AND pa.nIdPaciente='" + Convert.ToInt64(Txt_expedientep.Text) + "'", conexion.ObtenerConexion());
-                DataTable datos = new DataTable();
-                sda.Fill(datos);
+                Erp_error.SetError(Txt_expedientep, "");
+                try
+                {
+                    Pnl_eliminarP.Visible = true;
+                    OdbcDataAdapter sda = new OdbcDataAdapter("SELECT pa.sNombre, te.iTelefono  , pa.sNit, sa.sGrupoSanguineo, pa.sDireccion, co.sCorreo, pa.sAlergia, pa.sRefiere, pa.sGenero FROM paciente pa, telefono te, correo co, tipodesangre sa WHERE pa.nIdPaciente = te.nIdPaciente AND pa.nIdPaciente = co.nIdPaciente AND pa.iIdTipoDeSangre = sa.iIdTipoDeSangre AND pa.nIdPaciente='" + Convert.ToInt64(Txt_expedientep.Text) + "'", conexion.ObtenerConexion());
+                    DataTable datos = new DataTable();
+                    sda.Fill(datos);
 
-                //Llenar los campos con el paciente encontrado
-                Txt_nombrep.Text = datos.Rows[0][0].ToString();
-                Txt_telefonop.Text = datos.Rows[0][1].ToString();
-                Txt_nitp.Text = datos.Rows[0][2].ToString();
-                Cmb_tipoSangrep.Text = datos.Rows[0][3].ToString();
-                Txt_direccionp.Text = datos.Rows[0][4].ToString();
-                Txt_correoP.Text = datos.Rows[0][5].ToString(); ;
-                Txt_alergiasp.Text = datos.Rows[0][6].ToString();
-                Txt_refierep.Text = datos.Rows[0][7].ToString();
-                Cmb_sexop.Text = datos.Rows[0][8].ToString();
+                    //Llenar los campos con el paciente encontrado
+                    Txt_nombrep.Text = datos.Rows[0][0].ToString();
+                    Txt_telefonop.Text = datos.Rows[0][1].ToString();
+                    Txt_nitp.Text = datos.Rows[0][2].ToString();
+                    Cmb_tipoSangrep.Text = datos.Rows[0][3].ToString();
+                    Txt_direccionp.Text = datos.Rows[0][4].ToString();
+                    Txt_correoP.Text = datos.Rows[0][5].ToString(); ;
+                    Txt_alergiasp.Text = datos.Rows[0][6].ToString();
+                    Txt_refierep.Text = datos.Rows[0][7].ToString();
+                    Cmb_sexop.Text = datos.Rows[0][8].ToString();
 
-                //Deshabilitar los campos, que sean solo de lectura
-                Txt_nombrep.Enabled = false;
-                Txt_telefonop.Enabled = false;
-                Txt_nitp.Enabled = false;
-                Cmb_tipoSangrep.Enabled = false;
-                Txt_direccionp.Enabled = false;
-                Txt_correoP.Enabled = false;
-                Txt_alergiasp.Enabled = false;
-                Txt_refierep.Enabled = false;
-                Cmb_sexop.Enabled = false;
+                    //Deshabilitar los campos, que sean solo de lectura
+                    Txt_nombrep.Enabled = false;
+                    Txt_telefonop.Enabled = false;
+                    Txt_nitp.Enabled = false;
+                    Cmb_tipoSangrep.Enabled = false;
+                    Txt_direccionp.Enabled = false;
+                    Txt_correoP.Enabled = false;
+                    Txt_alergiasp.Enabled = false;
+                    Txt_refierep.Enabled = false;
+                    Cmb_sexop.Enabled = false;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Intente de nuevo.", "Error en la búsqueda.", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Intente de nuevo.", "Error en la búsqueda.", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
+                Erp_error.SetError(Txt_expedientep, "Deben ingresarse 13 dígitos.");
             }
-
         }
 
         /// <summary>
@@ -206,18 +213,16 @@ namespace LaboratorioClinico
         /// <param name="e"></param>
         private void button2_Click(object sender, EventArgs e)  //Buscar paciente para modificarlo................................
         {
-            try
+            
+            if (Txt_expe.TextLength == 13)
             {
-
-                if (Txt_expe.MaxLength == 13)
+                Erp_error.SetError(Txt_expe, "");
+                try
                 {
-                    Erp_error.SetError(Txt_expe, "");
-
                     Pnl_modificarP.Visible = true;
                     OdbcDataAdapter sda = new OdbcDataAdapter("SELECT pa.sNombre, te.iTelefono  , pa.sNit, sa.sGrupoSanguineo, pa.sDireccion, co.sCorreo, pa.sAlergia, pa.sRefiere, pa.sGenero FROM paciente pa, telefono te, correo co, tipodesangre sa WHERE pa.nIdPaciente = te.nIdPaciente AND pa.nIdPaciente = co.nIdPaciente AND pa.iIdTipoDeSangre = sa.iIdTipoDeSangre AND pa.nIdPaciente='" + Convert.ToInt64(Txt_expe.Text) + "'", conexion.ObtenerConexion());
                     DataTable datos = new DataTable();
                     sda.Fill(datos);
-
                     //Llenar todos los campos con los datos del paciente encontrado................................
                     Txt_nombre.Text = datos.Rows[0][0].ToString();
                     Txt_telefono.Text = datos.Rows[0][1].ToString();
@@ -228,16 +233,15 @@ namespace LaboratorioClinico
                     Txt_alergias.Text = datos.Rows[0][6].ToString();
                     Txt_refiere.Text = datos.Rows[0][7].ToString();
                     Cmb_sexo.Text = datos.Rows[0][8].ToString();
-
                     //Txt_tipoSangre.Enabled = false;
-                }else
-                {
-                    Erp_error.SetError(Txt_expe, "Deben ingresarse 13 dígitos.");
                 }
-            }
-            catch(Exception ex)
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Intente de nuevo DPI.", "Error en la búsqueda.", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
+                }
+            }else
             {
-                MessageBox.Show("Intente de nuevo.", "Error en la búsqueda.", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
+                Erp_error.SetError(Txt_expe, "Deben ingresarse 13 dígitos.");
             }
         }
 
@@ -403,29 +407,37 @@ namespace LaboratorioClinico
 
         private void Btn_buscarm_Click(object sender, EventArgs e) //Buscar médico para modificar..........................................
         {
-            try
+            if (Txt_colegiadoM.TextLength == 13)
             {
-                Gpb_datos.Visible = true;
-                OdbcDataAdapter sda = new OdbcDataAdapter("SELECT me.sNombre, me.sApellido, te.itelefono, me.sDireccion, co.sCorreo, es.sEspecialidad, em.sEmpresa, me.dFechaDeNacimiento FROM medicosasociados me, telefono te, correo co, especialidad es, empresa em  WHERE me.nNoColegiado = te.nIdPaciente AND me.nNoColegiado = co.nIdPaciente AND me.iIdEspecialidad = es.iIdEspecialidad AND me.iIdEmpresa = em.iIdEmpresa AND me.nNoColegiado = '" + Convert.ToInt64(Txt_colegiadoM.Text) + "'", conexion.ObtenerConexion());
-                DataTable datos = new DataTable();
-                sda.Fill(datos);
+                Erp_error.SetError(Txt_colegiadoM, "");
+                try
+                {
+                    Gpb_datos.Visible = true;
+                    OdbcDataAdapter sda = new OdbcDataAdapter("SELECT me.sNombre, me.sApellido, te.itelefono, me.sDireccion, co.sCorreo, es.sEspecialidad, em.sEmpresa, me.dFechaDeNacimiento FROM medicosasociados me, telefono te, correo co, especialidad es, empresa em  WHERE me.nNoColegiado = te.nIdPaciente AND me.nNoColegiado = co.nIdPaciente AND me.iIdEspecialidad = es.iIdEspecialidad AND me.iIdEmpresa = em.iIdEmpresa AND me.nNoColegiado = '" + Convert.ToInt64(Txt_colegiadoM.Text) + "'", conexion.ObtenerConexion());
+                    DataTable datos = new DataTable();
+                    sda.Fill(datos);
 
-                Txt_nombreMedicoM.Text = datos.Rows[0][0].ToString();
-                Txt_apellidoMedicoM.Text = datos.Rows[0][1].ToString();
-                Txt_telefonoMedicoM.Text = datos.Rows[0][2].ToString();
-                Txt_direMedicoM.Text = datos.Rows[0][3].ToString();
-                Txt_correoMedicoM.Text = datos.Rows[0][4].ToString();
-                Txt_especialidadMedicoM.Text = datos.Rows[0][5].ToString();
-                Txt_empresaMedicoM.Text = datos.Rows[0][6].ToString();
-                Dtp_nacimiento.Text = datos.Rows[0][7].ToString();
+                    Txt_nombreMedicoM.Text = datos.Rows[0][0].ToString();
+                    Txt_apellidoMedicoM.Text = datos.Rows[0][1].ToString();
+                    Txt_telefonoMedicoM.Text = datos.Rows[0][2].ToString();
+                    Txt_direMedicoM.Text = datos.Rows[0][3].ToString();
+                    Txt_correoMedicoM.Text = datos.Rows[0][4].ToString();
+                    Txt_especialidadMedicoM.Text = datos.Rows[0][5].ToString();
+                    Txt_empresaMedicoM.Text = datos.Rows[0][6].ToString();
+                    Dtp_nacimiento.Text = datos.Rows[0][7].ToString();
 
-                Txt_especialidadMedicoM.Enabled = false;
-                Txt_empresaMedicoM.Enabled = false;
+                    Txt_especialidadMedicoM.Enabled = false;
+                    Txt_empresaMedicoM.Enabled = false;
 
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Intente de nuevo.", "Error en la búsqueda.", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Intente de nuevo.", "Error en la búsqueda.", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
+                Erp_error.SetError(Txt_colegiadoM, "Deben ingresarse 13 dígitos.");
             }
         }
 
@@ -540,37 +552,47 @@ namespace LaboratorioClinico
 
         private void Btn_buscarE_Click(object sender, EventArgs e) // Buscar médico para eliminarlo............................
         {
-            try
+            if (Txt_colegiadoE.TextLength == 13)
             {
-                Gpb_datosEliminar.Visible = true;
-                OdbcDataAdapter sda = new OdbcDataAdapter("SELECT me.sNombre, me.sApellido, te.itelefono, me.sDireccion, co.sCorreo, es.sEspecialidad, em.sEmpresa, me.dFechaDeNacimiento FROM medicosasociados me, telefono te, correo co, especialidad es, empresa em  WHERE me.nNoColegiado = te.nIdPaciente AND me.nNoColegiado = co.nIdPaciente AND me.iIdEspecialidad = es.iIdEspecialidad AND me.iIdEmpresa = em.iIdEmpresa AND me.nNoColegiado ='" + Convert.ToInt64(Txt_colegiadoE.Text) + "'", conexion.ObtenerConexion());
-                DataTable datos = new DataTable();
-                sda.Fill(datos);
+                Erp_error.SetError(Txt_colegiadoE, "");
+                try
+                {
+                    Gpb_datosEliminar.Visible = true;
+                    OdbcDataAdapter sda = new OdbcDataAdapter("SELECT me.sNombre, me.sApellido, te.itelefono, me.sDireccion, co.sCorreo, es.sEspecialidad, em.sEmpresa, me.dFechaDeNacimiento FROM medicosasociados me, telefono te, correo co, especialidad es, empresa em  WHERE me.nNoColegiado = te.nIdPaciente AND me.nNoColegiado = co.nIdPaciente AND me.iIdEspecialidad = es.iIdEspecialidad AND me.iIdEmpresa = em.iIdEmpresa AND me.nNoColegiado ='" + Convert.ToInt64(Txt_colegiadoE.Text) + "'", conexion.ObtenerConexion());
+                    DataTable datos = new DataTable();
+                    sda.Fill(datos);
 
-                Txt_nombreMedicoE.Text = datos.Rows[0][0].ToString();
-                Txt_apellidoMedicoE.Text = datos.Rows[0][1].ToString();
-                Txt_telMedicoE.Text = datos.Rows[0][2].ToString();
-                Txt_direMedicoE.Text = datos.Rows[0][3].ToString();
-                Txt_correoMedicoE.Text = datos.Rows[0][4].ToString();
-                Cmb_especialidadMedicoE.Text = datos.Rows[0][5].ToString();
-                Cmb_empresaMedicoE.Text = datos.Rows[0][6].ToString();
-                Dtp_nacimientoE.Text = datos.Rows[0][7].ToString();
+                    Txt_nombreMedicoE.Text = datos.Rows[0][0].ToString();
+                    Txt_apellidoMedicoE.Text = datos.Rows[0][1].ToString();
+                    Txt_telMedicoE.Text = datos.Rows[0][2].ToString();
+                    Txt_direMedicoE.Text = datos.Rows[0][3].ToString();
+                    Txt_correoMedicoE.Text = datos.Rows[0][4].ToString();
+                    Cmb_especialidadMedicoE.Text = datos.Rows[0][5].ToString();
+                    Cmb_empresaMedicoE.Text = datos.Rows[0][6].ToString();
+                    Dtp_nacimientoE.Text = datos.Rows[0][7].ToString();
 
-                //Deshabilitar los campos, que sean solo de lectura
-                Txt_nombreMedicoE.Enabled = false;
-                Txt_apellidoMedicoE.Enabled = false;
-                Txt_telMedicoE.Enabled = false;
-                Txt_direMedicoE.Enabled = false;
-                Txt_correoMedicoE.Enabled = false;
-                Cmb_especialidadMedicoE.Enabled = false;
-                Cmb_empresaMedicoE.Enabled = false;
-                Dtp_nacimientoE.Enabled = false;
+                    //Deshabilitar los campos, que sean solo de lectura
+                    Txt_nombreMedicoE.Enabled = false;
+                    Txt_apellidoMedicoE.Enabled = false;
+                    Txt_telMedicoE.Enabled = false;
+                    Txt_direMedicoE.Enabled = false;
+                    Txt_correoMedicoE.Enabled = false;
+                    Cmb_especialidadMedicoE.Enabled = false;
+                    Cmb_empresaMedicoE.Enabled = false;
+                    Dtp_nacimientoE.Enabled = false;
 
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Intente de nuevo.", "Error en la búsqueda.", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Intente de nuevo.", "Error en la búsqueda.", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
+                Erp_error.SetError(Txt_colegiadoE, "Deben ingresarse 13 dígitos.");
             }
+
+
         }
 
         private void label22_Click(object sender, EventArgs e)
@@ -619,68 +641,84 @@ namespace LaboratorioClinico
 
         private void Btn_buscarEmpe_Click(object sender, EventArgs e)//BUSCAR EMPLEADO PARA ELIMINARLO
         {
-            try
+            if (Txt_dpiEmpe.TextLength == 13)
             {
-                Gpb_datosEmpe.Visible = true;
-                OdbcDataAdapter sda = new OdbcDataAdapter("SELECT em.sNombre, em.sApellido, em.sDireccion, te.itelefono, co.sCorreo, em.fSueldo, ca.sDescripcion, em.dFechaDeNacimiento FROM empleado em, telefono te, correo co, cargo ca WHERE em.nIdEmpleado = te.nIdPaciente AND em.nIdEmpleado = co.nIdPaciente AND em.iIdCargo = ca.iIdCargo AND em.nIdEmpleado ='" + Convert.ToInt64(Txt_dpiEmpe.Text) + "'", conexion.ObtenerConexion());
-                DataTable datos = new DataTable();
-                sda.Fill(datos);
+                Erp_error.SetError(Txt_dpiEmpe, "");
+                try
+                {
+                    Gpb_datosEmpe.Visible = true;
+                    OdbcDataAdapter sda = new OdbcDataAdapter("SELECT em.sNombre, em.sApellido, em.sDireccion, te.itelefono, co.sCorreo, em.fSueldo, ca.sDescripcion, em.dFechaDeNacimiento FROM empleado em, telefono te, correo co, cargo ca WHERE em.nIdEmpleado = te.nIdPaciente AND em.nIdEmpleado = co.nIdPaciente AND em.iIdCargo = ca.iIdCargo AND em.nIdEmpleado ='" + Convert.ToInt64(Txt_dpiEmpe.Text) + "'", conexion.ObtenerConexion());
+                    DataTable datos = new DataTable();
+                    sda.Fill(datos);
 
-                Txt_nombreEmpe.Text = datos.Rows[0][0].ToString();
-                Txt_apellidoEmpe.Text = datos.Rows[0][1].ToString();
-                Txt_direEmpe.Text = datos.Rows[0][2].ToString();
-                Txt_telEmpe.Text = datos.Rows[0][3].ToString();
-                Txt_correoEmpe.Text = datos.Rows[0][4].ToString();
-                Txt_sueldoEmpe.Text = datos.Rows[0][5].ToString();
-                Txt_cargoEmpe.Text = datos.Rows[0][6].ToString();
-                Dtp_fechaEmpe.Text = datos.Rows[0][7].ToString();
+                    Txt_nombreEmpe.Text = datos.Rows[0][0].ToString();
+                    Txt_apellidoEmpe.Text = datos.Rows[0][1].ToString();
+                    Txt_direEmpe.Text = datos.Rows[0][2].ToString();
+                    Txt_telEmpe.Text = datos.Rows[0][3].ToString();
+                    Txt_correoEmpe.Text = datos.Rows[0][4].ToString();
+                    Txt_sueldoEmpe.Text = datos.Rows[0][5].ToString();
+                    Txt_cargoEmpe.Text = datos.Rows[0][6].ToString();
+                    Dtp_fechaEmpe.Text = datos.Rows[0][7].ToString();
 
-                //Deshabilitar los campos, que sean solo de lectura
-                Txt_nombreEmpe.Enabled = false;
-                Txt_apellidoEmpe.Enabled = false;
-                Txt_direEmpe.Enabled = false;
-                Txt_telEmpe.Enabled = false;
-                Txt_correoEmpe.Enabled = false;
-                Txt_sueldoEmpe.Enabled = false;
-                Txt_cargoEmpe.Enabled = false;
-                Dtp_fechaEmpe.Enabled = false;
+                    //Deshabilitar los campos, que sean solo de lectura
+                    Txt_nombreEmpe.Enabled = false;
+                    Txt_apellidoEmpe.Enabled = false;
+                    Txt_direEmpe.Enabled = false;
+                    Txt_telEmpe.Enabled = false;
+                    Txt_correoEmpe.Enabled = false;
+                    Txt_sueldoEmpe.Enabled = false;
+                    Txt_cargoEmpe.Enabled = false;
+                    Dtp_fechaEmpe.Enabled = false;
 
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Intente de nuevo.", "Error en la búsqueda.", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
+                    //MessageBox.Show("error:"+ex);
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Intente de nuevo.", "Error en la búsqueda.", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
-                //MessageBox.Show("error:"+ex);
-
+                Erp_error.SetError(Txt_dpiEmpe, "Deben ingresarse 13 dígitos.");
             }
+
+
+
+
         }
 
         private void Btn_buscarEmpm_Click(object sender, EventArgs e) //BUSCAR EMPLEADO PARA MODIFICARLO.............................................
         {
-            try
+            if (Txt_dpiEmpm.TextLength == 13)
             {
-                Gpb_datosEmpm.Visible = true;
-                OdbcDataAdapter sda = new OdbcDataAdapter("SELECT em.sNombre, em.sApellido, em.sDireccion, te.itelefono, co.sCorreo, em.fSueldo, ca.sDescripcion, em.dFechaDeNacimiento FROM empleado em, telefono te, correo co, cargo ca WHERE em.nIdEmpleado = te.nIdPaciente AND em.nIdEmpleado = co.nIdPaciente AND em.iIdCargo = ca.iIdCargo AND em.nIdEmpleado ='" + Convert.ToInt64(Txt_dpiEmpm.Text) + "'", conexion.ObtenerConexion());
-                DataTable datos = new DataTable();
-                sda.Fill(datos);
+                Erp_error.SetError(Txt_dpiEmpm, "");
+                try
+                {
+                    Gpb_datosEmpm.Visible = true;
+                    OdbcDataAdapter sda = new OdbcDataAdapter("SELECT em.sNombre, em.sApellido, em.sDireccion, te.itelefono, co.sCorreo, em.fSueldo, ca.sDescripcion, em.dFechaDeNacimiento FROM empleado em, telefono te, correo co, cargo ca WHERE em.nIdEmpleado = te.nIdPaciente AND em.nIdEmpleado = co.nIdPaciente AND em.iIdCargo = ca.iIdCargo AND em.nIdEmpleado ='" + Convert.ToInt64(Txt_dpiEmpm.Text) + "'", conexion.ObtenerConexion());
+                    DataTable datos = new DataTable();
+                    sda.Fill(datos);
 
-                Txt_nombreEmpm.Text = datos.Rows[0][0].ToString();
-                Txt_apellidoEmpm.Text = datos.Rows[0][1].ToString();
-                Txt_direEmpm.Text = datos.Rows[0][2].ToString();
-                Txt_telEmpm.Text = datos.Rows[0][3].ToString();
-                Txt_correoEmpm.Text = datos.Rows[0][4].ToString();
-                Txt_sueldoEmpm.Text = datos.Rows[0][5].ToString();
-                Txt_cargoEmpm.Text = datos.Rows[0][6].ToString();
-                Dtp_fechaEmpm.Text = datos.Rows[0][7].ToString();
+                    Txt_nombreEmpm.Text = datos.Rows[0][0].ToString();
+                    Txt_apellidoEmpm.Text = datos.Rows[0][1].ToString();
+                    Txt_direEmpm.Text = datos.Rows[0][2].ToString();
+                    Txt_telEmpm.Text = datos.Rows[0][3].ToString();
+                    Txt_correoEmpm.Text = datos.Rows[0][4].ToString();
+                    Txt_sueldoEmpm.Text = datos.Rows[0][5].ToString();
+                    Txt_cargoEmpm.Text = datos.Rows[0][6].ToString();
+                    Dtp_fechaEmpm.Text = datos.Rows[0][7].ToString();
 
-                Txt_cargoEmpm.Enabled = false;
-
-            
+                    Txt_cargoEmpm.Enabled = false;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Intente de nuevo.", "Error en la búsqueda.", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
+                    //MessageBox.Show("error:"+ex);
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Intente de nuevo.", "Error en la búsqueda.", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
-                //MessageBox.Show("error:"+ex);
-
+                Erp_error.SetError(Txt_dpiEmpm, "Deben ingresarse 13 dígitos.");
             }
         }
 
@@ -820,26 +858,39 @@ namespace LaboratorioClinico
 
         private void button3_Click(object sender, EventArgs e)//Buscar paciente con membresía para modificarla
         {
-            try
+            if (Txt_dpiMembm.TextLength == 13)
             {
-                Gpb_datosMembm.Visible = true;
-                OdbcDataAdapter sda = new OdbcDataAdapter("SELECT pa.sNombre, pa.sNit, me.sDescripcion FROM paciente pa, membresia me, membresiadepaciente mp WHERE pa.nIdPaciente = mp.nNoExpediente AND me.iNoMembresia = mp.iNoMembresia AND pa.nIdPaciente ='" + Convert.ToInt64(Txt_dpiMembm.Text) + "'", conexion.ObtenerConexion());
-                DataTable datos = new DataTable();
-                sda.Fill(datos);
+                Erp_error.SetError(Txt_dpiMembm, "");
+                try
+                {
+                    Gpb_datosMembm.Visible = true;
+                    OdbcDataAdapter sda = new OdbcDataAdapter("SELECT pa.sNombre, pa.sNit, me.sDescripcion FROM paciente pa, membresia me, membresiadepaciente mp WHERE pa.nIdPaciente = mp.nNoExpediente AND me.iNoMembresia = mp.iNoMembresia AND pa.nIdPaciente ='" + Convert.ToInt64(Txt_dpiMembm.Text) + "'", conexion.ObtenerConexion());
+                    DataTable datos = new DataTable();
+                    sda.Fill(datos);
 
-                Txt_nombreMembm.Text = datos.Rows[0][0].ToString();
-                Txt_nitMembm.Text = datos.Rows[0][1].ToString();
-                Txt_actualMembm.Text = datos.Rows[0][2].ToString();
+                    Txt_nombreMembm.Text = datos.Rows[0][0].ToString();
+                    Txt_nitMembm.Text = datos.Rows[0][1].ToString();
+                    Txt_actualMembm.Text = datos.Rows[0][2].ToString();
 
-                Txt_actualMembm.Enabled = false;
-                prollenarMembresia();
+                    Txt_actualMembm.Enabled = false;
+                    prollenarMembresia();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Intente de nuevo.", "Error en la búsqueda.", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
+                    //MessageBox.Show("error:"+ex);
+
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Intente de nuevo.", "Error en la búsqueda.", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
-                //MessageBox.Show("error:"+ex);
-
+                Erp_error.SetError(Txt_dpiMembm, "Deben ingresarse 13 dígitos.");
             }
+
+
+
+
+
         }
 
         private void Txt_dpiMembm_TextChanged(object sender, EventArgs e)
@@ -849,27 +900,35 @@ namespace LaboratorioClinico
 
         private void button8_Click(object sender, EventArgs e) //Buscar empleado con membresia para cancelarla.............................
         {
-            try
+            if (Txt_dpiMembe.TextLength == 13)
             {
-                Gpb_datosMembe.Visible = true;
-                OdbcDataAdapter sda = new OdbcDataAdapter("SELECT pa.sNombre, pa.sNit, me.sDescripcion FROM paciente pa, membresia me, membresiadepaciente mp WHERE pa.nIdPaciente = mp.nNoExpediente AND me.iNoMembresia = mp.iNoMembresia AND pa.nIdPaciente ='" + Convert.ToInt64(Txt_dpiMembe.Text) + "'", conexion.ObtenerConexion());
-                DataTable datos = new DataTable();
-                sda.Fill(datos);
+                Erp_error.SetError(Txt_dpiMembe, "");
+                try
+                {
+                    Gpb_datosMembe.Visible = true;
+                    OdbcDataAdapter sda = new OdbcDataAdapter("SELECT pa.sNombre, pa.sNit, me.sDescripcion FROM paciente pa, membresia me, membresiadepaciente mp WHERE pa.nIdPaciente = mp.nNoExpediente AND me.iNoMembresia = mp.iNoMembresia AND pa.nIdPaciente ='" + Convert.ToInt64(Txt_dpiMembe.Text) + "'", conexion.ObtenerConexion());
+                    DataTable datos = new DataTable();
+                    sda.Fill(datos);
 
-                Txt_nombreMembe.Text = datos.Rows[0][0].ToString();
-                Txt_nitMembe.Text = datos.Rows[0][1].ToString();
-                Txt_membreMembe.Text = datos.Rows[0][2].ToString();
-            
-                //Deshabilitar los textbox donde se cargó la información
-                Txt_nombreMembe.Enabled = false;
-                Txt_nitMembe.Enabled = false;
-                Txt_membreMembe.Enabled = false;
+                    Txt_nombreMembe.Text = datos.Rows[0][0].ToString();
+                    Txt_nitMembe.Text = datos.Rows[0][1].ToString();
+                    Txt_membreMembe.Text = datos.Rows[0][2].ToString();
+
+                    //Deshabilitar los textbox donde se cargó la información
+                    Txt_nombreMembe.Enabled = false;
+                    Txt_nitMembe.Enabled = false;
+                    Txt_membreMembe.Enabled = false;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Intente de nuevo.", "Error en la búsqueda.", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
+                    //MessageBox.Show("error:" + ex);
+
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Intente de nuevo.", "Error en la búsqueda.", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
-                //MessageBox.Show("error:" + ex);
-
+                Erp_error.SetError(Txt_dpiMembe, "Deben ingresarse 13 dígitos.");
             }
         }
 

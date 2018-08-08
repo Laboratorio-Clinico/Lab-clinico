@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -68,6 +69,7 @@
             this.Lbl_hora = new System.Windows.Forms.Label();
             this.Btn_guardar = new System.Windows.Forms.Button();
             this.Lbl_guardar = new System.Windows.Forms.Label();
+            this.Erp_error = new System.Windows.Forms.ErrorProvider(this.components);
             this.Gpb_datosm.SuspendLayout();
             this.Pnl_datosp.SuspendLayout();
             this.Gpb_detalleCita.SuspendLayout();
@@ -75,6 +77,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_examen)).BeginInit();
             this.Gpb_cita.SuspendLayout();
             this.Gpb_fechayhora.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Erp_error)).BeginInit();
             this.SuspendLayout();
             // 
             // Lbl_titulo
@@ -111,7 +114,7 @@
             this.Btn_buscar.BackgroundImage = global::LaboratorioClinico.Properties.Resources.icons8_encuentra_hombre_usuario_48;
             this.Btn_buscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Btn_buscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Btn_buscar.Location = new System.Drawing.Point(270, 20);
+            this.Btn_buscar.Location = new System.Drawing.Point(297, 24);
             this.Btn_buscar.Name = "Btn_buscar";
             this.Btn_buscar.Size = new System.Drawing.Size(53, 44);
             this.Btn_buscar.TabIndex = 106;
@@ -125,6 +128,7 @@
             this.Txt_dpi.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.Txt_dpi.Location = new System.Drawing.Point(81, 35);
             this.Txt_dpi.Margin = new System.Windows.Forms.Padding(4);
+            this.Txt_dpi.MaxLength = 13;
             this.Txt_dpi.Name = "Txt_dpi";
             this.Txt_dpi.Size = new System.Drawing.Size(185, 26);
             this.Txt_dpi.TabIndex = 103;
@@ -542,6 +546,10 @@
             this.Lbl_guardar.TabIndex = 136;
             this.Lbl_guardar.Text = "Guardar";
             // 
+            // Erp_error
+            // 
+            this.Erp_error.ContainerControl = this;
+            // 
             // Citas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -571,6 +579,7 @@
             this.Gpb_cita.PerformLayout();
             this.Gpb_fechayhora.ResumeLayout(false);
             this.Gpb_fechayhora.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Erp_error)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -613,5 +622,6 @@
         private System.Windows.Forms.GroupBox Gpb_cita;
         private System.Windows.Forms.GroupBox Gpb_fechayhora;
         private System.Windows.Forms.Panel Pnl_datosp;
+        private System.Windows.Forms.ErrorProvider Erp_error;
     }
 }
