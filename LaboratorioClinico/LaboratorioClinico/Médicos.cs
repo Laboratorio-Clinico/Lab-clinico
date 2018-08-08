@@ -132,8 +132,8 @@ namespace LaboratorioClinico
         {
 
 
-                int iEmpresas = Convert.ToInt64(Cmb_empresa.SelectedValue);
-                int iEspecialidades = Convert.ToInt64(Cmb_especialidad.SelectedValue);
+                int iEmpresas = Convert.ToInt32(Cmb_empresa.SelectedValue);
+                int iEspecialidades = Convert.ToInt32(Cmb_especialidad.SelectedValue);
             
                 proGuardarDatos(iEmpresas, iEspecialidades);
 

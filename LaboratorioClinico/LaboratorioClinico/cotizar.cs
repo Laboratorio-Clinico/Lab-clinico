@@ -53,7 +53,7 @@ namespace LaboratorioClinico
             OdbcDataAdapter adaptador = new OdbcDataAdapter("select count(*) from cotizacion", conexion.ObtenerConexion());
             DataTable contador = new DataTable();
             adaptador.Fill(contador);
-            numero = Convert.ToInt64(contador.Rows[0][0].ToString());
+            numero = Convert.ToInt32(contador.Rows[0][0].ToString());
             numero2 = numero + 1;
 
             Txt_noCotizacion.Text = Convert.ToString(numero2);
@@ -165,7 +165,7 @@ namespace LaboratorioClinico
         public void proSeleccionDeDescuento()
         {
             /*Este procedimiento selecciona la cantidad de descuento que incluye el tipo de descuento seleccionado*/
-            int iTipoDeDescuento = Convert.ToInt64(Cmb_tipoDeDescuento.SelectedValue);
+            int iTipoDeDescuento = Convert.ToInt32(Cmb_tipoDeDescuento.SelectedValue);
             if (iTipoDeDescuento == 3001) { Txt_porcentajeDeDescuento.Text = "0.45"; }
             else if (iTipoDeDescuento == 3002) { Txt_porcentajeDeDescuento.Text = "0.35"; }
             else if (iTipoDeDescuento == 3003) { Txt_porcentajeDeDescuento.Text = "0.25"; }
@@ -220,7 +220,7 @@ namespace LaboratorioClinico
                     doCantidad = Convert.ToDouble(Txt_Cantidad.Text);
                     doDescuento = Convert.ToDouble(Txt_porcentajeDeDescuento.Text);
                     doTotal = doPrecio * doCantidad * doDescuento;
-                    doTotal2 = Convert.ToInt64(Txt_Total.Text);
+                    doTotal2 = Convert.ToInt32(Txt_Total.Text);
                     doTotalF = doTotal2 + doTotal;
                     Txt_Total.Text = Convert.ToString(doTotalF);
                     Txt_precioE.Text = Convert.ToString(doTotal);
@@ -236,9 +236,9 @@ namespace LaboratorioClinico
             // Este procedimiento guarda las cotizaciones realizadas, dentro de la base de datos
             try
             {
-                int iCotizaciones = Convert.ToInt64(Txt_noCotizacion.Text);
-                int iLaboratorios = Convert.ToInt64(Cmb_laboratorio.SelectedValue);
-                int iTipoDescuento = Convert.ToInt64(Cmb_tipoDeDescuento.SelectedValue);
+                int iCotizaciones = Convert.ToInt32(Txt_noCotizacion.Text);
+                int iLaboratorios = Convert.ToInt32(Cmb_laboratorio.SelectedValue);
+                int iTipoDescuento = Convert.ToInt32(Cmb_tipoDeDescuento.SelectedValue);
 
                 OdbcCommand comando = new OdbcCommand("{CALL Pro_ingresoCotizacio(?,?,?,?)}", conexion.ObtenerConexion());
                 comando.CommandType = CommandType.StoredProcedure;
@@ -258,14 +258,14 @@ namespace LaboratorioClinico
             try
             {
   
-                int iCotizaciones = Convert.ToInt64(Txt_noCotizacion.Text);
+                int iCotizaciones = Convert.ToInt32(Txt_noCotizacion.Text);
                 double total = Convert.ToDouble(Txt_precioE.Text);
                 double fDescuentos = Convert.ToDouble(Txt_porcentajeDeDescuento.Text);
                 double fCostos = total / fDescuentos;
-                int iIdExamenes = Convert.ToInt64(Cmb_examen.SelectedValue);
-                int iEmpleados = Convert.ToInt64(Cmb_doctor.SelectedValue);
+                int iIdExamenes = Convert.ToInt32(Cmb_examen.SelectedValue);
+                int iEmpleados = Convert.ToInt32(Cmb_doctor.SelectedValue);
 
-               // int iCantidades = Convert.ToInt64(Txt_Cantidad.Text.ToString);
+                int iCantidades = Convert.ToInt32(Txt_Cantidad.Text);
 
 
                 OdbcCommand comando = new OdbcCommand("{CALL Pro_ingresoDetallesCotizacion(?,?,?,?,?,?)}", conexion.ObtenerConexion());
@@ -275,7 +275,7 @@ namespace LaboratorioClinico
                 comando.Parameters.AddWithValue("fDescuento", fDescuentos);
                 comando.Parameters.AddWithValue("iExamen", iIdExamenes);
                 comando.Parameters.AddWithValue("iEmpleado", iEmpleados);
-                //comando.Parameters.AddWithValue("iCantidad", iCantidades);
+                comando.Parameters.AddWithValue("iCantidad", iCantidades);
                 comando.ExecuteNonQuery();
                 MessageBox.Show("Detalle agregado");
                 Txt_Cantidad.Text = "";
@@ -293,10 +293,10 @@ namespace LaboratorioClinico
 
         private void Btn_imprimir_Click(object sender, EventArgs e)
         {
-            int iExamenes = Convert.ToInt64(Cmb_examen.SelectedValue);
-            int iEmpleado = Convert.ToInt64(Cmb_doctor.SelectedValue);
-            int iTipoDescuento = Convert.ToInt64(Cmb_tipoDeDescuento.SelectedValue);
-            int iLaboratorio = Convert.ToInt64(Cmb_laboratorio.SelectedValue);
+            int iExamenes = Convert.ToInt32(Cmb_examen.SelectedValue);
+            int iEmpleado = Convert.ToInt32(Cmb_doctor.SelectedValue);
+            int iTipoDescuento = Convert.ToInt32(Cmb_tipoDeDescuento.SelectedValue);
+            int iLaboratorio = Convert.ToInt32(Cmb_laboratorio.SelectedValue);
 
         }
 
@@ -315,7 +315,7 @@ namespace LaboratorioClinico
             {
                 if (Cmb_laboratorio.SelectedValue.ToString() != null)
                 {
-                    int iLaboratorio = Convert.ToInt64(Cmb_laboratorio.SelectedValue);
+                    int iLaboratorio = Convert.ToInt32(Cmb_laboratorio.SelectedValue);
                     Txt_noLaboratorio.Text = iLaboratorio.ToString();
                 }
             }
@@ -343,7 +343,7 @@ namespace LaboratorioClinico
             
            contador++;
              double doCantidad = Convert.ToDouble(Txt_Cantidad.Text);
-            int iIdExamenes = Convert.ToInt64(Cmb_examen.SelectedValue);
+            int iIdExamenes = Convert.ToInt32(Cmb_examen.SelectedValue);
            
             proBuscarCotizacion(iIdExamenes);
              proPrecioyTotal(iIdExamenes);

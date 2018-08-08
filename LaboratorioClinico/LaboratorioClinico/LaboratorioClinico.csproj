@@ -120,6 +120,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="InformeBitacora.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InformeBitacora.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ingresoResultado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +188,12 @@
       <DependentUpon>RegClientes.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="RepBitacora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RepBitacora.Designer.cs">
+      <DependentUpon>RepBitacora.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reportes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -242,6 +254,10 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InformeBitacora.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>InformeBitacora.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="ingresoResultado.resx">
       <DependentUpon>ingresoResultado.cs</DependentUpon>
     </EmbeddedResource>
@@ -282,6 +298,9 @@
     <EmbeddedResource Include="RegClientes.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RegClientes.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepBitacora.resx">
+      <DependentUpon>RepBitacora.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes.resx">
       <DependentUpon>Reportes.cs</DependentUpon>

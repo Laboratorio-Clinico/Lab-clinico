@@ -101,9 +101,9 @@ namespace LaboratorioClinico
                 conexion.ObtenerConexion();
                 OdbcCommand cmd = conexion.ObtenerConexion().CreateCommand();
 
-                //cmd.CommandText = "update examenes set sDescripcion = '" + Txt_nombrem.Text + "' where iIdExamen = '" + Convert.ToInt64(Txt_codigom.Text) + "'";
+                //cmd.CommandText = "update examenes set sDescripcion = '" + Txt_nombrem.Text + "' where iIdExamen = '" + Convert.ToInt32(Txt_codigom.Text) + "'";
                 //cmd.ExecuteNonQuery();
-                cmd.CommandText = "update examenes set fPrecio = '" + Convert.ToUInt32(Txt_preciom.Text) + "' where iIdExamen = '" + Convert.ToInt64(Txt_codigom.Text) + "'";
+                cmd.CommandText = "update examenes set fPrecio = '" + Convert.ToUInt32(Txt_preciom.Text) + "' where iIdExamen = '" + Convert.ToInt32(Txt_codigom.Text) + "'";
                 cmd.ExecuteNonQuery();
 
                 MessageBox.Show("Examen Modificado Exitosamente.", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
@@ -176,9 +176,9 @@ namespace LaboratorioClinico
                 OdbcCommand cmd = conexion.ObtenerConexion().CreateCommand();
 
                 //Eliminar los datos del examen de 2 tablas que guardan su información
-                cmd.CommandText = "delete from examenes where iIdExamen = '" + Convert.ToInt64(Txt_codigoe.Text) + "'";
+                cmd.CommandText = "delete from examenes where iIdExamen = '" + Convert.ToInt32(Txt_codigoe.Text) + "'";
                 cmd.ExecuteNonQuery();
-                cmd.CommandText = "delete from requisitosdeexamen where iIdExamen = '" + Convert.ToInt64(Txt_codigoe.Text) + "'";
+                cmd.CommandText = "delete from requisitosdeexamen where iIdExamen = '" + Convert.ToInt32(Txt_codigoe.Text) + "'";
                 cmd.ExecuteNonQuery();
 
                 MessageBox.Show("Examen Eliminado Exitosamente", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);

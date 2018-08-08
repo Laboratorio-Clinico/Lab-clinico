@@ -25,7 +25,7 @@ namespace LaboratorioClinico
             try
             {
 
-                int iCargo = Convert.ToInt64(Cmb_cargo.SelectedValue);
+                int iCargo = Convert.ToInt32(Cmb_cargo.SelectedValue);
       
 
                 OdbcCommand comando = new OdbcCommand("{CALL Pro_insertarEmpleado(?,?,?,?,?,?,?,?,?,?)}", conexion.ObtenerConexion());

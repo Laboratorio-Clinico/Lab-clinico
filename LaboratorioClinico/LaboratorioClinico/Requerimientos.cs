@@ -80,15 +80,14 @@ namespace LaboratorioClinico
             //Buscar y Mostrar los requisitos del examen que es seleccionado
             try
             {
-                int idExamen = Convert.ToInt64(Cmb_examen.SelectedValue);
+                int idExamen = Convert.ToInt32(Cmb_examen.SelectedValue);
            
             conexion.ObtenerConexion();
             OdbcCommand sda = new OdbcCommand("select sDescripcion as Requisitos from requisitos where iIdRequisitos='" + idExamen + "'", conexion.ObtenerConexion());
             OdbcDataAdapter adaptador = new OdbcDataAdapter(sda);
             DataTable dtDatos = new DataTable();
             adaptador.Fill(dtDatos);
-                          
-                   
+                            
                 Txt_requerimientos.Text = dtDatos.Rows[0][0].ToString();
                 
             }catch (Exception ex){
@@ -121,6 +120,11 @@ namespace LaboratorioClinico
         private void Dgb_requisitosr_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void Cmb_examen_Click(object sender, EventArgs e)
+        {
+            Txt_requerimientos.Clear();
         }
     }
 }

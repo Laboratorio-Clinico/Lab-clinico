@@ -99,7 +99,7 @@ namespace LaboratorioClinico
                         sda2.Fill(datos2);
 
                         int p;
-                        p = Convert.ToInt64(datos2.Rows[0][0].ToString());
+                        p = Convert.ToInt32(datos2.Rows[0][0].ToString());
 
                         comando.Parameters.AddWithValue("@nIdBitacora", p);
                         comando.Parameters.AddWithValue("@sUsuario",user);

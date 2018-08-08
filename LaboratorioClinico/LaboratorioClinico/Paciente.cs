@@ -59,6 +59,10 @@ namespace LaboratorioClinico
 
                 adaptador.Fill(tabla);
 
+                DataRow fila = tabla.NewRow();
+                fila["sGrupoSanguineo"] = "Seleccione Tipo de Sangre";
+                tabla.Rows.InsertAt(fila, 0);
+
                 Cmb_sangrep.ValueMember = "iIdTipoDeSangre";
                 Cmb_sangrep.DisplayMember = "sGrupoSanguineo";
 
@@ -79,7 +83,7 @@ namespace LaboratorioClinico
                 cm = new OdbcCommand("{CALL InsertaPaciente(?,?,?,?,?,?,?,?,?,?,?,?)}", conexion.ObtenerConexion());
                 cm.CommandType = CommandType.StoredProcedure;
                 OdbcParameter parametros = new OdbcParameter();
-                int idPaciente = Convert.ToInt64(Cmb_sangrep.SelectedValue);
+                int idPaciente = Convert.ToInt32(Cmb_sangrep.SelectedValue);
 
                 cm.Parameters.AddWithValue("@nIdPaciente", Txt_expedientep.Text);
                 cm.Parameters.AddWithValue("@sNit", Txt_nitp.Text);

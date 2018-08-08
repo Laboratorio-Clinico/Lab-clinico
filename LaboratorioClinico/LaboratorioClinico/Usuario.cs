@@ -116,7 +116,7 @@ namespace LaboratorioClinico
             string dpiE = Txt_codigoDeEmpleado.Text;
 
             try { 
-            OdbcDataAdapter sda = new OdbcDataAdapter("select count(*) from empleado where nIdEmpleado='" + Convert.ToInt64(dpiE) + "'", conexion.ObtenerConexion());
+            OdbcDataAdapter sda = new OdbcDataAdapter("select count(*) from empleado where nIdEmpleado='" + Convert.ToInt32(dpiE) + "'", conexion.ObtenerConexion());
             DataTable datos = new DataTable();
             sda.Fill(datos);
 
