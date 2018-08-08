@@ -32,7 +32,19 @@ namespace LaboratorioClinico
 
         private void Requerimientos_Load(object sender, EventArgs e)
         {
- 
+            //******************************Cargar los examenes***********************************************
+           /* OdbcCommand cmd2 = new OdbcCommand("Select sDescripcion from examenes", conexion.ObtenerConexion());
+            OdbcDataReader almacen2 = cmd2.ExecuteReader();
+
+
+            while (almacen2.Read())
+            {
+                Cmb_examen.Refresh();
+                Cmb_examen.Items.Add(almacen2.GetValue(0).ToString());
+
+            }
+            conexion.ObtenerConexion().Close();
+            almacen2.Close();*/
         }
 
         public void llenarExamen()
@@ -75,7 +87,8 @@ namespace LaboratorioClinico
             OdbcDataAdapter adaptador = new OdbcDataAdapter(sda);
             DataTable dtDatos = new DataTable();
             adaptador.Fill(dtDatos);
-                            
+                          
+                   
                 Txt_requerimientos.Text = dtDatos.Rows[0][0].ToString();
                 
             }catch (Exception ex){
@@ -108,11 +121,6 @@ namespace LaboratorioClinico
         private void Dgb_requisitosr_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-        }
-
-        private void Cmb_examen_Click(object sender, EventArgs e)
-        {
-            Txt_requerimientos.Clear();
         }
     }
 }
