@@ -57,8 +57,7 @@ namespace LaboratorioClinico
             BorrarMsj();
             Validar();
             string user = Txt_usuario.Text;
-            //string pass = EncripContra(Txt_contraseña.Text);
-            string pass = Txt_contraseña.Text;
+            string pass = EncripContra(Txt_contraseña.Text);
             string tipo;
 
 
