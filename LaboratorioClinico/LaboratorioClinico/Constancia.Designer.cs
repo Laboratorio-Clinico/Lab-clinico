@@ -463,6 +463,7 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Constancia";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Gpb_datosf.ResumeLayout(false);
             this.Gpb_datosf.PerformLayout();
             this.groupBox1.ResumeLayout(false);

@@ -71,8 +71,14 @@ namespace LaboratorioClinico
                 Tm_Control.Enabled = false;
                 Tm_Erequerimientos.Enabled = false;
                 Tm_cotizaciones.Enabled = false;
-                Tm_Enuevo.Enabled = false;
+                Tm_informacion.Enabled = false;
                 Tm_crearCodigo.Enabled = false;
+                Tm_citas.Enabled = false;
+                Tm_resultados.Enabled = false;
+                Tm_constancias.Enabled = false;
+                Tm_Factura.Enabled = false;
+                Tm_informacion.Enabled = false;
+                Tm_comprobacion.Enabled = false;
             }
         }
 
