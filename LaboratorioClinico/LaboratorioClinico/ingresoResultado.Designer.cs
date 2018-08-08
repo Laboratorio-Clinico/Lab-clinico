@@ -218,6 +218,7 @@
             // 
             // Txt_nombrex
             // 
+            this.Txt_nombrex.Enabled = false;
             this.Txt_nombrex.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_nombrex.Location = new System.Drawing.Point(164, 71);
             this.Txt_nombrex.Multiline = true;
@@ -310,6 +311,7 @@
             // 
             // Txt_direccionr
             // 
+            this.Txt_direccionr.Enabled = false;
             this.Txt_direccionr.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_direccionr.Location = new System.Drawing.Point(382, 62);
             this.Txt_direccionr.Multiline = true;
@@ -351,6 +353,7 @@
             // 
             // Txt_nombrer
             // 
+            this.Txt_nombrer.Enabled = false;
             this.Txt_nombrer.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_nombrer.Location = new System.Drawing.Point(124, 24);
             this.Txt_nombrer.Multiline = true;
