@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Empleado));
             this.Gpb_datosEmpleado = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.Gpb_contacto = new System.Windows.Forms.GroupBox();
@@ -55,13 +57,16 @@
             this.Txt_nombre = new System.Windows.Forms.TextBox();
             this.Lbl_apellido = new System.Windows.Forms.Label();
             this.Lbl_nombre = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Erp_errorE = new System.Windows.Forms.ErrorProvider(this.components);
+            this.Er_validar = new System.Windows.Forms.ErrorProvider(this.components);
             this.Gpb_datosEmpleado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.Gpb_contacto.SuspendLayout();
             this.Gpb_puesto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Picb_imagen)).BeginInit();
             this.Gpb_datosPersonales.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Erp_errorE)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Er_validar)).BeginInit();
             this.SuspendLayout();
             // 
             // Gpb_datosEmpleado
@@ -83,6 +88,16 @@
             this.Gpb_datosEmpleado.TabIndex = 0;
             this.Gpb_datosEmpleado.TabStop = false;
             this.Gpb_datosEmpleado.Text = "Datos de Empleados";
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(670, 405);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(53, 44);
+            this.button1.TabIndex = 16;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
@@ -310,6 +325,7 @@
             this.Txt_DPIEmpleado.ForeColor = System.Drawing.Color.Black;
             this.Txt_DPIEmpleado.Location = new System.Drawing.Point(99, 41);
             this.Txt_DPIEmpleado.Margin = new System.Windows.Forms.Padding(4);
+            this.Txt_DPIEmpleado.MaxLength = 13;
             this.Txt_DPIEmpleado.Name = "Txt_DPIEmpleado";
             this.Txt_DPIEmpleado.Size = new System.Drawing.Size(197, 26);
             this.Txt_DPIEmpleado.TabIndex = 28;
@@ -384,15 +400,13 @@
             this.Lbl_nombre.TabIndex = 10;
             this.Lbl_nombre.Text = "Nombre";
             // 
-            // button1
+            // Erp_errorE
             // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(670, 405);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(53, 44);
-            this.button1.TabIndex = 16;
-            this.button1.UseVisualStyleBackColor = true;
+            this.Erp_errorE.ContainerControl = this;
+            // 
+            // Er_validar
+            // 
+            this.Er_validar.ContainerControl = this;
             // 
             // Empleado
             // 
@@ -416,6 +430,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Picb_imagen)).EndInit();
             this.Gpb_datosPersonales.ResumeLayout(false);
             this.Gpb_datosPersonales.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Erp_errorE)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Er_validar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -449,5 +465,7 @@
         private System.Windows.Forms.TextBox Txt_DPIEmpleado;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ErrorProvider Erp_errorE;
+        private System.Windows.Forms.ErrorProvider Er_validar;
     }
 }
