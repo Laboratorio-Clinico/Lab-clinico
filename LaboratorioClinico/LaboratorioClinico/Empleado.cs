@@ -27,7 +27,7 @@ namespace LaboratorioClinico
 
             if (Txt_DPIEmpleado.TextLength == 13)
             {
-                Erp_errorE.SetError(Txt_DPIEmpleado, "");
+                Erp_errorE.SetError(Txt_DPIEmpleado, " ");
                 try
                 {
 
@@ -106,17 +106,9 @@ namespace LaboratorioClinico
 
         private void Btn_guardar_Click(object sender, EventArgs e)
         {
-            int num;
-            if (int.TryParse(Txt_DPIEmpleado.Text, out num))
-            {
-                Er_validar.SetError(Txt_DPIEmpleado, "");
+   
                 Pro_guardarDatos();
-            }
-            else
-            {
-                Er_validar.SetError(Txt_DPIEmpleado, "Solo números se acepta");
-            }
-            
+
 
         }
 
