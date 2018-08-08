@@ -37,7 +37,7 @@ namespace LaboratorioClinico
         {
             try
             {
-                OdbcDataAdapter sda = new OdbcDataAdapter("SELECT pa.sNombre, pa.sNit, pa. sDireccion, ci.iIdCitas,ci.dFecha  FROM paciente pa,citas ci WHERE nIdPaciente ='" + Convert.ToInt64(Txt_dpir.Text) + "'", conexion.ObtenerConexion());
+                OdbcDataAdapter sda = new OdbcDataAdapter("SELECT pa.sNombre, pa.sNit, pa. sDireccion, ci.iIdCitas,ci.dFecha,mu.iIdExamen  FROM paciente pa,citas ci, muestra mu WHERE nIdPaciente ='" + Convert.ToInt64(Txt_dpir.Text) + "'", conexion.ObtenerConexion());
                 DataTable datos = new DataTable();
                 sda.Fill(datos);
 
@@ -46,7 +46,8 @@ namespace LaboratorioClinico
                 Txt_nitc.Text = datos.Rows[0][2].ToString();
                 Txt_cita.Text = datos.Rows[0][3].ToString();
                 Txt_fechae.Text = datos.Rows[0][4].ToString();
-      
+                Txt_codEx.Text = datos.Rows[0][5].ToString();
+
             }
             catch (Exception ex)
             {
