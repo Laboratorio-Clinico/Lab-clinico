@@ -119,6 +119,16 @@ namespace LaboratorioClinico
 
                 comando.ExecuteNonQuery();
                 MessageBox.Show("Resultados insertados correctamente");
+                Txt_nombrer.Clear();
+                Txt_dpir.Clear();
+                Txt_direccionr.Clear();
+                Txt_codEx.Clear();
+                Txt_codEx.Clear();
+                Txt_nombrex.Clear();
+                Txt_resultadox.Clear();
+                Txt_Correor.Clear();
+                
+
             }
             catch (Exception error) { MessageBox.Show("Error" + error); }
             finally
