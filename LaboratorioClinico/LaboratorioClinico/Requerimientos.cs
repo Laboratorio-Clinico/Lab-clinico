@@ -87,7 +87,8 @@ namespace LaboratorioClinico
             OdbcDataAdapter adaptador = new OdbcDataAdapter(sda);
             DataTable dtDatos = new DataTable();
             adaptador.Fill(dtDatos);
-                            
+                          
+                   
                 Txt_requerimientos.Text = dtDatos.Rows[0][0].ToString();
                 
             }catch (Exception ex){
@@ -120,11 +121,6 @@ namespace LaboratorioClinico
         private void Dgb_requisitosr_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-        }
-
-        private void Cmb_examen_Click(object sender, EventArgs e)
-        {
-            Txt_requerimientos.Clear();
         }
     }
 }

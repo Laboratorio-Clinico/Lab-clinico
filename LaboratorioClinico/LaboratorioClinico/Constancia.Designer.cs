@@ -35,8 +35,6 @@
             this.Txt_dpir = new System.Windows.Forms.TextBox();
             this.Lbl_nitf = new System.Windows.Forms.Label();
             this.Gpb_datosf = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.Txt_direccionr = new System.Windows.Forms.TextBox();
             this.Lbl_fechaf = new System.Windows.Forms.Label();
             this.Lbl_direccionf = new System.Windows.Forms.Label();
@@ -54,10 +52,11 @@
             this.Lbl_examenRealizado = new System.Windows.Forms.Label();
             this.Btn_imprimirResultado = new System.Windows.Forms.Button();
             this.Lbl_imprimirr = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.Dtp_fechar = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.Gpb_datosf.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -139,27 +138,6 @@
             this.Gpb_datosf.TabIndex = 135;
             this.Gpb_datosf.TabStop = false;
             this.Gpb_datosf.Text = "Datos Paciente";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(564, 63);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(98, 20);
-            this.textBox1.TabIndex = 13;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(498, 65);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 18);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Telefono";
             // 
             // Txt_direccionr
             // 
@@ -352,6 +330,27 @@
             this.Lbl_imprimirr.Text = "Imprimir";
             this.Lbl_imprimirr.Click += new System.EventHandler(this.Lbl_imprimirr_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(498, 65);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(60, 18);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Telefono";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Perpetua", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(564, 63);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(98, 20);
+            this.textBox1.TabIndex = 13;
+            // 
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
@@ -386,19 +385,6 @@
             this.label5.TabIndex = 102;
             this.label5.Text = "Emisión exámen";
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.button2.ForeColor = System.Drawing.Color.Transparent;
-            this.button2.Location = new System.Drawing.Point(739, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(25, 23);
-            this.button2.TabIndex = 141;
-            this.button2.UseVisualStyleBackColor = false;
-            // 
             // Constancia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -406,7 +392,6 @@
             this.BackgroundImage = global::LaboratorioClinico.Properties.Resources.FONDOO;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(766, 489);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.Btn_imprimirResultado);
             this.Controls.Add(this.Lbl_imprimirr);
@@ -462,6 +447,5 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DateTimePicker Dtp_fechar;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button2;
     }
 }

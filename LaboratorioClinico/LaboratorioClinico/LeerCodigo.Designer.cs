@@ -117,16 +117,13 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
             this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.button2.ForeColor = System.Drawing.Color.Transparent;
-            this.button2.Location = new System.Drawing.Point(576, 1);
+            this.button2.Location = new System.Drawing.Point(555, 12);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(25, 23);
-            this.button2.TabIndex = 123;
-            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Size = new System.Drawing.Size(35, 28);
+            this.button2.TabIndex = 16;
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // LeerCodigo
             // 
@@ -142,7 +139,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Dgv_resultados);
             this.Controls.Add(this.label1);
-            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "LeerCodigo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

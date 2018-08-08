@@ -37,7 +37,7 @@
             this.Lbl_correo = new System.Windows.Forms.Label();
             this.Btn_buscar = new System.Windows.Forms.Button();
             this.Btn_enviar = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_resultados)).BeginInit();
             this.Gpb_resultado.SuspendLayout();
             this.SuspendLayout();
@@ -84,6 +84,7 @@
             // 
             this.Gpb_resultado.BackgroundImage = global::LaboratorioClinico.Properties.Resources.FONDOO;
             this.Gpb_resultado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Gpb_resultado.Controls.Add(this.button1);
             this.Gpb_resultado.Controls.Add(this.Lbl_correo);
             this.Gpb_resultado.Controls.Add(this.Btn_buscar);
             this.Gpb_resultado.Controls.Add(this.Dgv_resultados);
@@ -131,18 +132,15 @@
             this.Btn_enviar.TabIndex = 5;
             this.Btn_enviar.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // button1
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.button2.ForeColor = System.Drawing.Color.Transparent;
-            this.button2.Location = new System.Drawing.Point(593, 1);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(25, 23);
-            this.button2.TabIndex = 123;
-            this.button2.UseVisualStyleBackColor = false;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(6, 349);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(53, 44);
+            this.button1.TabIndex = 17;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // Resultados
             // 
@@ -151,8 +149,7 @@
             this.BackColor = System.Drawing.Color.LightCyan;
             this.BackgroundImage = global::LaboratorioClinico.Properties.Resources.FONDOO;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(619, 432);
-            this.Controls.Add(this.button2);
+            this.ClientSize = new System.Drawing.Size(606, 423);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Gpb_resultado);
             this.DoubleBuffered = true;
@@ -179,6 +176,6 @@
         private System.Windows.Forms.TextBox Txtx_expe;
         private System.Windows.Forms.GroupBox Gpb_resultado;
         private System.Windows.Forms.Label Lbl_correo;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }

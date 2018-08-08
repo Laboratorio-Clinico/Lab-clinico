@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Factura));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Gpb_laboratoriof = new System.Windows.Forms.GroupBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -41,6 +41,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Gpb_detallef = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.Txt_credit = new System.Windows.Forms.TextBox();
             this.Lbl_credit = new System.Windows.Forms.Label();
             this.Cmb_formaPago = new System.Windows.Forms.ComboBox();
@@ -97,7 +98,6 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.Lbl_serie = new System.Windows.Forms.Label();
             this.Lbl_numSerie = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.Gpb_laboratoriof.SuspendLayout();
             this.Gpb_detallef.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -196,6 +196,7 @@
             // Gpb_detallef
             // 
             this.Gpb_detallef.BackColor = System.Drawing.Color.Transparent;
+            this.Gpb_detallef.Controls.Add(this.button1);
             this.Gpb_detallef.Controls.Add(this.Txt_credit);
             this.Gpb_detallef.Controls.Add(this.Lbl_credit);
             this.Gpb_detallef.Controls.Add(this.Cmb_formaPago);
@@ -228,6 +229,16 @@
             this.Gpb_detallef.TabIndex = 1;
             this.Gpb_detallef.TabStop = false;
             this.Gpb_detallef.Text = "Detalle factura";
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(588, 257);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(31, 30);
+            this.button1.TabIndex = 57;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // Txt_credit
             // 
@@ -641,19 +652,19 @@
             // Dgb_facturaf
             // 
             this.Dgb_facturaf.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.InfoText;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            this.Dgb_facturaf.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.InfoText;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.White;
+            this.Dgb_facturaf.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.Dgb_facturaf.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Dgb_facturaf.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkSlateGray;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.InfoText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.CadetBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.LightCyan;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgb_facturaf.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.DarkSlateGray;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.InfoText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.CadetBlue;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.LightCyan;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgb_facturaf.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.Dgb_facturaf.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Dgb_facturaf.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column6,
@@ -663,19 +674,19 @@
             this.Column7,
             this.Column4,
             this.Column5});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.CadetBlue;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.LightCyan;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Dgb_facturaf.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Perpetua", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.CadetBlue;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.LightCyan;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Dgb_facturaf.DefaultCellStyle = dataGridViewCellStyle15;
             this.Dgb_facturaf.GridColor = System.Drawing.Color.LightGray;
             this.Dgb_facturaf.Location = new System.Drawing.Point(9, 72);
             this.Dgb_facturaf.Name = "Dgb_facturaf";
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Teal;
-            this.Dgb_facturaf.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.Teal;
+            this.Dgb_facturaf.RowsDefaultCellStyle = dataGridViewCellStyle16;
             this.Dgb_facturaf.Size = new System.Drawing.Size(721, 130);
             this.Dgb_facturaf.TabIndex = 34;
             // 
@@ -875,27 +886,13 @@
             this.Lbl_numSerie.TabIndex = 6;
             this.Lbl_numSerie.Text = "#";
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(759, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(25, 23);
-            this.button1.TabIndex = 123;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // Factura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::LaboratorioClinico.Properties.Resources.FONDOO;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(785, 503);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(766, 489);
             this.Controls.Add(this.Lbl_numSerie);
             this.Controls.Add(this.Lbl_serie);
             this.Controls.Add(this.Gpb_datosf);
@@ -985,7 +982,7 @@
         private System.Windows.Forms.Label Lbl_recargo;
         private System.Windows.Forms.TextBox Txt_credit;
         private System.Windows.Forms.Label Lbl_credit;
-        private System.Windows.Forms.Label Lbl_numSerie;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label Lbl_numSerie;
     }
 }

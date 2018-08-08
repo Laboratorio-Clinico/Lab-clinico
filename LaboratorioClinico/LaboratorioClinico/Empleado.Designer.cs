@@ -55,7 +55,7 @@
             this.Txt_nombre = new System.Windows.Forms.TextBox();
             this.Lbl_apellido = new System.Windows.Forms.Label();
             this.Lbl_nombre = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.Gpb_datosEmpleado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.Gpb_contacto.SuspendLayout();
@@ -67,6 +67,7 @@
             // Gpb_datosEmpleado
             // 
             this.Gpb_datosEmpleado.BackColor = System.Drawing.Color.Transparent;
+            this.Gpb_datosEmpleado.Controls.Add(this.button1);
             this.Gpb_datosEmpleado.Controls.Add(this.dataGridView1);
             this.Gpb_datosEmpleado.Controls.Add(this.label4);
             this.Gpb_datosEmpleado.Controls.Add(this.Gpb_contacto);
@@ -383,18 +384,15 @@
             this.Lbl_nombre.TabIndex = 10;
             this.Lbl_nombre.Text = "Nombre";
             // 
-            // button2
+            // button1
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.button2.ForeColor = System.Drawing.Color.Transparent;
-            this.button2.Location = new System.Drawing.Point(742, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(25, 23);
-            this.button2.TabIndex = 123;
-            this.button2.UseVisualStyleBackColor = false;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(670, 405);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(53, 44);
+            this.button1.TabIndex = 16;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // Empleado
             // 
@@ -403,7 +401,6 @@
             this.BackgroundImage = global::LaboratorioClinico.Properties.Resources.FONDOO;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(766, 489);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.Gpb_datosEmpleado);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -451,6 +448,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox Txt_DPIEmpleado;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }
