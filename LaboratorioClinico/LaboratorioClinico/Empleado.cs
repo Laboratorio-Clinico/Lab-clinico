@@ -22,20 +22,12 @@ namespace LaboratorioClinico
 
         public void Pro_guardarDatos() {
 
-            int num;
-            if (int.TryParse(Txt_DPIEmpleado.Text, out num))
-            {
-                Er_validar.SetError(Txt_DPIEmpleado, "");
-            }
-            else
-            {
-                Er_validar.SetError(Txt_DPIEmpleado, "Solo números se acepta");
-            }
+          
 
 
             if (Txt_DPIEmpleado.TextLength == 13)
             {
-                Erp_errorE.SetError(Txt_DPIEmpleado, "");
+                Erp_errorE.SetError(Txt_DPIEmpleado, " ");
                 try
                 {
 
@@ -114,8 +106,9 @@ namespace LaboratorioClinico
 
         private void Btn_guardar_Click(object sender, EventArgs e)
         {
-           
-            Pro_guardarDatos();
+   
+                Pro_guardarDatos();
+
 
         }
 
