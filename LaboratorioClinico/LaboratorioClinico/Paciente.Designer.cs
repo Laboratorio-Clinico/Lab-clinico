@@ -61,7 +61,6 @@
             this.Lbl_fechaep = new System.Windows.Forms.Label();
             this.Gpb_fechap = new System.Windows.Forms.GroupBox();
             this.Er_validar = new System.Windows.Forms.ErrorProvider(this.components);
-            this.button1 = new System.Windows.Forms.Button();
             this.Erp_errorP = new System.Windows.Forms.ErrorProvider(this.components);
             this.Gpb_guardarp.SuspendLayout();
             this.Gpb_datosp.SuspendLayout();
@@ -423,16 +422,6 @@
             // 
             this.Er_validar.ContainerControl = this;
             // 
-            // button1
-            // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(722, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(32, 28);
-            this.button1.TabIndex = 16;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // Erp_errorP
             // 
             this.Erp_errorP.ContainerControl = this;
@@ -444,7 +433,6 @@
             this.BackgroundImage = global::LaboratorioClinico.Properties.Resources.FONDOO;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(766, 489);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.Gpb_fechap);
             this.Controls.Add(this.Gpb_datosp);
             this.Controls.Add(this.Gpb_guardarp);
@@ -499,7 +487,6 @@
         private System.Windows.Forms.TextBox Txt_correoP;
         private System.Windows.Forms.ErrorProvider Er_validar;
         private System.Windows.Forms.ComboBox Cmb_sangrep;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ErrorProvider Erp_errorP;
     }
 }
