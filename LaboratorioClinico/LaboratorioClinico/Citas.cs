@@ -117,7 +117,7 @@ namespace LaboratorioClinico
                 Erp_error.SetError(Txt_dpi, "");
                 try
                 {
-                    OdbcDataAdapter sda = new OdbcDataAdapter("SELECT sNombre, sNit, sDireccion FROM paciente WHERE nIdPaciente ='" + Convert.ToInt32(Txt_dpi.Text) + "'", conexion.ObtenerConexion());
+                    OdbcDataAdapter sda = new OdbcDataAdapter("SELECT sNombre, sNit, sDireccion FROM paciente WHERE nIdPaciente ='" + Convert.ToInt64(Txt_dpi.Text) + "'", conexion.ObtenerConexion());
                     DataTable datos = new DataTable();
                     sda.Fill(datos);
 
@@ -147,7 +147,6 @@ namespace LaboratorioClinico
             else
             {
                 Erp_error.SetError(Txt_dpi, "Deben ingresarse 13 dígitos.");
-                MessageBox.Show("Error");
             }
         }
 

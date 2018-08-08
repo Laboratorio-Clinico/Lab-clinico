@@ -46,6 +46,8 @@
             this.Btn_buscar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.Txt_DPI = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.Txt_noCita = new System.Windows.Forms.TextBox();
             this.Gpb_buscarCita.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_verBeneficios)).BeginInit();
@@ -66,7 +68,7 @@
             this.Gpb_buscarCita.Controls.Add(this.Txt_DPI);
             this.Gpb_buscarCita.Font = new System.Drawing.Font("Perpetua", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Gpb_buscarCita.ForeColor = System.Drawing.Color.DarkKhaki;
-            this.Gpb_buscarCita.Location = new System.Drawing.Point(27, 33);
+            this.Gpb_buscarCita.Location = new System.Drawing.Point(27, 22);
             this.Gpb_buscarCita.Name = "Gpb_buscarCita";
             this.Gpb_buscarCita.Size = new System.Drawing.Size(715, 444);
             this.Gpb_buscarCita.TabIndex = 0;
@@ -112,7 +114,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Location = new System.Drawing.Point(579, 224);
+            this.groupBox1.Location = new System.Drawing.Point(590, 224);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(105, 200);
             this.groupBox1.TabIndex = 39;
@@ -167,11 +169,13 @@
             this.Dgv_verBeneficios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Dgv_verBeneficios.Location = new System.Drawing.Point(19, 236);
             this.Dgv_verBeneficios.Name = "Dgv_verBeneficios";
-            this.Dgv_verBeneficios.Size = new System.Drawing.Size(537, 188);
+            this.Dgv_verBeneficios.Size = new System.Drawing.Size(558, 188);
             this.Dgv_verBeneficios.TabIndex = 38;
             // 
             // Gpb_datosPersonales
             // 
+            this.Gpb_datosPersonales.Controls.Add(this.Txt_noCita);
+            this.Gpb_datosPersonales.Controls.Add(this.label4);
             this.Gpb_datosPersonales.Controls.Add(this.Txt_nit);
             this.Gpb_datosPersonales.Controls.Add(this.Txt_nombre);
             this.Gpb_datosPersonales.Controls.Add(this.Lbl_nit);
@@ -180,7 +184,7 @@
             this.Gpb_datosPersonales.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.Gpb_datosPersonales.Location = new System.Drawing.Point(19, 115);
             this.Gpb_datosPersonales.Name = "Gpb_datosPersonales";
-            this.Gpb_datosPersonales.Size = new System.Drawing.Size(665, 103);
+            this.Gpb_datosPersonales.Size = new System.Drawing.Size(676, 103);
             this.Gpb_datosPersonales.TabIndex = 37;
             this.Gpb_datosPersonales.TabStop = false;
             this.Gpb_datosPersonales.Text = "Datos Personales";
@@ -190,7 +194,7 @@
             this.Txt_nit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Txt_nit.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_nit.ForeColor = System.Drawing.Color.Black;
-            this.Txt_nit.Location = new System.Drawing.Point(118, 47);
+            this.Txt_nit.Location = new System.Drawing.Point(49, 43);
             this.Txt_nit.Margin = new System.Windows.Forms.Padding(4);
             this.Txt_nit.Name = "Txt_nit";
             this.Txt_nit.Size = new System.Drawing.Size(197, 26);
@@ -201,7 +205,7 @@
             this.Txt_nombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
             this.Txt_nombre.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Txt_nombre.ForeColor = System.Drawing.Color.Black;
-            this.Txt_nombre.Location = new System.Drawing.Point(400, 47);
+            this.Txt_nombre.Location = new System.Drawing.Point(319, 43);
             this.Txt_nombre.Margin = new System.Windows.Forms.Padding(4);
             this.Txt_nombre.Name = "Txt_nombre";
             this.Txt_nombre.Size = new System.Drawing.Size(197, 26);
@@ -212,7 +216,7 @@
             this.Lbl_nit.AutoSize = true;
             this.Lbl_nit.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_nit.ForeColor = System.Drawing.Color.White;
-            this.Lbl_nit.Location = new System.Drawing.Point(82, 50);
+            this.Lbl_nit.Location = new System.Drawing.Point(13, 46);
             this.Lbl_nit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_nit.Name = "Lbl_nit";
             this.Lbl_nit.Size = new System.Drawing.Size(28, 18);
@@ -224,7 +228,7 @@
             this.Lbl_nombre.AutoSize = true;
             this.Lbl_nombre.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_nombre.ForeColor = System.Drawing.Color.White;
-            this.Lbl_nombre.Location = new System.Drawing.Point(339, 50);
+            this.Lbl_nombre.Location = new System.Drawing.Point(258, 46);
             this.Lbl_nombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Lbl_nombre.Name = "Lbl_nombre";
             this.Lbl_nombre.Size = new System.Drawing.Size(58, 18);
@@ -240,6 +244,7 @@
             this.Btn_buscar.Size = new System.Drawing.Size(53, 44);
             this.Btn_buscar.TabIndex = 36;
             this.Btn_buscar.UseVisualStyleBackColor = true;
+            this.Btn_buscar.Click += new System.EventHandler(this.Btn_buscar_Click);
             // 
             // label5
             // 
@@ -263,6 +268,29 @@
             this.Txt_DPI.Name = "Txt_DPI";
             this.Txt_DPI.Size = new System.Drawing.Size(197, 26);
             this.Txt_DPI.TabIndex = 34;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(530, 46);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(60, 18);
+            this.label4.TabIndex = 46;
+            this.label4.Text = "No. Cita";
+            // 
+            // Txt_noCita
+            // 
+            this.Txt_noCita.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(216)))), ((int)(((byte)(246)))));
+            this.Txt_noCita.Font = new System.Drawing.Font("Perpetua", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_noCita.ForeColor = System.Drawing.Color.Black;
+            this.Txt_noCita.Location = new System.Drawing.Point(593, 43);
+            this.Txt_noCita.Margin = new System.Windows.Forms.Padding(4);
+            this.Txt_noCita.Name = "Txt_noCita";
+            this.Txt_noCita.Size = new System.Drawing.Size(66, 26);
+            this.Txt_noCita.TabIndex = 45;
             // 
             // Comprobacion
             // 
@@ -306,5 +334,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label Lbl_fecha;
         private System.Windows.Forms.DateTimePicker Dtp_fecha;
+        private System.Windows.Forms.TextBox Txt_noCita;
+        private System.Windows.Forms.Label label4;
     }
 }
